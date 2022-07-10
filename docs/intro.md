@@ -33,7 +33,7 @@ flowchart LR;
 
 ### ***Shifu*** 与设备之间的通信
 
-***Shifu*** 在持续增加对于新协议和驱动的兼容。对于当前兼容的列表，参见已兼容的[协议](/zh/home/protocols)和[驱动](/zh/home/drivers)。
+***Shifu*** 在持续增加对于新协议和驱动的兼容。对于当前兼容的列表，参见已兼容的[协议](protocol-driver-compatibility/protocols.md)和[驱动](protocol-driver-compatibility/drivers.md)。
 
 ### ***Shifu*** 与应用之间的通信
 

@@ -321,5 +321,5 @@ root@nginx:/# curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get
 Running
 ```
 
-恭喜！！！:rocket: :rocket: :rocket: 你完成了Shifu的安装和Demo，接下来可以返回[目录](/zh/toc)，自由探索啦！
-如果有兴趣，可以点击[这里](/zh/home/github)来访问我们的GitHub！
+恭喜！！！:rocket: :rocket: :rocket: 你完成了Shifu的安装和Demo，接下来可以自由探索啦！
+如果有兴趣，可以点击[这里](github.md)来访问我们的GitHub！
