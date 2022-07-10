@@ -4,6 +4,13 @@
  * work well for content-centric websites.
  */
 
+@font-face {
+    font-family: 'Noto Sans SC';
+    src: url("NotoSansSC-Thin.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;
