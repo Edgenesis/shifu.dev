@@ -21,7 +21,7 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'shifurunssh'
-    sourceFolder: 'dist'
+    sourceFolder: 'build'
     contents: '**'
     targetFolder: '/home/ubuntu/docusaurus-dist'
     readyTimeout: '20000'
