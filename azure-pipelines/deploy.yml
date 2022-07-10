@@ -20,7 +20,7 @@ steps:
 
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: 'shifurun-ssh'
+    sshEndpoint: 'shifurunssh'
     sourceFolder: 'dist'
     contents: '**'
     targetFolder: '/home/ubuntu/docusaurus-dist'
