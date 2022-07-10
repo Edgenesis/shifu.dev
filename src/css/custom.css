@@ -13,6 +13,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-font-family-base: "Noto Sans SC";
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
