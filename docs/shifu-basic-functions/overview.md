@@ -1,5 +1,6 @@
 ---
 title: Shifu 功能总览
+sidebar_position: 1
 ---
 
 # Shifu功能

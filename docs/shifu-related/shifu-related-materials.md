@@ -1,5 +1,5 @@
 ---
-title: Shifu相关资料
+title: Shifu 相关资料
 ---
 
 # Shifu相关资料

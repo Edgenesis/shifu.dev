@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Shifu Docs',
+  tagline: 'Shifu',
+  url: 'https://docusaurus.shifu.run',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -40,7 +40,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/edgenesis/shifu-docs-docusaurus/',
+            'https://github.com/edgenesis/shifu-docs-docusaurus/tree/main/',
         },
         blog: false,
         theme: {
