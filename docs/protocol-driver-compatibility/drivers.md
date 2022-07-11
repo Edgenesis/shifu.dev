@@ -6,7 +6,7 @@ title: 驱动
 
 ***Shifu***允许用户向平台添加以下形式的驱动:
 
-命令行驱动，请参考[快速上手：调用命令行驱动](shifu-tuorial/remote-driver-execution.md)
+命令行驱动，请参考[快速上手：调用命令行驱动](../shifu-advanced-functions/remote-driver-execution.md)
 
 ## 架构
 

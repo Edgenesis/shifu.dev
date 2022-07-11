@@ -137,4 +137,4 @@ RTSP Client保证了流媒体信息的传输。
 Siemens S7 Suite支持了西门子S7系列PLC的操作。当前，Shifu使用了[Snap7](http://snap7.sourceforge.net/)来实现兼容。
 
 ### HTTP to SSH driver stub
-HTTP to SSH driver stub使得Shifu可以允许用户任意添加新的命令行驱动。 参见[快速上手：添加新的命令行驱动](shifu-tuorial/remote-driver-execution.md)。
+HTTP to SSH driver stub使得Shifu可以允许用户任意添加新的命令行驱动。 参见[快速上手：添加新的命令行驱动](shifu-advanced-functions/remote-driver-execution.md)。

@@ -26,5 +26,5 @@ Shifu自带了设备管理框架，可以便捷地查看设备的运行状态、
 ## 系统运维
 由于Shifu底层集成了Kubernetes的能力，所以Shifu在运维上有两大天然优势：
 1. Kubernetes原生，使得开发者只用运维一套k8s集群，便可统一管理应用和IoT设备，无需运维一套额外的物联网平台；
-2. 永无单点故障。与其他物联网平台不同，[Shifu的架构](architecture/architectuire.md)是完全由可创建若干个副本的deviceShifu组成，所以Shifu永无单点故障。
+2. 永无单点故障。与其他物联网平台不同，[Shifu的架构](../architecture.md)是完全由可创建若干个副本的deviceShifu组成，所以Shifu永无单点故障。
 事实上，Shifu已经在多个500强企业的核心场景中（工厂、实验室、供应链等）累计运行了50万小时且没有出过故障。
