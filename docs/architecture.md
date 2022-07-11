@@ -1,6 +1,7 @@
----
-title: "Shifu 基本架构"
----
+--- 
+title: Shifu 基本架构
+sidebar_position: 11
+--- 
 
 # Shifu 架构
 Shifu是一个[Kubernetes](https://kubernetes.io/)原生的平台，它的所有组件都以[Pod](https://kubernetes.io/docs/concepts/workloads/pods/)的形式运行。下图是Shifu架构的示意图。 

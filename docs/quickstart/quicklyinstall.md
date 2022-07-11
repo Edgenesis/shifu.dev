@@ -1,8 +1,7 @@
 ---
+title: 极速安装
 sidebar_position: 1
 ---
-
-# 极速安装
 
 ## 前置阅读
 

@@ -1,6 +1,6 @@
 ---
 title: 设备控制
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # 设备控制

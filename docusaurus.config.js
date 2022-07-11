@@ -35,7 +35,7 @@ const config = {
         docs: {
           remarkPlugins: [require('mdx-mermaid')],
           sidebarPath: require.resolve('./sidebars.js'),
-          sidebarCollapsible: false,
+          sidebarCollapsible: true,
           routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -120,7 +120,7 @@ const config = {
       },
       docs: {
         sidebar: {
-          autoCollapseCategories: false,
+          autoCollapseCategories: true,
           hideable: true,
         },
       },

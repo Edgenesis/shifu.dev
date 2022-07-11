@@ -1,5 +1,6 @@
 ---
-title: 快速上手：连接一个PLC
+title: 快速上手：连接一个PLC设备
+sidebar_position: 3
 ---
 
 # 快速上手: 接入一个PLC
