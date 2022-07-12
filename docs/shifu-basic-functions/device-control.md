@@ -14,7 +14,7 @@ instructions: |
 ```
 设备控制与数据采集类似，在`deviceshifu_configmap.yaml`中设置好设备的指令后，我们可以通过HTTP/gRPC与`deviceshifu`进行通信，`deviceshifu`会将我们发送的指令转换成设备所支持协议的形式，并发送给设备。设备接受到指令之后，可以通过指令执行相应的操作，从而实现设备控制。
 ## 结合数据采集实现自动化设备控制
-此外，我们再创建一个虚拟设备`PLC`(如果您未试玩过`PLC`设备，您可以[点击查看](../quickstart/connect-a-plc.md))。
+此外，我们再创建一个虚拟设备`PLC`(如果您未试玩过`PLC`设备，您可以[点击查看](quickstart/connect-a-plc.md))。
 ```bash
 $ kubectl get pods -n deviceshifu
 NAME                                            READY   STATUS    RESTARTS   AGE
