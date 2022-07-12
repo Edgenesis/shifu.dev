@@ -1,10 +1,10 @@
 ---
 title: 设备接入
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # 设备接入
-如果您未运行过`五分钟试玩`，建议您先行体验[五分钟试玩](quickstart/quickstart.md)。
+如果您未运行过`极速试玩`，建议您先行体验[极速试玩](quickstart/quick_demo.md)。
 ## 如何修改设备接入设置
 接入设备前，您需要对`edgedevice.yaml`文件进行编辑。（以下的文件为OPC UA deviceshifu的`edgedevice.yaml`文件）。对于不同的协议，`protocolSettings`可根据协议进行进一步配置。
 ```yaml  

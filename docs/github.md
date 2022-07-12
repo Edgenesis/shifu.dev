@@ -1,6 +1,6 @@
 ---
 title: 获取 GitHub 权限
-sidebar_position: 4
+sidebar_position: 10000
 ---
 
 # 填写问卷，获取GitHub权限！

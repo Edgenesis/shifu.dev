@@ -1,7 +1,7 @@
 ---
 id: intro
 slug: /
-sidebar_position: 1
+sidebar_position: 0
 title: "简介"
 ---
 
