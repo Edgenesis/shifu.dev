@@ -1,5 +1,6 @@
 ---
-title: Shifu 相关资料
+sidebar_position: 10001
+title: "Shifu 相关资料"
 ---
 
 # Shifu相关资料

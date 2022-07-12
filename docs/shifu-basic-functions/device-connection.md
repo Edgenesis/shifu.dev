@@ -1,10 +1,10 @@
 ---
 title: 设备接入
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # 设备接入
-如果您未运行过`五分钟试玩`，建议您先行体验[五分钟试玩](quickstart/quickstart.md)。
+如果您未运行过`极速试玩`，建议您先行体验[极速试玩](quickstart/quick_demo.md)。
 ## 如何修改设备接入设置
 1. 编辑`edgedevice.yaml`文件
 

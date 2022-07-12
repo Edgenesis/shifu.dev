@@ -1,4 +1,5 @@
 ---
+title: 极速试玩
 sidebar_position: 2
 ---
 
