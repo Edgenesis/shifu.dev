@@ -26,13 +26,18 @@ title: DeviceShifu Deployment
   表示 DeviceShifu 对应的 EdgeDevice 的名字。
   - **EDGEDEVICE_NAMESPACE** (string)
   表示 DeviceShifu 对应的 EdgeDevice 所在的域。
+  
 - **spec.template.spec.volumes[0].configMap**
   - **volume**
     - **name**
-    表示挂载的 ConfigMap 的名字。
+      表示挂载的 ConfigMap 的名字。
+    
     - **configMap**
+    
       表示 DeviceShifu 配置 ConfigMap 的名字。
+    
       - **name** (string)
+  
 - **spec.template.spec.containers[0].volumeMounts[].name**
   - **volumeMount**
     - **name** (string)

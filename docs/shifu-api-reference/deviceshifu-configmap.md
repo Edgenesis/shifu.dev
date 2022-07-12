@@ -41,7 +41,6 @@ DeviceShifuInstruction 是指 DeviceShifu 可以接受的命令。
   
   - **DeviceShifuInstructionProperty** (interface)
   
-  
 ## DeviceShifuTelemetries
 
 DeviceShifuTelemetries 是指 DeviceShifu 用来检测物联网设备的一个或多个命令。
