@@ -24,7 +24,7 @@ sidebar_position: 1
 | Windows(WSL2) | :white_check_mark: |
 
 ## ***Shifu*** 环境准备
-### 下载并安装*Docker*
+### 1. 下载并安装*Docker*
 
 | 操作系统 | 安装包 |
 |--|--|
@@ -32,26 +32,28 @@ sidebar_position: 1
 | Mac OS | [M1芯片 点我下载](https://desktop.docker.com/mac/main/arm64/Docker.dmg)<br/>[Intel芯片 点我下载](https://desktop.docker.com/mac/main/amd64/Docker.dmg) |
 | Windows (WSL2) | [点我下载](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) |
 
-### 确保 *Docker* 可用
+### 2. 确保 *Docker* 可用
 
-在 `Linux/Mac` 的命令行(terminal)中执行以下命令。如果使用的是 `Windows WSL2`，则在开始菜单中打开 `Ubuntu` 或您安装的Linux发行版，输入以下命令。如果 *Docker* 运行顺利，将会有以下输出。
+a. 使用`Linux/Mac`的用户请在命令行(terminal)中执行以下命令。
+
+b. 使用`Windows WSL2`的用户请在开始菜单中打开 `Ubuntu` 或您安装的其他Linux发行版，执行以下命令。
 
 ```bash
 sudo docker ps
 ```
 
-如果 *Docker* 运行顺利，将会有以下输出
+如果 *Docker* 运行顺利，将会得到以下输出：
 
 ```shell
 ubuntu@localhost:~$ sudo docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
-## 下载安装*Shifu*
+### 3. 下载安装*Shifu*
 
 如果您未安装*shifu*，建议您前往我们的[demo.shifu.run](https://demo.shifu.run)进行下载安装。
 
-### *shifu*是否启动
+### 4. 查看*Shifu*是否启动
 
 使用以下命令来查看运行效果：
 
