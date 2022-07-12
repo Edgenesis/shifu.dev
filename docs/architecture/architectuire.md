@@ -114,10 +114,10 @@ Shifu的控制面的主要组件是`shifuController`和`shifud`。
 
 | 状态 | 含义 |
 |--|--|
-| Pending | 设备已被识别，但接入Shifu尚未完成。 |
-| Running | 设备已成功接入Shifu并正在运行。 |
-| Failed | 设备接入Shifu失败。 |
-| Unknown | 未知状态。 |
+| Pending | 设备已被识别，但接入Shifu尚未完成 |
+| Running | 设备已成功接入Shifu并正在运行 |
+| Failed | 设备接入Shifu失败 |
+| Unknown | 未知状态 |
 
 #### 设计文档
 `shifuController`的具体设计文档在[这里](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController-zh.md)，对内部细节感兴趣的读者可以进一步阅读。

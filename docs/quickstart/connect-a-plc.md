@@ -7,11 +7,11 @@ Shifu实现了对西门子S7系列PLC的兼容。用户可以使用Shifu，通�
 参见[演示视频（YouTube)](https://youtu.be/SV73l52vDp8)以获得操作流程演示。
 
 ## 连接
-### *第0步*
+### *第1步*
 
 在接入Shifu之前，PLC应当已经通过以太网与运行Shifu的上位机完成物理连接，并且拥有一个IP地址，这里我们使用`192.168.0.1`。
 
-### *第1步*
+### *第2步*
 
 创建`plc_configuration_directory`文件夹，将所有配置文件都保存在 `./plc_configuration_directory`下 。  
 Shifu需要如下例所示的配置文件来获取IP地址与设备类型：  
@@ -145,7 +145,7 @@ status:
 ```
 </details>
 
-### *第2步*
+### *第3步*
 
 向Shifu添加PLC设备，创建和启动deviceShifu:
 
