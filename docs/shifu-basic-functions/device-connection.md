@@ -8,7 +8,7 @@ sidebar_position: 1
 ## 如何修改设备接入设置
 1. 编辑`edgedevice.yaml`文件
 
-接入设备前，您需要对`edgedevice.yaml`文件进行编辑（以下的文件为OPC UA deviceshifu的`edgedevice.yaml`文件）。对于不同的协议，`protocolSettings`可根据协议进行进一步配置。
+接入设备前，您需要对`edgedevice.yaml`文件进行编辑。对于不同的协议，`protocolSettings`可根据协议进行进一步配置，详细配置请前往[Shifu API 参考](shifu-api-reference/edgedevice.md#protocolsettings)。
 
 ```yaml  
 ...
@@ -19,10 +19,10 @@ protocolSettings:
   OPCUASetting:  
 ...
 ```
-`connection`：表示设备的网络连接方式。
-`address`：表示设备的网络地址。
+`connection`：表示设备的网络连接方式。  
+`address`：表示设备的网络地址。  
 `protocol`：表示与设备进行交互的通信协议。  
-`protocolSettings`：表示对协议进行的下一步设置，对于[不同的协议](protocol-driver-compatibility/protocols.md)需要引入不同的`Setting`。
+`protocolSettings`：表示对协议进行的下一步设置，对于[不同的协议](protocol-driver-compatibility/protocols.md)需要[引入不同的`Setting`](shifu-api-reference/edgedevice.md#protocolsettings)。
 
 2. 创建`deviceshifu`
 

@@ -6,11 +6,9 @@ sidebar_position: 11
 # Shifu 基本架构
 Shifu是一个[Kubernetes](https://kubernetes.io/)原生的平台，它的所有组件都以[Pod](https://kubernetes.io/docs/concepts/workloads/pods/)的形式运行。
 
-本文是一个关于Shifu架构的简介，如读者对Shifu的具体架构设计感兴趣，请点击[这里](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu-zh.md)。
+本文是关于Shifu基本架构的简介，如读者对Shifu的具体架构设计感兴趣，请[点击这里查看](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu-zh.md)。
 
 下图是Shifu架构的示意图：
-
-**说明：示意图内的IoT设备以及协议不仅限于图中出现的种类。Shifu具有极强的扩展性，兼容所有通过协议或驱动通信的IoT设备。**
 
 ```mermaid
 flowchart BT
@@ -59,6 +57,9 @@ flowchart BT
 	sg-id<-->sg-pg
   sg-pg<-->sg-dp
 ```
+
+**注：示意图内的IoT设备以及协议不仅限于图中出现的种类。Shifu具有极强的扩展性，兼容所有通过协议或驱动通信的IoT设备。**
+
 ## 数据面 Data Plane
 Shifu的数据面的主要组件是`deviceShifu`。
 
@@ -66,9 +67,9 @@ Shifu的数据面的主要组件是`deviceShifu`。
 #### 简介
 `deviceShifu`是整个Shifu Framework的核心，也是开发者最应该关心的部分。`deviceShifu`以Kubernetes Pod的形式存在, 是一个`实际设备的数字化表示`或`数字孪生`。
 
-每一个`deviceShifu`都与一个或多个实际设备相关联。用户通过和`DeviceShifu`进行交互，就可以实现与实际设备的交互。
+每一个`deviceShifu`都与一个或多个实际设备相关联。用户通过和`deviceShifu`进行交互，从而可以实现与实际设备的交互。
 
-**南向** - `deviceShifu`与IoT设备进行交互，将用户的请求通过协议网关和设备驱动进行转换并发送到设备。
+**南向** - `deviceShifu`与IoT设备进行交互，将用户的请求通过协议网关或设备驱动进行转换并发送到设备。
 
 ```mermaid
     flowchart TD
@@ -78,7 +79,7 @@ Shifu的数据面的主要组件是`deviceShifu`。
     end
     sg-ds<-->ed[IoT设备]
 ```
-**北向** - `deviceShifu`将收集的设备数据通过HTTP或gRPC进行转换并发送给用户端。
+**北向** - `deviceShifu`将收集的设备数据通过HTTP协议(gRPC协议暂未支持)进行转换并发送给用户端。
 
 ```mermaid
     flowchart BT
@@ -97,7 +98,7 @@ Shifu的控制面的主要组件是`shifuController`和`shifud`。
 
 ### shifuController
 #### 简介
-`shifuController`被用来控制Shifu自定义的一个[Kubernetes CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) 即`EdgeDevice`，`EdgeDevice`描述了一个连接到Shifu的实际设备的各项信息。
+`shifuController`被用来控制Shifu自定义的一个[Kubernetes CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) 即`EdgeDevice`，`EdgeDevice`描述了连接到Shifu的实际设备的各项信息。
 
 每一个`EdgeDevice`拥有两个部分：
 `EdgeDeviceSpec` 和 `EdgeDevicePhase`。
@@ -106,8 +107,8 @@ Shifu的控制面的主要组件是`shifuController`和`shifud`。
 
 | 变量名 | 变量类型 | 用途 | 举例 |
 |--|--|--|--|
-|	Sku | \*string | 设备的SKU名称 | PLC, Hikvision camera |
-|	Connection | \*Connection | 硬件连接方式 |Ethernet, USB|
+|	Sku | \*string | 设备的SKU名称 | PLC, Hikvision, camera...|
+|	Connection | \*Connection | 硬件连接方式 |Ethernet, USB...|
 | Address | \*string | 硬件地址 | 192.168.0.1 |
 |	Protocol | \*Protocol | 传输协议 |HTTP, MQTT, Socket...|
 
@@ -143,4 +144,4 @@ RTSP Client保证了流媒体信息的传输。
 Siemens S7 Suite支持西门子S7系列PLC的操作。目前，Shifu使用了[Snap7](http://snap7.sourceforge.net/)来实现兼容。
 
 ### HTTP to SSH driver stub
-HTTP to SSH driver stub使得Shifu可以允许用户任意添加新的命令行驱动。 参见[快速上手：添加新的命令行驱动](shifu-advanced-functions/remote-driver-execution.md)。
+HTTP to SSH driver stub使得Shifu可以允许用户任意添加新的命令行驱动。 参见[远程调用命令行驱动](shifu-advanced-functions/remote-driver-execution.md)。
