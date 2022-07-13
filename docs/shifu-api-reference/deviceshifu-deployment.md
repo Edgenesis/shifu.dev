@@ -50,7 +50,7 @@ title: DeviceShifu Deployment
 
 ## OPC UA DeviceShifu Deployment
 
-详细示例请参考 https://github.com/Edgenesis/shifu/tree/main/examples/opcuaDeviceShifu。
+详细示例请参考 https://github.com/Edgenesis/shifu/tree/main/examples/opcuaDeviceShifu
 - **spec.template.spec.volumes[].configMap**
   - **volume**
     - **name**
@@ -67,7 +67,7 @@ title: DeviceShifu Deployment
 
 ## Siemens PLC DeviceShifu Deployment
 
-详细示例请参考 https://github.com/Edgenesis/shifu/tree/main/examples/siemensPLCDeviceShifu。
+详细示例请参考 https://github.com/Edgenesis/shifu/tree/main/examples/siemensPLCDeviceShifu
 
 - **spec.template.spec.containers[1].image**
   - **name** (string)
@@ -84,7 +84,7 @@ title: DeviceShifu Deployment
 
 ## RTSP DeviceShifu Deployment
 
-详细示例请参考 https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu。
+详细示例请参考 https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu
 
 - **spec.template.spec.containers[1].image**
   - **name** (string)

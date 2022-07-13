@@ -3,7 +3,7 @@ sidebar_position: 1
 title: 协议
 ---
 
-# 设备协议
+# 协议
 
 ## 已兼容的协议
 
@@ -18,6 +18,6 @@ title: 协议
 
 ## 未兼容的协议
 
-Shifu的微服务架构赋予了***Shifu***无与伦比的扩展性，也使得***Shifu***可以非常快速地兼容新的协议。
+***Shifu***的微服务架构赋予了***Shifu***无与伦比的扩展性，也使得***Shifu***可以非常快速地兼容新的协议。
 
 如果您所用的协议***Shifu***还未支持，请点击[这里](https://github.com/Edgenesis/shifu/issues/new)提交一个GitHub Issue，我们会尽快支持该协议！

@@ -38,7 +38,7 @@ EdgeDeviceSpec 是一个 EdgeDevice的描述。
 
 ### Address
 
-表示 EdgeDevice 的连接地址，根据不同的 [协议](#protocol) ，格式也有所不同。
+表示 EdgeDevice 的连接地址，根据不同的[协议](#protocol)，格式也有所不同。
 - **address** (string) 必填
 
 ### Protocol

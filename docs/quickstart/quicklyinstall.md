@@ -32,7 +32,7 @@ sidebar_position: 1
 | Mac OS | [M1芯片 点我下载](https://desktop.docker.com/mac/main/arm64/Docker.dmg)<br/>[Intel芯片 点我下载](https://desktop.docker.com/mac/main/amd64/Docker.dmg) |
 | Windows (WSL2) | [点我下载](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) |
 
-### 2. 确保 *Docker* 可用
+### 2. 确保*Docker*可用
 
 a. 使用`Linux/Mac`的用户请在命令行(terminal)中执行以下命令。
 
@@ -42,7 +42,7 @@ b. 使用`Windows WSL2`的用户请在开始菜单中打开 `Ubuntu` 或您安�
 sudo docker ps
 ```
 
-如果 *Docker* 运行顺利，将会得到以下输出：
+如果*Docker*运行顺利，将会得到以下输出：
 
 ```shell
 ubuntu@localhost:~$ sudo docker ps
@@ -61,11 +61,11 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 sudo kubectl get pods -A
 ```
 
-如果所有 “STATUS“ 都是 `Running` 即表示成功：
+如果所有 “STATUS” 都是 `Running` 即表示成功：
 
 ![Shifu Finished pods](images/shifuFinishPods.png)
 
-# 5分钟试玩
+### 5. 检查安装后的文件结构
 安装完成以后，文件结构如下：
 
 ```bash
