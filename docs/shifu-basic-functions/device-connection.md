@@ -5,8 +5,8 @@ sidebar_position: 1
 
 # 设备接入
 如果您未运行过`极速试玩`，建议您先行体验[极速试玩](quickstart/quick_demo.md)。
-## 如何修改设备接入设置
-1. 编辑`edgedevice.yaml`文件
+## 如何修改设备接入的配置
+### 1. 编辑`edgedevice.yaml`文件
 
 接入设备前，您需要对`edgedevice.yaml`文件进行编辑（以下的文件为OPC UA deviceshifu的`edgedevice.yaml`文件）。对于不同的协议，`protocolSettings`可根据协议进行进一步配置。
 
@@ -24,11 +24,11 @@ protocolSettings:
 `protocol`：表示与设备进行交互的通信协议。  
 `protocolSettings`：表示对协议进行的下一步设置，对于[不同的协议](protocol-driver-compatibility/protocols.md)需要引入不同的`Setting`。
 
-2. 创建`deviceshifu`
+### 2. 创建`deviceshifu`
 
 修改完上述文件后即可创建`deviceshifu`，此时`deviceshifu`会尝试通过您所设置的配置与您的设备进行连接。
 
-3. 检测设备接入状态
+### 3. 检测设备接入状态
 
 如果您通过命令`kubectl get pods -n deviceshifu`发现`deviceshifu`状态出现`Error`或者`CrashLoopBackOff`，这意味着连接异常。
 
