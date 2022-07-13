@@ -172,21 +172,25 @@ kubectl exec -it nginx -n deviceshifu -- bash
 - **digit**: 从开始位置起第几个bit。
 - **value**: 需要修改成为的数值。
 
-比如，命令`curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=2&digit=2&value=1"` 会将 M0.2 的第二个 bit 修改为1。
+比如，命令`curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1"` 会将 M0.2 的第二个 bit 修改为1。
 ```bash
-curl http://deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=2&digit=2&value=1
-0b0000000000000100
+curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1";echo
 ```
+![plc_result1](images/deviceshifu-plc_result1.png)  
+观察PLC我们会发现其Q区的1号位的指示灯变亮。  
 2. **getcontent**表示得到内存区域中一个byte的值，它需要下列参数:  
 
 - **rootaddress**: 内存区域名称，比如M代表Merker，Q代表Digital Output。
 - **address**: 内存区域中的地址。
 - **start**: 开始位置。
 
-比如，命令`curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=2"` 会返回 M0.2 的一个 byte 的值。
+比如，命令`curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"` 会返回 M0.0 的一个 byte 的值。
 ```bash
-curl http://deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=2
-0b0000000000000100
+curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"
 ```
+![plc_result2](images/deviceshifu-plc_result2.png)
 3. **getcpuordercode**表示得到PLC的静态信息。
-<h1>结果！！！！！！！！！！！</h1>
+```bash
+curl "deviceshifu-plc/getcpuordercode";echo
+```
+![plc_result3](images/deviceshifu-plc_result3.png)  

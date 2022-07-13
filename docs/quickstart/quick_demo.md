@@ -39,7 +39,7 @@ sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-agv
 ```bash
 sudo kubectl get pods -A | grep agv
 ```
-<h1>图！！！！</h1>
+![deviceshifu-agv_start.png](images/deviceshifu-agv_start.png)  
 首先，我们进入nginx： (如果您未启动Nginx，请您首先 [启动Nginx服务](#top))
 
 ```bash
@@ -121,10 +121,8 @@ sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-plate-reader
 
 ```bash
 sudo kubectl get pods -A | grep plate
-devices              plate-reader-5688c946b7-92dpg                          1/1     Running   0          6m3s
-deviceshifu          deviceshifu-plate-reader-deployment-7cb998f6f4-2l4d6   1/1     Running   0          6m3s
 ```
-<h1>改图！！！！！</h1>
+![deviceshifu-plate_pods_start.png](images/deviceshifu-plate-reader_pod_start.png)
 
 接着，我们进入nginx：(如果您未启动Nginx，请您首先 [启动Nginx服务](#top))
 
