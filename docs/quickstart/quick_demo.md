@@ -3,7 +3,7 @@ title: 极速试玩
 sidebar_position: 2
 ---
 
-# <span id = "top">极速试玩</span>
+# 极速试玩
 
 ## 启动Nginx
 我们启动一个nginx实例来模拟应用程序与shifu之间的交互：
@@ -19,7 +19,6 @@ sudo kubectl get pods
 ## 与数字孪生设备进行交互
 
 ### 1. 与AGV的数字孪生交互
-
 <details>
   <summary> 点此查看AGV细节 </summary>
   Q：什么是AGV? <br/>
@@ -28,19 +27,22 @@ sudo kubectl get pods
   A：当模拟AGV接收到get_position命令时会生成并返回设备当前位置的x、y轴坐标。
 </details>
 
-首先，我们创建一个AGV的数字孪生：(如果您刚通过`Shifu 安装包`安装完`Shifu`，其会自动创建一个`AGV`数字孪生，所以您无需进行以下创建过程，请直接跳转到[进入nginx](#AGV_ok))
+#### 启动AGV虚拟设备
+首先，我们创建一个AGV的数字孪生：(如果您刚通过`Shifu 安装包`安装完`Shifu`，其会自动创建一个`AGV`数字孪生，所以您无需进行以下创建过程，请直接跳转到[与AGV虚拟设备交互](#与agv虚拟设备交互))
 
 ```bash
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-agv
 ```
-
-<span id = "AGV_ok">我们可以看到温度计已经正常启动： </span>
+我们可以看到AGV已经正常启动：
 
 ```bash
 sudo kubectl get pods -A | grep agv
 ```
-![deviceshifu-agv_start.png](images/deviceshifu-agv_start.png)  
-首先，我们进入nginx： (如果您未启动Nginx，请您首先 [启动Nginx服务](#top))
+![deviceshifu-agv_start.png](images/deviceshifu-agv_start.png)
+
+#### 与AGV虚拟设备交互
+
+首先，我们进入nginx： (如果您未启动Nginx，请您首先 [启动Nginx服务](#启动nginx))
 
 ```bash
 sudo kubectl exec -it nginx -- bash
@@ -73,7 +75,7 @@ sudo kubectl get pods -A | grep thermometer
 
 ![deviceshifu-thermometer pod_start.png](images/deviceshifu-thermometer_pod_start.png)
 
-接下来我们可以进入nginx来测试温度计：(如果您未启动Nginx，请您首先 [启动Nginx服务](#top))
+接下来我们可以进入nginx来测试温度计：(如果您未启动Nginx，请您首先 [启动Nginx服务](#启动nginx))
 
 ```bash
 sudo kubectl exec -it nginx -- bash
@@ -124,7 +126,7 @@ sudo kubectl get pods -A | grep plate
 ```
 ![deviceshifu-plate_pods_start.png](images/deviceshifu-plate-reader_pod_start.png)
 
-接着，我们进入nginx：(如果您未启动Nginx，请您首先 [启动Nginx服务](#top))
+接着，我们进入nginx：(如果您未启动Nginx，请您首先 [启动Nginx服务](#启动nginx))
 
 ```
 sudo kubectl exec -it nginx -- bash
@@ -158,7 +160,7 @@ sudo kubectl get pods -A | grep plc
 
 ![deviceshifu-plc_pods_start](images/deviceshifu-plc_pods_start.png)
 
-接着，我们需要进入nginx：(如果您未启动Nginx，请您首先 [启动Nginx服务](#top)s)
+接着，我们需要进入nginx：(如果您未启动Nginx，请您首先 [启动Nginx服务](#启动nginx))
 
 ```bash
 sudo kubectl exec -it nginx -- bash
@@ -202,7 +204,7 @@ sudo kubectl get pods -A | grep robotarm
 
 ![deviceshifu-reboot-arm_start_pods](images/deviceshifu-reboot-arm_start_pods.png)
 
-接着，我们需要进入nginx：(如果您未启动Nginx，请您首先 [启动Nginx服务](#top))
+接着，我们需要进入nginx：(如果您未启动Nginx，请您首先 [启动Nginx服务](#启动nginx))
 
 ```bash
 sudo kubectl exec -it nginx -- bash
