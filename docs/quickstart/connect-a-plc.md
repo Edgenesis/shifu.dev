@@ -164,7 +164,9 @@ kubectl exec -it nginx -n deviceshifu -- bash
 ```
 下面我们列举了3个实际操作，分别是**sendsinglebit**、**getcontent**、**getcpuordercode**。
 
-1. **sendsinglebit**表示修改一个bit，它需要下列参数:
+### sendsinglebit
+
+**sendsinglebit**表示修改一个bit，它需要下列参数:
 
 - **rootaddress**: 内存区域名称，比如M代表Merker，Q代表Digital Output。
 - **address**: 内存区域中的地址。
@@ -177,7 +179,9 @@ kubectl exec -it nginx -n deviceshifu -- bash
 curl http://deviceshifu-plc/sendsinglebit?rootaddress=M&address=0&start=2&digit=2&value=1
 0b0000000000000100
 ```
-2. **getcontent**表示得到内存区域中一个byte的值，它需要下列参数:  
+### getcontent
+
+**getcontent**表示得到内存区域中一个byte的值，它需要下列参数:  
 
 - **rootaddress**: 内存区域名称，比如M代表Merker，Q代表Digital Output。
 - **address**: 内存区域中的地址。
@@ -188,4 +192,6 @@ curl http://deviceshifu-plc/sendsinglebit?rootaddress=M&address=0&start=2&digit=
 curl http://deviceshifu-plc/getcontent?rootaddress=M&address=0&start=2
 0b0000000000000100
 ```
-3. **getcpuordercode**表示得到PLC的静态信息。
+### getcpuordercode
+
+**getcpuordercode**表示得到PLC的静态信息。
