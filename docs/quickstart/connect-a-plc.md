@@ -3,7 +3,7 @@ title: 快速上手：连接一个PLC设备
 sidebar_position: 3
 ---
 
-# 快速上手: 接入一个PLC
+# 快速上手: 接入一个PLC设备
 Shifu实现了对西门子S7系列PLC的兼容。用户可以使用Shifu，通过HTTP请求对S7 PLC的内存进行修改。本文将介绍如何接入一台西门子S7-1200 1214C PLC并且与之交互。  
 参见[演示视频（YouTube)](https://youtu.be/SV73l52vDp8)以获得操作流程演示。
 

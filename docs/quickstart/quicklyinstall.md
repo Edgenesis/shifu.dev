@@ -51,7 +51,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
 ### 3. 下载安装*Shifu*
 
-如果您未安装*shifu*，建议您前往我们的[demo.shifu.run](https://demo.shifu.run)进行下载安装。
+如果您未安装*Shifu*，建议您前往我们的[demo.shifu.run](https://demo.shifu.run)进行下载安装。
 
 ### 4. 查看*Shifu*是否启动
 
@@ -65,9 +65,7 @@ sudo kubectl get pods -A
 
 ![Shifu Finished pods](images/shifuFinishPods.png)
 
-# 5分钟试玩
-安装完成以后，文件结构如下：
-
+>注：安装完成以后，文件结构如下：
 ```bash
 testdir/
 |--run_dir/
