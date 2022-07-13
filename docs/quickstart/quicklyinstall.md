@@ -32,7 +32,7 @@ sidebar_position: 1
 | Mac OS | [M1芯片 点我下载](https://desktop.docker.com/mac/main/arm64/Docker.dmg)<br/>[Intel芯片 点我下载](https://desktop.docker.com/mac/main/amd64/Docker.dmg) |
 | Windows (WSL2) | [点我下载](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) |
 
-### 2. 确保 *Docker* 可用
+### 2. 确保*Docker*可用
 
 a. 使用`Linux/Mac`的用户请在命令行(terminal)中执行以下命令。
 
@@ -47,7 +47,7 @@ sudo docker ps
 
 ### 3. 下载安装*Shifu*
 
-如果您未安装*shifu*，请您前往**[demo.shifu.run](https://demo.shifu.run)**进行下载安装。
+如果您未安装*Shifu*，请您前往**[demo.shifu.run](https://demo.shifu.run)**进行下载安装。
 
 ### 4. 查看*Shifu*是否启动
 
@@ -57,7 +57,7 @@ sudo docker ps
 sudo kubectl get pods -A
 ```
 
-如果所有 “STATUS“ 都是 `Running` 即表示成功：
+如果所有 “STATUS” 都是 `Running` 即表示成功：
 
 ![Shifu Finished pods](images/shifuFinishPods.png)
 

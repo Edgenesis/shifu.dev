@@ -3,7 +3,7 @@ title: 快速上手：连接一个PLC设备
 sidebar_position: 3
 ---
 
-# 快速上手: 接入一个PLC
+# 快速上手: 接入一个PLC设备
 Shifu实现了对西门子S7系列PLC的兼容。用户可以使用Shifu，通过HTTP请求对S7 PLC的内存进行修改。本文将介绍如何接入一台西门子S7-1200 1214C PLC并且与之交互。  
 参见[演示视频（YouTube)](https://youtu.be/SV73l52vDp8)以获得操作流程演示。
 
@@ -164,7 +164,9 @@ kubectl exec -it nginx -n deviceshifu -- bash
 ```
 下面我们列举了3个实际操作，分别是**sendsinglebit**、**getcontent**、**getcpuordercode**。
 
-1. **sendsinglebit**表示修改一个bit，它需要下列参数:
+### sendsinglebit
+
+**sendsinglebit**表示修改一个bit，它需要下列参数:
 
 - **rootaddress**: 内存区域名称，比如M代表Merker，Q代表Digital Output。
 - **address**: 内存区域中的地址。
@@ -178,7 +180,9 @@ curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&valu
 ```
 ![plc_result1](images/deviceshifu-plc_result1.png)  
 观察PLC我们会发现其Q区的1号位的指示灯变亮。  
-2. **getcontent**表示得到内存区域中一个byte的值，它需要下列参数:  
+### getcontent
+
+**getcontent**表示得到内存区域中一个byte的值，它需要下列参数:
 
 - **rootaddress**: 内存区域名称，比如M代表Merker，Q代表Digital Output。
 - **address**: 内存区域中的地址。
@@ -189,7 +193,9 @@ curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&valu
 curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"
 ```
 ![plc_result2](images/deviceshifu-plc_result2.png)
-3. **getcpuordercode**表示得到PLC的静态信息。
+### getcpuordercode
+
+**getcpuordercode**表示得到PLC的静态信息。
 ```bash
 curl "deviceshifu-plc/getcpuordercode";echo
 ```
