@@ -21,7 +21,7 @@ instructions: |
 
 此时，我们可以通过HTTP/gRPC与`deviceshifu`进行通信，`deviceshifu`会将我们发送的请求转换成设备所支持协议的形式，并发送给设备。
 
-当实体设备接收到指令之后，数据会传输到`deviceshifu`中，之后`deviceshifu`将数据作为我们请求的返回值进行返回，从而实现数据的采集。
+当设备接收到指令之后，数据会传输到`deviceshifu`中，之后`deviceshifu`将数据作为我们请求的返回值进行返回，从而实现数据的采集。
 
 ## 实现自动化数据采集
 1. 首先，我们可编写以下程序来实现自动采集数据。该程序用于对之前运行的`edgedevice-thermometer`设备进行实时数据采集，将温度数据进行解析并输出。该程序可以通过任意语言、任意形式进行编写，您可以将数据存入您的数据库中，或者存入文件中。
@@ -49,7 +49,7 @@ func main() {
 		} else if temperature > 15 {
 			log.Println("Normal temperature:", temperature)
 		} else {
-		log.Println("Low temperature:", temperature)
+		    log.Println("Low temperature:", temperature)
 		}
 		res.Body.Close()
 		time.Sleep(2 * time.Second)

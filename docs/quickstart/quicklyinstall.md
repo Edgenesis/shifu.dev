@@ -36,22 +36,18 @@ sidebar_position: 1
 
 a. 使用`Linux/Mac`的用户请在命令行(terminal)中执行以下命令。
 
-b. 使用`Windows WSL2`的用户请在开始菜单中打开 `Ubuntu` 或您安装的其他Linux发行版，执行以下命令。
+b. 使用`Windows WSL2`的用户请在开始菜单中打开 `Ubuntu` 或您安装的其他Linux发行版，执行以下命令。  
 
 ```bash
 sudo docker ps
 ```
 
-如果*Docker*运行顺利，将会得到以下输出：
-
-```shell
-ubuntu@localhost:~$ sudo docker ps
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-```
+如果 *Docker* 运行顺利，将会得到以下输出:  
+![docker_run](images/docker_run.png)
 
 ### 3. 下载安装*Shifu*
 
-如果您未安装*Shifu*，建议您前往我们的[demo.shifu.run](https://demo.shifu.run)进行下载安装。
+如果您未安装*Shifu*，请您前往**[demo.shifu.run](https://demo.shifu.run)**进行下载安装。
 
 ### 4. 查看*Shifu*是否启动
 
@@ -65,20 +61,3 @@ sudo kubectl get pods -A
 
 ![Shifu Finished pods](images/shifuFinishPods.png)
 
->注：安装完成以后，文件结构如下：
-```bash
-testdir/
-|--run_dir/
-   |--shifu/
-      |--demo_device/
-         |--edgedevice-agv
-         |--edgedevice-plate-reader
-         |--edgedevice-plc
-         |--edgedevice-robot-arm
-         |--edgedevice-thermometer
-      |--examples/
-      |--shifu_install.yml
-   |--utils_dir/
-|--shifu_demo_aio_linux_amd64.tar.gz  #aio: all in one压缩文件
-|--test/
-```

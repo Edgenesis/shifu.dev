@@ -10,11 +10,11 @@ Shifu实现了对西门子S7系列PLC的兼容。用户可以使用Shifu，通�
 ## 连接
 ### *第1步*
 
-在接入Shifu之前，PLC应当已经通过以太网与运行Shifu的上位机完成物理连接，并且拥有一个IP地址，这里我们使用`192.168.0.1`。
+在接入Shifu之前，PLC应当已经通过以太网与运行Shifu的上位机完成物理连接，并且拥有一个IP地址，这里我们使用`192.168.0.1`。(如果您的PLC设备不为`192.168.0.1`可以将`deviceshifu-plc-deployment.yaml`文件中的`PLC_ADDRESS`改成您的设备的IP)
 
 ### *第2步*
 
-创建`plc_configuration_directory`文件夹，将所有配置文件都保存在 `./plc_configuration_directory`下 。  
+创建`plc_configuration_directory`文件夹，将所有配置文件都保存在 `plc_configuration_directory`文件夹下 。  
 Shifu需要如下例所示的配置文件来获取IP地址与设备类型：  
 
 <details>
@@ -155,8 +155,8 @@ kubectl apply -f ../plc_configuration_directory
 ```
 
 ## 操作
-Shifu支持通过HTTP请求来编辑PLC内存。  
-在执行操作之前，我们需要载入一个nginx镜像，以便我们对deviceShifu进行访问，相关的命令如下：
+Shifu支持通过HTTP请求来设置和读取PLC内存。  
+在执行操作之前，我们需要启动一个nginx镜像，以便我们对deviceShifu进行访问，相关的命令如下：
 
 ```bash
 kubectl run nginx --image=nginx:1.21 -n deviceshifu 
@@ -174,24 +174,29 @@ kubectl exec -it nginx -n deviceshifu -- bash
 - **digit**: 从开始位置起第几个bit。
 - **value**: 需要修改成为的数值。
 
-比如，命令`curl http://deviceshifu-plc/sendsinglebit?rootaddress=M&address=0&start=2&digit=2&value=1` 会将 M0.2 的第二个 bit 修改为1。
+比如，命令`curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1"` 会将 Q0.1 的第二个 bit 修改为1。
 ```bash
-curl http://deviceshifu-plc/sendsinglebit?rootaddress=M&address=0&start=2&digit=2&value=1
-0b0000000000000100
+curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1";echo
 ```
+![plc_result1](images/deviceshifu-plc_result1.png)  
+观察PLC我们会发现其Q区的1号位的指示灯变亮。  
 ### getcontent
 
-**getcontent**表示得到内存区域中一个byte的值，它需要下列参数:  
+**getcontent**表示得到内存区域中一个byte的值，它需要下列参数:
 
 - **rootaddress**: 内存区域名称，比如M代表Merker，Q代表Digital Output。
 - **address**: 内存区域中的地址。
 - **start**: 开始位置。
 
-比如，命令`curl http://deviceshifu-plc/getcontent?rootaddress=M&address=0&start=2` 会返回 M0.2 的一个 byte 的值。
+比如，命令`curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"` 会返回 Q0.0 的一个 byte 的值。
 ```bash
-curl http://deviceshifu-plc/getcontent?rootaddress=M&address=0&start=2
-0b0000000000000100
+curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"
 ```
+![plc_result2](images/deviceshifu-plc_result2.png)
 ### getcpuordercode
 
 **getcpuordercode**表示得到PLC的静态信息。
+```bash
+curl "deviceshifu-plc/getcpuordercode";echo
+```
+![plc_result3](images/deviceshifu-plc_result3.png)  

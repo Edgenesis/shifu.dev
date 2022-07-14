@@ -11,7 +11,7 @@ Shifu的数据面的主要组件是`deviceShifu`。
 
 每一个`deviceShifu`都与一个或多个实际设备相关联。用户通过和`deviceShifu`进行交互，就可以实现与实际设备的交互。
 
-**南向** - `deviceShifu`与IoT设备进行交互，将用户的请求通过协议网关和设备驱动进行转换并发送到设备。
+**南向** - `deviceShifu`与IoT设备进行交互，将用户的请求通过协议网关或设备驱动进行转换并发送到设备。
 
 ```mermaid
     flowchart TD
@@ -21,7 +21,7 @@ Shifu的数据面的主要组件是`deviceShifu`。
     end
     sg-ds<-->ed[IoT设备]
 ```
-**北向** - `deviceShifu`将收集的设备数据通过HTTP或gRPC进行转换并发送给用户端。
+**北向** - `deviceShifu`将收集的设备数据通过HTTP协议(gRPC协议暂未支持)进行转换并发送给用户端。
 
 ```mermaid
     flowchart BT
