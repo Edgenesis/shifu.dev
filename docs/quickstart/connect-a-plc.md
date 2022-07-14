@@ -14,8 +14,8 @@ Shifu实现了对西门子S7系列PLC的兼容。用户可以使用Shifu，通�
 
 ### *第2步*
 
-创建`plc_configuration_directory`文件夹，将所有配置文件都保存在 `plc_configuration_directory`文件夹下 。  
-Shifu需要如下例所示的配置文件来获取IP地址与设备类型：  
+创建一个文件夹，在示例中我们将其命名为`plc_configuration_directory`。将下述的四个配置文件都保存在该文件夹下 。  
+首先我们需要一个配置文件来获取IP地址与设备类型：  
 
 <details>
   <summary> <b>点此查看deviceshifu-plc-deployment.yaml</b> </summary> 
@@ -72,7 +72,7 @@ spec:
 ```
 </details>
 
-同时，Shifu还需要一些通用的配置文件:
+同时，还需要一些通用的配置文件:
 <details>
   <summary> <b>点此查看deviceshifu-plc-configmap.yaml</b> </summary>
 
@@ -155,14 +155,14 @@ kubectl apply -f ../plc_configuration_directory
 ```
 
 ## 操作
-Shifu支持通过HTTP请求来设置和读取PLC内存。  
-在执行操作之前，我们需要启动一个nginx镜像，以便我们对deviceShifu进行访问，相关的命令如下：
+对于PLC,Shifu可以通过HTTP请求来设置和读取其内存。  
+在执行操作之前，我们需要启动一个nginx镜像，以用于http请求的收发，启动的相关的命令如下：
 
 ```bash
 kubectl run nginx --image=nginx:1.21 -n deviceshifu 
 kubectl exec -it nginx -n deviceshifu -- bash
 ```
-下面我们列举了3个实际操作，分别是**sendsinglebit**、**getcontent**、**getcpuordercode**。
+下面列举了3个PLC的指令，分别是**sendsinglebit**、**getcontent**、**getcpuordercode**，我们可以通过 ***Shifu*** 来对设备执行这些命令。
 
 ### sendsinglebit
 

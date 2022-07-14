@@ -32,11 +32,13 @@ sidebar_position: 1
 | Mac OS | [M1芯片 点我下载](https://desktop.docker.com/mac/main/arm64/Docker.dmg)<br/>[Intel芯片 点我下载](https://desktop.docker.com/mac/main/amd64/Docker.dmg) |
 | Windows (WSL2) | [点我下载](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) |
 
-### 2. 确保*Docker*可用
+### 2. 检查*Docker*是否可用
 
-a. 使用`Linux/Mac`的用户请在命令行(terminal)中执行以下命令。
+a. 打开*Docker*,并保持其运行
 
-b. 使用`Windows WSL2`的用户请在开始菜单中打开 `Ubuntu` 或您安装的其他Linux发行版，执行以下命令。  
+b.使用`Linux/Mac`的用户请在命令行(terminal)中执行以下命令。
+
+c. 使用`Windows WSL2`的用户请在开始菜单中打开 `Ubuntu` 或您安装的其他Linux发行版，执行以下命令。  
 
 ```bash
 sudo docker ps
@@ -45,9 +47,10 @@ sudo docker ps
 如果 *Docker* 运行顺利，将会得到以下输出:  
 ![docker_run](images/docker_run.png)
 
-### 3. 下载安装*Shifu*
+### 3. 安装*Shifu*
 
-如果您未安装*Shifu*，请您前往**[demo.shifu.run](https://demo.shifu.run)**进行下载安装。
+前往**[demo.shifu.run](https://demo.shifu.run)**进行下载安装。(直接进入页面中的第二步，完成该步骤的流程后即可回到本页面)
+安装完成后 *Shifu* 会在docker运行时伴随启动。
 
 ### 4. 查看*Shifu*是否启动
 

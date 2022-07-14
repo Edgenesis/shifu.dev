@@ -3,7 +3,7 @@ title: 数据面 Data Plane
 sidebar_position: 2
 ---
 
-Shifu的数据面的主要组件是`deviceShifu`。
+Shifu数据面的主要组件是`deviceShifu`。
 
 ### deviceShifu
 #### 简介

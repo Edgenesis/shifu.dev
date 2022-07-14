@@ -3,7 +3,7 @@ title: 控制面 Control Plane
 sidebar_position: 3
 ---
 
-Shifu的控制面的主要组件是`shifuController`和`shifud`。
+Shifu控制面的主要组件是`shifuController`和`shifud`。
 
 ### shifuController
 #### 简介
