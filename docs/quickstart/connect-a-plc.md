@@ -174,7 +174,7 @@ kubectl exec -it nginx -n deviceshifu -- bash
 - **digit**: 从开始位置起第几个bit。
 - **value**: 需要修改成为的数值。
 
-比如，命令`curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1"` 会将 M0.2 的第二个 bit 修改为1。
+比如，命令`curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1"` 会将 Q0.1 的第二个 bit 修改为1。
 ```bash
 curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1";echo
 ```
@@ -188,7 +188,7 @@ curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&valu
 - **address**: 内存区域中的地址。
 - **start**: 开始位置。
 
-比如，命令`curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"` 会返回 M0.0 的一个 byte 的值。
+比如，命令`curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"` 会返回 Q0.0 的一个 byte 的值。
 ```bash
 curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"
 ```

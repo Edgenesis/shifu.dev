@@ -32,8 +32,7 @@ flowchart LR;
 
 ### ***Shifu*** 与设备之间的通信
 
-***Shifu*** 可以同时兼容不同的[通信协议](protocol-driver-compatibility/protocols.md)和[驱动](protocol-driver-compatibility/drivers.md)，它将不同设备的不同形式的请求进行统一，使得用户可以更简单地使用设备的功能。  
-***Shifu*** 在持续增加可兼容的新协议和新驱动。对于当前可兼容的协议和驱动，参见[兼容协议](protocol-driver-compatibility/protocols.md)和[兼容驱动](protocol-driver-compatibility/drivers.md)。
+***Shifu*** 可以同时兼容不同的[通信协议](protocol-driver-compatibility/protocols.md)和[驱动](protocol-driver-compatibility/drivers.md)，它将不同设备的不同形式的请求进行统一，使得用户可以更简单地使用设备的功能。同时，***Shifu*** 也在持续增加可兼容的新协议和新驱动。
 
 ### ***Shifu*** 与应用之间的通信
 ***Shifu*** 可以通过`HTTP`协议(gRPC协议暂未支持)与开发者所开发的程序进行通信。使得开发者开发物联网设备程序时像开发一个软件一样简单。

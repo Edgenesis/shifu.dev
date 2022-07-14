@@ -62,7 +62,7 @@ curl http://deviceshifu-agv.deviceshifu.svc.cluster.local/get_position;echo
   A：当模拟温度计接收到read_value命令时会生成并返回当前温度计的读数。
 </details>
 
-
+#### 启动温度计虚拟设备
 首先，我们创建一个温度计的数字孪生：
 ```bash
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-thermometer
@@ -75,6 +75,7 @@ sudo kubectl get pods -A | grep thermometer
 
 ![deviceshifu-thermometer pod_start.png](images/deviceshifu-thermometer_pod_start.png)
 
+#### 与温度计虚拟设备交互
 接下来我们可以进入nginx来测试温度计：(如果您未启动Nginx，请您首先 [启动Nginx服务](#启动nginx))
 
 ```bash
@@ -112,7 +113,7 @@ curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/get_status;ech
   A：当模拟酶标仪接收到命令get_measurement会返回8*12的矩阵，其中的每一个数字代表一个样本中光谱分析扫描的结果数值。
 </details>
 
-
+#### 启动酶标仪虚拟设备
 首先，我们启动酶标仪的数字孪生：
 
 ```
@@ -126,6 +127,7 @@ sudo kubectl get pods -A | grep plate
 ```
 ![deviceshifu-plate_pods_start.png](images/deviceshifu-plate-reader_pod_start.png)
 
+#### 与酶标仪虚拟设备交互
 接着，我们进入nginx：(如果您未启动Nginx，请您首先 [启动Nginx服务](#启动nginx))
 
 ```
@@ -146,6 +148,7 @@ sudo kubectl exec -it nginx -- bash
   A：当模拟PLC接收到 sendsinglebit 命令可以修改内存区域中一个bit，接收到 getcontent 命令可以得到内存区域中一个byte的值。
 </details>
 
+#### 启动PLC虚拟设备
 首先，我们启动PLC的数字孪生：
 
 ```bash
@@ -159,7 +162,7 @@ sudo kubectl get pods -A | grep plc
 ```
 
 ![deviceshifu-plc_pods_start](images/deviceshifu-plc_pods_start.png)
-
+#### 与PLC虚拟设备交互
 接着，我们需要进入nginx：(如果您未启动Nginx，请您首先 [启动Nginx服务](#启动nginx))
 
 ```bash
@@ -190,6 +193,7 @@ curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&
   A：当模拟机械臂接收到get_coordinate命令后会返回其当前的x, y, z轴坐标。
 </details>
 
+#### 启动机械臂虚拟设备
 首先，我们创建一个机械臂的数字孪生：
 
 ```bash
@@ -204,6 +208,7 @@ sudo kubectl get pods -A | grep robotarm
 
 ![deviceshifu-reboot-arm_start_pods](images/deviceshifu-reboot-arm_start_pods.png)
 
+#### 与机械臂虚拟设备交互
 接着，我们需要进入nginx：(如果您未启动Nginx，请您首先 [启动Nginx服务](#启动nginx))
 
 ```bash
