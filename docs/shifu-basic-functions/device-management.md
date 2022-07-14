@@ -4,7 +4,7 @@ sidebar_position: 2
 ---
 
 # 设备管理
-`deviceshifu_configmap.yaml`中的`telemetries`表示自动测量记录传导。*shifu*通过`telemetries`中设置的方法，以指定时间向设备周期性地发送请求，来判断设备的连接情况。如果设备出现故障或者连接出现问题，`edgedevice`的状态将发生改变，您可以通过`kubectl describe edgedevice -A`查看其状态。
+`deviceshifu_configmap.yaml`中的`telemetries`表示自动测量记录传导。*Shifu*通过`telemetries`中设置的方法，以指定时间向设备周期性地发送请求，来判断设备的连接情况。如果设备出现故障或者连接出现问题，`edgedevice`的状态将发生改变，您可以通过`kubectl describe edgedevice -A`查看其状态。
 
 ```yaml
 ...
