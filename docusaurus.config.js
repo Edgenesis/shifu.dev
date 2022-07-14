@@ -27,6 +27,10 @@ const config = {
     locales: ['zh-Hans'],
   },
 
+  plugins: [
+    'docusaurus-plugin-hotjar',
+  ],
+
   presets: [
     [
       'classic',
@@ -123,6 +127,9 @@ const config = {
           autoCollapseCategories: true,
           hideable: true,
         },
+      },
+      hotjar: {
+        applicationId: 3065662
       },
     }),
 };
