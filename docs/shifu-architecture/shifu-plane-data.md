@@ -33,4 +33,5 @@ Shifu数据面的主要组件是`deviceShifu`。
 ```
 
 #### 设计文档
-`deviceShifu`的具体设计文档在[这里](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)，对内部细节感兴趣的读者可以进一步阅读。
+如果你对 `deviceShifu` 内部细节感兴趣,可以前往[deviceShifu设计文档](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)进一步阅读。
+

@@ -31,11 +31,11 @@ Shifu控制面的主要组件是`shifuController`和`shifud`。
 | Unknown | 未知状态... |
 
 #### 设计文档
-`shifuController`的具体设计文档在[这里](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController-zh.md)，对内部细节感兴趣的读者可以进一步阅读。
+如果你对 `shifuController` 内部细节感兴趣,可以前往[shifuController设计文档](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController-zh.md)进一步阅读。
 
 ### shifud
 #### 简介
 `shifud`是运行在每个Kubernetes节点上的DaemonSet，主要负责设备发现、验证及更新。
 
 #### 设计文档
-`shifud`的具体设计文档在[这里](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud-zh.md)，对内部细节感兴趣的读者可以进一步阅读。
+如果你对 `shifud` 内部细节感兴趣,可以前往[shifud设计文档](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud-zh.md)进一步阅读。
