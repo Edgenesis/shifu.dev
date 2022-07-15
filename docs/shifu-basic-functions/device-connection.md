@@ -4,7 +4,7 @@ sidebar_position: 1
 ---
 
 # 设备接入
-如果您未运行过`极速试玩`，建议您先行体验[极速试玩](quickstart/quick_demo.md)。
+如果您未运行过`极速试玩`，建议您先行[体验](quickstart/quick_demo.md)。
 ## 如何修改设备接入的配置
 ### 1. 编辑`edgedevice.yaml`文件
 
