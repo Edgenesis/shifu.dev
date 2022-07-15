@@ -24,8 +24,12 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    locales: ['zh-Hans', 'en'],
   },
+
+  plugins: [
+    'docusaurus-plugin-hotjar',
+  ],
 
   presets: [
     [
@@ -65,6 +69,10 @@ const config = {
             docId: 'intro',
             position: 'left',
             label: 'Docs',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
           {
             href: 'https://github.com/edgenesis/shifu',
@@ -123,6 +131,9 @@ const config = {
           autoCollapseCategories: true,
           hideable: true,
         },
+      },
+      hotjar: {
+        applicationId: 3065662
       },
     }),
 };
