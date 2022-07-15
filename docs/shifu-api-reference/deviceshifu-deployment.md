@@ -1,5 +1,6 @@
 ---
 title: DeviceShifu Deployment
+sidebar_position: 3
 ---
 
 # DeviceShifu Deployment

@@ -2,15 +2,12 @@
 title: 极速试玩
 sidebar_position: 2
 ---
-
-# 极速试玩
-
 ## 启动Nginx
 我们启动一个nginx实例来模拟应用程序与shifu之间的交互：
 
 ```bash
 sudo kubectl run --image=nginx:1.21 nginx
-sudo kubectl get pods
+sudo kubectl get pods -A | grep nginx
 ```
 可以看到nginx已经在运行：
 
