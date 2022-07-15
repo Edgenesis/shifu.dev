@@ -29,7 +29,11 @@ Shifu自带了设备管理框架，可以便捷地实现查看设备的运行状
 ## 应用开发
 在Shifu中，每一个设备都会生成与其相对应的数字孪生（[deviceShifu](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)）。
 开发者只需调用DdviceShifu所暴露出来的API，即可以无比便捷地使用设备的能力。
-举个例子，一条简单的 `curl http://robot-arm/grip/` 命令就可以让一个机械臂完成抓取的动作。
+
+```
+curl http://robot-arm/grip/
+```
+举个例子，上面这条简单的命令就可以让一个机械臂完成抓取的动作。
 我们希望Shifu能够帮助物联网应用开发者们，**把开发一个产业场景变得像开发一个App一样简单！**
 
 ## 系统运维
