@@ -94,7 +94,7 @@ const config = {
             items: [
               {
                 label: '极速安装',
-                to: 'quickstart/quick_install',
+                to: 'docs/quickstart/quick_install',
               },
             ],
           },
