@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Shifu Docs',
-  tagline: 'Shifu',
+  title: 'Shifu Framework',
+  tagline: '让开发一个工业场景像开发一个APP一样简单 !',
   url: 'https://docusaurus.shifu.run',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -40,7 +40,7 @@ const config = {
           remarkPlugins: [require('mdx-mermaid')],
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarCollapsible: true,
-          routeBasePath: '/',
+          routeBasePath: '/docs',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -58,7 +58,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Shifu 文档',
+        title: 'Shifu Framwork',
         logo: {
           alt: 'My Site Logo',
           src: 'img/edgenesis.png',
@@ -68,7 +68,12 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Docs',
+            label: '文档',
+          },
+          {
+            href: 'https://demo.shifu.run',
+            label: 'Shifu Demo 下载',
+            position: 'left',
           },
           {
             type: 'localeDropdown',
@@ -85,17 +90,22 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '文档',
             items: [
               {
-                label: 'Tutorial',
-                to: '/',
+                label: '极速安装',
+                to: 'quickstart/quick_install',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '社区',
             items: [
+              {
+                label: '尽情期待！',
+                to: 'docs',
+                // href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
               // {
               //   label: 'Stack Overflow',
               //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
@@ -111,16 +121,20 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: '更多',
             items: [
               {
                 label: 'GitHub',
                 href: 'https://github.com/edgenesis/shifu',
               },
+              {
+                label: 'Shifu Demo 下载',
+                href: 'https://demo.shifu.run',
+              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Edgenesis, Inc. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} 边无际 Edgenesis. <a href="https://beian.miit.gov.cn/">京ICP备2021037926号</a>`,
       },
       prism: {
         theme: lightCodeTheme,

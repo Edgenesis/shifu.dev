@@ -4,32 +4,33 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: '设备接入/管控',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Shifu Framework 让开发者轻松调用所有种类的设备，支持公有、私有协议平台和驱动设备
+        的接入。同时 Shifu 自带了设备管理框架，可以便捷地实现查看设备的运行状态、
+        更新设备驱动、进行安全配置等操作。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '应用开发',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        在Shifu中, 每一个设备都会生成与其相对应的数字孪生 (deviceShifu) 。 开发者只需调
+        用 DeviceShifu 所暴露出来的 API, 即可以无比便捷地使用设备的能力。
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Kubernetes 原生',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Shifu Framework 是 Kubernetes 原生架构，可以在现有集群实现 IoT 设备的互联，无需构
+        建额外的运维设施。
       </>
     ),
   },
