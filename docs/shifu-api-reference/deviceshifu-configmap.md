@@ -40,7 +40,17 @@ DeviceShifuInstruction 是指 DeviceShifu 可以接受的命令。
   表示DeviceShifu 命令的参数，根据不同协议具有不同的配置，更多示例请参考 [examples](https://github.com/Edgenesis/shifu/tree/main/examples)。
   
   - **DeviceShifuInstructionProperty** (interface)
-  
+
+参数:
+- **timeout**(int)
+表示该请求的超时时间。如果timeout=0则表示永远不会超时。如果未提供timeout则会使用`defaultTimeoutSeconds`
+
+## DeviceShifuInstructionSettings
+
+DeviceShifuInstructionSettings 是指 DeviceShifu中的Instruction 的相关的设置。
+- **defaultTimeoutSeconds** (int) 表示所有Instruction的默认超时时间(秒)。如未设置，默认值为3秒
+
+
 ## DeviceShifuTelemetries
 
 DeviceShifuTelemetries 是指 DeviceShifu 用来检测物联网设备的一个或多个命令。
