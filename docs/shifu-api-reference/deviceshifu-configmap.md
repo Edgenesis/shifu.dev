@@ -43,8 +43,8 @@ DeviceShifuInstruction 是指 DeviceShifu 可以接受的命令。
 
 参数:
 - **timeout**(int)
-表示该请求的超时时间。如果timeout=0则表示永远不会超时。如果未提供timeout则会使用`defaultTimeoutSeconds`
-
+表示该请求的超时时间。如果timeout=0则表示永远不会超时。如果未提供timeout则会使用`defaultTimeoutSeconds`。
+例：`http://hello_device?timeout=3` 表示该请求3秒超时。
 ## DeviceShifuInstructionSettings
 
 DeviceShifuInstructionSettings 是指 DeviceShifu中的Instruction 的相关的设置。
