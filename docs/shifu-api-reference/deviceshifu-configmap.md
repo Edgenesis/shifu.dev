@@ -19,9 +19,9 @@ Shifu架构下的ConfigMap 是一个 Kubernetes 原生的 [ConfigMap](https://ku
   标准的 Kubernetes [ObjectMeta](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/object-meta/#ObjectMeta)。
 - **data** (map[string]string)
   ConfigMap 的数据。
-  - **driverProperties** ([string](#deviceshifudriverproperties))
-  - **instructions** ([string](#deviceshifuinstruction))
-  - **telemetries** ([string](#deviceshifutelemetries))
+  - **driverProperties** ([DeviceShifuDriverProperties](#deviceshifudriverproperties))
+  - **instructions** ([DeviceShifuInstruction](#deviceshifuinstruction))
+  - **telemetries** ([DeviceShifuTelemetries](#deviceshifutelemetries))
 
 ## DeviceShifuDriverProperties
 
