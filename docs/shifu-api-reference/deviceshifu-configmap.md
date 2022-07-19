@@ -62,9 +62,10 @@ DeviceShifuTelemetries 是指 DeviceShifu 用来检测物联网设备的一个�
 ## DeviceShifuTelemetrySettings
 
 DeviceShifuTelemetrySettings 是指与DeviceShifu 监测相关的设置。
-- **telemetryUpdateIntervalInMiliseconds** (int64)
-DeviceShifu 检测 Telemetry 的毫秒间隔。
-
+- HTTP协议:
+    - **telemetryUpdateIntervalInMilliseconds** (int64) DeviceShifu 检测 Telemetry 的毫秒间隔。默认为3000。
+    - **telemetryTimeoutInMilliseconds** (int64) DeviceShifu 与设备连接的超时时间。默认为3000。
+    - **telemetryInitialDelayInMilliseconds** (int64) DeviceShifu 初次检测的延迟时间。默认为3000。
 ## DeviceShifuTelemetry
 
 DeviceShifuTelemetry 描述了 DeviceShifu 通过哪些指令来监测物联网设备的状态。
