@@ -23,9 +23,9 @@ Shifu架构下的ConfigMap 是一个 Kubernetes 原生的 [ConfigMap](https://ku
   - **instructions** ([string](#deviceshifuinstruction))
   - **telemetries** ([string](#deviceshifutelemetries))
 
-## DeviceShifuDriverProperties
+## driverProperties
 
-DeviceShifuDriverProperties 是指 DeviceShifu 的驱动参数。
+driverProperties 是指 DeviceShifu 的驱动参数。
 - **driverSku** (string)
   表示驱动所适用的硬件型号，如 `Hikvision Camera`。
 - **driverImage** (string)
@@ -33,34 +33,28 @@ DeviceShifuDriverProperties 是指 DeviceShifu 的驱动参数。
 - **driverExecution** (string)
   表示驱动的执行路径。针对于命令行的驱动，这里需要填写驱动的执行文件的相对/绝对路径，如 `python driver.py` 或 `C:\driver.exe`。
 
-## DeviceShifuInstruction
+## instructions
 
-DeviceShifuInstruction 是指 DeviceShifu 可以接受的命令。
+instructions 是指 DeviceShifu 可以接受的命令。
 - **instructionProperties** (DeviceShifuInstructionProperty)
   表示DeviceShifu 命令的参数，根据不同协议具有不同的配置，更多示例请参考 [examples](https://github.com/Edgenesis/shifu/tree/main/examples)。
   
   - **DeviceShifuInstructionProperty** (interface)
   
-## DeviceShifuTelemetries
+## telemetries
 
-DeviceShifuTelemetries 是指 DeviceShifu 用来检测物联网设备的一个或多个命令。
-- **telemetrySettings** ([DeviceShifuTelemetrySettings](#deviceshifutelemetrysettings))
-
-- **telemetries** (map[string]DevitelemetryceShifuTelemetry)
+telemetries 是指 DeviceShifu 用来检测物联网设备的一个或多个命令。
+- **telemetries** (map[string]DeviceShifuTelemetry)
   - **[DeviceShifuTelemetry](#deviceshifutelemetry)**
-
-## DeviceShifuTelemetrySettings
-
-DeviceShifuTelemetrySettings 是指与DeviceShifu 监测相关的设置。
-- **telemetryUpdateIntervalInMiliseconds** (int64)
-DeviceShifu 检测 Telemetry 的毫秒间隔。
 
 ## DeviceShifuTelemetry
 
 DeviceShifuTelemetry 描述了 DeviceShifu 通过哪些指令来监测物联网设备的状态。
   - **properties** (DeviceShifuTelemetryProperties)
     - **instruction** (string)
-    表示用来检测的命令，且必须是上方 [DeviceShifuInstruction](#deviceshifuinstruction) 定义的有效命令。
+    表示用来检测的命令，且必须是上方 [instructions](#deviceshifuinstruction) 定义的有效命令。
     - **initialDelayMs** (int)
     表示开始检测时的延迟（毫秒）。
+    - **intervalMs** (int)
+    表示检测的间隔（毫秒）。
 
