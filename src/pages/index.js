@@ -1,41 +1,18 @@
-import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import React from "react";
+import Layout from "@theme/Layout";
+import HomepageCards from "../components/Homepage/cards";
+import styles from "./styles.module.scss";
+import Header from "../components/Homepage/download";
+import Sponsor from "../components/Homepage/sponsor";
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+export default function Hello() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="docs/quickstart/quick_install">
-            Shifu 快速上手 - 5分钟 ⏱️
-          </Link>
-        </div>
+    <Layout title="Hello" description="Hello React Page">
+      <div className={styles.container}>
+        <Header></Header>
+        <HomepageCards title="我们的优势"></HomepageCards>
+        <Sponsor></Sponsor>
       </div>
-    </header>
-  );
-}
-
-export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-    //   title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
     </Layout>
   );
 }
