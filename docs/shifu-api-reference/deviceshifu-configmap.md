@@ -71,6 +71,8 @@ DeviceShifuTelemetrySettings 是指与DeviceShifu 监测相关的设置。
     - **telemetryInitialDelayInMilliseconds** (int64) DeviceShifu 初次检测的延迟时间。默认为3000。
 - TCP socket 协议:
     - **telemetryUpdateIntervalInMilliseconds** (int64) DeviceShifu 检测 Telemetry 的毫秒间隔。默认为1000。
+- MQTT协议：
+    - **telemetryUpdateIntervalInMiliseconds** (int64) DeviceShifu 检测MQTT距离收到上一条msg到现在的毫秒间隔。默认为3000.
 
 ## DeviceShifuTelemetry
 
