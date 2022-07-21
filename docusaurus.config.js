@@ -29,8 +29,15 @@ const config = {
 
   plugins: [
     'docusaurus-plugin-hotjar',
-    'docusaurus-plugin-sass'
+    'docusaurus-plugin-sass',
+    [
+      'docusaurus-plugin-baidu-analytics',
+      {
+        analyticsId: '3123fa51e13a507dfc99a606fc329c52'
+      }
+    ]
   ],
+
   presets: [
     [
       'classic',
