@@ -34,17 +34,10 @@ sidebar_position: 1
 
 ### 2. 检查*Docker*是否可用
 
-2.1. 打开*Docker*,并保持其运行  
-2.2. 确保*Docker*运行顺利  
-2.2. a 使用`Linux/Mac`的用户请在命令行(terminal)中执行以下命令。
-
-```bash
-sudo docker ps
-```
-
-如果 *Docker* 运行顺利，将会得到以下输出:  
-![docker_run](images/docker_run.png)  
-2.2. b 使用`Windows WSL2`的用户请在开始菜单中打开 `Ubuntu` 或您安装的其他Linux发行版，执行以下命令。  
+1. 打开*Docker*,并保持其运行
+2. 确保*Docker*运行顺利  
+2.1. a 使用`Linux/Mac`的用户请在命令行(terminal)中执行以下命令。  
+2.1. b 使用`Windows WSL2`的用户请在开始菜单中打开 `Ubuntu` 或您安装的其他Linux发行版，执行以下命令。
 
 ```bash
 sudo docker ps
