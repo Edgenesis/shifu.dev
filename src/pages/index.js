@@ -3,7 +3,7 @@ import Layout from "@theme/Layout";
 import HomepageCards from "../components/Homepage/cards";
 import styles from "./styles.module.scss";
 import Header from "../components/Homepage/download";
-import Sponsor from "../components/Homepage/sponsor";
+// import Sponsor from "../components/Homepage/sponsor";
 
 export default function Hello() {
   return (
@@ -11,8 +11,9 @@ export default function Hello() {
       <div className={styles.container}>
         <Header></Header>
         <HomepageCards title="我们的优势"></HomepageCards>
-        <Sponsor></Sponsor>
+        {/* <Sponsor></Sponsor> */}
       </div>
     </Layout>
   );
 }
+
