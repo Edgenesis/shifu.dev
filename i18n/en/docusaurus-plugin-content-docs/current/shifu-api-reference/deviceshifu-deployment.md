@@ -48,6 +48,28 @@ title: DeviceShifu Deployment
 - **spec.template.spec.serviceAccountName** (string)
   表示 DeviceShifu 用来更新 EdgeDevice 信息的服务账号名，必须是 `edgedevice-sa`。
 
+## TCP socket DeviceShifu Deployment
+
+详细示例请参考 https://github.com/Edgenesis/shifu/tree/main/examples/socketDeviceShifu
+- **spec.template.spec.containers[0].env**
+  - **EDGEDEVICE_NAME** (string)
+  表示 DeviceShifu 对应的 EdgeDevice 的名字，这里是 edgedevice-socket 。
+  - **EDGEDEVICE_NAMESPACE** (string)
+  表示 DeviceShifu 对应的 EdgeDevice 所在的域，这里是 devices 。
+  
+- **spec.template.spec.volumes[].configMap**
+  - **volume**
+    - **name**
+    表示挂载的 ConfigMap 的名字。
+    - **configMap**
+  
+- **spec.template.spec.containers[0].volumeMounts[].name**
+  - **volumeMount**
+    - **name** (string)
+    表示挂载的 ConfigMap 的名字，这里是 deviceshifu-config 。
+    - **mountPath** (string)
+    表示挂载的 ConfigMap 的路径，必须是 `/etc/edgedevice/config`。
+
 ## OPC UA DeviceShifu Deployment
 
 详细示例请参考 https://github.com/Edgenesis/shifu/tree/main/examples/opcuaDeviceShifu
