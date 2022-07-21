@@ -9,7 +9,7 @@ function HeaderLogo() {
       <img src={logo}></img>
       <div className={styles.right}>
         <h1>Shifu Framework</h1>
-        <p>让开发工业场景像开发一个APP一样简单！</p>
+        <p>让开发一个产业场景像开发一个APP一样简单！</p>
       </div>
     </div>
   );
