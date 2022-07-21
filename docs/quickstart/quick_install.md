@@ -2,6 +2,8 @@
 title: 极速安装
 sidebar_position: 1
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 ## 前置阅读
 
@@ -34,15 +36,37 @@ sidebar_position: 1
 
 ### 2. 检查*Docker*是否可用
 
-a. 打开*Docker*,并保持其运行
+1. 打开*Docker*,并保持其运行
+2. 确保*Docker*运行顺利
 
-b.使用`Linux/Mac`的用户请在命令行(terminal)中执行以下命令。
+<Tabs groupId="operating-systems">
+   <TabItem value="win" label="Windows">
 
-c. 使用`Windows WSL2`的用户请在开始菜单中打开 `Ubuntu` 或您安装的其他Linux发行版，执行以下命令。  
+   *使用 `Windows WSL2` 的用户请在开始菜单中打开 `Ubuntu` 或您安装的其他Linux发行版，执行以下命令:*
 
-```bash
-sudo docker ps
-```
+   ```bash
+   sudo docker ps
+   ```
+
+   </TabItem>
+   <TabItem value="mac" label="macOS">
+
+   *请在命令行(terminal)中执行以下命令:*
+
+   ```bash
+   sudo docker ps
+   ```
+
+   </TabItem>
+   <TabItem value="linux" label="Linux">
+
+   *请在命令行(terminal)中执行以下命令:*
+
+   ```bash
+   sudo docker ps
+   ```
+   </TabItem>
+</Tabs>
 
 如果 *Docker* 运行顺利，将会得到以下输出:  
 ![docker_run](images/docker_run.png)
