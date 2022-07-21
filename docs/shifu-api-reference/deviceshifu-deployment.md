@@ -27,25 +27,19 @@ sidebar_position: 3
   表示 DeviceShifu 对应的 EdgeDevice 的名字。
   - **EDGEDEVICE_NAMESPACE** (string)
   表示 DeviceShifu 对应的 EdgeDevice 所在的域。
-  
 - **spec.template.spec.volumes[0].configMap**
   - **volume**
     - **name**
       表示挂载的 ConfigMap 的名字。
-    
     - **configMap**
-    
       表示 DeviceShifu 配置 ConfigMap 的名字。
-    
       - **name** (string)
-  
 - **spec.template.spec.containers[0].volumeMounts[].name**
   - **volumeMount**
     - **name** (string)
     表示挂载的 ConfigMap 的名字
     - **mountPath** (string)
     表示挂载的 ConfigMap 的路径，必须是 `/etc/edgedevice/config`。
-
 - **spec.template.spec.serviceAccountName** (string)
   表示 DeviceShifu 用来更新 EdgeDevice 信息的服务账号名，必须是 `edgedevice-sa`。
 
