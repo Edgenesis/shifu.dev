@@ -29,8 +29,8 @@ const config = {
 
   plugins: [
     'docusaurus-plugin-hotjar',
+    'docusaurus-plugin-sass'
   ],
-
   presets: [
     [
       'classic',
