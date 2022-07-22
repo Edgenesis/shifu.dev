@@ -26,21 +26,18 @@ import TabItem from '@theme/TabItem';
 | Windows(WSL2) | :white_check_mark: |
 
 ## ***Shifu*** 环境准备
-### 1. 下载并安装*Docker*
-
-| 操作系统 | 安装包 |
-|--|--|
-| Linux | [点我查看教程](https://docs.docker.com/engine/install/#server) |
-| Mac OS | [M1芯片 点我下载](https://desktop.docker.com/mac/main/arm64/Docker.dmg)<br/>[Intel芯片 点我下载](https://desktop.docker.com/mac/main/amd64/Docker.dmg) |
-| Windows (WSL2) | [点我下载](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) |
-
-### 2. 检查*Docker*是否可用
-
-1. 打开*Docker*,并保持其运行
-2. 确保*Docker*运行顺利
+### 1. 安装*Docker*
 
 <Tabs groupId="operating-systems">
    <TabItem value="win" label="Windows">
+
+   **1.1. 安装*Docker***
+
+   [点我下载Docker安装包](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
+   
+   **1.2. 打开*Docker*,并保持其运行**
+
+   **1.3. 确保*Docker*运行顺利**
 
    *使用 `Windows WSL2` 的用户请在开始菜单中打开 `Ubuntu` 或您安装的其他Linux发行版，执行以下命令:*
 
@@ -51,6 +48,17 @@ import TabItem from '@theme/TabItem';
    </TabItem>
    <TabItem value="mac" label="macOS">
 
+   **1.1. 安装*Docker***
+
+   | 芯片类型 | 安装包 |
+   |--|--|
+   | M1/M2芯片 | [点我下载Docker安装包](https://desktop.docker.com/mac/main/arm64/Docker.dmg) |
+   | Intel芯片 | [点我下载Docker安装包](https://desktop.docker.com/mac/main/amd64/Docker.dmg) |
+
+   **1.2. 打开*Docker*,并保持其运行**
+
+   **1.3. 确保*Docker*运行顺利**
+
    *请在命令行(terminal)中执行以下命令:*
 
    ```bash
@@ -60,23 +68,32 @@ import TabItem from '@theme/TabItem';
    </TabItem>
    <TabItem value="linux" label="Linux">
 
+   **1.1. 安装*Docker***
+
+   [点我查看安装教程](https://docs.docker.com/engine/install/#server)
+
+   **1.2. 打开*Docker*,并保持其运行**
+
+   **1.3. 确保*Docker*运行顺利**
+
    *请在命令行(terminal)中执行以下命令:*
 
    ```bash
    sudo docker ps
    ```
+
    </TabItem>
 </Tabs>
 
 如果 *Docker* 运行顺利，将会得到以下输出:  
 ![docker_run](images/docker_run.png)
 
-### 3. 安装*Shifu*
+### 2. 安装*Shifu*
 
 前往**[demo.shifu.run](https://demo.shifu.run)**进行下载安装。(直接进入页面中的第二步，完成该步骤的流程后即可回到本页面)
-安装完成后 *Shifu* 会在docker运行时伴随启动。
+安装完成后 *Shifu* 会在 *docker* 运行时伴随启动。
 
-### 4. 查看*Shifu*是否启动
+### 3. 查看*Shifu*是否启动
 
 使用以下命令来查看运行效果：
 

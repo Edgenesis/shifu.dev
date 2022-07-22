@@ -15,6 +15,8 @@ sudo kubectl get pods -A | grep nginx
 
 ## 与数字孪生设备进行交互
 
+我们准备了五个虚拟设备(AGV，温度计，酶标仪，PLC，机械臂）以供您进行试玩，体验 *Shifu* 的能力。
+
 ### 1. 与AGV的数字孪生交互
 <details>
   <summary> 点此查看AGV细节 </summary>
