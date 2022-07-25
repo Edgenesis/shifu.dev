@@ -16,3 +16,4 @@ title: "Shifu 相关资料"
 ## 案例类资料
 ### 成功案例类
 1. :rocket: [万象原生EquipTalk如何用Shifu赋能运载火箭](https://mp.weixin.qq.com/s/T-_o2072dk5X0X4NChXUpA)
+2. :cloud: [Shifu--亚马逊云科技创新案例集(P90-92)](https://d1.awsstatic.com/whitepapers/amazon-iot-innovation-case.pdf)
