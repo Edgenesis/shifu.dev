@@ -11,7 +11,7 @@ sidebar_position: 3
 
 ## Deployment
 
- Shifu 架构下的 Deployment 是一个 Kubernetes 原生的 [Deployment](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/) ，在 Shifu 中表示一个数字孪生对象，它使我们可以生命式的更新 [Pods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/)。
+ Shifu 架构下的 Deployment 是一个 Kubernetes 原生的 [Deployment](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/) ，在 Shifu 中表示一个数字孪生对象，它使我们可以声明式的更新 [Pods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/)。
 
 - **apiVersion**: apps/v1
 - **kind**: Deployment
