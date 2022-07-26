@@ -135,7 +135,7 @@ sudo kubectl exec -it nginx -- bash
 
 最后，我们可以和酶标仪的数字孪生通过`http://deviceshifu-plate-reader.deviceshifu.svc.cluster.local`进行交互，得到酶标仪的测量结果：
 ```bash
- curl "deviceshifu-plate-reader.deviceshifu.svc.cluster.local/get_measurement"
+curl "deviceshifu-plate-reader.deviceshifu.svc.cluster.local/get_measurement"
 ```
 ![deviceshifu-plate-reader_output](images/deviceshifu-plate-reader_output.png)
 
