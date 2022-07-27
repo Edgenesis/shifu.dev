@@ -141,7 +141,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} 边无际 Edgenesis. <a href="https://beian.miit.gov.cn/">京ICP备2021037926号</a>`,
+        copyright: `© ${new Date().getFullYear()} 边无际 Edgenesis.  |  <a href="https://beian.miit.gov.cn/">京ICP备2021037926号</a>  | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039843">京公网安备11010802039843号</a>`,
       },
       prism: {
         theme: lightCodeTheme,
