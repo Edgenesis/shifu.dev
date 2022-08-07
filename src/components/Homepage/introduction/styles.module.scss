@@ -1,0 +1,23 @@
+.descriptionModel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .descript {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 60px;
+    .title {
+      font-weight: 700;
+      font-size: 20px;
+      color: #399bff;
+    }
+    .content {
+      width: 682px;
+      font-weight: 400;
+      font-size: 14px;
+      color: #000000;
+    }
+  }
+}

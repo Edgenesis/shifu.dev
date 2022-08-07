@@ -2,15 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
   a {
     text-decoration: none;
     box-sizing: border-box;
     position: absolute;
-    height: 50px;
-    line-height: 50px;
-    padding: 0px 20px;
-    font-size: 20px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 26px;
+    font-size: 12px;
+    font-weight: 400;
     color: var(--font-white);
     border-radius: 100px;
     border: none;
@@ -53,6 +55,13 @@
       height: 55px;
       line-height: 55px;
       font-size: 22px;
+    }
+  }
+  .blue {
+    background: #399bff;
+    border-radius: 5px;
+    &:hover {
+      background: #0080ff
     }
   }
 }

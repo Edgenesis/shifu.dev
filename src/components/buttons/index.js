@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { Link } from "react-router-dom";
 function GreenBtn(props) {
   return (
     <div className={styles.wrapper}>
@@ -9,6 +8,20 @@ function GreenBtn(props) {
         target={props.target}
         className={styles.green}
         style={{ width: props.width }}
+      >
+        {props.content}
+      </a>
+    </div>
+  );
+}
+function BlueBtn(props) {
+  return (
+    <div className={styles.wrapper}>
+      <a
+        href={props.href}
+        target={props.target}
+        className={styles.blue}
+        style={{ width: props.width, height: props.height }}
       >
         {props.content}
       </a>
@@ -40,13 +53,15 @@ function YellowBtn(props) {
       >
         <i
           className={styles.icon}
-          style={{
-            // backgroundImage: 'url("@site/static/img/icon-download.png") ',
-          }}
+          style={
+            {
+              // backgroundImage: 'url("@site/static/img/icon-download.png") ',
+            }
+          }
         ></i>
         <span>{props.content}</span>
       </a>
     </div>
   );
 }
-export { GreenBtn, GreenBorderBtn, YellowBtn };
+export { GreenBtn, GreenBorderBtn, YellowBtn, BlueBtn };
