@@ -1,13 +1,50 @@
 .container {
-  height: 85vh;
-  width: 100%;
-  min-height: 500px;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 30px 0;
+  .wrapper {
+    width: 840px;
+    height: 300px;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 20px;
+    color: #399bff;
+    margin-left: 24px;
+  }
+  .rotation {
+    overflow-x: hidden;
+  }
   .content {
-    height: 70%;
+    width: 1800px;
+    display: flex;
+    flex-direction: column;
+    animation: rotation 7s infinite linear;
+    // animation-play-state: running;
+    cursor: pointer;
+    &:hover{
+      animation-play-state: paused;
+    }
+  }
+  @keyframes rotation {
+    from {
+      transform:translateX(0px);
+    }
+  
+    to {
+      transform:translateX(-892px);
+    }
+  }
+  .Sponsor {
+    width: 210px;
+    height: 75px;
+    background: #f0f6fb;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 13px;
+    margin-bottom: 13px;
   }
 }
