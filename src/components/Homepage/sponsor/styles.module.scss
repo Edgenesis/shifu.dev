@@ -21,6 +21,11 @@
     display: flex;
     flex-direction: column;
     animation: rotation 7s infinite linear;
+    // animation-play-state: running;
+    cursor: pointer;
+    &:hover{
+      animation-play-state: paused;
+    }
   }
   @keyframes rotation {
     from {

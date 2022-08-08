@@ -29,6 +29,7 @@
   --btn-yellow: #e4b248;
   --background-img: url('@site/static/img/background-write.png');
   --background-color:#fff;
+  --first-part-footer:linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8662815467984069) 48%, rgba(255,255,255,0) 100%);
   --card-color:#fff
 }
 
@@ -46,5 +47,6 @@
   --font-white: #212121;
   --background-img:url('@site/static/img/background-black.png');
   --background-color:#0D1F34;
-  --card-color:#0B1929
+  --card-color:#0B1929;
+  --first-part-footer:linear-gradient(0deg, rgba(13,31,52,1) 0%, rgba(13,31,52,0.8018557764902836) 48%, rgba(13,31,52,0) 100%);
 }
