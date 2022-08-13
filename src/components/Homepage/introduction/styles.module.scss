@@ -1,23 +1,25 @@
 .descriptionModel {
+  width: 1130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 180px;
+}
+.introBar {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  .descript {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin: 60px;
-    .title {
-      font-weight: 700;
-      font-size: 20px;
-      color: #399bff;
-    }
-    .content {
-      width: 682px;
-      font-weight: 400;
-      font-size: 14px;
-      color: var(--font-black);
-    }
+  margin-bottom: 60px;
+  position: relative;
+  .barTitle {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 160.69%;
+    color: #000000;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
