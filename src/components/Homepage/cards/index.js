@@ -3,8 +3,9 @@ import styles from "./styles.module.scss"
 
 export function CardOne(props) {
   const textAlign = props.isTextAlignRight ? "right" : "left"
+  const shadow = `10px 10px 50px ${props.shadowColor}`
   return (
-    <div className={styles.cardOneContainer}>
+    <div className={styles.cardOneContainer} style={{ boxShadow: shadow }}>
       <div className={styles.cardOneContent} style={{ textAlign: textAlign }}>
         <h1 className={styles.cardOneTitle} style={{ backgroundColor: props.titleColor }}>{props.title}</h1>
         <p className={styles.cardOneDescript} >{props.descript}</p>
