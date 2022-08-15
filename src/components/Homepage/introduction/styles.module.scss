@@ -5,6 +5,7 @@
   align-items: center;
   margin-bottom: 180px;
 }
+
 .introBar {
   width: 100%;
   display: flex;
@@ -12,11 +13,12 @@
   align-items: center;
   margin-bottom: 60px;
   position: relative;
+
   .barTitle {
     font-weight: 500;
     font-size: 36px;
     line-height: 160.69%;
-    color: #000000;
+    color: var(--font-color-one);
     position: absolute;
     top: 0%;
     left: 50%;

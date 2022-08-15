@@ -2,27 +2,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   .wrapper {
     margin: 60px 0 120px 0;
     width: 1130px;
   }
+
+  img {
+    filter: var(--sponsor-color-invert)
+  }
+
   .title {
     margin-bottom: 0px;
     font-style: normal;
     font-weight: 350;
     font-size: 24px;
     text-align: center;
-    color: #000000;
+    color: var(--font-color-one);
   }
+
   .rotation {
     overflow-x: hidden;
   }
+
   .content {
     margin-top: 60px;
     display: flex;
     cursor: pointer;
     justify-content: space-between;
   }
+
   .Sponsor {
     display: flex;
     align-items: center;
