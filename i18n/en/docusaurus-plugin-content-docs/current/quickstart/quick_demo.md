@@ -2,21 +2,20 @@
 title: 极速试玩
 sidebar_position: 2
 ---
-
-# 极速试玩
-
 ## 启动Nginx
 我们启动一个nginx实例来模拟应用程序与shifu之间的交互：
 
 ```bash
 sudo kubectl run --image=nginx:1.21 nginx
-sudo kubectl get pods
+sudo kubectl get pods -A | grep nginx
 ```
 可以看到nginx已经在运行：
 
 ![nginx pod running](images/nginxPodStatus.png)
 
 ## 与数字孪生设备进行交互
+
+我们准备了五个虚拟设备(AGV，温度计，酶标仪，PLC，机械臂）以供您进行试玩，体验 *Shifu* 的能力。
 
 ### 1. 与AGV的数字孪生交互
 <details>
@@ -135,7 +134,9 @@ sudo kubectl exec -it nginx -- bash
 ```
 
 最后，我们可以和酶标仪的数字孪生通过`http://deviceshifu-plate-reader.deviceshifu.svc.cluster.local`进行交互，得到酶标仪的测量结果：
-
+```bash
+curl "deviceshifu-plate-reader.deviceshifu.svc.cluster.local/get_measurement"
+```
 ![deviceshifu-plate-reader_output](images/deviceshifu-plate-reader_output.png)
 
 ### 4. 与PLC的数字孪生交互
@@ -169,14 +170,14 @@ sudo kubectl get pods -A | grep plc
 sudo kubectl exec -it nginx -- bash
 ```
 
-最后，我们可以与PLC的数字孪生通过`http://deviceshifu-plc.deviceshifu.svc.cluster.local`进行交互，将PLC内存区域的第0位设置成1：
+最后，我们可以与PLC的数字孪生通过`http://deviceshifu-plc.deviceshifu.svc.cluster.local`进行交互，将PLC的Q0内存区域的第0位设置成1：
 ```bash
 curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=0&value=1";echo
 ```
 
 ![deviceshifu-plc_output1.png](images/deviceshifu-plc_output1.png)
 
-“digit”表示plc的程序位点，“value”表示运行状态，通过修改“digit”与“value”的数值可以更改对应程序的运行状况，例如设定“digit=3”与“value=1”改变PLC初始状态：
+“digit”表示PLC内存的第几个比特，“value”表示当前比特的值，通过修改“digit”与“value”的数值可以更改对应内存空间比特的值。例如一个PLC的Q0内存的第四位值代表控制程序，设定“digit=3”与“value=1”就可以开启程序：
 
 ```bash
 curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=3&value=1";echo

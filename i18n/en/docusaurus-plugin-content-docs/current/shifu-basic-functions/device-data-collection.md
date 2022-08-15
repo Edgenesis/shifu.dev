@@ -5,21 +5,7 @@ sidebar_position: 3
 
 # 数据采集
 
-```yaml
-instructions: |  
-  get_value:  
-    instructionProperties:  
-      OPCUANodeID: "ns=2;i=2"  
-  get_time:  
-    instructionProperties:  
-      OPCUANodeID: "i=2258"  
-  get_server:  
-    instructionProperties:  
-      OPCUANodeID: "i=2261"
-```
-在`deviceshifu_configmap.yaml`中设置请求的路径，同时可以在`instructionProperties:`下添加`参数`。
-
-此时，我们可以通过HTTP/gRPC与`deviceshifu`进行通信，`deviceshifu`会将我们发送的请求转换成设备所支持协议的形式，并发送给设备。
+我们可以通过HTTP/gRPC与`deviceshifu`进行通信，`deviceshifu`会将我们发送的请求转换成设备所支持协议的形式，并发送给设备。
 
 当设备接收到指令之后，数据会传输到`deviceshifu`中，之后`deviceshifu`将数据作为我们请求的返回值进行返回，从而实现数据的采集。
 
