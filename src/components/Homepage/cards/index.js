@@ -6,7 +6,7 @@ export function CardOne(props) {
   return (
     <div className={styles.cardOneContainer}>
       <div className={styles.cardOneContent} style={{ textAlign: textAlign }}>
-        <h1 className={styles.cardOneTitle} >{props.title}</h1>
+        <h1 className={styles.cardOneTitle} style={{ backgroundColor: props.titleColor }}>{props.title}</h1>
         <p className={styles.cardOneDescript} >{props.descript}</p>
       </div>
     </div>

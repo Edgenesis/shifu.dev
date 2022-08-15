@@ -12,7 +12,11 @@
 .cardOneTitle {
   font-weight: 500;
   font-size: 28px;
-  color: #2490ff;
+  color: transparent;
+  background-color: #399bff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .cardOneDescript {
   font-weight: 300;
