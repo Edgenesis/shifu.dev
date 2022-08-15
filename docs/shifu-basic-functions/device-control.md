@@ -58,77 +58,63 @@ func setPLCBit(value string) {
 }
 ```
 3. 对于上述程序，我们可以将其打包成`docker image`并加载到集群中，以便其能更好的与`deviceshifu`进行通信。创建以下`dockerfile`文件：
-
-```dockerfile
-# syntax=docker/dockerfile:1  
-FROM golang:1.17-alpine  
-WORKDIR /app  
-COPY go.mod ./  
-RUN go mod download  
-COPY *.go ./  
-RUN go build -o /high-temperature-control-plc 
-EXPOSE 11111  
-CMD [ "/high-temperature-control-plc" ]
-```
+   ```dockerfile
+   # syntax=docker/dockerfile:1  
+   FROM golang:1.17-alpine  
+   WORKDIR /app  
+   COPY go.mod ./  
+   RUN go mod download  
+   COPY *.go ./  
+   RUN go build -o /high-temperature-control-plc 
+   EXPOSE 11111  
+   CMD [ "/high-temperature-control-plc" ]
+   ```
 4. 使用`dockerfile`文件生成`docker image`。
-
    ```bash
    docker build --tag high-temperature-control-plc:v0.0.1
    ```
-
 5. 之后我们将`docker image`加载到集群中。
-
    ```bash
    kind load docker-image high-temperature-control-plc:v0.0.1
    ```
-
 6. 运行我们编写的数据采集程序 。
-
    ```bash
    kubectl run high-temperature-control-plc --image=high-temperature-control-plc:v0.0.1
    ```
-
 7. 同时为了便于我们观察`PLC`设备的值，我们再载入一个`nginx`镜像。
-
    ```bash
    kubectl run nginx --image=nginx:1.21 -n deviceshifu
    ```
-
 8. 此时我们有了如下的`pod`，且均处于`Running`状态。
-
-```bash
-$ kubectl get pods -n deviceshifu
-NAME                                                  READY   STATUS    RESTARTS   AGE
-deviceshifu-plc-deployment-7f96585f7c-87zb4           1/1     Running   0          20m
-deviceshifu-thermometer-deployment-7b69b89b88-crwzx   1/1     Running   0          67m
-high-temperature-control-plc                          1/1     Running   0          8m54s
-nginx                                                 1/1     Running   0          61m
-```
+   ```bash
+   $ kubectl get pods -n deviceshifu
+   NAME                                                  READY   STATUS    RESTARTS   AGE
+   deviceshifu-plc-deployment-7f96585f7c-87zb4           1/1     Running   0          20m
+   deviceshifu-thermometer-deployment-7b69b89b88-crwzx   1/1     Running   0          67m
+   high-temperature-control-plc                          1/1     Running   0          8m54s
+   nginx                                                 1/1     Running   0          61m
+   ```
 9. 我们编写的自动化设备控制程序正处于运行中，可以通过查看实时日志的方式查看程序获取的数据。
-
-```bash
-$ kubectl logs high-temperature-control-plc -n deviceshifu -f 
-2022/07/07 03:05:07 Now remperature is: 29
-2022/07/07 03:05:12 Now remperature is: 10
-2022/07/07 03:05:17 Now remperature is: 23
-2022/07/07 03:05:22 Now remperature is: 30
-```
+   ```bash
+   $ kubectl logs high-temperature-control-plc -n deviceshifu -f 
+   2022/07/07 03:05:07 Now remperature is: 29
+   2022/07/07 03:05:12 Now remperature is: 10
+   2022/07/07 03:05:17 Now remperature is: 23
+   2022/07/07 03:05:22 Now remperature is: 30
+   ```
 10. 为了方便观察数据，我们将程序中的`time.Sleep(5 * time.Second)`调高(为提高采集精度，可将其调低，以提高采集频率)。此时我们再输入一条命令进入`nginx`的容器中。
-
-    ```bash
-    kubectl exec -it nginx -n deviceshifu -- bash
-    ```
-
+   ```bash
+   kubectl exec -it nginx -n deviceshifu -- bash
+   ```
 11. 程序获取的温度超过阈值时我们通过`curl`获取`PLC`数值。
-
-```bash
-# curl "http://deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0";echo
-0b0000000000000001
-```
+   ```bash
+   $ curl "http://deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"; echo
+   0b0000000000000001
+   ```
 12. 当程序获取的温度低于阈值时我们再次通过`curl`获取`PLC`数值。
+   ```bash
+   $ curl "http://deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"; echo
+   0b0000000000000000
+   ```
 
-```bash
-# curl "http://deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0";echo
-0b0000000000000000
-```
 自此，我们通过对虚拟温度计采集实时数据，实现了对`PLC`设备的自动化控制。

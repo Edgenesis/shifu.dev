@@ -1,14 +1,17 @@
 ---
-title: 设备接入
+title: Device Access
 sidebar_position: 1
 ---
 
-# 设备接入
-如果您未运行过`极速试玩`，建议您先行[体验](quickstart/quick_demo.md)。
-## 如何修改设备接入的配置
-### 1. 编辑`edgedevice.yaml`文件
+# Device Access
 
-接入设备前，您需要对`edgedevice.yaml`文件进行编辑。对于不同的协议，`protocolSettings`可根据协议进行进一步配置，详细配置请前往[Shifu API 参考](shifu-api-reference/edgedevice.md#protocolsettings)。
+If you have not run the [Quick Trial](quickstart/quick_demo.md) yet, we recommend that you try it first.
+
+## Modify the configuration of device access
+
+### 1. Edit the `edgedevice.yaml` file
+
+Before accessing the device, you need to edit the `edgedevice.yaml` file. For different protocols, `protocolSettings` can be further configured according to the protocol. Please go to [Shifu API reference](shifu-api-reference/edgedevice.md#protocolsettings) for detailed configuration.
 
 ```yaml  
 ...
@@ -19,22 +22,24 @@ protocolSettings:
   OPCUASetting:  
 ...
 ```
-`connection`：表示设备的网络连接方式。
-`address`：表示设备的网络地址。
-`protocol`：表示与设备进行交互的通信协议。
-`protocolSettings`：表示对协议进行的下一步设置，对于[不同的协议](protocol-driver-compatibility/protocols.md)需要[引入不同的`Setting`](shifu-api-reference/edgedevice.md#protocolsettings)。
 
-### 2. 创建`deviceshifu`
+- `connection`: indicates how the device is connected to the network.
+- `address`: represents the network address of the device.
+- `protocol`: represents a communication protocol that interacts with a device.
+- `protocolSettings`: represents the next Setting for the protocol, and [different settings](shifu-api-reference/edgedevice.md#protocolsettings) need to be introduced for [different protocols](protocol-driver-compatibility/protocols.md).
 
-修改完上述文件后即可创建`deviceshifu`，此时`deviceshifu`会尝试通过您所设置的配置与您的设备进行连接。
+### 2. Create `deviceshifu`
 
-### 3. 检测设备接入状态
+After modifying the documents above, it is ready to create `deviceshifu`, `deviceshifu` will connect with the devices via configuration.
 
-如果您通过命令`kubectl get pods -n deviceshifu`发现`deviceshifu`状态出现`Error`或者`CrashLoopBackOff`，这意味着连接异常。
+### 3. Test the state of the equipment
 
-您也可以通过命令`kubectl logs <NAME> -n deviceshifu` 打印错误信息。
+If you find that the `deviceshifu` status is `Error` or `CrashLoopBackOff` through the command `kubectl get pods -n deviceshifu`, it means that the connection is abnormal.
 
-## 通过配置来接入一台OPC UA设备
+You can also print error messages through the command `kubectl logs <NAME> -n deviceshifu`.
+
+## Access an OPC UA Device by Configuration
+
 ```yaml
 connection: Ethernet  
 address: opc.tcp://192.168.0.111:4840/freeopcua/server 
@@ -47,5 +52,7 @@ protocolSettings:
     Username: user1  
     Password: pwd1
 ```
-通过如上配置，将`address`设置成您的OPC UA设备的地址，`protocol`设置成`OPC UA`，`protocolSetting`加入`OPCUASetting`，并配置`SecurityMode`(信息安全模式)、`ConnectionTimeoutInMilliseconds`(连接超时时间)、`AuthenticationMode`(认证默认)以及账号密码等。  
-修改完上述配置之后，创建`deviceshifu`即可接入OPC UA设备。
+
+Through the above configuration, set address to the `address` of your OPC UA device, set protocol to `OPC UA`, add `protocolSetting` to `OPCUASetting`, and configure `SecurityMode` (information security mode), `ConnectionTimeoutInMilliseconds` (connection timeout limit), `AuthenticationMode` (authentication default) and account password Wait.
+
+After modifying the above configuration, create `deviceshifu` to access the OPC UA device.
