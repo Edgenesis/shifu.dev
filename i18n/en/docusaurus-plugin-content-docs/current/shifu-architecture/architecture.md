@@ -1,5 +1,5 @@
 --- 
-title: Shifu Basic Structure
+title: Basic Structure
 sidebar_position: 1
 --- 
 
