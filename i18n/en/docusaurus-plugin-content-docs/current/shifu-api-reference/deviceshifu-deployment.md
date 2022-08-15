@@ -1,5 +1,6 @@
 ---
 title: DeviceShifu Deployment
+sidebar_position: 3
 ---
 
 # DeviceShifu Deployment
@@ -10,7 +11,7 @@ title: DeviceShifu Deployment
 
 ## Deployment
 
- Shifu 架构下的 Deployment 是一个 Kubernetes 原生的 [Deployment](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/) ，在 Shifu 中表示一个数字孪生对象，它使我们可以生命式的更新 [Pods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/)。
+ Shifu 架构下的 Deployment 是一个 Kubernetes 原生的 [Deployment](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/) ，在 Shifu 中表示一个数字孪生对象，它使我们可以声明式的更新 [Pods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/)。
 
 - **apiVersion**: apps/v1
 - **kind**: Deployment
@@ -26,25 +27,19 @@ title: DeviceShifu Deployment
   表示 DeviceShifu 对应的 EdgeDevice 的名字。
   - **EDGEDEVICE_NAMESPACE** (string)
   表示 DeviceShifu 对应的 EdgeDevice 所在的域。
-  
 - **spec.template.spec.volumes[0].configMap**
   - **volume**
     - **name**
       表示挂载的 ConfigMap 的名字。
-    
     - **configMap**
-    
       表示 DeviceShifu 配置 ConfigMap 的名字。
-    
       - **name** (string)
-  
 - **spec.template.spec.containers[0].volumeMounts[].name**
   - **volumeMount**
     - **name** (string)
     表示挂载的 ConfigMap 的名字
     - **mountPath** (string)
     表示挂载的 ConfigMap 的路径，必须是 `/etc/edgedevice/config`。
-
 - **spec.template.spec.serviceAccountName** (string)
   表示 DeviceShifu 用来更新 EdgeDevice 信息的服务账号名，必须是 `edgedevice-sa`。
 

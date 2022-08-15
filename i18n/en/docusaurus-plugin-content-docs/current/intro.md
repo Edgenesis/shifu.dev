@@ -9,7 +9,7 @@ title: "Shifu 简介"
 
 ***Shifu*** (GitHub 主页：[https://github.com/Edgenesis/shifu](https://github.com/Edgenesis/shifu)) 是一个基于[Kubernetes](https://kubernetes.io/)的物联网开发及管理的开源平台。开发者通过使用***Shifu***，可以更简单地连接、监视和控制任何物联网设备。
 
-**注：*Shifu* 尚在开源准备中，如果您有意参与内测，请[点击获取GitHub Repo权限](https://wj.qq.com/s2/10467370/d9ac/)，或与我们进行联系[info@edgenesis.com](mailto:info@edgenesis.com)。**
+**注：*Shifu* 正在开源准备中，如果您有意参与内测，请[点击获取GitHub Repo权限](https://wj.qq.com/s2/10467370/d9ac/)，或与我们进行联系[info@edgenesis.com](mailto:info@edgenesis.com)。**
 
 ## 物联网设备
 
@@ -32,10 +32,11 @@ flowchart LR;
 
 ### ***Shifu*** 与设备之间的通信
 
-***Shifu*** 可以同时兼容不同的[通信协议](protocol-driver-compatibility/protocols.md)和[驱动](protocol-driver-compatibility/drivers.md)，它将不同设备的不同形式的请求进行统一，使得用户可以更简单地使用设备的功能。同时，***Shifu*** 也在持续增加可兼容的新协议和新驱动。
+***Shifu*** 可以同时兼容不同的[通信协议](protocol-driver-compatibility/protocols.md)和[驱动](protocol-driver-compatibility/drivers.md)，它将不同设备的不同形式的请求进行统一，使得用户可以更简单地使用设备。同时，***Shifu*** 兼容的协议和驱动的数量也在不断增加。
 
 ### ***Shifu*** 与应用之间的通信
-***Shifu*** 可以通过`HTTP`协议(gRPC协议暂未支持)与开发者所开发的程序进行通信。使得开发者开发物联网设备程序时像开发一个软件一样简单。
+***Shifu*** 可以通过`HTTP`协议(gRPC协议暂未支持)与开发者所开发的程序进行通信。使得开发者开发物联网场景时像开发一个软件一样简单。
+换句话说，对设备的控制和信息读取都由 ***Shifu*** 托管并对外暴露成统一类型的接口，只需要使用相同类型的api即可实现对多种类设备的的通信。
 
 ## 功能
 
