@@ -19,9 +19,10 @@ const config = {
   organizationName: 'edgenesis', // Usually your GitHub org/user name.
   projectName: 'shifu-docs-docusaurus', // Usually your repo name.
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
+  // https://docusaurus.io/docs/i18n/tutorial#start-your-site
+  // > CAUTION
+  // > Each locale is a distinct standalone single-page application: it is not possible to start the Docusaurus sites in all locales at the same time.
+  // If you want to start development with 'en', use command `yarn run start -- --locale en`
   i18n: {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans', 'en'],
