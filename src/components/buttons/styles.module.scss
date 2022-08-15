@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   a {
     text-decoration: none;
     box-sizing: border-box;
@@ -19,30 +20,36 @@
     cursor: pointer;
     transition: all 0.2s;
   }
+
   .green {
     background-color: var(--logo-green);
     color: var(--font-dark);
+
     &:hover {
       height: 55px;
       line-height: 55px;
       font-size: 22px;
     }
   }
+
   .greenBorder {
     background-color: var(--background-white);
     color: var(--font-black);
     border: 5px solid var(--logo-green);
     line-height: 40px;
+
     &:hover {
       background-color: var(--logo-green);
     }
   }
+
   .yellow {
     background-color: var(--btn-yellow);
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+
     .icon {
       height: 35px;
       width: 35px;
@@ -51,20 +58,25 @@
       background-size: cover;
       margin-right: 15px;
     }
+
     &:hover {
       height: 55px;
       line-height: 55px;
       font-size: 22px;
     }
   }
+
   .blue {
+    color: #fff;
     background: #399bff;
     border-radius: 5px;
+
     &:hover {
       background: #0080ff
     }
   }
 }
+
 @media screen and (max-width: 996px) {
   .wrapper {
     a {
@@ -73,14 +85,17 @@
       max-width: 400px;
       min-width: 300px;
     }
+
     .greenBorder {
       background-color: var(--logo-green);
       color: var(--font-white);
       border: 5px solid var(--logo-green);
+
       &:hover {
         background-color: var(--logo-green);
       }
     }
+
     .yellow,
     .green {
       &:hover {
@@ -89,6 +104,7 @@
         font-size: 20px;
       }
     }
+
     .yellow {
       .icon {
         position: absolute;

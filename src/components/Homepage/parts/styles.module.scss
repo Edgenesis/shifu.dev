@@ -3,7 +3,7 @@
   background-color: var(--background-color);
   overflow: hidden;
   position: relative;
-  // filter: drop-shadow( 0 0 10px rgb(0, 0, 0));
+
   .footer {
     position: absolute;
     bottom: 0px;
@@ -12,29 +12,32 @@
     background: var(--first-part-footer)
   }
 }
+
 @function random_range($min, $max) {
   $rand: random();
-  $random_range: $min + floor($rand * (($max - $min) + 1));
+  $random_range: $min +floor($rand * (($max - $min) + 1));
   @return $random_range;
 }
+
 .snowWall {
   width: 10vw;
   overflow: hidden;
 }
+
 .snow {
   z-index: 0;
   $total: 200;
   position: absolute;
   width: 10px;
   height: 10px;
-  background: var(--font-black);
+  background: var(--font-color-one);
   border-radius: 50%;
 
   @for $i from 1 through $total {
     $random-x: random(915000) * 0.0001vw;
     $random-offset: random_range(-100000, 100000) * 0.0001vw;
-    $random-x-end: $random-x + $random-offset;
-    $random-x-end-yoyo: $random-x + calc($random-offset / 2);
+    $random-x-end: $random-x +$random-offset;
+    $random-x-end-yoyo: $random-x +calc($random-offset / 2);
     $random-yoyo-time: calc(random_range(30000, 80000) / 100000);
     $random-yoyo-y: $random-yoyo-time * 100vh;
     $random-scale: random(10000) * 0.0001;

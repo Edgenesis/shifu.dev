@@ -31,13 +31,13 @@ let cardsList = [
     img: card5,
     title: '云边协同',
     descript: <span>Shifu兼容所有基于k8s的云边协同框架（OpenYurt, KubeEdge等）。</span>,
-    iconBg: '#CEF6F9',
+    iconBg: '#D8FFFD',
   },
   {
     img: card6,
     title: '无限扩容',
     descript: <span>基于k8s的架构让Shifu可以无限扩容，轻松处理亿级设备接入，连智慧城市项目都不在话下。</span>,
-    iconBg: '#E1E1FA',
+    iconBg: '#CEF6F9',
   }
 ]
 
