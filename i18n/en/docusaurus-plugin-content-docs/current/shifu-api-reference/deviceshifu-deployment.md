@@ -22,7 +22,7 @@ Deployment under the Shifu architecture is a Kubernetes-native [Deployment](http
 - **spec**
   spec describes the expected behavior of a Deployment.
 
-## Deviceshifu Deployment 的通用配置
+## General Configuration for Deviceshifu Deployment
 
 - **spec.template.spec.containers[0].env**
   - **EDGEDEVICE_NAME** (string)

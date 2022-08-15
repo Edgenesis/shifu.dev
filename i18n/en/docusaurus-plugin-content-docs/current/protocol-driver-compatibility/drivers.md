@@ -1,13 +1,15 @@
 ---
-title: 驱动
+sidebar_position: 2
+title: Driver
 ---
 
-# 驱动
+# Driver
 
-***Shifu***允许用户向平台添加以下形式的驱动:
-命令行驱动，请参考[快速上手：调用命令行驱动](shifu-advanced-functions/remote-driver-execution.md)
+***Shifu*** allows users to add the drivers to platform as follows: Command line drivers.
 
-## 架构
+please refer to [Quick Start: Invoking Command Line Drivers]((shifu-advanced-functions/remote-driver-execution.md))
+
+## Framework
 
 ```mermaid
 graph TD
@@ -17,6 +19,8 @@ graph TD
     end
 ```
 
-## 对于未兼容的驱动形式
+## About incompatible driver forms
 
-***Shifu***的微服务架构赋予了 ***Shifu*** 无与伦比的扩展性，也使得 ***Shifu*** 可以非常快速地兼容新的驱动。如果您所用的协议 ***Shifu*** 还未支持，请点击[这里](https://github.com/Edgenesis/shifu/issue/new)提交一个GitHub Issue，我们会尽快支持该协议！
+***Shifu***'s microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to be compatible with new drivers quickly. 
+
+If the driver used is not yet supported by ***Shifu***, please click [here](https://github.com/Edgenesis/shifu/issues/new) to submit a [GitHub Issue](https://github.com/Edgenesis/shifu/issues) and we will support it ASAP!

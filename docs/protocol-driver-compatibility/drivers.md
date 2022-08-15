@@ -19,4 +19,6 @@ graph TD
 
 ## 对于未兼容的驱动形式
 
-***Shifu***的微服务架构赋予了 ***Shifu*** 无与伦比的扩展性，也使得 ***Shifu*** 可以非常快速地兼容新的驱动。如果您所用的协议 ***Shifu*** 还未支持，请点击[这里](https://github.com/Edgenesis/shifu/issue/new)提交一个GitHub Issue，我们会尽快支持该协议！
+***Shifu***的微服务架构赋予了 ***Shifu*** 无与伦比的扩展性，也使得 ***Shifu*** 可以非常快速地兼容新的驱动。
+
+如果您所用的驱动 ***Shifu*** 还未支持，请点击[这里](https://github.com/Edgenesis/shifu/issue/new)提交一个GitHub Issue，我们会尽快支持该协议！
