@@ -11,8 +11,6 @@ sidebar_position: 3
 
 ## Deployment
 
-Shifu 架构下的 Deployment 是一个 Kubernetes 原生的 [Deployment](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/) ，在 Shifu 中表示一个数字孪生对象，它使我们可以声明式的更新 [Pods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/)。
-
 Deployment under the Shifu architecture is a Kubernetes-native [Deployment](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/), which represents a digital twin in Shifu that allows us to update [Pods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/) declaratively.
 
 - **apiVersion**: apps/v1
@@ -61,7 +59,7 @@ For a detailed example, please refer to <https://github.com/Edgenesis/shifu/tree
     - **name** (string)
       is the name of the ConfigMap to be mounted.
     - **mountPath** (string)
-      is the path of the mounted ConfigMap, which has to be `/etc/edgedevice/certificate`。
+      is the path of the mounted ConfigMap, which has to be `/etc/edgedevice/certificate`.
 
 ## Siemens PLC DeviceShifu Deployment
 

@@ -102,7 +102,7 @@ Similar to data collection, after setting the device instructions in `deviceshif
    2022/07/07 03:05:17 Now remperature is: 23
    2022/07/07 03:05:22 Now remperature is: 30
    ```
-10. 为了方便观察数据，我们将程序中的`time.Sleep(5 * time.Second)`调高(为提高采集精度，可将其调低，以提高采集频率)。此时我们再输入一条命令进入`nginx`的容器中。 10. In order to observe the data conveniently, increase the value of `time.Sleep(5 * time.Second)` in the program (in order to improve the acquisition accuracy, it can be adjusted downward to increase frequency). At this point, input another command to enter the `nginx` container as follows.
+10. In order to observe the data conveniently, increase the value of `time.Sleep(5 * time.Second)` in the program (in order to improve the acquisition accuracy, it can be adjusted downward to increase frequency). At this point, input another command to enter the `nginx` container as follows.
    ```bash
    kubectl exec -it nginx -n deviceshifu -- bash
    ```

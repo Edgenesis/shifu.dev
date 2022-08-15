@@ -176,7 +176,7 @@ kubectl exec -it nginx -n deviceshifu -- bash
 
 比如，命令`curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1"` 会将 Q0.1 的第二个 bit 修改为1。
 ```bash
-curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1";echo
+curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1"; echo
 ```
 ![plc_result1](images/deviceshifu-plc_result1.png)  
 观察PLC我们会发现其Q区的1号位的指示灯变亮。  
@@ -197,6 +197,6 @@ curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"
 
 **getcpuordercode**表示得到PLC的静态信息。
 ```bash
-curl "deviceshifu-plc/getcpuordercode";echo
+curl "deviceshifu-plc/getcpuordercode"; echo
 ```
 ![plc_result3](images/deviceshifu-plc_result3.png)  
