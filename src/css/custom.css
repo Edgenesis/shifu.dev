@@ -28,7 +28,6 @@
   --font-color-two: #515151;
   --sponsor-color-invert: invert(0%);
   --btn-yellow: #e4b248;
-  --background-img: url("@site/static/img/background-write.png");
   --background-color: #fbfdff;
   --card-background-color: #ffffff;
   --first-part-footer: linear-gradient(
@@ -53,7 +52,6 @@
   --font-color-one: #fff;
   --font-color-two: #fff;
   --sponsor-color-invert: invert(100%);
-  --background-img: url("@site/static/img/background-black.png");
   --background-color: #34353a;
   --card-background-color: #313136;
   --card-color: #0b1929;
