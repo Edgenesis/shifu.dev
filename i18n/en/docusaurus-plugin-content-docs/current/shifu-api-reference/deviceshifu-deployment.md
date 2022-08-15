@@ -11,85 +11,88 @@ sidebar_position: 3
 
 ## Deployment
 
- Shifu 架构下的 Deployment 是一个 Kubernetes 原生的 [Deployment](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/) ，在 Shifu 中表示一个数字孪生对象，它使我们可以声明式的更新 [Pods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/)。
+Shifu 架构下的 Deployment 是一个 Kubernetes 原生的 [Deployment](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/) ，在 Shifu 中表示一个数字孪生对象，它使我们可以声明式的更新 [Pods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/)。
+
+Deployment under the Shifu architecture is a Kubernetes-native [Deployment](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/), which represents a digital twin in Shifu that allows us to update [Pods](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/) declaratively.
 
 - **apiVersion**: apps/v1
 - **kind**: Deployment
 - **metadata**
-  标准的 Kubernetes [ObjectMeta](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/object-meta/#ObjectMeta)。
+  Kubernetes [ObjectMeta](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/object-meta/#ObjectMeta) under metadata standards.
 - **spec**
-  描述了一个 Deployment 的预期行为。
+  spec describes the expected behavior of a Deployment.
 
 ## Deviceshifu Deployment 的通用配置
 
 - **spec.template.spec.containers[0].env**
   - **EDGEDEVICE_NAME** (string)
-  表示 DeviceShifu 对应的 EdgeDevice 的名字。
+    indicates the name of the EdgeDevice to which DeviceShifu corresponds to.
   - **EDGEDEVICE_NAMESPACE** (string)
-  表示 DeviceShifu 对应的 EdgeDevice 所在的域。
+    indicates the domain of the EdgeDevice corresponding to DeviceShifu.
 - **spec.template.spec.volumes[0].configMap**
   - **volume**
     - **name**
-      表示挂载的 ConfigMap 的名字。
+      indicates the name of the ConfigMap to be mounted.
     - **configMap**
-      表示 DeviceShifu 配置 ConfigMap 的名字。
+      indicates the name of the DeviceShifu configuration ConfigMap.
       - **name** (string)
 - **spec.template.spec.containers[0].volumeMounts[].name**
   - **volumeMount**
     - **name** (string)
-    表示挂载的 ConfigMap 的名字
+      The name of the ConfigMap to be mounted.
     - **mountPath** (string)
-    表示挂载的 ConfigMap 的路径，必须是 `/etc/edgedevice/config`。
+      The path of the mounted ConfigMap, which has to be `/etc/edgedevice/config`.
 - **spec.template.spec.serviceAccountName** (string)
-  表示 DeviceShifu 用来更新 EdgeDevice 信息的服务账号名，必须是 `edgedevice-sa`。
+  indicates the service account name used by DeviceShifu to update EdgeDevice information, which has to be edgedevice-sa.
 
 ## OPC UA DeviceShifu Deployment
 
-详细示例请参考 https://github.com/Edgenesis/shifu/tree/main/examples/opcuaDeviceShifu
+For a detailed example, please refer to <https://github.com/Edgenesis/shifu/tree/main/examples/opcuaDeviceShifu>.
+
 - **spec.template.spec.volumes[].configMap**
   - **volume**
     - **name**
-    表示挂载的 ConfigMap 的名字。
+      is the name of the ConfigMap to be mounted.
     - **configMap**
-      表示 OPC UA 证书的 ConfigMap 的名字。
+      is the name of the ConfigMap of the OPC UA certificate.
       - **name** (string)
 - **spec.template.spec.containers[0].volumeMounts[].name**
   - **volumeMount**
     - **name** (string)
-    表示挂载的 ConfigMap 的名字。
+      is the name of the ConfigMap to be mounted.
     - **mountPath** (string)
-    表示挂载的 ConfigMap 的路径，必须是 `/etc/edgedevice/certificate`。
+      is the path of the mounted ConfigMap, which has to be `/etc/edgedevice/certificate`。
 
 ## Siemens PLC DeviceShifu Deployment
 
-详细示例请参考 https://github.com/Edgenesis/shifu/tree/main/examples/siemensPLCDeviceShifu
+For a detailed example, please refer to <https://github.com/Edgenesis/shifu/tree/main/examples/siemensPLCDeviceShifu>
 
 - **spec.template.spec.containers[1].image**
   - **name** (string)
-  表示西门子 PLC 的驱动镜像，现在必须是 `edgehub/plc-device:v0.0.1`。
+    indicates the driver image of the Siemens PLC, which has to be `edgehub/plc-device:v0.0.1` (for now).
 - **spec.template.spec.containers[1].env**
   - **PLC_ADDRESS** (string)
-  表示 PLC 的 IP 地址，如`192.168.0.1`。
+    is the IP address of the PLC, e.g. `192.168.0.1`.
   - **PLC_RACK** (string)
-  表示 PLC 的 RACK 值。
+    indicates the RACK value of the PLC.
   - **PLC_SLOT** (string)
-  表示 PLC 的 SLOT 值。
+    indicates the SLOT value of the PLC.
   - **PLC_CONTAINER_PORT**
-  表示 PLC 驱动容器的端口，现在必须是 `"11111"`。
+    indicates the port of the PLC drive container, which has to be `11111` (for now).
 
 ## RTSP DeviceShifu Deployment
 
-详细示例请参考 https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu
+For a detailed example, please refer to https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu
 
 - **spec.template.spec.containers[1].image**
   - **name** (string)
-  表示 RTSP 摄像头的驱动镜像，现在必须是 `edgehub/camera-python:v0.0.1`。
+    indicates the driver image for the RTSP camera, which has to be `edgehub/camera-python:v0.0.1` (for now).
 - **spec.template.spec.containers[1].env**
   - **IP_CAMERA_ADDRESS** (string)
-  表示摄像头的 IP 地址，如`192.168.0.1`。
+    is the IP address of the camera, `192.168.0.1`
   - **IP_CAMERA_USERNAME** (string)
-  表示摄像头 RTSP 流的用户名。
+    indicates the user name of the camera RTSP stream.
   - **IP_CAMERA_PASSWORD** (string)
-  表示摄像头 RTSP 流的密码。
+    is the password for the camera RTSP stream.
   - **IP_CAMERA_CONTAINER_PORT**
-  表示RTSP 摄像头驱动容器的端口，现在必须是 `"11111"`。
+    indicates the port of the RTSP camera driver container, which has to be `11111` (for now).
