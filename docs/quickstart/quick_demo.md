@@ -49,7 +49,7 @@ sudo kubectl exec -it nginx -- bash
 
 接着，我们可以与[AGV](https://baike.baidu.com/item/自动导引运输车/15535355)的数字孪生通过`http://deviceshifu-agv.deviceshifu.svc.cluster.local`进行交互，得到AGV的当前x, y坐标：
 ```bash
-curl http://deviceshifu-agv.deviceshifu.svc.cluster.local/get_position;echo
+curl http://deviceshifu-agv.deviceshifu.svc.cluster.local/get_position; echo
 ```
 
 ![deviceshifu-agv output](images/deviceshifu-agv_output.png)
@@ -83,7 +83,7 @@ sudo kubectl exec -it nginx -- bash
 
 然后，我们可以与温度计的数字孪生通过`http://deviceshifu-thermometer.deviceshifu.svc.cluster.local`进行交互，得到温度计的测量温度（以下结果随机）：
 ```bash
-curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/read_value;echo
+curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/read_value; echo
 ```
 
 ![deviceshifu-thermometer output](images/deviceshifu-thermometer-output.png)
@@ -91,13 +91,13 @@ curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/read_value;ech
 最后，我们可以通过`get_status`命令得到温度计当前运行状态（以下结果随机）：
 
 ```bash
-curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/get_status;echo
+curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/get_status; echo
 ```
 
 ![Running](images/Running.png)
 
 ```bash
-curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/get_status;echo
+curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/get_status; echo
 ```
 
 ![Error](images/Error.png)
@@ -172,7 +172,7 @@ sudo kubectl exec -it nginx -- bash
 
 最后，我们可以与PLC的数字孪生通过`http://deviceshifu-plc.deviceshifu.svc.cluster.local`进行交互，将PLC的Q0内存区域的第0位设置成1：
 ```bash
-curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=0&value=1";echo
+curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=0&value=1"; echo
 ```
 
 ![deviceshifu-plc_output1.png](images/deviceshifu-plc_output1.png)
@@ -180,7 +180,7 @@ curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&
 “digit”表示PLC内存的第几个比特，“value”表示当前比特的值，通过修改“digit”与“value”的数值可以更改对应内存空间比特的值。例如一个PLC的Q0内存的第四位值代表控制程序，设定“digit=3”与“value=1”就可以开启程序：
 
 ```bash
-curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=3&value=1";echo
+curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=3&value=1"; echo
 ```
 
 ![deviceshifu-plc_output2.png](images/deviceshifu-plc_output2.png)
@@ -216,28 +216,30 @@ sudo kubectl get pods -A | grep robotarm
 sudo kubectl exec -it nginx -- bash
 ```
 
-最后，我们可以与机械臂的数字孪生通过`http://deviceshifu-robotarm.deviceshifu.svc.cluster.local`进行交互，得到机械臂的坐标：
+我们可以与机械臂的数字孪生通过`http://deviceshifu-robotarm.deviceshifu.svc.cluster.local`进行交互，得到机械臂的坐标：
+
 ```bash
-curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_coordinate;echo
+curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_coordinate; echo
 ```
 
 ![deviceshifu-reboot-arm_result1](images/deviceshifu-reboot-arm_result1.png)
 
 此外，我们可以与机械臂的数字孪生通过`http://deviceshifu-robotarm.deviceshifu.svc.cluster.local`进行交互，得到机械臂的运行状态（以下运行状态随机出现）:
+
 ```bash
-curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status;echo
+curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 ```
 
 ![Idle.png](images/Idle.png)
 
 ```bash
-curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status;echo
+curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 ```
 
 ![Error.png](images/Error.png)
 
 ```bash
-curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status;echo
+curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 ```
 
 ![Running.png](images/Running.png)
