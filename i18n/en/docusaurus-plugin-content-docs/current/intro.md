@@ -2,27 +2,26 @@
 id: intro
 slug: /
 sidebar_position: 0
-title: "Shifu 简介"
+title: "Profile"
 ---
 
-# 欢迎使用 Shifu
+# Welcome to Shifu
 
-***Shifu*** (GitHub 主页：[https://github.com/Edgenesis/shifu](https://github.com/Edgenesis/shifu)) 是一个基于[Kubernetes](https://kubernetes.io/)的物联网开发及管理的开源平台。开发者通过使用***Shifu***，可以更简单地连接、监视和控制任何物联网设备。
+***Shifu*** (GitHub homepage: <https://github.com/Edgenesis/shifu>) is an open source platform for IoT development and management based on Kubernetes. By using ***Shifu***, developers can connect, monitor and control any IoT device more easily.
 
-**注：*Shifu* 正在开源准备中，如果您有意参与内测，请[点击获取GitHub Repo权限](https://wj.qq.com/s2/10467370/d9ac/)，或与我们进行联系[info@edgenesis.com](mailto:info@edgenesis.com)。**
+Note: ***Shifu*** is in open source preparation, so if you are interested in participating in the internal testing, please click to get GitHub Repo access, or contact us at [info@edgenesis.com](mailto:info@edgenesis.com).
 
-## 物联网设备
+## IoT Devices
 
-物联网设备是指可以与其他设备、系统、服务进行本地或在线地连接和交流的设备，例如：
+An IoT device is a device that can connect and interact with other devices, systems, and applications offline or online, for instance:
 
-- 一个制造厂里的机械臂，它可以接收来自本地的自动化控制系统传来的命令并完成相应的动作。
-- 一辆自动导引车，操纵者可对其进行远程控制。
-- 一辆汽车上的温度计，它向车载空调发出命令使其升温或降温，并上传实时温度数据到云端。
+- A robotic arm in a manufacturing plant that can receive commands from a local automated control system and complete the corresponding moves.
+- An automated guided vehicle that can be remotely controlled by its operator.
+- A thermometer in a car that can send commands to the on-board air conditioner to raise or lower its temperature, and can upload real-time temperature data to the cloud.
 
-## 通信
+## Interaction
 
-
-***Shifu*** 与应用、设备之间的关系，可以用下图来表示：
+The relationship between ***Shifu*** and applications and devices can be represented by the following diagram:
 
 ```mermaid
 flowchart LR;
@@ -30,25 +29,25 @@ flowchart LR;
   Shifu<-->|IoT Protocols/drivers|Devices;
 ```
 
-### ***Shifu*** 与设备之间的通信
+### Interaction between ***Shifu*** and devices
 
-***Shifu*** 可以同时兼容不同的[通信协议](protocol-driver-compatibility/protocols.md)和[驱动](protocol-driver-compatibility/drivers.md)，它将不同设备的不同形式的请求进行统一，使得用户可以更简单地使用设备。同时，***Shifu*** 兼容的协议和驱动的数量也在不断增加。
+***Shifu*** is compatible with different [communication protocols](protocol-driver-compatibility/protocols.md) and drivers all at once, and it unifies different forms of requests from different devices, making it easier to use the devices. Simultaneosly, the number of protocols and drivers compatible with ***Shifu*** is increasing.
 
-### ***Shifu*** 与应用之间的通信
-***Shifu*** 可以通过`HTTP`协议(gRPC协议暂未支持)与开发者所开发的程序进行通信。使得开发者开发物联网场景时像开发一个软件一样简单。
-换句话说，对设备的控制和信息读取都由 ***Shifu*** 托管并对外暴露成统一类型的接口，只需要使用相同类型的api即可实现对多种类设备的的通信。
+### Interaction between ***Shifu*** and applications
 
-## 功能
+***Shifu*** can interact with applications developed via `HTTP` protocol (gRPC protocol not yet supported). With ***Shifu***, developing IoT scenarios is as easy as developing software. In other words, the control and information reading of devices are hosted by Shifu and exposed as a unified type of interface, so that interaction between multiple devices can be achieved by using the same type of api.
 
-***Shifu***作为一个对物联网设备进行开发和管理的框架，提供以下功能：
+## Features
+
+***Shifu***, as a framework for developing and managing IoT devices, features the following functions：
 
 - [***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)
-  - 从设备获取数据
-  - 向设备发送指令
-  - 各种应用开发工具(有限状态机等）
+  - Get data from devices
+  - Send commands to the devices
+  - Various application development tools (finite state machine, etc.)
 - [***shifud***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud-zh.md)
-  - 设备发现
-  - 设备验证
-  - 设备更新
+  - Device discovery
+  - Device verification
+  - Device update
 - [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController-zh.md)
-  - 管理 ***deviceShifu*** 的生命周期
+  - Managing the ***deviceShifu*** lifecycle

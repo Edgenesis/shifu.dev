@@ -1,11 +1,12 @@
 ---
-title: 获取 GitHub 权限
+title: Access GitHub Permissions
 sidebar_position: 10000
 ---
 
-# 填写问卷，获取GitHub权限！
+# Access GitHub Permissions
 
-GitHub Repo：[https://github.com/Edgenesis/shifu](https://github.com/Edgenesis/shifu) 
-(**注：Shifu尚在开源准备中，如读者有意参加内测，请填写下方问卷获取Github Repo权限！**) 
+GitHub Repo：<https://github.com/Edgenesis/shifu>
+
+(**Note: Shifu is still in preparation for open source. If you are interested in participating in the internal test, please fill in the questionnaire below to obtain GithubRepo permissions!**)
 
 <iframe height="2800" width="900" src="https://wj.qq.com/s2/10467370/d9ac/" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-modals allow-downloads allow-forms allow-popups"></iframe>
