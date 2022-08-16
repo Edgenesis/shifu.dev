@@ -107,7 +107,7 @@ const config = {
             title: '社区',
             items: [
               {
-                label: '尽情期待！',
+                label: '敬请期待！',
                 to: 'docs',
                 // href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
