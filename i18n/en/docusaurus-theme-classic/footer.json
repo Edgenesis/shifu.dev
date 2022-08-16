@@ -15,9 +15,9 @@
     "message": "Quick Installation",
     "description": "The label of footer link with label=极速安装 linking to docs/quickstart/quick_install"
   },
-  "link.item.label.尽情期待！": {
-    "message": "Preparing...",
-    "description": "The label of footer link with label=尽情期待！ linking to docs"
+  "link.item.label.敬请期待！": {
+    "message": "Coming soon...",
+    "description": "The label of footer link with label=敬请期待！ linking to docs"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",

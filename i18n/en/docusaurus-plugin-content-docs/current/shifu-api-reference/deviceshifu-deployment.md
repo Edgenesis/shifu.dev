@@ -15,10 +15,8 @@ Deployment under the Shifu architecture is a Kubernetes-native [Deployment](http
 
 - **apiVersion**: apps/v1
 - **kind**: Deployment
-- **metadata**
-  Kubernetes [ObjectMeta](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/object-meta/#ObjectMeta) under metadata standards.
-- **spec**
-  spec describes the expected behavior of a Deployment.
+- **metadata**: Kubernetes [ObjectMeta](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/object-meta/#ObjectMeta) under metadata standards.
+- **spec**: spec describes the expected behavior of a Deployment.
 
 ## General Configuration for Deviceshifu Deployment
 
