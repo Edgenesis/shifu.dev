@@ -15,10 +15,8 @@ Shifu 架构下的 Deployment 是一个 Kubernetes 原生的 [Deployment](https:
 
 - **apiVersion**: apps/v1
 - **kind**: Deployment
-- **metadata**
-  标准的 Kubernetes [ObjectMeta](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/object-meta/#ObjectMeta)。
-- **spec**
-  描述了一个 Deployment 的预期行为。
+- **metadata**: 标准的 Kubernetes [ObjectMeta](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/object-meta/#ObjectMeta)。
+- **spec**: 描述了一个 Deployment 的预期行为。
 
 ## Deviceshifu Deployment 的通用配置
 

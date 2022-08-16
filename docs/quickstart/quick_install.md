@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 | 操作系统 | 是否支持 |
 |--|--|
 | Linux | :white_check_mark: |
-| Mac OS | :white_check_mark: |
+| macOS | :white_check_mark: |
 | Windows(WSL2) | :white_check_mark: |
 
 ## ***Shifu*** 环境准备

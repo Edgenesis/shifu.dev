@@ -7,9 +7,9 @@ title: "Profile"
 
 # Welcome to Shifu
 
-***Shifu*** (GitHub homepage: <https://github.com/Edgenesis/shifu>) is an open source platform for IoT development and management based on Kubernetes. By using ***Shifu***, developers can connect, monitor and control any IoT device more easily.
+***Shifu*** (GitHub homepage: <https://github.com/Edgenesis/shifu>) is an open source platform for IoT development and management based on [Kubernetes](https://kubernetes.io/). By using ***Shifu***, developers can connect, monitor and control any IoT device more easily.
 
-Note: ***Shifu*** is in open source preparation, so if you are interested in participating in the internal testing, please click to get GitHub Repo access, or contact us at [info@edgenesis.com](mailto:info@edgenesis.com).
+Note: ***Shifu*** is in open source preparation, so if you are interested in participating in the internal testing, please click to [get GitHub Repo access](https://wj.qq.com/s2/10467370/d9ac/), or contact us at [info@edgenesis.com](mailto:info@edgenesis.com).
 
 ## IoT Devices
 
@@ -31,7 +31,7 @@ flowchart LR;
 
 ### Interaction between ***Shifu*** and devices
 
-***Shifu*** is compatible with different [communication protocols](protocol-driver-compatibility/protocols.md) and drivers all at once, and it unifies different forms of requests from different devices, making it easier to use the devices. Simultaneosly, the number of protocols and drivers compatible with ***Shifu*** is increasing.
+***Shifu*** is compatible with different [communication protocols](protocol-driver-compatibility/protocols.md) and [drivers](protocol-driver-compatibility/drivers.md) all at once, and it unifies different forms of requests from different devices, making it easier to use the devices. Simultaneosly, the number of protocols and drivers compatible with ***Shifu*** is increasing.
 
 ### Interaction between ***Shifu*** and applications
 

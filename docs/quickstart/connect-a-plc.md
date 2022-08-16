@@ -195,7 +195,7 @@ curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&valu
 
 **getcontent**表示得到特定内存区域中地址的值，它需要下列参数:
 
-- **rootaddress**: 内存区域名称，比如M代表Merker，Q代表Digital Output。
+- **rootaddress**: 内存区域名称，比如`M`代表`Merker`，`Q`代表`Digital Output`。
 - **address**: 内存区域中的地址。
 - **start**: 开始位置。
 
@@ -205,7 +205,7 @@ curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&valu
 curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"
 ```
 
-![plc_result2](images/deviceshifu-p lc_result2.png)
+![plc_result2](images/deviceshifu-plc_result2.png)
 
 ### getcpuordercode
 

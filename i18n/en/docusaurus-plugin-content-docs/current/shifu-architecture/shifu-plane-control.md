@@ -43,4 +43,4 @@ If you are interested in the detailed implementations of `shifuController`, plea
 
 #### Design Docs
 
-If you are interested in the detailed implementations of `Shifud`, please visit [Shifud design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud.md) for further reading.
+If you are interested in the detailed implementations of `shifud`, please visit [shifud design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud.md) for further reading.

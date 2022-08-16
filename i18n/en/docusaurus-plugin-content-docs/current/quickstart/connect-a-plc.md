@@ -153,7 +153,7 @@ status:
 
 ### *Step 3*
 
-Add the PLC device to *Shifu*. Then create and start *deviceShifu*:
+Add the PLC device to *Shifu*. Create and start *deviceShifu*:
 
 ```
 kubectl apply -f ../plc_configuration_directory

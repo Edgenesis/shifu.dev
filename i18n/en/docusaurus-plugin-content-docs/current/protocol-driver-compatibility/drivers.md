@@ -5,9 +5,9 @@ title: Driver
 
 # Driver
 
-***Shifu*** allows users to add the drivers to platform as follows: Command line drivers.
+***Shifu*** allows users to add the drivers to platform as follows:
 
-please refer to [Quick Start: Invoking Command Line Drivers](shifu-advanced-functions/remote-driver-execution.md)
+- command line drivers, please refer to [Quick Start: Invoking Command Line Drivers](shifu-advanced-functions/remote-driver-execution.md)
 
 ## Framework
 

@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 | Operating system | support |
 |--|--|
 | Linux | :white_check_mark: |
-| Mac OS | :white_check_mark: |
+| macOS | :white_check_mark: |
 | Windows(WSL2) | :white_check_mark: |
 
 ## ***Shifu*** Environment Preparation
@@ -86,7 +86,7 @@ import TabItem from '@theme/TabItem';
    </TabItem>
 </Tabs>
 
-If *Docker* runs smoothly, you will get the following output:
+If *Docker* runs successfully, you will get the following output:
 
 ![docker_run](images/docker_run.png)
 

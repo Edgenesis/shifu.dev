@@ -38,7 +38,9 @@ On Shifu, each device generates a corresponding digital twin ([deviceShifu](http
 curl http://robot-arm/grip/
 ```
 
-For example, this simple command above can make a robotic arm complete a grasping move. The aim of Shifu is to **help developers to create a complex IoT application as easy as creating a mobile app**!
+For example, this simple command above can make a robotic arm complete a grasping move.
+
+The aim of Shifu is to **help developers to create a complex IoT application as easy as creating a mobile app**!
 
 ## System Operation and Maintenance
 
