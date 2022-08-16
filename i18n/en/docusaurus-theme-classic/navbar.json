@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "Shifu Framwork",
+    "description": "The title in the navbar"
+  },
+  "item.label.文档": {
+    "message": "Documentation",
+    "description": "Navbar item with label 文档"
+  },
+  "item.label.Shifu Demo 下载": {
+    "message": "Download Shifu Demo",
+    "description": "Navbar item with label Shifu Demo 下载"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
