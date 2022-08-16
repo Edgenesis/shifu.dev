@@ -25,7 +25,7 @@ We have prepared five virtual devices (AGV, thermometer, microplate reader, PCL 
 <details>
   <summary> Click here to view the details of AGV  </summary>
   Q: What is AGV?  <br/>
-  A: AGV is an automatic guided vehicle, please click <a href="https://baike.baidu.com/item/自动导引运输车/15535355">here</a> for details. <br/>
+  A: AGV is an automatic guided vehicle, please click <a href="https://en.wikipedia.org/wiki/Automated_guided_vehicle">here</a> for details. <br/>
   Q: How to simulate AGV in this demo? <br/>
   A: When the simulated AGV receives the get_position command, it will generate and return the x and y coordinates of the current position of the device.
 </details>
@@ -121,7 +121,7 @@ curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/get_status; ec
 <details>
   <summary> Click here to view the details of the microplate reader  </summary>
   Q: What is the microplate reader? <br/>
-  A: The microplate reader is a kind of laboratory equipment, please click <a href="https://baike.baidu.com/item/%E9%85%B6%E6%A0%87%E4%BB%AA">here</a> for the specific introduction. <br/>
+  A: The microplate reader is a kind of laboratory equipment, please click <a href="https://en.wikipedia.org/wiki/Plate_reader">here</a> for the specific introduction. <br/>
   Q: How to simulate the microplate reader in this demo? <br/>
   A: When the simulated microplate reader receives the command get_measurement, it will return an 8*12 matrix, each number in it represents the result value of the spectral analysis scan in a sample.
 </details>
@@ -163,7 +163,7 @@ curl "deviceshifu-plate-reader.deviceshifu.svc.cluster.local/get_measurement"
 <details>
   <summary> Click here to view PLC details  </summary>
   Q: What is PLC? <br/>
-  A: PLC is a very common industrial controller, please click <a href="https://baike.baidu.com/item/%E5%8F%AF%E7%BC%96%E7%A8%8B%E9%80%BB%E8%BE%91%E6%8E%A7%E5%88%B6%E5%99%A8/84414?fromtitle=PLC&fromid=275974">here</a> for details. <br/>
+  A: PLC is a very common industrial controller, please click <a href="https://en.wikipedia.org/wiki/Programmable_logic_controller">here</a> for details. <br/>
   Q: How to simulate PLC in this demo? <br/>
   A: When the simulated PLC receives the sendsinglebit command, it can modify a bit in the memory area, and when it receives the getcontent command, it can get the value of a byte in the memory area.
 </details>
@@ -213,7 +213,7 @@ curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&
 <details>
   <summary> Click here to view the details of the robotic arm </summary>
   Q: What is a robotic arm? <br/>
-  A: The robotic arm is a very common industrial controller, please click <a href="https://baike.baidu.com/item/%E6%9C%BA%E6%A2%B0%E8%87%82/2178090">here</a> for details. <br/>
+  A: The robotic arm is a very common industrial controller, please click <a href="https://en.wikipedia.org/wiki/Robotic_arm">here</a> for details. <br/>
   Q: How to simulate the robotic arm in this demo? <br/>
   A: When the simulated robotic arm receives the get_coordinate command, it will return its current x, y, z axis coordinates.
 </details>
