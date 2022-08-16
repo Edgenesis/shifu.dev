@@ -32,7 +32,7 @@ We have prepared five virtual devices (AGV, thermometer, microplate reader, PCL 
 
 #### Start the virtual AGV device
 
-First, create a digital twin of the AGV: (if you have just installed `Shifu` through the `Shifu installation package`, it will automatically create an `AGV` digital twin, so you do not need to go through the following creation process, please jump directly to [interacting with the AGV virtual appliance](#interact-with-the-virtual-agv-device))
+First, create a digital twin of the AGV: (if you have just installed `Shifu` through the `Shifu installer`, it will automatically create an `AGV` digital twin, so you do not need to go through the following creation process, please jump directly to [interacting with the AGV virtual appliance](#interact-with-the-virtual-agv-device))
 
 ```bash
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-agv
