@@ -1,24 +1,28 @@
 ---
-title: 快速上手：连接一个PLC设备
+title: "Quick Start: Connect a PLC Device"
 sidebar_position: 3
 ---
 
-# 快速上手: 接入一个PLC设备
-Shifu实现了对西门子S7系列PLC的兼容。用户可以使用Shifu，通过HTTP请求对S7 PLC的内存进行修改。本文将介绍如何接入一台西门子S7-1200 1214C PLC并且与之交互。  
-参见[演示视频(YouTube)](https://youtu.be/SV73l52vDp8)以获得操作流程演示。
+# Connect a PLC Device
 
-## 连接
-### *第1步*
+Shifu is compatible with the Siemens S7 series. *Shifu* can be used to modify the memory of an `S7 PLC` via an HTTP request. This article will show how to access a *Siemens S7-1200 1214C PLC* and interact with it.
 
-在接入Shifu之前，PLC应当已经通过以太网与运行Shifu的上位机完成物理连接，并且拥有一个IP地址，这里我们使用`192.168.0.1`。(如果您的PLC设备不为`192.168.0.1`可以将`deviceshifu-plc-deployment.yaml`文件中的`PLC_ADDRESS`改成您的设备的IP)
+<!-- You can also check [this video](https://youtu.be/SV73l52vDp8) on YouTube.-->
 
-### *第2步*
+## Connection
 
-创建一个文件夹，在示例中我们将其命名为`plc_configuration_directory`。将下述的四个配置文件都保存在该文件夹下 。  
-首先我们需要一个配置文件来获取IP地址与设备类型：  
+### *Step 1*
+
+Before connecting to *Shifu*, the PLC should have a physical connection to the host device of *Shifu* through the Internet and own an IP address. Here we use `192.168.0.1` as the IP address. (If the IP address of your PLC device is not `192.168.0.1`, you can change `PLC_ADDRESS` in `deviceshifu-plc-deployment.yaml` to the IP address of your device.)
+
+### *Step 2*
+
+Create a folder named `plc_configuration_directory` and create the following four configuration files in this folder.
+
+First, a configuration is required to access the IP address and device type:
 
 <details>
-  <summary> <b>点此查看deviceshifu-plc-deployment.yaml</b> </summary> 
+  <summary> <b>Click here to view deviceshifu-plc-deployment.yaml</b> </summary> 
 
 ```
 apiVersion: apps/v1
@@ -72,9 +76,10 @@ spec:
 ```
 </details>
 
-同时，还需要一些通用的配置文件:
+Some general configs are also required:
+
 <details>
-  <summary> <b>点此查看deviceshifu-plc-configmap.yaml</b> </summary>
+  <summary> <b>Click here to view deviceshifu-plc-configmap.yaml</b> </summary>
 
 ```
 apiVersion: v1
@@ -106,7 +111,7 @@ data:
 </details>
 
 <details>
-  <summary> <b>点此查看deviceshifu-plc-service.yaml</b> </summary>
+  <summary> <b>Click here to view deviceshifu-plc-service.yaml</b> </summary>
 
 ```
 apiVersion: v1
@@ -128,7 +133,7 @@ spec:
 </details>
 
 <details>
-  <summary> <b>点此查看edgedevice-plc.yaml</b> </summary>
+  <summary> <b>Click here to view edgedevice-plc.yaml</b> </summary>
 
 ```
 apiVersion: shifu.edgenesis.io/v1alpha1
@@ -146,57 +151,69 @@ status:
 ```
 </details>
 
-### *第3步*
+### *Step 3*
 
-向Shifu添加PLC设备，创建和启动deviceShifu:
+Add the PLC device to *Shifu*. Then create and start *deviceShifu*:
 
 ```
 kubectl apply -f ../plc_configuration_directory
 ```
 
-## 操作
-对于PLC,Shifu可以通过HTTP请求来设置和读取其内存。  
-在执行操作之前，我们需要启动一个nginx镜像，以用于http请求的收发，启动的相关的命令如下：
+## Operations
+
+*Shifu* can access the memory of the PLC through HTTP requests.
+
+Before the next step, we need to start an *Nginx* container to send and receive HTTP requests using the following commands.
 
 ```bash
 kubectl run nginx --image=nginx:1.21 -n deviceshifu 
 kubectl exec -it nginx -n deviceshifu -- bash
 ```
-下面列举了3个PLC的指令，分别是**sendsinglebit**、**getcontent**、**getcpuordercode**，我们可以通过 ***Shifu*** 来对设备执行这些命令。
+
+Three instructions are listed as follows, which are **sendsinglebit**, **getcontent** and **getcpuordercode**. Use *Shifu* to execute these instructions on the device.
 
 ### sendsinglebit
 
-**sendsinglebit**表示修改一个bit，它需要下列参数:
+**sendsinglebit** indicates modifying a single bit. It needs the following parameters:
 
-- **rootaddress**: 内存区域名称，比如M代表Merker，Q代表Digital Output。
-- **address**: 内存区域中的地址。
-- **start**: 开始位置。
-- **digit**: 从开始位置起第几个bit。
-- **value**: 需要修改成为的数值。
+- **rootaddress**: the name of the memory area. e.g. `M` for `Merker` and `Q` for `Digital Output`
+- **address**: the address of the memory area
+- **start**: the start position
+- **digit**: the offset from the start position
+- **value**: the new value to set
 
-比如，命令`curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1"` 会将 Q0.1 的第二个 bit 修改为1。
+For example, the command `curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1"` will modify the second bit of `Q0.1` to `1`.
+
 ```bash
 curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1"; echo
 ```
+
 ![plc_result1](images/deviceshifu-plc_result1.png)  
-观察PLC我们会发现其Q区的1号位的指示灯变亮。  
+
+Check the PLC and you will find the second indicator light in Q area is on.
+
 ### getcontent
 
-**getcontent**表示得到内存区域中一个byte的值，它需要下列参数:
+**getcontent** indicates getting the value of a specific address in  a memory area. It needs the following parameters:
 
-- **rootaddress**: 内存区域名称，比如M代表Merker，Q代表Digital Output。
-- **address**: 内存区域中的地址。
-- **start**: 开始位置。
+- **rootaddress**: the name of the memory area. e.g. `M` for `Merker` and `Q` for `Digital Output`
+- **address**: the memory area's address
+- **start**: the start position
 
-比如，命令`curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"` 会返回 Q0.0 的一个 byte 的值。
+For example, the command `curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0` will return the value of `Q0.0`.
+
 ```bash
 curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"
 ```
+
 ![plc_result2](images/deviceshifu-plc_result2.png)
+
 ### getcpuordercode
 
-**getcpuordercode**表示得到PLC的静态信息。
+**getcpuordercode** indicates getting the static information of PLC.
+
 ```bash
 curl "deviceshifu-plc/getcpuordercode"; echo
 ```
-![plc_result3](images/deviceshifu-plc_result3.png)  
+
+![plc_result3](images/deviceshifu-plc_result3.png)
