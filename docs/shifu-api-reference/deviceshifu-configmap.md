@@ -26,6 +26,7 @@ Shifu架构下的ConfigMap 是一个 Kubernetes 原生的 [ConfigMap](https://ku
 ## DeviceShifuDriverProperties
 
 DeviceShifuDriverProperties 是指 DeviceShifu 的驱动参数。
+
 - **driverSku** (string)
   表示驱动所适用的硬件型号，如 `Hikvision Camera`。
 - **driverImage** (string)
@@ -36,6 +37,7 @@ DeviceShifuDriverProperties 是指 DeviceShifu 的驱动参数。
 ## DeviceShifuInstructions
 
 DeviceShifuInstructions 是指 DeviceShifu 的可以接收并发出的所有指令及设置。
+
 - **instructionSettings** ([DeviceShifuInstructionSettings](#deviceshifuinstructionsettings))
 - **instructions** (map[string]DeviceShifuInstruction)
     - **[DeviceShifuInstruction](#deviceshifuinstruction)**
@@ -43,43 +45,45 @@ DeviceShifuInstructions 是指 DeviceShifu 的可以接收并发出的所有指�
 ## DeviceShifuInstruction
 
 DeviceShifuInstruction 是指 DeviceShifu 可以接收的命令。
+
 - **instructionProperties** (DeviceShifuInstructionProperty)
   表示DeviceShifu 命令的参数，根据不同协议具有不同的配置，更多示例请参考 [examples](https://github.com/Edgenesis/shifu/tree/main/examples)。
-  
   - **DeviceShifuInstructionProperty** (interface)
 
 ## DeviceShifuInstructionSettings
 
 DeviceShifuInstructionSettings 是指 DeviceShifu 中的Instruction 的相关的设置。
-- **defaultTimeoutSeconds** (int) 表示所有Instruction的默认超时时间(秒)。如未设置，默认值为3秒
 
+- **defaultTimeoutSeconds** (int)
+  表示所有Instruction的默认超时时间(秒)。如未设置，默认值为3秒
 
 ## DeviceShifuTelemetries
 
 DeviceShifuTelemetries 是指 DeviceShifu 用来检测物联网设备的一个或多个命令。
-- **telemetrySettings** ([DeviceShifuTelemetrySettings](#deviceshifutelemetrysettings))
 
+- **telemetrySettings** ([DeviceShifuTelemetrySettings](#deviceshifutelemetrysettings))
 - **telemetries** (map[string]DeviceShifuTelemetry)
   - **[DeviceShifuTelemetry](#deviceshifutelemetry)**
 
 ## DeviceShifuTelemetrySettings
 
 DeviceShifuTelemetrySettings 是指与DeviceShifu 监测相关的设置。
+
 - HTTP协议:
-    - **telemetryUpdateIntervalInMilliseconds** (int64) DeviceShifu 检测 Telemetry 的毫秒间隔。默认为3000。
-    - **telemetryTimeoutInMilliseconds** (int64) DeviceShifu 与设备连接的超时时间。默认为3000。
-    - **telemetryInitialDelayInMilliseconds** (int64) DeviceShifu 初次检测的延迟时间。默认为3000。
+  - **telemetryUpdateIntervalInMilliseconds** (int64) DeviceShifu 检测 Telemetry 的毫秒间隔。默认为3000。
+  - **telemetryTimeoutInMilliseconds** (int64) DeviceShifu 与设备连接的超时时间。默认为3000。
+  - **telemetryInitialDelayInMilliseconds** (int64) DeviceShifu 初次检测的延迟时间。默认为3000。
 - TCP socket 协议:
-    - **telemetryUpdateIntervalInMilliseconds** (int64) DeviceShifu 检测 Telemetry 的毫秒间隔。默认为1000。（检测方式：DeviceShifu每间隔1000毫秒尝试与设备建立起一次socket连接，通过是否成功连接来判断设备是否开启。）
+  - **telemetryUpdateIntervalInMilliseconds** (int64) DeviceShifu 检测 Telemetry 的毫秒间隔。默认为1000。（检测方式：DeviceShifu每间隔1000毫秒尝试与设备建立起一次socket连接，通过是否成功连接来判断设备是否开启。）
 - MQTT协议：
-    - **telemetryUpdateIntervalInMiliseconds** (int64) DeviceShifu 检测MQTT距离收到上一条msg到现在的毫秒间隔。默认为3000。
+  - **telemetryUpdateIntervalInMiliseconds** (int64) DeviceShifu 检测MQTT距离收到上一条msg到现在的毫秒间隔。默认为3000。
 
 ## DeviceShifuTelemetry
 
 DeviceShifuTelemetry 描述了 DeviceShifu 通过哪些指令来监测物联网设备的状态。
-  - **properties** (DeviceShifuTelemetryProperties)
-    - **instruction** (string)
-    表示用来检测的命令，且必须是上方 [DeviceShifuInstruction](#deviceshifuinstruction) 定义的有效命令。
-    - **initialDelayMs** (int)
-    表示开始检测时的延迟（毫秒）。
 
+- **properties** (DeviceShifuTelemetryProperties)
+  - **instruction** (string)
+    表示用来检测的命令，且必须是上方 [DeviceShifuInstruction](#deviceshifuinstruction) 定义的有效命令。
+  - **initialDelayMs** (int)
+    表示开始检测时的延迟（毫秒）。

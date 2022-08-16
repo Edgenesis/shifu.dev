@@ -18,7 +18,8 @@ telemetries: |
         initialDelayMs: 1000  
         intervalMs: 1000
 ```
-其中`telemetrySettings:`下的`telemetryUpdateIntervaInlMiliseconds`表示自动测量的时间间隔。
+
+其中`telemetrySettings`下的`telemetryUpdateIntervaInlMiliseconds`表示自动测量的时间间隔。
 
 `telemetries`下可以包含多个对象，即可以同时开启多个对象。
 
@@ -49,3 +50,4 @@ $ kubectl describe edgedevice -A
 Status:
   Edgedevicephase:  Running
 Events:             <none>
+```

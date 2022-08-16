@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-title: 协议
+title: Protocols
 ---
 
-# 协议
+# Protocols
 
-## 已兼容的协议
+## Compatible Protocols
 
-当前，***Shifu***支持下列协议与设备进行交互：
+For now, ***Shifu*** supports the following protocols for interacting with devices:
 
 1. HTTP
 2. [MQTT](https://github.com/Edgenesis/shifu/tree/main/examples/mqttDeviceShifu)
@@ -16,9 +16,8 @@ title: 协议
 5. [TCP socket](https://github.com/Edgenesis/shifu/tree/main/examples/socketDeviceShifu)
 6. [OPC UA](https://github.com/Edgenesis/shifu/tree/main/examples/opcuaDeviceShifu)
 
-## 未兼容的协议
+## Incompatible protocols
 
-***Shifu***的微服务架构赋予了***Shifu***无与伦比的扩展性，也使得***Shifu***可以非常快速地兼容新的协议。
+***Shifu***'s microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to be compatible with new protocols quickly.
 
-如果您所用的协议***Shifu***还未支持，请点击[这里](https://github.com/Edgenesis/shifu/issues/new)提交一个[GitHub Issue](https://github.com/Edgenesis/shifu/issues)，我们会尽快支持该协议！
-
+If the protocol used is not yet supported by ***Shifu***, please click [here](https://github.com/Edgenesis/shifu/issues/new) to submit a [GitHub Issue](https://github.com/Edgenesis/shifu/issues) and we will support it ASAP!

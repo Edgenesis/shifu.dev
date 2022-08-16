@@ -1,15 +1,15 @@
 --- 
-title: 基本架构
+title: Basic Structure
 sidebar_position: 1
 --- 
 
-# Shifu 基本架构
-Shifu是一个[Kubernetes](https://kubernetes.io/)原生的平台，它的所有组件都以[Pod](https://kubernetes.io/docs/concepts/workloads/pods/)的形式运行。
+# Basic Structure
 
-本文是关于Shifu架构的简介，如果你对Shifu的架构设计感兴趣，可以前往[desing-shifu-zh](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu-zh.md)查看具体细节。(注：Shifu在开源内测中，请联系info@edgenesis.com获取GitHub Repo权限！)
+Shifu is a [Kubernetes](https://kubernetes.io/) platform with all its components running as [Pods](https://kubernetes.io/docs/concepts/workloads/pods/).
 
-下图是Shifu架构的示意图：
+This article is an introduction to the Shifu architecture. If you are interested in the architectural design of Shifu, please go to [desing-shifu](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu.md) for the specific details. (Note: Shifu is in open source preparation, so if you are interested in participating in the internal testing, please click to get GitHub Repo access, or contact us at <info@edgenesis.com>.)
 
+The following diagram illustrates the Shifu architecture：
 
 ```mermaid
 flowchart BT
@@ -59,4 +59,4 @@ flowchart BT
   sg-pg<-->sg-dp
 ```
 
-**注：示意图内的IoT设备以及协议不仅限于图中出现的种类。Shifu具有极强的扩展性，兼容所有通过协议或驱动通信的IoT设备。**
+**Note: IoT devices and protocols within the schematic are not limited to the types that appear in the diagram. Shifu is extremely scalable and compatible with all IoT devices that interact via protocols or drivers.**

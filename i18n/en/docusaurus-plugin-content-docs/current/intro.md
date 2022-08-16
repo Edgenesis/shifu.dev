@@ -41,13 +41,13 @@ flowchart LR;
 
 ***Shifu***, as a framework for developing and managing IoT devices, features the following functions：
 
-- [***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)
+- [***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md)
   - Get data from devices
   - Send commands to the devices
   - Various application development tools (finite state machine, etc.)
-- [***shifud***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud-zh.md)
+- [***shifud***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud.md)
   - Device discovery
   - Device verification
   - Device update
-- [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController-zh.md)
+- [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController.md)
   - Managing the ***deviceShifu*** lifecycle
