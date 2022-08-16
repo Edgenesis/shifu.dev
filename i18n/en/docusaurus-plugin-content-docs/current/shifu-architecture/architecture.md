@@ -7,7 +7,7 @@ sidebar_position: 1
 
 Shifu is a [Kubernetes](https://kubernetes.io/) platform with all its components running as [Pods](https://kubernetes.io/docs/concepts/workloads/pods/).
 
-This article is an introduction to the Shifu architecture. If you are interested in the architectural design of Shifu, please go to desing-shifu-zh for the specific details. (Note: Shifu is in open source preparation, so if you are interested in participating in the internal testing, please click to get GitHub Repo access, or contact us at <info@edgenesis.com>.)
+This article is an introduction to the Shifu architecture. If you are interested in the architectural design of Shifu, please go to [desing-shifu](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu.md) for the specific details. (Note: Shifu is in open source preparation, so if you are interested in participating in the internal testing, please click to get GitHub Repo access, or contact us at <info@edgenesis.com>.)
 
 The following diagram illustrates the Shifu architecture：
 

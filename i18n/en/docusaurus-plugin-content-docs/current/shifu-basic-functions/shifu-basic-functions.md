@@ -32,7 +32,7 @@ On Shifu, you can attain automated device control through data collection.
 
 ## Application Development
 
-On Shifu, each device generates a corresponding digital twin ([deviceShifu](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)). Developers can utilize the capabilities of the device with unparalleled ease by simply calling the API exposed by [deviceShifu](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md).
+On Shifu, each device generates a corresponding digital twin ([deviceShifu](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md)). Developers can utilize the capabilities of the device with unparalleled ease by simply calling the API exposed by [deviceShifu](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md).
 
 ```
 curl http://robot-arm/grip/
