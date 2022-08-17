@@ -160,7 +160,7 @@ kubectl apply -f ../plc_configuration_directory
 
 ## 操作
 
-对于PLC，*Shifu*可以通过HTTP请求来读取和设置其内存。 
+对于PLC，*Shifu*可以通过HTTP请求来读取和写入其内存。 
 
 在执行操作之前，我们需要启动一个nginx容器，以用于http请求的收发，启动的相关的命令如下：
 
