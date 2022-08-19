@@ -161,7 +161,7 @@ kubectl apply -f ../plc_configuration_directory
 
 ## Operations
 
-*Shifu* can access the memory of the PLC through HTTP requests.
+*Shifu* can read and write the memory of the PLC through HTTP requests.
 
 Before the next step, we need to start an *Nginx* container to send and receive HTTP requests using the following commands.
 

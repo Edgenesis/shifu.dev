@@ -66,7 +66,7 @@ const config = {
         title: 'Shifu Framwork',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/edgenesis.png',
+          src: 'img/edgenesis.svg',
         },
         items: [
           {
