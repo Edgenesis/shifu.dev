@@ -4,12 +4,12 @@ sidebar_position: 1
 --- 
 
 # Shifu 基本架构
+
 Shifu是一个[Kubernetes](https://kubernetes.io/)原生的平台，它的所有组件都以[Pod](https://kubernetes.io/docs/concepts/workloads/pods/)的形式运行。
 
-本文是关于Shifu架构的简介，如果你对Shifu的架构设计感兴趣，可以前往[desing-shifu-zh](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu-zh.md)查看具体细节。(注：Shifu在开源内测中，请联系info@edgenesis.com获取GitHub Repo权限！)
+本文是关于Shifu架构的简介，如果你对Shifu的架构设计感兴趣，可以前往[desing-shifu-zh](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu-zh.md)查看具体细节。
 
 下图是Shifu架构的示意图：
-
 
 ```mermaid
 flowchart BT
