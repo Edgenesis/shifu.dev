@@ -244,5 +244,6 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 
 ![Running.png](images/Running.png)
 
-恭喜！！！:rocket: :rocket: :rocket: 您已经完成了Shifu的安装和Demo，接下来可以自由探索啦！
-如果有兴趣，可以点击[这里](github.md)来访问我们的GitHub主页！
+恭喜！！！:rocket: :rocket: :rocket: 您已经完成了Shifu的安装和Demo，接下来可以自由探索了！
+
+如果有兴趣，您可以访问 ***Shifu*** 的 [GitHub仓库](https://github.com/Edgenesis/shifu)。

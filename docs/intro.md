@@ -7,9 +7,7 @@ title: "Shifu 简介"
 
 # 欢迎使用 Shifu
 
-***Shifu*** (GitHub 主页：[https://github.com/Edgenesis/shifu](https://github.com/Edgenesis/shifu)) 是一个基于[Kubernetes](https://kubernetes.io/)的物联网开发及管理的开源平台。开发者通过使用 ***Shifu*** ，可以更简单地连接、监视和控制任何物联网设备。
-
-**注：*Shifu* 正在开源准备中，如果您有意参与内测，请[点击获取GitHub Repo权限](https://wj.qq.com/s2/10467370/d9ac/)，或与我们进行联系[info@edgenesis.com](mailto:info@edgenesis.com)。**
+***Shifu*** (GitHub仓库：<https://github.com/Edgenesis/shifu>) 是一个基于[Kubernetes](https://kubernetes.io/)的物联网开发及管理的开源平台。开发者通过使用 ***Shifu*** ，可以更简单地连接、监视和控制任何物联网设备。
 
 ## 物联网设备
 

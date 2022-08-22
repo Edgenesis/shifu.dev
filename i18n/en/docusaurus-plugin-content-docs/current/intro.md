@@ -7,9 +7,7 @@ title: "Profile"
 
 # Welcome to Shifu
 
-***Shifu*** (GitHub homepage: <https://github.com/Edgenesis/shifu>) is an open source platform for IoT development and management based on [Kubernetes](https://kubernetes.io/). By using ***Shifu***, developers can connect, monitor and control any IoT device more easily.
-
-Note: ***Shifu*** is in open source preparation, so if you are interested in participating in the internal testing, please click to [get GitHub Repo access](https://wj.qq.com/s2/10467370/d9ac/), or contact us at [info@edgenesis.com](mailto:info@edgenesis.com).
+***Shifu*** (GitHub repository: <https://github.com/Edgenesis/shifu>) is an open source platform for IoT development and management based on [Kubernetes](https://kubernetes.io/). By using ***Shifu***, developers can connect, monitor and control any IoT device more easily.
 
 ## IoT Devices
 

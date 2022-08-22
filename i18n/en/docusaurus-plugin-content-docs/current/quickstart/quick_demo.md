@@ -268,4 +268,6 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 
 ![Running.png](images/Running.png)
 
-Congratulations! ! !  :rocket: :rocket: :rocket: You have completed the installation and demos of Shifu, now you can explore freely! If you are interested, you can click here to visit our [GitHub](github.md) home page!
+Congratulations! ! !  :rocket: :rocket: :rocket: You have completed the installation and demos of Shifu, now you can explore freely!
+
+If you are interested, you can visit the [GitHub repository of ***Shifu***](https://github.com/Edgenesis/shifu).
