@@ -1,0 +1,8 @@
+.demoContainer {
+  z-index: 1;
+  overflow: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

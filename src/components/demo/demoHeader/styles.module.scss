@@ -1,0 +1,92 @@
+.demoHeaderContainer {
+  min-height: 207px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .header {
+    margin-top: 42px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 51px;
+    color: #000000;
+  }
+}
+
+.ProgressBarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 300px;
+}
+
+.stepSpot {
+  z-index: 5;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .stepNum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background: #B9D1EB;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 9px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color: #FFFFFF;
+  }
+
+  .stepName {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333333;
+  }
+}
+
+.stepSpotActive {
+  .stepNum {
+    background: #23D6EE;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .stepName {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+  }
+}
+
+.spotsLine {
+  position: absolute;
+  left: 60px;
+  top: 12px;
+  z-index: 1;
+  display: flex;
+
+  .minSpot {
+    border-radius: 10px;
+    width: 5px;
+    height: 5px;
+    background: #B9D1EB;
+    margin-right: 11px;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 16px;
+  left: 30px;
+}
