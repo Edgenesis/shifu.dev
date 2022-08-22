@@ -78,7 +78,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Shifu Framwork',
+        title: 'Shifu Framework',
         logo: {
           alt: 'My Site Logo',
           src: 'img/edgenesis.svg',
