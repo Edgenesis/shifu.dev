@@ -48,7 +48,7 @@ let developerlist = [
   {
     img: application,
     title: '高效应用开发',
-    descript: <span>接入设备后，Shifu会自动把设备抽象成微服务，让你的应用和硬件设备彻底解耦，把低效的物联网应用开发变得像面向对象编程一样高效。</span>,
+    descript: <span>接入设备后，Shifu会自动把设备抽象成微服务<br/>让你的应用和硬件设备彻底解耦<br/>把低效的物联网应用开发变得像面向对象编程一样高效</span>,
     isReverse: true,
     titleColor: "#F33EE3",
     shadowColor: "rgba(186, 90, 36, 0.2)"
@@ -59,7 +59,7 @@ let engineeringList = [
   {
     img: stable,
     title: '航天级稳定性',
-    descript: <span>大到使用私有驱动的工程机械，小到使用公有协议的温湿度计，你都可以让Shifu来帮你做对接异构设备的脏活累活。</span>,
+    descript: <span>Shifu已通过在航天场景验证<br/>提供99.9999%的可靠性<br/>让你远离宕机烦恼</span>,
     isReverse: true,
     titleColor: "#FF64EF",
     shadowColor: "rgba(200, 68, 39, 0.2)"
@@ -67,7 +67,7 @@ let engineeringList = [
   {
     img: security,
     title: '多维度安全策略',
-    descript: <span>所有接入Shifu的设备都会被封装成一个乐高式模块，根据场景内的设备不同，按需加载即可。</span>,
+    descript: <span>联合国的云原生安全团队操刀<br/>无论是数据加密还是网络安全<br/>Shifu不一而足</span>,
     isReverse: false,
     titleColor: "#9A5CFF",
     shadowColor: "rgba(128, 34, 186, 0.2)"
@@ -75,7 +75,7 @@ let engineeringList = [
   {
     img: community,
     title: '全球化社区生态',
-    descript: <span>接入设备后，Shifu会自动把设备抽象成微服务，让你的应用和硬件设备彻底解耦，把低效的物联网应用开发变得像面向对象编程一样高效。</span>,
+    descript: <span>Shifu得益于Kubernetes原生架构<br/>可以无缝接入强大的云原生软件生态<br/>让全球的开发者帮你解决后顾之忧</span>,
     isReverse: true,
     titleColor: "#2490FF",
     shadowColor: "rgba(16, 83, 184, 0.2)"
