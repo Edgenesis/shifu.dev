@@ -33,7 +33,22 @@ const config = {
       {
         analyticsId: '3123fa51e13a507dfc99a606fc329c52'
       }
-    ]
+    ],
+  ],
+
+  themes: [
+    // ... Your other themes.
+
+    // search
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        language: ["en", "zh"],
+      },
+    ],
   ],
 
   presets: [
