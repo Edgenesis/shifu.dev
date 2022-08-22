@@ -2,7 +2,6 @@ import React from "react";
 import Layout from "@theme/Layout";
 import styles from "./styles.module.scss";
 import { FirstPart, SecondPart, ThirdPart } from "../components/Homepage/parts";
-// import Sponsor from "../components/Homepage/sponsor";
 
 export default function Hello() {
   return (
