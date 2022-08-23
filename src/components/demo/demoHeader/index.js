@@ -1,48 +1,99 @@
+import { translate } from '@docusaurus/Translate';
 import React from 'react';
 import styles from "./styles.module.scss";
 
-function SpotsLine() {
+function SpotsLine(props) {
+  let minSpotsList = [1, 2, 3, 4, 5];
+  const minSpots = minSpotsList.map((item) => {
+    let delayStepstyle = {
+      transition: `all ${item * 0.2}s`
+    }
+    return <div className={styles.minSpot} style={delayStepstyle}></div>
+  })
   return (
-    <div className={styles.spotsLine}>
-      <div className={styles.minSpot}></div>
-      <div className={styles.minSpot}></div>
-      <div className={styles.minSpot}></div>
-      <div className={styles.minSpot}></div>
-      <div className={styles.minSpot}></div>
-      <div className={styles.minSpot}></div>
-      <div className={styles.minSpot}></div>
-      <div className={styles.minSpot}></div>
-      <div className={styles.minSpot}></div>
-      <div className={styles.minSpot}></div>
-      <div className={styles.minSpot}></div>
-      <div className={styles.minSpot}></div>
+    <div className={props.className} style={props.style}>
+      {minSpots}
     </div>
   )
 }
 
 function StepSpot(props) {
   return (
-    <div className={styles.stepSpot}>
+    <div className={props.className}>
       <div className={styles.stepNum}>{props.step}</div>
       <p className={styles.stepName}>{props.name}</p>
     </div>
   )
 }
 
+const spotsList = [
+  {
+    step: "1",
+    name: "部署Docker",
+    className: ""
+  },
+  {
+    step: "2",
+    name: "安装Shifu",
+    className: ""
+  },
+  {
+    step: "3",
+    name: "试玩Shifu",
+    className: ""
+  },
+]
+
+const lineList = [
+  {
+    id: 1,
+    style: {},
+    className: ""
+  },
+  {
+    id: 2,
+    style: {},
+    className: ""
+  }
+]
+
+
 function ProgressBar() {
+  const stepSpots = spotsList.map((item) =>
+    <StepSpot key={item.step} {...item}></StepSpot>
+  )
+  const spotslines = lineList.map((item) =>
+    <SpotsLine key={item.id} {...item}></SpotsLine>
+  )
   return (
     <div className={styles.ProgressBarContainer}>
-      <StepSpot step="1" name="部署Docker"></StepSpot>
-      <StepSpot step="2" name="安装Shifu"></StepSpot>
-      <StepSpot step="3" name="试玩Shifu"></StepSpot>
-      <SpotsLine></SpotsLine>
+      {stepSpots}
+      {spotslines}
     </div>
   )
 }
 
 const Logo = require('@site/static/img/logo/shifu-mini.svg').default
 
-export default function DemoHeader() {
+export default function DemoHeader(props) {
+  for (let i in spotsList) {
+    spotsList[i]["className"] = (i == 0) ? `${styles.specialSpot}` : `${styles.normalSpot}`
+    if (i == props.stepIndex) {
+      spotsList[i]["className"] += ` ${styles.stepSpot} ${styles.stepSpotActive}`
+    } else if (i < props.stepIndex) {
+      spotsList[i]["className"] += ` ${styles.stepSpot} ${styles.stepPass}`
+    } else {
+      spotsList[i]["className"] = ` ${styles.stepSpot}`
+    }
+  }
+  for (let i in lineList) {
+    lineList[i]["style"] = { transform: `translateX(${105 * i}px)` }
+    if (i < props.stepIndex) {
+      lineList[i]["className"] += ` ${styles.spotsLineActive}`
+    } else {
+      lineList[i]["className"] = `${styles.spotsLine}`
+    }
+  }
   return (
     <div className={styles.demoHeaderContainer}>
       <Logo className={styles.logo}></Logo>

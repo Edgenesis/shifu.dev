@@ -1,4 +1,32 @@
 .demoFooterContainer {
+  z-index: 10;
   width: 100%;
   min-height: 153px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .demoFooterButton {
+    width: 168px;
+    height: 38px;
+  }
+
+  .demoFooterContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+  }
+
+  .demoFooterDoc {
+    width: 100px;
+    height: 38px;
+  }
+
+  .demoFooterGithub {
+    margin-left: 42px;
+    width: 160px;
+    height: 38px;
+  }
 }
