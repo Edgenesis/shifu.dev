@@ -5,9 +5,9 @@ sidebar_position: 3
 
 # Data Acquisition
 
-If communication is through HTTP/gRPC in *Shifu*, `deviceshifu` will convert the request into the form of the supported device protocol and send it to the device. 
+If communication is through HTTP/gRPC in *Shifu*, ***deviceShifu*** will convert the request into the form of the supported device protocol and send it to the device. 
 
-When the device receives the command, the data will be transmitted to `deviceshifu`, and then `deviceshifu` will return the data as the return value of our request, thereby realizing data collection.
+When the device receives the command, the data will be transmitted to ***deviceShifu***, and then ***deviceShifu*** will return the data as the return value of our request, thereby realizing data collection.
 
 ## Automated data collection
 
@@ -43,7 +43,7 @@ When the device receives the command, the data will be transmitted to `deviceshi
    }
    ```
 2. Use `go mod init high-temperature-detector` to generate the `go.mod` file.
-3. The above program can be packaged into a `docker image` and loaded into the cluster so that it can better communicate with `deviceshifu`. Create the following `dockerfile`:
+3. The above program can be packaged into a `docker image` and loaded into the cluster so that it can better communicate with ***deviceShifu***. Create the following `Dockerfile`:
    ```dockerfile
    # syntax=docker/dockerfile:1  
    
@@ -56,7 +56,7 @@ When the device receives the command, the data will be transmitted to `deviceshi
    EXPOSE 11111  
    CMD [ "/high-temperature-detector" ]
    ```
-4. To generate a `docker image` using the `dockerfilefile`, execute the following commands:
+4. To generate a `docker image` using the `Dockerfile`, execute the following commands:
    ```bash
    docker build --tag high-temperature-detector:v0.0.1
    ```

@@ -23,4 +23,4 @@ graph TD
 
 ***Shifu***'s microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to be compatible with new drivers quickly. 
 
-If the driver used is not yet supported by ***Shifu***, please click [here](https://github.com/Edgenesis/shifu/issues/new) to submit a [GitHub Issue](https://github.com/Edgenesis/shifu/issues) and we will support it ASAP!
+If the driver used is not yet supported by ***Shifu***, please [submit a GitHub Issue](https://github.com/Edgenesis/shifu/issues/new) and we will support it ASAP!

@@ -28,13 +28,13 @@ protocolSettings:
 - `protocol`: represents a communication protocol that interacts with a device.
 - `protocolSettings`: represents the next Setting for the protocol, and [different settings](shifu-api-reference/edgedevice.md#protocolsettings) need to be introduced for [different protocols](protocol-driver-compatibility/protocols.md).
 
-### 2. Create `deviceshifu`
+### 2. Create ***deviceshifu***
 
-After modifying the documents above, it is ready to create `deviceshifu`, `deviceshifu` will connect with the devices via configuration.
+After modifying the documents above, it is ready to create ***deviceshifu***, ***deviceshifu*** will connect with the devices via configuration.
 
 ### 3. Test the state of the equipment
 
-If you find that the `deviceshifu` status is `Error` or `CrashLoopBackOff` through the command `kubectl get pods -n deviceshifu`, it means that the connection is abnormal.
+If you find that the ***deviceshifu*** status is `Error` or `CrashLoopBackOff` through the command `kubectl get pods -n deviceshifu`, it means that the connection is abnormal.
 
 You can also print error messages through the command `kubectl logs <NAME> -n deviceshifu`.
 
@@ -55,4 +55,4 @@ protocolSettings:
 
 Through the above configuration, set address to the `address` of your OPC UA device, set protocol to `OPC UA`, add `protocolSetting` to `OPCUASetting`, and configure `SecurityMode` (information security mode), `ConnectionTimeoutInMilliseconds` (connection timeout limit), `AuthenticationMode` (authentication default) and account password Wait.
 
-After modifying the above configuration, create `deviceshifu` to access the OPC UA device.
+After modifying the above configuration, create ***deviceshifu*** to access the OPC UA device.

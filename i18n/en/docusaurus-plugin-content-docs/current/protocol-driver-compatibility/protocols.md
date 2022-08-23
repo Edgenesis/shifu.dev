@@ -20,4 +20,4 @@ For now, ***Shifu*** supports the following protocols for interacting with devic
 
 ***Shifu***'s microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to be compatible with new protocols quickly.
 
-If the protocol used is not yet supported by ***Shifu***, please click [here](https://github.com/Edgenesis/shifu/issues/new) to submit a [GitHub Issue](https://github.com/Edgenesis/shifu/issues) and we will support it ASAP!
+If the protocol used is not yet supported by ***Shifu***, please [submit a GitHub Issue](https://github.com/Edgenesis/shifu/issues/new) and we will support it ASAP!

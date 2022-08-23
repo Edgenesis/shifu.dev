@@ -3,15 +3,15 @@ title: Control Plane
 sidebar_position: 3
 ---
 
-The main components of the Shifu control plane are `shifuController` and `shifud`.
+The main components of the ***Shifu*** control plane are ***shifuController*** and ***shifud***.
 
 ### shifuController
 
 #### Introduction
 
-The `shifuController` is used to control a [Kubernetes CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) customized by Shifu, the `EdgeDevice`, which contains information about the physical device connected to Shifu.
+The ***shifuController*** is used to control a [Kubernetes CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) customized by ***Shifu***, the ***edgeDevice***, which contains information about the physical device connected to ***Shifu***.
 
-Each `EdgeDevice` has two parts: `EdgeDeviceSpec` and `EdgeDevicePhase`.
+Each ***edgeDevice*** has two parts: `EdgeDeviceSpec` and `EdgeDevicePhase`.
 
 The `EdgeDeviceSpec` contains the basic information of the device, with the following elements:
 
@@ -33,14 +33,14 @@ The `EdgeDevicePhase` defines the current state of the device, with the followin
 
 #### Design Docs 
 
-If you are interested in the detailed implementations of `shifuController`, please visit [shifuController design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController.md) for further reading.
+If you are interested in the detailed implementations of ***shifuController***, please visit [***shifuController*** design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController.md) for further reading.
 
-### shifud
+### ***shifud***
 
-#### shifud
+#### ***shifud***
 
-`shifud` is a DaemonSet that runs on each Kubernetes node, primarily responsible for device detection, verification, and updates.
+***shifud*** is a `DaemonSet` that runs on each Kubernetes node, primarily responsible for device detection, verification, and updates.
 
 #### Design Docs
 
-If you are interested in the detailed implementations of `shifud`, please visit [shifud design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud.md) for further reading.
+If you are interested in the detailed implementations of ***shifud***, please visit [***shifud*** design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud.md) for further reading.

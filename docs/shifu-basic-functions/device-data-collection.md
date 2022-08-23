@@ -5,9 +5,9 @@ sidebar_position: 3
 
 # 数据采集
 
-我们可以通过HTTP/gRPC与`deviceshifu`进行通信，`deviceshifu`会将我们发送的请求转换成设备所支持协议的形式，并发送给设备。
+我们可以通过HTTP/gRPC与 ***deviceShifu*** 进行通信，***deviceShifu*** 会将我们发送的请求转换成设备所支持协议的形式，并发送给设备。
 
-当设备接收到指令之后，数据会传输到`deviceshifu`中，之后`deviceshifu`将数据作为我们请求的返回值进行返回，从而实现数据的采集。
+当设备接收到指令之后，数据会传输到 ***deviceShifu*** 中，之后 ***deviceShifu*** 将数据作为我们请求的返回值进行返回，从而实现数据的采集。
 
 ## 实现自动化数据采集
 
@@ -43,7 +43,7 @@ sidebar_position: 3
    }
    ```
 2. 使用`go mod init high-temperature-detector`生成`go.mod`文件。
-3. 对于上述程序，我们可以将其打包成`docker image`并加载到集群中，以便其能更好的与`deviceshifu`进行通信。创建以下`dockerfile`文件：
+3. 对于上述程序，我们可以将其打包成`docker image`并加载到集群中，以便其能更好的与 ***deviceShifu*** 进行通信。创建以下`Dockerfile`文件：
    ```dockerfile
    # syntax=docker/dockerfile:1  
    
@@ -56,7 +56,7 @@ sidebar_position: 3
    EXPOSE 11111  
    CMD [ "/high-temperature-detector" ]
    ```
-4. 使用`dockerfile`文件生成`docker image`，需执行以下命令：
+4. 使用`Dockerfile`文件生成`docker image`，需执行以下命令：
    ```bash
    docker build --tag high-temperature-detector:v0.0.1
    ```

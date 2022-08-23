@@ -5,7 +5,7 @@ sidebar_position: 4
 
 # Device Control
 
-Similar to data collection, after setting the device instructions in `deviceshifu_configmap.yaml`, communication can be made with `deviceshifu` through HTTP/gRPC. The `deviceshifu` will convert the instructions into the form of supported  protocol by the device and send it to the device. After the device receives the instruction, it can execute the corresponding operation through the instruction, as to realize the device control.
+Similar to data collection, after setting the device instructions in `deviceshifu_configmap.yaml`, communication can be made with ***deviceshifu*** through HTTP/gRPC. The ***deviceshifu*** will convert the instructions into the form of supported  protocol by the device and send it to the device. After the device receives the instruction, it can execute the corresponding operation through the instruction, as to realize the device control.
 
 ## Combined with Data Acquisition to Realize Automatic Control of Equipment
 
@@ -16,7 +16,7 @@ Similar to data collection, after setting the device instructions in `deviceshif
    deviceshifu-opcua-deployment-765b77cfcf-dnhjh   1/1     Running   0          14m
    deviceshifu-plc-deployment-7f96585f7c-6t48g     1/1     Running   0          7m8s
    ```
-   At this point, two deviceshifu are started. Each `deviceshifu` is connected to a device. The two `deviceshifu` can interact with each other. That is, when the temperature of the thermometer exceeds the threshold, the lowest position of the Q area of the `PLC` is set to 1, and when the temperature of the thermometer is lower than the threshold, it is set to 0.
+   At this point, two deviceshifu are started. Each ***deviceshifu*** is connected to a device. The two ***deviceshifu*** can interact with each other. That is, when the temperature of the thermometer exceeds the threshold, the lowest position of the Q area of the `PLC` is set to 1, and when the temperature of the thermometer is lower than the threshold, it is set to 0.
 2. Write programs related to the control equipment.
    ```go
    package main  
@@ -57,7 +57,7 @@ Similar to data collection, after setting the device instructions in `deviceshif
       defer res.Body.Close()  
    }
    ```
-3. The above program can be packaged into a `docker image` and loaded into the cluster, so that it can better communicate with `deviceshifu`. Create the following `dockerfile`:
+3. The above program can be packaged into a `docker image` and loaded into the cluster, so that it can better communicate with ***deviceshifu***. Create the following `Dockerfile`:
    ```dockerfile
    # syntax=docker/dockerfile:1  
    FROM golang:1.17-alpine  
@@ -69,7 +69,7 @@ Similar to data collection, after setting the device instructions in `deviceshif
    EXPOSE 11111  
    CMD [ "/high-temperature-control-plc" ]
    ```
-4. Use the `dockerfile` file to generate the `docker image`.
+4. Use the `Dockerfile` file to generate the `docker image`.
    ```bash
    docker build --tag high-temperature-control-plc:v0.0.1
    ```
