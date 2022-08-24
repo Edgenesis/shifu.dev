@@ -20,17 +20,25 @@ function DemoFooter(props) {
     default:
       footerBtnContent = "Docker部署已完成"
   }
+
+  const docStyle = {
+    width: "100px",
+    height: "38px"
+  }
+
+  const gitStyle = {
+    width: '160px',
+    height: '38px'
+  }
   return (
     <div className={styles.demoFooterContainer}>
-      <div className={styles.demoFooterButton}>
-        <ButtonSquare colorLevel="two" content={footerBtnContent} onClick={props.onClick}></ButtonSquare>
-      </div>
+      <ButtonSquare colorLevel="two" content={footerBtnContent} onClick={props.onClick}></ButtonSquare>
       <div className={styles.demoFooterContent}>
         <div className={styles.demoFooterDoc}>
-          <ButtonTransparent content="技术文档" left={<DocIcon></DocIcon>} href="/"></ButtonTransparent>
+          <ButtonTransparent style={docStyle} content="技术文档" left={<DocIcon></DocIcon>} href="/"></ButtonTransparent>
         </div>
         <div className={styles.demoFooterGithub}>
-          <ButtonTransparent content="申请Github权限" left={<GithubIcon></GithubIcon>}></ButtonTransparent>
+          <ButtonTransparent style={gitStyle} content="申请Github权限" left={<GithubIcon></GithubIcon>}></ButtonTransparent>
         </div>
       </div>
     </div>

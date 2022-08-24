@@ -1,6 +1,45 @@
 .selectContainer {
+  width: 168px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
   .selectHeader {
-    width: 168px;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
     height: 38px;
+  }
+}
+
+.optiondHidden {
+  // position: absolute;
+  width: 100%;
+  overflow-y: hidden;
+  border-radius: 20px;
+  display: flex;
+
+  .optionsWrapper {
+    transition: all .5s ease-in-out;
+    border-radius: 20px;
+    width: 100%;
+    padding: 38px 12px 0 12px;
+    background: #EDF6FF;
+  }
+}
+
+.optionContainer {
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 0px;
+
+  &:hover {
+    border-radius: 30px;
+    background: #D0E0F1;
   }
 }
