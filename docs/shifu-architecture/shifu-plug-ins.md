@@ -1,5 +1,5 @@
 ---
-title: Shifu Plug-ins
+title: 插件 Plug-ins
 sidebar_position: 4
 ---
 

@@ -2,7 +2,7 @@
 id: intro
 slug: /
 sidebar_position: 0
-title: "Shifu 简介"
+title: "简介"
 ---
 
 # 欢迎使用 ***Shifu***

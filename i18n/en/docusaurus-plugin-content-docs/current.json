@@ -3,28 +3,28 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Shifu 基本架构": {
-    "message": "Shifu Basic Structure",
-    "description": "The label for category Shifu 基本架构 in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.基本架构": {
+    "message": "Basic Structure",
+    "description": "The label for category 基本架构 in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Shifu 安装与上手": {
-    "message": "Shifu Installation and Quick Trial",
-    "description": "The label for category Shifu 安装与上手 in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.安装与上手": {
+    "message": "Installation and Quick Trial",
+    "description": "The label for category 安装与上手 in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Shifu 基本功能": {
-    "message": "Shifu Basic Functions",
-    "description": "The label for category Shifu 基本功能 in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.基本功能": {
+    "message": "Basic Features",
+    "description": "The label for category 基本功能 in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Shifu 高级功能": {
-    "message": "Shifu Advanced Features",
-    "description": "The label for category Shifu 高级功能 in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.高级功能": {
+    "message": "Advanced Features",
+    "description": "The label for category 高级功能 in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Shifu API 参考": {
-    "message": "Shifu API Reference",
-    "description": "The label for category Shifu API 参考 in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.API 参考": {
+    "message": "API Reference",
+    "description": "The label for category API 参考 in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.设备协议及驱动兼容列表": {
-    "message": "Device Protocol and Driver Compatibility List",
-    "description": "The label for category 设备协议及驱动兼容列表 in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.协议及驱动兼容": {
+    "message": "Compatible Protocols and Drivers",
+    "description": "The label for category 协议及驱动兼容 in sidebar tutorialSidebar"
   }
 }

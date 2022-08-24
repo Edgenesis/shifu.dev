@@ -1,5 +1,5 @@
 ---
-title: EdgeDevice
+title: edgeDevice
 sidebar_position: 1
 ---
 

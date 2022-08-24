@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10001
-title: "Shifu 相关资料"
+title: "相关资料"
 ---
 
 #  ***Shifu*** 相关资料
