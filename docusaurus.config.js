@@ -114,7 +114,7 @@ const config = {
             items: [
               {
                 label: '极速安装',
-                to: 'docs/quickstart/quick_install',
+                to: 'docs',
               },
             ],
           },
@@ -126,18 +126,6 @@ const config = {
                 to: 'docs',
                 // href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
-              // {
-              //   label: 'Stack Overflow',
-              //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              // },
-              // {
-              //   label: 'Discord',
-              //   href: 'https://discordapp.com/invite/docusaurus',
-              // },
-              // {
-              //   label: 'Twitter',
-              //   href: 'https://twitter.com/docusaurus',
-              // },
             ],
           },
           {
