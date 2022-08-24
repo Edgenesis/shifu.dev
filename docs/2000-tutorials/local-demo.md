@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## 安装 ***Shifu***
 
-前往 [demo.shifu.run](https://demo.shifu.run) 下载 ***Shifu***安装包并按照网站的指导安装。
+前往 [demo.shifu.run](https://demo.shifu.run) 下载 ***Shifu*** 安装包并按照网站的指导安装。
 
 :::tip
 直接进入页面中的第二步，完成该步骤的流程后即可回到本页面
@@ -58,7 +58,7 @@ sudo kubectl get pods -A | grep nginx
 
 #### 启动AGV虚拟设备
 
-首先，我们创建一个AGV的数字孪生：(如果您刚通过 ***Shifu*** 安装包 安装完***Shifu***，`AGV`数字孪生会自动创建，所以您无需进行以下创建过程，请直接跳转到[与AGV虚拟设备交互](#与agv虚拟设备交互))
+首先，我们创建一个AGV的数字孪生：(如果您刚通过 ***Shifu*** 安装包 安装完 ***Shifu***，`AGV`数字孪生会自动创建，所以您无需进行以下创建过程，请直接跳转到[与AGV虚拟设备交互](#与agv虚拟设备交互))
 
 ```bash
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-agv
@@ -80,7 +80,7 @@ sudo kubectl get pods -A | grep agv
 sudo kubectl exec -it nginx -- bash
 ```
 
-接着，我们可以与[AGV](https://baike.baidu.com/item/自动导引运输车/15535355)的数字孪生通过`http://deviceshifu-agv.deviceshifu.svc.cluster.local`进行交互，得到AGV的当前x, y坐标：
+接着，我们可以与AGV的数字孪生通过 `http://deviceshifu-agv.deviceshifu.svc.cluster.local` 进行交互，得到AGV的当前 `x`, `y` 坐标：
 
 ```bash
 curl http://deviceshifu-agv.deviceshifu.svc.cluster.local/get_position; echo

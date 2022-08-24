@@ -19,7 +19,6 @@ title: "简介"
 
 ## 通信
 
-
 ***Shifu*** 与应用、设备之间的关系，可以用下图来表示：
 
 ```mermaid
@@ -40,15 +39,15 @@ flowchart LR;
 
 ## 功能
 
-***Shifu***作为一个对物联网设备进行开发和管理的框架，提供以下功能：
+***Shifu*** 作为一个对物联网设备进行开发和管理的框架，提供以下功能：
 
 - [***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)
   - 从设备获取数据
   - 向设备发送指令
   - 各种应用开发工具(有限状态机等）
+- [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController-zh.md)
+  - 管理 ***deviceShifu*** 的生命周期
 - [***shifud***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud-zh.md)
   - 设备发现
   - 设备验证
   - 设备更新
-- [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController-zh.md)
-  - 管理 ***deviceShifu*** 的生命周期
