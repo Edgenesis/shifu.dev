@@ -66,7 +66,11 @@ const config = {
           editUrl:
             'https://github.com/edgenesis/shifu-docs-docusaurus/tree/main/',
         },
-        blog: false,
+        blog: {
+          routeBasePath: '/blog',
+          blogSidebarTitle: '所有博客',
+          blogSidebarCount: 'ALL',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -89,6 +93,11 @@ const config = {
             docId: 'intro',
             position: 'left',
             label: '文档',
+          },
+          {
+            to: 'blog', 
+            position: 'left',
+            label: '博客', 
           },
           {
             href: 'https://demo.shifu.run',
