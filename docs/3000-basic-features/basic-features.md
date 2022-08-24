@@ -36,7 +36,7 @@ sidebar_position: 0
 
 在 ***Shifu*** 中，每一个设备都会生成与其相对应的数字孪生（[***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)）。开发者只需调用 ***deviceShifu*** 所暴露出来的API，即可以无比便捷地使用设备的能力。
 
-```sh
+```bash
 curl http://robot-arm/grip/
 ```
 

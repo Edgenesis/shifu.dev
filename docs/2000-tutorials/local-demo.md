@@ -5,12 +5,23 @@ sidebar_position: 2
 
 # 本地 Demo
 
+## 确认 Docker Desktop 已安装且启动
+
+使用下面的命令来确定 `Docker Desktop` 已安装且启动：
+
+```bash
+$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
+
+如果输出为 `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`，则说明 `Docker Desktop` 未启动；如果输出为 `command not found`，则说明 `Docker Desktop` 未安装。请查看 [安装 Docker](./install-docker.md)。
+
 ## 安装 ***Shifu***
 
 前往 [demo.shifu.run](https://demo.shifu.run) 下载 ***Shifu*** 安装包并按照网站的指导安装。
 
 :::tip
-直接进入页面中的第二步，完成该步骤的流程后即可回到本页面
+直接进入页面中的第二步，完成后即可回到本页面
 :::
 
 安装完成后 ***Shifu*** 会在 `Docker` 运行时伴随启动。
@@ -31,20 +42,18 @@ sudo kubectl get pods -A
 
 我们准备了五个虚拟设备(`AGV`，`温度计`，`酶标仪`，`PLC`，`机械臂`）以供您进行试玩，体验 ***Shifu*** 的能力。
 
-### 启动 nginx实例
+### 启动nginx实例
 
-我们启动一个 nginx实例 来模拟应用程序与 ***Shifu*** 之间的交互：
+我们启动一个 `nginx实例` 来模拟应用程序与 ***Shifu*** 之间的交互：
 
 ```bash
 sudo kubectl run --image=nginx:1.21 nginx
 sudo kubectl get pods -A | grep nginx
 ```
 
-可以看到nginx已经在运行：
+可以看到 `nginx` 已经在运行：
 
 ![nginx pod running](images/nginxPodStatus.png)
-
-### 与数字孪生进行交互
 
 ### 1. 与AGV的数字孪生交互
 
@@ -58,7 +67,11 @@ sudo kubectl get pods -A | grep nginx
 
 #### 启动AGV虚拟设备
 
-首先，我们创建一个AGV的数字孪生：(如果您刚通过 ***Shifu*** 安装包 安装完 ***Shifu***，`AGV`数字孪生会自动创建，所以您无需进行以下创建过程，请直接跳转到[与AGV虚拟设备交互](#与agv虚拟设备交互))
+:::tip
+您刚才通过 Shifu安装包 安装了 ***Shifu***，数字孪生已自动创建，所以您无需进行手动的创建过程。
+:::
+
+首先，我们创建一个AGV的数字孪生：
 
 ```bash
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-agv
@@ -74,7 +87,11 @@ sudo kubectl get pods -A | grep agv
 
 #### 与AGV虚拟设备交互
 
-首先，我们进入nginx： (如果您未启动Nginx，请您首先 [启动Nginx服务](#启动nginx))
+:::info
+如果您未启动 nginx实例，请您首先 [启动 nginx实例](#启动nginx实例))
+:::
+
+首先，我们进入nginx：
 
 ```bash
 sudo kubectl exec -it nginx -- bash
@@ -98,6 +115,10 @@ curl http://deviceshifu-agv.deviceshifu.svc.cluster.local/get_position; echo
 
 #### 启动温度计虚拟设备
 
+:::tip
+您刚才通过 Shifu安装包 安装了 ***Shifu***，数字孪生已自动创建，所以您无需进行手动的创建过程。
+:::
+
 首先，我们创建一个温度计的数字孪生：
 
 ```bash
@@ -120,7 +141,7 @@ sudo kubectl get pods -A | grep thermometer
 sudo kubectl exec -it nginx -- bash
 ```
 
-然后，我们可以与温度计的数字孪生通过`http://deviceshifu-thermometer.deviceshifu.svc.cluster.local`进行交互，得到温度计的测量温度（以下结果随机）：
+然后，我们可以与温度计的数字孪生通过 `http://deviceshifu-thermometer.deviceshifu.svc.cluster.local` 进行交互，得到温度计的测量温度（以下结果随机）：
 
 ```bash
 curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/read_value; echo
@@ -128,7 +149,7 @@ curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/read_value; ec
 
 ![deviceshifu-thermometer output](images/deviceshifu-thermometer-output.png)
 
-最后，我们可以通过`get_status`命令得到温度计当前运行状态（以下结果随机）：
+最后，我们可以通过 `get_status` 命令得到温度计当前运行状态（以下结果随机）：
 
 ```bash
 curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/get_status; echo
@@ -154,9 +175,13 @@ curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/get_status; ec
 
 #### 启动酶标仪虚拟设备
 
+:::tip
+您刚才通过 Shifu安装包 安装了 ***Shifu***，数字孪生已自动创建，所以您无需进行手动的创建过程。
+:::
+
 首先，我们启动酶标仪的数字孪生：
 
-```
+```bash
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-plate-reader
 ```
 
@@ -171,11 +196,11 @@ sudo kubectl get pods -A | grep plate
 
 接着，我们进入nginx：
 
-```
+```bash
 sudo kubectl exec -it nginx -- bash
 ```
 
-最后，我们可以和酶标仪的数字孪生通过`http://deviceshifu-plate-reader.deviceshifu.svc.cluster.local`进行交互，得到酶标仪的测量结果：
+最后，我们可以和酶标仪的数字孪生通过 `http://deviceshifu-plate-reader.deviceshifu.svc.cluster.local` 进行交互，得到酶标仪的测量结果：
 
 ```bash
 curl "deviceshifu-plate-reader.deviceshifu.svc.cluster.local/get_measurement"
@@ -194,6 +219,10 @@ curl "deviceshifu-plate-reader.deviceshifu.svc.cluster.local/get_measurement"
 </details>
 
 #### 启动PLC虚拟设备
+
+:::tip
+您刚才通过 Shifu安装包 安装了 ***Shifu***，数字孪生已自动创建，所以您无需进行手动的创建过程。
+:::
 
 首先，我们启动PLC的数字孪生：
 
@@ -217,7 +246,7 @@ sudo kubectl get pods -A | grep plc
 sudo kubectl exec -it nginx -- bash
 ```
 
-最后，我们可以与PLC的数字孪生通过`http://deviceshifu-plc.deviceshifu.svc.cluster.local`进行交互，将PLC的Q0内存区域的第0位设置成1：
+最后，我们可以与PLC的数字孪生通过 `http://deviceshifu-plc.deviceshifu.svc.cluster.local` 进行交互，将PLC `Q0内存` 的第0位设置成 `1`：
 
 ```bash
 curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=0&value=1"; echo
@@ -225,7 +254,7 @@ curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&
 
 ![deviceshifu-plc_output1.png](images/deviceshifu-plc_output1.png)
 
-`digit` 表示PLC内存的第几个比特，`value` 表示当前比特的值，通过修改 `digit` 与 `value` 的数值可以更改对应内存空间比特的值。例如一个PLC的Q0内存的第四位值代表控制程序，设定 `digit=3` 与 `value=1` 就可以开启程序：
+`digit` 表示PLC内存的第几个比特，`value` 表示当前比特的值，通过修改 `digit` 与 `value` 的数值可以更改对应内存空间比特的值。例如一个PLC的 `Q0内存` 的第四位值代表控制程序，设定 `digit=3` 与 `value=1` 就可以开启程序：
 
 ```bash
 curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=3&value=1"; echo
@@ -244,6 +273,10 @@ curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&
 </details>
 
 #### 启动机械臂虚拟设备
+
+:::tip
+您刚才通过 Shifu安装包 安装了 ***Shifu***，数字孪生已自动创建，所以您无需进行手动的创建过程。
+:::
 
 首先，我们创建一个机械臂的数字孪生：
 
@@ -300,3 +333,11 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 恭喜！！！:rocket: :rocket: :rocket: 您已经完成了 ***Shifu*** 的安装和Demo试用，接下来可以自由探索了！
 
 如果有兴趣，您可以访问 ***Shifu*** 的 [GitHub仓库](https://github.com/Edgenesis/shifu)。
+
+### 删除集群
+
+在上述的试用过程中，Shifu安装包 在您的电脑上创建了一个集群，并在这个集群中安装了 ***Shifu***。如果您不需要继续试用 ***Shifu***，可以执行下面的命令来删除这个集群：
+
+```bash
+sudo kind delete cluster
+```

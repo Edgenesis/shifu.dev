@@ -29,7 +29,7 @@ sidebar_position: 0
 <details>
   <summary> <b>点此查看deviceshifu-plc-deployment.yaml</b> </summary> 
 
-```
+```yml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -86,7 +86,7 @@ spec:
 <details>
   <summary> <b>点此查看deviceshifu-plc-configmap.yaml</b> </summary>
 
-```
+```yml
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -118,7 +118,7 @@ data:
 <details>
   <summary> <b>点此查看deviceshifu-plc-service.yaml</b> </summary>
 
-```
+```yml
 apiVersion: v1
 kind: Service
 metadata:
@@ -140,7 +140,7 @@ spec:
 <details>
   <summary> <b>点此查看edgedevice-plc.yaml</b> </summary>
 
-```
+```yml
 apiVersion: shifu.edgenesis.io/v1alpha1
 kind: EdgeDevice
 metadata:
@@ -160,7 +160,7 @@ status:
 
 向 ***Shifu*** 添加PLC设备，创建和启动 ***deviceShifu***:
 
-```
+```bash
 kubectl apply -f ../plc_configuration_directory
 ```
 
