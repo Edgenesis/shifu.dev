@@ -1,6 +1,6 @@
 ---
 title: 加入开源社区
-sidebar_position: 10000
+sidebar_position: 2
 ---
 
 # 加入开源社区
