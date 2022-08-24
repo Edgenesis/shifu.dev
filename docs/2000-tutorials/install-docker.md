@@ -8,11 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # 安装 Docker
 
-如果您希望在本地试用和测试 ***Shifu***，可以先安装 [Docker Desktop](https://www.docker.com)，方式如下：
-
-:::tip
-如果你希望在生产环境中安装 ***Shifu***，请查看 TODO
-:::
+如果您希望在本地安装和试用 ***Shifu***，需要先安装 [Docker Desktop](https://www.docker.com)。请选择您的电脑操作系统查看对应的安装方式：
 
 <Tabs groupId="operating-systems">
 <TabItem value="win" label="Windows">
@@ -51,10 +47,6 @@ sudo docker ps
 sudo docker ps
 ```
 
-:::tip
-您可能需要输入管理员密码，输入密码时屏幕不会显示密码，结束后敲击回车即可
-:::
-
 </TabItem>
 <TabItem value="linux" label="Linux">
 
@@ -72,12 +64,12 @@ sudo docker ps
 sudo docker ps
 ```
 
+</TabItem>
+</Tabs>
+
 :::tip
 您可能需要输入管理员密码，输入密码时屏幕不会显示密码，结束后敲击回车即可
 :::
-
-</TabItem>
-</Tabs>
 
 如果 `Docker` 运行顺利，将会得到以下输出:  
 
@@ -85,6 +77,7 @@ sudo docker ps
 
 ## 下一步
 
-恭喜，您已经完成了 `Docker` 的安装！
+恭喜，您已经完成了 `Docker Desktop` 的安装！
 
-如果您对命令行和[Kubernetes](https://kubernetes.io)不太熟悉，我们提供了。。。。TODO
+- 如果您不太熟悉命令行和 `Kubernetes`，我们为您提供了一键式安装的Demo，请查看 [本地Demo](./local-demo.md) 来安装和试用 ***Shifu***。
+- 如果您对命令行和 `Kubernetes` 较熟悉，我们为您提供了命令行的安装方式，请查看 [本地kind测试](./local-kind.md) 来安装和试用 ***Shifu***。
