@@ -3,13 +3,13 @@ title: Data Plane
 sidebar_position: 2
 ---
 
-The main component of the Shifu data plane is ***deviceShifu***.
+The main component of the ***Shifu*** data plane is ***deviceShifu***.
 
 ### ***deviceShifu***
 
 #### Introduction
 
-***deviceShifu*** is the core of Shifu Framework and the part that developers care about the most. ***deviceShifu*** takes the form of a `Kubernetes Pod`, a digital representation or digital twin of a physical device.
+***deviceShifu*** is the core of ***Shifu*** Framework and the part that developers care about the most. ***deviceShifu*** takes the form of a `Kubernetes Pod`, a digital representation or digital twin of a physical device.
 
 Each ***deviceShifu*** is associated with one or more physical devices. Users can interact with physical devices by interacting with ***deviceShifu***.
 

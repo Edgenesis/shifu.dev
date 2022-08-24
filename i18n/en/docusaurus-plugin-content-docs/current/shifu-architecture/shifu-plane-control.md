@@ -26,9 +26,9 @@ The `EdgeDevicePhase` defines the current state of the device, with the followin
 
 | State | Meaning |
 |--|--|
-| Pending | Device recognized, but has no access to Shifu... |
-| Running | Device has access to Shifu and is running... |
-| Failed  | Device failed to access Shifu... |
+| Pending | Device recognized, but has no access to ***Shifu***... |
+| Running | Device has access to ***Shifu*** and is running... |
+| Failed  | Device failed to access ***Shifu***... |
 | Unknown | Unknown state... |
 
 #### Design Docs 
