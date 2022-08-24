@@ -1,7 +1,28 @@
 .demoContentContainer {
+  position: relative;
   width: 100%;
   min-height: 470px;
   flex: 1;
   background: linear-gradient(92.57deg, #42D2F5 0%, #038BFF 100%);
   z-index: 10;
+
+  .stepContent {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+  }
+
+  .goBack {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFFFFF;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 48px;
+    left: 200px;
+  }
 }

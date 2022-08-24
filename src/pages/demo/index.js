@@ -33,7 +33,7 @@ class Demo extends React.Component {
       <SnowBg>
         <div className={styles.demoContainer}>
           <DemoHeader stepIndex={this.state.stepIndex}></DemoHeader>
-          <DemoContent stepIndex={this.state.stepIndex}></DemoContent>
+          <DemoContent stepIndex={this.state.stepIndex} goBack={this.stepBackward}></DemoContent>
           <DemoFooter onClick={this.stepForward} stepIndex={this.state.stepIndex} ></DemoFooter>
         </div>
       </SnowBg>

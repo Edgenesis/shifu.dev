@@ -7,11 +7,6 @@
   align-items: center;
   flex-direction: column;
 
-  .demoFooterButton {
-    width: 168px;
-    height: 38px;
-  }
-
   .demoFooterContent {
     display: flex;
     justify-content: center;
@@ -19,14 +14,7 @@
     margin-top: 24px;
   }
 
-  .demoFooterDoc {
-    width: 100px;
-    height: 38px;
-  }
-
   .demoFooterGithub {
     margin-left: 42px;
-    width: 160px;
-    height: 38px;
   }
 }

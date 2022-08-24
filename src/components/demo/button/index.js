@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from "./styles.module.scss";
 
-
 export function ButtonSquare(props) {
   let colorLevel = "";
   switch (props.colorLevel) {
@@ -18,7 +17,7 @@ export function ButtonSquare(props) {
       colorLevel = "squareOne"
   }
   return (
-    <a className={`${styles.buttonContainer} ${styles[colorLevel]} ${styles.square}`} href={props.href} target={props.target} onClick={props.onClick}>
+    <a className={`${styles.buttonContainer} ${styles[colorLevel]} ${styles.square}`} href={props.href} target={props.target} onClick={props.onClick} style={props.style}>
       <div className={styles.buttonLeft}>{props.left}</div>
       <p className={styles.buttonContent}>{props.content}</p>
       <div className={styles.buttonRight}>{props.right}</div>
@@ -28,7 +27,7 @@ export function ButtonSquare(props) {
 
 export function ButtonTransparent(props) {
   return (
-    <a className={`${styles.buttonContainer}  ${styles.transparent}`} href={props.href} target={props.target}>
+    <a className={`${styles.buttonContainer}  ${styles.transparent}`} href={props.href} target={props.target} style={props.style}>
       <div className={styles.buttonLeft}>{props.left}</div>
       <p className={styles.buttonContent}>{props.content}</p>
       <div className={styles.buttonRight}>{props.right}</div>

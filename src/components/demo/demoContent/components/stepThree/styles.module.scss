@@ -1,0 +1,38 @@
+.stepThree {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonsContainer {
+  height: 374px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.guideContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #EDF7FF;
+  border-radius: 5px;
+  height: 374px;
+  padding: 12px 24px 24px 24px;
+  margin-left: 48px;
+
+  .guideTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+  }
+
+  .enterGameBtn {
+    margin-top: 30px;
+  }
+}
