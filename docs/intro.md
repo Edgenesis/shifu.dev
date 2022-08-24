@@ -29,7 +29,7 @@ flowchart LR;
 
 ### ***Shifu*** 与设备之间的通信
 
-***Shifu*** 可以同时兼容不同的[通信协议](4000-protocol-driver-compatibility/protocols.md)和[驱动](4000-protocol-driver-compatibility/drivers.md)，它将不同设备的不同形式的请求进行统一，使得用户可以更简单地使用设备。同时，***Shifu*** 兼容的协议和驱动的数量也在不断增加。
+***Shifu*** 可以同时兼容不同的[通信协议](guides/compatible-protocols.md)和[驱动](guides/compatible-drivers.md)，它将不同设备的不同形式的请求进行统一，使得用户可以更简单地使用设备。同时，***Shifu*** 兼容的协议和驱动的数量也在不断增加。
 
 ### ***Shifu*** 与应用之间的通信
 

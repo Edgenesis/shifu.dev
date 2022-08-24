@@ -9,7 +9,7 @@ sidebar_position: 4
 
 ## 结合数据采集实现设备的自动化控制
 
-1. 这里，我们再创建一个虚拟设备`PLC`(如果您未试玩过`PLC`设备，您可以[点击查看](2100-howtos/connect-a-plc.md))。
+1. 这里，我们再创建一个虚拟设备`PLC`(如果您未试玩过`PLC`设备，您可以[点击查看](cases/connect-s7-plc.md))。
    ```bash
    $ kubectl get pods -n deviceshifu
    NAME                                            READY   STATUS    RESTARTS   AGE

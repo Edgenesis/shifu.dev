@@ -3,6 +3,9 @@ title: 下载安装
 sidebar_position: 0
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 下载安装
 
 ## 平台支持
@@ -24,19 +27,7 @@ sidebar_position: 0
 | `macOS` | :white_check_mark: |
 | `Windows(WSL2)` | :white_check_mark: |
 
-## 安装方式
-
-### 本地测试
-
-1. ***Shifu*** 基于 `Docker` 的虚拟化容器技术，在电脑上安装 ***Shifu*** 需要您先安装 `Docker Desktop`。请查看 [安装 Docker Desktop](./install-docker.md)。
-2. 安装好 `Docker Desktop` 后
-    - 如果您不太熟悉命令行和 `Kubernetes`，我们为您提供了一键式安装的Demo，请查看 [本地Demo](./local-demo.md) 来安装和试用 ***Shifu***。
-    - 如果您对命令行和 `Kubernetes` 较熟悉，我们为您提供了命令行的安装方式，请查看 [本地kind测试](./local-kind.md) 来安装和试用 ***Shifu***。
-
-### 生产环境部署
-
-请查看 [生产环境安装](./production.md) 来将 ***Shifu*** 安装到您的 Kubernetes集群 中。
-
+## 安装 Docker Desktop
 
 如果您希望在本地安装和试用 ***Shifu***，需要先安装 [Docker Desktop](https://www.docker.com)。请选择您的电脑操作系统查看对应的安装方式：
 
@@ -105,7 +96,6 @@ sudo docker ps
 
 ![](images/docker_run.png)
 
-
 ## 确认 Docker Desktop 已安装且启动
 
 使用下面的命令来确定 `Docker Desktop` 已安装且启动：
@@ -115,7 +105,7 @@ $ sudo docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
-如果输出为 `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`，则说明 `Docker Desktop` 未启动；如果输出为 `command not found`，则说明 `Docker Desktop` 未安装。请查看 [安装 Docker](./install-docker.md)。
+如果输出为 `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`，则说明 `Docker Desktop` 未启动；如果输出为 `command not found`，则说明 `Docker Desktop` 未安装。请查看 安装 Docker 部分。
 
 ## 安装 ***Shifu***
 

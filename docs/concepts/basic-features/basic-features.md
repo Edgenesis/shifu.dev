@@ -16,19 +16,19 @@ sidebar_position: 0
 1. 应用开发
 1. 系统运维
 
-## [设备接入](3000-basic-features/device-connection.md)
+## [设备接入](concepts/basic-features/device-connection.md)
 
 ***Shifu*** 先进的微服务架构赋予了 ***Shifu*** 无与伦比的扩展性，也使得 ***Shifu*** 可以非常快速地接入新设备。
 
-## [设备管理](3000-basic-features/device-management.md)
+## [设备管理](concepts/basic-features/device-management.md)
 
 ***Shifu***自带了设备管理框架，可以便捷地实现查看设备的运行状态、更新设备驱动、进行安全配置等操作。
 
-## [数据采集](3000-basic-features/device-data-collection.md)
+## [数据采集](concepts/basic-features/device-data-collection.md)
 
 在 ***Shifu*** 中，你可以轻而易举的实现自动化数据采集。
 
-## [设备控制](3000-basic-features/device-control.md)
+## [设备控制](concepts/basic-features/device-control.md)
 
 在 ***Shifu*** 中，你可以结合数据采集实现自动化设备控制。
 
@@ -49,4 +49,4 @@ curl http://robot-arm/grip/
 由于 ***Shifu*** 底层集成了`Kubernetes`的能力，所以 ***Shifu*** 在运维上有两大天然优势：
 
 1. 由`Kubernetes`原生的 ***Shifu*** 使得开发者只用运维一套k8s集群，便可统一管理应用和IoT设备，无需运维一套额外的物联网平台；
-1. 永无单点故障。与其他物联网平台不同，[***Shifu*** 的架构](1000-architecture/architecture.md)完全由可创建若干个 ***deviceShifu*** 的副本组成，所以 ***Shifu*** 永无单点故障。事实上，***Shifu*** 已经在多个500强企业的核心场景中（工厂、实验室、供应链等）累计运行了50万小时且没有出过故障。
+1. 永无单点故障。与其他物联网平台不同，[***Shifu*** 的架构](concepts/architecture/architecture.md)完全由可创建若干个 ***deviceShifu*** 的副本组成，所以 ***Shifu*** 永无单点故障。事实上，***Shifu*** 已经在多个500强企业的核心场景中（工厂、实验室、供应链等）累计运行了50万小时且没有出过故障。
