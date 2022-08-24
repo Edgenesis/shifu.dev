@@ -1,9 +1,9 @@
 ---
-title: 接入一个PLC设备
-sidebar_position: 0
+title: 接入 西门子S7 PLC
+sidebar_position: 1
 ---
 
-# 接入一个PLC设备
+# 接入 西门子S7 PLC
 
 ***Shifu*** 实现了对 `西门子S7系列` PLC的兼容。用户可以使用 ***Shifu***，通过 `HTTP请求` 对 `S7 PLC` 的内存进行修改。本文将介绍如何接入一台 `西门子S7-1200 1214C PLC` 并且与之交互。
 

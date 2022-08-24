@@ -1,46 +1,11 @@
 ---
-title: 本地 Demo
-sidebar_position: 2
+title: 试用 Shifu
+sidebar_position: 1
 ---
 
-# 本地 Demo
+# 试用 ***Shifu***
 
-## 确认 Docker Desktop 已安装且启动
-
-使用下面的命令来确定 `Docker Desktop` 已安装且启动：
-
-```bash
-$ sudo docker ps
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-```
-
-如果输出为 `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`，则说明 `Docker Desktop` 未启动；如果输出为 `command not found`，则说明 `Docker Desktop` 未安装。请查看 [安装 Docker](./install-docker.md)。
-
-## 安装 ***Shifu***
-
-前往 [demo.shifu.run](https://demo.shifu.run) 下载 ***Shifu*** 安装包并按照网站的指导安装。
-
-:::tip
-直接进入页面中的第二步，完成后即可回到本页面
-:::
-
-安装完成后 ***Shifu*** 会在 `Docker` 运行时伴随启动。
-
-### 确认 ***Shifu*** 已启动
-
-使用以下命令来查看运行效果：
-
-```bash
-sudo kubectl get pods -A
-```
-
-如果所有 `STATUS` 都是 `Running` 即表示成功：
-
-![Shifu Finished pods](images/shifuFinishPods.png)
-
-## 试用 ***Shifu***
-
-我们准备了五个虚拟设备(`AGV`，`温度计`，`酶标仪`，`PLC`，`机械臂`）以供您进行试玩，体验 ***Shifu*** 的能力。
+Shifu安装包 中准备了五个虚拟设备(`AGV`，`温度计`，`酶标仪`，`PLC`，`机械臂`）供您进行试玩，体验 ***Shifu*** 的能力。
 
 ### 启动nginx实例
 
