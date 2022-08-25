@@ -5,23 +5,23 @@ import CodeView from '../../../codeVIew';
 
 const stepOnebtnList = [
   {
-    colorLevel: 'one',
+    colorLevel: 'two',
     content: "Linux",
     href: "https://docs.docker.com/engine/install/#server",
     target: "_blank"
   },
   {
-    colorLevel: 'one',
+    colorLevel: 'two',
     content: "Windows(WSL2)",
     href: "https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe"
   },
   {
-    colorLevel: 'one',
+    colorLevel: 'two',
     content: "MacOS(Intel)",
     href: "https://desktop.docker.com/mac/main/amd64/Docker.dmg"
   },
   {
-    colorLevel: 'one',
+    colorLevel: 'two',
     content: "MacOS(M1)",
     href: "https://desktop.docker.com/mac/main/arm64/Docker.dmg"
   },

@@ -6,15 +6,28 @@
   position: relative;
 
   .selectHeader {
+    transition: all 0.5s;
     z-index: 1;
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 38px;
+    background: #155BA2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFFFFF;
+  }
+
+  .arrowIcon {
+    position: absolute;
+    right: 6px;
   }
 }
 
 .optiondHidden {
-  // position: absolute;
+  position: absolute;
   width: 100%;
   overflow-y: hidden;
   border-radius: 20px;
@@ -22,6 +35,7 @@
 
   .optionsWrapper {
     transition: all .5s ease-in-out;
+    transform: translateY(-100%);
     border-radius: 20px;
     width: 100%;
     padding: 38px 12px 0 12px;
@@ -37,9 +51,24 @@
   align-items: center;
   justify-content: center;
   margin: 6px 0px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160.69%;
+  color: #666666;
 
   &:hover {
     border-radius: 30px;
     background: #D0E0F1;
+    color: #000000
+  }
+}
+
+.active {
+  .selectHeader {
+    border-radius: 20px;
+  }
+
+  .optionsWrapper {
+    transform: translateY(0px);
   }
 }

@@ -96,7 +96,6 @@ export default function DemoHeader(props) {
   }
   return (
     <div className={styles.demoHeaderContainer}>
-      <Logo className={styles.logo}></Logo>
       <h1 className={styles.header}>欢迎体验Shifu demo</h1>
       <ProgressBar></ProgressBar>
     </div>

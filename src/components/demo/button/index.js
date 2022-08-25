@@ -19,17 +19,7 @@ export function ButtonSquare(props) {
   return (
     <a className={`${styles.buttonContainer} ${styles[colorLevel]} ${styles.square}`} href={props.href} target={props.target} onClick={props.onClick} style={props.style}>
       <div className={styles.buttonLeft}>{props.left}</div>
-      <p className={styles.buttonContent}>{props.content}</p>
-      <div className={styles.buttonRight}>{props.right}</div>
-    </a >
-  )
-}
-
-export function ButtonTransparent(props) {
-  return (
-    <a className={`${styles.buttonContainer}  ${styles.transparent}`} href={props.href} target={props.target} style={props.style}>
-      <div className={styles.buttonLeft}>{props.left}</div>
-      <p className={styles.buttonContent}>{props.content}</p>
+      <p className={styles.buttonContent} style={props.contentStyle}>{props.content}</p>
       <div className={styles.buttonRight}>{props.right}</div>
     </a >
   )

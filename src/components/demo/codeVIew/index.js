@@ -16,7 +16,7 @@ function copy(item, callbackFn) {
 export default function CodeView(props) {
   function Copied() {
     console.log('复制成功')
-    const copyNode = document.getElementById("copied");
+    const copyNode = document.getElementById(props.id);
     copyNode.classList.add(`${styles.copiedActive}`)
     copyNode.addEventListener("animationend", () => {
       copyNode.classList.remove(`${styles.copiedActive}`)
@@ -25,7 +25,7 @@ export default function CodeView(props) {
   return (
     <div className={styles.CodeViewContainer} style={props.style}>
       <h1 className={styles.CodeDescription} style={props.codeDescriptionStyle}>{props.description}</h1>
-      <div id="copied" className={styles.copied}>复制成功 ✔</div>
+      <div id={props.id} className={styles.copied}>复制成功 ✔</div>
       <pre className={props.code ? `${styles.codeContent}` : `${styles.hidden} `}>
         {props.code}
         <span onClick={() => copy(props.code, Copied)} className={props.isCopy ? `${styles.copy}` : `${styles.hidden} `}>复制</span>

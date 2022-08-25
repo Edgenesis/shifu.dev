@@ -7,18 +7,18 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    color: #FFFFFF;
+    color: var(--font-color-one);
     margin-bottom: 12px;
   }
 
   .copied {
     position: absolute;
-    top: 15px;
+    top: 10px;
     right: -50px;
     opacity: 0%;
     font-weight: 400;
     font-size: 12px;
-    color: #95ffaa;
+    color: #399bff;
     animation-duration: 1s;
     animation-iteration-count: 1;
   }
