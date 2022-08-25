@@ -59,6 +59,7 @@ const config = {
         docs: {
           remarkPlugins: [require('mdx-mermaid')],
           sidebarPath: require.resolve('./sidebars.js'),
+          // make sidebar expandable
           sidebarCollapsible: true,
           routeBasePath: '/docs',
           // Please change this to your repo.
@@ -159,7 +160,9 @@ const config = {
       },
       docs: {
         sidebar: {
-          autoCollapseCategories: true,
+          // don't collapse other category when open a new category
+          autoCollapseCategories: false,
+          // user can gain larger screen if hide the sidebar
           hideable: true,
         },
       },

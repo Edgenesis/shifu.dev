@@ -1,32 +1,26 @@
 ---
-title: 安装 Shifu
-sidebar_position: 0
+title: 本机测试安装
+sidebar_position: 1
 ---
 
-# 安装 Shifu
+# 本机测试安装
 
-## 生产安装
+## 安装 Docker Desktop
 
-***Shifu*** 提供了一键安装的方式，您可以使用如下命令将 ***Shifu*** 安装到您的集群中：
-
-```bash
-kubectl apply -f https://raw.githubusercontent.com/Edgenesis/shifu/main/k8s/crd/install/shifu_install.yml
-```
-
-## 本地测试
+请查看 [Docker 官网](https://www.docker.com) 来在自己的电脑上安装 `Docker Desktop`。
 
 ### 确认 Docker Desktop 已安装且启动
 
-使用下面的命令来确定 `Docker Desktop` 已安装且启动：
+使用下面的命令来确定 `Docker Desktop` 已安装且启动，输出如下则说明成功：
 
 ```bash
 $ sudo docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
-如果输出为 `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`，则说明 `Docker Desktop` 未启动；如果输出为 `command not found`，则说明 `Docker Desktop` 未安装。请查看 安装 Docker 部分。
+如果输出为 `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`，则说明 `Docker Desktop` 未启动；如果输出为 `command not found`，则说明 `Docker Desktop` 未安装。
 
-### 安装 kubectl
+## 安装 kubectl
 
 [安装 kubectl](https://kubernetes.io/docs/tasks/tools/)
 
@@ -42,7 +36,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 $ kubectl version --client --output=yaml
 ```
 
-### 安装kind
+## 安装kind
 
 (TODO 下面这段移动到英文版)
 
@@ -65,7 +59,7 @@ $ kind --version
 kind version 0.14.0
 ```
 
-### 创建集群
+## 创建集群
 
 我们使用 `kind` 来创建集群：
 
@@ -82,7 +76,7 @@ Creating cluster "kind" ...
 Set kubectl context to "kind-kind"
 ```
 
-#### 注：确认集群已创建
+### 注：确认集群已创建
 
 ```bash
 $ sudo kubectl cluster-info --context kind-kind
@@ -92,7 +86,7 @@ $ sudo kind get clusters
 kind
 ```
 
-#### 注：重新创建
+### 注：重新创建
 
 如出现问题，可删除集群并重新创建：
 
@@ -102,7 +96,7 @@ Deleting cluster "kind" ...
 $ sudo kind create cluster --image="kindest/node:v1.24.0"
 ```
 
-### 安装 ***Shifu***
+## 安装 ***Shifu***
 
 ***Shifu*** 的安装非常方便，`k8s/crd/install/shifu_install.yml`为安装脚本，一键安装即可：
 
@@ -113,7 +107,7 @@ cd shifu
 sudo kubectl apply -f k8s/crd/install/shifu_install.yml
 ```
 
-#### 注：提前下载镜像
+### 注：提前下载镜像
 
 `k8s/crd/install/shifu_install.yml` 中使用到的镜像有 `quay.io/brancz/kube-rbac-proxy:v0.12.0` 和 `edgehub/shifu-controller:v0.0.5`，如果下载出问题，可以提前下载镜像到本机并导入集群：
 
@@ -126,4 +120,3 @@ sudo kind load docker-image edgehub/shifu-controller:v0.0.5
 ```
 
 注：这种方法会占用本机存储。使用完毕后可以用命令`sudo docker rmi <image_id>`来删除本机镜像。
-

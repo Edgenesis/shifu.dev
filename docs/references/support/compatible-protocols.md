@@ -1,6 +1,6 @@
 ---
 title: 兼容的协议
-sidebar_position: 4
+sidebar_position: 1
 ---
 
 # 协议
