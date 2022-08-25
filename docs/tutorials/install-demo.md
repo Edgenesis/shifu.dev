@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 # 下载安装
 
 :::note
-试用 ***Shifu*** 需要您简单了解 **命令行操作**。
+体验 ***Shifu*** 需要您简单了解 **命令行操作**。
 :::
 
 :::tip
@@ -22,7 +22,7 @@ import TabItem from '@theme/TabItem';
 
 ## 安装 Docker Desktop
 
-在本地安装和试用 ***Shifu***，需要先安装 `Docker Desktop`。
+在本地安装和体验 ***Shifu***，需要先安装 `Docker Desktop`。
 
 :::info
 ***Shifu*** 使用容器技术 `Docker` 将每一个实际的物理设备 (***edgeDevice***) 转为一个数字孪生设备 (***deviceShifu***)。
@@ -36,7 +36,7 @@ import TabItem from '@theme/TabItem';
 **0. 安装 WSL**
 
 :::tip
-- 如果您在 `VMware` 中有 `Linux虚拟机`，且计划在虚拟机中试用 ***Shifu***，您可以点击上方按钮切换到 `Linux`。
+- 如果您在 `VMware` 中有 `Linux虚拟机`，且计划在虚拟机中体验 ***Shifu***，您可以点击上方按钮切换到 `Linux`。
 :::
 
 您的 `Windows` 需要是 `Windows 10` (版本2004及更高版本) 或 `Windows 11`。
@@ -128,7 +128,7 @@ sudo docker ps
 - ***Shifu*** 在运作过程中需要的所有镜像
 - ***Shifu*** 的安装脚本
 
-您不需要了解 ***Shifu*** 的运作细节，通过 ***Shifu*** 安装包 即可很方便的试用 ***Shifu***。
+您不需要了解 ***Shifu*** 的运作细节，通过 ***Shifu*** 安装包 即可很方便的体验 ***Shifu***。
 
 如果您希望手动创建集群、导入镜像、安装 ***Shifu***，请查看 [本机测试安装](guides/install-shifu-dev.md)。
 :::
@@ -163,4 +163,4 @@ sudo kubectl get pods -A
 
 ## 下一步
 
-恭喜您已经在电脑上安装了 ***Shifu***，下一步可以 [试用 ***Shifu***](./try-demo.md) 了！
+恭喜您已经在电脑上安装了 ***Shifu***，下一步可以 [体验 ***Shifu***](./try-demo.md) 了！

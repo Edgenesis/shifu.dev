@@ -1,11 +1,11 @@
 ---
-title: "相关资料"
-sidebar_position: 3
+title: "用户案例"
+sidebar_position: 2
 ---
 
-#  ***Shifu*** 相关资料
+# 用户案例
 
-## 工程类资料
+## 工程类
 
 ### 设备接入类
 
@@ -18,7 +18,7 @@ sidebar_position: 3
 2. :dancers: [使用EMQX与 ***Shifu*** 实现设备联动](https://mp.weixin.qq.com/s/OksAvQ4i2Sg9qKFTBsfQjw)
 3. :video_camera: [使用 ***Shifu*** 在OpenYurt集群中接入RTSP协议摄像头](https://mp.weixin.qq.com/s/InSWgAQwUK1B3XVyj1Wa8Q)
 
-## 案例类资料
+## 案例类
 
 ### 成功案例类
 

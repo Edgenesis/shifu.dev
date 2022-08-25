@@ -1,18 +1,24 @@
 ---
-title: 试用 Shifu
+title: 体验试用
 sidebar_position: 1
 ---
 
-# 试用 ***Shifu***
+# 体验 ***Shifu***
 
 :::tip
-您在试用 ***Shifu*** 的过程中有任何问题，都可以 [联系我们获得支持](resources/support.md)。
+您在体验 ***Shifu*** 的过程中有任何问题，都可以 [联系我们获得支持](resources/support.md)。
 :::
 
 ***Shifu*** 安装包 中准备了五个设备(`AGV`，`温度计`，`酶标仪`，`PLC`，`机械臂`）供您进行试玩，体验 ***Shifu*** 的能力。
 
 :::note
-在安装 ***Shifu*** 安装包 时，我们创建了五个虚拟设备，并连接到您的电脑上。这五个设备与实际的物理设备是等价的。
+物联网设备是指可以与其他设备、系统、服务进行本地或在线地连接和交流的设备，例如：
+
+- 一个制造厂里的机械臂，它可以接收来自本地的自动化控制系统传来的命令并完成相应的动作。
+- 一辆自动导引车，操纵者可对其进行远程控制。
+- 一辆汽车上的温度计，它向车载空调发出命令使其升温或降温，并上传实时温度数据到云端。
+
+在安装 ***Shifu*** 安装包 时，我们创建了五个虚拟设备，并连接到您的电脑上。这五个设备与实际的物联网设备是等价的。
 :::
 
 ## 准备
@@ -29,7 +35,7 @@ sudo kubectl get pods -A | grep nginx
 ![nginx pod running](images/nginxPodStatus.png)
 
 :::note
-在实际的情况中，物联网设备的用户使用手机应用或者监控平台与数字孪生 ***deviceShifu*** 交互。这里 `nginx` 相当于一个手机应用或一个监控平台。
+在实际的情况中，物联网设备的用户使用应用程序或者监控平台与数字孪生 ***deviceShifu*** 交互。这里 `nginx` 相当于一个应用程序或者一个监控平台。
 :::
 
 ## 1. 与AGV交互
@@ -57,6 +63,10 @@ sudo kubectl get pods -A | grep agv
 ```
 
 ![deviceshifu-agv_start.png](images/deviceshifu-agv_start.png)
+
+:::caution正在施工
+和install-demo里面的图一致
+:::
 
 ### 与数字孪生交互
 
@@ -101,6 +111,10 @@ sudo kubectl get pods -A | grep thermometer
 ```
 
 ![deviceshifu-thermometer pod_start.png](images/deviceshifu-thermometer_pod_start.png)
+
+:::caution正在施工
+加图 多一个连接的设备
+:::
 
 ### 与数字孪生交互
 
@@ -161,6 +175,10 @@ sudo kubectl get pods -A | grep plate
 ```
 ![deviceshifu-plate_pods_start.png](images/deviceshifu-plate-reader_pod_start.png)
 
+:::caution正在施工
+加图 多一个连接的设备
+:::
+
 ### 与数字孪生交互
 
 我们需要先进入 `nginx`:
@@ -207,6 +225,10 @@ sudo kubectl get pods -A | grep plc
 
 ![deviceshifu-plc_pods_start](images/deviceshifu-plc_pods_start.png)
 
+:::caution正在施工
+加图 多一个连接的设备
+:::
+
 ### 与数字孪生交互
 
 我们需要先进入 `nginx`：
@@ -246,6 +268,10 @@ curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&
 </details>
 
 ### 创建数字孪生
+
+:::caution正在施工
+加图 多一个连接的设备
+:::
 
 首先，我们创建一个机械臂的数字孪生：
 
@@ -303,7 +329,7 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 
 ## 下一步
 
-恭喜！！！:rocket: :rocket: :rocket: 您已经完成了 ***Shifu*** 的试用，接下来：
+恭喜！！！:rocket: :rocket: :rocket: 您已经完成了 ***Shifu*** 的体验，接下来：
 
 - 您可以查看左侧边栏中的
     - **使用指南**：更详细的 ***Shifu*** 使用教程。
@@ -316,7 +342,7 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 
 ## 删除集群（可选）
 
-在上述的试用过程中，***Shifu*** 安装包 在您的电脑上创建了一个集群，并在这个集群中安装了 ***Shifu***。如果您不希望该集群持续运行，可以执行下面的命令来删除这个集群：
+在上述的体验过程中，***Shifu*** 安装包 在您的电脑上创建了一个集群，并在这个集群中安装了 ***Shifu***。如果您不希望该集群持续运行，可以执行下面的命令来删除这个集群：
 
 ```bash
 sudo kind delete cluster

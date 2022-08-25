@@ -1,6 +1,6 @@
 {
-  "label": "快速上手",
-  "position": 2000,
+  "label": "产品介绍",
+  "position": 1000,
   "link": {
     "type": "doc",
     "id": "README"
