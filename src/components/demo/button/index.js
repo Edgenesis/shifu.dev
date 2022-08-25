@@ -17,7 +17,7 @@ export function ButtonSquare(props) {
       colorLevel = "squareOne"
   }
   return (
-    <a className={`${styles.buttonContainer} ${styles[colorLevel]} ${styles.square}`} href={props.href} target={props.target} onClick={props.onClick} style={props.style}>
+    <a className={`${styles.buttonContainer} ${styles[colorLevel]} ${styles.square}`} href={props.href} target={props.target} onClick={() => props.onClick()} style={props.style}>
       <div className={styles.buttonLeft}>{props.left}</div>
       <p className={styles.buttonContent} style={props.contentStyle}>{props.content}</p>
       <div className={styles.buttonRight}>{props.right}</div>
