@@ -16,19 +16,19 @@ sidebar_position: 0
 1. 应用开发
 1. 系统运维
 
-## [设备接入](concepts/basic-features/device-connection.md)
+## [设备接入](./device-connection.md)
 
 ***Shifu*** 先进的微服务架构赋予了 ***Shifu*** 无与伦比的扩展性，也使得 ***Shifu*** 可以非常快速地接入新设备。
 
-## [设备管理](concepts/basic-features/device-management.md)
+## [设备管理](./device-management.md)
 
 ***Shifu***自带了设备管理框架，可以便捷地实现查看设备的运行状态、更新设备驱动、进行安全配置等操作。
 
-## [数据采集](concepts/basic-features/device-data-collection.md)
+## [数据采集](./device-data-collection.md)
 
 在 ***Shifu*** 中，你可以轻而易举的实现自动化数据采集。
 
-## [设备控制](concepts/basic-features/device-control.md)
+## [设备控制](./device-control.md)
 
 在 ***Shifu*** 中，你可以结合数据采集实现自动化设备控制。
 

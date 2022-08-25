@@ -13,11 +13,11 @@ import TabItem from '@theme/TabItem';
 :::
 
 :::tip
-如果您希望在生产环境安装 ***Shifu***，请查看 [生产环境安装](../guides/install-shifu-prod.md)。
+如果您希望在生产环境安装 ***Shifu***，请查看 [生产环境安装](guides/install-shifu-prod.md)。
 :::
 
 :::tip
-您在下载安装 ***Shifu*** 的过程中有任何问题，都可以 [联系我们获得支持](../resources/support.md)。
+您在下载安装 ***Shifu*** 的过程中有任何问题，都可以 [联系我们获得支持](resources/support.md)。
 :::
 
 ## 安装 Docker Desktop
@@ -130,7 +130,7 @@ sudo docker ps
 
 您不需要了解 ***Shifu*** 的运作细节，通过 ***Shifu*** 安装包 即可很方便的试用 ***Shifu***。
 
-如果您希望手动创建集群、导入镜像、安装 ***Shifu***，请查看 [本机测试安装](../guides/install-shifu-dev.md)。
+如果您希望手动创建集群、导入镜像、安装 ***Shifu***，请查看 [本机测试安装](guides/install-shifu-dev.md)。
 :::
 
 ### 确认 ***Shifu*** 已启动

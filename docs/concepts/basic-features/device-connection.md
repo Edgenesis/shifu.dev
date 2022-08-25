@@ -26,7 +26,7 @@ protocolSettings:
 - `connection`：表示设备的网络连接方式。
 - `address`：表示设备的网络地址。
 - `protocol`：表示与设备进行交互的通信协议。
-- `protocolSettings`：表示对协议进行的下一步设置，对于[不同的协议](guides/compatible-protocols.md)需要[引入不同的`Setting`](references/api/edgedevice.md#protocolsettings)。
+- `protocolSettings`：表示对协议进行的下一步设置，对于[不同的协议](references/support/compatible-protocols.md)需要[引入不同的`Setting`](references/api/edgedevice.md#protocolsettings)。
 
 ### 2. 创建 ***deviceshifu***
 

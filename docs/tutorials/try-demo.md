@@ -6,7 +6,7 @@ sidebar_position: 1
 # 试用 ***Shifu***
 
 :::tip
-您在试用 ***Shifu*** 的过程中有任何问题，都可以 [联系我们获得支持](../resources/support.md)。
+您在试用 ***Shifu*** 的过程中有任何问题，都可以 [联系我们获得支持](resources/support.md)。
 :::
 
 ***Shifu*** 安装包 中准备了五个设备(`AGV`，`温度计`，`酶标仪`，`PLC`，`机械臂`）供您进行试玩，体验 ***Shifu*** 的能力。
@@ -312,7 +312,7 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
     - **参考手册**：***Shifu*** 的 API参考 和 协议支持情况。
     - **更多资源**：常见问题、获取支持等内容。
 - ***Shifu*** 已经开源，如果您有兴趣，可以访问 ***Shifu*** 的 [GitHub仓库](https://github.com/Edgenesis/shifu)。
-- [联系我们以获取技术支持](../resources/support.md)。
+- [联系我们以获取技术支持](resources/support.md)。
 
 ## 删除集群（可选）
 

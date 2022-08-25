@@ -4,24 +4,25 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
 ## Usage
 
-### Installation
+### Development
 
-```
-$ yarn
-```
+```sh
+$ yarn # install packages
 
-### Local Development
-
-```
-$ yarn start
+$ yarn start # zh-Hans SPA
+$ yarn start --locale en # en SPA
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 ### Build
 
-```
-$ yarn build
+```sh
+$ yarn build # zh-Hans and en
+
+# build SPA of a specific language
+$ yarn build --locale zh-Hans
+$ yarn build --locale en
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
@@ -30,13 +31,13 @@ This command generates static content into the `build` directory and can be serv
 
 Using SSH:
 
-```
+```sh
 $ USE_SSH=true yarn deploy
 ```
 
 Not using SSH:
 
-```
+```sh
 $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
