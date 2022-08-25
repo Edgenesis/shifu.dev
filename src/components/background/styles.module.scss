@@ -1,5 +1,5 @@
 .snowBg {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: var(--background-color);
   overflow: hidden;
@@ -7,7 +7,7 @@
 
   .footer {
     position: absolute;
-    bottom: 0px;
+    top: 95vh;
     width: 100%;
     height: 60px;
     background: var(--first-part-footer)

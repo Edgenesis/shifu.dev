@@ -1,20 +1,9 @@
 .demoFooterContainer {
   z-index: 10;
   width: 100%;
-  min-height: 153px;
+  min-height: 96px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  .demoFooterContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 24px;
-  }
-
-  .demoFooterGithub {
-    margin-left: 42px;
-  }
 }

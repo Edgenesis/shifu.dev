@@ -27,6 +27,7 @@
   --logo-green: #9bc848;
   --font-color-one: #000;
   --font-color-two: #515151;
+  --font-color-three: #ffffff;
   --sponsor-color-invert: invert(0%);
   --btn-yellow: #e4b248;
   --background-color: #fbfdff;
@@ -52,6 +53,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --font-color-one: #fff;
   --font-color-two: #fff;
+  --font-color-three: #000;
   --sponsor-color-invert: invert(100%);
   --background-color: #34353a;
   --card-background-color: #313136;

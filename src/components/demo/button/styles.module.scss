@@ -17,7 +17,6 @@
   transition: all 0.5s;
   font-weight: 500;
   font-size: 16px;
-  line-height: 26px;
   text-align: center;
   color: #FFFFFF;
 
@@ -56,15 +55,6 @@
   &:active {
     background: #0E3A6A;
   }
-}
-
-.transparent {
-  justify-content: right;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  text-align: center;
-  color: #666666;
 }
 
 .buttonLeft,

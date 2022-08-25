@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 24px 0px;
 
   .buttonsContainer {
     height: 224px;
@@ -14,11 +15,10 @@
 
 .titleOne {
   text-align: center;
-  color: #FFFFFF;
+  color: var(--font-color-one);
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
-  margin-bottom: 24px;
-  margin-top: 48px;
+  margin: 24px 0px;
 }

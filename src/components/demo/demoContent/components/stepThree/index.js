@@ -13,8 +13,16 @@ const codeViewStyle = {
 
 const codeViewDescriptionStyle = {
   marginBottom: "6px",
-  color: "#000000",
+  color: "#fff",
   fontSize: "12px"
+}
+
+const buttonContentStyle = {
+  fontSize: "12px",
+}
+
+const buttonStyle = {
+  height: "60px"
 }
 
 const codeList = [
@@ -37,10 +45,10 @@ const codeList = [
   {
     id: 3,
     description: "3.如果出现以下结果，表示启动成功",
-    code: 
-`NAME  READY  STATUS  RESTARTS  AGE 
+    code:
+      `NAME  READY  STATUS  RESTARTS  AGE 
 nginx   1/1   Running    0     34s`,
-    isCopy: true,
+    isCopy: false,
     style: codeViewStyle,
     codeDescriptionStyle: codeViewDescriptionStyle
   },
@@ -49,52 +57,87 @@ nginx   1/1   Running    0     34s`,
 const btnList = [
   {
     colorLevel: 'three',
-    content: `案例一
-与AGV的数字孪生交互`,
+    content: <div><p>案例一</p><p>与AGV的数字孪生交互</p></div>,
+    style: buttonStyle,
+    contentStyle: buttonContentStyle,
+    url: "https://shifu.run/docs/quickstart/quick_demo#1-%E4%B8%8Eagv%E7%9A%84%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F%E4%BA%A4%E4%BA%92"
   },
   {
     colorLevel: 'three',
-    content: `案例二
-与温度计的数字孪生交互`,
+    content: <div><p>案例二</p><p>与温度计的数字孪生交互</p></div>,
+    style: buttonStyle,
+    contentStyle: buttonContentStyle,
+    url: "https://shifu.run/docs/quickstart/quick_demo#2-%E4%B8%8E%E6%B8%A9%E5%BA%A6%E8%AE%A1%E7%9A%84%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F%E4%BA%A4%E4%BA%92"
   },
   {
     colorLevel: 'three',
-    content: `案例三
-与酶标仪的数字孪生交互`,
+    content: <div><p>案例三</p><p>与酶标仪的数字孪生交互</p></div>,
+    style: buttonStyle,
+    contentStyle: buttonContentStyle,
+    url: "https://shifu.run/docs/quickstart/quick_demo#3-%E4%B8%8E%E9%85%B6%E6%A0%87%E4%BB%AA%E7%9A%84%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F%E4%BA%A4%E4%BA%92"
   },
   {
     colorLevel: 'three',
-    content: `案例四
-与PLC的数字孪生交互`,
+    content: <div><p>案例四</p><p>与PLC的数字孪生交互</p></div>,
+    style: buttonStyle,
+    contentStyle: buttonContentStyle,
+    url: "https://shifu.run/docs/quickstart/quick_demo#4-%E4%B8%8Eplc%E7%9A%84%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F%E4%BA%A4%E4%BA%92"
   },
   {
     colorLevel: 'three',
-    content: `案例五
-与机械臂的数字孪生交互`,
+    content: <div><p>案例五</p><p>与机械臂的数字孪生交互</p></div>,
+    style: buttonStyle,
+    contentStyle: buttonContentStyle,
+    url: "https://shifu.run/docs/quickstart/quick_demo#5-%E4%B8%8E%E6%9C%BA%E6%A2%B0%E8%87%82%E7%9A%84%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F%E4%BA%A4%E4%BA%92"
   },
 ]
 
-function StepThree() {
-  const codes = codeList.map((item) => {
-    return <CodeView key={item.id} {...item}></CodeView>
-  })
-  const buttons = btnList.map((item) => {
-    return <ButtonSquare key={item.content} {...item}></ButtonSquare>
-  })
-  return (
-    <div className={styles.stepThree}>
-      <div className={styles.buttonsContainer}>
-        {buttons}
-      </div>
-      <div className={styles.guideContainer}>
-        <h1 className={styles.guideTitle}>确认是否启动Nginx</h1>
-        {codes}
-        <div className={styles.enterGameBtn}>
-          <ButtonSquare colorLevel="two" content="进入试玩"></ButtonSquare>
+class StepThree extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      gameUrl: "",
+      isShowGuide: false,
+    }
+  }
+  setGameUrl(url) {
+    this.setState({
+      gameUrl: url
+    })
+  }
+  activeGuide() {
+    this.setState({
+      isShowGuide: true
+    })
+  }
+  render() {
+    const codes = codeList.map((item) => {
+      return <CodeView key={item.id} {...item}></CodeView>
+    })
+    const buttons = btnList.map((item, index) => {
+      //add function for click one and send its url to the state
+      const that = this
+      item.onClick = function () {
+        that.setGameUrl(item.url);
+        that.activeGuide()
+      }
+      return <ButtonSquare key={index} {...item}></ButtonSquare>
+    })
+    return (
+      <div className={this.state.isShowGuide ? `${styles.stepThree} ${styles.active}` : `${styles.stepThree}`}>
+        <div className={styles.buttonsContainer}>
+          {buttons}
+        </div>
+        <div className={styles.guideContainer}>
+          <h1 className={styles.guideTitle}>确认是否启动Nginx</h1>
+          {codes}
+          <div className={styles.enterGameBtn}>
+            <ButtonSquare colorLevel="one" content="进入试玩" target="_blank" href={this.state.gameUrl}></ButtonSquare>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default StepThree
