@@ -5,8 +5,6 @@ sidebar_position: 1
 
 # 设备接入
 
-如果您未运行过`极速试玩`，建议您先行[体验](tutorials/try-demo.md)。
-
 ## 如何修改设备接入的配置
 
 ### 1. 编辑`edgedevice.yaml`文件
@@ -26,7 +24,7 @@ protocolSettings:
 - `connection`：表示设备的网络连接方式。
 - `address`：表示设备的网络地址。
 - `protocol`：表示与设备进行交互的通信协议。
-- `protocolSettings`：表示对协议进行的下一步设置，对于[不同的协议](references/support/compatible-protocols.md)需要[引入不同的`Setting`](references/api/edgedevice.md#protocolsettings)。
+- `protocolSettings`：表示对协议进行的下一步设置，对于不同的协议需要引入[不同的`Setting`](references/api/edgedevice.md#protocolsettings)。
 
 ### 2. 创建 ***deviceshifu***
 

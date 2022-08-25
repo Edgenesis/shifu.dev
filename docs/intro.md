@@ -1,5 +1,6 @@
 ---
 id: intro
+slug: /
 sidebar_position: 0
 title: 欢迎使用
 ---

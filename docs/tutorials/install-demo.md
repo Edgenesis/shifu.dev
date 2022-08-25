@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 :::
 
 :::tip
-您在下载安装 ***Shifu*** 的过程中有任何问题，都可以 [联系我们获得支持](resources/support.md)。
+您在下载安装 ***Shifu*** 的过程中有任何问题，都可以 [联系我们获得支持](community/join.md)。
 :::
 
 ## 安装 Docker Desktop
