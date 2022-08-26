@@ -31,7 +31,7 @@ const stepOneCodeList = [
   {
     id: 1,
     description: "2.1在Linux/Windows/Mac的命令行中执行以下命令",
-    code: "curl -LO https://demo.shifu.run/demo-content/shifu_demo_aio_linux_arm64.tar ",
+    code: "sudo docker ps ",
     isCopy: true
   },
   {

@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import SnowBg from "../../components/background";
 import DemoHeader from "../../components/demo/demoHeader";
 import DemoContent from "../../components/demo/demoContent";
 import DemoFooter from "../../components/demo/demoFooter";
@@ -46,7 +45,6 @@ class Demo extends React.Component {
   render() {
     return (
       <Layout title="Shifu Demo" description="Hello Shifu">
-        <SnowBg>
           <div className={styles.demoContainer} onClick={() => this.closeServiceModel()}>
             <DemoHeader stepIndex={this.state.stepIndex}></DemoHeader>
             <DemoContent stepIndex={this.state.stepIndex} goBack={this.stepBackward}></DemoContent>
@@ -57,7 +55,6 @@ class Demo extends React.Component {
             </div>
           </div>
           <ServiceModel showServiceModel={this.state.showServiceModel}></ServiceModel>
-        </SnowBg>
       </Layout>
     );
   }

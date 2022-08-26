@@ -7,13 +7,13 @@ const codeListOne = [
   {
     id: 1,
     description: "1.2下载 Shifu 安装包",
-    code: "curl -LO https://demo.shifu.run/demo-content/shifu_demo_aio_linux_arm64.tar",
+    code: "",
     isCopy: true
   },
   {
     id: 2,
     description: "1.3将所下载的安装包解压到testdir文件夹中",
-    code: `mkdir testdir && tar -xvf shifu_demo_aio_linux_arm64.tar -C testdir && cd testdir `,
+    code: "",
     isCopy: true,
   },
   {
@@ -117,8 +117,13 @@ class StepTwo extends React.Component {
   }
   render() {
     const codeViewOne = codeListOne.map((item) => {
-      if (item.id === 1) {
-        item.code = this.state.shifuUrl
+      switch (item.id) {
+        case 1:
+          item.code = `curl -LO https://demo.shifu.run/demo-content/${this.state.shifuUrl}`
+          break;
+        case 2:
+          item.code = `mkdir testdir && tar -xvf $${this.state.shifuUrl} -C testdir && cd testdir`
+          break;
       }
       return <CodeView key={item.id} {...item}></CodeView>
     })
