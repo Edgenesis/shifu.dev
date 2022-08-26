@@ -54,17 +54,6 @@ shifu-crd-system    shifu-crd-controller-manager-94c8c779d-czvkx   2/2        Ru
 
 const optionsOne = [
   {
-    value: "AMD64",
-    id: 1,
-  },
-  {
-    value: "ARM",
-    id: 2,
-  },
-]
-
-const optionsTwo = [
-  {
     value: "Linux",
     id: 1,
   },
@@ -78,27 +67,39 @@ const optionsTwo = [
   },
 ]
 
-const shifuUrlList = {
-  AMD64: {
-    Linux: "shifu_demo_aio_linux_amd64.tar", //Linux and x86/64
-    WSL: "shifu_demo_aio_linux_amd64.tar", //WSL and x86/64
-    MacOS: "shifu_demo_aio_darwin_amd64.tar", //MacOS and x86/64
+const optionsTwo = [
+  {
+    value: "AMD64",
+    id: 1,
   },
-  ARM: {
-    Linux: "shifu_demo_aio_linux_arm64.tar", //Linux and ARM
-    WSL: "shifu_demo_aio_linux_arm64.tar", //WSL and ARM
-    MacOS: "shifu_demo_aio_darwin_arm64.tar", //MacOS and ARM
+  {
+    value: "ARM",
+    id: 2,
+  },
+]
+
+const shifuUrlList = {
+  Linux: {
+    AMD64: "shifu_demo_aio_linux_amd64.tar", //Linux and x86/64
+    ARM: "shifu_demo_aio_linux_arm64.tar", //Linux and ARM
+  },
+  WSL: {
+    AMD64: "shifu_demo_aio_linux_amd64.tar", //WSL and x86/64
+    ARM: "shifu_demo_aio_linux_arm64.tar", //WSL and ARM
+  },
+  MacOS: {
+    AMD64: "shifu_demo_aio_darwin_amd64.tar", //MacOS and x86/64
+    ARM: "shifu_demo_aio_darwin_arm64.tar", //MacOS and ARM
   }
 }
-
 
 class StepTwo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       shifuUrl: "",
-      OSModel: "AMD64",
-      CPUModel: "Linux"
+      OSModel: "Linux",
+      CPUModel: "AMD64"
     }
     this.getCPUModel = this.getCPUModel.bind(this)
     this.getOSModel = this.getOSModel.bind(this)
