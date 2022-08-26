@@ -2,50 +2,37 @@
 id: intro
 slug: /
 sidebar_position: 0
-title: "Profile"
+title: Welcome
 ---
 
-# Welcome to ***Shifu***
+# Welcome to Use ***Shifu***
 
-***Shifu*** ([GitHub repository](https://github.com/Edgenesis/shifu)) is an open source platform for IoT development and management based on [Kubernetes](https://kubernetes.io/). By using ***Shifu***, developers can connect, monitor and control any IoT device more easily.
+<!-- ## 视频介绍
 
-## IoT Devices
+<video width="100%" controls>
+    <source src="https://bianwuji.com/stuff/videos/productintro.mp4" type="video/mp4"></source>
+</video> -->
 
-An IoT device is a device that can connect and interact with other devices, systems, and applications offline or online, for instance:
+## Introduction
 
-- A robotic arm in a manufacturing plant that can receive commands from a local automated control system and complete the corresponding moves.
-- An automated guided vehicle that can be remotely controlled by its operator.
-- A thermometer in a car that can send commands to the on-board air conditioner to raise or lower its temperature, and can upload real-time temperature data to the cloud.
+***Shifu*** 为用户提供全场景设备托管与一体化软件开发的透明框架。开发者通过使用 ***Shifu***，可以更简单地连接、监视和控制任何物联网设备。 
 
-## Interaction
+***Shifu*** 的创新优势是通过透明框架内的数字孪生技术，为设备赋予有思考能力的 “数字大脑”。数字孪生将反映设备的实时状态，对其进行开发操作等同于操作设备本身。物联网设备接入到 ***Shifu*** 中便会生成标准化接口，实现互联网互动，通过平台层对场景内所有设备、机器进行北向数据收集和南向指令管控。 
 
-The relationship between ***Shifu*** and applications and devices can be represented by the following diagram:
+***Shifu*** 提供了桥接式设备互联解决方案，微服务架构令设备能力模块可调用，可复用，目标是实现通过配置文件轻松接入各种异构设备。目前，***Shifu*** 已经实现通过 `HTTP`、`MQTT`、`TCP Socket`、`RTSP`、`OPC UA`、`ONVIF`、`gRPC` 等协议接入物联网设备，同时已将 `西门子S7`、`海康威视 (HIKVISION)` 等通过私有协议通讯的设备进行了集成。 
 
-```mermaid
-flowchart LR;
- APP<-->|HTTP/gRPC|Shifu;
-  Shifu<-->|IoT Protocols/drivers|Devices;
-```
+作为云原生框架，***Shifu*** 通过 `Kubernetes` 的 `CRD功能` 延伸了 `Kubernetes` 的资源，来实现高可用、静态域名、服务管理等功能，***Shifu*** 可以支持对任何设备进行任何形式的配置。当连接物理设备时，***Shifu*** 会识别并以一个 `Kubernetes Pod` 的方式启动该设备的数字孪生 ***deviceShifu***。开发者通过接入 ***deviceShifu*** 的接口，可以获取物联网设备的所有功能，同时编程定义设备原本不具备的功能。 
 
-### Interaction between ***Shifu*** and devices
+云原生的 ***Shifu*** 将系统运维的难度大大降低，应用开发者可以通过一套 `Kubernetes` 基础架构进行运维管理。***Shifu*** 将推动 `Kubernetes` 成为物联网开发的底层架构标准，将容器编排技术带入物联网软件开发生态中。 
 
-***Shifu*** is compatible with different [communication protocols](protocol-driver-compatibility/protocols.md) and [drivers](protocol-driver-compatibility/drivers.md) all at once, and it unifies different forms of requests from different devices, making it easier to use the devices. Simultaneosly, the number of protocols and drivers compatible with ***Shifu*** is increasing.
+## Contents
 
-### Interaction between ***Shifu*** and applications
+Check contents at the left sidebar:
 
-***Shifu*** can interact with applications developed via `HTTP` protocol (gRPC protocol not yet supported). With ***Shifu***, developing IoT scenarios is as easy as developing software. In other words, the control and information reading of devices are hosted by ***Shifu*** and exposed as a unified type of interface, so that interaction between multiple devices can be achieved by using the same type of APIs.
-
-## Features
-
-***Shifu***, as a framework for developing and managing IoT devices, features the following functions：
-
-- [***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md)
-  - Get data from devices
-  - Send commands to the devices
-  - Various application development tools (finite state machine, etc.)
-- [***shifud***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud.md)
-  - Device discovery
-  - Device verification
-  - Device update
-- [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController.md)
-  - Managing the ***deviceShifu*** lifecycle
+- [**Product Introduction**](./introduction/): Learn about the architecture, functions, using cases of ***Shifu***. And check ***Shifu***'s support for different protocols.
+- [**Get Started**](./tutorials/): Install ***Shifu*** in your computer to try it out.
+- [**How-to Guides**](./guides/): Detailed guides for using ***Shifu***.
+- [**Reference Book**](./references/)
+    - ***Shifu*** architecture and functions.
+    - ***Shifu*** API reference.
+- [**Open Source Community**](./community/): View common problems, get support, and join the open source community.

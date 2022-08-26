@@ -74,9 +74,9 @@ Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
 - Translate docs
     - Translate docs in `i18n/en/docusaurus-plugin-content-docs/current`.
 - Translate plugin data
-    - Run `yarn run write-translations -- --locale en` to generate json files for translating.
+    - Run `yarn run write-translations --locale en` to generate json files for translating.
     - Translate
         - sidebar items: `i18n/en/docusaurus-plugin-content-docs/current/current.json`
         - navbar and footer items: `i18n/en/docusaurus-theme-classic/*.json`
 - Check translation
-    - Run `yarn start -- --locale en` to start website in `en` for local development. (Each locale is a distinct standalone single-page application: it is not possible to start the Docusaurus sites in all locales at the same time.)
+    - Run `yarn start --locale en` to start website in `en` for local development. (Each locale is a distinct standalone single-page application: it is not possible to start the Docusaurus sites in all locales at the same time.)

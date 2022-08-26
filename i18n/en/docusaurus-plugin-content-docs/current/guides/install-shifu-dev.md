@@ -1,11 +1,11 @@
 ---
-title: 本机测试安装
+title: Development Installation
 sidebar_position: 1
 ---
 
-# 本机测试安装
+# Development Installation
 
-## 安装 Docker Desktop
+## Install Docker Desktop
 
 请查看 [Docker 官网](https://www.docker.com) 来在自己的电脑上安装 `Docker Desktop`。
 
@@ -26,6 +26,12 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
 > `kubectl` 是 `Kubernetes` 的命令行工具，帮助你在 `Kubernetes集群` 中执行命令。你可以用 `kubectl` 来部署应用、查看和管理集群资源、查看日志。
 
+:::caution Work in Progress
+（英文版）
+
+> The `Kubernetes` command-line tool, `kubectl`, allows you to run commands against Kubernetes clusters. You can use `kubectl` to deploy applications, inspect and manage cluster resources, and view logs.
+:::
+
 确认 `kubectl` 已安装：
 
 ```bash
@@ -33,6 +39,12 @@ $ kubectl version --client --output=yaml
 ```
 
 ## 安装kind
+
+:::caution Work in Progress
+（英文版）
+
+> `kind` lets you run Kubernetes on your local computer.
+:::
 
 > `kind` 可以让我们在本机创建 `Kubernetes集群` 用于测试。
 
