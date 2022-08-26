@@ -1,5 +1,5 @@
 ---
-title: 功能要点
+title: 功能特点
 sidebar_position: 1
 ---
 
@@ -29,7 +29,7 @@ sidebar_position: 1
 
 ### 5. 应用开发
 
-在 ***Shifu*** 中，每一个设备都会生成与其相对应的数字孪生（[***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)）。开发者只需调用 ***deviceShifu*** 所暴露出来的API，即可以无比便捷地使用设备的能力。
+在 ***Shifu*** 中，每一个设备都会生成与其相对应的数字孪生 ***deviceShifu***。开发者只需调用 ***deviceShifu*** 所暴露出来的API，即可以无比便捷地使用设备的能力。
 
 ```bash
 curl http://robot-arm/grip/
@@ -50,13 +50,13 @@ curl http://robot-arm/grip/
 
 ***Shifu*** 作为一个对物联网设备进行开发和管理的框架，以组件提供以下功能：
 
-- [***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)
+- ***deviceShifu***
   - 从设备获取数据
   - 向设备发送指令
   - 各种应用开发工具(有限状态机等）
-- [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController-zh.md)
+- ***shifuController***
   - 管理 ***deviceShifu*** 的生命周期
-- [***shifud***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud-zh.md)
+- ***shifud***
   - 设备发现
   - 设备验证
   - 设备更新

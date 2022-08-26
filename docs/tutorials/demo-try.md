@@ -329,10 +329,10 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 
 - 您可以查看左侧边栏中的
     - **使用指南**：更详细的 ***Shifu*** 使用教程。
-    - **概念解释**：***Shifu*** 相关的架构、功能解释。
-    - **实际案例**：在真实场景中使用 ***Shifu*** 的案例。
-    - **参考手册**：***Shifu*** 的 API参考 和 协议支持情况。
-    - **更多资源**：常见问题、获取支持等内容。
+    - **参考手册**
+        - ***Shifu*** 架构、功能解释。
+        - ***Shifu*** API参考。
+    - **开源社区**：查看常见问题、获取支持、获取加入开源社区等内容。
 - ***Shifu*** 已经开源，如果您有兴趣，可以访问 ***Shifu*** 的 [GitHub仓库](https://github.com/Edgenesis/shifu)。
 - [联系我们以获取技术支持](community/join.md)。
 
@@ -344,10 +344,17 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 sudo kind delete cluster
 ```
 
-:::caution正在施工
-这里需要引导用户删除不使用的镜像
+Docker 中的镜像也可以进行删除。使用命令 `sudo docker images` 查看所有镜像。你可以使用命令 `sudo docker rmi <image_id>` 来删除不会再用到的镜像。
+
+:::info
+使用到的镜像解释：
+
+- `kindest/node` 用于创建本地集群
+- `edgehub/deviceshifu-http-xxxx` 在此基础上生成一个 ***deviceShifu***
+- `edgehub/mockdevice-xxx` 虚拟设备
+- `edgehub/shifu-controller-telemetry-plugin` ***Shifu*** 插件
+- `edgehub/shifu-controller` `edgehub/edgedevice-controller-multi` ***Shifu*** 控制器
+- `nginx` 用于与设备交互
 :::
 
-:::caution正在施工
-这里需要引导用户删除下载的600多MB的包
-:::
+删除下载的 ***Shifu*** 安装包 `shifu_demo_aio_xxx_xxx.tar` 和文件夹 `testdir`。

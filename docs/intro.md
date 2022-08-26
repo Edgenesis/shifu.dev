@@ -7,17 +7,10 @@ title: 欢迎使用
 
 # 欢迎使用 ***Shifu***
 
-:::caution正在施工
-- shifu简介（开源稿）
-- 放视频https://bianwuji.com/stuff/videos/productintro.mp4
-- 添加左侧边栏各项的介绍
-:::
-
 ## 视频介绍
 
 <video width="100%" controls>
-    <source src="https://bianwuji.com/stuff/videos/productintro.mp4" type="video/mp4">
-    </source>
+    <source src="https://bianwuji.com/stuff/videos/productintro.mp4" type="video/mp4"></source>
 </video>
 
 ## 简介
@@ -28,6 +21,12 @@ title: 欢迎使用
 
 ***Shifu*** 提供了桥接式设备互联解决方案，微服务架构令设备能力模块可调用，可复用，目标是实现通过配置文件轻松接入各种异构设备。目前，***Shifu*** 已经实现通过 `HTTP`、`MQTT`、`TCP Socket`、`RTSP`、`OPC UA`、`ONVIF`、`gRPC` 等协议接入物联网设备，同时已将 `西门子S7`、`海康威视 (HIKVISION)` 等通过私有协议通讯的设备进行了集成。 
 
-作为云原生框架，Shifu通过Kubernetes的CRD功能延伸了K8s的资源，来实现高可用，静态域名，服务管理等功能，shifu可以支持对任何设备进行任何形式的配置。当连接物理设备时，Shifu会识别并以一个k8s Pod的方式启动该设备的数字孪生 deviceShifu。开发者通过接入 deviceShifu 的接口，可以获取物联网设备的所有功能，同时编程定义设备原本不具备的功能。 
+作为云原生框架，***Shifu*** 通过 `Kubernetes` 的 `CRD功能` 延伸了 `Kubernetes` 的资源，来实现高可用、静态域名、服务管理等功能，***Shifu*** 可以支持对任何设备进行任何形式的配置。当连接物理设备时，***Shifu*** 会识别并以一个 `Kubernetes Pod` 的方式启动该设备的数字孪生 ***deviceShifu***。开发者通过接入 ***deviceShifu*** 的接口，可以获取物联网设备的所有功能，同时编程定义设备原本不具备的功能。 
 
-云原生的Shifu将系统运维的难度大大降低，应用开发者可以通过一套Kubernetes基础架构进行运维管理。Shifu 将推动Kubernetes成为物联网开发的底层架构标准，将容器编排技术带入物联网软件开发生态中。 
+云原生的 ***Shifu*** 将系统运维的难度大大降低，应用开发者可以通过一套 `Kubernetes` 基础架构进行运维管理。***Shifu*** 将推动 `Kubernetes` 成为物联网开发的底层架构标准，将容器编排技术带入物联网软件开发生态中。 
+
+## 目录
+
+:::caution正在施工
+添加左侧边栏各项的介绍
+:::
