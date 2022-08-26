@@ -5,10 +5,6 @@ sidebar_position: 1
 
 # 体验 ***Shifu***
 
-:::tip
-您在体验 ***Shifu*** 的过程中有任何问题，都可以 [联系我们获得支持](community/join.md)。
-:::
-
 ***Shifu*** 安装包 中准备了五个设备(`AGV`，`温度计`，`酶标仪`，`PLC`，`机械臂`）供您进行试玩，体验 ***Shifu*** 的能力。
 
 :::note

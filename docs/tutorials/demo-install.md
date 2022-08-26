@@ -8,18 +8,6 @@ import TabItem from '@theme/TabItem';
 
 # 下载安装
 
-:::note
-体验 ***Shifu*** 需要您简单了解 **命令行操作**。
-:::
-
-:::tip
-如果您希望在生产环境安装 ***Shifu***，请查看 [生产环境安装](guides/install-shifu-prod.md)。
-:::
-
-:::tip
-您在下载安装 ***Shifu*** 的过程中有任何问题，都可以 [联系我们获得支持](community/join.md)。
-:::
-
 ## 安装 Docker Desktop
 
 在本地安装和体验 ***Shifu***，需要先安装 `Docker Desktop`。
@@ -163,4 +151,4 @@ sudo kubectl get pods -A
 
 ## 下一步
 
-恭喜您已经在电脑上安装了 ***Shifu***，下一步可以 [体验 ***Shifu***](./try-demo.md) 了！
+恭喜您已经在电脑上安装了 ***Shifu***，下一步可以 [体验 ***Shifu***](./demo-try.md) 了！

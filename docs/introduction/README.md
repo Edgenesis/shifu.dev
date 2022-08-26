@@ -2,7 +2,7 @@
 
 :::caution正在施工
 - 产品介绍
-- 添加 https://bianwuji.com/stuff/videos/productintro.mp4
+- 添加 https://bianwuji.com/stuff/videos/techintro.mp4
 - 开源说明
 :::
 
