@@ -1,6 +1,6 @@
 ---
 title: 接入 西门子S7 PLC
-sidebar_position: 1
+sidebar_position: 0
 ---
 
 # 接入 西门子S7 PLC

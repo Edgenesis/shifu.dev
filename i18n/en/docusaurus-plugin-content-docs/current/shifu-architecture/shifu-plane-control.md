@@ -17,10 +17,10 @@ The `EdgeDeviceSpec` contains the basic information of the device, with the foll
 
 | Variable name | Variable type | Usage | Examples |
 |--|--|--|--|
-| Sku        | \*string     | SKU name of device            | PLC, Hikvision camera |
-| Connection | \*Connection | Method of hardware connection | Ethernet, USB |
-| Address    | \*string     | Hardware address              | 192.168.0.1 |
-| Protocol   | \*Protocol   | Transfer protocol             | HTTP, MQTT, Socket...|
+| Sku        | \string     | SKU name of device            | PLC, Hikvision camera |
+| Connection | Connection | Method of hardware connection | Ethernet, USB |
+| Address    | string     | Hardware address              | 192.168.0.1 |
+| Protocol   | Protocol   | Transfer protocol             | HTTP, MQTT, Socket...|
 
 The `EdgeDevicePhase` defines the current state of the device, with the following elements:
 

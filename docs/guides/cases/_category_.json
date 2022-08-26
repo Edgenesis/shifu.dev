@@ -1,5 +1,8 @@
 {
-  "label": "实例",
+  "label": "接入设备",
   "position": 20,
-  "link": null
+  "link": {
+    "type": "doc",
+    "id": "README"
+  }
 }

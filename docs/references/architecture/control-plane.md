@@ -18,10 +18,10 @@ sidebar_position: 2
 
 | 变量名 | 变量类型 | 用途 | 举例 |
 |--|--|--|--|
-|	Sku | \*string | 设备的SKU名称 | PLC, Hikvision camera |
-|	Connection | \*Connection | 硬件连接方式 |Ethernet, USB|
-| Address | \*string | 硬件地址 | 192.168.0.1 |
-|	Protocol | \*Protocol | 传输协议 |HTTP, MQTT, Socket...|
+| Sku | string | 设备的SKU名称 | PLC, Hikvision camera |
+| Connection | Connection | 硬件连接方式 | Ethernet, USB |
+| Address | string | 硬件地址 | 192.168.0.1 |
+| Protocol | Protocol | 传输协议 | HTTP, MQTT, Socket... |
 
 `EdgeDevicePhase`定义了设备的当前状态：
 
