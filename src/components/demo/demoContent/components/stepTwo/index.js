@@ -73,7 +73,7 @@ const optionsTwo = [
     id: 1,
   },
   {
-    value: "ARM",
+    value: "ARM64",
     id: 2,
   },
 ]
@@ -81,15 +81,15 @@ const optionsTwo = [
 const shifuUrlList = {
   Linux: {
     AMD64: "shifu_demo_aio_linux_amd64.tar", //Linux and x86/64
-    ARM: "shifu_demo_aio_linux_arm64.tar", //Linux and ARM
+    ARM64: "shifu_demo_aio_linux_arm64.tar", //Linux and ARM
   },
   WSL: {
     AMD64: "shifu_demo_aio_linux_amd64.tar", //WSL and x86/64
-    ARM: "shifu_demo_aio_linux_arm64.tar", //WSL and ARM
+    ARM64: "shifu_demo_aio_linux_arm64.tar", //WSL and ARM
   },
   MacOS: {
     AMD64: "shifu_demo_aio_darwin_amd64.tar", //MacOS and x86/64
-    ARM: "shifu_demo_aio_darwin_arm64.tar", //MacOS and ARM
+    ARM64: "shifu_demo_aio_darwin_arm64.tar", //MacOS and ARM
   }
 }
 
