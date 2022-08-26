@@ -1,9 +1,19 @@
 .demoFooterContainer {
   z-index: 10;
   width: 100%;
-  min-height: 96px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding-bottom: 96px;
+}
+
+.returnBack {
+  cursor: pointer;
+
+  .returnContent {
+    margin-left: 24px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #399BFF;
+  }
 }

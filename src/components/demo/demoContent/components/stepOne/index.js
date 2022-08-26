@@ -22,7 +22,7 @@ const stepOnebtnList = [
   },
   {
     colorLevel: 'two',
-    content: "MacOS(M1)",
+    content: "MacOS(M1/M2)",
     href: "https://desktop.docker.com/mac/main/arm64/Docker.dmg"
   },
 ]

@@ -11,7 +11,7 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 51px;
-    color: #000000;
+    color: var(--font-color-one);
   }
 }
 
@@ -49,11 +49,24 @@
   .stepName {
     transition: all 0.3s;
     position: absolute;
-    bottom: -50px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: #333333;
+    top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--font-color-one);
+    }
+
+    .supplement {
+      color: #23D6EE;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 16px;
+    }
   }
 }
 
@@ -73,8 +86,8 @@
 
   .stepNum {
     transition: all 0s;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 
   .stepName {
@@ -82,14 +95,14 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
-    bottom: -60px;
+    top: 50px;
   }
 }
 
 .spotsLine {
   position: absolute;
-  left: 67px;
-  top: 19px;
+  left: 73px;
+  top: 23px;
   z-index: 20;
   display: flex;
 
@@ -98,7 +111,7 @@
     width: 5px;
     height: 5px;
     background: #B9D1EB;
-    margin-right: 9px;
+    margin-right: 6px;
   }
 }
 

@@ -1,4 +1,3 @@
-import { translate } from '@docusaurus/Translate';
 import React from 'react';
 import styles from "./styles.module.scss";
 
@@ -21,7 +20,10 @@ function StepSpot(props) {
   return (
     <div className={props.className}>
       <div className={styles.stepNum}>{props.step}</div>
-      <p className={styles.stepName}>{props.name}</p>
+      <div className={styles.stepName}>
+        <p className={styles.title}>{props.name}</p>
+        <p className={styles.supplement}>{props.supplement}</p>
+      </div>
     </div>
   )
 }
@@ -30,6 +32,7 @@ const spotsList = [
   {
     step: "1",
     name: "部署Docker",
+    supplement: "预备工作",
     className: ""
   },
   {

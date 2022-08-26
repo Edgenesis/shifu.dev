@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from "./styles.module.scss";
-import { ButtonSquare } from "../../../button";
 import Select from "../../../select"
 import CodeView from '../../../codeVIew';
 
@@ -78,15 +77,6 @@ const optionsTwo = [
     id: 3,
   },
 ]
-
-// URLArr: [
-//   "shifu_demo_aio_linux_amd64.tar", //Linux and x86/64
-//   "shifu_demo_aio_darwin_amd64.tar", //MacOS and x86/64
-//   "shifu_demo_aio_linux_amd64.tar", //WSL and x86/64
-//   "shifu_demo_aio_linux_arm64.tar", //Linux and ARM
-//   "shifu_demo_aio_darwin_arm64.tar", //MacOS and ARM
-//   "shifu_demo_aio_linux_arm64.tar", //WSL and ARM
-// ],
 
 const shifuUrlList = {
   AMD64: {
