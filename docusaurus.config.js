@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Shifu Framework',
-  tagline: '让开发一个产业场景像开发一个APP一样简单 !',
+  tagline: '让开发产业场景像开发一个APP一样简单',
   url: 'https://shifu.run',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -59,6 +59,7 @@ const config = {
         docs: {
           remarkPlugins: [require('mdx-mermaid')],
           sidebarPath: require.resolve('./sidebars.js'),
+          // make sidebar expandable
           sidebarCollapsible: true,
           routeBasePath: '/docs',
           // Please change this to your repo.
@@ -66,7 +67,11 @@ const config = {
           editUrl:
             'https://github.com/edgenesis/shifu-docs-docusaurus/tree/main/',
         },
-        blog: false,
+        blog: {
+          routeBasePath: '/blog',
+          blogSidebarTitle: '所有博客',
+          blogSidebarCount: 'ALL',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -107,14 +112,14 @@ const config = {
         ],
       },
       footer: {
-        style: 'light',
+        style: 'dark',
         links: [
           {
             title: '文档',
             items: [
               {
                 label: '极速安装',
-                to: 'docs/quickstart/quick_install',
+                to: 'docs',
               },
             ],
           },
@@ -126,18 +131,6 @@ const config = {
                 to: 'docs',
                 // href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
-              // {
-              //   label: 'Stack Overflow',
-              //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              // },
-              // {
-              //   label: 'Discord',
-              //   href: 'https://discordapp.com/invite/docusaurus',
-              // },
-              // {
-              //   label: 'Twitter',
-              //   href: 'https://twitter.com/docusaurus',
-              // },
             ],
           },
           {
@@ -162,7 +155,9 @@ const config = {
       },
       docs: {
         sidebar: {
-          autoCollapseCategories: true,
+          // don't collapse other category when open a new category
+          autoCollapseCategories: false,
+          // user can gain larger screen if hide the sidebar
           hideable: true,
         },
       },
