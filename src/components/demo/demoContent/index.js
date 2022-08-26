@@ -21,10 +21,10 @@ class DemoContent extends React.Component {
     }
     return (
       <div className={styles.demoContentContainer} >
-        <div className={styles.goBack} onClick={() => this.props.goBack()}>
+        {/* <div className={styles.goBack} onClick={() => this.props.goBack()}>
           <span>返回上一步</span>
           <GoBackIcon></GoBackIcon>
-        </div>
+        </div> */}
         <div className={styles.stepContent}>
           {stepView[this.props.stepIndex]}
         </div>

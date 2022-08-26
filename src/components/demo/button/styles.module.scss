@@ -14,7 +14,7 @@
 
 .square {
   border-radius: 5px;
-  transition: all 0.5s;
+  transition: all 0.3s;
   font-weight: 500;
   font-size: 16px;
   text-align: center;
@@ -23,6 +23,7 @@
   &:hover {
     border-radius: 20px;
     color: #FFFFFF;
+    text-decoration: none;
   }
 }
 

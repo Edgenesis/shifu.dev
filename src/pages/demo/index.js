@@ -45,12 +45,12 @@ class Demo extends React.Component {
   }
   render() {
     return (
-      <Layout title="Hello" description="Hello React Page">
+      <Layout title="Shifu Demo" description="Hello Shifu">
         <SnowBg>
           <div className={styles.demoContainer} onClick={() => this.closeServiceModel()}>
             <DemoHeader stepIndex={this.state.stepIndex}></DemoHeader>
             <DemoContent stepIndex={this.state.stepIndex} goBack={this.stepBackward}></DemoContent>
-            <DemoFooter onClick={() => this.stepForward()} stepIndex={this.state.stepIndex} ></DemoFooter>
+            <DemoFooter onClick={() => this.stepForward()} stepIndex={this.state.stepIndex} isReturn={() => this.setState({ stepIndex: 0 })} ></DemoFooter>
             <div className={styles.service}>
               <div className={styles.serviceIcon} onClick={(e) => this.showServiceModel(e)}><ServiceIcon></ServiceIcon></div>
               <p className={styles.serviceContent}>获取一对一操作指导</p>
