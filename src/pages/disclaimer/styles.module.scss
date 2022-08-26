@@ -1,0 +1,26 @@
+.disclaimerContainer {
+  padding: 48px 0 96px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--background-color);
+
+  .container {
+    position: relative;
+    border-radius: 20px;
+    margin: 48px 200px;
+    padding: 48px 24px;
+    height: 60vh;
+    overflow: auto;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--box-shadow-one);
+  }
+
+  .disclaimerConfirm {
+    z-index: 1;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

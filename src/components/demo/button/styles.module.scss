@@ -1,0 +1,75 @@
+.buttonContainer {
+  position: relative;
+  width: 168px;
+  height: 38px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .buttonContent {
+    margin-bottom: 0px;
+  }
+}
+
+.square {
+  border-radius: 5px;
+  transition: all 0.3s;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF;
+
+  &:hover {
+    border-radius: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+}
+
+.squareOne {
+  background: #EDF6FF;
+  font-weight: 400;
+  text-align: center;
+  color: #000000;
+
+  &:hover {
+    color: #000000;
+  }
+
+  &:active {
+    background: #D0E0F1;
+  }
+}
+
+.squareTwo {
+  background: #399BFF;
+
+  &:active {
+    background: #2580DE;
+  }
+}
+
+.squareThree {
+  background: #155BA2;
+
+  &:active {
+    background: #0E3A6A;
+  }
+}
+
+.buttonLeft,
+.buttonRight {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin: 0 12px;
+}
+
+.buttonLeft {
+  left: 0px;
+}
+
+.buttonRight {
+  right: 0px;
+}

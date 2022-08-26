@@ -1,0 +1,36 @@
+.stepTwo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px 0px;
+}
+
+.titleOne {
+  text-align: center;
+  color: var(--font-color-one);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 24px 0px;
+}
+
+.titleTwo {
+  text-align: left;
+  width: 400px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0px;
+  color: var(--font-color-one);
+}
+
+.selectContainer {
+  height: 100px;
+  width: 400px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}

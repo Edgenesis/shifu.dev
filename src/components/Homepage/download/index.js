@@ -123,8 +123,7 @@ function DownloadBtn() {
     <div className={styles.btnContainer}>
       <BlueBtn
         content="Shifu demo"
-        href="https://demo.shifu.run/index"
-        target="_blank"
+        href="/disclaimer"
         height="35px"
       ></BlueBtn>
     </div>

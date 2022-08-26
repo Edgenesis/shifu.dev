@@ -1,0 +1,84 @@
+.CodeViewContainer {
+  width: 600px;
+  margin-bottom: 24px;
+  position: relative;
+
+  .CodeDescription {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--font-color-one);
+    margin-bottom: 12px;
+  }
+
+  .copied {
+    position: absolute;
+    top: 10px;
+    right: -50px;
+    opacity: 0%;
+    font-weight: 400;
+    font-size: 12px;
+    color: #399bff;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  .copiedActive {
+    animation-name: copied;
+  }
+
+  @keyframes copied {
+    0% {
+      opacity: 0%;
+      right: -20px;
+    }
+
+    50% {
+      opacity: 100%;
+      right: -5px;
+    }
+
+    100% {
+      opacity: 0%;
+      right: 10px;
+    }
+  }
+
+
+  .codeContent {
+    position: relative;
+    background: #111111;
+    box-shadow: inset 1px 1px 4px #000000;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 160.69%;
+    color: #FFFFFF;
+    padding: 4px 30px 4px 12px;
+    margin-bottom: 0px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .copy {
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #666666;
+    border-radius: 5px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    font-weight: 400;
+    font-size: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    &:active {
+      background: #484848;
+    }
+  }
+}

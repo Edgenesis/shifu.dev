@@ -1,0 +1,122 @@
+.demoHeaderContainer {
+  z-index: 10;
+  min-height: 207px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .header {
+    margin-top: 42px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 51px;
+    color: var(--font-color-one);
+  }
+}
+
+.ProgressBarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+  width: 300px;
+}
+
+.stepSpot {
+  z-index: 5;
+  width: 90px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .stepNum {
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background: #B9D1EB;
+    width: 30px;
+    height: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color: #FFFFFF;
+  }
+
+  .stepName {
+    transition: all 0.3s;
+    position: absolute;
+    top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--font-color-one);
+    }
+
+    .supplement {
+      color: #23D6EE;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+}
+
+.specialSpot {
+  .stepNum {
+    background: #23D6EE;
+  }
+}
+
+.normalSpot {
+  .stepNum {
+    background: #399BFF;
+  }
+}
+
+.stepSpotActive {
+
+  .stepNum {
+    transition: all 0s;
+    width: 50px;
+    height: 50px;
+  }
+
+  .stepName {
+    transition: all 0s;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    top: 50px;
+  }
+}
+
+.spotsLine {
+  position: absolute;
+  left: 73px;
+  top: 23px;
+  z-index: 20;
+  display: flex;
+
+  .minSpot {
+    border-radius: 10px;
+    width: 5px;
+    height: 5px;
+    background: #B9D1EB;
+    margin-right: 6px;
+  }
+}
+
+.spotsLineActive {
+  .minSpot {
+    background: #399BFF;
+  }
+}
