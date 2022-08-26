@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { BlueBtn } from "../../buttons";
 
+import Translate, { translate } from '@docusaurus/Translate';
+
 function HeaderLogo() {
   return (
     <div className={styles.logoContainer}>
@@ -111,7 +113,7 @@ function HeaderLogo() {
       <div className={styles.words}>
         <h1 className={styles.title}>Shifu Framework</h1>
         <p className={styles.describe}>
-          让开发一个产业场景像开发一个APP一样简单！
+          <Translate>让开发产业场景像开发APP一样简单！</Translate>
         </p>
       </div>
     </div>

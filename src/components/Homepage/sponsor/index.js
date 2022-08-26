@@ -7,11 +7,15 @@ import amazon from "@site/static/img/sponsor/amazon.png";
 import CSSC from "@site/static/img/sponsor/CSSC.png";
 import guomao from "@site/static/img/sponsor/guomao.png";
 
+import Translate, { translate } from '@docusaurus/Translate';
+
 export default function Sponsor() {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <p className={styles.title}>Shifu受行业领导者信任</p>
+        <p className={styles.title}>
+          <Translate>Shifu受行业领导者信任</Translate>
+        </p>
         <div className={styles.rotation}>
           <div className={styles.content}>
             <div className={styles.Sponsor}>

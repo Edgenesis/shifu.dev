@@ -71,6 +71,8 @@ A caution with title.
 
 Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
 
+- Translate homepage
+    - Check https://docusaurus.io/docs/i18n/tutorial#translate-your-react-code
 - Translate docs
     - Translate docs in `i18n/en/docusaurus-plugin-content-docs/current`.
 - Translate plugin data

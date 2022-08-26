@@ -275,5 +275,125 @@
   "theme.SearchPage.noResultsText": {
     "message": "No documents were found",
     "description": "The paragraph for empty search result"
+  },
+  "Shifu受行业领导者信任": {
+    "message": "Shifu is trusted by industry leaders"
+  },
+  "让开发产业场景像开发APP一样简单！": {
+    "message": "Make developing industrial scenes as easy as developing an app!"
+  },
+  "大到使用私有驱动的工程机械": {
+    "message": "Large to construction machinery using private driver"
+  },
+  "小到使用公有协议的温湿度计": {
+    "message": "Small to thermometers using public protocol"
+  },
+  "Shifu超高兼容性让你轻松应对各种易购设备": {
+    "message": "Shifu's high compatibility allows you to easily handle a variety of e-bay devices"
+  },
+  "所有接入Shifu的设备及应用都会被封装成一个拼图式模块": {
+    "message": "All devices and applications connected to Shifu are packaged into a puzzle-like module"
+  },
+  "根据场景内的设备不同，按需加载即可": {
+    "message": "Just load as needed, depending on the devices in the scene"
+  },
+  "接入设备后，Shifu会自动把设备的能力抽象成API": {
+    "message": "After accessing the device, Shifu will automatically abstract the device's capabilities into an API"
+  },
+  "让你的应用和硬件设备彻底解耦": {
+    "message": "Completely decouple your application from the hardware device"
+  },
+  "把低效的物联网应用开发变得像面向对象编程一样高效": {
+    "message": "Make inefficient IoT application development as efficient as object-oriented programming"
+  },
+  "Shifu已通过在航天场景验证": {
+    "message": "Shifu has been validated in aerospace scenarios"
+  },
+  "提供99.9999%的可靠性": {
+    "message": "Provides 99.9999% reliability"
+  },
+  "让你远离宕机烦恼": {
+    "message": "Keeps you out of downtime trouble"
+  },
+  "联合国的云原生安全团队操刀": {
+    "message": "The UN's cloud-native security team is at the helm"
+  },
+  "无论是数据加密还是网络安全": {
+    "message": "Whether it is data encryption or network security"
+  },
+  "Shifu不一而足": {
+    "message": "Shifu satisfies"
+  },
+  "Shifu得益于Kubernetes原生架构": {
+    "message": "Shifu benefits from Kubernetes native architecture"
+  },
+  "可以无缝接入强大的云原生软件生态": {
+    "message": "And seamlessly accesses to a powerful cloud-native software ecosystem"
+  },
+  "让全球的开发者帮你解决后顾之忧": {
+    "message": "Let the world's developers help you with your worries"
+  },
+  "Shifu对开发者的价值": {
+    "message": "Shifu's Value to Developers"
+  },
+  "无论是协议规定的数据，还是驱动返回值，Shifu都能自动采集。": {
+    "message": "Whether the data is specified by the protocol or returned by the driver, Shifu is able to record it automatically."
+  },
+  "Shifu的核心代码全部开源，让您避免供应商锁定。您更可以自由地选择让Shifu部署在企业内部，边缘云、私有云、混合云或公有云上。": {
+    "message": "Shifu's core codes are all open source, allowing you to avoid vendor lock-in. You are even free to choose to have Shifu deployed on-premises, on edge, private, hybrid or public clouds."
+  },
+  "k8s已经一统天下，Shifu基于k8s的架构可以让你免去未来迁移到k8s上的烦恼。": {
+    "message": "k8s has ruled the roost, and Shifu's k8s-based architecture can save you the trouble of migrating to k8s in the future."
+  },
+  "只需一个2G内存的树莓派就可以在生产环境跑起Shifu。": {
+    "message": "Just a Raspberry Pi with 2G RAM can run Shifu in a production environment."
+  },
+  "Shifu兼容所有基于k8s的云边协同框架（OpenYurt, KubeEdge等）。": {
+    "message": "Shifu is compatible with all k8s-based cloud edge collaboration frameworks (OpenYurt, KubeEdge, etc.)."
+  },
+  "基于k8s的架构让Shifu可以无限扩容，轻松处理亿级设备接入，连智慧城市项目都不在话下。": {
+    "message": "The k8s-based architecture allows Shifu to scale infinitely and easily handle billions of device access, even for smart city projects."
+  },
+  "Shifu对工程团体的价值": {
+    "message": "Shifu's Value to Engineering"
+  },
+  "Shifu的独有优势": {
+    "message": "Shifu's Unique Advantages"
+  },
+  "航天级稳定性": {
+    "message": "Aerospace-grade Stability"
+  },
+  "数据采集": {
+    "message": "Data Acquisition"
+  },
+  "开源社区": {
+    "message": "Open Source Community"
+  },
+  "k8s原生": {
+    "message": "K8s Native"
+  },
+  "轻量化": {
+    "message": "Lightweight"
+  },
+  "云边协同": {
+    "message": "Cloudside Collaboration"
+  },
+  "无限扩容": {
+    "message": "Infinite Scalability"
+  },
+  "极速设备接入": {
+    "message": "Extremely Fast Connection"
+  },
+  "模块化部署体验": {
+    "message": "Modularized Deployment Experience"
+  },
+  "高效应用开发": {
+    "message": "Efficient Application Development"
+  },
+  "多维度安全策略": {
+    "message": "Multidimensional Security Policy"
+  },
+  "全球化社区生态": {
+    "message": "Globalized Community Ecology"
   }
 }
