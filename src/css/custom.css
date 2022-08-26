@@ -39,6 +39,7 @@
     rgba(251, 253, 255, 0) 100%
   );
   --card-color: #fff;
+  --box-shadow-one: 0 0 10px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -64,12 +65,12 @@
     rgba(52, 53, 58, 0.7) 50%,
     rgba(52, 53, 58, 0) 100%
   );
+  --box-shadow-one: 0 0 10px 3px rgba(255, 255, 255, 0.2);
 }
 
 ::-webkit-scrollbar {
-
 }
-::-webkit-scrollbar-track-piece{
+::-webkit-scrollbar-track-piece {
 }
 /* ::-webkit-scrollbar-button 滚动条两端的按钮
 ::-webkit-scrollbar-track  外层轨道

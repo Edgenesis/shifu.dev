@@ -7,13 +7,13 @@
 
   .container {
     position: relative;
-    background-color: var(--background-color);
-    border: 5px solid #399BFF;
     border-radius: 20px;
     margin: 48px 200px;
     padding: 48px 24px;
     height: 60vh;
     overflow: auto;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--box-shadow-one);
   }
 
   .disclaimerConfirm {
