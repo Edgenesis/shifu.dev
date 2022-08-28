@@ -3,10 +3,21 @@ import styles from './styles.module.scss'
 import Layout from '@theme/Layout'
 import SnowBg from '../../components/background'
 import { ButtonSquare } from '../../components/demo/button'
+import { isMobile } from '../../utils/fit-helper'
+const ShifuLogo = require('@site/static/img/logo/shifu-mini.svg').default
 
-export default function disclaimer() {
-  return (
-    <Layout>
+export default function Disclaimer() {
+  let disclaimer;
+  if (isMobile()) {
+    disclaimer =
+      <div className={styles.isMobile}>
+        <ShifuLogo className={styles.logo}></ShifuLogo>
+        <div className={styles.isMobileContent}>
+          请使用PC端打开此页面
+        </div>
+      </div>
+  } else {
+    disclaimer =
       <SnowBg>
         <div className={styles.disclaimerContainer}>
           <h1 className={styles.title}>请务必认真阅读以下内容</h1>
@@ -110,6 +121,10 @@ export default function disclaimer() {
           </div>
         </div>
       </SnowBg>
+  }
+  return (
+    <Layout>
+      {disclaimer}
     </Layout>
   )
 }
