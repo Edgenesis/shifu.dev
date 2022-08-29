@@ -142,7 +142,7 @@ const config = {
               },
               {
                 label: 'Shifu Demo 下载',
-                href: '/disclaimer',
+                href: 'disclaimer',
               },
             ],
           },
