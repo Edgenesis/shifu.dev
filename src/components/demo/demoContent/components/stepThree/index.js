@@ -1,3 +1,4 @@
+import Translate, { translate } from '@docusaurus/Translate';
 import React from 'react';
 import styles from "./styles.module.scss";
 import { ButtonSquare } from "../../../button";
@@ -34,7 +35,7 @@ const buttonActiveStyle = {
 const codeList = [
   {
     id: 1,
-    description: "1.启动一个nginx实例来模拟应用程序与shifu的交互",
+    description: translate({ message: "1.启动一个nginx实例来模拟应用程序与shifu的交互" }),
     code: "sudo kubectl run --image=nginx:1.21 nginx  ",
     isCopy: true,
     style: codeViewStyle,
@@ -42,7 +43,7 @@ const codeList = [
   },
   {
     id: 2,
-    description: "2.输入以下指令查看运行结果",
+    description: translate({ message: "2.输入以下指令查看运行结果" }),
     code: `sudo kubectl get pods -A | grep nginx `,
     isCopy: true,
     style: codeViewStyle,
@@ -50,7 +51,7 @@ const codeList = [
   },
   {
     id: 3,
-    description: "3.如果出现以下结果，表示启动成功",
+    description: translate({ message: "3.如果出现以下结果，表示启动成功" }),
     code:
       `NAME  READY  STATUS  RESTARTS  AGE 
 nginx   1/1   Running    0     34s`,
@@ -64,37 +65,37 @@ const btnList = [
   {
     id: 1,
     colorLevel: 'three',
-    content: <div><p>案例一</p><p>与AGV的数字孪生交互</p></div>,
+    content: <div><p><Translate>案例一</Translate></p><p><Translate>与AGV的数字孪生交互</Translate></p></div>,
     contentStyle: buttonContentStyle,
-    url: "https://shifu.run/docs/quickstart/quick_demo#1-%E4%B8%8Eagv%E7%9A%84%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F%E4%BA%A4%E4%BA%92"
+    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#1-与agv交互" })
   },
   {
     id: 2,
     colorLevel: 'three',
-    content: <div><p>案例二</p><p>与温度计的数字孪生交互</p></div>,
+    content: <div><p><Translate>案例二</Translate></p><p><Translate>与温度计的数字孪生交互</Translate></p></div>,
     contentStyle: buttonContentStyle,
-    url: "https://shifu.run/docs/quickstart/quick_demo#2-%E4%B8%8E%E6%B8%A9%E5%BA%A6%E8%AE%A1%E7%9A%84%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F%E4%BA%A4%E4%BA%92"
+    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#2-与温度计交互" })
   },
   {
     id: 3,
     colorLevel: 'three',
-    content: <div><p>案例三</p><p>与酶标仪的数字孪生交互</p></div>,
+    content: <div><p><Translate>案例三</Translate></p><p><Translate>与酶标仪的数字孪生交互</Translate></p></div>,
     contentStyle: buttonContentStyle,
-    url: "https://shifu.run/docs/quickstart/quick_demo#3-%E4%B8%8E%E9%85%B6%E6%A0%87%E4%BB%AA%E7%9A%84%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F%E4%BA%A4%E4%BA%92"
+    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#3-与酶标仪交互" })
   },
   {
     id: 4,
     colorLevel: 'three',
-    content: <div><p>案例四</p><p>与PLC的数字孪生交互</p></div>,
+    content: <div><p><Translate>案例四</Translate></p><p><Translate>与PLC的数字孪生交互</Translate></p></div>,
     contentStyle: buttonContentStyle,
-    url: "https://shifu.run/docs/quickstart/quick_demo#4-%E4%B8%8Eplc%E7%9A%84%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F%E4%BA%A4%E4%BA%92"
+    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#4-与plc交互" })
   },
   {
     id: 5,
     colorLevel: 'three',
-    content: <div><p>案例五</p><p>与机械臂的数字孪生交互</p></div>,
+    content: <div><p><Translate>案例五</Translate></p><p><Translate>与机械臂的数字孪生交互</Translate></p></div>,
     contentStyle: buttonContentStyle,
-    url: "https://shifu.run/docs/quickstart/quick_demo#5-%E4%B8%8E%E6%9C%BA%E6%A2%B0%E8%87%82%E7%9A%84%E6%95%B0%E5%AD%97%E5%AD%AA%E7%94%9F%E4%BA%A4%E4%BA%92"
+    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#5-与机械臂交互" })
   },
 ]
 
@@ -155,10 +156,10 @@ class StepThree extends React.Component {
           {buttons}
         </div>
         <div className={styles.guideContainer}>
-          <h1 className={styles.guideTitle}>确认是否启动Nginx</h1>
+          <h1 className={styles.guideTitle}><Translate>确认是否启动Nginx</Translate></h1>
           {codes}
           <div className={styles.enterGameBtn}>
-            <ButtonSquare colorLevel="one" content="进入试玩" target="_blank" href={this.state.btnInfo.url}></ButtonSquare>
+            <ButtonSquare colorLevel="one" content={translate({ message: "进入试玩" })} target="_blank" href={this.state.btnInfo.url}></ButtonSquare>
           </div>
         </div>
         <div className={styles.enterShifuCloud}>
@@ -166,7 +167,7 @@ class StepThree extends React.Component {
           <a href='https://cloud.shifu.run/' className={styles.shifuCloud}>
             <ShifuCloudLogo></ShifuCloudLogo>
           </a>
-          <p className={styles.shifuCloudContent}>免费试用Shifu Cloud</p>
+          <p className={styles.shifuCloudContent}><Translate>免费试用Shifu Cloud</Translate></p>
         </div>
       </div>
     )

@@ -1,3 +1,4 @@
+import Translate, { translate } from '@docusaurus/Translate';
 import React from "react";
 import styles from "./styles.module.scss";
 
@@ -25,10 +26,10 @@ export default function CodeView(props) {
   return (
     <div className={styles.CodeViewContainer} style={props.style}>
       <h1 className={styles.CodeDescription} style={props.codeDescriptionStyle}>{props.description}</h1>
-      <div id={props.id} className={styles.copied}>复制成功 ✔</div>
+      <div id={props.id} className={styles.copied}><Translate>复制成功</Translate> ✔</div>
       <pre className={props.code ? `${styles.codeContent}` : `${styles.hidden} `}>
         {props.code}
-        <span onClick={() => copy(props.code, Copied)} className={props.isCopy ? `${styles.copy}` : `${styles.hidden} `}>复制</span>
+        <span onClick={() => copy(props.code, Copied)} className={props.isCopy ? `${styles.copy}` : `${styles.hidden} `}><Translate>复制</Translate></span>
       </pre>
       {props.insetCode}
     </div>

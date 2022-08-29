@@ -1,3 +1,4 @@
+import Translate, { translate } from '@docusaurus/Translate';
 import React from 'react'
 import styles from './styles.module.scss'
 import Layout from '@theme/Layout'
@@ -20,16 +21,16 @@ if (isMobile()) {
     <div className={styles.isMobile}>
       <ShifuLogo className={styles.logo}></ShifuLogo>
       <div className={styles.isMobileContent}>
-        请使用PC端打开此页面
+        <Translate>请使用PC端打开此页面</Translate>
       </div>
     </div>
 } else {
   disclaimer =
     <SnowBg>
       <div className={styles.disclaimerContainer}>
-        <h1 className={styles.title}>请务必认真阅读以下内容</h1>
+        <h1 className={styles.title}><Translate>请务必认真阅读以下内容</Translate></h1>
         <div className={styles.container}>
-          <h1>隐私协议</h1>
+          <h1><Translate>隐私协议</Translate></h1>
           <p>
             生效日期:2021年03月29日<br />
             <strong>概要</strong><br />
@@ -123,8 +124,8 @@ if (isMobile()) {
           </p>
         </div>
         <div className={styles.disclaimerConfirm}>
-          <ButtonSquare href="/" colorLevel="two" content="拒绝"></ButtonSquare>
-          <ButtonSquare href="/demo" colorLevel="two" content="同意"></ButtonSquare>
+          <ButtonSquare href="/" colorLevel="two" content={translate({ message: "拒绝" })}></ButtonSquare>
+          <ButtonSquare href="/demo" colorLevel="two" content={translate({ message: "同意" })}></ButtonSquare>
         </div>
       </div>
     </SnowBg>

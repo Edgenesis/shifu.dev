@@ -395,5 +395,158 @@
   },
   "全球化社区生态": {
     "message": "Globalized Community Ecology"
+  },
+  "获取一对一操作指导": {
+    "message": "获取一对一操作指导"
+  },
+  "请使用PC端打开此页面": {
+    "message": "请使用PC端打开此页面"
+  },
+  "请务必认真阅读以下内容": {
+    "message": "请务必认真阅读以下内容"
+  },
+  "隐私协议": {
+    "message": "隐私协议"
+  },
+  "拒绝": {
+    "message": "拒绝"
+  },
+  "同意": {
+    "message": "同意"
+  },
+  "复制成功": {
+    "message": "复制成功"
+  },
+  "复制": {
+    "message": "复制"
+  },
+  "Docker部署已完成": {
+    "message": "Docker部署已完成"
+  },
+  "Shifu安装已完成": {
+    "message": "Shifu安装已完成"
+  },
+  "再看一遍": {
+    "message": "再看一遍"
+  },
+  "部署Docker": {
+    "message": "部署Docker"
+  },
+  "预备工作": {
+    "message": "预备工作"
+  },
+  "安装Shifu": {
+    "message": "安装Shifu"
+  },
+  "试玩Shifu": {
+    "message": "试玩Shifu"
+  },
+  "欢迎体验Shifu Demo": {
+    "message": "欢迎体验Shifu Demo"
+  },
+  "我们的邮箱": {
+    "message": "我们的邮箱"
+  },
+  "我们的电话": {
+    "message": "我们的电话"
+  },
+  "微信联系我们": {
+    "message": "微信联系我们"
+  },
+  "2.1在Linux/Windows/Mac的命令行中执行以下命令": {
+    "message": "2.1在Linux/Windows/Mac的命令行中执行以下命令"
+  },
+  "2.2如果 Docker 运行顺利，将会有以下输出": {
+    "message": "2.2如果 Docker 运行顺利，将会有以下输出"
+  },
+  "1.请选择你的系统以下载Docker": {
+    "message": "1.请选择你的系统以下载Docker"
+  },
+  "2.确认Docker运行成功": {
+    "message": "2.确认Docker运行成功"
+  },
+  "1.启动一个nginx实例来模拟应用程序与shifu的交互": {
+    "message": "1.启动一个nginx实例来模拟应用程序与shifu的交互"
+  },
+  "2.输入以下指令查看运行结果": {
+    "message": "2.输入以下指令查看运行结果"
+  },
+  "3.如果出现以下结果，表示启动成功": {
+    "message": "3.如果出现以下结果，表示启动成功"
+  },
+  "案例一": {
+    "message": "案例一"
+  },
+  "与AGV的数字孪生交互": {
+    "message": "与AGV的数字孪生交互"
+  },
+  "https://shifu.run/docs/tutorials/demo-try#1-与agv交互": {
+    "message": "https://shifu.run/docs/tutorials/demo-try#1-与agv交互"
+  },
+  "案例二": {
+    "message": "案例二"
+  },
+  "与温度计的数字孪生交互": {
+    "message": "与温度计的数字孪生交互"
+  },
+  "https://shifu.run/docs/tutorials/demo-try#2-与温度计交互": {
+    "message": "https://shifu.run/docs/tutorials/demo-try#2-与温度计交互"
+  },
+  "案例三": {
+    "message": "案例三"
+  },
+  "与酶标仪的数字孪生交互": {
+    "message": "与酶标仪的数字孪生交互"
+  },
+  "https://shifu.run/docs/tutorials/demo-try#3-与酶标仪交互": {
+    "message": "https://shifu.run/docs/tutorials/demo-try#3-与酶标仪交互"
+  },
+  "案例四": {
+    "message": "案例四"
+  },
+  "与PLC的数字孪生交互": {
+    "message": "与PLC的数字孪生交互"
+  },
+  "https://shifu.run/docs/tutorials/demo-try#4-与plc交互": {
+    "message": "https://shifu.run/docs/tutorials/demo-try#4-与plc交互"
+  },
+  "案例五": {
+    "message": "案例五"
+  },
+  "与机械臂的数字孪生交互": {
+    "message": "与机械臂的数字孪生交互"
+  },
+  "https://shifu.run/docs/tutorials/demo-try#5-与机械臂交互": {
+    "message": "https://shifu.run/docs/tutorials/demo-try#5-与机械臂交互"
+  },
+  "确认是否启动Nginx": {
+    "message": "确认是否启动Nginx"
+  },
+  "进入试玩": {
+    "message": "进入试玩"
+  },
+  "免费试用Shifu Cloud": {
+    "message": "免费试用Shifu Cloud"
+  },
+  "1.2下载 Shifu 安装包": {
+    "message": "1.2下载 Shifu 安装包"
+  },
+  "1.3将所下载的安装包解压到testdir文件夹中": {
+    "message": "1.3将所下载的安装包解压到testdir文件夹中"
+  },
+  "1.4运行Demo": {
+    "message": "1.4运行Demo"
+  },
+  "2.1使用以下命令来查看运行效果": {
+    "message": "2.1使用以下命令来查看运行效果"
+  },
+  "2.2如果所有 “STATUS“ 都是 Running 即表示成功": {
+    "message": "2.2如果所有 “STATUS“ 都是 Running 即表示成功"
+  },
+  "1.安装Shifu": {
+    "message": "1.安装Shifu"
+  },
+  "1.1请选择你的系统": {
+    "message": "1.1请选择你的系统"
   }
 }

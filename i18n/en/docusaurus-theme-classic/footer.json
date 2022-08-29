@@ -25,7 +25,7 @@
   },
   "link.item.label.Shifu Demo 下载": {
     "message": "Download Shifu Demo",
-    "description": "The label of footer link with label=Shifu Demo 下载 linking to https://demo.shifu.run"
+    "description": "The label of footer link with label=Shifu Demo 下载 linking to disclaimer"
   },
   "copyright": {
     "message": "© 2022 Edgenesis.  |  <a href=\"https://beian.miit.gov.cn/\">京ICP备2021037926号</a>  | <a href=\"http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039843\">京公网安备11010802039843号</a>",

@@ -1,3 +1,4 @@
+import Translate, { translate } from '@docusaurus/Translate';
 import React from 'react';
 import styles from "./styles.module.scss";
 
@@ -31,18 +32,18 @@ function StepSpot(props) {
 const spotsList = [
   {
     step: "1",
-    name: "部署Docker",
-    supplement: "预备工作",
+    name: translate({ message: "部署Docker" }),
+    supplement: translate({ message: "预备工作" }),
     className: ""
   },
   {
     step: "2",
-    name: "安装Shifu",
+    name: translate({ message: "安装Shifu" }),
     className: ""
   },
   {
     step: "3",
-    name: "试玩Shifu",
+    name: translate({ message: "试玩Shifu" }),
     className: ""
   },
 ]
@@ -99,7 +100,7 @@ export default function DemoHeader(props) {
   }
   return (
     <div className={styles.demoHeaderContainer}>
-      <h1 className={styles.header}>欢迎体验Shifu demo</h1>
+      <h1 className={styles.header}><Translate>欢迎体验Shifu Demo</Translate></h1>
       <ProgressBar></ProgressBar>
     </div>
   )
