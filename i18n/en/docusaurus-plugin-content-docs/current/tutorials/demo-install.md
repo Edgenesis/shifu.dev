@@ -13,8 +13,6 @@ import TabItem from '@theme/TabItem';
 To try out ***Shifu*** on your personal computer, you need to install `Docker Desktop` first.
 
 :::info
-***Shifu*** 使用容器技术 `Docker` 将每一个实际的物理设备 (***edgeDevice***) 转为一个数字孪生设备 (***deviceShifu***)。
-
 ***Shifu*** uses `Docker`'s virtualized container technology to convert each physical device (***edgeDevice***) to a digital twin (***deviceShifu***).
 :::
 
