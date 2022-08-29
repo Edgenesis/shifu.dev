@@ -4,9 +4,17 @@ import Layout from '@theme/Layout'
 import SnowBg from '../../components/background'
 import { ButtonSquare } from '../../components/demo/button'
 import { isMobile } from '../../utils/fit-helper'
+var isNode = require('detect-node');
+
+if (isNode) {
+  isMobile = () => {
+    return false;
+  };
+}
+
 const ShifuLogo = require('@site/static/img/logo/shifu-mini.svg').default
 
-export default function Disclaimer() {
+export default function disclaimer() {
   let disclaimer;
   if (isMobile()) {
     disclaimer =
