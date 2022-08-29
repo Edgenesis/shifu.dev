@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "./styles.module.scss";
 
 function SpotsLine(props) {
-  let minSpotsList = [1, 2, 3, 4, 5];
+  let minSpotsList = [1, 2, 3, 4, 5, 6, 7];
   const minSpots = minSpotsList.map((item) => {
     let delayStepstyle = {
       transition: `all ${item * 0.2}s`
