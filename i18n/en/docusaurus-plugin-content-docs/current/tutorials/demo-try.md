@@ -8,13 +8,13 @@ sidebar_position: 1
 ***Shifu*** 安装包 中准备了五个设备(`AGV`，`温度计`，`酶标仪`，`PLC`，`机械臂`）供您进行试玩，体验 ***Shifu*** 的能力。
 
 :::note
-物联网设备是指可以与其他设备、系统、服务进行本地或在线地连接和交流的设备，例如：
+An IoT device is a device that can connect and interact with other devices, systems, and applications offline or online, for instance:
 
-- 一个制造厂里的机械臂，它可以接收来自本地的自动化控制系统传来的命令并完成相应的动作。
-- 一辆自动导引车，操纵者可对其进行远程控制。
-- 一辆汽车上的温度计，它向车载空调发出命令使其升温或降温，并上传实时温度数据到云端。
+- A robotic arm in a manufacturing plant that can receive commands from a local automated control system and complete the corresponding moves.
+- An automated guided vehicle that can be remotely controlled by its operator.
+- A thermometer in a car that can send commands to the on-board air conditioner to raise or lower its temperature, and can upload real-time temperature data to the cloud.
 
-在安装 ***Shifu*** 安装包 时，我们创建了五个虚拟设备，并连接到您的电脑上。这五个设备与实际的物联网设备是等价的。
+When installing ***Shifu*** installer, five virtual devices are created and connected to your computer. These virtual devices have the same functions with actual IoT devices.
 :::
 
 ## 准备
