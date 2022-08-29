@@ -49,7 +49,7 @@ If the protocol to use is not yet supported by ***Shifu***, please [submit an Is
 
 ***Shifu*** allows users to add the drivers to platform as follows:
 
-- command line drivers, please refer to [Quick Start: Invoking Command Line Drivers](shifu-advanced-functions/remote-driver-execution.md)
+- command line drivers, please refer to [Quick Start: Invoking Command Line Drivers](references/advanced-features/remote-driver-execution.md)
 
 ### Incompatible Drivers
 

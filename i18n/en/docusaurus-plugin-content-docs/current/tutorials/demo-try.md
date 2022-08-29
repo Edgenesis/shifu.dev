@@ -331,11 +331,11 @@ Press `ctrl D` to exit `nginx`.
 Congratulations！！！:rocket: :rocket: :rocket: You have completed trying ***Shifu***, next:
 
 - You can check the left sidebar for 
-    - [**How-to Guides**](./guides/): Detailed guides for using ***Shifu***.
-    - [**Reference Book**](./references/)
+    - [**How-to Guides**](../guides): Detailed guides for using ***Shifu***.
+    - [**Reference Book**](../references)
         - ***Shifu*** architecture and functions.
         - ***Shifu*** API reference.
-    - [**Open Source Community**](./community/): View common problems, get support, and join the open source community.
+    - [**Open Source Community**](../community): View common problems, get support, and join the open source community.
 - ***Shifu*** is now an open source project. If you are interested in it, visit ***Shifu***'s repo at [GitHub](https://github.com/Edgenesis/shifu).
 - [Contact us to get technical support](community/join.md)。
 
