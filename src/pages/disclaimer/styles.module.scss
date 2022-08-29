@@ -24,3 +24,28 @@
     align-items: center;
   }
 }
+
+.isMobile {
+  background-color: var(--background-color);
+  z-index: 1;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .isMobileContent {
+    padding: 2vh 8vw;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow-one);
+  }
+
+  .logo {
+    width: 40vmin;
+    height: 40vmin;
+    margin-bottom: 20vh;
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+  }
+}
