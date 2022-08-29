@@ -112,7 +112,7 @@ sudo docker ps
 :::info
 ***Shifu*** 安装包 包含以下内容：
 
-- 本地测试 `Kubernetes` 的 `kind`
+- 用于本地创建测试集群的 `kind`
 - ***Shifu*** 在运作过程中需要的所有镜像
 - ***Shifu*** 的安装脚本
 
