@@ -1,0 +1,33 @@
+.serviceContainer {
+  transition: all 1s;
+  z-index: 20;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  height: 383px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+
+  .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160.69%;
+    color: #666666;
+    margin: 0;
+  }
+
+  .content {
+    font-weight: 350;
+    font-size: 14px;
+    line-height: 160.69%;
+    color: #399BFF;
+    margin-bottom: 12px;
+  }
+
+  .serviceImg {
+    text-align: center;
+    border: 12px solid #F2F2F2;
+  }
+}

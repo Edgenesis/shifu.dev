@@ -101,7 +101,7 @@ const config = {
             label: '博客', 
           },
           {
-            href: 'https://demo.shifu.run',
+            href: 'disclaimer',
             label: 'Shifu Demo 下载',
             position: 'left',
           },
@@ -117,7 +117,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: '文档',
@@ -147,7 +147,7 @@ const config = {
               },
               {
                 label: 'Shifu Demo 下载',
-                href: 'https://demo.shifu.run',
+                href: 'disclaimer',
               },
             ],
           },
