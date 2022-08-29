@@ -5,6 +5,7 @@ import { bar1, bar2, bar3, access, modularization, application, stable, security
 
 import Translate, { translate } from '@docusaurus/Translate';
 
+
 function DescriptionModel(props) {
   let flexDirection = props.isReverse ? "row-reverse" : "row";
   let isTextAlignRight = props.isReverse
@@ -27,11 +28,20 @@ function DescriptionModel(props) {
   );
 }
 
+const isEn = /\/(en)\//g
+const localUrl = window.location.href
+
 function IntroBar(props) {
+  let barTitleClassName;
+  if (localUrl.match(isEn)) {
+    barTitleClassName = `${styles.barTitle} ${styles.barTitleEn}`
+  } else {
+    barTitleClassName = `${styles.barTitle}`
+  }
   return (
     <div className={styles.introBar}>
       {props.img}
-      <p className={styles.barTitle}>{props.title}</p>
+      <p className={barTitleClassName}>{props.title}</p>
     </div>
   )
 }
@@ -39,7 +49,7 @@ function IntroBar(props) {
 let developerlist = [
   {
     img: access,
-    title: translate({message: '极速设备接入'}),
+    title: translate({ message: '极速设备接入' }),
     descript:
       <span>
         <Translate>大到使用私有驱动的工程机械</Translate><br />
@@ -52,7 +62,7 @@ let developerlist = [
   },
   {
     img: modularization,
-    title: translate({message: '模块化部署体验'}),
+    title: translate({ message: '模块化部署体验' }),
     descript:
       <span>
         <Translate>所有接入Shifu的设备及应用都会被封装成一个拼图式模块</Translate><br />
@@ -64,7 +74,7 @@ let developerlist = [
   },
   {
     img: application,
-    title: translate({message: '高效应用开发'}),
+    title: translate({ message: '高效应用开发' }),
     descript:
       <span>
         <Translate>接入设备后，Shifu会自动把设备的能力抽象成API</Translate><br />
@@ -80,7 +90,7 @@ let developerlist = [
 let engineeringList = [
   {
     img: stable,
-    title: translate({message: '航天级稳定性'}),
+    title: translate({ message: '航天级稳定性' }),
     descript:
       <span>
         <Translate>Shifu已通过在航天场景验证</Translate><br />
@@ -93,7 +103,7 @@ let engineeringList = [
   },
   {
     img: security,
-    title: translate({message: '多维度安全策略'}),
+    title: translate({ message: '多维度安全策略' }),
     descript:
       <span>
         <Translate>联合国的云原生安全团队操刀</Translate><br />
@@ -106,7 +116,7 @@ let engineeringList = [
   },
   {
     img: community,
-    title: translate({message: '全球化社区生态'}),
+    title: translate({ message: '全球化社区生态' }),
     descript:
       <span>
         <Translate>Shifu得益于Kubernetes原生架构</Translate><br />
