@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 export default function SnowBg(props) {
   return (
-    <div className={styles.snowBg}>
+    <div className={styles.snowBg} style={props.style}>
       <div className={styles.snowWall}>
         <div className={styles.snow}></div>
         <div className={styles.snow}></div>

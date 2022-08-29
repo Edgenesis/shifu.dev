@@ -30,8 +30,8 @@
 
 .cardtwoContainer {
   width: 300px;
-  padding: 50px 50px 0 50px;
-  min-height: 340px;
+  padding: 50px 24px 0 24px;
+  min-height: 360px;
   background: var(--card-background-color);
   box-shadow: 10px 10px 50px rgba(123, 168, 255, 0.25);
   border-radius: 10px;
@@ -69,9 +69,4 @@
   text-align: center;
   color: var(--font-color-one);
   margin: 0px;
-}
-
-.cardtwoContainerEn{
-  padding: 50px 24px 0 24px;
-  min-height: 380px;
 }

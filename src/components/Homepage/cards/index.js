@@ -14,18 +14,9 @@ export function CardOne(props) {
   )
 }
 
-const isEn = /\/(en)\//g
-const localUrl = window.location.href
-
 export function CardTwo(props) {
-  let cardtwoClass
-  if (localUrl.match(isEn)) {
-    cardtwoClass = `${styles.cardtwoContainer} ${styles.cardtwoContainerEn}`
-  } else {
-    cardtwoClass = `${styles.cardtwoContainer}`
-  }
   return (
-    <div className={cardtwoClass}>
+    <div className={styles.cardtwoContainer}>
       <div className={styles.cardTwoContent}>
         <div className={styles.cardTowIcon} style={{ backgroundColor: props.iconBg }}>
           {props.img}

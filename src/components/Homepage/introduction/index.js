@@ -2,9 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { CardOne } from "../cards"
 import { bar1, bar2, bar3, access, modularization, application, stable, security, community } from "../../svg"
-
 import Translate, { translate } from '@docusaurus/Translate';
-
 
 function DescriptionModel(props) {
   let flexDirection = props.isReverse ? "row-reverse" : "row";
@@ -28,20 +26,11 @@ function DescriptionModel(props) {
   );
 }
 
-const isEn = /\/(en)\//g
-const localUrl = window.location.href
-
 function IntroBar(props) {
-  let barTitleClassName;
-  if (localUrl.match(isEn)) {
-    barTitleClassName = `${styles.barTitle} ${styles.barTitleEn}`
-  } else {
-    barTitleClassName = `${styles.barTitle}`
-  }
   return (
     <div className={styles.introBar}>
       {props.img}
-      <p className={barTitleClassName}>{props.title}</p>
+      <p className={styles.barTitle}>{props.title}</p>
     </div>
   )
 }
