@@ -112,14 +112,14 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: '文档',
             items: [
               {
                 label: '极速安装',
-                to: 'docs',
+                to: 'docs/quickstart/quick_install',
               },
             ],
           },
