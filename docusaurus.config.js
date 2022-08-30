@@ -96,7 +96,7 @@ const config = {
             label: '文档',
           },
           {
-            to: 'blog', 
+            to: '/blog', 
             position: 'left',
             label: '博客', 
           },
@@ -123,8 +123,8 @@ const config = {
             title: '文档',
             items: [
               {
-                label: '极速安装',
-                to: 'docs',
+                label: '快速上手',
+                to: '/docs/tutorials',
               },
             ],
           },
@@ -133,7 +133,7 @@ const config = {
             items: [
               {
                 label: '敬请期待！',
-                to: 'docs',
+                to: '/docs',
                 // href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
             ],
