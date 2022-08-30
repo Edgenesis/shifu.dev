@@ -30,6 +30,7 @@ const buttonStyle = {
 const buttonActiveStyle = {
   height: "80px",
   width: "200px",
+  borderRadius: "20px"
 }
 
 const codeList = [
@@ -164,7 +165,7 @@ class StepThree extends React.Component {
         </div>
         <div className={styles.enterShifuCloud}>
           <ActiveLine></ActiveLine>
-          <a href='https://cloud.shifu.run/' className={styles.shifuCloud}>
+          <a href='https://cloud.shifu.run/' target='_blank' className={styles.shifuCloud}>
             <ShifuCloudLogo></ShifuCloudLogo>
           </a>
           <p className={styles.shifuCloudContent}><Translate>免费试用Shifu Cloud</Translate></p>
