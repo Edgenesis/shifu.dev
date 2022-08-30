@@ -90,18 +90,18 @@ $ sudo kind create cluster --image="kindest/node:v1.24.0"
 
 ## 安装 ***Shifu***
 
-***Shifu*** 的安装非常方便，`k8s/crd/install/shifu_install.yml`为安装脚本，一键安装即可：
+***Shifu*** 的安装非常方便，`pkg/k8s/crd/install/shifu_install.yml`为安装脚本，一键安装即可：
 
 ```bash
 # clone shifu仓库 并在集群中安装shifu
 git clone https://github.com/Edgenesis/shifu.git
 cd shifu
-sudo kubectl apply -f k8s/crd/install/shifu_install.yml
+sudo kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 ```
 
 ### 注：提前下载镜像
 
-`k8s/crd/install/shifu_install.yml` 中使用到的镜像有 `quay.io/brancz/kube-rbac-proxy:v0.12.0` 和 `edgehub/shifu-controller:v0.0.5`，如果下载出问题，可以提前下载镜像到本机并导入集群：
+`pkg/k8s/crd/install/shifu_install.yml` 中使用到的镜像有 `quay.io/brancz/kube-rbac-proxy:v0.12.0` 和 `edgehub/shifu-controller:v0.0.5`，如果下载出问题，可以提前下载镜像到本机并导入集群：
 
 ```bash
 sudo docker pull quay.io/brancz/kube-rbac-proxy:v0.12.0

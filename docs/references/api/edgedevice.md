@@ -11,7 +11,7 @@ sidebar_position: 0
 
 `apiVersion: v0`
 
-`import "github.com/edgenesis/shifu/k8s/crd"`
+`import "github.com/edgenesis/shifu/pkg/k8s/crd"`
 
 ## EdgeDevice
 EdgeDevice 是通过 Kubernetes [CRD](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) 创建的自定义资源，代表着一个物理IoT设备的虚拟化数字孪生。
