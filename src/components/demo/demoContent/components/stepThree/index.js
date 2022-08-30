@@ -35,7 +35,7 @@ const buttonActiveStyle = {
 const codeList = [
   {
     id: 1,
-    description: translate({ message: "1.启动一个nginx实例来模拟应用程序与shifu的交互" }),
+    description: translate({ message: "1.启动一个nginx实例来模拟应用程序与Shifu的交互" }),
     code: "sudo kubectl run --image=nginx:1.21 nginx  ",
     isCopy: true,
     style: codeViewStyle,

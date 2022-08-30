@@ -34,7 +34,7 @@ Now, `nginx` is running:
 In a real-world scenario, users of IoT devices use an application or a monitoring platform to interact with the digital twin ***deviceShifu***. Here `nginx` is equivalent to an application or a monitoring platform.
 :::
 
-## 1.Interact with the AGV
+## 1. Interact with the AGV
 
 <details>
   <summary> Click here to view the details of AGV  </summary>
