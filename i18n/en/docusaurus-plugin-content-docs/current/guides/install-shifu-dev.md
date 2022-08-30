@@ -91,18 +91,18 @@ $ sudo kind create cluster --image="kindest/node:v1.24.0"
 
 ## Install ***Shifu***
 
-The installing of ***Shifu*** is extremely easy. Use `k8s/crd/install/shifu_install.yml` to apply ***Shifu*** by a single command:
+The installing of ***Shifu*** is extremely easy. Use `pkg/k8s/crd/install/shifu_install.yml` to apply ***Shifu*** by a single command:
 
 ```bash
 git clone https://github.com/Edgenesis/shifu.git
 cd shifu
 # install Shifu in the cluster
-sudo kubectl apply -f k8s/crd/install/shifu_install.yml
+sudo kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 ```
 
 ### Note: Pre-download Images
 
-`k8s/crd/install/shifu_install.yml` uses images such as `quay.io/brancz/kube-rbac-proxy:v0.12.0` and `edgehub/shifu-controller:v0.0.5`. You can pre-download these images on your computer and then import them in the cluster:
+`pkg/k8s/crd/install/shifu_install.yml` uses images such as `quay.io/brancz/kube-rbac-proxy:v0.12.0` and `edgehub/shifu-controller:v0.0.5`. You can pre-download these images on your computer and then import them in the cluster:
 
 ```bash
 sudo docker pull quay.io/brancz/kube-rbac-proxy:v0.12.0

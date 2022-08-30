@@ -11,7 +11,7 @@ sidebar_position: 1
 
 `apiVersion: v0`
 
-`import "github.com/edgenesis/shifu/k8s/crd"`
+`import "github.com/edgenesis/shifu/pkg/k8s/crd"`
 
 ## EdgeDevice
 
