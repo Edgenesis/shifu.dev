@@ -5,3 +5,9 @@ export function isMobile() {
   );
   return flag;
 }
+
+export function isEn() {
+  const enModel = /\/(en)\//g
+  let flag = window.location.href.match(enModel)
+  return flag
+}

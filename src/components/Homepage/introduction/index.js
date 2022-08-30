@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { CardOne } from "../cards"
 import { bar1, bar2, bar3, access, modularization, application, stable, security, community } from "../../svg"
-
 import Translate, { translate } from '@docusaurus/Translate';
 
 function DescriptionModel(props) {
@@ -39,7 +38,7 @@ function IntroBar(props) {
 let developerlist = [
   {
     img: access,
-    title: translate({message: '极速设备接入'}),
+    title: translate({ message: '极速设备接入' }),
     descript:
       <span>
         <Translate>大到使用私有驱动的工程机械</Translate><br />
@@ -52,7 +51,7 @@ let developerlist = [
   },
   {
     img: modularization,
-    title: translate({message: '模块化部署体验'}),
+    title: translate({ message: '模块化部署体验' }),
     descript:
       <span>
         <Translate>所有接入Shifu的设备及应用都会被封装成一个拼图式模块</Translate><br />
@@ -64,7 +63,7 @@ let developerlist = [
   },
   {
     img: application,
-    title: translate({message: '高效应用开发'}),
+    title: translate({ message: '高效应用开发' }),
     descript:
       <span>
         <Translate>接入设备后，Shifu会自动把设备的能力抽象成API，让你的应用和硬件设备彻底解耦，把低效的物联网应用开发变得像面向对象编程一样高效</Translate>
@@ -78,7 +77,7 @@ let developerlist = [
 let engineeringList = [
   {
     img: stable,
-    title: translate({message: '航天级稳定性'}),
+    title: translate({ message: '航天级稳定性' }),
     descript:
       <span>
         <Translate>Shifu已通过在航天场景验证</Translate><br />
@@ -91,7 +90,7 @@ let engineeringList = [
   },
   {
     img: security,
-    title: translate({message: '多维度安全策略'}),
+    title: translate({ message: '多维度安全策略' }),
     descript:
       <span>
         <Translate>联合国的云原生安全团队操刀</Translate><br />
@@ -104,7 +103,7 @@ let engineeringList = [
   },
   {
     img: community,
-    title: translate({message: '全球化社区生态'}),
+    title: translate({ message: '全球化社区生态' }),
     descript:
       <span>
         <Translate>Shifu得益于Kubernetes原生架构，可以无缝接入强大的云原生软件生态，让全球的开发者帮你解决后顾之忧</Translate>
