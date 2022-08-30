@@ -548,5 +548,11 @@
   },
   "1.1请选择你的系统": {
     "message": "1.1 Select your OS"
+  },
+  "接入设备后，Shifu会自动把设备的能力抽象成API，让你的应用和硬件设备彻底解耦，把低效的物联网应用开发变得像面向对象编程一样高效": {
+    "message": "After connecting to the device, Shifu will automatically abstract the device's capabilities into an API, allowing you to completely decouple your application from the hardware device, making inefficient IoT application development as efficient as object-oriented programming."
+  },
+  "Shifu得益于Kubernetes原生架构，可以无缝接入强大的云原生软件生态，让全球的开发者帮你解决后顾之忧": {
+    "message": "Shifu benefits from the Kubernetes native architecture, providing seamless access to the powerful cloud-native software ecosystem and allowing developers around the world to help you solve your worries."
   }
 }

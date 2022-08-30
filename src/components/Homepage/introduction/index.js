@@ -67,9 +67,7 @@ let developerlist = [
     title: translate({message: '高效应用开发'}),
     descript:
       <span>
-        <Translate>接入设备后，Shifu会自动把设备的能力抽象成API</Translate><br />
-        <Translate>让你的应用和硬件设备彻底解耦</Translate><br />
-        <Translate>把低效的物联网应用开发变得像面向对象编程一样高效</Translate>
+        <Translate>接入设备后，Shifu会自动把设备的能力抽象成API，让你的应用和硬件设备彻底解耦，把低效的物联网应用开发变得像面向对象编程一样高效</Translate>
       </span>,
     isReverse: true,
     titleColor: "#F33EE3",
@@ -109,9 +107,7 @@ let engineeringList = [
     title: translate({message: '全球化社区生态'}),
     descript:
       <span>
-        <Translate>Shifu得益于Kubernetes原生架构</Translate><br />
-        <Translate>可以无缝接入强大的云原生软件生态</Translate><br />
-        <Translate>让全球的开发者帮你解决后顾之忧</Translate>
+        <Translate>Shifu得益于Kubernetes原生架构，可以无缝接入强大的云原生软件生态，让全球的开发者帮你解决后顾之忧</Translate>
       </span>,
     isReverse: true,
     titleColor: "#2490FF",
