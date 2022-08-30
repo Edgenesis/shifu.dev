@@ -52,6 +52,8 @@ sudo kubectl get pods -A | grep nginx
 数字孪生的状态会和实际设备的状态一致，与数字孪生交互相当于与实际物联网设备交互。
 :::
 
+![](./images-cluster/cluster-1-zh.png)
+
 执行下面的命令，我们可以看到AGV的数字孪生已经正常启动：
 
 ```bash
@@ -59,10 +61,6 @@ sudo kubectl get pods -A | grep agv
 ```
 
 ![deviceshifu-agv_start.png](images/deviceshifu-agv_start.png)
-
-:::caution正在施工
-和install-demo里面的图一致
-:::
 
 ### 与数字孪生交互
 
@@ -108,9 +106,7 @@ sudo kubectl get pods -A | grep thermometer
 
 ![deviceshifu-thermometer pod_start.png](images/deviceshifu-thermometer_pod_start.png)
 
-:::caution正在施工
-加图 多一个连接的设备
-:::
+![](./images-cluster/cluster-2-zh.png)
 
 ### 与数字孪生交互
 
@@ -171,9 +167,7 @@ sudo kubectl get pods -A | grep plate
 ```
 ![deviceshifu-plate_pods_start.png](images/deviceshifu-plate-reader_pod_start.png)
 
-:::caution正在施工
-加图 多一个连接的设备
-:::
+![](./images-cluster/cluster-3-zh.png)
 
 ### 与数字孪生交互
 
@@ -221,9 +215,7 @@ sudo kubectl get pods -A | grep plc
 
 ![deviceshifu-plc_pods_start](images/deviceshifu-plc_pods_start.png)
 
-:::caution正在施工
-加图 多一个连接的设备
-:::
+![](./images-cluster/cluster-4-zh.png)
 
 ### 与数字孪生交互
 
@@ -265,10 +257,6 @@ curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&
 
 ### 创建数字孪生
 
-:::caution正在施工
-加图 多一个连接的设备
-:::
-
 首先，我们创建一个机械臂的数字孪生：
 
 ```bash
@@ -282,6 +270,8 @@ sudo kubectl get pods -A | grep robotarm
 ```
 
 ![deviceshifu-reboot-arm_start_pods](images/deviceshifu-reboot-arm_start_pods.png)
+
+![](./images-cluster/cluster-5-zh.png)
 
 ### 与数字孪生交互
 

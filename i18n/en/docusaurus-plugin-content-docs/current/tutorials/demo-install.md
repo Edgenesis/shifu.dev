@@ -139,9 +139,7 @@ The command `kubectl get pods -A` can view all running `Pod`s in the cluster. (Y
 We find that under the NAMESPACE `shifu-crd-system`, the controller ***shifuController*** is running now; under the NAMESPACE `deviceshifu`, the digital twin of the AVG device, ***deviceShifu***, is already running.
 :::
 
-:::caution Work in Progress
-The image presenting the cluster.
-:::
+![](./images-cluster/cluster-1-en.png)
 
 ## Next Step
 

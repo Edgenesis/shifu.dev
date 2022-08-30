@@ -60,9 +60,7 @@ sudo kubectl get pods -A | grep agv
 
 ![deviceshifu-agv_start.png](images/deviceshifu-agv_start.png)
 
-:::caution Work in Progress
-Image same as the image in install-demo
-:::
+![](./images-cluster/cluster-1-en.png)
 
 ### Interact with the digital twin
 
@@ -108,9 +106,7 @@ sudo kubectl get pods -A | grep thermometer
 
 ![deviceshifu-thermometer pod_start.png](images/deviceshifu-thermometer_pod_start.png)
 
-:::caution Work in Progress
-Image above + new device
-:::
+![](./images-cluster/cluster-2-en.png)
 
 ### Interact with the digital twin
 
@@ -172,9 +168,7 @@ sudo kubectl get pods -A | grep plate
 
 ![deviceshifu-plate_pods_start.png](images/deviceshifu-plate-reader_pod_start.png)
 
-:::caution Work in Progress
-Image above + new device
-:::
+![](./images-cluster/cluster-3-en.png)
 
 ### Interact with the digital twin
 
@@ -222,9 +216,7 @@ sudo kubectl get pods -A | grep plc
 
 ![deviceshifu-plc_pods_start](images/deviceshifu-plc_pods_start.png)
 
-:::caution Work in Progress
-Image above + new device
-:::
+![](./images-cluster/cluster-4-en.png)
 
 ### Interact with the digital twin
 
@@ -280,9 +272,7 @@ sudo kubectl get pods -A | grep robotarm
 
 ![deviceshifu-reboot-arm_start_pods](images/deviceshifu-reboot-arm_start_pods.png)
 
-:::caution Work in Progress
-Image above + new device
-:::
+![](./images-cluster/cluster-5-en.png)
 
 ### Interact with the digital twin
 

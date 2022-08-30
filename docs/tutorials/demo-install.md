@@ -139,15 +139,7 @@ sudo kubectl get pods -A
 可以看到 NAMESPACE `shifu-crd-system` 下，控制器 ***shifuController*** 正在运行；NAMESPACE `deviceshifu` 下，已经有一个AGV设备对应的 ***deviceShifu*** 数字孪生在运行了。
 :::
 
-:::caution正在施工
-这里需要插入一张图片：整个大圈是一个集群，里面有
-
-- K8s控制的东西
-- shifu
-- 实际的AGV
-- 数字孪生的AGV
-- 其他四个未连接的设备
-:::
+![](./images-cluster/cluster-1-zh.png)
 
 ## 下一步
 
