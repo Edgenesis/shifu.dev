@@ -1,3 +1,4 @@
+import Translate, { translate } from '@docusaurus/Translate';
 import React from 'react';
 import styles from "./styles.module.scss";
 import { ButtonSquare } from "../../../button";
@@ -30,13 +31,13 @@ const stepOnebtnList = [
 const stepOneCodeList = [
   {
     id: 1,
-    description: "2.1在Linux/Windows/Mac的命令行中执行以下命令",
+    description: translate({ message: "2.1在Linux/Windows/Mac的命令行中执行以下命令" }),
     code: "sudo docker ps ",
     isCopy: true
   },
   {
     id: 2,
-    description: "2.2如果 Docker 运行顺利，将会有以下输出",
+    description: translate({ message: "2.2如果 Docker 运行顺利，将会有以下输出" }),
     code: `ubuntu@localhost:~$ sudo docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES`,
     isCopy: false,
@@ -52,11 +53,11 @@ function StepOne() {
   })
   return (
     <div className={styles.stepOne}>
-      <h1 className={styles.titleOne}>1.请选择你的系统以下载Docker</h1>
+      <h1 className={styles.titleOne}><Translate>1.请选择你的系统以下载Docker</Translate></h1>
       <div className={styles.buttonsContainer}>
         {buttons}
       </div>
-      <h1 className={styles.titleOne}>2.确认Docker运行成功</h1>
+      <h1 className={styles.titleOne}><Translate>2.确认Docker运行成功</Translate></h1>
       {codeList}
     </div>
   )

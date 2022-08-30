@@ -96,6 +96,11 @@ const config = {
             label: '文档',
           },
           {
+            to: '/blog', 
+            position: 'left',
+            label: '博客', 
+          },
+          {
             href: '/disclaimer',
             label: 'Shifu Demo 下载',
             position: 'left',
@@ -118,8 +123,8 @@ const config = {
             title: '文档',
             items: [
               {
-                label: '极速安装',
-                to: 'docs/quickstart/quick_install',
+                label: '快速上手',
+                to: '/docs/tutorials',
               },
             ],
           },
@@ -128,7 +133,7 @@ const config = {
             items: [
               {
                 label: '敬请期待！',
-                to: 'docs',
+                to: '/docs',
                 // href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
             ],
@@ -142,7 +147,7 @@ const config = {
               },
               {
                 label: 'Shifu Demo 下载',
-                href: 'disclaimer',
+                href: '/disclaimer',
               },
             ],
           },

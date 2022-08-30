@@ -1,3 +1,4 @@
+import Translate, { translate } from '@docusaurus/Translate';
 import React from "react";
 import styles from "./styles.module.scss";
 import { ButtonSquare } from "../button";
@@ -21,11 +22,11 @@ function DemoFooter(props) {
   }
   return (
     <div className={styles.demoFooterContainer}>
-      <ButtonSquare style={{ display: `${one}` }} colorLevel="two" content="Docker部署已完成" onClick={props.onClick}></ButtonSquare>
-      <ButtonSquare style={{ display: `${two}` }} colorLevel="two" content="Shifu安装已完成" onClick={props.onClick}></ButtonSquare>
+      <ButtonSquare style={{ display: `${one}` }} colorLevel="two" content={translate({ message: "Docker部署已完成" })} onClick={props.onClick}></ButtonSquare>
+      <ButtonSquare style={{ display: `${two}` }} colorLevel="two" content={translate({ message: "Shifu安装已完成" })} onClick={props.onClick}></ButtonSquare>
       <div onClick={() => props.isReturn()} className={styles.returnBack} style={{ display: `${three}` }}>
         <ReturnIcon></ReturnIcon>
-        <p className={styles.returnContent}>再看一遍</p>
+        <p className={styles.returnContent}><Translate>再看一遍</Translate></p>
       </div>
     </div >
   );

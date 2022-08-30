@@ -1,0 +1,8 @@
+{
+  "label": "开源社区",
+  "position": 5000,
+  "link": {
+    "type": "doc",
+    "id": "README"
+  }
+}

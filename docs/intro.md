@@ -2,51 +2,37 @@
 id: intro
 slug: /
 sidebar_position: 0
-title: "Shifu 简介"
+title: 欢迎使用
 ---
 
-# 欢迎使用 Shifu
+# 欢迎使用 ***Shifu***
 
-***Shifu*** (GitHub仓库：<https://github.com/Edgenesis/shifu>) 是一个基于[Kubernetes](https://kubernetes.io/)的物联网开发及管理的开源平台。开发者通过使用 ***Shifu*** ，可以更简单地连接、监视和控制任何物联网设备。
+## 视频介绍
 
-## 物联网设备
+<video width="100%" controls>
+    <source src="https://bianwuji.com/stuff/videos/productintro.mp4" type="video/mp4"></source>
+</video>
 
-物联网设备是指可以与其他设备、系统、服务进行本地或在线地连接和交流的设备，例如：
+## 简介
 
-- 一个制造厂里的机械臂，它可以接收来自本地的自动化控制系统传来的命令并完成相应的动作。
-- 一辆自动导引车，操纵者可对其进行远程控制。
-- 一辆汽车上的温度计，它向车载空调发出命令使其升温或降温，并上传实时温度数据到云端。
+***Shifu*** 为用户提供全场景设备托管与一体化软件开发的透明框架。开发者通过使用 ***Shifu***，可以更简单地连接、监视和控制任何物联网设备。 
 
-## 通信
+***Shifu*** 的创新优势是通过透明框架内的数字孪生技术，为设备赋予有思考能力的 “数字大脑”。数字孪生将反映设备的实时状态，对其进行开发操作等同于操作设备本身。物联网设备接入到 ***Shifu*** 中便会生成标准化接口，实现互联网互动，通过平台层对场景内所有设备、机器进行北向数据收集和南向指令管控。 
 
+***Shifu*** 提供了桥接式设备互联解决方案，微服务架构令设备能力模块可调用，可复用，目标是实现通过配置文件轻松接入各种异构设备。目前，***Shifu*** 已经实现通过 `HTTP`、`MQTT`、`TCP Socket`、`RTSP`、`OPC UA` 等协议接入物联网设备，同时已将 `西门子S7`、`海康威视 (HIKVISION)` 等通过私有协议通讯的设备进行了集成。 
 
-***Shifu*** 与应用、设备之间的关系，可以用下图来表示：
+作为云原生框架，***Shifu*** 通过 `Kubernetes` 的 `CRD功能` 延伸了 `Kubernetes` 的资源，来实现高可用、静态域名、服务管理等功能，***Shifu*** 可以支持对任何设备进行任何形式的配置。当连接物理设备时，***Shifu*** 会识别并以一个 `Kubernetes Pod` 的方式启动该设备的数字孪生 ***deviceShifu***。开发者通过接入 ***deviceShifu*** 的接口，可以获取物联网设备的所有功能，同时编程定义设备原本不具备的功能。 
 
-```mermaid
-flowchart LR;
- APP<-->|HTTP/gRPC|Shifu;
-  Shifu<-->|IoT Protocols/drivers|Devices;
-```
+云原生的 ***Shifu*** 将系统运维的难度大大降低，应用开发者可以通过一套 `Kubernetes` 基础架构进行运维管理。***Shifu*** 将推动 `Kubernetes` 成为物联网开发的底层架构标准，将容器编排技术带入物联网软件开发生态中。 
 
-### ***Shifu*** 与设备之间的通信
+## 目录
 
-***Shifu*** 可以同时兼容不同的[通信协议](protocol-driver-compatibility/protocols.md)和[驱动](protocol-driver-compatibility/drivers.md)，它将不同设备的不同形式的请求进行统一，使得用户可以更简单地使用设备。同时，***Shifu*** 兼容的协议和驱动的数量也在不断增加。
+您可以在左侧边栏选择希望查看的内容：
 
-### ***Shifu*** 与应用之间的通信
-***Shifu*** 可以通过`HTTP`协议(gRPC协议暂未支持)与开发者所开发的程序进行通信。使得开发者开发物联网场景时像开发一个软件一样简单。
-换句话说，对设备的控制和信息读取都由 ***Shifu*** 托管并对外暴露成统一类型的接口，只需要使用相同类型的api即可实现对多种类设备的的通信。
-
-## 功能
-
-***Shifu***作为一个对物联网设备进行开发和管理的框架，提供以下功能：
-
-- [***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)
-  - 从设备获取数据
-  - 向设备发送指令
-  - 各种应用开发工具(有限状态机等）
-- [***shifud***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud-zh.md)
-  - 设备发现
-  - 设备验证
-  - 设备更新
-- [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController-zh.md)
-  - 管理 ***deviceShifu*** 的生命周期
+- [**产品介绍**](./introduction/)：了解 ***Shifu*** 的架构、功能、应用场景，查看 ***Shifu*** 对协议的支持情况。
+- [**快速上手**](./tutorials/)：通过在电脑上安装 ***Shifu*** 来进行体验试用。
+- [**使用指南**](./guides/)：更详细的 ***Shifu*** 使用教程。
+- [**参考手册**](./references/)
+    - ***Shifu*** 架构、功能解释。
+    - ***Shifu*** API参考。
+- [**开源社区**](./community/)：查看常见问题、获取支持、获取加入开源社区等内容。

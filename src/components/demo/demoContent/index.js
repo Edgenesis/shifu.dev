@@ -1,3 +1,4 @@
+import Translate, { translate } from '@docusaurus/Translate';
 import React from 'react';
 import styles from "./styles.module.scss";
 import StepOne from './components/stepOne';

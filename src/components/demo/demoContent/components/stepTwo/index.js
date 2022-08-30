@@ -1,3 +1,4 @@
+import Translate, { translate } from '@docusaurus/Translate';
 import React from 'react';
 import styles from "./styles.module.scss";
 import Select from "../../../select"
@@ -6,19 +7,19 @@ import CodeView from '../../../codeVIew';
 const codeListOne = [
   {
     id: 1,
-    description: "1.2下载 Shifu 安装包",
+    description: translate({ message: "1.2下载 Shifu 安装包" }),
     code: "",
     isCopy: true
   },
   {
     id: 2,
-    description: "1.3将所下载的安装包解压到testdir文件夹中",
+    description: translate({ message: "1.3将所下载的安装包解压到testdir文件夹中" }),
     code: "",
     isCopy: true,
   },
   {
     id: 3,
-    description: "1.4运行Demo",
+    description: translate({ message: "1.4运行Demo" }),
     code: `sudo bash scripts/deviceshifu-demo-aio.sh run_demo `,
     isCopy: true,
   },
@@ -27,13 +28,13 @@ const codeListOne = [
 const codeListTwo = [
   {
     id: 4,
-    description: "2.1使用以下命令来查看运行效果",
+    description: translate({ message: "2.1使用以下命令来查看运行效果" }),
     code: "sudo kubectl get pods -A ",
     isCopy: true
   },
   {
     id: 5,
-    description: "2.2如果所有 “STATUS“ 都是 Running 即表示成功",
+    description: translate({ message: "2.2如果所有 “STATUS“ 都是 Running 即表示成功" }),
     code: ` ubuntu@localhots:~/test/testdir$ sudo kubectl get pods -A",
 NAMESPACE                    NAME                                 READY       STATUS      RESTARTS       AGE
 devices             agv-5bd7c4f885-w6xpx                           1/1        Running        0           17s
@@ -132,14 +133,14 @@ class StepTwo extends React.Component {
     })
     return (
       <div className={styles.stepTwo} >
-        <h1 className={styles.titleOne}>1.安装Shifu</h1>
-        <h2 className={styles.titleTwo}>1.1请选择你的系统</h2>
+        <h1 className={styles.titleOne}><Translate>1.安装Shifu</Translate></h1>
+        <h2 className={styles.titleTwo}><Translate>1.1请选择你的系统</Translate></h2>
         <div className={styles.selectContainer}>
           <Select title={this.state.OSModel} options={optionsOne} reciveData={this.getOSModel}></Select>
           <Select title={this.state.CPUModel} options={optionsTwo} reciveData={this.getCPUModel}></Select>
         </div>
         {codeViewOne}
-        <h1 className={styles.titleOne}>2.确认Docker运行成功</h1>
+        <h1 className={styles.titleOne}><Translate>2.确认Docker运行成功</Translate></h1>
         {codeViewTwo}
       </div >
     )

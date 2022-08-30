@@ -2,50 +2,37 @@
 id: intro
 slug: /
 sidebar_position: 0
-title: "Profile"
+title: Welcome
 ---
 
-# Welcome to Shifu
+# Welcome to Use ***Shifu***
 
-***Shifu*** (GitHub repository: <https://github.com/Edgenesis/shifu>) is an open source platform for IoT development and management based on [Kubernetes](https://kubernetes.io/). By using ***Shifu***, developers can connect, monitor and control any IoT device more easily.
+<!-- ## 视频介绍
 
-## IoT Devices
+<video width="100%" controls>
+    <source src="https://bianwuji.com/stuff/videos/productintro.mp4" type="video/mp4"></source>
+</video> -->
 
-An IoT device is a device that can connect and interact with other devices, systems, and applications offline or online, for instance:
+## Introduction
 
-- A robotic arm in a manufacturing plant that can receive commands from a local automated control system and complete the corresponding moves.
-- An automated guided vehicle that can be remotely controlled by its operator.
-- A thermometer in a car that can send commands to the on-board air conditioner to raise or lower its temperature, and can upload real-time temperature data to the cloud.
+***Shifu*** provides a transparent framework for customers to host all-scene devices and integrate software development.  ***Shifu*** makes it easier to connect, monitor, and control any IoT device. 
 
-## Interaction
+***Shifu***'s innovative advantage is the empowerment of devices with a thinking "digital brain" through digital twin technology within a transparent framework. The digital twin will reflect the real-time state of the device, and developing operations on it is equivalent to operating the device itself. IoT devices plugged into Shifu will generate a standardized interface to enable Internet interaction, northbound data collection and southbound command control of all devices and machines in the scene through the platform layer. 
 
-The relationship between ***Shifu*** and applications and devices can be represented by the following diagram:
+***Shifu*** provides a bridged device interconnection solution with a micro-service architecture that makes device capability modules invocable and reusable, with the goal of achieving easy access to various heterogeneous devices through configuration files. Currently, ***Shifu*** has achieved access to IoT devices through `HTTP`, `MQTT`, `TCP Socket`, `RTSP`, `OPC UA`, and other protocols, and has integrated devices communicating through private protocols such as `Siemens S7` and `HIKVISION`. 
 
-```mermaid
-flowchart LR;
- APP<-->|HTTP/gRPC|Shifu;
-  Shifu<-->|IoT Protocols/drivers|Devices;
-```
+As a cloud-native framework, ***Shifu*** extends the resources of `Kubernetes` through the `CRD function` of it to achieve high availability, static domain names, service management, etc. ***Shifu*** can support any kind of configuration for any device. When a physical device is connected, ***Shifu*** recognizes and launches that device's digital twin, ***deviceShifu***, as a `Kubernetes Pod`. By accessing ***deviceShifu***'s interface, developers can access all the features of an IoT device, while programmatically defining features that the device would not otherwise have. 
 
-### Interaction between ***Shifu*** and devices
+Cloud-native ***Shifu*** makes system operations and maintenance much less difficult, and application developers can manage operations and maintenance through a set of `Kubernetes` infrastructure. ***Shifu*** will drive `Kubernetes` to become the underlying architecture standard for IoT development, bringing container orchestration technology to the IoT software development ecosystem. 
 
-***Shifu*** is compatible with different [communication protocols](protocol-driver-compatibility/protocols.md) and [drivers](protocol-driver-compatibility/drivers.md) all at once, and it unifies different forms of requests from different devices, making it easier to use the devices. Simultaneosly, the number of protocols and drivers compatible with ***Shifu*** is increasing.
+## Contents
 
-### Interaction between ***Shifu*** and applications
+Check contents at the left sidebar:
 
-***Shifu*** can interact with applications developed via `HTTP` protocol (gRPC protocol not yet supported). With ***Shifu***, developing IoT scenarios is as easy as developing software. In other words, the control and information reading of devices are hosted by Shifu and exposed as a unified type of interface, so that interaction between multiple devices can be achieved by using the same type of api.
-
-## Features
-
-***Shifu***, as a framework for developing and managing IoT devices, features the following functions：
-
-- [***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md)
-  - Get data from devices
-  - Send commands to the devices
-  - Various application development tools (finite state machine, etc.)
-- [***shifud***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud.md)
-  - Device discovery
-  - Device verification
-  - Device update
-- [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController.md)
-  - Managing the ***deviceShifu*** lifecycle
+- [**Product Introduction**](./introduction/): Learn about the architecture, functions, using cases of ***Shifu***. And check ***Shifu***'s support for different protocols.
+- [**Get Started**](./tutorials/): Install ***Shifu*** in your computer to try it out.
+- [**How-to Guides**](./guides/): Detailed guides for using ***Shifu***.
+- [**Reference Book**](./references/)
+    - ***Shifu*** architecture and functions.
+    - ***Shifu*** API reference.
+- [**Open Source Community**](./community/): View common problems, get support, and join the open source community.

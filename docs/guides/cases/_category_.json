@@ -1,0 +1,8 @@
+{
+  "label": "接入设备",
+  "position": 20,
+  "link": {
+    "type": "doc",
+    "id": "README"
+  }
+}
