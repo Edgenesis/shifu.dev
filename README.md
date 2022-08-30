@@ -71,10 +71,10 @@ A caution with title.
 
 Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
 
-- Translate homepage
+- Translate React pages
     - Check https://docusaurus.io/docs/i18n/tutorial#translate-your-react-code
 - Translate docs
-    - Translate docs in `i18n/en/docusaurus-plugin-content-docs/current`.
+    - Copy and translate docs in `i18n/en/docusaurus-plugin-content-docs/current`.
 - Translate plugin data
     - Run `yarn run write-translations --locale en` to generate json files for translating.
     - Translate

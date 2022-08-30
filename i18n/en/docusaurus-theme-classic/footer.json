@@ -11,13 +11,9 @@
     "message": "More",
     "description": "The title of the footer links column with title=更多 in the footer"
   },
-  "link.item.label.极速安装": {
-    "message": "Quick Installation",
-    "description": "The label of footer link with label=极速安装 linking to docs"
-  },
   "link.item.label.敬请期待！": {
     "message": "Coming soon...",
-    "description": "The label of footer link with label=敬请期待！ linking to docs"
+    "description": "The label of footer link with label=敬请期待！ linking to /docs"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
@@ -30,5 +26,9 @@
   "copyright": {
     "message": "© 2022 Edgenesis.  |  <a href=\"https://beian.miit.gov.cn/\">京ICP备2021037926号</a>  | <a href=\"http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039843\">京公网安备11010802039843号</a>",
     "description": "The footer copyright"
+  },
+  "link.item.label.快速上手": {
+    "message": "快速上手",
+    "description": "Get Started"
   }
 }
