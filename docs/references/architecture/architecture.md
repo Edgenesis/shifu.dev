@@ -13,7 +13,7 @@ sidebar_position: 0
 
 ```mermaid
 flowchart BT
-	subgraph Shifu Framework
+	subgraph Shifu
     
     subgraph sg-kernel[Shifu Kernel]
     	subgraph sg-cp[Control Plane]

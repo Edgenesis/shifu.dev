@@ -111,7 +111,7 @@ function HeaderLogo() {
         />
       </svg>
       <div className={styles.words}>
-        <h1 className={styles.title}>Shifu Framework</h1>
+        <h1 className={styles.title}>Shifu</h1>
         <p className={styles.describe}>
           <Translate>让开发产业场景像开发APP一样简单！</Translate>
         </p>
@@ -124,7 +124,7 @@ function DownloadBtn() {
   return (
     <div className={styles.btnContainer}>
       <BlueBtn
-        content="Shifu demo"
+        content="Shifu Demo"
         href="/disclaimer"
         height="35px"
       ></BlueBtn>

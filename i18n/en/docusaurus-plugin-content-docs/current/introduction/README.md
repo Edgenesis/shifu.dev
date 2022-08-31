@@ -24,7 +24,7 @@ With digital twin, ***Shifu*** progressively achieve low-code and zero-code deve
 
 ## Introduction of Usage
 
-***Shifu Framework*** is an efficient developer tool that provides full-field IoT solutions. 
+***Shifu*** is an efficient developer tool that provides full-field IoT solutions. 
 
 ### Step 1: Import the Driver 
 

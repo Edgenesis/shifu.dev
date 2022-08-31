@@ -1,4 +1,4 @@
-# 产品介绍
+# 项目介绍
 
 ***Shifu*** ([GitHub仓库](https://github.com/Edgenesis/shifu)) 是一个基于 [Kubernetes](https://kubernetes.io/) 的物联网开发及管理的开源平台。开发者通过使用 ***Shifu***，可以更简单地连接、监视和控制任何物联网设备。
 
@@ -24,7 +24,7 @@
 
 ## 使用介绍
 
-***Shifu Framework*** 是高效的物联网开发者工具，提供全场景物联网解决方案。 
+***Shifu*** 是高效的物联网开发者工具，提供全场景物联网解决方案。 
 
 ### 第一步：导入驱动 
 
