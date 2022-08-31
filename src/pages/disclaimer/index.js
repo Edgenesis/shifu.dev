@@ -26,7 +26,7 @@ if (isMobile()) {
     </div>
 } else {
   disclaimer =
-    <SnowBg>
+    // <SnowBg>
       <div className={styles.disclaimerContainer}>
         <h1 className={styles.title}><Translate>请务必认真阅读以下内容</Translate></h1>
         <div className={styles.container}>
@@ -144,7 +144,7 @@ if (isMobile()) {
           <ButtonSquare href="/demo" colorLevel="two" content={translate({ message: "同意" })}></ButtonSquare>
         </div>
       </div>
-    </SnowBg>
+    // </SnowBg>
 }
 
 export default function Disclaimer() {

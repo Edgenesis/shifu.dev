@@ -9,9 +9,9 @@ import SnowBg from "../../background";
 export function FirstPart() {
   return (
     <div className={styles.FirstContainer}>
-      <SnowBg>
+      {/* <SnowBg> */}
         <Header></Header>
-      </SnowBg>
+      {/* </SnowBg> */}
     </div>
   );
 }
