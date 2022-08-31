@@ -6,7 +6,7 @@ import { FirstPart, SecondPart, ThirdPart } from "../components/Homepage/parts";
 export default function Hello() {
   return (
     <Layout title="Hello" description="Hello React Page">
-      <FirstPart> </FirstPart>
+      <FirstPart></FirstPart>
       <SecondPart></SecondPart>
       <ThirdPart></ThirdPart>
     </Layout>
