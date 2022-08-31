@@ -103,7 +103,7 @@ If the output is `Cannot connect to the Docker daemon at unix:///var/run/docker.
 
 ## Install ***Shifu***
 
-Please visit [**demo.shifu.run**](https://demo.shifu.run) to download ***Shifu*** installer and install ***Shifu***.
+Please visit [**Download Shifu Demo**](https://shifu.run/disclaimer) to download ***Shifu*** installer and install ***Shifu***.
 
 Skip to the second step of the page and after completing its process, return to this page.
 
