@@ -13,7 +13,7 @@ The following diagram illustrates the ***Shifu*** architecture：
 
 ```mermaid
 flowchart BT
-	subgraph Shifu Framework
+	subgraph Shifu
     
     subgraph sg-kernel[Shifu Kernel]
     	subgraph sg-cp[Control Plane]

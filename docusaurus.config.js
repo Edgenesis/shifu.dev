@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Shifu Framework',
+  title: 'Shifu',
   tagline: '让开发产业场景像开发一个APP一样简单',
   url: 'https://shifu.run',
   baseUrl: '/',
@@ -83,7 +83,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Shifu Framework',
+        title: 'Shifu',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
