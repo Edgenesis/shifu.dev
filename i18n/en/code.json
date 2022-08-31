@@ -481,7 +481,7 @@
     "message": "Interact with the AGV"
   },
   "https://shifu.run/docs/tutorials/demo-try#1-与agv交互": {
-    "message": "https://shifu.run/docs/tutorials/demo-try#1-interact-with-the-agv"
+    "message": "https://shifu.run/en/docs/tutorials/demo-try#1-interact-with-the-agv"
   },
   "案例二": {
     "message": "Case Two"
@@ -490,7 +490,7 @@
     "message": "Interact with the thermometer"
   },
   "https://shifu.run/docs/tutorials/demo-try#2-与温度计交互": {
-    "message": "https://shifu.run/docs/tutorials/demo-try#2-interact-with-the-thermometer"
+    "message": "https://shifu.run/en/docs/tutorials/demo-try#2-interact-with-the-thermometer"
   },
   "案例三": {
     "message": "Case Three"
@@ -499,7 +499,7 @@
     "message": "Interact with the microplate reader"
   },
   "https://shifu.run/docs/tutorials/demo-try#3-与酶标仪交互": {
-    "message": "https://shifu.run/docs/tutorials/demo-try#3-interact-with-the-microplate-reader"
+    "message": "https://shifu.run/en/docs/tutorials/demo-try#3-interact-with-the-microplate-reader"
   },
   "案例四": {
     "message": "Case Four"
@@ -508,7 +508,7 @@
     "message": "Interact with the PLC"
   },
   "https://shifu.run/docs/tutorials/demo-try#4-与plc交互": {
-    "message": "https://shifu.run/docs/tutorials/demo-try#4-interact-with-the-plc"
+    "message": "https://shifu.run/en/docs/tutorials/demo-try#4-interact-with-the-plc"
   },
   "案例五": {
     "message": "Case Five"
@@ -517,7 +517,7 @@
     "message": "Interact with the robotic arm"
   },
   "https://shifu.run/docs/tutorials/demo-try#5-与机械臂交互": {
-    "message": "https://shifu.run/docs/tutorials/demo-try#5-interact-with-the-robotic-arm"
+    "message": "https://shifu.run/en/docs/tutorials/demo-try#5-interact-with-the-robotic-arm"
   },
   "确认是否启动Nginx": {
     "message": "Confirm nginx starts"
@@ -781,7 +781,7 @@
     "message": "Address: Room 511, Building 12, Venture Street, Haidian District, Beijing"
   },
   "电话：18515145818": {
-    "message": "Tel：18515145818"
+    "message": "Tel: 18515145818"
   },
   "我们将尽快审核所涉问题，并在验证您的用户身份后的十五天内予以回复。": {
     "message": "We will review the issue as soon as possible and respond within fifteen days of verifying your user status."
