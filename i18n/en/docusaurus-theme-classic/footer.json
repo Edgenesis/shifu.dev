@@ -29,6 +29,6 @@
   },
   "link.item.label.快速上手": {
     "message": "快速上手",
-    "description": "Get Started"
+    "description": "The label of footer link with label=快速上手 linking to /docs/tutorials"
   }
 }

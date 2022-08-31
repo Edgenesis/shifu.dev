@@ -3,9 +3,9 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.产品介绍": {
-    "message": "Product Introduction",
-    "description": "The label for category 产品介绍 in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.项目介绍": {
+    "message": "Project Introduction",
+    "description": "The label for category 项目介绍 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.快速上手": {
     "message": "Get Started",
@@ -19,9 +19,9 @@
     "message": "Connect Devices",
     "description": "The label for category 接入设备 in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.参考手册": {
-    "message": "Reference Book",
-    "description": "The label for category 参考手册 in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.开发者文档": {
+    "message": "Developer Documentation",
+    "description": "The label for category 开发者文档 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.架构": {
     "message": "Architecture",

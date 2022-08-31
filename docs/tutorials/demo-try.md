@@ -319,7 +319,7 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 
 - 您可以查看左侧边栏中的
     - **使用指南**：更详细的 ***Shifu*** 使用教程。
-    - **参考手册**
+    - **开发者文档**
         - ***Shifu*** 架构、功能解释。
         - ***Shifu*** API参考。
     - **开源社区**：查看常见问题、获取支持、获取加入开源社区等内容。
