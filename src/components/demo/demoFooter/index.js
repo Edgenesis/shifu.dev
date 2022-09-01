@@ -23,7 +23,7 @@ function DemoFooter(props) {
   return (
     <div className={styles.demoFooterContainer}>
       <ButtonSquare style={{ display: `${one}` }} colorLevel="two" content={translate({ message: "点击安装Shifu" })} onClick={props.onClick}></ButtonSquare>
-      <ButtonSquare style={{ display: `${two}` }} colorLevel="two" content={translate({ message: "点击进入试玩" })} onClick={props.onClick}></ButtonSquare>
+      <ButtonSquare style={{ display: `${two}` }} colorLevel="two" content={translate({ message: "点击进入试玩" })} target="_blank" href={"https://shifu.run/docs/tutorials/demo-try"}></ButtonSquare>
       <div onClick={() => props.isReturn()} className={styles.returnBack} style={{ display: `${three}` }}>
         <ReturnIcon></ReturnIcon>
         <p className={styles.returnContent}><Translate>再看一遍</Translate></p>
