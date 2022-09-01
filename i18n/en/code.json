@@ -812,5 +812,11 @@
   },
   "八": {
     "message": "Eight"
+  },
+  "点击安装Shifu": {
+    "message": "Click to install Shifu"
+  },
+  "点击进入试玩": {
+    "message": "Click to try Shifu"
   }
 }
