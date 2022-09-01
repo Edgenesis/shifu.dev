@@ -163,13 +163,13 @@ class StepThree extends React.Component {
             <ButtonSquare colorLevel="one" content={translate({ message: "进入试玩" })} target="_blank" href={this.state.btnInfo.url}></ButtonSquare>
           </div>
         </div>
-        <div className={styles.enterShifuCloud}>
+        {/* <div className={styles.enterShifuCloud}>
           <ActiveLine></ActiveLine>
           <a href='https://cloud.shifu.run/' target='_blank' className={styles.shifuCloud}>
             <ShifuCloudLogo></ShifuCloudLogo>
           </a>
           <p className={styles.shifuCloudContent}><Translate>免费试用Shifu Cloud</Translate></p>
-        </div>
+        </div> */}
       </div>
     )
   }
