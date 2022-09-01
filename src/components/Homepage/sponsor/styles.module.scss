@@ -37,3 +37,13 @@
     align-items: center;
   }
 }
+
+@media screen and (max-width: 996px) {
+  .Sponsor {
+    margin: 0 2vw;
+  }
+  .wrapper {
+    margin: 24px 0 24px 0;
+    width: 100vw;
+  }
+}
