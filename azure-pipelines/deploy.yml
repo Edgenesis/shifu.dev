@@ -16,13 +16,17 @@ steps:
     set -e
     npm install
     npm run build
-  displayName: 'npm install and build'
+    echo [DEBUG] && pwd && ls
+    cd build
+    echo [DEBUG] && pwd && ls
+    zip -r build.zip .
+  displayName: 'npm build and zip'
 
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'shifurunssh'
     sourceFolder: 'build'
-    contents: '**'
+    contents: 'build.zip'
     targetFolder: '/home/ubuntu/docusaurus-dist'
     readyTimeout: '20000'
     cleanTargetFolder: true
@@ -33,6 +37,6 @@ steps:
     sshEndpoint: 'shifurunssh'
     runOptions: 'inline'
     inline: |
-      sudo rm -rf /var/www/docusaurus.shifu.run
-      sudo mv /home/ubuntu/docusaurus-dist /var/www/docusaurus.shifu.run
+      sudo rm -rf /var/www/docusaurus.shifu.run && sudo mkdir -p /var/www/docusaurus.shifu.run
+      sudo unzip /home/ubuntu/docusaurus-dist/build.zip -d /var/www/docusaurus.shifu.run
     readyTimeout: '20000'
