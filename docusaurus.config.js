@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Shifu',
-  tagline: '让开发产业场景像开发一个APP一样简单',
+  tagline: 'Make developing industrial scenes as easy as developing an app',
   url: 'https://shifu.run',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -20,9 +20,10 @@ const config = {
   projectName: 'shifu-docs-docusaurus', // Usually your repo name.
 
   // https://docusaurus.io/docs/i18n/tutorial#start-your-site
+  // https://docusaurus.io/docs/api/docusaurus-config#i18n
   i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans', 'en'],
+    defaultLocale: 'en',
+    locales: ['en', 'zh-Hans'],
   },
 
   plugins: [
@@ -69,7 +70,7 @@ const config = {
         },
         blog: {
           routeBasePath: '/blog',
-          blogSidebarTitle: '所有博客',
+          blogSidebarTitle: 'All blogs',
           blogSidebarCount: 'ALL',
         },
         theme: {
@@ -93,16 +94,16 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: '文档',
+            label: 'Docs',
           },
           {
             to: '/blog', 
             position: 'left',
-            label: '博客', 
+            label: 'Blog', 
           },
           {
             href: '/disclaimer',
-            label: 'Shifu Demo 下载',
+            label: 'Download Demo',
             position: 'left',
           },
           {
@@ -120,39 +121,39 @@ const config = {
         style: 'light',
         links: [
           {
-            title: '文档',
+            title: 'Docs',
             items: [
               {
-                label: '快速上手',
+                label: 'Get Started',
                 to: '/docs/tutorials',
               },
             ],
           },
           {
-            title: '社区',
+            title: 'Community',
             items: [
               {
-                label: '敬请期待！',
+                label: 'Coming soon...',
                 to: '/docs',
                 // href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
             ],
           },
           {
-            title: '更多',
+            title: 'More',
             items: [
               {
                 label: 'GitHub',
                 href: 'https://github.com/edgenesis/shifu',
               },
               {
-                label: 'Shifu Demo 下载',
+                label: 'Download Demo',
                 href: '/disclaimer',
               },
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} 边无际 Edgenesis.  |  <a href="https://beian.miit.gov.cn/">京ICP备2021037926号</a>  | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039843">京公网安备11010802039843号</a>`,
+        copyright: `© ${new Date().getFullYear()} Edgenesis. | <a href="https://beian.miit.gov.cn/">京ICP备2021037926号</a>  | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039843">京公网安备11010802039843号</a>`,
       },
       prism: {
         theme: lightCodeTheme,

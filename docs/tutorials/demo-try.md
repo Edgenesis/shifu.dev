@@ -1,60 +1,58 @@
 ---
-title: 体验试用
+title: Try it Out
 sidebar_position: 1
 ---
 
-# 体验 ***Shifu***
+# Try it Out
 
-***Shifu*** 安装包 中准备了五个设备(`AGV`，`温度计`，`酶标仪`，`PLC`，`机械臂`）供您进行试玩，体验 ***Shifu*** 的能力。
+We have prepared five devices (AGV, thermometer, microplate reader, PCL and robotic arm) in ***Shifu*** installer for you to explore the abilities of ***Shifu***.
 
 :::note
-物联网设备是指可以与其他设备、系统、服务进行本地或在线地连接和交流的设备，例如：
+An IoT device is a device that can connect and interact with other devices, systems, and applications offline or online, for instance:
 
-- 一个制造厂里的机械臂，它可以接收来自本地的自动化控制系统传来的命令并完成相应的动作。
-- 一辆自动导引车，操纵者可对其进行远程控制。
-- 一辆汽车上的温度计，它向车载空调发出命令使其升温或降温，并上传实时温度数据到云端。
+- A robotic arm in a manufacturing plant that can receive commands from a local automated control system and complete the corresponding moves.
+- An automated guided vehicle that can be remotely controlled by its operator.
+- A thermometer in a car that can send commands to the on-board air conditioner to raise or lower its temperature, and can upload real-time temperature data to the cloud.
 
-在安装 ***Shifu*** 安装包 时，我们创建了五个虚拟设备，并连接到您的电脑上。这五个设备与实际的物联网设备是等价的。
+When installing ***Shifu*** installer, five virtual devices are created and connected to your computer. These virtual devices have the same functions with actual IoT devices.
 :::
 
-## 准备
+## Preparation
 
-我们需要启动一个 `nginx` 来和数字孪生设备 ***deviceShifu*** 交互，请运行下面的命令：
+Start an instance of `nginx` to interact with ***deviceShifu***:
 
 ```bash
 sudo kubectl run --image=nginx:1.21 nginx
 sudo kubectl get pods -A | grep nginx
 ```
 
-可以看到 `nginx` 已经在运行：
+Now, `nginx` is running:
 
 ![nginx pod running](images/nginxPodStatus.png)
 
 :::note
-在实际的情况中，物联网设备的用户使用应用程序或者监控平台与数字孪生 ***deviceShifu*** 交互。这里 `nginx` 相当于一个应用程序或者一个监控平台。
+In a real-world scenario, users of IoT devices use an application or a monitoring platform to interact with the digital twin ***deviceShifu***. Here `nginx` is equivalent to an application or a monitoring platform.
 :::
 
-## 1. 与AGV交互
+## 1. Interact with the AGV
 
 <details>
-  <summary> 点此查看AGV细节 </summary>
-  Q：什么是AGV? <br/>
-  A：AGV是一种自动导引运输车，具体介绍可以<a href="https://baike.baidu.com/item/自动导引运输车/15535355">查看百度百科</a>。<br/>
-  Q：这个试玩中如何与AGV交互? <br/>
-  A：当AGV的数字孪生接收到get_position命令时会生成并返回设备当前位置的x、y轴坐标。
+  <summary> Click here to view the details of AGV  </summary>
+  Q: What is AGV?  <br/>
+  A: AGV is an automatic guided vehicle, please click <a href="https://en.wikipedia.org/wiki/Automated_guided_vehicle">here</a> for details. <br/>
+  Q: How to interact with the AGV in this demo? <br/>
+  A: When the digital twin of the AGV receives the get_position command, it will generate and return the x and y coordinates of the current position of the device.
 </details>
 
-### 创建数字孪生
+### Create the digital twin
 
 :::note
-您刚才通过 ***Shifu*** 安装包 安装了 ***Shifu***，AGV的数字孪生 ***deviceShifu*** 已自动创建，所以您无需进行手动的创建过程，可以直接和AGV的数字孪生进行交互。
+You have just installed ***Shifu*** through the ***Shifu*** installer, and the digital twin of the AGV, ***deviceShifu***, has been created automatically. So you can interact with the digital twin of the AGV directly without having to go through the manual creation process.
 
-数字孪生的状态会和实际设备的状态一致，与数字孪生交互相当于与实际物联网设备交互。
+The state of the digital twin will be the same as the state of the actual device, and interacting with the digital twin is equivalent to interacting with the actual IoT device.
 :::
 
-![](./images-cluster/cluster-1-zh.png)
-
-执行下面的命令，我们可以看到AGV的数字孪生已经正常启动：
+Execute the following command, and we can see the digital twin of the AGV has started normally:
 
 ```bash
 sudo kubectl get pods -A | grep agv
@@ -62,15 +60,17 @@ sudo kubectl get pods -A | grep agv
 
 ![deviceshifu-agv_start.png](images/deviceshifu-agv_start.png)
 
-### 与数字孪生交互
+![](./images-cluster/cluster-1-en.png)
 
-我们需要先进入 `nginx`：
+### Interact with the digital twin
+
+Next, enter the `nginx`:
 
 ```bash
 sudo kubectl exec -it nginx -- bash
 ```
 
-我们可以与AGV的数字孪生通过 `http://deviceshifu-agv.deviceshifu.svc.cluster.local` 进行交互，得到AGV的当前 `x`, `y` 坐标：
+By communicating with the digital twin of the AGV via `http://deviceshifu-agv.deviceshifu.svc.cluster.local`, Shifu can get the `x` and `y` coordinates of the current position of the AGV:
 
 ```bash
 curl http://deviceshifu-agv.deviceshifu.svc.cluster.local/get_position; echo
@@ -79,26 +79,26 @@ curl http://deviceshifu-agv.deviceshifu.svc.cluster.local/get_position; echo
 ![deviceshifu-agv output](images/deviceshifu-agv_output.png)
 
 :::note
-交互结束后按下 `ctrl D` 即可退出 `nginx`。
+Press `ctrl D` to exit `nginx`.
 :::
 
-## 2. 与温度计交互
+## 2. Interact with the thermometer
 
 <details>
-  <summary> 点此查看温度计细节 </summary>
-  Q：在这个试玩中如何与温度计交互?<br/>
-  A：当温度计的数字孪生接收到read_value命令时会生成并返回当前温度计的读数。
+  <summary> Click here for thermometer details </summary>
+  Q: How do I interact with a thermometer in this demo? <br/>
+  A: When the digital twin of the thermometer receives the read_value command it will generate and return the current thermometer reading.
 </details>
 
-### 创建数字孪生
+### Create the digital twin
 
-首先，我们创建一个温度计的数字孪生：
+First, create a digital twin of the thermometer:
 
 ```bash
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-thermometer
 ```
 
-我们可以看到温度计的数字孪生已经正常启动：
+Now, the thermometer has started normally:
 
 ```bash
 sudo kubectl get pods -A | grep thermometer
@@ -106,17 +106,17 @@ sudo kubectl get pods -A | grep thermometer
 
 ![deviceshifu-thermometer pod_start.png](images/deviceshifu-thermometer_pod_start.png)
 
-![](./images-cluster/cluster-2-zh.png)
+![](./images-cluster/cluster-2-en.png)
 
-### 与数字孪生交互
+### Interact with the digital twin
 
-我们需要先进入 `nginx`：
+Next, enter the `nginx`:
 
 ```bash
 sudo kubectl exec -it nginx -- bash
 ```
 
-我们可以与温度计的数字孪生通过 `http://deviceshifu-thermometer.deviceshifu.svc.cluster.local` 进行交互，得到温度计的测量温度（以下结果随机）：
+By communicating with the digital twin of the thermometer via `http://deviceshifu-thermometer.deviceshifu.svc.cluster.local`, Shifu can get the measured temperature of the thermometer (the following results are random):
 
 ```bash
 curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/read_value; echo
@@ -124,7 +124,7 @@ curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/read_value; ec
 
 ![deviceshifu-thermometer output](images/deviceshifu-thermometer-output.png)
 
-我们也可以通过 `get_status` 命令得到温度计当前运行状态（以下结果随机）：
+Finally, the current operating status of the thermometer can be obtained through the `get_status` command (the following results are random):
 
 ```bash
 curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/get_status; echo
@@ -139,45 +139,46 @@ curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/get_status; ec
 ![Error](images/Error.png)
 
 :::note
-交互结束后按下 `ctrl D` 即可退出 `nginx`。
+Press `ctrl D` to exit `nginx`.
 :::
 
-## 3. 与酶标仪交互
+## 3. Interact with the microplate reader
 
 <details>
-  <summary> 点此查看酶标仪细节 </summary>
-  Q：什么是酶标仪? <br/>
-  A：酶标仪是一种实验室设备，具体介绍可以<a href="https://baike.baidu.com/item/%E9%85%B6%E6%A0%87%E4%BB%AA">查看百度百科</a>。<br/>
-  Q：在这个试玩中如何与酶标仪交互? <br/>
-  A：当酶标仪的数字孪生接收到命令get_measurement会返回8*12的矩阵，其中的每一个数字代表一个样本中光谱分析扫描的结果数值。
+  <summary> Click here to view the details of the microplate reader  </summary>
+  Q: What is the microplate reader? <br/>
+  A: The microplate reader is a kind of laboratory equipment, please click <a href="https://en.wikipedia.org/wiki/Plate_reader">here</a> for the specific introduction. <br/>
+  Q: How to interact with the microplate reader in this demo? <br/>
+  A: When the digital twin of the microplate reader receives the command get_measurement, it will return an 8*12 matrix, each number in it represents the result value of the spectral analysis scan in a sample.
 </details>
 
-### 创建数字孪生
+### Create the digital twin
 
-首先，我们启动酶标仪的数字孪生：
+First, start the digital twin of the microplate reader:
 
-```bash
+```
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-plate-reader
 ```
 
-我们可以看到酶标仪的数字孪生已经启动：
+Enter the following command to see that the digital twin of the microplate reader has been started:
 
 ```bash
 sudo kubectl get pods -A | grep plate
 ```
+
 ![deviceshifu-plate_pods_start.png](images/deviceshifu-plate-reader_pod_start.png)
 
-![](./images-cluster/cluster-3-zh.png)
+![](./images-cluster/cluster-3-en.png)
 
-### 与数字孪生交互
+### Interact with the digital twin
 
-我们需要先进入 `nginx`:
+Next, enter nginx: (if you have not started Nginx, please [start the Nginx service](#start-the-nginx) first)
 
-```bash
+```
 sudo kubectl exec -it nginx -- bash
 ```
 
-我们可以和酶标仪的数字孪生通过 `http://deviceshifu-plate-reader.deviceshifu.svc.cluster.local` 进行交互，得到酶标仪的测量结果：
+By communicating with the digital twin of the microplate readerr via `http://deviceshifu-thermometer.deviceshifu.svc.cluster.local`, Shifu can get the results of the microplate reader：
 
 ```bash
 curl "deviceshifu-plate-reader.deviceshifu.svc.cluster.local/get_measurement"
@@ -186,28 +187,28 @@ curl "deviceshifu-plate-reader.deviceshifu.svc.cluster.local/get_measurement"
 ![deviceshifu-plate-reader_output](images/deviceshifu-plate-reader_output.png)
 
 :::note
-交互结束后按下 `ctrl D` 即可退出 `nginx`。
+Press `ctrl D` to exit `nginx`.
 :::
 
-## 4. 与PLC交互
+## 4. Interact with the PLC
 
 <details>
-  <summary> 点此查看PLC细节 </summary>
-  Q：什么是PLC? <br/>
-  A：PLC是一种非常普遍的工业控制器，具体介绍可以<a href="https://baike.baidu.com/item/%E5%8F%AF%E7%BC%96%E7%A8%8B%E9%80%BB%E8%BE%91%E6%8E%A7%E5%88%B6%E5%99%A8/84414?fromtitle=PLC&fromid=275974">查看百度百科</a>。<br/>
-  Q：在这个试玩中如何与PLC交互? <br/>
-  A：当PLC的数字孪生接收到 sendsinglebit 命令可以修改内存区域中一个bit，接收到 getcontent 命令可以得到内存区域中一个byte的值。
+  <summary> Click here to view PLC details  </summary>
+  Q: What is PLC? <br/>
+  A: PLC is a very common industrial controller, please click <a href="https://en.wikipedia.org/wiki/Programmable_logic_controller">here</a> for details. <br/>
+  Q: How to interact with the PLC in this demo? <br/>
+  A: When the digital twin of the PLC receives the sendsinglebit command, it can modify a bit in the memory area, and when it receives the getcontent command, it can get the value of a byte in the memory area.
 </details>
 
-### 创建数字孪生
+### Create the digital twin
 
-首先，我们启动PLC的数字孪生：
+First, start the digital twin of the PLC:
 
 ```bash
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-plc
 ```
 
-通过如下指令，可以看到PLC设备的数字孪生已经启动：
+Enter the following command to see that the digital twin of the PLC has been started:
 
 ```bash
 sudo kubectl get pods -A | grep plc
@@ -215,17 +216,17 @@ sudo kubectl get pods -A | grep plc
 
 ![deviceshifu-plc_pods_start](images/deviceshifu-plc_pods_start.png)
 
-![](./images-cluster/cluster-4-zh.png)
+![](./images-cluster/cluster-4-en.png)
 
-### 与数字孪生交互
+### Interact with the digital twin
 
-我们需要先进入 `nginx`：
+Next, please enter nginx: (if you have not started Nginx, please [start the Nginx service](#start-the-nginx) first)
 
 ```bash
 sudo kubectl exec -it nginx -- bash
 ```
 
-我们可以与PLC的数字孪生通过 `http://deviceshifu-plc.deviceshifu.svc.cluster.local` 进行交互，将PLC `Q0内存` 的第0位设置成 `1`：
+By communicating with the PLC digital twin via `http://deviceshifu-plc.deviceshifu.svc.cluster.local`, Shifu can set bit 0 of the `Q0` memory area of ​​the PLC to 1:
 
 ```bash
 curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=0&value=1"; echo
@@ -233,7 +234,7 @@ curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&
 
 ![deviceshifu-plc_output1.png](images/deviceshifu-plc_output1.png)
 
-`digit` 表示PLC内存的第几个比特，`value` 表示当前比特的值，通过修改 `digit` 与 `value` 的数值可以更改对应内存空间比特的值。例如一个PLC的 `Q0内存` 的第四位值代表控制程序，设定 `digit=3` 与 `value=1` 就可以开启程序：
+"digit" indicates the number of bits in the PLC memory, "value" indicates the value of the current bit, and the value of the corresponding memory area bit can be changed by modifying the values ​​of "digit" and "value". For example, the fourth digit value of the Q0 memory of a PLC represents the control program, and the program can be started by setting "digit=3" and "value=1":
 
 ```bash
 curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=3&value=1"; echo
@@ -242,28 +243,28 @@ curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&
 ![deviceshifu-plc_output2.png](images/deviceshifu-plc_output2.png)
 
 :::note
-交互结束后按下 `ctrl D` 即可退出 `nginx`。
+Press `ctrl D` to exit `nginx`.
 :::
 
-## 5. 与机械臂交互
+## 5. Interact with the robotic arm
 
 <details>
-  <summary> 点此查看机械臂细节 </summary>
-  Q：什么是机械臂? <br/>
-  A：机械臂是一种非常普遍的工业控制器，具体介绍可以<a href="https://baike.baidu.com/item/%E6%9C%BA%E6%A2%B0%E8%87%82/2178090">查看百度百科</a>。<br/>
-  Q：在这个试玩中如何与机械臂交互? <br/>
-  A：当机械臂的数字孪生接收到 get_coordinate 命令后会返回其当前的 x, y, z轴坐标。
+  <summary> Click here to view the details of the robotic arm </summary>
+  Q: What is a robotic arm? <br/>
+  A: The robotic arm is a very common industrial controller, please click <a href="https://en.wikipedia.org/wiki/Robotic_arm">here</a> for details. <br/>
+  Q: How to interact with the robotic arm in this demo? <br/>
+  A: When the digital twin of the robotic arm receives the get_coordinate command, it will return its current x, y, z axis coordinates.
 </details>
 
-### 创建数字孪生
+### Create the digital twin
 
-首先，我们创建一个机械臂的数字孪生：
+First, create a digital twin of the robotic arm:
 
 ```bash
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-robot-arm
 ```
 
-通过如下指令，可以看到机械臂的数字孪生已经启动：
+Enter the following command to see that the digital twin of the robotic arm has been started:
 
 ```bash
 sudo kubectl get pods -A | grep robotarm
@@ -271,25 +272,23 @@ sudo kubectl get pods -A | grep robotarm
 
 ![deviceshifu-reboot-arm_start_pods](images/deviceshifu-reboot-arm_start_pods.png)
 
-![](./images-cluster/cluster-5-zh.png)
+![](./images-cluster/cluster-5-en.png)
 
-### 与数字孪生交互
+### Interact with the digital twin
 
-我们需要先进入 `nginx`：
+Next, enter nginx: 
 
 ```bash
 sudo kubectl exec -it nginx -- bash
 ```
 
-我们可以与机械臂的数字孪生通过`http://deviceshifu-robotarm.deviceshifu.svc.cluster.local`进行交互，得到机械臂的坐标：
+By communicating with the digital twin of the robotic arm through `http://deviceshifu-robotarm.deviceshifu.svc.cluster.local`, Shifu can get the coordinates and operating states of the robotic arm (the following operating states appear randomly):
 
 ```bash
 curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_coordinate; echo
 ```
 
 ![deviceshifu-reboot-arm_result1](images/deviceshifu-reboot-arm_result1.png)
-
-我们也可以与机械臂的数字孪生通过`http://deviceshifu-robotarm.deviceshifu.svc.cluster.local`进行交互，得到机械臂的运行状态（以下运行状态随机出现）:
 
 ```bash
 curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
@@ -309,42 +308,46 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 
 ![Running.png](images/Running.png)
 
+Congratulations! ! !  :rocket: :rocket: :rocket: You have completed the installation and demos of Shifu, now you can explore freely!
+
+If you are interested, you can visit the [GitHub repository of ***Shifu***](https://github.com/Edgenesis/shifu).
+
 :::note
-交互结束后按下 `ctrl D` 即可退出 `nginx`。
+Press `ctrl D` to exit `nginx`.
 :::
 
-## 下一步
+## Next Step
 
-恭喜！！！:rocket: :rocket: :rocket: 您已经完成了 ***Shifu*** 的体验，接下来：
+Congratulations！！！:rocket: :rocket: :rocket: You have completed trying ***Shifu***, next:
 
-- 您可以查看左侧边栏中的
-    - **使用指南**：更详细的 ***Shifu*** 使用教程。
-    - **开发者文档**
-        - ***Shifu*** 架构、功能解释。
-        - ***Shifu*** API参考。
-    - **开源社区**：查看常见问题、获取支持、获取加入开源社区等内容。
-- ***Shifu*** 已经开源，如果您有兴趣，可以访问 ***Shifu*** 的 [GitHub仓库](https://github.com/Edgenesis/shifu)。
-- [联系我们以获取技术支持](community/join.md)。
+- You can check the left sidebar for 
+    - [**How-to Guides**](../guides): Detailed guides for using ***Shifu***.
+    - [**Reference Book**](../references)
+        - ***Shifu*** architecture and functions.
+        - ***Shifu*** API reference.
+    - [**Open Source Community**](../community): View common problems, get support, and join the open source community.
+- ***Shifu*** is now an open source project. If you are interested in it, visit ***Shifu***'s repo at [GitHub](https://github.com/Edgenesis/shifu).
+- [Contact us to get technical support](community/join.md)。
 
-## 删除集群（可选）
+## Delete the cluster (optional)
 
-在上述的体验过程中，***Shifu*** 安装包 在您的电脑上创建了一个集群，并在这个集群中安装了 ***Shifu***。如果您不希望该集群持续运行，可以执行下面的命令来删除这个集群：
+During the process of trying ***Shifu***, the ***Shifu*** installer created a cluster on your computer and installed ***Shifu*** in this cluster. If you do not want this cluster to run continuously, you can delete this cluster by executing the following command:
 
 ```bash
 sudo kind delete cluster
 ```
 
-Docker 中的镜像也可以进行删除。使用命令 `sudo docker images` 查看所有镜像。你可以使用命令 `sudo docker rmi <image_id>` 来删除不会再用到的镜像。
+`Docker` images can also be deleted. Use command `sudo docker images` to check all images. You can use command `sudo docker rmi <image_id>` to delete useless images.
 
 :::info
-使用到的镜像解释：
+Used images:
 
-- `kindest/node` 用于创建本地集群
-- `edgehub/deviceshifu-http-xxxx` 在此基础上生成一个 ***deviceShifu***
-- `edgehub/mockdevice-xxx` 虚拟设备
-- `edgehub/shifu-controller-telemetry-plugin` ***Shifu*** 插件
-- `edgehub/shifu-controller` `edgehub/edgedevice-controller-multi` ***Shifu*** 控制器
-- `nginx` 用于与设备交互
+- `kindest/node` to create a local cluster
+- `edgehub/deviceshifu-http-xxxx` to generate a ***deviceShifu*** on the base of it
+- `edgehub/mockdevice-xxx` virtual devices
+- `edgehub/shifu-controller-telemetry-plugin` a ***Shifu*** plug-in
+- `edgehub/shifu-controller` `edgehub/edgedevice-controller-multi` ***Shifu***'s controller
+- `nginx` to interact with ***deviceShifu***
 :::
 
-删除下载的 ***Shifu*** 安装包 `shifu_demo_aio_xxx_xxx.tar` 和文件夹 `testdir`。
+Delete the downloaded ***Shifu*** installer `shifu_demo_aio_xxx_xxx.tar` and the folder `testdir`.

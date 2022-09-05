@@ -1,3 +1,3 @@
-# 开发者文档
+# Reference Book
 
-开发者文档中包含了 ***Shifu*** 详细的架构和功能解释，供您更深入的了解 ***Shifu***；同时包含 API，供您在编写配置文件等情况下参考。
+There are detailed explanations of ***Shifu***'s architecture and functions in Reference Book. They are provided to help you understand ***Shifu*** more deeply. API is also provided for you to reference.

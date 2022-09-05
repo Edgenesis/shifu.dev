@@ -1,75 +1,75 @@
 ---
-title: 下载安装
+title: Download and Install
 sidebar_position: 0
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 下载安装
+# Download and Install
 
-## 安装 Docker Desktop
+## Install Docker Desktop
 
-在本地安装和体验 ***Shifu***，需要先安装 `Docker Desktop`。
+To try out ***Shifu*** on your personal computer, you need to install `Docker Desktop` first.
 
 :::info
-***Shifu*** 使用容器技术 `Docker` 将每一个实际的物理设备 (***edgeDevice***) 转为一个数字孪生设备 (***deviceShifu***)。
+***Shifu*** uses `Docker`'s virtualized container technology to convert each physical device (***edgeDevice***) to a digital twin (***deviceShifu***).
 :::
 
-请选择您的电脑操作系统查看对应的 `Docker Desktop` 安装方式：
+Select your OS to check the corresponding method to install `Docker Desktop`:
 
 <Tabs groupId="operating-systems">
 <TabItem value="win" label="Windows(WSL)">
 
-**0. 安装 WSL**
+**0. Install WSL**
 
 :::tip
-- 如果您在 `VMware` 中有 `Linux虚拟机`，且计划在虚拟机中体验 ***Shifu***，您可以点击上方按钮切换到 `Linux`。
+- If you have a `Linux virtual machine` and want to try ***Shifu*** in it, switch to `Linux` by clicking the button above.
 :::
 
-您的 `Windows` 需要是 `Windows 10` (版本2004及更高版本) 或 `Windows 11`。
+It is required that the version of your Windows is higher than `Windows 10` (version 2004 or higher) or `Windows 11`.
 
-您需要在管理员 `PowerShell` 或 `Windows命令提示符` 中输入下面的命令，然后**重启计算机**来安装运行适用于 Linux 的 Windows 子系统 (WSL) 所需的全部内容。
+You need to open `PowerShell` or `Windows CMD` to enter the following command. Then you need to restart the computer to install the WSL.
 
 ```
 wsl --install
 ```
 
-安装时遇到问题可以查看 [微软WSL官方文档](https://docs.microsoft.com/zh-cn/windows/wsl/install)。
+If problems occurs, please refer to [the official documentation of WSL](https://docs.microsoft.com/zh-cn/windows/wsl/install).
 
-**1. 安装 Docker Desktop**
+**1. Install Docker Desktop**
 
-[点我下载 Docker Desktop 安装包](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
+[Click here to download Docker Desktop](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
 
-**2. 打开 Docker Desktop 并保持其运行**
+**2. Open Docker Desktop, and keep it running**
 
-**3. 确定 Docker 运行顺利**
+**3. Confirm Docker is running**
 
-请在开始菜单中打开 `Ubuntu` 或您安装的其他 `Linux发行版`，执行以下命令:
+Please open `Ubuntu` or other `Linux distribution` you have installed in the start menu and execute the following command:
 
 ```bash
 sudo docker ps
 ```
 
 :::note
-您可能需要输入管理员密码，输入密码时屏幕不会显示密码，结束后敲击回车即可
+You may need to enter the administrator password, the password will not be displayed on the screen when you enter the password, just hit enter when you are finished.
 :::
 
 </TabItem>
 <TabItem value="mac" label="macOS">
 
-**1. 安装 Docker Desktop**
+**1. Install Docker Desktop**
 
-| 芯片类型 | 安装包 |
+| Chip | Installer |
 |--|--|
-| `M1/M2` | [点我下载安装包](https://desktop.docker.com/mac/main/arm64/Docker.dmg) |
-| `Intel` | [点我下载安装包](https://desktop.docker.com/mac/main/amd64/Docker.dmg) |
+| `M1/M2` | [Click here to download installer](https://desktop.docker.com/mac/main/arm64/Docker.dmg) |
+| `Intel` | [Click here to download installer](https://desktop.docker.com/mac/main/amd64/Docker.dmg) |
 
-**2. 打开 Docker Desktop 并保持其运行**
+**2. Open Docker Desktop, and keep it running**
 
-**3. 确定 Docker 运行顺利**
+**3. Confirm Docker is running**
 
-请打开终端 (Terminal) 在命令行中执行下面的命令:
+Please open Terminal and execute the following command:
 
 ```bash
 sudo docker ps
@@ -78,15 +78,15 @@ sudo docker ps
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-**1. 安装 Docker Desktop**
+**1. Install Docker Desktop**
 
-[点我查看安装教程](https://docs.docker.com/desktop/install/linux-install/)
+[Click here to install Docker Desktop on Linux](https://docs.docker.com/desktop/install/linux-install/)
 
-**2. 打开 Docker Desktop 并保持其运行**
+**2. Open Docker Desktop, and keep it running**
 
-**3. 确定 Docker 运行顺利**
+**3. Confirm Docker is running**
 
-请打开终端 (Terminal) 在命令行中执行下面的命令:
+Please open Terminal and execute the following command:
 
 ```bash
 sudo docker ps
@@ -95,35 +95,35 @@ sudo docker ps
 </TabItem>
 </Tabs>
 
-如果 `Docker` 运行顺利，将会得到以下输出:  
+If `Docker` runs successfully, you will get the following output:
 
 ![](images/docker_run.png)
 
-如果输出为 `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`，则说明 `Docker Desktop` 未打开；如果输出为 `command not found`，则说明 `Docker Desktop` 未安装。
+If the output is `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`, `Docker Desktop` is not started; if the output is `command not found`, `Docker Desktop` is not installed.
 
-## 安装 ***Shifu***
+## Install ***Shifu***
 
-前往 [**Shifu Demo 下载**](https://shifu.run/disclaimer) 下载 ***Shifu*** 安装包并按照网站的指导安装。
+Please visit [**Download Shifu Demo**](https://shifu.run/disclaimer) to download ***Shifu*** installer and install ***Shifu***.
 
-直接进入页面中的第二步，完成后即可回到本页面
+Skip to the second step of the page and after completing its process, return to this page.
 
-安装完成后 ***Shifu*** 会在 `Docker` 运行时伴随启动。
+After installation is done, ***Shifu*** will be launched with `Docker` runtime.
 
 :::info
-***Shifu*** 安装包 包含以下内容：
+The ***Shifu*** installer contains:
 
-- 用于本地创建测试集群的 `kind`
-- ***Shifu*** 在运作过程中需要的所有镜像
-- ***Shifu*** 的安装脚本
+- `kind` to create a cluster on your computer
+- all images needed when running ***Shifu***
+- installing scripts of ***Shifu***
 
-您不需要了解 ***Shifu*** 的运作细节，通过 ***Shifu*** 安装包 即可很方便的体验 ***Shifu***。
+You don't need to know about the details of ***Shifu***. By using ***Shifu*** installer, you can try ***Shifu*** easily.
 
-如果您希望手动创建集群、导入镜像、安装 ***Shifu***，请查看 [本机测试安装](guides/install-shifu-dev.md)。
+If you want to manually create the cluster, import images, and install ***Shifu***, please check [Development Installation](guides/install-shifu-dev.md)
 :::
 
-### 确认 ***Shifu*** 已启动
+### Confirm ***Shifu*** is running
 
-使用以下命令来查看运行效果：
+Use the following command to view the results:
 
 ```bash
 sudo kubectl get pods -A
@@ -131,16 +131,16 @@ sudo kubectl get pods -A
 
 ![Shifu Finished pods](images/shifuFinishPods.png)
 
-如果所有 `STATUS` 都是 `Running` 即表示 ***Shifu*** 已成功安装启动。
+If all "STATUS" is `Running`, ***Shifu*** is started:
 
 :::info
-`kubectl get pods -A` 命令可以查看集群中所有正在运行的 `Pod`（你可以简单将 `Pod` 理解为一个应用或者一个进程）。
+The command `kubectl get pods -A` can view all running `Pod`s in the cluster. (You can see a `Pod` as an application or a process.)
 
-可以看到 NAMESPACE `shifu-crd-system` 下，控制器 ***shifuController*** 正在运行；NAMESPACE `deviceshifu` 下，已经有一个AGV设备对应的 ***deviceShifu*** 数字孪生在运行了。
+We find that under the NAMESPACE `shifu-crd-system`, the controller ***shifuController*** is running now; under the NAMESPACE `deviceshifu`, the digital twin of the AVG device, ***deviceShifu***, is already running.
 :::
 
-![](./images-cluster/cluster-1-zh.png)
+![](./images-cluster/cluster-1-en.png)
 
-## 下一步
+## Next Step
 
-恭喜您已经在电脑上安装了 ***Shifu***，下一步可以 [体验 ***Shifu***](./demo-try.md) 了！
+Congratulations you have installed ***Shifu*** on your computer! Next you can go to [Try it Out](./demo-try.md).

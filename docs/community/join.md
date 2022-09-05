@@ -1,17 +1,17 @@
 ---
-title: 加入开源社区
+title: Join the Community
 sidebar_position: 3
 ---
 
-# 加入开源社区
+# Join the Community
 
-如果您在使用 ***Shifu*** 的过程中有任何问题、或者想进一步了解 ***Shifu***，欢迎通过以下方式联系我们：
+If you have any questions about using ***Shifu*** or want to know more about it, please contact us through the following methods:
 
-- 邮箱
+- Email
     - info@edgenesis.com
-- 微信
+- WeChat
     - if7369
 
-获取更多技术支持，欢迎您填写下方问卷！
+<!-- For more technical support, you are welcome to fill out the questionnaire below!
 
-<iframe height="2800" width="900" src="https://wj.qq.com/s2/10467370/d9ac/" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-modals allow-downloads allow-forms allow-popups"></iframe>
+<iframe height="2800" width="900" src="https://wj.qq.com/s2/10467370/d9ac/" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-modals allow-downloads allow-forms allow-popups"></iframe> -->

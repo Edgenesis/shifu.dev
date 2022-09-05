@@ -1,14 +1,14 @@
 ---
-title: 常见问题
+title: FAQ
 sidebar_position: 1
 ---
 
-# 常见问题
+# FAQ
 
-> ***Shifu*** 开源了吗？
+> Is ***Shifu*** open source?
 
-***Shifu*** 已于 2022.8.20 开源，GitHub仓库为 <https://github.com/Edgenesis/shifu>，开源协议使用 [Apache-2.0 license](https://github.com/Edgenesis/shifu/blob/main/LICENSE)。欢迎您一起让 ***Shifu*** 变得更好！
+***Shifu*** became open source at Aug 20, 2022, under [Apache-2.0 license](https://github.com/Edgenesis/shifu/blob/main/LICENSE). Check the repository at <https://github.com/Edgenesis/shifu>. Welcome to make ***Shifu*** better together.
 
-> ***Shifu*** 与 `Kubernetes` 的关系是什么？
+> What is the relationship between ***Shifu*** and `Kubernetes`?
 
-作为云原生框架，***Shifu*** 通过 `Kubernetes` 的 `CRD功能` 延伸了 `Kubernetes` 的资源，来实现高可用、静态域名、服务管理等功能，***Shifu*** 可以支持对任何设备进行任何形式的配置。当连接物理设备时，***Shifu*** 会识别并以一个 `Kubernetes Pod` 的方式启动该设备的数字孪生 ***deviceShifu***。开发者通过接入 ***deviceShifu*** 的接口，可以获取物联网设备的所有功能，同时编程定义设备原本不具备的功能。
+As a cloud-native framework, ***Shifu*** extends `Kubernetes` resources with `Kubernetes`' `CRD` functionality to enable high availability, static domain names, service management, etc. ***Shifu*** can support any form of configuration for any device. When a physical device is connected, ***Shifu*** recognizes and launches the digital twin of that device as a `Kubernetes Pod` called ***deviceShifu***. By accessing the interface to ***deviceShifu***, developers can access all the features of an IoT device, while programmatically defining features that the device would not otherwise have.

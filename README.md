@@ -9,8 +9,8 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 ```sh
 $ yarn # install packages
 
-$ yarn start # zh-Hans SPA
-$ yarn start --locale en # en SPA
+$ yarn start # en SPA
+$ yarn start --locale zh-Hans # zh-Hans SPA
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.

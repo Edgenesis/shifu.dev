@@ -1,3 +1,3 @@
-# 开源社区
+# Open Source Community
 
-***Shifu*** 已在 GitHub 开源，仓库地址为 <https://github.com/edgenesis/shifu>。
+***Shifu*** is now open source at GitHub. View the repository at <https://github.com/edgenesis/shifu>.

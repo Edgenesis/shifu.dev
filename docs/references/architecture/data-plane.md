@@ -1,40 +1,40 @@
 ---
-title: 数据面 Data Plane
-sidebar_position: 1
+title: Data Plane
+sidebar_position: 2
 ---
 
-***Shifu*** 数据面的主要组件是 ***deviceShifu***。
+The main component of the ***Shifu*** data plane is ***deviceShifu***.
 
 ### ***deviceShifu***
 
-#### 简介
+#### Introduction
 
-***deviceShifu*** 是整个 ***Shifu*** 的核心，也是开发者最应该关心的部分。***deviceShifu*** 以`Kubernetes Pod`的形式存在, 是一个实际设备的数字化表示或数字孪生。
+***deviceShifu*** is the core of ***Shifu*** Framework and the part that developers care about the most. ***deviceShifu*** takes the form of a `Kubernetes Pod`, a digital representation or digital twin of a physical device.
 
-每一个 ***deviceShifu*** 都与一个或多个实际设备相关联。用户通过和 ***deviceShifu*** 进行交互，就可以实现与实际设备的交互。
+Each ***deviceShifu*** is associated with one or more physical devices. Users can interact with physical devices by interacting with ***deviceShifu***.
 
-**南向** - ***deviceShifu*** 与IoT设备进行交互，将用户的请求通过协议网关或设备驱动进行转换并发送到设备。
+**Southbound** - ***deviceShifu*** interacts with IoT devices, translating and sending user requests to the device through a protocol gateway or device driver.
 
 ```mermaid
     flowchart TD
-    subgraph sg-ds["deviceShifu (南向部分)"]
-    http[协议网关]
-   	grpc[设备驱动]
+    subgraph sg-ds["deviceShifu (southbound section)"]
+    http[Protocol gateway]
+   	grpc[Device drive]
     end
-    sg-ds<-->ed[IoT设备]
+    sg-ds<-->ed[IoT device]
 ```
 
-**北向** - ***deviceShifu*** 将收集的设备数据通过HTTP协议(gRPC协议暂未支持)进行转换并发送给用户端。
+**Northbound** - ***deviceShifu*** converts the collected device data via HTTP protocol (gRPC protocol is not supported yet) and sends it to the client.
 
 ```mermaid
     flowchart BT
-    subgraph sg-ds["deviceShifu (北向部分)"]
+    subgraph sg-ds["deviceShifu (northbound section)"]
     http[HTTP]
     grpc[gRPC]
     end
-    sg-ds<-->ua[用户应用]
+    sg-ds<-->ua[User application]
 ```
 
-#### 设计文档
+#### Design Docs
 
-如果你对 ***deviceShifu*** 内部细节感兴趣,可以前往[***deviceShifu*** 设计文档](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu-zh.md)进一步阅读。
+If you are interested in the detailed implementations of ***deviceShifu***, you can visit the [***deviceShifu*** design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md) for further reading.

@@ -1,5 +1,5 @@
-# 接入设备
+# Connect Devices
 
-:::caution正在施工
+:::caution Work in Progress
 
 :::

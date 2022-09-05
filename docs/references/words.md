@@ -1,10 +1,10 @@
 ---
-title: 词汇解释
+title: Glossary
 sidebar_position: 4
 ---
 
-# 词汇解释
+# Glossary
 
-:::caution正在施工
+:::caution Work in Progress
 
 :::

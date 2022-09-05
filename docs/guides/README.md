@@ -1,3 +1,3 @@
-# 使用指南
+# How-to Guides
 
-使用指南中包含了很多您在使用 ***Shifu*** 的过程中的一些具体话题。
+`How-to Guides` provides several specific topics when using ***Shifu***.

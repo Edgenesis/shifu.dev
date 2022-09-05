@@ -1,10 +1,10 @@
 ---
-title: 接入 Hikvision摄像头
+title: Connect a Hikvision Camera
 sidebar_position: 1
 ---
 
-# 接入Hikvision摄像头
+# Connect a Hikvision Camera
 
-:::caution正在施工
+:::caution Work in Progress
 
 :::

@@ -1,10 +1,10 @@
 ---
-title: 接入私有驱动的物联网设备
+title: Connect a Device with Private Driver
 sidebar_position: 2
 ---
 
-# 接入私有驱动的物联网设备
+# Connect a Device with Private Driver
 
-:::caution正在施工
+:::caution Work in Progress
 
 :::
