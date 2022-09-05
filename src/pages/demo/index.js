@@ -23,11 +23,12 @@ class Demo extends React.Component {
   }
   stepForward() {
     console.log(this.state.stepIndex)
-    if (this.state.stepIndex < 2) {
+    if (this.state.stepIndex == 0) { // 部署Docker 跳转至 安装Shifu
       this.setState({
         stepIndex: this.state.stepIndex + 1,
       })
     }
+    // 安装Shifu界面最下方的按钮直接跳转到文档页面
   }
   stepBackward() {
     if (this.state.stepIndex > 0) {

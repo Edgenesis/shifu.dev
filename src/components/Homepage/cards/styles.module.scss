@@ -70,3 +70,20 @@
   color: var(--font-color-one);
   margin: 0px;
 }
+
+
+@media screen and (max-width: 996px) {
+  .cardtwoContainer {
+    margin: 24px 24px;
+
+  }
+
+  .cardOneContainer {
+    padding: 24px;
+  }
+
+  .cardOneContent {
+    width: 80vw;
+    text-align: center !important;
+  }
+}

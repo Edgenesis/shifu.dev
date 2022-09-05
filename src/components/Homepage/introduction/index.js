@@ -1,35 +1,38 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import { CardOne } from "../cards"
-import { bar1, bar2, bar3, access, modularization, application, stable, security, community } from "../../svg"
 import Translate, { translate } from '@docusaurus/Translate';
 
-function DescriptionModel(props) {
-  let flexDirection = props.isReverse ? "row-reverse" : "row";
-  let isTextAlignRight = props.isReverse
-  return (
-    <div
-      className={styles.descriptionModel}
-      style={{ flexDirection: flexDirection }}
-    >
-      <CardOne
-        title={props.title}
-        descript={props.descript}
-        isTextAlignRight={isTextAlignRight}
-        titleColor={props.titleColor}
-        shadowColor={props.shadowColor}>
-      </CardOne>
-      <div className={styles.img}>
-        {props.img}
+const bar1 = require('@site/static/img/index/bar-1.svg').default
+const bar2 = require('@site/static/img/index/bar-2.svg').default
+const bar3 = require('@site/static/img/index/bar-3.svg').default
+
+  function DescriptionModel(props) {
+    let flexDirection = props.isReverse ? "row-reverse" : "row";
+    let isTextAlignRight = props.isReverse
+    return (
+      <div
+        className={styles.descriptionModel}
+        style={{ flexDirection: flexDirection }}
+      >
+        <CardOne
+          title={props.title}
+          descript={props.descript}
+          isTextAlignRight={isTextAlignRight}
+          titleColor={props.titleColor}
+          shadowColor={props.shadowColor}>
+        </CardOne>
+        <div className={styles.img}>
+          <props.img></props.img>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
 function IntroBar(props) {
   return (
     <div className={styles.introBar}>
-      {props.img}
+      <props.img></props.img>
       <p className={styles.barTitle}>{props.title}</p>
     </div>
   )
@@ -37,7 +40,7 @@ function IntroBar(props) {
 
 let developerlist = [
   {
-    img: access,
+    img: require('@site/static/img/index/guide-access.svg').default,
     title: translate({ message: 'Extremely Fast Connection' }),
     descript:
       <span>
@@ -50,7 +53,7 @@ let developerlist = [
     shadowColor: "rgba(61, 114, 177, 0.2)"
   },
   {
-    img: modularization,
+    img: require('@site/static/img/index/guide-modularization.svg').default,
     title: translate({ message: 'Modularized Deployment Experience' }),
     descript:
       <span>
@@ -62,7 +65,7 @@ let developerlist = [
     shadowColor: "rgba(126, 65, 155, 0.2)"
   },
   {
-    img: application,
+    img: require('@site/static/img/index/guide-application.svg').default,
     title: translate({ message: 'Efficient Application Development' }),
     descript:
       <span>
@@ -76,7 +79,7 @@ let developerlist = [
 
 let engineeringList = [
   {
-    img: stable,
+    img: require('@site/static/img/index/guide-stable.svg').default,
     title: translate({ message: 'Aerospace-grade Stability' }),
     descript:
       <span>
@@ -89,7 +92,7 @@ let engineeringList = [
     shadowColor: "rgba(200, 68, 39, 0.2)"
   },
   {
-    img: security,
+    img: require('@site/static/img/index/guide-security.svg').default,
     title: translate({ message: 'Multidimensional Security Policy' }),
     descript:
       <span>
@@ -102,7 +105,7 @@ let engineeringList = [
     shadowColor: "rgba(128, 34, 186, 0.2)"
   },
   {
-    img: community,
+    img: require('@site/static/img/index/guide-community.svg').default,
     title: translate({ message: 'Globalized Community Ecology' }),
     descript:
       <span>

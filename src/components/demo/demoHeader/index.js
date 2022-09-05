@@ -41,11 +41,11 @@ const spotsList = [
     name: translate({ message: "Install Shifu" }),
     className: ""
   },
-  {
-    step: "3",
-    name: translate({ message: "Try Out Shifu" }),
-    className: ""
-  },
+  // {
+  //   step: "3",
+  //   name: translate({ message: "试玩Shifu" }),
+  //   className: ""
+  // },
 ]
 
 const lineList = [

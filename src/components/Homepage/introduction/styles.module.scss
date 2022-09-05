@@ -25,3 +25,16 @@
     transform: translateX(-50%);
   }
 }
+
+@media screen and (max-width: 996px) {
+  .descriptionModel {
+    width: 100vw;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .introBar,
+  .img {
+    display: none;
+  }
+}
