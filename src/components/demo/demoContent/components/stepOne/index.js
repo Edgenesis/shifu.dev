@@ -38,7 +38,7 @@ const stepOneCodeList = [
   {
     id: 2,
     description: translate({ message: "2.2 If Docker starts successfully, the output will be as follows" }),
-    code: `ubuntu@localhost:~$ sudo docker ps
+    code: `$ sudo docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES`,
     isCopy: false,
   },

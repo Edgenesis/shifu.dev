@@ -35,7 +35,7 @@ const codeListTwo = [
   {
     id: 5,
     description: translate({ message: "2.2 That all \"STATUS\" are Running means success." }),
-    code: ` ubuntu@localhots:~/test/testdir$ sudo kubectl get pods -A",
+    code: `$ sudo kubectl get pods -A
 NAMESPACE                    NAME                                 READY       STATUS      RESTARTS       AGE
 devices             agv-5bd7c4f885-w6xpx                           1/1        Running        0           17s
 deviceshifu         deviceshifu-agv-deployment-d8db6cd5d-6w78d     1/1        Running        0           15s
@@ -123,7 +123,7 @@ class StepTwo extends React.Component {
           item.code = `curl -LO https://demo.shifu.run/demo-content/${this.state.shifuUrl}`
           break;
         case 2:
-          item.code = `mkdir testdir && tar -xvf $${this.state.shifuUrl} -C testdir && cd testdir`
+          item.code = `mkdir testdir && tar -xvf ${this.state.shifuUrl} -C testdir && cd testdir`
           break;
       }
       return <CodeView key={item.id} {...item}></CodeView>
