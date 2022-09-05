@@ -140,8 +140,8 @@ if (isMobile()) {
           </p>
         </div>
         <div className={styles.disclaimerConfirm}>
-          <ButtonSquare href="/" colorLevel="two" content={translate({ message: "拒绝" })}></ButtonSquare>
-          <ButtonSquare href="/demo" colorLevel="two" content={translate({ message: "同意" })}></ButtonSquare>
+          <ButtonSquare href="/" colorLevel="two" content={translate({ message: "Decline" })}></ButtonSquare>
+          <ButtonSquare href="/demo" colorLevel="two" content={translate({ message: "Agree" })}></ButtonSquare>
         </div>
       </div>
     // </SnowBg>

@@ -14,7 +14,7 @@ export default function Sponsor() {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <p className={styles.title}>
-          <Translate>Shifu受行业领导者信任</Translate>
+          <Translate>Shifu is trusted by industry leaders</Translate>
         </p>
         <div className={styles.rotation}>
           <div className={styles.content}>

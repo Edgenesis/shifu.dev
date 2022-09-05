@@ -38,12 +38,12 @@ function IntroBar(props) {
 let developerlist = [
   {
     img: access,
-    title: translate({ message: '极速设备接入' }),
+    title: translate({ message: 'Extremely Fast Connection' }),
     descript:
       <span>
-        <Translate>大到使用私有驱动的工程机械</Translate><br />
-        <Translate>小到使用公有协议的温湿度计</Translate><br />
-        <Translate>Shifu超高兼容性让你轻松应对各种易购设备</Translate>
+        <Translate>Large to construction machinery using private driver</Translate><br />
+        <Translate>Small to thermometers using public protocol</Translate><br />
+        <Translate>Shifu's high compatibility allows you to easily handle a variety of e-bay devices</Translate>
       </span>,
     isReverse: true,
     titleColor: "#2490FF",
@@ -51,11 +51,11 @@ let developerlist = [
   },
   {
     img: modularization,
-    title: translate({ message: '模块化部署体验' }),
+    title: translate({ message: 'Modularized Deployment Experience' }),
     descript:
       <span>
-        <Translate>所有接入Shifu的设备及应用都会被封装成一个拼图式模块</Translate><br />
-        <Translate>根据场景内的设备不同，按需加载即可</Translate>
+        <Translate>All devices and applications connected to Shifu are packaged into a puzzle-like module</Translate><br />
+        <Translate>Just load as needed, depending on the devices in the scene</Translate>
       </span>,
     isReverse: false,
     titleColor: "#C15CFF",
@@ -63,10 +63,10 @@ let developerlist = [
   },
   {
     img: application,
-    title: translate({ message: '高效应用开发' }),
+    title: translate({ message: 'Efficient Application Development' }),
     descript:
       <span>
-        <Translate>接入设备后，Shifu会自动把设备的能力抽象成API，让你的应用和硬件设备彻底解耦，把低效的物联网应用开发变得像面向对象编程一样高效</Translate>
+        <Translate>After connecting to the device, Shifu will automatically abstract the device's capabilities into an API, allowing you to completely decouple your application from the hardware device, making inefficient IoT application development as efficient as object-oriented programming.</Translate>
       </span>,
     isReverse: true,
     titleColor: "#F33EE3",
@@ -77,12 +77,12 @@ let developerlist = [
 let engineeringList = [
   {
     img: stable,
-    title: translate({ message: '航天级稳定性' }),
+    title: translate({ message: 'Aerospace-grade Stability' }),
     descript:
       <span>
-        <Translate>Shifu已通过在航天场景验证</Translate><br />
-        <Translate>提供99.9999%的可靠性</Translate><br />
-        <Translate>让你远离宕机烦恼</Translate>
+        <Translate>Shifu has been validated in aerospace scenarios</Translate><br />
+        <Translate>Provides 99.9999% reliability</Translate><br />
+        <Translate>Keeps you out of downtime trouble</Translate>
       </span>,
     isReverse: true,
     titleColor: "#FF64EF",
@@ -90,12 +90,12 @@ let engineeringList = [
   },
   {
     img: security,
-    title: translate({ message: '多维度安全策略' }),
+    title: translate({ message: 'Multidimensional Security Policy' }),
     descript:
       <span>
-        <Translate>联合国的云原生安全团队操刀</Translate><br />
-        <Translate>无论是数据加密还是网络安全</Translate><br />
-        <Translate>Shifu不一而足</Translate>
+        <Translate>The UN's cloud-native security team is at the helm</Translate><br />
+        <Translate>Whether it is data encryption or network security</Translate><br />
+        <Translate>Shifu satisfies</Translate>
       </span>,
     isReverse: false,
     titleColor: "#9A5CFF",
@@ -103,10 +103,10 @@ let engineeringList = [
   },
   {
     img: community,
-    title: translate({ message: '全球化社区生态' }),
+    title: translate({ message: 'Globalized Community Ecology' }),
     descript:
       <span>
-        <Translate>Shifu得益于Kubernetes原生架构，可以无缝接入强大的云原生软件生态，让全球的开发者帮你解决后顾之忧</Translate>
+        <Translate>Shifu benefits from the Kubernetes native architecture, providing seamless access to the powerful cloud-native software ecosystem and allowing developers around the world to help you solve your worries.</Translate>
       </span>,
     isReverse: true,
     titleColor: "#2490FF",
@@ -123,11 +123,11 @@ export default function Introduction() {
   )
   return (
     <div>
-      <IntroBar img={bar1} title={translate({ message: 'Shifu对开发者的价值' })}></IntroBar>
+      <IntroBar img={bar1} title={translate({ message: "Shifu's Value to Developers" })}></IntroBar>
       {developerPart}
-      <IntroBar img={bar2} title={translate({ message: 'Shifu对工程团体的价值' })}></IntroBar>
+      <IntroBar img={bar2} title={translate({ message: "Shifu's Value to Engineering" })}></IntroBar>
       {engineeringPart}
-      <IntroBar img={bar3} title={translate({ message: 'Shifu的独有优势' })}></IntroBar>
+      <IntroBar img={bar3} title={translate({ message: "Shifu's Unique Advantages" })}></IntroBar>
     </div>
   )
 }
