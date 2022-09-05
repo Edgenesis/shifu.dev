@@ -1,26 +1,26 @@
 ---
-title: "用户案例"
+title: User Cases
 sidebar_position: 2
 ---
 
-# 用户案例
+# User Cases
 
-## 工程类
+## Engineering Information
 
-### 设备接入类
+### Device Access Classes
 
-1. :chains: [如何用 ***Shifu*** 来接入一个私有驱动的物联网设备](https://mp.weixin.qq.com/s/Nm4tmd_hi0u0ebkkuOgyuw)
-2. :control_knobs: [如何扩展 ***Shifu*** 的西门子PLC驱动能力](https://mp.weixin.qq.com/s/FiZ2p4e1M9ABkF4SS15Qgg)
+1. :chains: [How to use ***Shifu*** to access a IoT device with private driver](https://mp.weixin.qq.com/s/Nm4tmd_hi0u0ebkkuOgyuw)
+2. :control_knobs: [How to extend ***Shifu***'s Siemens PLC driver capabilities](https://mp.weixin.qq.com/s/FiZ2p4e1M9ABkF4SS15Qgg)
 
-### 解决方案类
+### Solution Classes
 
-1. :video_camera: [如何在KubeEdge上部署 ***Shifu*** 以及调用RTSP协议摄像头](https://mp.weixin.qq.com/s/x6eJA8jqmcTjdiPpGVyAkw)
-2. :dancers: [使用EMQX与 ***Shifu*** 实现设备联动](https://mp.weixin.qq.com/s/OksAvQ4i2Sg9qKFTBsfQjw)
-3. :video_camera: [使用 ***Shifu*** 在OpenYurt集群中接入RTSP协议摄像头](https://mp.weixin.qq.com/s/InSWgAQwUK1B3XVyj1Wa8Q)
+1. :video_camera: [How to deploy ***Shifu*** on KubeEdge and call RTSP protocol cameras](https://mp.weixin.qq.com/s/x6eJA8jqmcTjdiPpGVyAkw)
+2. :dancers: [Using EMQX to link devices with ***Shifu***](https://mp.weixin.qq.com/s/OksAvQ4i2Sg9qKFTBsfQjw)
+3. :video_camera: [Using ***Shifu*** to access RTSP protocol cameras in an OpenYurt cluster](https://mp.weixin.qq.com/s/InSWgAQwUK1B3XVyj1Wa8Q)
 
-## 案例类
+## Case Studies
 
-### 成功案例类
+### Applied Use Cases
 
-1. :rocket: [万象原生EquipTalk如何用 ***Shifu*** 赋能运载火箭](https://mp.weixin.qq.com/s/T-_o2072dk5X0X4NChXUpA)
-2. :cloud: [***Shifu*** -- 亚马逊云科技创新案例集(P90-92)](https://d1.awsstatic.com/whitepapers/amazon-iot-innovation-case.pdf)
+1. :rocket: [How Viacom Native EquipTalk Empowers Launchers with ***Shifu***](https://mp.weixin.qq.com/s/T-_o2072dk5X0X4NChXUpA)
+2. :cloud: [***Shifu*** -- Amazon Cloud Technology Innovation Casebook (P90-92)](https://d1.awsstatic.com/whitepapers/amazon-iot-innovation-case.pdf)

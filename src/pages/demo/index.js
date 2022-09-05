@@ -53,7 +53,7 @@ class Demo extends React.Component {
             <DemoFooter onClick={() => this.stepForward()} stepIndex={this.state.stepIndex} isReturn={() => this.setState({ stepIndex: 0 })} ></DemoFooter>
             <div className={styles.service}>
               <div className={styles.serviceIcon} onClick={(e) => this.showServiceModel(e)}><ServiceIcon></ServiceIcon></div>
-              <p className={styles.serviceContent}><Translate>获取一对一操作指导</Translate></p>
+              <p className={styles.serviceContent}><Translate>Get one-on-one support</Translate></p>
             </div>
           </div>
           <ServiceModel showServiceModel={this.state.showServiceModel}></ServiceModel>

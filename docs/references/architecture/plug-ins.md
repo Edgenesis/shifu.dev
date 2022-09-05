@@ -1,22 +1,22 @@
 ---
-title: 插件 Plug-ins
+title: Plug-ins
 sidebar_position: 3
 ---
 
-***Shifu*** 在持续加入新的工具类服务来保证对不同协议和驱动的兼容性。
+***Shifu*** continues to add new toolclass services to ensure it is compatible with different protocols and drivers.
 
 ### MQTT Broker
 
-`MQTT Broker`被用来帮助MQTT信息的订阅和发布。目前，***Shifu*** 使用了[Mosquitto](https://mosquitto.org/)来实现兼容。
+`MQTT brokers` are used to help subscribe and post MQTT information. Presently, ***Shifu*** uses [Mosquito](https://mosquitto.org/) to achieve compatibility.
 
 ### RTSP Client
 
-`RTSP Client`保证了流媒体信息的传输。
+The `RTSP Client` ensures the transmission of streaming media information.
 
 ### Siemens S7 Suite
 
-`Siemens S7 Suite`支持西门子S7系列PLC的操作。目前，***Shifu*** 使用了[Snap7](http://snap7.sourceforge.net/)来实现兼容。
+`Siemens S7 Suite` supports the operation of PLC Siemens S7. Presently, ***Shifu*** uses [Snap7](http://snap7.sourceforge.net/) for compatibility.
 
 ### HTTP to SSH driver stub
 
-`HTTP to SSH driver stub`使得 ***Shifu*** 可以允许用户任意添加新的命令行驱动。参见[远程调用命令行驱动](references/advanced-features/remote-driver-execution.md)。
+The `HTTP to SSH driver stub` enables ***Shifu*** to allow users to add new command line drivers at will. See [Remote Invocation of Command Line Drivers](references/advanced-features/remote-driver-execution.md).

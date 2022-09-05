@@ -113,7 +113,7 @@ function HeaderLogo() {
       <div className={styles.words}>
         <h1 className={styles.title}>Shifu</h1>
         <p className={styles.describe}>
-          <Translate>让开发产业场景像开发APP一样简单！</Translate>
+          <Translate>Make developing industrial scenes as easy as developing an app!</Translate>
         </p>
       </div>
     </div>

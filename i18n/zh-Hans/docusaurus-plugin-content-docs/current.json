@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Project Introduction": {
+    "message": "项目介绍",
+    "description": "The label for category Project Introduction in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Get Started": {
+    "message": "快速上手",
+    "description": "The label for category Get Started in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.How-to Guides": {
+    "message": "使用指南",
+    "description": "The label for category How-to Guides in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Connect Devices": {
+    "message": "接入设备",
+    "description": "The label for category Connect Devices in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Developer Documentation": {
+    "message": "开发者文档",
+    "description": "The label for category Developer Documentation in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Architecture": {
+    "message": "架构",
+    "description": "The label for category Architecture in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Basic Features": {
+    "message": "基础功能",
+    "description": "The label for category Basic Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Advanced Features": {
+    "message": "高级功能",
+    "description": "The label for category Advanced Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.API": {
+    "message": "API",
+    "description": "The label for category API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Open Source Community": {
+    "message": "开源社区",
+    "description": "The label for category Open Source Community in sidebar tutorialSidebar"
+  }
+}

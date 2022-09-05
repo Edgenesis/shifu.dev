@@ -1,15 +1,15 @@
 --- 
-title: 基本架构
+title: Basic Structure
 sidebar_position: 0
 --- 
 
-# ***Shifu*** 基本架构
+# Basic Structure
 
-***Shifu*** 是一个[Kubernetes](https://kubernetes.io/)原生的平台，它的所有组件都以[Pod](https://kubernetes.io/docs/concepts/workloads/pods/)的形式运行。
+***Shifu*** is a [Kubernetes](https://kubernetes.io/) platform with all its components running as [Pods](https://kubernetes.io/docs/concepts/workloads/pods/).
 
-本文是关于 ***Shifu*** 架构的简介，如果你对 ***Shifu*** 的架构设计感兴趣，可以前往[desing-shifu-zh](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu-zh.md)查看具体细节。
+This article is an introduction to the ***Shifu*** architecture. If you are interested in the architectural design of ***Shifu***, please go to [desing-shifu](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu.md) for the specific details.
 
-下图是 ***Shifu*** 架构的示意图：
+The following diagram illustrates the ***Shifu*** architecture：
 
 ```mermaid
 flowchart BT
@@ -59,11 +59,11 @@ flowchart BT
   sg-pg<-->sg-dp
 ```
 
-**注：示意图内的IoT设备以及协议不仅限于图中出现的种类。*Shifu* 具有极强的扩展性，兼容所有通过协议或驱动通信的IoT设备。**
+**Note: IoT devices and protocols within the schematic are not limited to the types that appear in the diagram. ***Shifu*** is extremely scalable and compatible with all IoT devices that interact via protocols or drivers.**
 
-## 通信
+## Interaction
 
-***Shifu*** 与应用、设备之间的关系，可以用下图来表示：
+The relationship between ***Shifu*** and applications and devices can be represented by the following diagram:
 
 ```mermaid
 flowchart LR;
@@ -71,12 +71,10 @@ flowchart LR;
   Shifu<-->|IoT Protocols/drivers|Devices;
 ```
 
-### ***Shifu*** 与设备之间的通信
+### Interaction between ***Shifu*** and devices
 
-***Shifu*** 可以同时兼容不同的[通信协议](introduction/support.md)和[驱动](introduction/support.md)，它将不同设备的不同形式的请求进行统一，使得用户可以更简单地使用设备。同时，***Shifu*** 兼容的协议和驱动的数量也在不断增加。
+***Shifu*** is compatible with different communication protocols and drivers all at once, and it unifies different forms of requests from different devices, making it easier to use the devices. Simultaneosly, the number of protocols and drivers compatible with ***Shifu*** is increasing.
 
-### ***Shifu*** 与应用之间的通信
+### Interaction between ***Shifu*** and applications
 
-***Shifu*** 可以通过`HTTP`协议(gRPC协议暂未支持)与开发者所开发的程序进行通信。使得开发者开发物联网场景时像开发一个软件一样简单。
-
-换句话说，对设备的控制和信息读取都由 ***Shifu*** 托管并对外暴露成统一类型的接口，只需要使用相同类型的API即可实现对多种类设备的的通信。
+***Shifu*** can interact with applications developed via `HTTP` protocol (gRPC protocol not yet supported). With ***Shifu***, developing IoT scenarios is as easy as developing software. In other words, the control and information reading of devices are hosted by ***Shifu*** and exposed as a unified type of interface, so that interaction between multiple devices can be achieved by using the same type of APIs.

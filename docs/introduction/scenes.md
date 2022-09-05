@@ -1,20 +1,20 @@
 ---
-title: 应用场景
+title: Using Cases
 sidebar_position: 2
 ---
 
-# 应用场景
+# Application Scenarios
 
-**智慧园区**
+**Smart Industrial Park**
 
-在园区内做到全场景托管，实现全区域虚拟化，园区内设备/人的实时定位、能耗监控、状态管理，高效渲染场景
+***Shifu*** achieves full-scene hosting, virtualization of the whole area, real-time positioning of equipment/people in the park, as well as energy consumption monitoring, status management, and efficient rendering of scenarios.
 
-**新制造**
+**New Manufacturing**
 
-为生产线所有设备与数据提供统一接口，使其在同一平台管控；快速迭代制造工艺、加速软硬调试、助力实现黑灯工厂
+***Shifu*** provides a unified interface for all equipment and data of production lines, so that they are controlled on the same platform. ***Shifu*** iterates manufacturing processes rapidly, accelerates software and hardware debugging, and helps realize dark factories.
 
-**智能供应链**
+**Intelligent Supply Chain**
 
-帮助用户在当前WMS下铺设透明管控层，连接平台下所有设备，打通当前数据壁垒；智能分析场景内设备使用率、平均任务时间等
+***Shifu*** helps users to lay a transparent control layer under the current WMS, connect all devices under the platform and break the current data barriers, analyze the equipment utilization rate and average task time, etc.
 
 **……**

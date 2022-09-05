@@ -32,13 +32,13 @@ function StepSpot(props) {
 const spotsList = [
   {
     step: "1",
-    name: translate({ message: "部署Docker" }),
-    supplement: translate({ message: "预备工作" }),
+    name: translate({ message: "Install Docker" }),
+    supplement: translate({ message: "Preparation" }),
     className: ""
   },
   {
     step: "2",
-    name: translate({ message: "安装Shifu" }),
+    name: translate({ message: "Install Shifu" }),
     className: ""
   },
   // {
@@ -100,7 +100,7 @@ export default function DemoHeader(props) {
   }
   return (
     <div className={styles.demoHeaderContainer}>
-      <h1 className={styles.header}><Translate>欢迎体验Shifu Demo</Translate></h1>
+      <h1 className={styles.header}><Translate>Welcome to try Shifu Demo</Translate></h1>
       <ProgressBar></ProgressBar>
     </div>
   )

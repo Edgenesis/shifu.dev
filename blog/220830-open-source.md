@@ -1,50 +1,33 @@
-# Shifu 正式开源！
+# Shifu is now Open Source!
 
-物联网应用开发及管理平台 ***Shifu*** (<https://github.com/Edgenesis/shifu>) 正式开源，进入开源协同迭代新阶段。开发者登录GitHub搜索 `Shifu`获取仓库信息，可以点击 `star` 支持项目或者 `fork` 项目。***Shifu*** 为用户提供全场景设备托管与一体化软件开发的透明框架。开发者通过使用 ***Shifu***，可以更简单地连接、监视和控制任何物联网设备。 
+***Shifu*** (<https://github.com/Edgenesis/shifu>), the IoT application development and management platform, is officially open source, entering a new phase of open source collaborative iteration. Developers can log in to GitHub and search for `Shifu` to get repository information, and can `star` and `fork` the project. ***Shifu*** provides a transparent framework for customers to host all-scene devices and integrate software development. ***Shifu*** makes it easier to connect, monitor, and control any IoT device. 
 
-***Shifu*** 的创新优势是通过透明框架内的数字孪生技术，为设备赋予有思考能力的 “数字大脑” 。数字孪生将反映设备的实时状态，对其进行开发操作等同于操作设备本身。物联网设备接入到 ***Shifu*** 中便会生成标准化接口，实现互联网互动，通过平台层对场景内所有设备、机器进行北向数据收集和南向指令管控。 
+***Shifu***'s innovative advantage is the empowerment of devices with a thinking "digital brain" through digital twin technology within a transparent framework. The digital twin will reflect the real-time state of the device, and developing operations on it is equivalent to operating the device itself. IoT devices plugged into ***Shifu*** will generate a standardized interface to enable Internet interaction, northbound data collection and southbound command control of all devices and machines in the scene through the platform layer. 
 
-***Shifu*** 提供了桥接式设备互联解决方案，微服务架构令设备能力模块可调用，可复用，目标是实现通过配置文件轻松接入各种异构设备。目前，***Shifu*** 已经实现通过HTTP、MQTT、TCP Socket、RTSP、OPC UA等协议接入物联网设备，同时已将西门子S7、海康威视（HIKVISION）等通过私有协议通讯的设备进行了集成。 
+***Shifu*** provides a bridged device interconnection solution with a micro-service architecture that makes device capability modules invocable and reusable, with the goal of achieving easy access to various heterogeneous devices through configuration files. Currently, ***Shifu*** has achieved access to IoT devices through HTTP, MQTT, TCP Socket, RTSP, OPC UA, ONVIF, gRPC and other protocols, and has integrated devices communicating through private protocols such as Siemens S7 and HIKVISION. 
 
-作为云原生框架，***Shifu*** 通过Kubernetes的CRD功能延伸了K8s的资源，来实现高可用，静态域名，服务管理等功能，***Shifu*** 可以支持对任何设备进行任何形式的配置。当连接物理设备时， ***Shifu*** 会识别并以一个K8s Pod的方式启动该设备的数字孪生 deviceShifu。开发者通过接入 deviceShifu 的接口，可以获取物联网设备的所有功能，同时编程定义设备原本不具备的功能。 
+As a cloud-native framework, ***Shifu*** extends the resources of Kubernetes through the CRD function of it to achieve high availability, static domain names, service management, etc. ***Shifu*** can support any kind of configuration for any device. When a physical device is connected, ***Shifu*** recognizes and launches that device's digital twin, deviceShifu, as a k8s Pod. By accessing deviceShifu's interface, developers can access all the features of an IoT device, while programmatically defining features that the device would not otherwise have. 
 
-云原生的 ***Shifu*** 将系统运维的难度大大降低，应用开发者可以通过一套Kubernetes基础架构进行运维管理。 ***Shifu***  将推动Kubernetes成为物联网开发的底层架构标准，将容器编排技术带入物联网软件开发生态中。 
-
----
-
-***Shifu*** 项目创始人**陈永立**表示，感谢国内外开源社区对 ***Shifu*** 开源的鼎力支持！我们希望将 ***Shifu*** 打造成IoT开发的通用开源底座，让IoT开发者也能通过 ***Shifu*** 享受到Android和iOS给移动开发带来的红利。我们已经迫不及待地要和 ***Shifu*** 的支持者们一起创造万物互联的时代了！ 
-
-Apache Foundation Member，Mentor of Apache SeaTunnel PMC of Apache Dolphin Scheduler, ClickHouse中国社区创始人**郭炜**表示，云原生时代的到来，重构了所有企业的基础设施，***Shifu*** 项目的开源帮助企业在IoT物联网管理上更进一步，希望 ***Shifu*** 项目越做做好。
-
-LF Edge 董事会主席 **Tina Tsou** 表示，LF Edge密切关注全球范围内有潜力的边缘计算项目， ***Shifu*** 基于Kubernetes的云原生架构，非常具有创新性，将边缘设备的控制管理能力进一步释放，并为应用开发工程师提供了云边协同管理的统一底座，未来将持续关注 ***Shifu*** 的开源进程，期待 ***Shifu*** 能推动边缘计算技术走向高效率的场景落地。 
-
-CNCF大使，华为云云原生开源负责人 **Kevin Wang** 表示，边缘计算已经成为云原生发展的最关键方向之一。很高兴看到 ***Shifu*** 项目的开源，丰富了云原生和物联网的生态，也祝 ***Shifu*** 开源社区越来越好。
-
-<img src="/blog-220830/1 陈永立.png" width="25%" />
-<img src="/blog-220830/2 郭炜.png" width="25%" />
-<img src="/blog-220830/3 Tina Tsou.png" width="25%" />
-<img src="/blog-220830/4 Kevin Wang.png" width="25%" />
-
-阿里云技术专家，OpenYurt初创成员**何淋波**表示，云原生边缘计算领域的发展势头方兴未艾，受到了越来越多的公司的青睐。 ***Shifu*** 以云原生为切入点，引入声明式API抽象IoT生命周期管理，优雅解决传统IoT行业的开发周期长，大规模部署复杂，运维成本高等痛点问题。同时 ***Shifu*** 以让IoT从业者体验到技术乐趣和软件定义世界为愿景。正值 ***Shifu*** 正式向业界开源的时点，强烈推荐云原生，边缘计算行业的从业者去体验和使用 ***Shifu*** 。祝福 ***Shifu*** 的贡献者、参与者在开源社区收获到开心，乐趣，满足。 
-
-微软物联网高级解决方案架构师**赵鹏程**表示，随着物联网，边缘计算，数字孪生等应用场景逐渐成熟，云原生技术在物联网相关解决方案中也产生了越来越重要的影响。 ***Shifu***  就是这样一个基于Kubernetes技术的物联网边缘计算框架，并非常巧妙的将数字孪生概念和容器技术进行了融合，是一套在目前看来虽然略显青涩，但整体架构却非常灵活的平台。期待开源的 ***Shifu*** 不断拓宽影响力，加速代码与产品的迭代，深入场景，下沉行业。成为业界信赖的物联网开源解决方案。 
-
-全球领先的开源时序数据库TDengine创始人**陶建辉**祝贺 ***Shifu*** 正式开源，他表示，选择开源是中国基础软件与中间件建立行业领先地位的关键一招，也是面向全球市场勇敢的选择。开源意味着主动接受社区同仁的关注，同时接受开放带来的机遇，让技术真正地落地在现实场景中。 ***Shifu*** 的云原生架构，更加完美地支持容器化部署，期待未来与TDengine3.0一起在物联网场景中探索出更多的可能。 
-
-面向物联网现代数据基础设施提供商，全球 MQTT Broker 开源社区的领导者 EMQX 联合创始人**金发华**祝贺 ***Shifu*** 正式开源。 ***Shifu***  通过云原生架构方式来支持 IoT 应用的开发和部署，为物联网的数字化转型提供一种新的创新可能。希望 ***Shifu*** 开源社区和 EMQ 的开源系列产品一起，可为社区用户构建出从云到边、面向分布式云原生的物联网解决方案。
-
-<img src="/blog-220830/5 何淋波.png" width="25%" />
-<img src="/blog-220830/6 赵鹏程.png" width="25%" />
-<img src="/blog-220830/7 陶建辉.png" width="25%" />
-<img src="/blog-220830/8 金发华.png" width="25%" />
+Cloud-native ***Shifu*** makes system operations and maintenance much less difficult, and application developers can manage operations and maintenance through a set of Kubernetes infrastructure. ***Shifu*** will drive Kubernetes to become the underlying architecture standard for IoT development, bringing container orchestration technology to the IoT software development ecosystem. 
 
 ---
 
-在未来，***Shifu*** 将逐步支持自动生成 deviceShifu、声明式API、高级的 ***Shifu*** 控制器、设备分组、多层封装等功能，期待开源贡献者为 ***Shifu*** 提供更多功能迭代方向与真实的场景需求。***Shifu*** 创建的初衷是让每一个IoT设备都有一个 ***Shifu***，让软件定义世界，解决好基础设施问题，让开发者和运维人员在物联网世界再次开心。***Shifu*** 开源社区将与全球开发者一起，为更多的物联设备更好地服务人类而努力。 
+***Shifu*** Framework project founder **Yongli Chen** said, thanks to the domestic and international open source community for the full support of ***Shifu*** open source! We hope to make ***Shifu*** a universal open source base for IoT development, so that IoT developers can similarly enjoy the dividends that Android and iOS bring to mobile development through the ***Shifu*** Framework. We can't wait to create the era of the Internet of Everything with ***Shifu***'s supporters! 
 
+**Wei Guo**, Apache Foundation Member, Mentor of Apache SeaTunnel PMC of Apache Dolphin Scheduler, and Founder of ClickHouse Community in China, said, the advent of the cloud-native era has reconfigured the infrastructure of all enterprises, and the open source ***Shifu*** project helps enterprises go further in IoT management, and I hope the ***Shifu*** project will do better and better. 
 
+**Tina Tsou**, Chairman of LF Edge Board of Directors, said LF Edge pays close attention to promising edge computing projects around the world. ***Shifu***'s cloud-native architecture based on Kubernetes is very innovative, further releasing the control and management capabilities of edge devices and providing a unified base for application development engineers to collaborate and manage the cloud edge, and will continue to pay attention to the ***Shifu***'s open source process, and expect ***Shifu*** to drive edge computing technology towards efficient scenario landing. 
 
+CNCF Ambassador and Huawei Cloud Native Open Source Lead **Kevin Wang** said that edge computing has become one of the most critical directions for cloud native development. I am glad to see the open source of ***Shifu*** project, which enriches the ecology of cloud-native and IoT, and wish the ***Shifu*** open source community better and better. 
 
+**Linbo He**, a technical expert from Alibaba Cloud and a founding member of OpenYurt, said that cloud-native edge computing is gaining momentum and is favored by more and more companies. ***Shifu*** takes cloud-native as an entry point and introduces declarative API abstraction for IoT lifecycle management, which elegantly solves painful problems such as long development cycles, complex large-scale deployments, and high operation and maintenance costs in the traditional IoT industry. At the same time, ***Shifu*** takes the vision of letting IoT practitioners experience the fun of technology and a software-defined world. I wish the contributors and participants of ***Shifu*** to have fun, enjoyment and satisfaction in the open source community.
 
+With the maturity of IoT, edge computing, digital twin and other application scenarios, cloud-native technologies are becoming more and more important in IoT-related solutions, said **Pengcheng Zhao**, Senior IoT Solutions Architect in Microsoft. ***Shifu*** is an architecture platform, slightly new but flexible overall. I expect the open source ***Shifu*** to continue to broaden its influence, accelerate code and product iterations, penetrate deeper into the scene, and sink into the industry. Hopes that ***Shifu*** becomes the industry's trusted open source solution for IoT. 
 
+**Jianhui Tao**, a founding member of TDengine, the world's leading open source timing database, congratulated ***Shifu*** on its official open source, saying that choosing open source is a key move for China's basic software and middleware to establish a leading position in the industry, and a brave choice for the global market. ***Shifu***'s cloud-native architecture, which more perfectly supports containerized deployment, is expected to explore more possibilities in IoT scenarios together with TDengine 3.0 in the future. 
 
+**Fahua Jin**, co-founder of EMQX, the global leader of MQTT Broker open source community and provider of modern data infrastructure for IoT, congratulated ***Shifu*** on its open source, which provides a new innovative possibility for digital transformation of IoT by supporting the development and deployment of IoT applications through a cloud-native architecture. Hope that the ***Shifu*** open source community, together with EMQ's open source family of products, will build a distributed cloud-native IoT solution from cloud to edge for the community. 
+
+---
+
+In the future, ***Shifu*** will gradually support automatic deviceShifu generation, declarative API, advanced ***Shifu*** controller, device grouping, multi-layer packaging, etc. We expect open source contributors to provide ***Shifu*** with more functional iterative directions and real scenario requirements. Let every IoT device have a ***Shifu***, let the software define the world, solve the infrastructure problem, let developers and operation and maintenance personnel in the IoT world happy again, is the original intention of ***Shifu*** creation. ***Shifu*** open source community will work with global developers for more IoT devices to better serve humanity.

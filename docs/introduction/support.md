@@ -1,59 +1,58 @@
 ---
-title: 支持情况
+title: Support
 sidebar_position: 3
 ---
 
-# 支持情况
+# Support
 
-## 平台支持
+## Platforms
 
-***Shifu*** 支持常见的硬件平台和操作系统。
+***Shifu*** supports common hardware platforms and operating systems.
 
-### 硬件要求
+### Compatible Hardware Platforms
 
-| 硬件平台 | 支持情况 |
-| --- | --- |
-| `x86/64` | :white_check_mark: |
+| Hardware platform | support |
+|--|--|
+| `x86/64 `| :white_check_mark: |
 | `ARM` | :white_check_mark: |
 
-### 操作系统要求
+### Compatible Operating Systems
 
-| 操作系统 | 支持情况 |
-| --- | --- |
+| Operating system | support |
+|--|--|
 | `Linux` | :white_check_mark: |
 | `macOS` | :white_check_mark: |
 | `Windows(WSL2)` | :white_check_mark: |
 
+## Protocols
 
-## 协议支持
+### Compatible Protocols
 
-### 已兼容的协议
+For now, ***Shifu*** supports the following protocols for interacting with devices:
 
-当前，***Shifu*** 支持下列协议与设备进行交互：
+1. HTTP
+2. [MQTT](https://github.com/Edgenesis/shifu/tree/main/examples/mqttDeviceShifu)
+3. [RTSP for streaming](https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu)
+4. [Siemens S7](https://github.com/Edgenesis/shifu/tree/main/examples/siemensPLCDeviceShifu)
+5. [TCP socket](https://github.com/Edgenesis/shifu/tree/main/examples/socketDeviceShifu)
+6. [OPC UA](https://github.com/Edgenesis/shifu/tree/main/examples/opcuaDeviceShifu)
 
-- HTTP
-- [MQTT](https://github.com/Edgenesis/shifu/tree/main/examples/mqttDeviceShifu)
-- [RTSP for streaming](https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu)
-- [Siemens S7](https://github.com/Edgenesis/shifu/tree/main/examples/siemensPLCDeviceShifu)
-- [TCP socket](https://github.com/Edgenesis/shifu/tree/main/examples/socketDeviceShifu)
-- [OPC UA](https://github.com/Edgenesis/shifu/tree/main/examples/opcuaDeviceShifu)
+### Incompatible Protocols
 
-### 未兼容的协议
+***Shifu***'s microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to be compatible with new protocols quickly.
 
-***Shifu*** 的微服务架构赋予了 ***Shifu*** 无与伦比的扩展性，也使得 ***Shifu*** 可以非常快速地兼容新的协议。
+If the protocol to use is not yet supported by ***Shifu***, please [submit an Issue](https://github.com/Edgenesis/shifu/issues/new) and we will support it ASAP!
 
-如果您所用的协议 ***Shifu*** 还未支持，请[提交一个GitHub Issue](https://github.com/Edgenesis/shifu/issues/new)，我们会尽快支持该协议！
+## Drivers
 
-## 驱动支持
+### Compatible Drivers
 
-### 已兼容的驱动
+***Shifu*** allows users to add the drivers to platform as follows:
 
-***Shifu*** 允许用户向平台添加以下形式的驱动:
+- command line drivers, please refer to [Quick Start: Invoking Command Line Drivers](references/advanced-features/remote-driver-execution.md)
 
-- [命令行驱动](references/advanced-features/remote-driver-execution.md)
+### Incompatible Drivers
 
-### 未兼容的驱动
+***Shifu***'s microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to be compatible with new drivers quickly. 
 
-***Shifu*** 的微服务架构赋予了 ***Shifu*** 无与伦比的扩展性，也使得 ***Shifu*** 可以非常快速地兼容新的驱动。
-
-如果您所用的驱动 ***Shifu*** 还未支持，请点击[提交一个 GitHub Issue](https://github.com/Edgenesis/shifu/issue/new)，我们会尽快支持该协议！
+If the driver to use is not yet supported by ***Shifu***, please [submit an Issue](https://github.com/Edgenesis/shifu/issues/new) and we will support it ASAP!

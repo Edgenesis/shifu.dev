@@ -36,7 +36,7 @@ const buttonActiveStyle = {
 const codeList = [
   {
     id: 1,
-    description: translate({ message: "1.启动一个nginx实例来模拟应用程序与Shifu的交互" }),
+    description: translate({ message: "1. Start an nginx instance to simulate the interaction between applications and Shifu" }),
     code: "sudo kubectl run --image=nginx:1.21 nginx  ",
     isCopy: true,
     style: codeViewStyle,
@@ -44,7 +44,7 @@ const codeList = [
   },
   {
     id: 2,
-    description: translate({ message: "2.输入以下指令查看运行结果" }),
+    description: translate({ message: "2. Run the following command to check the running result" }),
     code: `sudo kubectl get pods -A | grep nginx `,
     isCopy: true,
     style: codeViewStyle,
@@ -52,7 +52,7 @@ const codeList = [
   },
   {
     id: 3,
-    description: translate({ message: "3.如果出现以下结果，表示启动成功" }),
+    description: translate({ message: "3. If the following result appears, it means the startup is successful" }),
     code:
       `NAME  READY  STATUS  RESTARTS  AGE 
 nginx   1/1   Running    0     34s`,
@@ -66,37 +66,37 @@ const btnList = [
   {
     id: 1,
     colorLevel: 'three',
-    content: <div><p><Translate>案例一</Translate></p><p><Translate>与AGV的数字孪生交互</Translate></p></div>,
+    content: <div><p><Translate>Case One</Translate></p><p><Translate>Interact with the AGV</Translate></p></div>,
     contentStyle: buttonContentStyle,
-    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#1-与agv交互" })
+    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#1-interact-with-the-agv" })
   },
   {
     id: 2,
     colorLevel: 'three',
-    content: <div><p><Translate>案例二</Translate></p><p><Translate>与温度计的数字孪生交互</Translate></p></div>,
+    content: <div><p><Translate>Case Two</Translate></p><p><Translate>Interact with the thermometer</Translate></p></div>,
     contentStyle: buttonContentStyle,
-    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#2-与温度计交互" })
+    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#2-interact-with-the-thermometer" })
   },
   {
     id: 3,
     colorLevel: 'three',
-    content: <div><p><Translate>案例三</Translate></p><p><Translate>与酶标仪的数字孪生交互</Translate></p></div>,
+    content: <div><p><Translate>Case Three</Translate></p><p><Translate>Interact with the microplate reader</Translate></p></div>,
     contentStyle: buttonContentStyle,
-    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#3-与酶标仪交互" })
+    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#3-interact-with-the-microplate-reader" })
   },
   {
     id: 4,
     colorLevel: 'three',
-    content: <div><p><Translate>案例四</Translate></p><p><Translate>与PLC的数字孪生交互</Translate></p></div>,
+    content: <div><p><Translate>Case Four</Translate></p><p><Translate>Interact with the PLC</Translate></p></div>,
     contentStyle: buttonContentStyle,
-    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#4-与plc交互" })
+    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#4-interact-with-the-plc" })
   },
   {
     id: 5,
     colorLevel: 'three',
-    content: <div><p><Translate>案例五</Translate></p><p><Translate>与机械臂的数字孪生交互</Translate></p></div>,
+    content: <div><p><Translate>Case Five</Translate></p><p><Translate>Interact with the robotic arm</Translate></p></div>,
     contentStyle: buttonContentStyle,
-    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#5-与机械臂交互" })
+    url: translate({ message: "https://shifu.run/docs/tutorials/demo-try#5-interact-with-the-robotic-arm" })
   },
 ]
 
@@ -157,10 +157,10 @@ class StepThree extends React.Component {
           {buttons}
         </div>
         <div className={styles.guideContainer}>
-          <h1 className={styles.guideTitle}><Translate>确认是否启动Nginx</Translate></h1>
+          <h1 className={styles.guideTitle}><Translate>Confirm nginx starts</Translate></h1>
           {codes}
           <div className={styles.enterGameBtn}>
-            <ButtonSquare colorLevel="one" content={translate({ message: "进入试玩" })} target="_blank" href={this.state.btnInfo.url}></ButtonSquare>
+            <ButtonSquare colorLevel="one" content={translate({ message: "Start trying out" })} target="_blank" href={this.state.btnInfo.url}></ButtonSquare>
           </div>
         </div>
         {/* <div className={styles.enterShifuCloud}>

@@ -1,11 +1,11 @@
 ---
-title: 设备管理
+title: Device Management
 sidebar_position: 2
 ---
 
-# 设备管理
+# Device Management
 
-`deviceshifu_configmap.yaml`中的`telemetries`表示自动测量记录传导。***Shifu*** 通过`telemetries`中设置的方法，以指定时间向设备周期性地发送请求，来判断设备的连接情况。如果设备出现故障或者连接出现问题，***edgeDevice*** 的状态将发生改变，您可以通过`kubectl describe edgedevice -A`查看其状态。
+The `telemetries` in `deviceshifu_configmap.yaml` indicate automatic measurement recording conduction. ***Shifu*** uses the method set in `telemetries` to periodically send requests to the device at a specified time to determine the connection status of the device. If the device fails or there is a connection problem, the state of the ***edgeDevice*** will change, the status can be viewed with `kubectl describe edgedevice -A`.
 
 ```yaml
 ...
@@ -20,13 +20,13 @@ telemetries: |
         intervalMs: 1000
 ```
 
-其中`telemetrySettings`下的`telemetryUpdateIntervaInlMiliseconds`表示自动测量的时间间隔。
+`telemetryUpdateIntervaInlMiliseconds` of `telemetrySettings` represents the time interval for automatic measurement.
 
-`telemetries`下可以包含多个对象，即可以同时开启多个对象。
+`telemetries` can contain multiple objects, that is, multiple objects can be opened at the same time.
 
-## 案例演示
+## Demo
 
-1. 我们先启动一个`OPC UA`设备，并启动 ***deviceShifu***。之后我们通过以下命令查看设备的工作状态：
+1. Let's start `OPC UA` equipment, and start the ***deviceShifu***. Then we use the following command to check the condition.
     ```bash
     $ kubectl describe edgedevice -A
     ...
@@ -34,7 +34,7 @@ telemetries: |
       Edgedevicephase:  Running
     Events:             <none>
     ```
-2. 我们可以观察到当前设备处于`Running`状态，此时我们将设备关闭。此时我们再通过以下命令查看设备的工作状态：
+2. Once the device is observed at `Running`, shut down the device. Then the status of the device can be checked through the following command:
     ```bash
     $ kubectl describe edgedevice -A
     ...
@@ -42,7 +42,7 @@ telemetries: |
       Edgedevicephase:  Failed
     Events:             <none>
     ```
-3. 我们可以观察到当前设备处于`Failed`状态，此时我们将设备重新启动。***Shifu*** 检测到设备启动后将更新设备状态到`Running`，我们输入以下指令来查看设备状态的变更：
+3. The device is in a `Failed` state, at this time the device need to be restarted. ***Shifu*** will update the device status to `Running` after the device is restarted. After that, input command to see the changes in the device status
     ```bash
     $ kubectl describe edgedevice -A
     ...

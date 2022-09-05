@@ -1,62 +1,69 @@
 ---
-title: 功能特点
+title: Features
 sidebar_position: 1
 ---
 
-# 功能简介
+# Features
 
-***Shifu*** 作为下一代的物联网应用开发框架，致力于为物联网应用开发者提供全流程的一站式解决方案。
+***Shifu***, as the next generation of IoT application development framework, strives to provide a one-stop solution for IoT application developers. 
 
-## 按物联网开发者工作类型
+## By Working Process of IoT application development
 
-秉着“为开发者而生”的原则，***Shifu*** 将物联网应用开发者的工作分为六大类，***Shifu*** 的功能页围绕这六类展开。
+Based on the principle "Born for Developers", ***Shifu*** divides the work of IoT application development into six following major categories:
 
-### 1. 设备接入
+1. Device Access
+1. Device Management
+1. Data Collection
+1. Device Control
+1. Application Development
+1. System Operation and Maintenance
 
-***Shifu*** 先进的微服务架构赋予了 ***Shifu*** 无与伦比的扩展性，也使得 ***Shifu*** 可以非常快速地接入新设备。
+## Device Access
 
-### 2. 设备管理
+The advanced microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to access new devices quickly.
 
-***Shifu*** 自带了设备管理框架，可以便捷地实现查看设备的运行状态、更新设备驱动、进行安全配置等操作。
+## Device Management
 
-### 3. 数据采集
+***Shifu*** comes with a device management framework that makes it easy to check the operating status of devices, update device drivers, perform security configurations, and other operations.
 
-在 ***Shifu*** 中，你可以轻而易举的实现自动化数据采集。
+## Data Collection
 
-### 4. 设备控制
+On ***Shifu***, you can automate data collection with ease.
 
-在 ***Shifu*** 中，你可以结合数据采集实现自动化设备控制。
+## Device Control
 
-### 5. 应用开发
+On ***Shifu***, you can attain automated device control through data collection.
 
-在 ***Shifu*** 中，每一个设备都会生成与其相对应的数字孪生 ***deviceShifu***。开发者只需调用 ***deviceShifu*** 所暴露出来的API，即可以无比便捷地使用设备的能力。
+## Application Development
+
+On ***Shifu***, each device generates a corresponding digital twin ([***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md)). Developers can utilize the capabilities of the device with unparalleled ease by simply calling the API exposed by [***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md).
 
 ```bash
 curl http://robot-arm/grip/
 ```
 
-举个例子，上面这条简单的命令就可以让一个机械臂完成抓取的动作。
+For example, this simple command above can make a robotic arm complete a grasping move.
 
-我们希望 ***Shifu*** 能够帮助物联网应用开发者们，**把开发一个产业场景变得像开发一个App一样简单！**
+The aim of ***Shifu*** is to **help developers to create a complex IoT application as easy as creating a mobile app**!
 
-### 6. 系统运维
+## System Operation and Maintenance
 
-由于 ***Shifu*** 底层集成了`Kubernetes`的能力，所以 ***Shifu*** 在运维上有两大天然优势：
+As integrated with `Kubernetes`' capabilities, ***Shifu*** was born with two advantages in operation and maintenance:
 
-1. 由`Kubernetes`原生的 ***Shifu*** 使得开发者只用运维一套k8s集群，便可统一管理应用和IoT设备，无需运维一套额外的物联网平台；
-1. 永无单点故障。与其他物联网平台不同，***Shifu*** 的架构完全由可创建若干个 ***deviceShifu*** 的副本组成，所以 ***Shifu*** 永无单点故障。事实上，***Shifu*** 已经在多个500强企业的核心场景中（工厂、实验室、供应链等）累计运行了50万小时且没有出过故障。
+1. ***Shifu***, based on Kubernetes, enables developers to unify the management of applications and IoT devices by operating and maintaining only one set of k8s clusters, eliminating the need to operate and maintain an additional set of IoT platforms.
+1. Never having singular-point failures. Unlike other IoT platforms, ***Shifu***'s architecture can be created several copies of ***deviceShifu***, so there will never be a singular-point failure. In fact, ***Shifu*** has already accumulated 500,000 hours of operation without failure in use cases (factories, labs, supply chain, etc.) of several Fortune 500 company clients.
 
-## 按 ***Shifu*** 组件
+## By ***Shifu***'s Module
 
-***Shifu*** 作为一个对物联网设备进行开发和管理的框架，以组件提供以下功能：
+***Shifu***, as a framework for developing and managing IoT devices, features the following functions：
 
-- ***deviceShifu***
-  - 从设备获取数据
-  - 向设备发送指令
-  - 各种应用开发工具(有限状态机等）
-- ***shifuController***
-  - 管理 ***deviceShifu*** 的生命周期
-- ***shifud***
-  - 设备发现
-  - 设备验证
-  - 设备更新
+- [***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md)
+  - Get data from devices
+  - Send commands to the devices
+  - Various application development tools (finite state machine, etc.)
+- [***shifud***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud.md)
+  - Device discovery
+  - Device verification
+  - Device update
+- [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController.md)
+  - Managing the ***deviceShifu*** lifecycle

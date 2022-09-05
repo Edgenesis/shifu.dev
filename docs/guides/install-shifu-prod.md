@@ -1,11 +1,11 @@
 ---
-title: 生产安装部署
+title: Production Installation
 sidebar_position: 0
 ---
 
-# 生产安装部署
+# Production Installation
 
-***Shifu*** 提供了一键安装的方式，您可以使用如下命令将 ***Shifu*** 安装到您的集群中：
+***Shifu*** provides a quick method to deploy it in your cluster with a single command:
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/Edgenesis/shifu/main/pkg/k8s/crd/install/shifu_install.yml

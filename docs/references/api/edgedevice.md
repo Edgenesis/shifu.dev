@@ -1,11 +1,11 @@
 ---
-title: edgeDevice
-sidebar_position: 0
+title: EdgeDevice
+sidebar_position: 1
 ---
 
 # EdgeDevice
 
-:::caution正在施工
+:::caution Work in Progress
 
 :::
 
@@ -14,88 +14,85 @@ sidebar_position: 0
 `import "github.com/edgenesis/shifu/pkg/k8s/crd"`
 
 ## EdgeDevice
-EdgeDevice 是通过 Kubernetes [CRD](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) 创建的自定义资源，代表着一个物理IoT设备的虚拟化数字孪生。
 
-- **apiVersion**: v1alpha1
-- **kind**: EdgeDevice
-- **metadata**
-  标准的 Kubernetes [ObjectMeta](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/object-meta/#ObjectMeta)。
-- **spec** （[Spec](#edgedevicespec)）
-  描述了一个 EdgeDevice 的规格。
-- **status** ([EdgeDeviceStatus](#edgedevicestatus))
-  描述了 EdgeDevice 的观察状态。
+EdgeDevice is a custom resource created by Kubernetes [CRD](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) that represents a virtualized digital twin of a physical IoT device.
+  - **apiVersion**: v1alpha1
+  - **kind**: EdgeDevice
+  - **metadata** Standard Kubernetes ObjectMeta.
+  - **spec** ([Spec](#edgedevicespec)) Describes the specification of an EdgeDevice.
+  - **status** ([EdgeDeviceStatus](#edgedevicestatus)) Describes the observed status of the EdgeDevice.
 
 ## EdgeDeviceSpec
 
-EdgeDeviceSpec 是一个 EdgeDevice的描述。
+EdgeDeviceSpec is the description of an EdgeDevice.
 
 ### Sku
 
-表示一个 EdgeDevice 的硬件型号，如 `Siemens S7-1200`。
+Indicates the hardware model of an EdgeDevice, e.g. `Siemens S7-1200`.
 
-- **sku** (string) 必填
+- **sku** (string) is required to be filled in
 
 ### Connection
 
-表示EdgeDevice 连接到 Shifu 的连接方式。
+Indicates how the EdgeDevice connects to Shifu.
 
-- **connection** (Connection) 必填
-	- **Connection** (string)
-    表示连接方式，现在必须是 `Ethernet`。
+- **connection** (Connection) is required to be filled in
+  - **Connection** (string) Indicates the connection method, which has to be Ethernet (for now).
 
 ### Address
 
-表示 EdgeDevice 的连接地址，根据不同的[协议](#protocol)，格式也有所不同。
+Indicates the connection address of the EdgeDevice, the format varies depending on the [protocol](#protocol).
 
-- **address** (string) 必填
+- **address** (string) is required to be filled in
 
 ### Protocol
 
-表示 EdgeDevice 通过连接方式的连接协议。
+Indicates the connection protocol of the EdgeDevice.
 
-- **protocol** (Protocol) 必填
+- **protocol** (Protocol) is required to be filled in
   - **Protocol** (string)
-    表示连接协议，现在必须是 `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA` 或 `Socket`。
+    indicates the connection protocol, which has to be `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA` or `Socket` (for now).
 
 ### ProtocolSettings
 
-表示 EdgeDevice 连接协议的设置。
+Indicates the settings of EdgeDevice connection protocol.
 
 - **protocolSettings** (ProtocolSettings)
   - **MQTTSetting** (MQTTSetting) 
     - **MQTTTopic** (string)
-      表示要订阅的MQTT主题， 如 `/test/test`。
+      indicates the subscription of MQTT topic, e.g. `/test/test`.
+  - **OPCUASetting** (OPCUASetting)
     - **OPCUAEndpoint** (string)
-      表示 OPC UA 的服务器地址，如 `opc.tcp://192.168.0.1:4840/test/server`。
+      indicates the server address of OPC UA, e.g. `opc.tcp://192.168.0.1:4840/test/server`.
     - **SecurityMode** (string)
-      表示 OPC UA 的信息加密模式，现在必须是 `None`。
+      indicates the message encryption mode of OPC UA, which has to be `None` (for now).
     - **Username** (string)
-      表示 OPC UA 的连接认证用户名，如 `operator`。
+      indicates the connection authentication username of OPC UA, e.g. `operator`.
     - **Password** (string)
-      表示 OPC UA 的连接认证密码，如 `password`。
+      indicates the connection authentication password of OPC UA, e.g. `password`.
     - **ConnectionTimeoutInMilliseconds** (int64)
-      表示 OPC UA 的请求连接毫秒时长，如 `1000`。
+      indicates the requested connection milliseconds for OPC UA, e.g. `1000`.
   - **SocketSetting** (SocketSetting)
     - **Encoding** (string)
-      表示 Socket 连接时的编码，现在必须是 `utf-8`。
+      indicates the encoding of the socket connection, which has to be `utf-8` (for now).
     - **NetworkType** (string)
-      表示 Socket 链接时的协议，现在必须是 `tcp`。
+      indicates the protocol of the socket link, which has to be `tcp` (for now).
 
 ### CustomMetadata
 
-表示 EdgeDevice 的附加信息。
+Indicates additional information about the EdgeDevice.
 
 - **customMetadata** (string: string)
-  表示附加信息，如 `ChargingTime: 9h`。
+  indicates additional information, e.g. `ChargingTime: 9h`.
 
 ## EdgeDeviceStatus
 
-表示 EdgeDevice 的状态信息。
+Indicates the current status information
 
-### EdgeDevicePhase (会自动根据设备遥测进行更新）
+### EdgeDevicePhase (will automatically update based on device telemetry)
 
-表示 EdgeDevice 当前的状态。
+Indicates the current state of EdgeDevice.
 
 - **edgedevicephase** (EdgeDevicePhase)
   - EdgeDevicePhase (string)
-    表示EdgeDevice 的状态，必须是 `Pending`, `Running`, `Failed` 或 `Unknown`。
+    indicates that the state of EdgeDevice has to be `Pending`, `Running`, `Failed` or `Unknown`.
