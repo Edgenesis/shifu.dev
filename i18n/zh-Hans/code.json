@@ -794,5 +794,8 @@
   "theme.SearchBar.label": {
     "message": "搜索",
     "description": "The ARIA label and placeholder for search button"
+  },
+  "https://shifu.run/docs/tutorials/demo-try": {
+    "message": "https://shifu.run/zh-Hans/docs/tutorials/demo-try"
   }
 }
