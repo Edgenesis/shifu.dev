@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 **0. 安装 WSL**
 
 :::tip
-- 如果您在 `VMware` 中有 `Linux虚拟机`，且计划在虚拟机中体验 ***Shifu***，您可以点击上方按钮切换到 `Linux`。
+如果您在 `VMware` 中有 `Linux虚拟机`，且计划在虚拟机中体验 ***Shifu***，您可以点击上方按钮切换到 `Linux`。
 :::
 
 您的 `Windows` 需要是 `Windows 10` (版本2004及更高版本) 或 `Windows 11`。

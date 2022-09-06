@@ -24,7 +24,7 @@ Select your OS to check the corresponding method to install `Docker Desktop`:
 **0. Install WSL**
 
 :::tip
-- If you have a `Linux virtual machine` and want to try ***Shifu*** in it, switch to `Linux` by clicking the button above.
+If you have a `Linux virtual machine` and want to try ***Shifu*** in it, switch to `Linux` by clicking the button above.
 :::
 
 It is required that the version of your Windows is higher than `Windows 10` (version 2004 or higher) or `Windows 11`.
