@@ -35,6 +35,17 @@ const config = {
         analyticsId: '3123fa51e13a507dfc99a606fc329c52'
       }
     ],
+    [
+      // Check https://docusaurus.io/docs/blog#multiple-blogs for multiple blog page in a single site.
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'blog-case-studies',
+        // URL route for the blog section of your site.
+        routeBasePath: 'case-studies',
+        // Path to data on filesystem relative to site dir.
+        path: './blog-case-studies',
+      },
+    ],
   ],
 
   themes: [
@@ -97,6 +108,11 @@ const config = {
             label: 'Docs',
           },
           {
+            to: 'case-studies', 
+            position: 'left',
+            label: 'Case Studies', 
+          },
+          {
             to: '/blog', 
             position: 'left',
             label: 'Blog', 
@@ -133,9 +149,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Coming soon...',
-                to: '/docs',
-                // href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Join',
+                to: '/docs/community/join',
               },
             ],
           },

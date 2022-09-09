@@ -18,5 +18,9 @@
   "item.label.Download Demo": {
     "message": "下载 Demo",
     "description": "Navbar item with label Download Demo"
+  },
+  "item.label.Case Studies": {
+    "message": "案例分析",
+    "description": "Navbar item with label Case Studies"
   }
 }
