@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Try it Out
 
-We have prepared five devices (AGV, thermometer, microplate reader, PCL and robotic arm) in ***Shifu*** installer for you to explore the abilities of ***Shifu***.
+We have prepared five devices (AGV, thermometer, microplate reader, PLC and robotic arm) in ***Shifu*** installer for you to explore the abilities of ***Shifu***.
 
 :::note
 An IoT device is a device that can connect and interact with other devices, systems, and applications offline or online, for instance:
