@@ -21,9 +21,12 @@
 }
 .container {
   height: 100vh;
+  position: relative;
+  top: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: rotateX(180deg);
 }
 
 @media screen and (max-width: 996px) {

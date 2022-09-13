@@ -3,6 +3,7 @@
   background-color: var(--background-color);
   overflow: hidden;
   position: relative;
+  transform: rotateX(180deg);
 
   .footer {
     position: absolute;
