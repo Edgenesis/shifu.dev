@@ -71,7 +71,7 @@ let developerlist = [
     descript:
       <span>
         <Translate>Connected devices will be abstracted as functional API
-With the help of Shifu, applications will be decoupled from hardwares
+With the help of Shifu, applications will be decoupled from hardware
 Thus, make the IoT application development as efficient as on the mobile platform</Translate>
       </span>,
     isReverse: true,
