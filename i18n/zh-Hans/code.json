@@ -293,14 +293,14 @@
   "Rooted in K8s, hassle-free migration in the future": {
     "message": "k8s已经一统天下，Shifu基于k8s的架构可以让你免去未来迁移到k8s上的烦恼。"
   },
-  "Lightweight Hardware Requirment": {
+  "Lightweight Hardware Requirement": {
     "message": "轻量化"
   },
   "As light as a Raspberry Pi(e)! (2G RAM)": {
     "message": "只需一个2G内存的树莓派就可以在生产环境跑起Shifu。"
   },
   "Cloud-Side Collaboration": {
-    "message": "云边协同"
+    "message": "协同"
   },
   "Compatible with all K8s-based cloud/edge frameworks (OpenYurt, KubeEdge, etc.)": {
     "message": "Shifu兼容所有基于k8s的云边协同框架（OpenYurt, KubeEdge等）。"
@@ -338,7 +338,7 @@
   "Efficient Application Development": {
     "message": "高效应用开发"
   },
-  "Connected devices will be abstracted as functional API With the help of Shifu, applications will be decoupled from hardwares Thus, make the IoT application development as efficient as on the mobile platform": {
+  "Connected devices will be abstracted as functional API With the help of Shifu, applications will be decoupled from hardware Thus, make the IoT application development as efficient as on the mobile platform": {
     "message": "接入设备后，Shifu会自动把设备的能力抽象成API，让你的应用和硬件设备彻底解耦，把低效的物联网应用开发变得像面向对象编程一样高效."
   },
   "Aero-Grade Stability": {
@@ -348,7 +348,7 @@
     "message": "Shifu已通过在航天场景验证"
   },
   "Protected from downtime crash with 99.9999% reliability": {
-    "message": "提供99.9999%的可靠性"
+    "message": "提供99.9999%的可靠性 让你远离宕机烦恼"
   },
   "Keeps you out of downtime trouble": {
     "message": "让你远离宕机烦恼"
@@ -360,7 +360,7 @@
     "message": "联合国的云原生安全团队操刀"
   },
   "No matter data encryption or network security Shifu is on duty 24X7": {
-    "message": "无论是数据加密还是网络安全"
+    "message": "无论是数据加密还是网络安全 Shifu不一而足"
   },
   "Shifu satisfies": {
     "message": "Shifu不一而足"

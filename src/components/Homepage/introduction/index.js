@@ -70,9 +70,7 @@ let developerlist = [
     title: translate({ message: 'Efficient Application Development' }),
     descript:
       <span>
-        <Translate>Connected devices will be abstracted as functional API
-With the help of Shifu, applications will be decoupled from hardware
-Thus, make the IoT application development as efficient as on the mobile platform</Translate>
+        <Translate>Connected devices will be abstracted as functional API With the help of Shifu, applications will be decoupled from hardware Thus, make the IoT application development as efficient as on the mobile platform</Translate>
       </span>,
     isReverse: true,
     titleColor: "#F33EE3",
