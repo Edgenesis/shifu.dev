@@ -459,11 +459,11 @@ sudo kubectl exec -it mosquitto-667f47b94-qrkmz -n devices -- mosquitto_pub -h l
 
 此时我们可以在向MQTT的数字孪生发送命令，即可得到发布的数据。
 
-![deviceshifu-mqtt_outpu3.png](images/deviceshifu-mqtt_output3.png)
+```bash
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/mqtt_data
+```
 
-:::note
-交互结束后按下 `ctrl D` 即可退出 `nginx`。
-:::
+![deviceshifu-mqtt_outpu3.png](images/deviceshifu-mqtt_output3.png)
 
 ## 下一步
 

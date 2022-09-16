@@ -443,15 +443,16 @@ We can use mosquitto to publish a data to the MQTT server. (The data after -m is
 ```bash
 sudo kubectl exec -it mosquitto-667f47b94-qrkmz -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test -m "test2333"
 ```
+
 ![deviceshifu-mqtt_output2.png](images/deviceshifu-mqtt_output2.png)
 
 At this point we can send commands to the digital twin of MQTT to get the published data.
 
-![deviceshifu-mqtt_outpu3.png](images/deviceshifu-mqtt_output3.png)
+```bash
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/mqtt_data
+```
 
-:::note
-Press `ctrl D` to exit `nginx`.
-:::
+![deviceshifu-mqtt_outpu3.png](images/deviceshifu-mqtt_output3.png)
 
 ## Next Step
 
