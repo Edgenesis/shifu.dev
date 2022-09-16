@@ -308,10 +308,6 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 
 ![Running.png](images/Running.png)
 
-Congratulations! ! !  :rocket: :rocket: :rocket: You have completed the installation and demos of Shifu, now you can explore freely!
-
-If you are interested, you can visit the [GitHub repository of ***Shifu***](https://github.com/Edgenesis/shifu).
-
 ## 6. Interact with the OPC UA Device
 
 <details>
@@ -362,12 +358,6 @@ curl http://deviceshifu-opcua.deviceshifu.svc.cluster.local/get_value; echo
 
 ![deviceshifu-opcua_output2.png](images/deviceshifu-opcua_output2.png)
 
-
-
-
-Congratulations! ! !  :rocket: :rocket: :rocket: You have completed the installation and demos of Shifu, now you can explore freely!
-
-If you are interested, you can visit the [GitHub repository of ***Shifu***](https://github.com/Edgenesis/shifu).
 
 ## 7. Interact with the Socket Device
 
