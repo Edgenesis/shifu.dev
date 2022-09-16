@@ -331,7 +331,7 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-opcua
 ```
 
-通过如下指令，可以看到PLC设备的数字孪生已经启动：
+通过如下指令，可以看到 OPC UA 设备的数字孪生已经启动：
 
 ```bash
 sudo kubectl get pods -A | grep opcua
@@ -379,13 +379,13 @@ curl http://deviceshifu-opcua.deviceshifu.svc.cluster.local/get_value; echo
 
 ### 创建数字孪生
 
-首先，我们启动 OPC UA 的数字孪生：
+首先，我们启动 Socket 的数字孪生：
 
 ```bash
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-socket
 ```
 
-通过如下指令，可以看到PLC设备的数字孪生已经启动：
+通过如下指令，可以看到 Socket设备的数字孪生已经启动：
 
 ```bash
 sudo kubectl get pods -A | grep socket
@@ -432,7 +432,7 @@ http://deviceshifu-socket.deviceshifu.svc.cluster.local/cmd; echo
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-mqtt
 ```
 
-通过如下指令，可以看到PLC设备的数字孪生已经启动：
+通过如下指令，可以看到MQTT设备的数字孪生已经启动：
 
 ```bash
 sudo kubectl get pods -A 
