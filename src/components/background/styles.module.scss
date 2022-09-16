@@ -3,6 +3,7 @@
   background-color: var(--background-color);
   overflow: hidden;
   position: relative;
+  transform: rotateX(180deg);
 
   .footer {
     position: absolute;
@@ -30,7 +31,7 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  background: var(--font-color-one);
+  background:  rgb(57, 155, 255);
   border-radius: 50%;
 
   @for $i from 1 through $total {
