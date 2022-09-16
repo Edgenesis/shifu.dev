@@ -313,6 +313,158 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 交互结束后按下 `ctrl D` 即可退出 `nginx`。
 :::
 
+## 6. 与OPC UA设备交互
+
+<details>
+  <summary> 点此查看OPC UA细节 </summary>
+  Q：什么是OPC UA? <br/>
+  A：OPC UA是应用在自动化技术的机器对机器网络传输协议，具体介绍可以<a href="https://zh.wikipedia.org/wiki/OPC_UA">查看维基百科</a>。<br/>
+  Q：在这个试玩中如何与 OPC UA 交互? <br/>
+  A：当OPC UA的数字孪生接收到 get_server 命令时会返回会获取 OPC UA Server信息，接收到 get_value 命令可以得到设备的一个 NodeId 的值。
+</details>
+
+### 创建数字孪生
+
+首先，我们启动 OPC UA 的数字孪生：
+
+```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-opcua
+```
+
+通过如下指令，可以看到PLC设备的数字孪生已经启动：
+
+```bash
+sudo kubectl get pods -A | grep opcua
+```
+
+![deviceshifu-opcua_pods_start](images/deviceshifu-opcua_pods_start.png)
+
+### 与数字孪生交互
+
+我们需要先进入 `nginx`：
+
+```bash
+sudo kubectl exec -it nginx -- bash
+```
+
+我们可以与 OPC UA 的数字孪生通过`http://deviceshifu-opcua.deviceshifu.svc.cluster.local`进行交互，获取OPC UA Server信息：
+
+```bash
+curl http://deviceshifu-opcua.deviceshifu.svc.cluster.local/get_server; echo
+```
+
+![deviceshifu-opcua_output1.png](images/deviceshifu-opcua_output1.png)
+
+我们也可以与 OPC UA 的数字孪生通过`http://deviceshifu-opcua.deviceshifu.svc.cluster.local`进行交互，得到对应 NodeId 的值：
+
+```bash
+curl http://deviceshifu-opcua.deviceshifu.svc.cluster.local/get_value; echo
+```
+
+![deviceshifu-opcua_output2.png](images/deviceshifu-opcua_output2.png)
+
+:::note
+交互结束后按下 `ctrl D` 即可退出 `nginx`。
+:::
+
+## 7. 与 Socket 设备交互
+
+<details>
+  <summary> 点此查看Socket细节 </summary>
+  Q：什么是Socket? <br/>
+  A：Socket是一种操作系统提供的进程间通信机制，具体介绍可以<a href="https://baike.baidu.com/item/%E5%A5%97%E6%8E%A5%E5%AD%97/9637606">查看维基百科</a>。<br/>
+  Q：在这个试玩中如何与Socket交互? <br/>
+  A：当Socket的数字孪生接收到 cmd 命令时，会解析请求的负载的信息，并返回其中的 Command加 '\n'。
+</details>
+
+### 创建数字孪生
+
+首先，我们启动 OPC UA 的数字孪生：
+
+```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-socket
+```
+
+通过如下指令，可以看到PLC设备的数字孪生已经启动：
+
+```bash
+sudo kubectl get pods -A | grep socket
+```
+
+![deviceshifu-socket_pods_start](images/deviceshifu-socket_pods_start.png)
+
+### 与数字孪生交互
+
+我们需要先进入 `nginx`：
+
+```bash
+sudo kubectl exec -it nginx -- bash
+```
+
+我们可以与 Socket 的数字孪生通过`http://deviceshifu-socket.deviceshifu.svc.cluster.local`进行交互，获取我们所发送的命令：
+
+```bash
+curl -XPOST -H "Content-Type: application/json" -d '{"command": "testCommand", "timeout":1000}' \
+http://deviceshifu-socket.deviceshifu.svc.cluster.local/cmd; echo
+```
+
+![deviceshifu-socket_output1.png](images/deviceshifu-socket_output1.png)
+
+:::note
+交互结束后按下 `ctrl D` 即可退出 `nginx`。
+:::
+
+## 8. 与 MQTT 设备交互
+
+<details>
+  <summary> 点此查看 MQTT 细节 </summary>
+  Q：什么是 MQTT ? <br/>
+  A：MQTT 是ISO标准下基于发布/订阅范式的消息协议，具体介绍可以<a href="https://baike.baidu.com/item/MQTT/3618851">查看百度百科</a>。<br/>
+  Q：在这个试玩中如何与 MQTT 交互? <br/>
+  A：当 MQTT 的数字孪生接收到mqtt_data命令时，会返回订阅频道中最后一条消息。
+</details>
+
+### 创建数字孪生
+
+首先，我们启动 MQTT 的数字孪生：
+
+```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-mqtt
+```
+
+通过如下指令，可以看到PLC设备的数字孪生已经启动：
+
+```bash
+sudo kubectl get pods -A 
+```
+
+![deviceshifu-mqtt_pods_start](images/deviceshifu-mqtt_pods_start.png)
+
+### 与数字孪生交互
+
+我们可以与 MQTT 的数字孪生通过`http://deviceshifu-mqtt.deviceshifu.svc.cluster.local`进行交互，获取我们所发送的命令：
+
+```bash
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/mqtt_data
+```
+
+![deviceshifu-mqtt_output1.png](images/deviceshifu-mqtt_output1.png)
+
+我们可以使用 mosquitto 向MQTT服务器发布一个数据。(-m 后面的数据为我们发布的的信息)
+
+```bash
+sudo kubectl exec -it mosquitto-667f47b94-qrkmz -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test -m "test2333"
+```
+![deviceshifu-mqtt_output2.png](images/deviceshifu-mqtt_output2.png)
+
+此时我们可以在向MQTT的数字孪生发送命令，即可得到发布的数据。
+
+![deviceshifu-mqtt_outpu3.png](images/deviceshifu-mqtt_output3.png)
+
+:::note
+交互结束后按下 `ctrl D` 即可退出 `nginx`。
+:::
+
 ## 下一步
 
 恭喜！！！:rocket: :rocket: :rocket: 您已经完成了 ***Shifu*** 的体验，接下来：
