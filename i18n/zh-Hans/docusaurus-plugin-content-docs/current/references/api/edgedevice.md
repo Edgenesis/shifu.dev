@@ -65,6 +65,7 @@ EdgeDeviceSpec 是一个 EdgeDevice的描述。
   - **MQTTSetting** (MQTTSetting) 
     - **MQTTTopic** (string)
       表示要订阅的MQTT主题， 如 `/test/test`。
+  - **OPCUASetting** (OPCUASetting)
     - **OPCUAEndpoint** (string)
       表示 OPC UA 的服务器地址，如 `opc.tcp://192.168.0.1:4840/test/server`。
     - **SecurityMode** (string)
