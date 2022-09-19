@@ -308,13 +308,151 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 
 ![Running.png](images/Running.png)
 
-Congratulations! ! !  :rocket: :rocket: :rocket: You have completed the installation and demos of Shifu, now you can explore freely!
+## 6. Interact with the OPC UA Device
 
-If you are interested, you can visit the [GitHub repository of ***Shifu***](https://github.com/Edgenesis/shifu).
+<details>
+  <summary> Click here to view the details of the OPC UA </summary>
+  Q: What is a OPC UA? <br/>
+  A: OPC UA is a machine-to-machine network transmission protocol applied to automation technology, please click <a href="https://en.wikipedia.org/wiki/OPC_UA">here</a> for details. <br/>
+  Q: How to interact with the OPC UA in this demo? <br/>
+  A: When the OPC UA digital twin receives the get_server command, it will get the OPC UA Server information, and when it receives the get_value command, it can get the value of a NodeId of the device.
+</details>
 
-:::note
-Press `ctrl D` to exit `nginx`.
-:::
+### Create the digital twin
+
+First, create a digital twin of the OPC UA:
+
+```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-opcua
+```
+
+Enter the following command to see that the digital twin of the OPC UA has been started:
+
+```bash
+sudo kubectl get pods -A | grep opcua
+```
+
+![deviceshifu-opcua_pods_start](images/deviceshifu-opcua_pods_start.png)
+
+### Interact with the digital twin
+
+Next, enter nginx: 
+
+```bash
+sudo kubectl exec -it nginx -- bash
+```
+
+By communicating with the digital twin of the OPC UA through `http://deviceshifu-opcua.deviceshifu.svc.cluster.local`, Shifu can get the information of OPC UA Server:
+
+```bash
+curl http://deviceshifu-opcua.deviceshifu.svc.cluster.local/get_server; echo
+```
+
+![deviceshifu-opcua_output1.png](images/deviceshifu-opcua_output1.png)
+
+By communicating with the digital twin of the OPC UA through `http://deviceshifu-opcua.deviceshifu.svc.cluster.local`, Shifu can get the value of NodeId:
+
+```bash
+curl http://deviceshifu-opcua.deviceshifu.svc.cluster.local/get_value; echo
+```
+
+![deviceshifu-opcua_output2.png](images/deviceshifu-opcua_output2.png)
+
+
+## 7. Interact with the Socket Device
+
+<details>
+  <summary> Click here to view the details of the Socket </summary>
+  Q: What is a Socket? <br/>
+  A: Socket is an inter-process communication mechanism provided by the operating system, please click <a href="https://en.wikipedia.org/wiki/Socket">here</a> for details. <br/>
+  Q: How to interact with the Socket in this demo? <br/>
+  A: When the socket's digital twin receives the cmd command, it parses the information about the requested load and returns the Command plus '\n' in it.
+</details>
+
+### Create the digital twin
+
+First, create a digital twin of the Socket:
+
+```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-socket
+```
+
+Enter the following command to see that the digital twin of the Socket has been started:
+
+```bash
+sudo kubectl get pods -A | grep socket
+```
+
+![deviceshifu-socket_pods_start](images/deviceshifu-socket_pods_start.png)
+
+### Interact with the digital twin
+
+Next, enter nginx: 
+
+```bash
+sudo kubectl exec -it nginx -- bash
+```
+
+By communicating with the digital twin of the Socket through `http://deviceshifu-socket.deviceshifu.svc.cluster.local`, Shifu can get the command we sent:
+
+```bash
+curl -XPOST -H "Content-Type: application/json" -d '{"command": "testCommand", "timeout":1000}' \
+http://deviceshifu-socket.deviceshifu.svc.cluster.local/cmd; echo
+```
+
+![deviceshifu-socket_output1.png](images/deviceshifu-socket_output1.png)
+
+## 8. Interact with the MQTT Device
+
+<details>
+  <summary> Click here to view the details of the MQTT </summary>
+  Q: What is a MQTT? <br/>
+  A: MQTT is a messaging protocol based on the publish/subscribe paradigm under the ISO standard, please click <a href="https://en.wikipedia.org/wiki/MQTT">here</a> for details. <br/>
+  Q: How to interact with the MQTT in this demo? <br/>
+  A: When MQTT's digital twin receives the mqtt_data command, it returns the last message in the subscribed channel.
+</details>
+
+### Create the digital twin
+
+First, create a digital twin of the MQTT:
+
+```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-mqtt
+```
+
+Enter the following command to see that the digital twin of the MQTT has been started:
+
+```bash
+sudo kubectl get pods -A 
+```
+
+![deviceshifu-mqtt_pods_start](images/deviceshifu-mqtt_pods_start.png)
+
+### Interact with the digital twin
+
+By communicating with the digital twin of the Socket through `http://deviceshifu-mqtt.deviceshifu.svc.cluster.local`, Shifu can get the command we sent:
+
+```bash
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/mqtt_data
+```
+
+![deviceshifu-mqtt_output1.png](images/deviceshifu-mqtt_output1.png)
+
+We can use mosquitto to publish a data to the MQTT server. (The data after -m is the information we posted)
+
+```bash
+sudo kubectl exec -it mosquitto-667f47b94-qrkmz -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test -m "test2333"
+```
+
+![deviceshifu-mqtt_output2.png](images/deviceshifu-mqtt_output2.png)
+
+At this point we can send commands to the digital twin of MQTT to get the published data.
+
+```bash
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/mqtt_data
+```
+
+![deviceshifu-mqtt_outpu3.png](images/deviceshifu-mqtt_output3.png)
 
 ## Next Step
 
