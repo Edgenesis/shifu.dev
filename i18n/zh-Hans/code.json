@@ -296,7 +296,7 @@
   "Lightweight Hardware Requirement": {
     "message": "轻量化"
   },
-  "As light as a Raspberry Pi(e)! (2G RAM)": {
+  "As light as a Raspberry Pi! (2G RAM)": {
     "message": "只需一个2G内存的树莓派就可以在生产环境跑起Shifu。"
   },
   "Cloud-Side Collaboration": {
