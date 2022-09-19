@@ -7,37 +7,37 @@ let cardsList = [
   {
     img: require('@site/static/img/index/card-1.svg').default,
     title: translate({message: 'Data Acquisition'}),
-    descript: <span><Translate>Whether the data is specified by the protocol or returned by the driver, Shifu is able to record it automatically.</Translate></span>,
+    descript: <span><Translate>Automated collection of protocol and driver's value</Translate></span>,
     iconBg: '#E1E1FA',
   },
   {
     img: require('@site/static/img/index/card-2.svg').default,
     title: translate({ message: 'Open Source Community' }),
-    descript: <span><Translate>Shifu's core codes are all open source, allowing you to avoid vendor lock-in. You are even free to choose to have Shifu deployed on-premises, on edge, private, hybrid or public clouds.</Translate></span>,
+    descript: <span><Translate>Open source with limitless cloud carrier choice Versatile deployment on enterprise, edge, private or public cloud service</Translate></span>,
     iconBg: '#DDE3FA',
   },
   {
     img: require('@site/static/img/index/card-3.svg').default,
     title: translate({ message: 'K8s Native' }),
-    descript: <span><Translate>k8s has ruled the roost, and Shifu's k8s-based architecture can save you the trouble of migrating to k8s in the future.</Translate></span>,
+    descript: <span><Translate>Rooted in K8s, hassle-free migration in the future</Translate></span>,
     iconBg: '#E0EFFF',
   },
   {
     img: require('@site/static/img/index/card-4.svg').default,
-    title: translate({ message: 'Lightweight' }),
-    descript: <span><Translate>Just a Raspberry Pi with 2G RAM can run Shifu in a production environment.</Translate></span>,
+    title: translate({ message: 'Lightweight Hardware Requirement' }),
+    descript: <span><Translate>As light as a Raspberry Pi(e)! (2G RAM)</Translate></span>,
     iconBg: '#DCF2FE',
   },
   {
     img: require('@site/static/img/index/card-5.svg').default,
-    title: translate({ message: 'Cloudside Collaboration' }),
-    descript: <span><Translate>Shifu is compatible with all k8s-based cloud edge collaboration frameworks (OpenYurt, KubeEdge, etc.).</Translate></span>,
+    title: translate({ message: 'Cloud-Side Collaboration' }),
+    descript: <span><Translate>Compatible with all K8s-based cloud/edge frameworks (OpenYurt, KubeEdge, etc.)</Translate></span>,
     iconBg: '#D8FFFD',
   },
   {
     img: require('@site/static/img/index/card-6.svg').default,
     title: translate({message: 'Infinite Scalability'}),
-    descript: <span><Translate>The k8s-based architecture allows Shifu to scale infinitely and easily handle billions of device access, even for smart city projects.</Translate></span>,
+    descript: <span><Translate>Billions level of device service scalability Big enough to run the city</Translate></span>,
     iconBg: '#CEF6F9',
   }
 ]

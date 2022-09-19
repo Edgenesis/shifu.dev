@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Shifu',
-  tagline: 'Make developing industrial scenes as easy as developing an app',
+  tagline: 'Orchestration for IoT Application Development',
   url: 'https://shifu.run',
   baseUrl: '/',
   onBrokenLinks: 'throw',

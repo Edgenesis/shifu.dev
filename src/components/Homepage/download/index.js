@@ -113,7 +113,7 @@ function HeaderLogo() {
       <div className={styles.words}>
         <h1 className={styles.title}>Shifu</h1>
         <p className={styles.describe}>
-          <Translate>Make developing industrial scenes as easy as developing an app!</Translate>
+          <Translate>Orchestration for IoT Application Development!</Translate>
         </p>
       </div>
     </div>

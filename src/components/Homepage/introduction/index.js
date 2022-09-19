@@ -9,7 +9,8 @@ const bar3 = require('@site/static/img/index/bar-3.svg').default
 
   function DescriptionModel(props) {
     let flexDirection = props.isReverse ? "row-reverse" : "row";
-    let isTextAlignRight = props.isReverse
+    // let isTextAlignRight = props.isReverse
+    let isTextAlignRight = false
     return (
       <div
         className={styles.descriptionModel}
@@ -41,12 +42,12 @@ function IntroBar(props) {
 let developerlist = [
   {
     img: require('@site/static/img/index/guide-access.svg').default,
-    title: translate({ message: 'Extremely Fast Connection' }),
+    title: translate({ message: 'Extremely Fast Access' }),
     descript:
       <span>
-        <Translate>Large to construction machinery using private driver</Translate><br />
-        <Translate>Small to thermometers using public protocol</Translate><br />
-        <Translate>Shifu's high compatibility allows you to easily handle a variety of e-bay devices</Translate>
+        <Translate>From machinery to thermometers</Translate><br />
+        <Translate>With private or public protocol </Translate><br />
+        <Translate>Shifu's high compatibility design makes it easy for you to handle universal devices</Translate>
       </span>,
     isReverse: true,
     titleColor: "#2490FF",
@@ -54,11 +55,11 @@ let developerlist = [
   },
   {
     img: require('@site/static/img/index/guide-modularization.svg').default,
-    title: translate({ message: 'Modularized Deployment Experience' }),
+    title: translate({ message: 'Modulized Deployment Experience' }),
     descript:
       <span>
-        <Translate>All devices and applications connected to Shifu are packaged into a puzzle-like module</Translate><br />
-        <Translate>Just load as needed, depending on the devices in the scene</Translate>
+        <Translate>Devices and applications connected with Shifu will be packaged into puzzle-like modules</Translate><br />
+        <Translate>Just call for service as you will</Translate>
       </span>,
     isReverse: false,
     titleColor: "#C15CFF",
@@ -69,7 +70,7 @@ let developerlist = [
     title: translate({ message: 'Efficient Application Development' }),
     descript:
       <span>
-        <Translate>After connecting to the device, Shifu will automatically abstract the device's capabilities into an API, allowing you to completely decouple your application from the hardware device, making inefficient IoT application development as efficient as object-oriented programming.</Translate>
+        <Translate>Connected devices will be abstracted as functional API With the help of Shifu, applications will be decoupled from hardware Thus, make the IoT application development as efficient as on the mobile platform</Translate>
       </span>,
     isReverse: true,
     titleColor: "#F33EE3",
@@ -80,12 +81,12 @@ let developerlist = [
 let engineeringList = [
   {
     img: require('@site/static/img/index/guide-stable.svg').default,
-    title: translate({ message: 'Aerospace-grade Stability' }),
+    title: translate({ message: 'Aero-Grade Stability' }),
     descript:
       <span>
         <Translate>Shifu has been validated in aerospace scenarios</Translate><br />
-        <Translate>Provides 99.9999% reliability</Translate><br />
-        <Translate>Keeps you out of downtime trouble</Translate>
+        <Translate>Protected from downtime crash with 99.9999% reliability</Translate><br />
+        {/* <Translate>Keeps you out of downtime trouble</Translate> */}
       </span>,
     isReverse: true,
     titleColor: "#FF64EF",
@@ -93,12 +94,12 @@ let engineeringList = [
   },
   {
     img: require('@site/static/img/index/guide-security.svg').default,
-    title: translate({ message: 'Multidimensional Security Policy' }),
+    title: translate({ message: 'Multi-Dimensional Security Policy' }),
     descript:
       <span>
-        <Translate>The UN's cloud-native security team is at the helm</Translate><br />
-        <Translate>Whether it is data encryption or network security</Translate><br />
-        <Translate>Shifu satisfies</Translate>
+        <Translate>Backed by the cloud-native security team of the UN</Translate><br />
+        <Translate>No matter data encryption or network security Shifu is on duty 24X7</Translate><br />
+        {/* <Translate>Shifu satisfies</Translate> */}
       </span>,
     isReverse: false,
     titleColor: "#9A5CFF",
@@ -109,7 +110,7 @@ let engineeringList = [
     title: translate({ message: 'Globalized Community Ecology' }),
     descript:
       <span>
-        <Translate>Shifu benefits from the Kubernetes native architecture, providing seamless access to the powerful cloud-native software ecosystem and allowing developers around the world to help you solve your worries.</Translate>
+        <Translate>Benefit from cloud-native software ecosystem and native Kubernetes architecture Issues will be helped across a worldwide range</Translate>
       </span>,
     isReverse: true,
     titleColor: "#2490FF",
