@@ -328,6 +328,8 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 首先，我们启动 OPC UA 的数字孪生：
 
 ```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-opcua/mock-device
+sudo kubectl wait --for=condition=Available deploy/mockdevice-opcua -n devices --timeout=150s
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-opcua
 ```
 
@@ -382,6 +384,8 @@ curl http://deviceshifu-opcua.deviceshifu.svc.cluster.local/get_value; echo
 首先，我们启动 Socket 的数字孪生：
 
 ```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-socket/mock-device
+sudo kubectl wait --for=condition=Available deploy/mockdevice-socket -n devices --timeout=150s
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-socket
 ```
 
@@ -429,6 +433,8 @@ http://deviceshifu-socket.deviceshifu.svc.cluster.local/cmd; echo
 首先，我们启动 MQTT 的数字孪生：
 
 ```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-mqtt/mosquitto.yaml 
+sudo kubectl wait --for=condition=Available deploy/mosquitto -n devices --timeout=150s
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-mqtt
 ```
 
@@ -453,7 +459,7 @@ sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.clus
 我们可以使用 mosquitto 向MQTT服务器发布一个数据。(-m 后面的数据为我们发布的的信息)
 
 ```bash
-sudo kubectl exec -it mosquitto-667f47b94-qrkmz -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test -m "test2333"
+sudo kubectl exec -it deploy/mosquitto -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test -m "test2333"
 ```
 ![deviceshifu-mqtt_output2.png](images/deviceshifu-mqtt_output2.png)
 
