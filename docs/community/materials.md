@@ -1,9 +1,9 @@
 ---
-title: User Cases
+title: Applications  User Cases
 sidebar_position: 2
 ---
 
-# User Cases
+# Applications User Cases
 
 ## Engineering Information
 

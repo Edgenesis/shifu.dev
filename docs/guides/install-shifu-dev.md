@@ -1,11 +1,20 @@
 ---
-title: Development Installation
+title: Installation Testing
 sidebar_position: 1
 ---
 
-# Development Installation
+# Installation Testing
+***Shifu*** can be deployed directly to a K8s cluster in a production environment.
+
+***Shifu*** is very easy to deploy in production, but for testing you need to debug on the access device first.  And then you can install ***Shifu*** locally and create clusters. Some tools like kind can help you create such clusters on your computer.
+
+Note: This section actually serves the same purpose as Quick Start, but it is a separate explanation of the ***Shifu*** installation package, i.e. creating clusters locally by using the command line step by step. This approach helps you understand the tools used by ***Shifu*** in its operation.
 
 ## Install Docker Desktop
+
+`Docker Desktop` enables the installation of Docker on desktop operating systems (Windows / macOS / desktop Ubuntu, etc.) and provides a visual interface for management.
+
+***Shifu*** uses Docker to turn every actual physical device (edgeDevice) into a digital twin (deviceShifu). Docker plays a major role in virtualization and isolation.
 
 Check [Docker official site](https://www.docker.com) to install `Docker Desktop` on your own computer.
 
@@ -27,7 +36,7 @@ If the output is `Cannot connect to the Docker daemon at unix:///var/run/docker.
 > The `Kubernetes` command-line tool, `kubectl`, allows you to run commands against Kubernetes clusters. You can use `kubectl` to deploy applications, inspect and manage cluster resources, and view logs.
 :::
 
-Confirm `kubectl` installed：
+Confirm `kubectl` installed:
 
 ```bash
 $ kubectl version --client --output=yaml
@@ -81,7 +90,7 @@ kind
 
 ### Re-create a Cluster
 
-When occurring any error, you can delete the cluster and create a new one:
+If any problem occurs, you can delete the cluster and create a new one:
 
 ```bash
 $ sudo kind delete cluster
@@ -91,7 +100,7 @@ $ sudo kind create cluster --image="kindest/node:v1.24.0"
 
 ## Install ***Shifu***
 
-The installing of ***Shifu*** is extremely easy. Use `pkg/k8s/crd/install/shifu_install.yml` to apply ***Shifu*** by a single command:
+***Shifu*** is very easy to install. Use `pkg/k8s/crd/install/shifu_install.yml` to apply ***Shifu*** by a single command:
 
 ```bash
 git clone https://github.com/Edgenesis/shifu.git
@@ -102,7 +111,7 @@ sudo kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 
 ### Note: Pre-download Images
 
-`pkg/k8s/crd/install/shifu_install.yml` uses images such as `quay.io/brancz/kube-rbac-proxy:v0.12.0` and `edgehub/shifu-controller:v0.0.5`. You can pre-download these images on your computer and then import them in the cluster:
+`pkg/k8s/crd/install/shifu_install.yml` uses images such as `quay.io/brancz/kube-rbac-proxy:v0.12.0` and `edgehub/shifu-controller:v0.0.5`. You can pre-download these images on your computer and then import them into the cluster:
 
 ```bash
 sudo docker pull quay.io/brancz/kube-rbac-proxy:v0.12.0
@@ -112,4 +121,4 @@ sudo docker pull edgehub/shifu-controller:v0.0.5
 sudo kind load docker-image edgehub/shifu-controller:v0.0.5
 ```
 
-Note: This method will occupy the storing space of your computer. After importing finished, use command `sudo docker rmi <image_id>` to remove useless images on your computer.
+Note: This method will occupy the storage of your computer. After importing finished, use command `sudo docker rmi <image_id>` to remove useless images on your computer.

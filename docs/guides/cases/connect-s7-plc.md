@@ -5,8 +5,7 @@ sidebar_position: 0
 
 # Connect a PLC Device
 
-Shifu is compatible with the Siemens S7 series. *Shifu* can be used to modify the memory of an `S7 PLC` via an HTTP request. This article will show how to access a *Siemens S7-1200 1214C PLC* and interact with it.
-
+*Shifu* is compatible with the Siemens S7 series. *Shifu* can be used to modify the memory of an `S7 PLC` via an HTTP request. This article will show how to access a *Siemens S7-1200 1214C PLC* and interact with it.
 <!-- You can also check [this video](https://youtu.be/SV73l52vDp8) on YouTube.-->
 
 ## Connection
@@ -163,14 +162,14 @@ kubectl apply -f ../plc_configuration_directory
 
 *Shifu* can read and write the memory of the PLC through HTTP requests.
 
-Before the next step, we need to start an *Nginx* container to send and receive HTTP requests using the following commands.
+Before the next step, we need to start an *Nginx* container to send and receive HTTP requests, as the following commands:
 
 ```bash
 kubectl run nginx --image=nginx:1.21 -n deviceshifu 
 kubectl exec -it nginx -n deviceshifu -- bash
 ```
 
-Three instructions are listed as follows, which are **sendsinglebit**, **getcontent** and **getcpuordercode**. Use *Shifu* to execute these instructions on the device.
+Three instructions are **sendsinglebit**, **getcontent** and **getcpuordercode**. Use *Shifu* to execute these instructions on the device.
 
 ### sendsinglebit
 
