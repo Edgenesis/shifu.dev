@@ -323,6 +323,8 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
 First, create a digital twin of the OPC UA:
 
 ```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-opcua/mock-device
+sudo kubectl wait --for=condition=Available deploy/mockdevice-opcua -n devices --timeout=150s
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-opcua
 ```
 
@@ -374,6 +376,8 @@ curl http://deviceshifu-opcua.deviceshifu.svc.cluster.local/get_value; echo
 First, create a digital twin of the Socket:
 
 ```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-socket/mock-device
+sudo kubectl wait --for=condition=Available deploy/mockdevice-socket -n devices --timeout=150s
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-socket
 ```
 
@@ -417,6 +421,8 @@ http://deviceshifu-socket.deviceshifu.svc.cluster.local/cmd; echo
 First, create a digital twin of the MQTT:
 
 ```bash
+sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-mqtt/mosquitto.yaml 
+sudo kubectl wait --for=condition=Available deploy/mosquitto -n devices --timeout=150s
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-mqtt
 ```
 
@@ -441,7 +447,7 @@ sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.clus
 We can use mosquitto to publish a data to the MQTT server. (The data after -m is the information we posted)
 
 ```bash
-sudo kubectl exec -it mosquitto-667f47b94-qrkmz -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test -m "test2333"
+sudo kubectl exec -it deploy/mosquitto -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test -m "test2333"
 ```
 
 ![deviceshifu-mqtt_output2.png](images/deviceshifu-mqtt_output2.png)
