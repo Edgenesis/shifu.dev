@@ -10,16 +10,16 @@ We have prepared five devices (AGV, thermometer, microplate reader, PLC and robo
 :::note
 An IoT device is a device that can connect and interact with other devices, systems, and applications offline or online, for instance:
 
-- A robotic arm in a manufacturing plant that can receive commands from a local automated control system and complete the corresponding moves.
-- An automated guided vehicle that can be remotely controlled by its operator.
-- A thermometer in a car that can send commands to the on-board air conditioner to raise or lower its temperature, and can upload real-time temperature data to the cloud.
+- A robotic arm in a manufacturing plant can receive commands from a local automated control system and complete the corresponding moves.
+- An automated guided vehicle can be remotely controlled by its operator.
+- A thermometer in a car can send commands to the on-board air conditioner to raise or lower its temperature, and can upload real-time temperature data to the cloud.
 
-When installing ***Shifu*** installer, five virtual devices are created and connected to your computer. These virtual devices have the same functions with actual IoT devices.
+When installing ***Shifu*** installer, five virtual devices are created and connected to your computer. Actual IoT devices can be operated through these virtual devices.
 :::
 
 ## Preparation
 
-Start an instance of `nginx` to interact with ***deviceShifu***:
+Start `nginx` to interact with ***deviceShifu***:
 
 ```bash
 sudo kubectl run --image=nginx:1.21 nginx
@@ -31,7 +31,7 @@ Now, `nginx` is running:
 ![nginx pod running](images/nginxPodStatus.png)
 
 :::note
-In a real-world scenario, users of IoT devices use an application or a monitoring platform to interact with the digital twin ***deviceShifu***. Here `nginx` is equivalent to an application or a monitoring platform.
+In the actual situation, users of IoT devices use an application or a monitoring platform to interact with the digital twin ***deviceShifu***. Here `nginx` is an application or a monitoring platform.
 :::
 
 ## 1. Interact with the AGV
@@ -39,20 +39,20 @@ In a real-world scenario, users of IoT devices use an application or a monitorin
 <details>
   <summary> Click here to view the details of AGV  </summary>
   Q: What is AGV?  <br/>
-  A: AGV is an automatic guided vehicle, please click <a href="https://en.wikipedia.org/wiki/Automated_guided_vehicle">here</a> for details. <br/>
-  Q: How to interact with the AGV in this demo? <br/>
-  A: When the digital twin of the AGV receives the get_position command, it will generate and return the x and y coordinates of the current position of the device.
+  A: AGV is a kind of automatic guided transportation vehicle. (Please refer to specific introduction on <a href="https://en.wikipedia.org/wiki/Automated_guided_vehicle">Wiki</a>) <br/>
+  Q:  How does this interact with the AGV? <br/>
+  A:  When the digital twin of the AGV receives the get_position command, it will generate and return the x and y axis coordinates of the current position of the device.
 </details>
 
 ### Create the digital twin
 
 :::note
-You have just installed ***Shifu*** through the ***Shifu*** installer, and the digital twin of the AGV, ***deviceShifu***, has been created automatically. So you can interact with the digital twin of the AGV directly without having to go through the manual creation process.
+You have just installed ***Shifu*** through the ***Shifu*** installer, so the digital twin of the AGV, ***deviceShifu***, has been created automatically.  You can interact with the digital twin of the AGV directly without having to manually create it.
 
-The state of the digital twin will be the same as the state of the actual device, and interacting with the digital twin is equivalent to interacting with the actual IoT device.
+The state of the digital twin will show the state of the actual device, so operating the digital twin is actually operating the actual IoT device.
 :::
 
-Execute the following command, and we can see the digital twin of the AGV has started normally:
+Execute the following command, and we can see that the digital twin of the AGV has started:
 
 ```bash
 sudo kubectl get pods -A | grep agv
@@ -70,7 +70,7 @@ Next, enter the `nginx`:
 sudo kubectl exec -it nginx -- bash
 ```
 
-By communicating with the digital twin of the AGV via `http://deviceshifu-agv.deviceshifu.svc.cluster.local`, Shifu can get the `x` and `y` coordinates of the current position of the AGV:
+By interacting  with the digital twin of the AGV via `http://deviceshifu-agv.deviceshifu.svc.cluster.local`, ***Shifu*** can get the `x` and `y` coordinates of the current position of the AGV:
 
 ```bash
 curl http://deviceshifu-agv.deviceshifu.svc.cluster.local/get_position; echo
@@ -87,7 +87,7 @@ Press `ctrl D` to exit `nginx`.
 <details>
   <summary> Click here for thermometer details </summary>
   Q: How do I interact with a thermometer in this demo? <br/>
-  A: When the digital twin of the thermometer receives the read_value command it will generate and return the current thermometer reading.
+  A: When the thermometer's digital twin receives the read_value command, it will generate and return the current thermometer reading.
 </details>
 
 ### Create the digital twin
@@ -98,7 +98,7 @@ First, create a digital twin of the thermometer:
 sudo kubectl apply -f run_dir/shifu/demo_device/edgedevice-thermometer
 ```
 
-Now, the thermometer has started normally:
+Now, the thermometer has started:
 
 ```bash
 sudo kubectl get pods -A | grep thermometer
@@ -116,7 +116,7 @@ Next, enter the `nginx`:
 sudo kubectl exec -it nginx -- bash
 ```
 
-By communicating with the digital twin of the thermometer via `http://deviceshifu-thermometer.deviceshifu.svc.cluster.local`, Shifu can get the measured temperature of the thermometer (the following results are random):
+By interacting with the digital twin of the thermometer via `http://deviceshifu-thermometer.deviceshifu.svc.cluster.local`, ***Shifu*** can get the measured temperature of the thermometer (the following results are random):
 
 ```bash
 curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/read_value; echo
@@ -146,10 +146,10 @@ Press `ctrl D` to exit `nginx`.
 
 <details>
   <summary> Click here to view the details of the microplate reader  </summary>
-  Q: What is the microplate reader? <br/>
-  A: The microplate reader is a kind of laboratory equipment, please click <a href="https://en.wikipedia.org/wiki/Plate_reader">here</a> for the specific introduction. <br/>
-  Q: How to interact with the microplate reader in this demo? <br/>
-  A: When the digital twin of the microplate reader receives the command get_measurement, it will return an 8*12 matrix, each number in it represents the result value of the spectral analysis scan in a sample.
+  Q: What is a microplate reader? <br/>
+  A: Microplate reader is a kind of laboratory equipment.(Please refer to specific introduction on  <a href="https://en.wikipedia.org/wiki/Plate_reader">Wiki</a>)<br/>
+  Q: How do I interact with the microplate reader?  <br/>
+  A: When the digital twin of the microplate reader receives the command get_measurement, it will return a matrix of 8*12. Each number in the matrix represents the value of the result of a spectral analysis scan in a sample.
 </details>
 
 ### Create the digital twin
@@ -178,7 +178,7 @@ Next, enter nginx: (if you have not started Nginx, please [start the Nginx servi
 sudo kubectl exec -it nginx -- bash
 ```
 
-By communicating with the digital twin of the microplate readerr via `http://deviceshifu-thermometer.deviceshifu.svc.cluster.local`, Shifu can get the results of the microplate reader：
+By interacting with the digital twin of the microplate readerr via `http://deviceshifu-thermometer.deviceshifu.svc.cluster.local`, Shifu can get the results of the microplate reader:
 
 ```bash
 curl "deviceshifu-plate-reader.deviceshifu.svc.cluster.local/get_measurement"
@@ -195,9 +195,9 @@ Press `ctrl D` to exit `nginx`.
 <details>
   <summary> Click here to view PLC details  </summary>
   Q: What is PLC? <br/>
-  A: PLC is a very common industrial controller, please click <a href="https://en.wikipedia.org/wiki/Programmable_logic_controller">here</a> for details. <br/>
-  Q: How to interact with the PLC in this demo? <br/>
-  A: When the digital twin of the PLC receives the sendsinglebit command, it can modify a bit in the memory area, and when it receives the getcontent command, it can get the value of a byte in the memory area.
+  A: PLC is an industrial controller. (Please refer to specific introduction on <a href="https://en.wikipedia.org/wiki/Programmable_logic_controller">Wiki</a>)<br/>
+  Q: How to interact with PLC?<br/>
+  A: When the PLC's digital twin receives the sendsinglebit command, it can modify a bit in the memory area. When it receives the getcontent command, it can get the value of a byte in the memory area.
 </details>
 
 ### Create the digital twin
@@ -226,7 +226,7 @@ Next, please enter nginx: (if you have not started Nginx, please [start the Ngin
 sudo kubectl exec -it nginx -- bash
 ```
 
-By communicating with the PLC digital twin via `http://deviceshifu-plc.deviceshifu.svc.cluster.local`, Shifu can set bit 0 of the `Q0` memory area of ​​the PLC to 1:
+By interacting with the PLC digital twin via `http://deviceshifu-plc.deviceshifu.svc.cluster.local`, ***Shifu*** can set bit 0 of the `Q0` memory area of ​​the PLC to 1:
 
 ```bash
 curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=0&value=1"; echo
@@ -234,7 +234,7 @@ curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&
 
 ![deviceshifu-plc_output1.png](images/deviceshifu-plc_output1.png)
 
-"digit" indicates the number of bits in the PLC memory, "value" indicates the value of the current bit, and the value of the corresponding memory area bit can be changed by modifying the values ​​of "digit" and "value". For example, the fourth digit value of the Q0 memory of a PLC represents the control program, and the program can be started by setting "digit=3" and "value=1":
+"digit" indicates the number of bits in the PLC memory and "value" indicates the value of the current bit. The value of the corresponding memory area bit can be changed by modifying the values of "digit" and "value". For example, the fourth digit value of the Q0 memory of a PLC represents the control program, and the program can be started by setting "digit=3" and "value=1":
 
 ```bash
 curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&address=0&start=0&digit=3&value=1"; echo
@@ -251,9 +251,9 @@ Press `ctrl D` to exit `nginx`.
 <details>
   <summary> Click here to view the details of the robotic arm </summary>
   Q: What is a robotic arm? <br/>
-  A: The robotic arm is a very common industrial controller, please click <a href="https://en.wikipedia.org/wiki/Robotic_arm">here</a> for details. <br/>
-  Q: How to interact with the robotic arm in this demo? <br/>
-  A: When the digital twin of the robotic arm receives the get_coordinate command, it will return its current x, y, z axis coordinates.
+  A: Robotic arm is a kind of industrial controller. (Please refer to specific introduction on <a href="https://en.wikipedia.org/wiki/Robotic_arm">Wiki</a>)<br/>
+  Q: How do I interact with the robot arm?  <br/>
+  A: When the digital twin of the robot arm receives the get_coordinate command, it will return its current x, y, z axis coordinates.
 </details>
 
 ### Create the digital twin
@@ -282,7 +282,7 @@ Next, enter nginx:
 sudo kubectl exec -it nginx -- bash
 ```
 
-By communicating with the digital twin of the robotic arm through `http://deviceshifu-robotarm.deviceshifu.svc.cluster.local`, Shifu can get the coordinates and operating states of the robotic arm (the following operating states appear randomly):
+By interacting with the digital twin of the robotic arm through `http://deviceshifu-robotarm.deviceshifu.svc.cluster.local`, ***Shifu*** can get the coordinates and operating states of the robotic arm (the following operating states appear randomly):
 
 ```bash
 curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_coordinate; echo
@@ -469,7 +469,7 @@ Congratulations！！！:rocket: :rocket: :rocket: You have completed trying ***
     - [**Reference Book**](../references)
         - ***Shifu*** architecture and functions.
         - ***Shifu*** API reference.
-    - [**Open Source Community**](../community): View common problems, get support, and join the open source community.
+    - [**Open Source Community**](../community): View FAQs, get support, and join the open source community.
 - ***Shifu*** is now an open source project. If you are interested in it, visit ***Shifu***'s repo at [GitHub](https://github.com/Edgenesis/shifu).
 - [Contact us to get technical support](community/join.md)。
 

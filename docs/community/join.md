@@ -8,7 +8,7 @@ sidebar_position: 3
 If you have any questions about using ***Shifu*** or want to know more about it, please contact us through the following methods:
 
 - Email
-    - info@edgenesis.com
+    - [info@edgenesis.com](mailto:info@edgenesis.com)
 - WeChat
     - if7369
 

@@ -24,11 +24,11 @@ The advanced microservices architecture empowers ***Shifu*** with unparalleled s
 
 ## Device Management
 
-***Shifu*** comes with a device management framework that makes it easy to check the operating status of devices, update device drivers, perform security configurations, and other operations.
+***Shifu*** comes with a device management framework that makes it easy to check the operating status of devices, update device drivers, perform security configurations.
 
 ## Data Collection
 
-On ***Shifu***, you can automate data collection with ease.
+On ***Shifu***, you can easily realize data collection automatically.
 
 ## Device Control
 
@@ -44,14 +44,15 @@ curl http://robot-arm/grip/
 
 For example, this simple command above can make a robotic arm complete a grasping move.
 
-The aim of ***Shifu*** is to **help developers to create a complex IoT application as easy as creating a mobile app**!
+The aim of ***Shifu*** is to **help developers to create a complex IoT application as easy as creating a mobile app!**
 
 ## System Operation and Maintenance
 
-As integrated with `Kubernetes`' capabilities, ***Shifu*** was born with two advantages in operation and maintenance:
+Due to integration with `Kubernetes`' capabilities, ***Shifu*** was born with two advantages in operation and maintenance:
 
 1. ***Shifu***, based on Kubernetes, enables developers to unify the management of applications and IoT devices by operating and maintaining only one set of k8s clusters, eliminating the need to operate and maintain an additional set of IoT platforms.
-1. Never having singular-point failures. Unlike other IoT platforms, ***Shifu***'s architecture can be created several copies of ***deviceShifu***, so there will never be a singular-point failure. In fact, ***Shifu*** has already accumulated 500,000 hours of operation without failure in use cases (factories, labs, supply chain, etc.) of several Fortune 500 company clients.
+
+1. Never having singular-point failures. Unlike other IoT platforms, ***Shifu***'s architecture can be created with several copies of ***deviceShifu***, so there will never be a singular-point failure. In fact, ***Shifu*** has been running for 500,000 hours without failure in core scenarios (factories, labs, supply chain, etc.) in many Fortune 500 companies.
 
 ## By ***Shifu***'s Module
 
@@ -66,4 +67,4 @@ As integrated with `Kubernetes`' capabilities, ***Shifu*** was born with two adv
   - Device verification
   - Device update
 - [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController.md)
-  - Managing the ***deviceShifu*** lifecycle
+  - Manage the entire process of ***Shifu***, including generation of digital twins, calling, operation and maintenance, etc.

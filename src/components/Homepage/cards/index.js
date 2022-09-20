@@ -2,7 +2,9 @@ import React from "react";
 import styles from "./styles.module.scss"
 
 export function CardOne(props) {
-  const textAlign = props.isTextAlignRight ? "right" : "left"
+  // const textAlign = props.isTextAlignRight ? "right" : "left"
+  const textAlign = 'left'
+
   const shadow = `10px 10px 50px ${props.shadowColor}`
   return (
     <div className={styles.cardOneContainer} style={{ boxShadow: shadow }}>

@@ -51,7 +51,7 @@ If the protocol to use is not yet supported by ***Shifu***, please [submit an Is
 
 - command line drivers, please refer to [Quick Start: Invoking Command Line Drivers](references/advanced-features/remote-driver-execution.md)
 
-### Incompatible Drivers
+### Drivers not yet compatible
 
 ***Shifu***'s microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to be compatible with new drivers quickly. 
 
