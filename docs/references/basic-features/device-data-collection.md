@@ -56,19 +56,19 @@ When the device receives the command, the data will be transmitted to ***deviceS
    EXPOSE 11111  
    CMD [ "/high-temperature-detector" ]
    ```
-4. To generate a `docker image` using the `Dockerfile`, execute the following commands:
+4. To generate a `docker image` using the `Dockerfile`, run the following commands:
    ```bash
    docker build --tag high-temperature-detector:v0.0.1
    ```
-5. Then load the `docker image` into the cluster by executing the following command:
+5. Then load the `docker image` into the cluster by run the following command:
    ```bash
    kind load docker-image high-temperature-detector:v0.0.1
    ```
-6. To run the data acquisition program, execute the following commands:
+6. To run the data acquisition program, run the following commands:
    ```bash
    kubectl run high-temperature-detector --image=high-temperature-detector:v0.0.1
    ```
-7. Finally, to check program's log information to get the data, execute the following command::
+7. Finally, to check program's log information to get the data, run the following command::
    ```bash
    kubectl run high-temperature-detector --image=high-temperature-detector:v0.0.1
    ```

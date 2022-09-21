@@ -30,7 +30,7 @@ sidebar_position: 3
 
 For now, ***Shifu*** supports the following protocols for interacting with devices:
 
-1. HTTP
+1. [HTTP](https://github.com/Edgenesis/shifu/tree/main/examples/httpDeviceShifu)
 2. [MQTT](https://github.com/Edgenesis/shifu/tree/main/examples/mqttDeviceShifu)
 3. [RTSP for streaming](https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu)
 4. [Siemens S7](https://github.com/Edgenesis/shifu/tree/main/examples/siemensPLCDeviceShifu)
@@ -41,7 +41,7 @@ For now, ***Shifu*** supports the following protocols for interacting with devic
 
 ***Shifu***'s microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to be compatible with new protocols quickly.
 
-If the protocol to use is not yet supported by ***Shifu***, please [submit an Issue](https://github.com/Edgenesis/shifu/issues/new) and we will support it ASAP!
+If the protocol is not yet supported by ***Shifu***, please [submit an Issue](https://github.com/Edgenesis/shifu/issues/new) and we will support it ASAP!
 
 ## Drivers
 
@@ -49,10 +49,10 @@ If the protocol to use is not yet supported by ***Shifu***, please [submit an Is
 
 ***Shifu*** allows users to add the drivers to platform as follows:
 
-- command line drivers, please refer to [Quick Start: Invoking Command Line Drivers](references/advanced-features/remote-driver-execution.md)
+- [Quick Start: Invoking Command Line Drivers](references/advanced-features/remote-driver-execution.md)
 
 ### Drivers not yet compatible
 
 ***Shifu***'s microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to be compatible with new drivers quickly. 
 
-If the driver to use is not yet supported by ***Shifu***, please [submit an Issue](https://github.com/Edgenesis/shifu/issues/new) and we will support it ASAP!
+If the driver is not yet supported by ***Shifu***, please [submit an Issue](https://github.com/Edgenesis/shifu/issues/new) and we will support it ASAP!

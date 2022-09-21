@@ -31,7 +31,7 @@ sidebar_position: 3
 
 当前，***Shifu*** 支持下列协议与设备进行交互：
 
-- HTTP
+- [HTTP](https://github.com/Edgenesis/shifu/tree/main/examples/httpDeviceShifu)
 - [MQTT](https://github.com/Edgenesis/shifu/tree/main/examples/mqttDeviceShifu)
 - [RTSP for streaming](https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu)
 - [Siemens S7](https://github.com/Edgenesis/shifu/tree/main/examples/siemensPLCDeviceShifu)

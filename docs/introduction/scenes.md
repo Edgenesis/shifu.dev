@@ -7,7 +7,7 @@ sidebar_position: 2
 
 **Smart Industrial Park**
 
-***Shifu*** achieves all-in-one hosting, like virtualization of the whole area, real-time positioning of equipment/people in the park, as well as energy consumption monitoring, status management, and efficient rendering of scenarios.
+***Shifu*** achieves all-in-one hosting, virtualization of the whole area, real-time positioning of equipment/people in the park, as well as energy consumption monitoring, status management, and efficient rendering of scenarios.
 
 **New Manufacturing**
 
@@ -15,6 +15,6 @@ sidebar_position: 2
 
 **Intelligent Supply Chain**
 
-***Shifu*** helps users to set up a transparent control layer under the current WMS, connecting all devices under the platform and breaking the current data barriers. Shifu also analyzes the equipment utilization rate and average task time, etc.
+***Shifu*** helps users to set up a transparent control layer under the current WMS, connecting all devices under the platform and breaking the current data barriers. ***Shifu*** also analyzes the equipment utilization rate and average task time, etc.
 
 **……**

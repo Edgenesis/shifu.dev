@@ -32,11 +32,11 @@ ConfigMap of ***Shifu*** is a Kubernetes-native [ConfigMap](https://kubernetes.i
 `DeviceShifuDriverProperties` refer to driver parameters of DeviceShifu.
 
 - **driverSku** (string)
-  indicates the hardware models supported by the driver, such as `Hikvision Camera`.
+  hardware models supported by the driver, such as `Hikvision Camera`.
 - **driverImage** (string)
-  indicates the container image name of the driver, such as `driver/hikvision-camera:v1.2.3`.
+  container image name of the driver, such as `driver/hikvision-camera:v1.2.3`.
 - **driverExecution** (string)
-   indicates the execution path of the drive. For command line driver, relative/absolute path of the driver execution file needs to be filled in, such as `python driver.py` or `C:\driver.exe`.
+   execution path of the drive. For command line driver, relative/absolute path of the driver execution file needs to be filled in, such as `python driver.py` or `C:\driver.exe`.
 
 ## DeviceShifuInstructions
 
@@ -51,7 +51,7 @@ ConfigMap of ***Shifu*** is a Kubernetes-native [ConfigMap](https://kubernetes.i
 `DeviceShifuInstruction` is the command that ***deviceShifu*** can receive.
 
 - **instructionProperties** (DeviceShifuInstructionProperty)
-  indicates the parameters of the DeviceShifu command, which have various configurations according to different protocols . Please refer to the  examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
+  parameters of the DeviceShifu command, which have various configurations according to different protocols . Please refer to the  examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
   - **DeviceShifuInstructionProperty** (interface)
 
 ## DeviceShifuInstructionSettings
@@ -59,7 +59,7 @@ ConfigMap of ***Shifu*** is a Kubernetes-native [ConfigMap](https://kubernetes.i
 `DeviceShifuInstructionSettings` refers to the settings related to Instructions in ***deviceShifu***.
 
 - **defaultTimeoutSeconds** (int)
-  indicates the default timeout period (in seconds) for all Instructions. If not set, the default value is 3 seconds
+  default timeout period (in seconds) for all Instructions. If not set, the default value is 3 seconds
 
 ## DeviceShifuTelemetries
 
@@ -75,14 +75,14 @@ ConfigMap of ***Shifu*** is a Kubernetes-native [ConfigMap](https://kubernetes.i
 
 - HTTP protocol:
     - **telemetryUpdateIntervalInMilliseconds** (int64)
-      The millisecond interval at which ***deviceShifu*** detects `Telemetry`. The default value is 3000.
+      millisecond interval at which ***deviceShifu*** detects `Telemetry`. The default value is 3000.
     - **telemetryTimeoutInMilliseconds** (int64)
-      The timeout for ***deviceShifu*** to connect to the device. The default value is 3000.
+      timeout for ***deviceShifu*** to connect to the device. The default value is 3000.
     - **telemetryInitialDelayInMilliseconds** (int64)
-      The delay time for the initial detection of ***deviceShifu***. The default value is 3000.
+      delay time for the initial detection of ***deviceShifu***. The default value is 3000.
 - TCP socket protocol:
     - **telemetryUpdateIntervalInMilliseconds** (int64)
-      The millisecond interval at which ***deviceShifu*** detects Telemetry. Default is 1000. (Detection method: ***deviceShifu*** tries to establish a socket connection with the device once every 1000 milliseconds, and determines if the device is on by whether the connection is successful.)
+      millisecond interval at which ***deviceShifu*** detects Telemetry. Default is 1000. (Detection method: ***deviceShifu*** tries to establish a socket connection with the device once every 1000 milliseconds, and determines if the device is on by whether the connection is successful.)
 - MQTT protocol:
     - **telemetryUpdateIntervalInMiliseconds** (int64)
       DeviceShifu detects the millisecond interval between the MQTT and the receipt of the last msg. Default value is 3000.
@@ -93,6 +93,6 @@ ConfigMap of ***Shifu*** is a Kubernetes-native [ConfigMap](https://kubernetes.i
 
 - **properties** (DeviceShifuTelemetryProperties)
   - **instruction** (string)
-    indicates the command to be used for detection which must be a valid command as defined by [DeviceShifuInstruction](#deviceshifuinstruction) above.
+    command to be used for detection which must be a valid command as defined by [DeviceShifuInstruction](#deviceshifuinstruction) above.
   - **initialDelayMs** (int)
-    indicates the delay (in milliseconds) to start the detection.
+    delay (in milliseconds) to start the detection.

@@ -11,16 +11,16 @@ sidebar_position: 1
 
 Based on the principle "Born for Developers", ***Shifu*** divides the work of IoT application development into six following major categories:
 
-1. Device Access
-1. Device Management
-1. Data Collection
-1. Device Control
-1. Application Development
-1. System Operation and Maintenance
+1. Device Integration
+2. Device Management
+3. Data Collection
+4. Device Control
+5. Application Development
+6. System Operation and Maintenance
 
 ## Device Access
 
-The advanced microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to access new devices quickly.
+The advanced microservices architecture empowers ***Shifu*** with unparalleled scalability and allows ***Shifu*** to integrate new devices quickly.
 
 ## Device Management
 
@@ -28,11 +28,11 @@ The advanced microservices architecture empowers ***Shifu*** with unparalleled s
 
 ## Data Collection
 
-On ***Shifu***, you can easily realize data collection automatically.
+On ***Shifu***, you can easily automate your data collection.
 
 ## Device Control
 
-On ***Shifu***, you can attain automated device control through data collection.
+On ***Shifu***, you can achieve automated device control through data collection.
 
 ## Application Development
 
@@ -52,7 +52,7 @@ Due to integration with `Kubernetes`' capabilities, ***Shifu*** was born with tw
 
 1. ***Shifu***, based on Kubernetes, enables developers to unify the management of applications and IoT devices by operating and maintaining only one set of k8s clusters, eliminating the need to operate and maintain an additional set of IoT platforms.
 
-1. Never having singular-point failures. Unlike other IoT platforms, ***Shifu***'s architecture can be created with several copies of ***deviceShifu***, so there will never be a singular-point failure. In fact, ***Shifu*** has been running for 500,000 hours without failure in core scenarios (factories, labs, supply chain, etc.) in many Fortune 500 companies.
+2. Never having single-point failures. Unlike other IoT platforms, ***Shifu***'s architecture is formed with several copies of ***deviceShifu***, so there will never be a single point failure. In fact, ***Shifu*** has been running for 500,000 hours without failure in core scenarios (factories, labs, supply chain, etc.) in many Fortune 500 companies.
 
 ## By ***Shifu***'s Module
 
@@ -60,11 +60,11 @@ Due to integration with `Kubernetes`' capabilities, ***Shifu*** was born with tw
 
 - [***deviceShifu***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md)
   - Get data from devices
-  - Send commands to the devices
+  - Send commands to devices
   - Various application development tools (finite state machine, etc.)
+- [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController.md)
+  - Manage the lifecycle of ***Shifu***
 - [***shifud***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud.md)
   - Device discovery
   - Device verification
   - Device update
-- [***shifuController***](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController.md)
-  - Manage the entire process of ***Shifu***, including generation of digital twins, calling, operation and maintenance, etc.

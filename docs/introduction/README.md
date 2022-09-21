@@ -1,20 +1,20 @@
 # Product Introduction
 
-***Shifu*** is an open source platform for IoT development and management based on [Kubernetes](https://kubernetes.io/). By using ***Shifu***, developers can connect, monitor and control any IoT device more simply.
+***Shifu***([GitHub Repo](https://github.com/Edgenesis/shifu)) is an open source platform for IoT development and management based on [Kubernetes](https://kubernetes.io/). By using ***Shifu***, developers can connect, monitor and control any IoT device easier.
 
 ## Technical Features
 
-### Full Device Access
+### Full Device Integration
 
-***Shifu*** can easily call all kinds of devices and support access to public and private protocol platforms and drivers.
+***Shifu*** can easily integrate all kinds of devices and support both public and private protocol platforms and drivers.
 
 ### Digital-twin Development
 
-With digital twin, ***Shifu***   can gradually realize low-code and zero-code development, have multi-level abstraction and quickly match application scenarios possible.
+With digital twin, ***Shifu*** can gradually achieve low-code and zero-code development, has multi-level abstraction and the ability to quickly adapt to application scenarios.
 
 ### Native Architecture O&M
 
-***Shifu*** uses `Kubernetes` native architecture and interconnects devices through the local network. Developers need to architect other O&M facilities. (`K8s` + edge computing)
+***Shifu*** uses `Kubernetes` native architecture and interconnects devices through the local network. Developers don't need other O&M (`K8s` + edge computing) facilities anymore. 
 
 <!-- ## 视频介绍
 
@@ -22,7 +22,7 @@ With digital twin, ***Shifu***   can gradually realize low-code and zero-code de
     <source src="https://bianwuji.com/stuff/videos/techintro.mp4" type="video/mp4"></source>
 </video> -->
 
-## Introduction of Usage
+## Use Introduction
 
 ***Shifu*** is an efficient developer tool that provides all-in-one IoT solutions. 
 
@@ -30,17 +30,17 @@ With digital twin, ***Shifu***   can gradually realize low-code and zero-code de
 
   ***Shifu*** contains a large number of communication protocols and drivers that can be loaded automatically when called and are perfectly compatible with most hardware.
 
-  If the protocol or the driver is not already compatible, ***Shifu*** allows developers to add a new one. Once the driver library is added, the system can automatically recognize and process it, package it into a ready-to-use container image, and then it will work.
+Shifu allows developers to add new drivers and protocols if they are not already compatible. Once the driver libraries are added, the system can automatically recognize and process them, package them into ready-to-use container images, and complete compatibility.
 
 ### Step 2: Generate a Digital Twin 
  
-  Next, each connected hardware is structured as a corresponding digital twin. And, each device capability becomes an API in it. ***Shifu*** has a built-in format converter. It automatically converts web requests sent by developers and then sends them to the device with the communication protocol supported by the device. As a result, all digital twins are able to implement a uniform request format and interaction.
+  Next, each connected hardware is structured as a corresponding digital twin, and each device's capability will become an API of the digital twin. ***Shifu*** has a built-in format converter. It automatically converts web requests sent by developers and then sends them to the device with the communication protocol supported by the device. As a result, all digital twins are able to implement a uniform request format and interaction.
 
-  The CRD feature of `Kubernetesgreatly` increases the development efficiency. Developers can generate digital twins by providing a Yaml configuration file. The basic configuration file includes the name of the device, the codename, the name of the communication protocol, and the device API needed to control it.
+  The CRD feature of `Kubernetes` greatly increases the development efficiency. Developers can generate digital twins by providing a Yaml configuration file. The basic configuration file includes the name of the device, the codename, the name of the communication protocol, and the device API required to control it.
 
   If more features are desired for the digital twin, ***Shifu*** can also satisfy more configuration requirements.
 
-  Because each digital twin is a containerized microservice, resources are automatically scheduled in the form of `Pod` by `Kubernetes` by default.
+  Because each digital twin is a containerized microservice, resources are by default automatically scheduled in the form of `Pod` by `Kubernetes`.
 
 ### Step 3: Implementing Automation 
  

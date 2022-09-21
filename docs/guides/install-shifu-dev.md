@@ -1,9 +1,9 @@
 ---
-title: Installation Testing
+title: Local Installation
 sidebar_position: 1
 ---
 
-# Installation Testing
+# Local Installation
 ***Shifu*** can be deployed directly to a K8s cluster in a production environment.
 
 ***Shifu*** is very easy to deploy in production, but for testing you need to debug on the access device first.  And then you can install ***Shifu*** locally and create clusters. Some tools like kind can help you create such clusters on your computer.
@@ -27,7 +27,7 @@ $ sudo docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
-If the output is `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`, `Docker Desktop` is not started; if the output is `command not found`, `Docker Desktop` is not installed.
+If the output is `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`, it means `Docker Desktop` is not started; if the output is `command not found`, it means `Docker Desktop` is not installed.
 
 ## Install kubectl
 
@@ -40,6 +40,10 @@ Confirm `kubectl` installed:
 
 ```bash
 $ kubectl version --client --output=yaml
+clientVersion:
+  buildDate: "2022-08-23T17:44:59Z"
+  compiler: gc
+  ......
 ```
 
 ## Install kind
@@ -100,7 +104,7 @@ $ sudo kind create cluster --image="kindest/node:v1.24.0"
 
 ## Install ***Shifu***
 
-***Shifu*** is very easy to install. Use `pkg/k8s/crd/install/shifu_install.yml` to apply ***Shifu*** by a single command:
+***Shifu*** is very easy to install. Use `pkg/k8s/crd/install/shifu_install.yml` to apply ***Shifu*** with a single command:
 
 ```bash
 git clone https://github.com/Edgenesis/shifu.git
@@ -121,4 +125,4 @@ sudo docker pull edgehub/shifu-controller:v0.0.5
 sudo kind load docker-image edgehub/shifu-controller:v0.0.5
 ```
 
-Note: This method will occupy the storage of your computer. After importing finished, use command `sudo docker rmi <image_id>` to remove useless images on your computer.
+Note: This method will occupy the storage of your computer. After import finishes, use command `sudo docker rmi <image_id>` to remove useless images on your computer.

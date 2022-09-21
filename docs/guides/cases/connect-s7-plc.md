@@ -5,14 +5,14 @@ sidebar_position: 0
 
 # Connect a PLC Device
 
-*Shifu* is compatible with the Siemens S7 series. *Shifu* can be used to modify the memory of an `S7 PLC` via an HTTP request. This article will show how to access a *Siemens S7-1200 1214C PLC* and interact with it.
+*Shifu* is compatible with the Siemens S7 series. *Shifu* can be used to modify the memory of an `S7 PLC` via HTTP requests. This article will show how to access a *Siemens S7-1200 1214C PLC* and interact with it.
 <!-- You can also check [this video](https://youtu.be/SV73l52vDp8) on YouTube.-->
 
 ## Connection
 
 ### *Step 1*
 
-Before connecting to *Shifu*, the PLC should have a physical connection to the host device of *Shifu* through the Internet and own an IP address. Here we use `192.168.0.1` as the IP address. (If the IP address of your PLC device is not `192.168.0.1`, you can change `PLC_ADDRESS` in `deviceshifu-plc-deployment.yaml` to the IP address of your device.)
+Before connecting to *Shifu*, the PLC should have a physical connection to the host machine of *Shifu* through the Ethernet and own an IP address. We use `192.168.0.1` here as the IP address. (If the IP address of your PLC device is not `192.168.0.1`, you can change `PLC_ADDRESS` in `deviceshifu-plc-deployment.yaml` to the IP address of your device.)
 
 ### *Step 2*
 
@@ -162,18 +162,18 @@ kubectl apply -f ../plc_configuration_directory
 
 *Shifu* can read and write the memory of the PLC through HTTP requests.
 
-Before the next step, we need to start an *Nginx* container to send and receive HTTP requests, as the following commands:
+Before the next step, we need to start an *Nginx* container to send and receive HTTP requests, with the following commands:
 
 ```bash
 kubectl run nginx --image=nginx:1.21 -n deviceshifu 
 kubectl exec -it nginx -n deviceshifu -- bash
 ```
 
-Three instructions are **sendsinglebit**, **getcontent** and **getcpuordercode**. Use *Shifu* to execute these instructions on the device.
+Three instructions are **sendsinglebit**, **getcontent** and **getcpuordercode**. We can execute these instructions on the device via *Shifu*.
 
 ### sendsinglebit
 
-**sendsinglebit** indicates modifying a single bit. It needs the following parameters:
+**sendsinglebit**  modifies a single bit. It needs the following parameters:
 
 - **rootaddress**: the name of the memory area. e.g. `M` for `Merker` and `Q` for `Digital Output`
 - **address**: the address of the memory area
@@ -193,7 +193,7 @@ Check the PLC and you will find the second indicator light in Q area is on.
 
 ### getcontent
 
-**getcontent** indicates getting the value of a specific address in  a memory area. It needs the following parameters:
+**getcontent**  gets the value of a specific address in  a memory area. It needs the following parameters:
 
 - **rootaddress**: the name of the memory area. e.g. `M` for `Merker` and `Q` for `Digital Output`
 - **address**: the memory area's address
@@ -209,7 +209,7 @@ curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"
 
 ### getcpuordercode
 
-**getcpuordercode** indicates getting the static information of PLC.
+**getcpuordercode** gets the static information of PLC.
 
 ```bash
 curl "deviceshifu-plc/getcpuordercode"; echo
