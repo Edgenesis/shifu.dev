@@ -296,7 +296,7 @@
   "Lightweight Hardware Requirement": {
     "message": "轻量化"
   },
-  "As light as a Raspberry Pi(e)! (2G RAM)": {
+  "As light as a Raspberry Pi! (2G RAM)": {
     "message": "只需一个2G内存的树莓派就可以在生产环境跑起Shifu"
   },
   "Cloud-Side Collaboration": {
@@ -309,7 +309,7 @@
     "message": "无限扩容"
   },
   "Billions level of device service scalability Big enough to run the city": {
-    "message": "基于k8s的架构让Shifu可以无限扩容，轻松处理亿级设备接入，连智慧城市项目都不在话下。"
+    "message": "基于k8s的架构让Shifu可以无限扩容，轻松处理亿级设备接入，连智慧城市项目都不在话下"
   },
   "Orchestration for IoT Application Development": {
     "message": "让开发产业场景像开发APP一样简单！"
@@ -317,38 +317,65 @@
   "Extremely Fast Access": {
     "message": "极速设备接入"
   },
-  "From machinery to thermometers With private or public protocol Shifu's high compatibility design makes it easy for you to handle universal devices": {
-    "message": "大到使用私有驱动的工程机械 小到使用公有协议的温湿度计 Shifu超高兼容性让你轻松应对各种易购"
+  "From machinery to thermometers": {
+    "message": "大到使用私有驱动的工程机械"
   },
-  "Modularized Deployment Experience": {
+  "With private or public protocol": {
+    "message": "小到使用公有协议的温湿度计"
+  },
+  "Shifu's high compatibility design makes it easy for you to handle universal devices": {
+    "message": " Shifu超高兼容性让你轻松应对各种易购设备"
+  },
+  "Modulized Deployment Experience": {
     "message": "模块化部署体验"
   },
-  "Devices and applications connected with Shifu will be packaged into puzzle-like modules Just call for service as you will": {
-    "message": "所有接入Shifu的设备及应用都会被封装成一个拼图式模块 根据场景内的设备不同，按需加载即可"
+  "Devices and applications connected with Shifu will be packaged into puzzle-like modules": { 
+    "message": "所有接入Shifu的设备及应用都会被封装成一个拼图式模块"
+  },
+  "Just call for service as you will": {
+    "message": "根据场景内的设备不同, 按需加载即可"
   },
   "Efficient Application Development": {
     "message": "高效应用开发"
   },
-  "Connected devices will be abstracted as functional API With the help of Shifu, applications will be decoupled from hardware Thus, make the IoT application development as efficient as on the mobile platform": {
-    "message": "接入设备后，Shifu会自动把设备的能力抽象成API，让你的应用和硬件设备彻底解耦，把低效的物联网应用开发变得像面向对象编程一样高效"
+  "Connected devices will be abstracted as functional API": { 
+    "message": "接入设备后，Shifu会自动把设备的能力抽象成API"
   },
-  "Aerospace-grade Stability": {
+  "With the help of Shifu, applications will be decoupled from hardware": {
+    "message": "让你的应用和硬件设备彻底解耦"
+  },
+  "Thus, make the IoT application development as efficient as on the mobile platform": {
+    "message": "把低效的物联网应用开发变得像面向对象编程一样高效"
+  },
+  "Aero-Grade Stability": {
     "message": "航天级稳定性"
   },
-  "Shifu has been validated in aerospace scenarios Protected from downtime crash with 99.9999% reliability": {
-    "message": "Shifu已通过在航天场景验证 提供99.9999%的可靠性 让你远离宕机烦恼"
+  "Shifu has been validated in aerospace scenarios": {
+    "message": "Shifu已通过在航天场景验证"
   },
-  "Multidimensional Security Policy": {
+  "Protected from downtime crash with 99.9999% reliability": {
+    "message": "提供99.9999%的可靠性, 让你远离宕机烦恼"
+  },
+  "Multi-Dimensional Security Policy": {
     "message": "多维度安全策略"
   },
-  "Backed by the cloud-native security team of the UN No matter data encryption or network security Shifu is on duty 24X7": {
-    "message": "联合国的云原生安全团队操刀 无论是数据加密还是网络安全 Shifu不一而足"
+  "Backed by the cloud-native security team of the UN": {
+    "message": "联合国的云原生安全团队操刀"
+  },
+  "No matter data encryption or network security": {
+    "message": "无论是数据加密还是网络安全 "
+  },
+  "Shifu is on duty 24X7": {
+    "message": "Shifu不一而足"
   },
   "Globalized Community Ecology": {
     "message": "全球化社区生态"
   },
-  "Benefit from cloud-native software ecosystem and native Kubernetes architecture Issues will be helped across a worldwide range": {
-    "message": "Shifu得益于Kubernetes原生架构，可以无缝接入强大的云原生软件生态，让全球的开发者帮你解决后顾之忧"
+  "Benefit from cloud-native software ecosystem and native Kubernetes architecture": {
+    "message": "Shifu得益于Kubernetes原生架构, 可以无缝接入强大的云原生软件生态"
+  },
+  "Issues will be helped across a worldwide range": {
+    "message": "让全球的开发者帮你解决后顾之忧"
   },
   "Shifu's Value to Developers": {
     "message": "Shifu对开发者的价值"
