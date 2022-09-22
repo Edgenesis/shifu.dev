@@ -44,7 +44,9 @@ let developerlist = [
     title: translate({ message: 'Extremely Fast Access' }),
     descript:
       <span>
-        <Translate>From machinery to thermometers With private or public protocol Shifu's high compatibility design makes it easy for you to handle universal devices</Translate>
+        <Translate>From machinery to thermometers</Translate><br />
+        <Translate>With private or public protocol</Translate><br />
+        <Translate>Shifu's high compatibility design makes it easy for you to handle universal devices</Translate>
       </span>,
     isReverse: true,
     titleColor: "#2490FF",
@@ -55,9 +57,8 @@ let developerlist = [
     title: translate({ message: 'Modulized Deployment Experience' }),
     descript:
       <span>
-        <Translate>Devices and applications connected with Shifu will be packaged into puzzle-like modules
-          Just call for service as you will</Translate><br />
-        {/* <Translate>Just load as needed, depending on the devices in the scene</Translate> */}
+        <Translate>Devices and applications connected with Shifu will be packaged into puzzle-like modules</Translate><br />
+        <Translate>Just call for service as you will</Translate>
       </span>,
     isReverse: false,
     titleColor: "#C15CFF",
@@ -68,7 +69,9 @@ let developerlist = [
     title: translate({ message: 'Efficient Application Development' }),
     descript:
       <span>
-        <Translate>Connected devices will be abstracted as functional API With the help of Shifu, applications will be decoupled from hardware Thus, make the IoT application development as efficient as on the mobile platform</Translate>
+        <Translate>Connected devices will be abstracted as functional API</Translate><br />
+        <Translate>With the help of Shifu, applications will be decoupled from hardware</Translate><br />
+        <Translate>Thus, make the IoT application development as efficient as on the mobile platform</Translate>
       </span>,
     isReverse: true,
     titleColor: "#F33EE3",
@@ -82,7 +85,8 @@ let engineeringList = [
     title: translate({ message: 'Aero-Grade Stability' }),
     descript:
       <span>
-        <Translate>Shifu has been validated in aerospace scenarios Protected from downtime crash with 99.9999% reliability</Translate>
+          <Translate>Shifu has been validated in aerospace scenarios</Translate><br />
+        <Translate>Protected from downtime crash with 99.9999% reliability</Translate>
       </span>,
     isReverse: true,
     titleColor: "#FF64EF",
@@ -93,7 +97,9 @@ let engineeringList = [
     title: translate({ message: 'Multi-Dimensional Security Policy' }),
     descript:
       <span>
-        <Translate>Backed by the cloud-native security team of the UN No matter data encryption or network security Shifu is on duty 24X7</Translate>
+         <Translate>Backed by the cloud-native security team of the UN</Translate><br />
+        <Translate>No matter data encryption or network security</Translate><br />
+        <Translate>Shifu is on duty 24X7</Translate>
       </span>,
     isReverse: false,
     titleColor: "#9A5CFF",
@@ -104,7 +110,8 @@ let engineeringList = [
     title: translate({ message: 'Globalized Community Ecology' }),
     descript:
       <span>
-        <Translate>Benefit from cloud-native software ecosystem and native Kubernetes architecture Issues will be helped across a worldwide range</Translate>
+         <Translate>Benefit from cloud-native software ecosystem and native Kubernetes architecture</Translate><br />
+        <Translate>Issues will be helped across a worldwide range</Translate>
       </span>,
     isReverse: true,
     titleColor: "#2490FF",

@@ -25,7 +25,7 @@ let cardsList = [
   {
     img: require('@site/static/img/index/card-4.svg').default,
     title: translate({ message: 'Lightweight Hardware Requirement' }),
-    descript: <span><Translate>As light as a Raspberry Pi(e)! (2G RAM)</Translate></span>,
+    descript: <span><Translate>As light as a Raspberry Pi! (2G RAM)</Translate></span>,
     iconBg: '#DCF2FE',
   },
   {
