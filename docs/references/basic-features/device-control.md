@@ -7,7 +7,7 @@ sidebar_position: 4
 
 Similar to data collection, after setting the device instructions in `deviceshifu_configmap.yaml`, communication can be made with ***deviceshifu*** through HTTP/gRPC. The ***deviceshifu*** will convert the instructions into the form of supported  protocol by the device and send it to the device. After the device receives the instruction, it can execute the corresponding operation through the instruction, as to realize the device control.
 
-## Combined with Data Acquisition to Realize Automatic Control of Equipment
+## Combined with Data Collection to Achieve Automatic Control of Equipment
 
 1. Create a virtual device `PLC` (if you have not tried the `PLC` device, please click [here](guides/cases/connect-s7-plc.md) to view it).
    ```bash
@@ -16,8 +16,8 @@ Similar to data collection, after setting the device instructions in `deviceshif
    deviceshifu-opcua-deployment-765b77cfcf-dnhjh   1/1     Running   0          14m
    deviceshifu-plc-deployment-7f96585f7c-6t48g     1/1     Running   0          7m8s
    ```
-   At this point, two deviceshifu are started. Each ***deviceshifu*** is connected to a device. The two ***deviceshifu*** can interact with each other. That is, when the temperature of the thermometer exceeds the threshold, the lowest position of the Q area of the `PLC` is set to 1, and when the temperature of the thermometer is lower than the threshold, it is set to 0.
-2. Write programs related to the control equipment.
+   At this point, two ***deviceshifu*** are started, each is connected to a device. The two ***deviceshifu*** can interact with each other. That is, when the temperature of the thermometer exceeds the threshold, the lowest position of the Q area of the `PLC` is set to 1, and when the temperature of the thermometer is lower than the threshold, it is set to 0.
+2. Write programs related to the control of equipment.
    ```go
    package main  
    
@@ -77,7 +77,7 @@ Similar to data collection, after setting the device instructions in `deviceshif
    ```bash
    kind load docker-image high-temperature-control-plc:v0.0.1
    ```
-6. Run the data acquisition program.
+6. Run the data collection program.
    ```bash
    kubectl run high-temperature-control-plc --image=high-temperature-control-plc:v0.0.1
    ```
@@ -85,7 +85,7 @@ Similar to data collection, after setting the device instructions in `deviceshif
    ```bash
    kubectl run nginx --image=nginx:1.21 -n deviceshifu
    ```
-8. At this point these `pod`s are under `Running` state.
+8. At this point these `pods` are under `Running` state.
    ```bash
    $ kubectl get pods -n deviceshifu
    NAME                                                  READY   STATUS    RESTARTS   AGE

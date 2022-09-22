@@ -1,11 +1,11 @@
 ---
-title: Device Access
+title: Device Integration
 sidebar_position: 1
 ---
 
-# Device Access
+# Device Integration
 
-## Modify the configuration of device access
+## Modify the configuration of device for integration
 
 ### 1. Edit the `edgedevice.yaml` file
 
@@ -21,10 +21,10 @@ protocolSettings:
 ...
 ```
 
-- `connection`: indicates how the device is connected to the network.
-- `address`: represents the network address of the device.
-- `protocol`: represents a communication protocol that interacts with a device.
-- `protocolSettings`: represents the next Setting for the protocol, and [different settings](references/api/edgedevice.md#protocolsettings) need to be introduced for different protocols.
+- `connection`: how the device is connected to the network.
+- `address`: network address of the device.
+- `protocol`: communication protocol that interacts with a device.
+- `protocolSettings`: next Setting for the protocol, and [different settings](references/api/edgedevice.md#protocolsettings) need to be introduced for different protocols.
 
 ### 2. Create ***deviceshifu***
 
@@ -36,7 +36,7 @@ If you find that the ***deviceshifu*** status is `Error` or `CrashLoopBackOff` t
 
 You can also print error messages through the command `kubectl logs <NAME> -n deviceshifu`.
 
-## Access an OPC UA Device by Configuration
+## Integrate an OPC UA Device by Configuration
 
 ```yaml
 connection: Ethernet  

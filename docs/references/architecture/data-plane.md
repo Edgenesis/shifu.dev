@@ -37,4 +37,4 @@ Each ***deviceShifu*** is associated with one or more physical devices. Users ca
 
 #### Design Docs
 
-If you are interested in the detailed implementations of ***deviceShifu***, you can visit the [***deviceShifu*** design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md) for further reading.
+If you are interested in the detailed design of ***deviceShifu***, you can visit the [***deviceShifu*** design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md) for further reading.
