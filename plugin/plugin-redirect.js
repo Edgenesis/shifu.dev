@@ -24,6 +24,12 @@ module.exports = function (context, options) {
         console.log('切换到汉语');
         document.location.href = href.replace(\`\${host}\`, \`\${host}/zh-Hans\`) + ''
       }
+      if(lang[0]!= 'zh-CN' && href.indexOf('/zh-Hans') != -1 && href.indexOf('manually=true') == -1)
+      {
+        console.log('切换到英语');
+        console.log(href.split('/zh-Hans').join(''));
+        document.location.href = href.split('/zh-Hans').join('')
+      }
       `,
           },
         ],
@@ -31,3 +37,4 @@ module.exports = function (context, options) {
 },
   };
 };
+
