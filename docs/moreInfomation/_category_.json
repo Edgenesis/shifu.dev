@@ -1,0 +1,8 @@
+{
+  "label": "More Information",
+  "position": 6000,
+  "link": {
+    "type": "doc",
+    "id": "README"
+  }
+}
