@@ -10,7 +10,7 @@ module.exports = function (context, options) {
             `
             let lang=navigator.languages;
             let href=window.location.href
-            let host=document.domain + ':' + window.location.port 
+            let host=window.location.port ? (document.domain + ':' + window.location.port ):document.domain 
             setTimeout(()=> {
             let elements = document.querySelectorAll('.dropdown__link')
             console.log(elements);
