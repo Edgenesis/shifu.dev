@@ -9,7 +9,6 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 ```sh
 $ yarn # install packages
 
-
 $ yarn start # en SPA
 $ yarn start --locale zh-Hans # zh-Hans SPA
 ```
