@@ -42,5 +42,9 @@
   "sidebar.tutorialSidebar.category.Open Source Community": {
     "message": "开源社区",
     "description": "The label for category Open Source Community in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.More Information": {
+    "message": "更多信息",
+    "description": "The label for category More Information in sidebar tutorialSidebar"
   }
 }
