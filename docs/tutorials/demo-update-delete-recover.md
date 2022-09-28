@@ -54,4 +54,5 @@ sudo kubectl get pod -n shifu-crd-system
 ```
 If you get the following output, i.e. Status is Running, then Shifu is running and you can go to [demo-try.md] to continue the experience.
 ![](images/shifu-run.png)
+
 If there is no output or your output is below, i.e. Status is Failed, then Shifu is not running or failed to run, you can go to [download-install](demo-install.md#install-shifu) to install it.
