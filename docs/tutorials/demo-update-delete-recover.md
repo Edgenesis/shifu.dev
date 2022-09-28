@@ -23,11 +23,11 @@ This command will uninstall kind, kubectl, Shifu, Shifu Demo, Shifu Image and Sh
 
 ## Restore ***Shifu*** Demo
 
-Please make sure your docker is running first, if you are not sure if your docker is running or not, please open Terminal and execute the following command in the command line:
+Please make sure your docker is running, open Terminal and use this command to get the docker status:
 ```bash
 sudo docker ps -a
 ```
-If ``Docker`` is running smoothly, you will get the following output:  
+If `Docker` is running smoothly, you will get the following output:  
 
 ![](images/docker_run.png)
 
