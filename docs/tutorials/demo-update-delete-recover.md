@@ -10,16 +10,19 @@ import TabItem from '@theme/TabItem';
 
 Please [uninstall the old version of Shifu](#uninstall-shifu-demo) before installing the new version of Shifu Demo.
 
-Go to [**Shifu Demo Download**](https://shifu.run/disclaimer) to download the latest ***Shifu*** installer.
+Go to [**Shifu Demo Download**](https://shifu.run/disclaimer) to download the latest ***Shifu*** installer. Note: *Shifu Demo* installation package will be updated when *Shifu* is updated
 
 ## Uninstall ***Shifu*** Demo
 
 Make sure you are currently in the testdir folder. 
 Use the following command to complete the uninstallation of Shifu Demo.
 ```bash
-sudo bash scripts/deviceshifu-demo-aio_build.sh delete_demo
+sudo bash ./scripts/deviceshifu-demo-aio_build.sh delete_demo
 ```
+
+:::caution 
 This command will uninstall kind, kubectl, Shifu, Shifu Demo, Shifu Image and Shifu Demo folders, please use with caution.
+:::
 
 ## Restore ***Shifu*** Demo
 
@@ -52,5 +55,3 @@ sudo kubectl get pod -n shifu-crd-system
 If you get the following output, i.e. Status is Running, then Shifu is running and you can go to [demo-try.md] to continue the experience.
 ![](images/shifu-run.png)
 If there is no output or your output is below, i.e. Status is Failed, then Shifu is not running or failed to run, you can go to [download-install](demo-install.md#install-shifu) to install it.
-
-Translated with www.DeepL.com/Translator (free version)

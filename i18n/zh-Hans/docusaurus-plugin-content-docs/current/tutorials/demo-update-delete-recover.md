@@ -7,16 +7,17 @@ sidebar_position: 2
 在安装新版 Shifu Demo 之前请先[卸载老版本的Shifu](#卸载-shifu-demo)。
 
 前往 [**Shifu Demo 下载**](https://shifu.run/disclaimer) 下载 最新的 ***Shifu*** 安装包。
-
+注：Shifu Demo 安装包会在Shifu的更新时更新
 ## 卸载 ***Shifu*** Demo
 
 确保您当前在testdir文件夹下。 
-使用一下命令完成 Shifu Demo的卸载。
+使用以下命令完成 Shifu Demo的卸载。
 ```bash
-sudo bash scripts/deviceshifu-demo-aio_build.sh delete_demo
+sudo bash ./scripts/deviceshifu-demo-aio_build.sh delete_demo
 ```
+:::caution
 该命令会卸载kind、kubectl、Shifu、Shifu Demo、Shifu Image以及Shifu Demo文件夹，请谨慎使用。
-
+:::
 ## 恢复 ***Shifu*** Demo
 
 请先确保您的 docker 处于运行状态，如果您不清楚您的docker是否运行，请打开终端 (Terminal) 在命令行中执行下面的命令:
