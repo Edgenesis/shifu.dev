@@ -13,7 +13,7 @@ sidebar_position: 2
 确保您当前在testdir文件夹下。 
 使用以下命令完成 Shifu Demo的卸载。
 ```bash
-sudo bash ./scripts/deviceshifu-demo-aio_build.sh delete_demo
+sudo ./scripts/deviceshifu-demo-aio_build.sh delete_demo
 ```
 :::caution
 该命令会卸载kind、kubectl、Shifu、Shifu Demo、Shifu Image以及Shifu Demo文件夹，请谨慎使用。
@@ -48,4 +48,5 @@ sudo kubectl get pod -n shifu-crd-system
 ```
 如果您的输出为以下，即 Status 为 Running 则表示 Shifu 已运行，您可以前往[体验试用](demo-try.md) 继续体验。
 ![](images/shifu-run.png)
+
 如果没有输出或者您的输出为以下，即 Status 为 Failed 时则表示 Shifu 未运行或者运行失败，您可以前往[下载安装](demo-install.md#安装-shifu)进行安装。

@@ -17,7 +17,7 @@ Go to [**Shifu Demo Download**](https://shifu.run/disclaimer) to download the la
 Make sure you are currently in the testdir folder. 
 Use the following command to complete the uninstallation of Shifu Demo.
 ```bash
-sudo bash ./scripts/deviceshifu-demo-aio_build.sh delete_demo
+sudo ./scripts/deviceshifu-demo-aio_build.sh delete_demo
 ```
 
 :::caution 
