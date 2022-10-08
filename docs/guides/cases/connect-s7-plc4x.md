@@ -131,7 +131,7 @@ spec:
 ```
 </details>
 
-### *第3步*
+### *Step 3*
 
 Add PLC devices in ***Shifu***，build and start ***deviceShifu***:
 
@@ -162,7 +162,7 @@ If you want to know more about PLC4X commands, please go to [PLC4X official webs
 
 **read** means to read the value of the device using the corresponding command:
 
-For example, the command ``curl "deviceshifu-plc4x/read?%Q0.0:BOOL"` returns the contents of the address of the memory area ``Q0``.
+For example, the command `curl "deviceshifu-plc4x/read?%Q0.0:BOOL"` returns the address of the memory area `Q0`.
 
 ```bash
 curl "deviceshifu-plc4x/read?%Q0.0:BOOL"; echo
@@ -172,7 +172,7 @@ At this point *Shifu* returns the status of the first indicator from left to rig
 
 ### write
 
-**write** indicates the command to modify the value of the corresponding location:
+**write** means to modify the value of the corresponding location through commands:
 
 For example, the command ``curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true"` will change the first bit of ``Q0`` to true.
 
