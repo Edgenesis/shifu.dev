@@ -25,7 +25,7 @@ sidebar_position: 4
 首先我们需要一个配置文件来获取IP地址与设备类型：  
 
 <details>
-  <summary> <b>点此查看deviceshifu-plc-deployment.yaml</b> </summary> 
+  <summary> <b>点此查看deviceshifu-plc4x-deployment.yaml</b> </summary> 
 
 ```yml
 apiVersion: apps/v1
@@ -70,7 +70,7 @@ spec:
 同时，还需要一些通用的配置文件:
 
 <details>
-  <summary> <b>点此查看deviceshifu-plc-configmap.yaml</b> </summary>
+  <summary> <b>点此查看deviceshifu-plcs4x-configmap.yaml</b> </summary>
 
 ```yml
 apiVersion: v1
@@ -90,7 +90,7 @@ data:
 </details>
 
 <details>
-  <summary> <b>点此查看deviceshifu-plc-service.yaml</b> </summary>
+  <summary> <b>点此查看deviceshifu-plc4x-service.yaml</b> </summary>
 
 ```yml
 apiVersion: v1
@@ -112,7 +112,7 @@ spec:
 </details>
 
 <details>
-  <summary> <b>点此查看edgedevice-plc.yaml</b> </summary>
+  <summary> <b>点此查看edgedevice-plc4x.yaml</b> </summary>
 
 ```yml
 apiVersion: shifu.edgenesis.io/v1alpha1
