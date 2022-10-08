@@ -77,10 +77,12 @@ EdgeDeviceSpec 是一个 EdgeDevice的描述。
     - **ConnectionTimeoutInMilliseconds** (int64)
       表示 OPC UA 的请求连接毫秒时长，如 `1000`。
   - **SocketSetting** (SocketSetting)
-    - **Encoding** (string)
-      表示 Socket 连接时的编码，现在必须是 `utf-8`。
+    - **encoding** (string)
+      表示 Socket 连接时的编码，可选值为 `utf-8` 或 `hex`，默认值为 `utf-8`。
     - **NetworkType** (string)
       表示 Socket 链接时的协议，现在必须是 `tcp`。
+    - **bufferLength** (int)
+      表示 Socket 传输数据时的缓冲区大小，默认值为 1024。
 
 ### CustomMetadata
 
