@@ -329,7 +329,7 @@
   "Modulized Deployment Experience": {
     "message": "模块化部署体验"
   },
-  "Devices and applications connected with Shifu will be packaged into puzzle-like modules": { 
+  "Devices and applications connected with Shifu will be packaged into puzzle-like modules": {
     "message": "所有接入Shifu的设备及应用都会被封装成一个拼图式模块"
   },
   "Just call for service as you will": {
@@ -338,7 +338,7 @@
   "Efficient Application Development": {
     "message": "高效应用开发"
   },
-  "Connected devices will be abstracted as functional API": { 
+  "Connected devices will be abstracted as functional API": {
     "message": "接入设备后，Shifu会自动把设备的能力抽象成API"
   },
   "With the help of Shifu, applications will be decoupled from hardware": {
