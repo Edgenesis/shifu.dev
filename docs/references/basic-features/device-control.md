@@ -18,7 +18,8 @@ Similar to data collection, after setting up the commands for the device in `dev
    ```
    At this point we have started two ***deviceshifu*** which have each established a connection to a device. We can link the two ***deviceshifu***, that is, when the thermometer temperature exceeds the threshold, set the lowest position of Q area of `PLC` to 1, and set it back to 0 when the thermometer temperature is below the threshold.
 2. Write the program related to the control device.
-   ``go
+   
+   ```go
    package main  
    
    import (  

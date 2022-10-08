@@ -9,7 +9,7 @@ The main components of the ***Shifu*** control plane are ***shifuController*** a
 
 #### Introduction
 
-***shifuController*** is used to control a custom [Kubernetes CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/ custom-resource-definitions/) i.e. ***edgeDevice***, ***edgeDevice*** describes various information about the device connected to ***Shifu***.
+***shifuController*** is used to control a custom [Kubernetes CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) i.e. ***edgeDevice***, ***edgeDevice*** describes various information about the device connected to ***Shifu***.
 
 Each ***edgeDevice*** has two parts.
 `EdgeDeviceSpec` and `EdgeDevicePhase`.
@@ -34,7 +34,7 @@ The `EdgeDevicePhase` defines the current state of the device.
 
 #### Design Documentation
 
-If you are interested in the internal details of ***shifuController***, you can go to the [***shifuController*** design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design- shifuController-zh.md) for further reading.
+If you are interested in the internal details of ***shifuController***, you can go to the [***shifuController*** design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController-zh.md) for further reading.
 
 ### ***shifud***
 

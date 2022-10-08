@@ -1,10 +1,10 @@
-# Project Description
+# Project Introduction
 
 ***Shifu*** ([GitHub Repository](https://github.com/Edgenesis/shifu)) is an open source platform for IoT development and management based on [Kubernetes](https://kubernetes.io/). Developers can connect, monitor and control any IoT device more simply through ***Shifu***.
 
 ## Technical Features
 
-### Universal IoT Device Access
+### Universal IoT Device Integration
 
 ***Shifu*** makes it easy to invoke all kinds of devices and support the integration of public and private protocol platforms and driver devices.
 
@@ -14,13 +14,13 @@
 
 ### Native Architecture O&M
 
-***Shifu*** is a `Kubernetes` native architecture, which spares the need for additional O&M facilities for interconnection among devices in local network. (`K8s` + edge computing features).
+***Shifu*** is a `Kubernetes` native architecture, which spares the need for additional O&M facilities for interconnection among devices in local network. (feature of `K8s` + edge computing).
 
-## Video Introduction
+<!-- ## Video Introduction
 
-<video width="100%" controls>
-    <source src="https://bianwuji.com/stuff/videos/techintro.mp4" type="video/mp4"> </source>
-</video
+!-- <video width="100%" controls>
+    <source src="https://bianwuji.com/stuff/videos/techintro.mp4" type="video/mp4"></source>
+</video> -- -->
 
 ## Get Started
 
@@ -52,4 +52,4 @@ In terms of usage, the request format and interaction of the digital twin are un
 
 ***Shifu*** allows developers to define the automation logic of hardware as a declarative API in the Yaml configuration file. 
  
-From then on, IoT development becomes easy and efficient. 
+From then on, IoT development becomes so easy and efficient. 

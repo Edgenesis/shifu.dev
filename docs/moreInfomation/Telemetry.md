@@ -7,7 +7,7 @@ sidebar_position: 1
 Telemetry is enabled by default when installing *Shifu*, you can disable it before or after installation.
 
 ## Permissions
-The telemetry module for *Shifu* take the advantage of Kubernetes' built-in `view` permission ClusterRole, as described in [official Kubernetes documentation](https://kubernetes.io/zh-cn/docs/reference/access-authn- authz/rbac/#user-facing-roles).
+The telemetry module for *Shifu* take the advantage of Kubernetes' built-in `view` permission ClusterRole, as described in [official Kubernetes documentation](https://kubernetes.io/zh-cn/docs/reference/access-authn-authz/rbac/#user-facing-roles).
 
 Telemetry only allows read-only access to most objects, such as Pod basic information, Kubernetes information, and so on. It does not allow access to private information such as roles, secrets, etc., so you don't need to worry about privacy leaks.
 

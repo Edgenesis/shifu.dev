@@ -2,7 +2,7 @@
 id: intro
 slug: /
 sidebar_position: 0
-title: 歡迎使用
+title: Welcome
 ---
 
 # Welcome to ***Shifu***
@@ -21,12 +21,12 @@ Cloud-native ***Shifu*** makes system operations and maintenance much less diffi
 
 ## Contents
 
-You can select the content pf which you wish to view in the left sidebar at.
+You can select the content of which you wish to view in the left sidebar.
 
-- [**Project Introduction**](. /introduction/): Learn about ***Shifu***'s architecture, features, application scenarios, and see how ***Shifu*** supports protocols.
-- [**Quick Hands On**](. /tutorials/): Try it out by installing ***Shifu*** on your computer.
-- [**User's Guide**](. /guides/): More detailed guides on how to use ***Shifu***.
-- [**Developer Documentation**](. /references/)
+- [**Project Introduction**](./introduction/): Learn about ***Shifu***'s architecture, features, application scenarios, and see how ***Shifu*** supports protocols.
+- [**Quick Hands On**](./tutorials/): Try it out by installing ***Shifu*** on your computer.
+- [**User's Guide**](./guides/): More detailed guides on how to use ***Shifu***.
+- [**Developer Documentation**](./references/)
     - ***Shifu*** architecture, features explained.
     - ***Shifu*** API reference.
-- [**Open Source Community**](. /community/): view frequently asked questions, get support, get to join the open source community and more.
+- [**Open Source Community**](./community/): view frequently asked questions, get support, get to join the open source community and more.
