@@ -1,8 +1,8 @@
 ---
-title: Remotely Calling Command Drive
+title: "Remote Call to Command Line Driver"
 sidebar_position: 0
 ---
 
-# Remotely Calling Command Drive
+# Remote Call to Command Line Driver
 
-If the device is communicating by directly calling the executable file in the driver from the command line, ***Shifu*** supports direct access to it and enables remote control of the device.
+If the device is communicating by calling the executable file in the driver directly from the command line, ***Shifu*** can integrate it directly and enable remote control of the device.

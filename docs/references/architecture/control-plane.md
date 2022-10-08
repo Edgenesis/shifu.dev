@@ -1,46 +1,47 @@
 ---
 title: Control Plane
-sidebar_position: 2
+sidebar_position: 1
 ---
-
+# Control Plane
 The main components of the ***Shifu*** control plane are ***shifuController*** and ***shifud***.
 
-### shifuController
+### ***shifuController***
 
 #### Introduction
 
-The ***shifuController*** is used to control a [Kubernetes CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) introduced by ***Shifu***, the ***edgeDevice***, which contains information about the physical device connected to ***Shifu***.
+***shifuController*** is used to control a custom [Kubernetes CRD](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/ custom-resource-definitions/) i.e. ***edgeDevice***, ***edgeDevice*** describes various information about the device connected to ***Shifu***.
 
-Each ***edgeDevice*** has two parts: `EdgeDeviceSpec` and `EdgeDevicePhase`.
+Each ***edgeDevice*** has two parts.
+`EdgeDeviceSpec` and `EdgeDevicePhase`.
 
-The `EdgeDeviceSpec` contains the basic information of the device, with the following 4 elements:
+`EdgeDeviceSpec` contains the basic information about the device. It has four elements.
 
-| Variable name | Variable type | Usage | Examples |
+| Variable Name | Variable Type | Purpose | Example |
 |--|--|--|--|
-| Sku        | string     | SKU name of device            | PLC, Hikvision camera |
-| Connection | Connection | Method of hardware connection | Ethernet, USB |
-| Address    | string     | Hardware address              | 192.168.0.1 |
-| Protocol   | Protocol   | Transfer protocol             | HTTP, MQTT, Socket...|
+| Sku | string | SKU name of the device | PLC, Hikvision camera |
+| Connection | Connection | Hardware connection type | Ethernet, USB |
+| Address | string | Hardware address | 192.168.0.1 |
+| Protocol | Protocol | Transmission protocol | HTTP, MQTT, Socket... |Protocol
 
-The `EdgeDevicePhase` defines the current state of the device:
+The `EdgeDevicePhase` defines the current state of the device.
 
-| State | Meaning |
+| Status | Meaning |
 |--|--|
-| Pending | Device recognized, but has not connected to ***Shifu***... |
-| Running | Device has connected to ***Shifu*** and is running... |
-| Failed  | Device failed to connect ***Shifu***... |
-| Unknown | Unknown state... |
+| `Pending` | The device has been identified, but access to ***Shifu*** is not yet complete... |--|--|
+| `Running` | The device has been successfully connected to ***Shifu*** and is running... | `Failed
+| `Failed` | Device access to ***Shifu*** has failed... | `Unknown
+| `Unknown` | Unknown status... | `Unknown` | Unknown status...
 
-#### Design Docs 
+#### Design Documentation
 
-If you are interested in the detailed design of ***shifuController***, please visit [***shifuController*** design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifuController.md) for further reading.
+If you are interested in the internal details of ***shifuController***, you can go to the [***shifuController*** design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design- shifuController-zh.md) for further reading.
 
 ### ***shifud***
 
 #### Introduction
 
-***shifud*** is a `DaemonSet` that runs on each Kubernetes node, primarily responsible for device discovery, verification, and updates.
+***shifud*** is a `DaemonSet` that runs on each Kubernetes node and is mainly responsible for device recognition, authentication and updates.
 
-#### Design Docs
+#### Design Documentation
 
-If you are interested in the detailed design of ***shifud***, please visit [***shifud*** design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud.md) for further reading.
+If you are interested in the internal details of ***shifud***, you can go to [***shifud*** Design Documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifud-zh.md) for further reading.

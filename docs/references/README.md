@@ -1,3 +1,3 @@
-# Reference Book
+# Developer Documentation
 
-There are detailed explanations of ***Shifu***'s architecture and functions in Reference Book. They are provided to help you understand ***Shifu*** more deeply. API is also provided for you to reference.
+The developer documentation includes a detailed explanation of the architecture and functionality for in-depth understanding of ***Shifu***, as well as the API for reference in case you are writing configuration files, etc.

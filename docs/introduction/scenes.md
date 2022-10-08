@@ -1,5 +1,5 @@
 ---
-title: Using Cases
+title: Application Scenarios
 sidebar_position: 2
 ---
 
@@ -15,6 +15,6 @@ sidebar_position: 2
 
 **Intelligent Supply Chain**
 
-***Shifu*** helps users to set up a transparent control layer under the current WMS, connecting all devices under the platform and breaking the current data barriers. ***Shifu*** also analyzes the equipment utilization rate and average task time, etc.
+***Shifu*** helps users to set up a transparent control layer under the current WMS, connecting all devices under the platform and breaking current data barriers. ***Shifu*** also analyzes the equipment utilization rate and average task time, etc.
 
 **……**

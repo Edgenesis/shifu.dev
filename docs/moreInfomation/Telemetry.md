@@ -1,33 +1,32 @@
 ---
-title: Telemetry In Shifu
+title: Telemetry in Shifu
 sidebar_position: 1
 ---
 
 # Telemetry
+Telemetry is enabled by default when installing *Shifu*, you can disable it before or after installation.
 
-Telemetry is enabled by default when you install Shifu, while you also have the option to disable it either before or after the installation.
-
-## Permissions for telemetry
-Shifu's telemetry module leverages Kubernetes' built-in `view` ClusterRole, as detailed in the [official Kubernetes documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles).
+## Permissions
+The telemetry module for *Shifu* take the advantage of Kubernetes' built-in `view` permission ClusterRole, as described in [official Kubernetes documentation](https://kubernetes.io/zh-cn/docs/reference/access-authn- authz/rbac/#user-facing-roles).
 
 Telemetry only allows read-only access to most objects, such as Pod basic information, Kubernetes information, and so on. It does not allow access to private information such as roles, secrets, etc., so you don't need to worry about privacy leaks.
 
 ## Data we collect
 
-- External network IP
+- Extranet IP
 - Download date
-- Kubernetes version
-- Shifu version
-- Kubernetes cluster size
-- Kubernetes Pod Name 
+- Kubernetes Versions
+- Shifu Version
+- Kubernetes Cluster Size
+- Kubernetes Pod Name
 - Kubernetes Deployment Name
-- The type of the operating system
+- Type of operating system
 
-## Setting
+## Settings
 
-You can modify telemetry interval by edit `--enable-telemetry` on `pkg/k8s/crd/install/shifu_install.yaml` manually.
+You can set the telemetry interval by setting `-pkg/k8s/crd/install/shifu_install.yaml` with `-telemetry-interval=60`.
 
-Or you can also edit via `kubectl edit deployment -n shifu-crd-system shifu-crd-controller-manager` after installation
+Or you can edit the deployment after installation with ``kubectl edit -n shifu-crd-system shifu-crd-controller-manager``.
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -42,13 +41,13 @@ spec:
       image: quay.io/brancz/kube-rbac-proxy:v0.12.0
       name: kube-rbac-proxy
       - args:
-        - --telemetry-interval=60 ## Edit this line
+        --telemetry-interval=60 ## Edit this line
 ```
-## To turn-off Telemetry
+## Turn off telemetry
 
-If you want to turn off temeletry, please delete `--enable-telemetry` on `pkg/k8s/crd/install/shifu_install.yaml` manually.
+To turn off telemetry, manually remove `--enable-telemetry` from `pkg/k8s/crd/install/shifu_install.yaml`.
 
-Or you can also edit via `kubectl edit deployment -n shifu-crd-system shifu-crd-controller-manager` after installation
+Or you can edit the deployment after installation with ``kubectl edit -n shifu-crd-system shifu-crd-controller-manager``.
 
 ```yaml
 apiVersion: apps/v1
@@ -64,5 +63,5 @@ spec:
       image: quay.io/brancz/kube-rbac-proxy:v0.12.0
       name: kube-rbac-proxy
       - args:
-        - --enable-telemetry ## delete on demand
+        --enable-telemetry ## Delete this line
 ```

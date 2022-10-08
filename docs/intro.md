@@ -2,37 +2,31 @@
 id: intro
 slug: /
 sidebar_position: 0
-title: Welcome
+title: 歡迎使用
 ---
 
-# Welcome to Shifu 
-
-<!-- ## 视频介绍
-
-<video width="100%" controls>
-    <source src="https://bianwuji.com/stuff/videos/productintro.mp4" type="video/mp4"></source>
-</video> -->
+# Welcome to ***Shifu***
 
 ## Introduction
- 
-***Shifu*** provides a transparent framework for customers to host all-in-one device management and integrated software development. ***Shifu*** makes it easier for developers to connect, monitor, and control any IoT(The Internet of things) device.
 
-***Shifu***'s innovative advantage is that it empowers devices with a thinking "digital brain" through digital twin technology within a transparent framework. The digital twin will reflect the real-time state of the device, so developers can operate the device through it. IoT devices plugged into ***Shifu*** will generate a standardized interface to enable Internet interaction, thus allowing for northbound data collection and southbound command control of all devices and machines under the scenario through the platform layer.
+***Shifu*** provides users with a transparent framework for full-scene device hosting and integrated software development. By using ***Shifu***, developers can connect, monitor and control any IoT device more simply. 
 
-***Shifu*** provides a bridged device interconnection solution with a micro-service architecture that makes device functionality modules invocable and reusable. The goal is to enable easy access to various heterogeneous devices through configuration files. ***Shifu*** has access to IoT devices via `HTTP`, `MQTT`, `TCP Socket`, `RTSP`, `OPC UA` ,and other protocols at present. It has also integrated devices communicating via private protocols such as `Siemens S7` and `HIKVISION`.
+The innovative advantage of ***Shifu*** is to enpower devices with a thinking "digital brain" through the digital twin technology within a transparent framework. The digital twin will reflect the real-time state of the device, and it is the same to operate on the digital twin and on the device itself. Standardized interfaces will be generated after IoT devices are integrated into ***Shifu***  for Internet interaction. ***Shifu*** can achieve northbound data collection and southbound command control for all devices in the scene through the platform layer. 
 
-As a cloud-native framework, ***Shifu*** extends the resources of `Kubernetes` through the `CRD function` to achieve high availability, static domain names, service management, etc. ***Shifu*** can support any form of configuration for any devices. When a physical device is connected, ***Shifu*** recognizes and launches that device's digital twin, ***deviceShifu***, as a `Kubernetes Pod`. By accessing ***deviceShifu***'s interface, developers can access all the features of an IoT device, program and define features that the device would not otherwise have.
+***Shifu*** provides a bridged device interconnection solution with a microservice architecture that makes device capability modules invocable and reusable, with the goal of achieving easy integration to various heterogeneous devices through configuration files. Currently, ***Shifu*** can access IoT devices via `HTTP`, `MQTT`, `TCP Socket`, `RTSP`, `OPC UA` and other protocols, and has integrated devices such as `Siemens S7` and `HIKVISION` which communicate via private protocols. 
 
-Cloud-native ***Shifu*** makes system operations and maintenance much easier, and application developers can manage operations and maintenance through a set of `Kubernetes` infrastructures. ***Shifu*** will drive `Kubernetes` to become the underlying architecture standard for IoT development, bringing container orchestration technology into the IoT software development ecosystem. 
+As a cloud-native framework, ***Shifu*** extends the resources of `Kubernetes` through its `CRD function` to achieve high availability, static domain names, service management, etc. ***Shifu*** supports any configuration for any device. When a physical device is integrated, ***Shifu*** recognizes and launches ***deviceShifu***, the digital twin of that device, as a `Kubernetes Pod`. By accessing ***deviceShifu***, developers can access all the features of an IoT device while programmatically defining features that the device is not endowed with. 
+
+Cloud-native ***Shifu*** makes system operations and maintenance much less difficult, and application developers can manage O&M through one set of `Kubernetes` infrastructure. ***Shifu*** will turn `Kubernetes` to the standard underlying architectural for IoT development, bring container orchestration technology to the IoT software development ecosystem.
 
 ## Contents
 
-Check contents at the left sidebar:
+You can select the content pf which you wish to view in the left sidebar at.
 
-- [**Product Introduction**](./introduction/): Learn about the architecture, functions, application scenarios of ***Shifu***. And check what protocols are supported by ***Shifu***.
-- [**Get Started**](./tutorials/): Install ***Shifu*** locally to try it out.
-- [**How-to Guides**](./guides/): Detailed guides for using ***Shifu***.
-- [**Reference Book**](./references/)
-    - ***Shifu*** architecture and functions.
+- [**Project Introduction**](. /introduction/): Learn about ***Shifu***'s architecture, features, application scenarios, and see how ***Shifu*** supports protocols.
+- [**Quick Hands On**](. /tutorials/): Try it out by installing ***Shifu*** on your computer.
+- [**User's Guide**](. /guides/): More detailed guides on how to use ***Shifu***.
+- [**Developer Documentation**](. /references/)
+    - ***Shifu*** architecture, features explained.
     - ***Shifu*** API reference.
-- [**Open Source Community**](./community/): View FAQs, get support, and join the open source community.
+- [**Open Source Community**](. /community/): view frequently asked questions, get support, get to join the open source community and more.
