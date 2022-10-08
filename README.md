@@ -89,6 +89,12 @@ A caution with title.
 - `caution`
 - `danger`
 
+### Images
+
+To add an image file in `docs`, you can directly add it at the same position with the markdown file. Or you can create a folder called `images` or `res` at the same level. To use these images in Markdown, use the **relative** path. Notice that images for `en` and `zh-Hans` are in different folders (eg. `/docs/images` and `/i18n/zh-Hans/docusaurus-plugin-content-docs/images`).
+
+To add an image file in `blog`, you should add the image file in `/static`. And in Markdown, you should use the **absolute** paths to refer to according images. Notice that images for `en` and `zh-Hans` are in the same folder (eg. `/static/blog1`).
+
 ## Markdown styles
 
 Check [***Shifu***'s Markdown styles](https://github.com/Edgenesis/shifu/blob/main/docs/contribution/markdown-zh.md).
