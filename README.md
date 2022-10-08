@@ -1,52 +1,71 @@
 # ***Shifu*** Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+## Development
 
-## Usage
+### Install tools (once)
 
-### Development
+You should have `node` and `yarn` installed on your computer. To install `node`, view <https://nodejs.org/en/download/>. To install `yarn`, use command `npm install --global yarn`.
+
+To check `node` and `yarn` are installed:
 
 ```sh
-$ yarn # install packages
+$ node --version
+v16.15.1
+$ yarn --version
+1.22.19
+```
 
+### Install dependencies (once)
 
+```sh
+$ yarn
+```
+
+### Local development
+
+Following commands start a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+```sh
 $ yarn start # en SPA
 $ yarn start --locale zh-Hans # zh-Hans SPA
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Deployment
 
-### Build
+Following commands generate static content into the `build` directory and can be served using any static contents hosting service.
 
 ```sh
-$ yarn build # en and zh-Hans
-$ yarn run serve
+$ yarn build # build for en and zh-Hans
+$ yarn serve
 
-# build SPA of a specific language
+# build for a specific language
 $ yarn build --locale en
 $ yarn build --locale zh-Hans
-$ yarn run serve
+$ yarn serve
 ```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```sh
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```sh
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
 ## Docusaurus
+
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+
+### Internationalization
+
+Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
+
+- Translate React pages
+    - Check https://docusaurus.io/docs/i18n/tutorial#translate-your-react-code
+- Translate docs
+    - Copy and translate docs in `i18n/zh-Hans/docusaurus-plugin-content-docs/current`.
+- Translate blog
+    - `blog`: Put the translated markdowns in `i18n/zh-Hans/docusaurus-plugin-content-blog`.
+    - `blog-tech`: Put the translated markdowns in `i18n/zh-Hans/docusaurus-plugin-content-blog-blog-tech`.
+- Translate plugin data
+    - Run `yarn write-translations --locale zh-Hans` to generate json files for translating.
+    - Translate
+        - sidebar items: `i18n/zh-Hans/docusaurus-plugin-content-docs/current/current.json`
+        - navbar and footer items: `i18n/zh-Hans/docusaurus-theme-classic/*.json`
+- Check translation
+    - Run `yarn start --locale zh-Hans` to start website in `zh-Hans` for local development. (Each locale is a distinct standalone single-page application: it is not possible to start the Docusaurus sites in all locales at the same time.)
 
 ### Admonition
 
@@ -70,18 +89,6 @@ A caution with title.
 - `caution`
 - `danger`
 
-### Internationalization
+## Markdown styles
 
-Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
-
-- Translate React pages
-    - Check https://docusaurus.io/docs/i18n/tutorial#translate-your-react-code
-- Translate docs
-    - Copy and translate docs in `i18n/zh-Hans/docusaurus-plugin-content-docs/current`.
-- Translate plugin data
-    - Run `yarn run write-translations --locale zh-Hans` to generate json files for translating.
-    - Translate
-        - sidebar items: `i18n/zh-Hans/docusaurus-plugin-content-docs/current/current.json`
-        - navbar and footer items: `i18n/zh-Hans/docusaurus-theme-classic/*.json`
-- Check translation
-    - Run `yarn start --locale zh-Hans` to start website in `zh-Hans` for local development. (Each locale is a distinct standalone single-page application: it is not possible to start the Docusaurus sites in all locales at the same time.)
+Check [***Shifu***'s Markdown styles](https://github.com/Edgenesis/shifu/blob/main/docs/contribution/markdown-zh.md).
