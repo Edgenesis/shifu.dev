@@ -26,5 +26,9 @@
   "item.label.Technical Blog": {
     "message": "Technical Blog",
     "description": "Navbar item with label Technical Blog"
+  },
+  "item.label.Case Studies": {
+    "message": "Case Studies",
+    "description": "Navbar item with label Case Studies"
   }
 }

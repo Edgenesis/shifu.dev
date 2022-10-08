@@ -43,6 +43,14 @@ const config = {
         routeBasePath: 'blog-tech',
         path: './blog-tech',
       },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'blog-cases',
+        routeBasePath: 'blog-cases',
+        path: './blog-cases',
+      },
     ]
   ],
 
@@ -79,7 +87,7 @@ const config = {
         },
         blog: {
           routeBasePath: '/blog-news',
-          blogSidebarTitle: 'Recent blogs',
+          blogSidebarTitle: 'Recent posts',
           blogSidebarCount: 'ALL',
         },
         theme: {
@@ -114,6 +122,11 @@ const config = {
             to: '/blog-tech', 
             position: 'left',
             label: 'Technical Blog', 
+          },
+          {
+            to: '/blog-cases', 
+            position: 'left',
+            label: 'Case Studies', 
           },
           {
             href: '/disclaimer',
