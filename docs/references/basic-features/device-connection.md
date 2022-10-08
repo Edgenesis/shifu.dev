@@ -1,15 +1,15 @@
 ---
-title: Device Integration
+title: Device Access
 sidebar_position: 1
 ---
 
 # Device Integration
 
-## Modify the configuration of device for integration
+## Modify the Configuration of Device Integration
 
 ### 1. Edit the `edgedevice.yaml` file
 
-Before accessing the device, you need to edit the `edgedevice.yaml` file. For different protocols, `protocolSettings` can be further configured according to the protocol. Please go to [Shifu API reference](references/api/edgedevice.md#protocolsettings) for detailed configuration.
+Before integrating the device, you need to edit the `edgedevice.yaml` file. ``protocolSettings`` can be further configured according to different protocols, please go to [Shifu API Reference](references/api/edgedevice.md#protocolsettings) for detailed configuration.
 
 ```yaml  
 ...
@@ -21,22 +21,22 @@ protocolSettings:
 ...
 ```
 
-- `connection`: how the device is connected to the network.
-- `address`: network address of the device.
-- `protocol`: communication protocol that interacts with a device.
-- `protocolSettings`: next Setting for the protocol, and [different settings](references/api/edgedevice.md#protocolsettings) need to be introduced for different protocols.
+- `connection`: Indicates the network connection method of the device.
+- `address`: Indicates the network address of the device.
+- `protocol`: indicates the communication protocol to interact with the device.
+- `protocolSettings`: indicates the next settings for the protocol, for different protocols you need to introduce [different `Setting`] (references/api/edgedevice.md#protocolsettings).
 
 ### 2. Create ***deviceshifu***
 
-After modifying the documents above, it is ready to create ***deviceshifu***, ***deviceshifu*** will connect with the devices via configuration.
+After modifying the above files, you can create ***deviceshifu***, which will try to connect to your device with the configuration you have set.
 
-### 3. Test the state of the equipment
+### 3. Detecting Device Access Status
 
-If you find that the ***deviceshifu*** status is `Error` or `CrashLoopBackOff` through the command `kubectl get pods -n deviceshifu`, it means that the connection is abnormal.
+If you find an `Error` or `CrashLoopBackOff` in ***deviceshifu*** status through the command `kubectl get pods -n deviceshifu`, it means that the connection is abnormal.
 
-You can also print error messages through the command `kubectl logs <NAME> -n deviceshifu`.
+You can also print error messages with the command `kubectl logs <NAME> -n deviceshifu`.
 
-## Integrate an OPC UA Device by Configuration
+## Configure to Access an OPC UA Device
 
 ```yaml
 connection: Ethernet  
@@ -51,6 +51,6 @@ protocolSettings:
     Password: pwd1
 ```
 
-Through the above configuration, set address to the `address` of your OPC UA device, set protocol to `OPC UA`, add `protocolSetting` to `OPCUASetting`, and configure `SecurityMode` (information security mode), `ConnectionTimeoutInMilliseconds` (connection timeout limit), `AuthenticationMode` (authentication default) and account password Wait.
+With the above configuration, set `address` to the address of your OPC UA device, `protocol` to `OPC UA`, `protocolSetting` to `OPCUASetting`, and configure `SecurityMode`, ` ConnectionTimeoutInMilliseconds`, `AuthenticationMode`, and account password.  
 
-After modifying the above configuration, create ***deviceshifu*** to access the OPC UA device.
+After modifying the configuration above, you can now create a ***deviceshifu*** to access the OPC UA device.

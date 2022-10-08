@@ -2,16 +2,14 @@
 title: Data Plane
 sidebar_position: 2
 ---
-
+# Data Plane
 The main component of the ***Shifu*** data plane is ***deviceShifu***.
 
-### ***deviceShifu***
+### Introduction
 
-#### Introduction
+***deviceShifu*** is the core of ***Shifu*** framework and the part where developers should pay most attention to. ***deviceShifu*** takes the form of a `Kubernetes Pod`, a digital representation or digital twin of a physical device.
 
-***deviceShifu*** is the core of ***Shifu*** Framework and the part that developers care about the most. ***deviceShifu*** takes the form of a `Kubernetes Pod`, a digital representation or digital twin of a physical device.
-
-Each ***deviceShifu*** is associated with one or more physical devices. Users can interact with physical devices by interacting with ***deviceShifu***.
+Each ***deviceShifu*** is associated with one or more physical devices. Users can interact with physical devices through ***deviceShifu***.
 
 **Southbound** - ***deviceShifu*** interacts with IoT devices, translating and sending user requests to the device through a protocol gateway or device driver.
 
@@ -24,7 +22,7 @@ Each ***deviceShifu*** is associated with one or more physical devices. Users ca
     sg-ds<-->ed[IoT device]
 ```
 
-**Northbound** - ***deviceShifu*** converts the collected device data via HTTP protocol (gRPC protocol is not supported yet) and sends it to the client.
+**Northbound** - ***deviceShifu*** converts collected device data via HTTP protocol (gRPC protocol is not supported yet) and sends it to the client.
 
 ```mermaid
     flowchart BT
@@ -35,6 +33,6 @@ Each ***deviceShifu*** is associated with one or more physical devices. Users ca
     sg-ds<-->ua[User application]
 ```
 
-#### Design Docs
+### Design Docs
 
 If you are interested in the detailed design of ***deviceShifu***, you can visit the [***deviceShifu*** design documentation](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-deviceShifu.md) for further reading.

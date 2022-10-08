@@ -1,17 +1,17 @@
 ---
-title: Data Acquisition
+title: Data Collection
 sidebar_position: 3
 ---
 
-# Data Acquisition
+# Data Collection
 
-If communication is through HTTP/gRPC in *Shifu*, ***deviceShifu*** will convert the request into the form of the supported device protocol and send it to the device. 
+We can communicate with ***deviceShifu*** via HTTP/gRPC. ***deviceShifu*** will convert the request we send into the form of the protocol supported by the device and send it to the device.
 
-When the device receives the command, the data will be transmitted to ***deviceShifu***, and then ***deviceShifu*** will return the data as the return value of our request, thereby realizing data collection.
+When the device receives the command, the data will be transferred to ***deviceShifu***, after that ***deviceShifu*** will return the data as the return value of our request, thus realizing the data acquisition.
 
-## Automated data collection
+## Automated Data Collection
 
-1. First, write the following program to automatically collect data. This program is used to collect real-time data from the previously running `edgedevice-thermometer`, analyze and output the temperature data. The program can be written in any language, in any form. The data will be stored in the database, or in a file.
+1. First, we can write the following program to automate data acquisition. This program is used to perform real-time data acquisition on the previously running `edgedevice-thermometer` device, parse the temperature data and output it. The program can be written in any language and in any form, and you can store the data in your database or in a file.
    ```go
    package main  
    
@@ -37,42 +37,42 @@ When the device receives the command, the data will be transmitted to ***deviceS
          } else {
             log.Println("Low temperature:", temperature)
          }
-         res.Body.Close()
-         time.Sleep(2 * time.Second)
+         Body.Close()
+         Time.Sleep(2 * time.Second)
       }
    }
    ```
 2. Use `go mod init high-temperature-detector` to generate the `go.mod` file.
-3. The above program can be packaged into a `docker image` and loaded into the cluster so that it can better communicate with ***deviceShifu***. Create the following `Dockerfile`:
+3. For the above program, we can package it as a `docker image` and load it into the cluster so that it can better communicate with ***deviceShifu***. Create the following ``Dockerfile`` file.
    ```dockerfile
    # syntax=docker/dockerfile:1  
    
    FROM golang:1.17-alpine  
    WORKDIR /app  
-   COPY go.mod ./  
+   COPY go.mod . /  
    RUN go mod download  
-   COPY *.go ./  
+   COPY *.go . /RUN  
    RUN go build -o /high-temperature-detector  
    EXPOSE 11111  
    CMD [ "/high-temperature-detector" ]
    ```
-4. To generate a `docker image` using the `Dockerfile`, run the following commands:
+4. To generate a ``docker image`` using the ``Dockerfile`` file, execute the following command.
    ```bash
    docker build --tag high-temperature-detector:v0.0.1
-   ```
-5. Then load the `docker image` into the cluster by run the following command:
+   ``` 5.
+After that we load the `docker image` into the cluster with the following command.
    ```bash
    kind load docker-image high-temperature-detector:v0.0.1
    ```
-6. To run the data acquisition program, run the following commands:
+6. To run the data acquisition program we wrote, run the following command.
    ```bash
    kubectl run high-temperature-detector --image=high-temperature-detector:v0.0.1
    ```
-7. Finally, to check program's log information to get the data, run the following command::
+7. Finally, to view the logs of the program and get the data, we need to execute the following command:
    ```bash
    kubectl run high-temperature-detector --image=high-temperature-detector:v0.0.1
    ```
-   The results of the data obtained are as follows:
+   The result of the data obtained is as follows.
    ```bash
    2021/10/18 10:35:35 High temperature: 24  
    2021/10/18 10:35:37 High temperature: 23  

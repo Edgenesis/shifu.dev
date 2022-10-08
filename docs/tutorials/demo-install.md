@@ -10,13 +10,13 @@ import TabItem from '@theme/TabItem';
 
 ## Install Docker Desktop
 
-To try out ***Shifu*** on your personal computer, you need to install `Docker Desktop` first.
+To install and experience ***Shifu*** locally, you need to install `Docker Desktop` first.
 
-:::INFO
-***Shifu*** uses virtualized container technology `Docker` to convert each physical device (***edgeDevice***) to a digital twin (***deviceShifu***).
+:::info
+***Shifu*** uses container technology `Docker` to turn every actual physical device (***edgeDevice***) into a digital twin (***deviceShifu***).
 :::
 
-Select your OS to check the corresponding method to install `Docker Desktop`:
+Please select your computer OS to see the corresponding `Docker Desktop` installation.
 
 <Tabs groupId="operating-systems">
 <TabItem value="win" label="Windows(WSL)">
@@ -24,12 +24,12 @@ Select your OS to check the corresponding method to install `Docker Desktop`:
 **0. Install WSL**
 
 :::tip
-If you have a `Linux virtual machine` and want to try ***Shifu*** in it, you can click the button above to switch to `Linux`.
+If you have a `Linux virtual machine` in `VMware` and plan to experience ***Shifu*** in the virtual machine, you can switch to `Linux` by clicking the button above.
 :::
 
-It is required that the version of your Windows is higher than `Windows 10` (version 2004 or higher) or `Windows 11`.
+Your `Windows` needs to be `Windows 10` (version 2004 and later) or `Windows 11`.
 
-You need to open `PowerShell` or `Windows CMD` to enter the following command, and then restart the computer to install the WSL.
+You will need to enter the following command in the administrator `PowerShell` or `Windows Command Prompt` and then **restart your computer** to install everything you need to run the Windows Subsystem (WSL) for Linux.
 
 ```
 wsl --install
@@ -41,9 +41,9 @@ If you [encounter problems during setup](https://answers.microsoft.com/en-us/mso
 
 [Click here to download Docker Desktop](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
 
-**2. Open Docker Desktop, and keep it running**
+**2. Open Docker Desktop and keep it running**
 
-**3. Confirm Docker is running**
+**3. Make sure Docker is running smoothly**
 
 Please open `Ubuntu` or other `Linux distribution` you have installed in the start menu and execute the following command:
 
@@ -52,7 +52,7 @@ sudo docker ps
 ```
 
 :::note
-You may need to enter the administrator password, the password will not be displayed on the screen when you enter the password, just hit enter when you are finished.
+You may need to enter the administrator password, which will not appear on the screen when you enter it, just hit enter when you are done
 :::
 
 </TabItem>
@@ -65,9 +65,9 @@ You may need to enter the administrator password, the password will not be displ
 | `M1/M2` | [Click here to download installer](https://desktop.docker.com/mac/main/arm64/Docker.dmg) |
 | `Intel` | [Click here to download installer](https://desktop.docker.com/mac/main/amd64/Docker.dmg) |
 
-**2. Open Docker Desktop, and keep it running**
+**2. Open Docker Desktop and keep it running**
 
-**3. Confirm Docker is running**
+**3. Make sure Docker is running smoothly**
 
 Please open Terminal and execute the following command:
 
@@ -82,9 +82,9 @@ sudo docker ps
 
 [Click here to install Docker Desktop on Linux](https://docs.docker.com/desktop/install/linux-install/)
 
-**2. Open Docker Desktop, and keep it running**
+**2. Open Docker Desktop and keep it running**
 
-**3. Confirm Docker is running**
+**3. Make sure Docker is running smoothly**
 
 Please open Terminal and execute the following command:
 
@@ -103,27 +103,28 @@ If the output is `Cannot connect to the Docker daemon at unix:///var/run/docker.
 
 ## Install ***Shifu***
 
-Please visit [**Download Shifu Demo**](https://shifu.run/disclaimer) to download ***Shifu*** installer and install ***Shifu***.
+Go to [**Shifu Demo Download**](https://shifu.run/disclaimer) to download the ***Shifu*** installation package and follow the instructions on the website to install it.
 
-Skip to the second step of the page and after completing its process, return to this page.
+Go directly to the second step in the page and return to this page when you are done.
 
-After installation is done, ***Shifu*** will be launched with `Docker`.
+After the installation is complete ***Shifu*** will be started along with `Docker` when it is run.
 
-:::INFO
-The ***Shifu*** installer contains:
+:::info
+The ***Shifu*** installation package contains the following.
 
-- `kind` to create a cluster on your computer
-- all images needed when running ***Shifu***
-- installing scripts of ***Shifu***
+- `kind` for local creation of test clusters
+- ***Shifu*** All the images needed for operation
+- Installation script for ***Shifu***
 
-You don't need to know about the details of ***Shifu***. By using ***Shifu*** installer, you can try ***Shifu*** easily.
+You don't need to know the details of how ***Shifu*** works, you can easily experience ***Shifu*** with the ***Shifu*** installer.
 
-If you want to create the cluster, import images, and install ***Shifu***, please check [Development Installation](guides/install-shifu-dev.md)
+If you wish to manually create clusters, import images, and install ***Shifu***, please see the [native test installation](guides/install-shifu-dev.md).
 :::
+
 
 ### Confirm ***Shifu*** is running
 
-Use the following command to view the results:
+Use the following command to see how it runs.
 
 ```bash
 sudo kubectl get pods -A
@@ -133,10 +134,10 @@ sudo kubectl get pods -A
 
 If all "STATUS" is `Running`, ***Shifu*** is started:
 
-:::INFO
-The command `kubectl get pods -A` can view all running `Pod`s in the cluster. (You can see a `Pod` as an application or a process.)
+:::info
+The `kubectl get pods -A` command allows you to see all running `Pods` in the cluster (you can simply think of a `Pod` as an application or a process).
 
-Developers find that under the NAMESPACE `shifu-crd-system`, the controller ***shifuController*** is running now; under the NAMESPACE `deviceshifu`, the digital twin of the AVG device, ***deviceShifu***, is already running.
+You can see that under NAMESPACE `shifu-crd-system`, the controller ***shifuController*** is running; under NAMESPACE `deviceshifu`, there is already an AGV device corresponding to the ***deviceShifu*** digital twin running.
 :::
 
 ![](./images-cluster/cluster-1-en.png)

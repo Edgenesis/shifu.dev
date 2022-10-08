@@ -1,15 +1,15 @@
 --- 
-title: Basic Structure
+title: Basic architecture
 sidebar_position: 0
 --- 
 
-# Basic Structure
+# Basic Architecture
 
-***Shifu*** is a native [Kubernetes](https://kubernetes.io/) platform with all its components running as [Pods](https://kubernetes.io/docs/concepts/workloads/pods/).
+***Shifu*** is a [Kubernetes](https://kubernetes.io/) native platform with all its components running as [Pods](https://kubernetes.io/docs/concepts/workloads/pods/).
 
-This article is an introduction to the ***Shifu*** architecture. If you are interested in the architectural design of ***Shifu***, please go to [desing-shifu](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu.md) for the specific details.
+This article is an introduction of the ***Shifu*** architecture. If you are interested in the architecture of ***Shifu***, you can go to [desing-shifu](https://github.com/Edgenesis/shifu/blob/main/docs/design/design-shifu.md design-shifu.md) to see the specific details.
 
-The following diagram illustrates the ***Shifu*** architecture：
+The following diagram illustrates the ***Shifu*** architecture.
 
 ```mermaid
 flowchart BT
@@ -59,11 +59,11 @@ flowchart BT
   sg-pg<-->sg-dp
 ```
 
-**Note: IoT devices and protocols within the schematic are not limited to the types that appear in the diagram. ***Shifu*** is extremely scalable and compatible with all IoT devices that interact via protocols or drivers.**
+**Note: The IoT devices within the schematic and the protocols are not limited to the types that appear in the diagram. *Shifu* is extremely scalable and compatible with all IoT devices that communicate via protocols or drivers. **
 
-## Interaction
+## Communication
 
-The relationship between ***Shifu*** and applications and devices can be represented by the following diagram:
+The relationship between ***Shifu*** and applications and devices can be represented by the following diagram.
 
 ```mermaid
 flowchart LR;
@@ -71,12 +71,12 @@ flowchart LR;
   Shifu<-->|IoT Protocols/drivers|Devices;
 ```
 
-### Interaction between ***Shifu*** and devices
+### Communication with devices
 
-***Shifu*** is compatible with different communication protocols and drivers all at once, and it unifies different forms of requests from different devices, makes it easier for users to use the devices. Meanwhile, the number of protocols and drivers compatible with ***Shifu*** is growing.
+***Shifu*** can be compatible with different communication protocols and drivers at the same time. It unifies different forms of requests from different devices, making it simpler for users to use the devices. Also, the number of protocols and drivers that ***Shifu*** is compatible with continues to grow.
 
-### Interaction between ***Shifu*** and applications
+### ***Shifu*** communication with applications
 
-***Shifu*** can interact with applications via `HTTP` protocol (gRPC protocol not yet supported). 
+***Shifu*** can communicate with applications developed by developers via the `HTTP` protocol (the gRPC protocol is not yet supported). It makes it as easy as developing a software for developers to develop IoT scenarios.
 
-In other words, the control and data collection of devices are hosted by ***Shifu*** and exposed as unified type of interfaces, so that interaction between multiple devices can be achieved by using the same type of APIs.
+In other words, the control and information reading of devices are hosted by ***Shifu*** and exposed as a unified type of interface, so that communication to multiple devices can be achieved by using the same type of API.
