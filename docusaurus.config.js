@@ -35,7 +35,7 @@ const config = {
         analyticsId: '3123fa51e13a507dfc99a606fc329c52'
       }
     ],
-    // './plugin/plugin-redirect.js',
+    './plugin/plugin-redirect.js',
   ],
 
   themes: [
