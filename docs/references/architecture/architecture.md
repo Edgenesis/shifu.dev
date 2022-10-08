@@ -73,7 +73,7 @@ flowchart LR;
 
 ### Communication with devices
 
-***Shifu*** can be compatible with different [communication protocols](intro/support.md) and [drivers](intro/support.md) at the same time. It unifies different forms of requests from different devices, making it simpler for users to use the devices. Also, the number of protocols and drivers that ***Shifu*** is compatible with continues to grow.
+***Shifu*** can be compatible with different communication protocols and drivers at the same time. It unifies different forms of requests from different devices, making it simpler for users to use the devices. Also, the number of protocols and drivers that ***Shifu*** is compatible with continues to grow.
 
 ### ***Shifu*** communication with applications
 
