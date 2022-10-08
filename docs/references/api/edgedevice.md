@@ -73,11 +73,12 @@ Settings of EdgeDevice connection protocol.
     - **ConnectionTimeoutInMilliseconds** (int64)
       requested connection milliseconds for OPC UA, e.g. `1000`.
   - **SocketSetting** (SocketSetting)
-    - **Encoding** (string)
-      encoding of the socket connection, which has to be `utf-8` (for now).
+    - **encoding** (string)
+      encoding of the socket connection, optionally `utf-8` or `hex`, the default value is `utf-8`.
     - **NetworkType** (string)
       protocol of the socket link, which has to be `tcp` (for now).
-
+    - **bufferLength** (int)
+      buffer size of the socket when transferring data, the default value is 1024.
 ### CustomMetadata
 
 Additional information about the EdgeDevice.
