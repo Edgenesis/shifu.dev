@@ -15,7 +15,7 @@ sidebar_position: 4
 
 
 :::tip
-如果您的PLC设备不为`192.168.0.1`可以将`deviceshifu-plc-deployment.yaml`文件中的`PLC_ADDRESS`改成您的设备的IP)
+如果您的PLC设备不为`192.168.0.1`可以将`deviceshifu-plc4x-deployment.yaml`文件中的`PLC_ADDRESS`改成您的设备的IP)
 :::
 
 ### *第2步*
