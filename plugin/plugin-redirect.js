@@ -20,7 +20,7 @@ module.exports = function (context, options) {
               }
             }
           }, 100)
-            let manually= localStorage.getItem('manually')
+            let manually= localStorage.getItem('manuallySelectLanguage')
             console.log(manually)
             if(lang[0]== 'zh-CN' && href.indexOf('/zh-Hans') == -1 && !manually)
       {
