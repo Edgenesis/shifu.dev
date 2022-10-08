@@ -207,7 +207,7 @@ export default function SnowBg(props) {
         <div className={styles.snow}></div>
       </div>
       {props.children}
-      <div className={styles.footer}></div>
+      <div className={styles.footer}><svg t="1665223212565" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7861" link="http://www.w3.org/1999/xlink" width="48" height="48"><path d="M854.016 739.328l-313.344-309.248-313.344 309.248q-14.336 14.336-32.768 21.504t-37.376 7.168-36.864-7.168-32.256-21.504q-29.696-28.672-29.696-68.608t29.696-68.608l376.832-373.76q14.336-14.336 34.304-22.528t40.448-9.216 39.424 5.12 31.232 20.48l382.976 379.904q28.672 28.672 28.672 68.608t-28.672 68.608q-14.336 14.336-32.768 21.504t-37.376 7.168-36.864-7.168-32.256-21.504z" p-id="7862"></path></svg></div>
     </div>
   );
 }
