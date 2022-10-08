@@ -25,22 +25,21 @@ module.exports = function (context, options) {
             let elements = document.querySelectorAll('.dropdown__link')
             console.log(elements);
             for(let elem of elements) {
-              console.log(elem, elem.href);
-              elem.href += '?manually=true'
+              elem.onclick=function(){
+                localStorage.setItem('manuallySelectLanguage',true)
+              }
             }
           }, 100)
-            let manually= localStorage.getItem('manually')
+            let manually= localStorage.getItem('manuallySelectLanguage')
             console.log(manually)
-            console.log(document.html.className)
-            document.html.classList.add('CN');    
             if(lang[0]== 'zh-CN' && href.indexOf('/zh-Hans') == -1 && !manually)
       {
         console.log('切换到汉语');
         document.location.href = href.replace(\`\${host}\`, \`\${host}/zh-Hans\`) + ''
       }
-      if(lang[0]!= 'zh-CN' && href.indexOf('/zh-Hans') != -1 && href.indexOf('manually=true') == -1)
+      if(lang[0]!= 'zh-CN' && href.indexOf('/zh-Hans') != -1 &&  !manually)
       {
-        console.log('切换到英语');
+        console.log('changed into English');
         console.log(href.split('/zh-Hans').join(''));
         document.location.href = href.split('/zh-Hans').join('')
       }

@@ -36,6 +36,14 @@ const config = {
       }
     ],
     './plugin/plugin-redirect.js',
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'blog-tech',
+        routeBasePath: 'blog-tech',
+        path: './blog-tech',
+      },
+    ]
   ],
 
   themes: [
@@ -70,8 +78,8 @@ const config = {
             'https://github.com/edgenesis/shifu-docs-docusaurus/tree/main/',
         },
         blog: {
-          routeBasePath: '/blog',
-          blogSidebarTitle: 'All blogs',
+          routeBasePath: '/blog-news',
+          blogSidebarTitle: 'Recent blogs',
           blogSidebarCount: 'ALL',
         },
         theme: {
@@ -98,9 +106,14 @@ const config = {
             label: 'Docs',
           },
           {
-            to: '/blog', 
+            to: '/blog-news', 
             position: 'left',
-            label: 'Blog', 
+            label: 'News', 
+          },
+          {
+            to: '/blog-tech', 
+            position: 'left',
+            label: 'Technical Blog', 
           },
           {
             href: '/disclaimer',

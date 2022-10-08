@@ -18,5 +18,13 @@
   "item.label.Download Demo": {
     "message": "下载 Demo",
     "description": "Navbar item with label Download Demo"
+  },
+  "item.label.News": {
+    "message": "News",
+    "description": "Navbar item with label News"
+  },
+  "item.label.Technical Blog": {
+    "message": "Technical Blog",
+    "description": "Navbar item with label Technical Blog"
   }
 }
