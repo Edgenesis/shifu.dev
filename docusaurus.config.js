@@ -123,6 +123,7 @@ const config = {
           {
             type: 'localeDropdown',
             position: 'right',
+            className:'langDropdown'
           },
           {
             href: 'https://github.com/edgenesis/shifu',
