@@ -1,7 +1,5 @@
 # How EquipTalk Empowers Launch Vehicles with Shifu
 
-**EquipTalk X Shifu**
-
 EquipTalk Ltd. is dedicated to develope software-defined high-end equipments, use aerospace measurement technology to build the next-generation digital base for high-end equipments, build the mapping engine of the virtual and real world of high-end equipment, and empower equipment in all aspects. 
 
 As EquipTalk's data base, ***Shifu*** spares EquipTalk developers the need to develop the underlying infrastructure and device abstraction layer, transforming traditional IoT application development into simple web development, greatly improving the efficiency, quality and reusability of IoT application development. 
@@ -14,10 +12,10 @@ EquipTalk mainly serves the manufacturers and users of high-end complex equipmen
 
 ## Objectives
 
-1. to achieve the integration of measurement, control and management of high-end equipment 
-2. to improve system availability to 99.9999% 
+1. achieve the integration of measurement, control and management of high-end equipment 
+2. improve system availability to 99.9999% 
 3. decouple hardware and software, significantly increase the software iteration speed 
-4. Ensure full-link network security 
+4. ensure full-link network security 
 
 ## Required Equipment
 
@@ -27,15 +25,15 @@ Generalized and modularized rocket rapid test equipment (four models)
 
 **EquipTalk data control platform**
 
-! [](/blog-cases-equiptalk/1.png)
+![](/blog-cases-equiptalk/1.png)
 
-! [](/blog-cases-equiptalk/2.png)
+![](/blog-cases-equiptalk/2.png)
 
-! [](/blog-cases-equiptalk/3.png)
+![](/blog-cases-equiptalk/3.png)
 
 **EquipTalk's overall architecture diagram**
 
-! [](/blog-cases-equiptalk/4.png)
+![](/blog-cases-equiptalk/4.png)
 
 ## What Shifu Provides
 
@@ -47,15 +45,15 @@ Generalized and modularized rocket rapid test equipment (four models)
 
 **Overall architecture diagram**
 
-! [](/blog-cases-equiptalk/5.png)
+![](/blog-cases-equiptalk/5.png)
 
 If we take out only the architecture related to the D91DY power supply, we have **the following schematic**
 
-! [](/blog-cases-equiptalk/6.png)
+![](/blog-cases-equiptalk/6.png)
 
 The following diagram shows the interaction between **EquipTalk and Shifu**
 
-! [](/blog-cases-equiptalk/7.png)
+![](/blog-cases-equiptalk/7.png)
 
 ## Final result
 
@@ -63,11 +61,8 @@ The following diagram shows the interaction between **EquipTalk and Shifu**
 2. 200% increase in application development efficiency with ***Shifu***'s application development module 
 3. Increase overall system availability to 99.9999% with ***Shifu***'s system operation and maintenance module 
 
-! [](/blog-cases-equiptalk/8.png)
+![](/blog-cases-equiptalk/8.png)
 
 ## Summary
 
 This paper introduces the joint solution of EquipTalk and ***Shifu***. The solution has successfully empowered high-end equipment, including Long March rockets, created customized measurement and control equipment for customers. The solution bears the characteristics of rapid deployment and flexible configuration, helping enterprises to reduce costs and increase efficiency. The solution uses distributed wireless communication to shed off the shackles of cables, using central measurement and control that is more efficient and stable. The solution uses massive data to extend digital applications including life-cycle health management and digital twin. The joint solution significantly improves the efficiency of development, production and operation and maintenance.
-
-
-
