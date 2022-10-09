@@ -1,4 +1,4 @@
-# Project Introduction
+# Introduction
 
 ***Shifu*** ([GitHub Repository](https://github.com/Edgenesis/shifu)) is an open source platform for IoT development and management based on [Kubernetes](https://kubernetes.io/). Developers can connect, monitor and control any IoT device more simply through ***Shifu***.
 

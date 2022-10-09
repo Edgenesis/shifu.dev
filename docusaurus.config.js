@@ -39,24 +39,30 @@ const config = {
     [
       '@docusaurus/plugin-content-blog',
       {
-        id: 'blog-tech',
-        routeBasePath: 'blog-tech',
+        id: 'news',
+        routeBasePath: 'news',
+        path: './blog-news',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'technical-blogs',
+        routeBasePath: 'technical-blogs',
         path: './blog-tech',
       },
     ],
     [
       '@docusaurus/plugin-content-blog',
       {
-        id: 'blog-cases',
-        routeBasePath: 'blog-cases',
+        id: 'case-studies',
+        routeBasePath: 'case-studies',
         path: './blog-cases',
       },
     ]
   ],
 
   themes: [
-    // ... Your other themes.
-
     // search
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -77,18 +83,10 @@ const config = {
         docs: {
           remarkPlugins: [require('mdx-mermaid')],
           sidebarPath: require.resolve('./sidebars.js'),
-          // make sidebar expandable
-          sidebarCollapsible: true,
+          sidebarCollapsible: true, // make sidebar expandable
           routeBasePath: '/docs',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/edgenesis/shifu-docs-docusaurus/tree/main/',
-        },
-        blog: {
-          routeBasePath: '/blog-news',
-          blogSidebarTitle: 'Recent posts',
-          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -114,19 +112,19 @@ const config = {
             label: 'Docs',
           },
           {
-            to: '/blog-news', 
+            to: '/case-studies',
             position: 'left',
-            label: 'News', 
+            label: 'Case Studies',
           },
           {
-            to: '/blog-tech', 
+            to: '/news',
             position: 'left',
-            label: 'Technical Blog', 
+            label: 'News',
           },
           {
-            to: '/blog-cases', 
+            to: '/technical-blogs',
             position: 'left',
-            label: 'Case Studies', 
+            label: 'Technical Blog',
           },
           {
             href: '/disclaimer',
@@ -136,7 +134,7 @@ const config = {
           {
             type: 'localeDropdown',
             position: 'right',
-            className:'langDropdown'
+            className: 'langDropdown'
           },
           {
             href: 'https://github.com/edgenesis/shifu',
@@ -155,15 +153,30 @@ const config = {
                 label: 'Get Started',
                 to: '/docs/tutorials',
               },
+              {
+                label: 'How-to guides',
+                to: '/docs/guides',
+              },
+              {
+                label: 'References',
+                to: '/docs/references',
+              },
             ],
           },
           {
             title: 'Community',
             items: [
               {
-                label: 'Coming soon...',
-                to: '/docs',
-                // href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Twitter',
+                href: 'https://twitter.com/ShifuFramework',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/7yXmbQm8ns',
+              },
+              {
+                label: 'Reddit',
+                href: 'https://www.reddit.com/user/ShifuFramework/',
               },
             ],
           },

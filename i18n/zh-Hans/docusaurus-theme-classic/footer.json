@@ -30,5 +30,25 @@
   "link.item.label.Download Demo": {
     "message": "下载 Demo",
     "description": "The label of footer link with label=Download Demo linking to /disclaimer"
+  },
+  "link.item.label.How-to guides": {
+    "message": "使用指南",
+    "description": "The label of footer link with label=How-to guides linking to /docs/guides"
+  },
+  "link.item.label.References": {
+    "message": "开发者文档",
+    "description": "The label of footer link with label=References linking to /docs/references"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "The label of footer link with label=Twitter linking to https://twitter.com/ShifuFramework"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/7yXmbQm8ns"
+  },
+  "link.item.label.Reddit": {
+    "message": "Reddit",
+    "description": "The label of footer link with label=Reddit linking to https://www.reddit.com/user/ShifuFramework/"
   }
 }

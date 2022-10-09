@@ -1,5 +1,5 @@
 ---
-title: Frequently Asked Questions
+title: FAQs
 sidebar_position: 1
 ---
 
