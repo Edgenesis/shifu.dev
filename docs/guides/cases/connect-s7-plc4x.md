@@ -143,7 +143,7 @@ kubectl apply -f ../plc4x_configuration_directory
 
 ***Shifu*** can read and write to the memory of PLC via HTTP requests. 
 
-Before operation, we need to start an ``nginx container`` for sending and receiving HTTP requests, the relevant command to start is as follows:
+Before operation, we need to start an `nginx container` for sending and receiving HTTP requests, the relevant command to start is as follows:
 
 ```bash
 kubectl run nginx --image=nginx:1.21 -n deviceshifu 
@@ -174,7 +174,7 @@ At this point *Shifu* returns the status of the first indicator from left to rig
 
 **write** means to modify the value of the corresponding location through commands:
 
-For example, the command ``curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true"` will change the first bit of ``Q0`` to true.
+For example, the command `curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true"` will change the first bit of `Q0` to true.
 
 ```bash
 curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true";echo
