@@ -1,45 +1,41 @@
 ---
-title: Connect an OPCUA device
+title: Integrate an OPCUA Device
 sidebar_position: 3
 ---
 
-# Connect an OPCUA device
+# Integrate an OPCUA Device
 
-:::caution Work in Progress
-English version is not ready yet...
+ As a `Kubernetes` native open source IoT development framework, ***Shifu*** integrates with the `OPC UA` protocol. Developers do not need to think about the actual connecting process of the protocol, but only need to set the key parameters of the protocol to establish a connection and monitor or control the operation of the device.
+
+:::note OPC UA Introduction
+`OPC UA` ([OPC Unified Architecture](https://en.wikipedia.org/wiki/OPC_Unified_Architecture)) is the OPC Foundation's machine-to-machine network transport protocol for automation technology. The `OPC UA` protocol supports two communication protocols: a binary communication protocol (`opc.tcp://Server`) and a web service communication protocol (`http://Server`), where the binary communication protocol is the most efficient and provides strong interoperability. firewall is opened.
 :::
 
-***Shifu*** 作为 `Kubernetes` 原生的开源物联网开发框架，集成了 `OPC UA` 协议。开发者无需考虑协议的具体连接过程，仅需设置协议中的关键参数即可建立连接，监视或者控制设备运行。
+The following section describes how to use ***Shifu*** to connect devices via the `OPC UA` protocol.
 
-:::note OPC UA 简介
-`OPC UA` ([OPC Unified Architecture](https://en.wikipedia.org/wiki/OPC_Unified_Architecture)) 是OPC基金会应用在自动化技术的机器对机器网络传输协议。`OPC UA`协议支持两种通信协议：二进制通信协议(`opc.tcp://Server`)和Web服务通讯协议(`http://Server`)，其中二进制通信协议效率最高，提供较强的互操控性，其使用任意选取的TCP通道，可以较容易的进行隧道协议，也可以从透过防火墙开启。
-:::
+## Set Up Shifu Configuration File
 
-下面将介绍如何使用 ***Shifu*** 通过 `OPC UA` 协议连接设备。
+### Configure the IP Information of the Device
 
-## 设置Shifu的配置文件
-
-### 配置设备IP信息
-
-编辑 `examples/opcuaDeviceShifu/opcua_deploy/opcua_edgedevice.yaml` 文件，将 `address` 修改成设备的IP地址:
+Edit the `examples/opcuaDeviceShifu/opcua_deploy/opcua_edgedevice.yaml` file and change `address` to the IP address of the device:
 
 ```
 address: opc.tcp://192.168.14.163:4840/freeopcua/server
 ```
 
-### 配置OPCUA连接设备认证方式
+### Configure the OPCUA Connection Device Authentication
 
-#### 匿名模式
+#### Anonymous Mode
 
-将 `AuthenticationMode` 修改成 `Anonymous` 即可:
+Change `AuthenticationMode` to `Anonymous`:
 
 ```
 AuthenticationMode: Anonymous
 ```
 
-#### 用户密码模式
+#### User Password Mode
 
-用户密码模式，需要修改 `opcua_edgedevice.yaml` 文件下 `AuthenticationMode`、`Username`、`Password`:
+For user password mode, you need to modify `AuthenticationMode`, `Username`, `Password` under `opcua_edgedevice.yaml` file:
 
 ```
 AuthenticationMode: UserName 
@@ -47,15 +43,15 @@ Username: user1
 Password: pwd1
 ```
 
-#### 证书模式
+#### Certification Mode
 
-首先需要为证书以及私钥创建 `Configmap`：
+First you need to create `Configmap` for the certificate and private key.
 
 ```bash
 $ kubectl create configmap edgedevice-opcua-certificate --from-file=your_certificate_file.pem --from-file=your_private_key.pem -n deviceshifu
 ```
 
-修改 `opcua_edgedevice.yaml` 文件下的 `AuthenticationMode`、`CertificateFileName`、`PrivateKeyFileName`:
+Modify `AuthenticationMode`, `CertificateFileName`, `PrivateKeyFileName` under `opcua_edgedevice.yaml` file:
 
 ```
 CertificateFileName: cert.pem  
@@ -63,9 +59,9 @@ PrivateKeyFileName: key.pem
 AuthenticationMode: Certificate
 ```
 
-## 启动Shifu的OPCUA组件
+## Start Shifu's OPCUA Components
 
-启动 `deviceshifu-opcua`:
+Start `deviceshifu-opcua`:
 
 ```bash
 $ kubectl apply -f examples/opcuaDeviceShifu/opcua_deploy
@@ -75,37 +71,41 @@ service/deviceshifu-opcua created
 edgedevice.shifu.edgenesis.io/edgedevice-opcua created
 ```
 
-通过 `kubectl` 命令 可查看 ***deviceShifu*** 运行状况:
+The `kubectl` command allows you to view the status of ***deviceShifu***:
 
 ```bash
 $ kubectl get pods -n deviceshifu
-deviceshifu-opcua-deployment-765b77cfcf-f7swc   1/1     Running   0          63s
+deviceshifu-opcua-deployment-765b77cfcf-f7swc 1/1 Running 0 63s
 ```
 
-## 运行效果
+## Running Results
 
-将 `nginx:1.21` 载入到 `Kubernetes` 集群中:
+Load `nginx:1.21` to the `Kubernetes` cluster:
 
 ```bash
-$  kubectl run nginx --image=nginx:1.21 -n deviceshifu
+$ kubectl run nginx --image=nginx:1.21 -n deviceshifu
 ```
 
-通过 `kubectl` 查看 `nginx` 运行情况:
+View `nginx` running status through `kubectl`:
 
 ```bash
-$ kubectl get pods -n deviceshifu  | grep nginx
-nginx              1/1     Running   0          3m43s
+$ kubectl get pods -n deviceshifu | grep nginx
+nginx 1/1 Running 0 3m43s
 ```
 
-进入 `nginx` 的 `pod`:
+Go to `pod` of `nginx`':
 
 ```bash
 $ kubectl exec -it nginx -n deviceshifu -- bash
 ```
 
-向 ***deviceShifu*** 发起 HTTP请求，获取数据:
+Issue an HTTP request to ***deviceShifu*** to get the data:
 
 ```bash
 $ curl http://deviceshifu-opcua/get_value
 25
 ```
+
+
+
+
