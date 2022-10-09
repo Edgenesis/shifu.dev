@@ -803,5 +803,9 @@
   },
   "https://shifu.run/docs/tutorials/demo-try": {
     "message": "https://shifu.run/zh-Hans/docs/tutorials/demo-try"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "标签",
+    "description": "The title of the tag list page"
   }
 }

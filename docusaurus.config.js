@@ -63,8 +63,6 @@ const config = {
   ],
 
   themes: [
-    // ... Your other themes.
-
     // search
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -108,15 +106,15 @@ const config = {
         },
         items: [
           {
-            to: '/case-studies',
-            position: 'left',
-            label: 'Case Studies',
-          },
-          {
             type: 'doc',
             docId: 'intro',
             position: 'left',
             label: 'Docs',
+          },
+          {
+            to: '/case-studies',
+            position: 'left',
+            label: 'Case Studies',
           },
           {
             to: '/news',
