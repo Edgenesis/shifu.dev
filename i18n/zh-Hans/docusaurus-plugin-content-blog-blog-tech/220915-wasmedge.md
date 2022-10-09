@@ -81,7 +81,7 @@ $ docker run -p 8099:8099 -itd mockdevice:v0.0.1
 bdfd2b1323be   mockdevice:v0.0.1      "./mockDevice"           19 seconds ago      Up 18 seconds      0.0.0.0:8099->8099/tcp      admiring_feistel
 ```
 
-### 编写规则编译wasm
+### 编写规则&编译wasm
 
 您可以通过使用 `JavaScript` 编写规则。如果您不熟悉 `JavaScript`，您可以直接使用默认规则。🥮  
 
