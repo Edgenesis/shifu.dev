@@ -192,7 +192,7 @@ cd yurt-app-manager
 kubectl apply -f config/setup/all_in_one.yaml
 ```
 
-<img src="/blog-220615/1.png" width="100%" />
+<img src="/blog-220617/15.png" width="100%" />
 
 使用 `UnitedDeployment` 来部署虚拟的海康摄像头，YAML文件如下：
 
