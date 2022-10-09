@@ -111,7 +111,6 @@ function HeaderLogo() {
         />
       </svg>
       <div className={styles.words}>
-        <h1 className={styles.title}>Shifu</h1>
         <p className={styles.describe}>
           <Translate>Orchestration for IoT Application Development</Translate>
         </p>
