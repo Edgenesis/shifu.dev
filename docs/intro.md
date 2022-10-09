@@ -24,7 +24,7 @@ Cloud-native ***Shifu*** makes system operations and maintenance much less diffi
 You can select the content of which you wish to view in the left sidebar.
 
 - [**Introduction**](./introduction/): Learn about ***Shifu***'s architecture, features, application scenarios, and see how ***Shifu*** supports protocols.
-- [**Get Started**](./tutorials/): Try it out by installing ***Shifu*** on your computer.
+- [**Getting Started**](./tutorials/): Try it out by installing ***Shifu*** on your computer.
 - [**User's Guide**](./guides/): More detailed guides on how to use ***Shifu***.
 - [**Developer Documentation**](./references/)
     - ***Shifu*** architecture, features explained.
