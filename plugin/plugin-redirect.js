@@ -7,10 +7,10 @@ module.exports = function (context, options) {
           {
             tagName: 'style',
             attributes: {
-               id:'temp_showoff',
+              id: 'temp_showoff',
             },
             innerHTML: `
-              ._cn ,._en{
+              .lang_zh, .lang_en {
                 display:none
               }
       `,
@@ -28,8 +28,8 @@ module.exports = function (context, options) {
              * 解决方案是分别监听媒体查询和多语言按钮的点击 
              * 然后保证具体的语言选择按钮出现时就带有点击事件 
              ***/
-            innerHTML: 
-            `
+            innerHTML:
+              `
             function autoredirect() {
               let manually = localStorage.getItem('manuallySelectLanguage')
               if (manually) {
@@ -52,8 +52,8 @@ module.exports = function (context, options) {
                 }
               }
             }
+            
             autoredirect()
-
             
             function widedo() {
               console.log('This is a wide screen — more than 996px wide.')
@@ -119,7 +119,6 @@ module.exports = function (context, options) {
                 }
               }
             })
-             
       `,
           },
         ],
@@ -157,11 +156,10 @@ module.exports = function (context, options) {
           {
             tagName: 'style',
             innerHTML: `
-              .EN ._cn{
+              .EN .lang_zh{
                 display:none
               }
-
-              .CN ._en{
+              .CN .lang_en{
                 display:none
               }
       `,

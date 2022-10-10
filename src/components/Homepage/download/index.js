@@ -112,7 +112,8 @@ function HeaderLogo() {
       </svg>
       <div className={styles.words}>
         <p className={styles.describe}>
-          <Translate>Orchestration for IoT Application Development</Translate>
+          <span class="lang_en">Orchestration for IoT Application Development</span>
+          <span class="lang_zh">让开发产业场景像开发APP一样简单！</span>
         </p>
       </div>
     </div>
@@ -122,11 +123,20 @@ function HeaderLogo() {
 function DownloadBtn() {
   return (
     <div className={styles.btnContainer}>
-      <BlueBtn
-        content="Shifu Demo"
-        href="/disclaimer"
-        height="35px"
-      ></BlueBtn>
+      <span class="lang_en">
+        <BlueBtn
+          content= "Shifu Demo"
+          href="/disclaimer"
+          height="35px"
+        ></BlueBtn>
+      </span>
+      <span class="lang_zh">
+        <BlueBtn
+          content="下载Demo"
+          href="/disclaimer"
+          height="35px"
+        ></BlueBtn>
+      </span>
     </div>
   );
 }
