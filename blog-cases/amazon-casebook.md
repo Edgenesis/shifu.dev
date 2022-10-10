@@ -4,7 +4,7 @@ Accelerating IoT application development by ten times, ***Shifu*** has been sele
 
 [Click here to view full PDF of the casebook (Chinese)](https://d1.awsstatic.com/whitepapers/amazon-iot-innovation-case.pdf)
 
-[Click here to view pages concerning ***Shifu*** (Chinese)](/blog-cases-amazon-casebook/amazon-iot-innovation-case-Shifu-related.pdf)
+[Click here to view pages concerning ***Shifu*** (Chinese)](/blog-cases-amazon-casebook/amazon-iot-innovation-case-shifu-related.pdf)
 
 ***Shifu*** + Amazon Elastic Kubernetes Service (EKS) full-stack IoT solution makes developing an industrial scenario as easy as developing an app. It greatly reduces the comprehensive O&M costs. IoT development and device hosting framework ***Shifu*** easily completes Kubernetes deployment with the help of Amazon Elastic Kubernetes Service (EKS), it has achieved efficient cloud-side collaboration, this can hhelp its customers integrate massive IoT devices at low cost.
 
