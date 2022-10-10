@@ -123,20 +123,11 @@ function HeaderLogo() {
 function DownloadBtn() {
   return (
     <div className={styles.btnContainer}>
-      <span class="lang_en">
-        <BlueBtn
-          content= "Shifu Demo"
-          href="/disclaimer"
-          height="35px"
-        ></BlueBtn>
-      </span>
-      <span class="lang_zh">
-        <BlueBtn
-          content="下载Demo"
-          href="/disclaimer"
-          height="35px"
-        ></BlueBtn>
-      </span>
+      <BlueBtn
+        content={translate({ message: "Shifu Demo" })}
+        href="/disclaimer"
+        height="35px"
+      ></BlueBtn>
     </div>
   );
 }
