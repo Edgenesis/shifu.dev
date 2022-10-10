@@ -13,7 +13,7 @@ sidebar_position: 2
 确保您当前在testdir文件夹下。 
 使用以下命令完成 Shifu Demo的卸载。
 ```bash
-sudo ./scripts/deviceshifu-demo-aio_build.sh delete_demo
+sudo ./test/scripts/deviceshifu-demo-aio_build.sh delete_demo
 ```
 :::caution
 该命令会卸载kind、kubectl、Shifu、Shifu Demo、Shifu Image以及Shifu Demo文件夹，请谨慎使用。
