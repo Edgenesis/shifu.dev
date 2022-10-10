@@ -15,7 +15,7 @@ sidebar_position: 4
 
 
 :::tip
-如果您的PLC设备不为`192.168.0.1`可以将`deviceshifu-plc4x-deployment.yaml`文件中的`PLC_ADDRESS`改成您的设备的IP)
+如果您的PLC设备不为`192.168.0.1`可以将`edgedevice-plc4x.yaml`文件中的`address`改成您的设备的IP)
 :::
 
 ### *第2步*
@@ -184,6 +184,6 @@ curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true";echo
 
 如果您需要同时读取或者写入多个命令，您可以使用 `&` 进行连接使用。
 
-比如，命令`crul "deviceshifu-plc4x/read?%Q0.0:BOOL&%Q0.1:BOOL"` 会同时将 `Q0` 的第一个 bit 和 第二个 bit 的值返回。
+比如，命令`curl "deviceshifu-plc4x/read?%Q0.0:BOOL&%Q0.1:BOOL"` 会同时将 `Q0` 的第一个 bit 和 第二个 bit 的值返回。
 
-命令 `crul "deviceshifu-plc4x/write?%Q0.0:BOOL=true&%Q0.1:BOOL=true"`会同时将 `Q0` 的第一个 bit 和 第二个 bit 修改为true。
+命令 `curl "deviceshifu-plc4x/write?%Q0.0:BOOL=true&%Q0.1:BOOL=true"`会同时将 `Q0` 的第一个 bit 和 第二个 bit 修改为true。

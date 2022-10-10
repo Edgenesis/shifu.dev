@@ -15,7 +15,7 @@ Before connecting to ***Shifu***, the PLC should already be physically connected
 
 
 :::tip
-If the IP address of your PLC device is not `192.168.0.1`, you can change `PLC_ADDRESS` in the `deviceshifu-plc4x-deployment.yaml` file to the IP of your device)
+If the IP address of your PLC device is not `192.168.0.1`, you can change `address` in the `edgedevice-plc4x.yaml` file to the IP of your device)
 :::
 
 ### *Step 2*
@@ -184,6 +184,6 @@ curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true";echo
 
 If you need to read or write multiple commands at the same time, you can connect them with `&`.
 
-For example, the command `crul "deviceshifu-plc4x/read?%Q0.0:BOOL&%Q0.1:BOOL"` will return both the first bit and the second bit of `Q0` at the same time.
+For example, the command `curl "deviceshifu-plc4x/read?%Q0.0:BOOL&%Q0.1:BOOL"` will return both the first bit and the second bit of `Q0` at the same time.
 
-The command `crul "deviceshifu-plc4x/write?%Q0.0:BOOL=true&%Q0.1:BOOL=true"` will change both the first bit and the second bit of `Q0` to true.
+The command `curl "deviceshifu-plc4x/write?%Q0.0:BOOL=true&%Q0.1:BOOL=true"` will change both the first bit and the second bit of `Q0` to true.
