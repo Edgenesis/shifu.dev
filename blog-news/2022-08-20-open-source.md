@@ -1,3 +1,7 @@
+---
+date: 2022-08-30
+---
+
 # Shifu is officially open source!
 
 IoT application development and management platform ***Shifu*** (<https://github.com/Edgenesis/shifu>) is officially open source, entering a new phase of open source collaborative iteration. Developers can login to GitHub and search `Shifu` for repository information, and click `star` to support the project or `fork` the project. ***Shifu*** provides users with a transparent framework for full-scene device hosting and integrated software development. By using ***Shifu***, developers can connect, monitor and control any IoT device more simply. 
