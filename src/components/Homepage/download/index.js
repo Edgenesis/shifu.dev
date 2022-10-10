@@ -112,8 +112,7 @@ function HeaderLogo() {
       </svg>
       <div className={styles.words}>
         <p className={styles.describe}>
-          <span class="lang_en">Orchestration for IoT Application Development</span>
-          <span class="lang_zh">让开发产业场景像开发APP一样简单！</span>
+          <Translate>Orchestration for IoT Application Development</Translate>
         </p>
       </div>
     </div>
