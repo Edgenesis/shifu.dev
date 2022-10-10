@@ -16,7 +16,7 @@ Note: Shifu Demo installer will be updated when Shifu is updated
 Make sure you are currently in the testdir folder. 
 Use the following command to complete the uninstallation of Shifu Demo.
 ```bash
-sudo . /scripts/deviceshifu-demo-aio_build.sh delete_demo
+sudo ./test/scripts/deviceshifu-demo-aio_build.sh delete_demo
 ```
 
 :::caution
