@@ -1,5 +1,5 @@
 ---
-title: UserMetrics in Shifu
+title: User Metrics in Shifu
 sidebar_position: 1
 ---
 
