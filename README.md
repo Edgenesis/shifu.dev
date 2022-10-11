@@ -53,7 +53,14 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
 
 - Translate React pages
-    - Check https://docusaurus.io/docs/i18n/tutorial#translate-your-react-code
+    - Use [official method provided by Docusaurus](https://docusaurus.io/docs/i18n/tutorial#translate-your-react-code):
+        - Add `import Translate, {translate} from '@docusaurus/Translate';` at the top of the file.
+        - Use `<Translate>string-to-translate</Translate>` to wrap a string as a JSX element;
+        - Use `translate({ message: "string-to-translate" }` to take a message and return a string.
+        - Save files and run `yarn write-translations --locale zh-Hans`.
+        - Add translation in `i18n/zh-Hans/code.json`.
+    - Or use dynamic CSS:
+        - `<span class="lang_en">en-content</span>` `<span class="lang_zh">zh-content</span>` These two tag should appear at the same position.
 - Translate docs
     - Copy and translate docs in `i18n/zh-Hans/docusaurus-plugin-content-docs/current`.
 - Translate blog

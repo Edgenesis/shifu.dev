@@ -123,7 +123,7 @@ function DownloadBtn() {
   return (
     <div className={styles.btnContainer}>
       <BlueBtn
-        content="Shifu Demo"
+        content={translate({ message: "Shifu Demo" })}
         href="/disclaimer"
         height="35px"
       ></BlueBtn>

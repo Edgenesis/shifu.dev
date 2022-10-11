@@ -23,10 +23,6 @@
     "message": "快速上手",
     "description": "The label of footer link with label=Get Started linking to /docs/tutorials"
   },
-  "link.item.label.Coming soon...": {
-    "message": "敬请期待...",
-    "description": "The label of footer link with label=Coming soon... linking to /docs"
-  },
   "link.item.label.Download Demo": {
     "message": "下载 Demo",
     "description": "The label of footer link with label=Download Demo linking to /disclaimer"
