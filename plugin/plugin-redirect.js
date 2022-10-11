@@ -126,31 +126,36 @@ module.exports = function (context, options) {
           {
             tagName: 'script',
             innerHTML: `
+            let href=window.location.href
             let predo=()=>{
-              let href=window.location.href
               if(href.indexOf('/zh-Hans')==-1)
-              document.body.classList.add('EN'); 
+              {
+                document.body.classList.add('EN'); 
+                console.log('add EN');
+              }
               else
-              document.body.classList.add('CN'); 
+               {
+                console.log('add CN');
+                document.body.classList.add('CN'); 
+               }
             }
             let clearoff=()=>{
               //删除之前双语的不显示css
               //这样实现的效果是加载完成后再显示特定的语言 而不是 在开始就显示两种语言堆在一起
               document.getElementById('temp_showoff')?.remove()
             }
-            // 在0.07秒的之前的class 都会被清掉
-            document.addEventListener("DOMContentLoaded", ()=>{
+            // 在0.07秒的之前的class 都会被框架的js行为清掉
+            //为了保证这个效果的稳定实现 我们的策略是多次执行
+            document.addEventListener('DOMContentLoaded', () => {
               console.log('ready')
-              setTimeout(()=>{
-                predo()
-                clearoff()
-              }, 200)
-              //一次好像都不保险
-              setTimeout(()=>{
-                predo()
-                clearoff()
-              }, 400)
-            });
+              let times = 0,
+                timer = setInterval(() => {
+                  if (times > 10) clearInterval(timer)
+                  times++
+                  predo()
+                  clearoff()
+                }, 200)
+            })
       `,
           },
           {
