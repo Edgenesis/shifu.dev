@@ -435,7 +435,7 @@ spec:
     app: edgedevice-rpi-gpio-deployment
   type: LoadBalancer
 ```
-</details
+</details>
 
 A ``Kubernetes ConfigMap YAML`` file to configure ***deviceShifu***.
 
@@ -468,7 +468,7 @@ data:
         initialDelayMs: 1000
         intervalMs: 1000
 ```
-</details
+</details>
 
 In `ConfigMap` we need to configure the execution path of the driver, because we put the Python file directly under the default path when generating the image, just fill in `python led_driver.py` here. If the driver is a binary file, you can directly fill in the binary directory here.
 
@@ -489,7 +489,7 @@ spec:
   address: 0.0.0.0:11112
   protocol: HTTPCommandline
 ```
-</details
+</details>
 
 Put these four files into the Raspberry Pi with the following directory contents.
 
