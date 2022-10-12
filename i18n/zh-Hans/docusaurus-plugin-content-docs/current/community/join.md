@@ -1,6 +1,6 @@
 ---
 title: 加入开源社区
-sidebar_position: 3
+sidebar_position: 10
 ---
 
 # 加入开源社区
@@ -8,9 +8,16 @@ sidebar_position: 3
 如果您在使用 ***Shifu*** 的过程中有任何问题、或者想进一步了解 ***Shifu***，欢迎通过以下方式联系我们：
 
 - 邮箱
-    - info@edgenesis.com
+    - [info@edgenesis.com](mailto:info@edgenesis.com)
 - 微信
-    - if7369
+    - ID: `edgenesis_helper`（Shifu物联网开发助手）
+    - ID: `if7369`（郭琦 边无际）
+- Twitter
+    - https://twitter.com/ShifuFramework
+- Discord
+    - https://discord.gg/7yXmbQm8ns
+- Reddit
+    - https://www.reddit.com/user/ShifuFramework/
 
 获取更多技术支持，欢迎您填写下方问卷！
 

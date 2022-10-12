@@ -157,10 +157,6 @@ const config = {
                 label: 'How-to guides',
                 to: '/docs/guides',
               },
-              {
-                label: 'References',
-                to: '/docs/references',
-              },
             ],
           },
           {
