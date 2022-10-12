@@ -82,7 +82,6 @@ module.exports = function (context, options) {
                         href.replace(\`\${host}\`, \`\${host}/zh-Hans\`) + ''
                     }
                  }, 100)
-                 
                 }
                 console.log(elem.getAttribute('href'))
               }

@@ -34,7 +34,7 @@ if (isMobile()) {
         <h1 className={styles.title}><Translate>Please be sure to read the following carefully</Translate></h1>
         <div className={styles.container} id='nowTextCon'>
           {
-            lang === 'en' ? (
+            localStorage.getItem('manuallySelectLanguage') === 'en' ? (
                 <span>
           <h1>Privacy Policy</h1>
           <p>
