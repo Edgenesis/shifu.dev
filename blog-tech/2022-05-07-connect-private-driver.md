@@ -22,7 +22,7 @@ In this article, we will first write a `GPIO` driver to control `LED` using `Pyt
 - Simple Python syntax
 - Basic Linux command line operations (create files, install apps, SSH, run programs)
 
-### First step Circuit design
+### Step 1 Circuit design
 
 First let's design the circuit. We need to design a circuit that will allow the `GPIO` output of the Raspberry Pi to control the on/off of a single LED bulb. In this article, we have used the most straightforward approach, i.e., using `GPIO` directly to power the LED bulbs.
 
@@ -38,11 +38,11 @@ According to the Pin Layout in the official `Raspberry Pi` documentation, we can
 
 <img src="/blog-220507/2.png" width="100%" />
 
-Connect these four pins to the female port of the cable, and then connect the remaining circuits on the breadboard to.
+Connect these four pins to the female port of the cable, and then connect the remaining circuits on the breadboard too.
 
 <img src="/blog-220507/3.png" width="100%" />
 
-The red, green, yellow, and gray cables in the diagram correspond to `GPIO22` `GPIO23` `GPIO19` and ground (ground), respectively.
+The red, green, yellow, and gray cables in the diagram correspond to `GPIO22` `GPIO23` `GPIO19` and ground, respectively.
 
 <img src="/blog-220507/4.png" width="50%" />
 
@@ -56,7 +56,7 @@ First install an operating system in the Raspberry Pi, the one used in this arti
 
 Insert the SD card into the reader, connect it to the USB port of your computer, and then swipe the downloaded zip file into the SD card via `balenaEtcher`. [balenaEtcher link](https://www.balena.io/etcher/)
 
-Insert the SD card into the Raspberry Pi, plug in the power, and the monitor is ready to start configuration.
+Insert the SD card into the Raspberry Pi, plug in the power and monitor cable, and we can start the configuration.
 
 First, for development/debugging we need to enable SSH, open a terminal from the desktop and enter `sudo raspi-config` to access the configuration screen and select `Interface Options`.
 
@@ -74,7 +74,7 @@ After that, press right and select `Finish`, then enter to exit.
 
 <img src="/blog-220507/9.png" width="100%" />
 
-At this point, the SSH service is on, but we need to know the IP of the Raspberry Pi in order to SSH, so we can check it with the `ip addr` that comes with the system.
+At this point, the SSH service is on, but we need to know the IP of the Raspberry Pi in order to SSH, so we can check it with the built-in `ip addr` command.
 
 <img src="/blog-220507/10.png" width="100%" />
 
