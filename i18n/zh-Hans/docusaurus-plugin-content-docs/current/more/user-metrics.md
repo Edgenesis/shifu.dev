@@ -1,16 +1,17 @@
 ---
 title: Shifu中的用户指标
-sidebar_position: 1
+sidebar_position: 0
 ---
+
 # 用户指标
 
-安装 *Shifu* 时默认启用用户指标收集，您可以在安装之前或之后禁用它。
+安装 ***Shifu*** 时默认启用用户指标收集，您可以在安装之前或之后禁用它。
 
 ## 用户指标收集的权限
 
-*Shifu* 的遥测模块利用了Kubernetes内置的 `view` 权限的ClusterRole，详情请见[Kubernetes 官方文档](https://kubernetes.io/zh-cn/docs/reference/access-authn-authz/rbac/#user-facing-roles)。
+***Shifu*** 的遥测模块利用了 `Kubernetes` 内置的 `view` 权限的 `ClusterRole`，详情请见[Kubernetes 官方文档](https://kubernetes.io/zh-cn/docs/reference/access-authn-authz/rbac/#user-facing-roles)。
 
-遥测仅允许对大多数对象有只读权限,例如Pod基本信息、Kubernetes信息等。 它不允许查看角色、Secrets等隐私信息，所以您无需担心隐私泄漏问题。
+遥测仅允许对大多数对象有只读权限，例如Pod基本信息、Kubernetes信息等。它不允许查看角色、Secrets等隐私信息，所以您无需担心隐私泄漏问题。
 
 ## 我们收集的数据
 
@@ -28,6 +29,7 @@ sidebar_position: 1
 您可以通过设置  `pkg/k8s/crd/install/shifu_install.yaml` 上的 `--user-metrics-interval=60` 对用户指标收集时间进行设置。
 
 或者您也可以在安装后通过 `kubectl edit deployment -n shifu-crd-system shifu-crd-controller-manager` 进行编辑。
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -44,6 +46,7 @@ spec:
       - args:
         - --user-metrics-interval=60 ## 编辑此行
 ```
+
 ## 关闭用户指标收集
 
 如果要关闭用户指标收集，请手动删除 `pkg/k8s/crd/install/shifu_install.yaml` 上的 `--enable-user-metrics`。

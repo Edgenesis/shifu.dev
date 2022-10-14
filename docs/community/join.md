@@ -1,6 +1,6 @@
 ---
 title: Join the Community
-sidebar_position: 3
+sidebar_position: 10
 ---
 
 # Join the Community
@@ -10,7 +10,14 @@ If you have any questions about using ***Shifu*** or want to know more about it,
 - Email
     - [info@edgenesis.com](mailto:info@edgenesis.com)
 - WeChat
-    - if7369
+    - ID: `edgenesis_helper` (Chinese name: Shifu物联网开发助手)
+    - ID: `if7369` (Qi Guo at Edgenesis)
+- Twitter
+    - https://twitter.com/ShifuFramework
+- Discord
+    - https://discord.gg/7yXmbQm8ns
+- Reddit
+    - https://www.reddit.com/user/ShifuFramework/
 
 <!-- For more technical support, you are welcome to fill out the questionnaire below!
 
