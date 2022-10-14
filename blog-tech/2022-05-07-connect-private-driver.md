@@ -94,13 +94,13 @@ Earlier versions of the Raspberry Pi OS may need to manually enable GPIO
 
 Everything is in place, now let's write the first driver!
 
-First make sure that ``Python`` is installed on your system, if not you can run the following command.
+First make sure that `Python` is installed on your system, if not you can run the following command.
 
 ```
 $ sudo apt-get update && sudo apt install python3 -y
 ```
 
-After installation, you can check the status of the installation with `python -V`, if it shows the version, then the installation is successful: ``
+After installation, you can check the status of the installation with `python -V`, if it shows the version, then the installation is successful:
 
 ```
 $ python -V
@@ -120,14 +120,14 @@ First set the GPIO mode to `GPIO.BCM` mode, in this mode the pin numbers are the
 
 `GPIO.setmode(GPIO.BCM)`
 
-Then turn the warning off, the Raspberry Pi will only be controlled by this one driver in this article
+Then turn the warning off, the Raspberry Pi will only be controlled only by this driver in this article.
 
 `GPIO.setwarnings(False)`
 
 Next process the program input, this driver will accept two inputs.
 
 1. `-p`, `--port`, representing the GPIO pin that the program is manipulating
-2. `-o`, `--operate`, represents the program's operation of the GPIO pin, `on` represents `1`, ie `3.3V` in the circuit, `off` represents `0`, ie `0V` in the circuit
+2. `-o`, `--operate`, represents the program's operation of the GPIO pin, `on` represents `1`, i.e. `3.3V` in the circuit, `off` represents `0`, i.e. `0V` in the circuit
 
 The code is as follows
 
@@ -138,7 +138,7 @@ parser.add_argument("-o", "--operate", type=str, default=None, help="Specify the
 args = parser.parse_args()
 ```
 
-Next we need to deal with some mistakes, passing the arguments into the function `turnOnLed` to operate when the pin count and operation are not empty, otherwise printing a warning
+Next we need to handle errors, passing the arguments into the function `turnOnLed` to operate when the pin count and operation are not empty, otherwise printing a warning
 
 ```py
 if args.pin and args.operate:
@@ -163,13 +163,13 @@ else:
     return
 ```
 
-The last thing is to set the mode of the pin to output: ``GPIO.setup(pin, GPIO.OUT)`
+The last thing is to set the mode of the pin to output: `GPIO.setup(pin, GPIO.OUT)`
 
-and switch the pin's output to on/off: ``GPIO.output(pin, gpio_out)`
+and switch the pin's output to on/off: `GPIO.output(pin, gpio_out)`
 
 ### Outcome
 
-The program is run by `python led_driver.py -p {pin #} -o {operate}`
+The program can be executed using `python led_driver.py -p {pin #} -o {operate}`
 
 If we want to make the red bulb light up, we run `python led_driver.py -p 22 -o on`
 
@@ -178,8 +178,8 @@ If we want to make the red bulb light up, we run `python led_driver.py -p 22 -o 
 And that's it, a simple control LED bulb driver for Raspberry Pi!
 
 :::note
-This driver essentially manipulates Raspberry Pi GPIO pin, so we can also use this driver to manipulate any circuit that can be controlled by 3.3V, and the pins are not limited to 22, 23 and 19 in this article. you can use your imagination to create a variety of test circuits.
-You can use your imagination to create various test circuits:
+This driver essentially manipulates Raspberry Pi GPIO pin, so we can also use this driver to manipulate any circuit that can be controlled by 3.3V, and the pins are not limited to 22, 23 and 19 in this article. You can use your imagination to create a variety of test circuits.
+:::
 
 ## Integrate into Shifu
 
@@ -223,7 +223,7 @@ At this point, the `k3s` installation is complete.
 
 ### Step 2 Install Shifu
 
-First clone the ***Shifu*** project repository to your local location, the project address is :
+First clone the ***Shifu*** project repository on your computer:
 
 ```
 $ git clone https://github.com/Edgenesis/shifu.git
@@ -258,13 +258,13 @@ The content is as follows.
 
 <img src="/blog-220507/connect-6.png" width="100%" />
 
-You can see that the instance `Dockerfile` has two parts, the first is to use the `golang` image to compile the `http_to_ssh_stub.go` provided by ***Shifu*** to convert HTTP command to SSH command. The next step is to use an empty `alpine` image to configure SSH for demonstration.
+You can see that the `Dockerfile` has two parts, the first is to use the `golang` image to compile the `http_to_ssh_stub.go` provided by ***Shifu*** to convert HTTP command to SSH command. The next step is to use an empty `alpine` image to configure SSH for demonstration.
 
 Next let's practice it.
 
 Considering the limitations of Raspberry Pi, this compilation will be executed from the computer side, and the compiled image will be pushed to `Docker Hub` for remote invocation.
 
-First, we create a new folder, here we use ``dev``, and then save the created Raspberry Pi LED driver to this directory: ```.
+First, we create a new folder, here we use `dev`, and then save the created Raspberry Pi LED driver to this directory:.
 
 ```
 dev/
@@ -335,7 +335,7 @@ RUN chmod +x docker-entrypoint.sh
 # Command to run the executable
 ENTRYPOINT ["./docker-entrypoint.sh"]
 ```
-Next we will package the Docker image, because the CPU of the Raspberry Pi is `ARM64` processor, the computer used for compiling in this article is `x86-64`, so we need to use the `buildx` function of `Docker` to build the image, the tutorial about buildx will not be described in this article, you can move to https:/ /docs.docker.com/buildx/working-with-buildx/
+Next we will package the Docker image, because the CPU of the Raspberry Pi is `ARM64` processor, the computer used for compiling in this article is `x86-64`, so we need to use the `buildx` function of `Docker` to build the image, the tutorial about buildx will not be described in this article, you can move to <https://docs.docker.com/buildx/working-with-buildx/>.
 
 Use `docker buildx build --platform=linux/arm64 -f dev/Dockerfile.sample . -t edgehub/rpi-gpio-driver:v0.0.1 --push` to build the image and push it to `Docker Hub`.
 
@@ -437,7 +437,7 @@ spec:
 ```
 </details>
 
-A ``Kubernetes ConfigMap YAML`` file to configure ***deviceShifu***.
+A `Kubernetes ConfigMap YAML` file to configure ***deviceShifu***.
 
 <details>
   <summary> deviceshifu-rpi-gpio-configmap.yaml </summary> 
@@ -501,7 +501,7 @@ led-deploy/
 └──edgedevice-rpi-gpio-edgedevice.yaml
 ```
 
-Use ``kubectl apply -f <dir>` to deploy ***deviceShifu*** to the ``k3s` cluster:
+Use `kubectl apply -f <dir>` to deploy ***deviceShifu*** to the `k3s` cluster:
 
 <img src="/blog-220507/connect-8.png" width="100%" />
 
