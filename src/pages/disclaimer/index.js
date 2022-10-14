@@ -271,7 +271,8 @@ if (isMobile()) {
             )
           }
         </div>
-        <div className={styles.disclaimerConfirm}>
+
+        <div className={`${styles.disclaimerConfirm} special`}>
           <ButtonSquare
               href={localStorage.getItem('manuallySelectLanguage') === 'en'  ? '/' : '/zh-Hans/'}
               colorLevel="two" content={translate({message: "Decline"})}></ButtonSquare>
