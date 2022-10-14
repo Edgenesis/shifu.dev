@@ -67,7 +67,7 @@ Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
              cn content
           )`
     -  A Link jump   
-       - A Add a class name to the parent node of the link 'special'
+       - Add the class name "special" to the parent node of link a
          ```
           <div className={`${Original class name} special`}>
              <ButtonSquare
