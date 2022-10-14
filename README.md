@@ -59,8 +59,24 @@ Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
         - Use `translate({ message: "string-to-translate" }` to take a message and return a string.
         - Save files and run `yarn write-translations --locale zh-Hans`.
         - Add translation in `i18n/zh-Hans/code.json`.
-    - Or use dynamic CSS:
-        - `<span class="lang_en">en-content</span>` `<span class="lang_zh">zh-content</span>` These two tag should appear at the same position.
+    - Or Use jsx syntax:
+        - `{
+          localStorage.getItem('manuallySelectLanguage') === 'en' ? (
+             en content
+          ):(
+             cn content
+          )`
+    -  A Link jump   
+       - A Add a class name to the parent node of the link 'special'
+         ```
+          <div className={`${Original class name} special`}>
+             <ButtonSquare
+                 href={localStorage.getItem('manuallySelectLanguage') === 'en'  ? 'English jump address' : 'Chinese Jump Address'}
+                 colorLevel="two" content={translate({message: "Decline"})}></ButtonSquare>
+          </div>
+         ```
+         
+         These two tag should appear at the same position.
 - Translate docs
     - Copy and translate docs in `i18n/zh-Hans/docusaurus-plugin-content-docs/current`.
 - Translate blog
