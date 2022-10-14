@@ -42,6 +42,8 @@ const config = {
         id: 'news',
         routeBasePath: 'news',
         path: './blog-news',
+        blogSidebarTitle: 'All posts',
+        blogSidebarCount: 'ALL',
       },
     ],
     [
@@ -50,6 +52,8 @@ const config = {
         id: 'technical-blogs',
         routeBasePath: 'technical-blogs',
         path: './blog-tech',
+        blogSidebarTitle: 'All posts',
+        blogSidebarCount: 'ALL',
       },
     ],
     [
@@ -58,6 +62,8 @@ const config = {
         id: 'case-studies',
         routeBasePath: 'case-studies',
         path: './blog-cases',
+        blogSidebarTitle: 'All posts',
+        blogSidebarCount: 'ALL',
       },
     ]
   ],
