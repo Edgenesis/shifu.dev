@@ -36,6 +36,7 @@ module.exports = function (context, options) {
                 : document.domain
             function autoredirect() {
               let manually = localStorage.getItem('manuallySelectLanguage')
+
               if (manually) {
                 if (href.indexOf('/zh-Hans')!==-1) {
                     localStorage.setItem('manuallySelectLanguage','zh-Hans')
@@ -45,8 +46,6 @@ module.exports = function (context, options) {
                 return
               } else {
                 let lang = navigator.languages
-              
-              
                 console.log('automatically change')
                 if (lang[0] == 'zh-CN' && href.indexOf('/zh-Hans') == -1) {
                   console.log('切换到汉语')
@@ -130,6 +129,22 @@ module.exports = function (context, options) {
             }
             
             document.addEventListener('DOMContentLoaded', () => {
+              let specialLink= document.querySelectorAll('.special a')
+               if (href.indexOf('/zh-Hans')!==-1) {
+                  specialLink.forEach(e=>{
+                    let linkHref=e.getAttribute('href')
+                    if(linkHref.indexOf('/zh-Hans')===-1){
+                       e.setAttribute('href','/zh-Hans'+linkHref)
+                    }
+                  })
+                }else{
+                  specialLink.forEach(e=>{
+                    let linkHref=e.getAttribute('href')
+                    if(linkHref.indexOf('/zh-Hans')!==-1){
+                       e.setAttribute('href',linkHref.replace('/zh-Hans',''))
+                    }
+                  })
+                } 
               let mql = window.matchMedia('(max-width: 996px)')
               //初始检测
               if (mql.matches) {
