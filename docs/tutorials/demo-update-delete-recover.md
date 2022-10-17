@@ -3,8 +3,6 @@ title: Update, Uninstall & Restore
 sidebar_position: 2
 ---
 
-
-
 ## Update ***Shifu*** Demo
 
 Please [uninstall the old version of Shifu](#uninstall-shifu-demo) before installing the new version of Shifu Demo.

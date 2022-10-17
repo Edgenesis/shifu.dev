@@ -126,6 +126,10 @@ cd shifu
 sudo kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 ```
 
+:::tip About User Metrics in Shifu
+To learn more about user metrics we collect and how to disable it, please check [User Metrics in ***Shifu***](../more/user-metrics.md).
+:::
+
 ### Note: Download the Image in Advance
 
 The mirrors used in `k8s/crd/install/shifu_install.yml` are `quay.io/brancz/kube-rbac-proxy:v0.12.0` and `edgehub/shifu-controller:latest`, so if you have problems downloading them, you can go ahead and Download the image to the local machine and import it into the cluster: ``bash

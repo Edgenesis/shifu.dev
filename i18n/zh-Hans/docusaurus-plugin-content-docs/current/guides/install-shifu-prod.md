@@ -12,3 +12,7 @@ sidebar_position: 0
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/Edgenesis/shifu/v0.2.1/pkg/k8s/crd/install/shifu_install.yml
 ```
+
+:::tip 关于用户指标
+要了解更多信息，包括如何禁用内置用户指标收集，请查看[***Shifu*** 中的用户指标](../more/user-metrics.md)。
+:::

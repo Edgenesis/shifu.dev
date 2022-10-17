@@ -121,6 +121,10 @@ sudo docker ps
 如果您希望手动创建集群、导入镜像、安装 ***Shifu***，请查看 [本机测试安装](guides/install-shifu-dev.md)。
 :::
 
+:::tip 关于用户指标
+要了解更多信息，包括如何禁用内置用户指标收集，请查看[***Shifu*** 中的用户指标](../more/user-metrics.md)。
+:::
+
 ### 确认 ***Shifu*** 已启动
 
 使用以下命令来查看运行效果：
