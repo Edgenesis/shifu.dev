@@ -8,10 +8,10 @@ You will [install ***Shifu*** and related tools in your computer](./demo-install
 To use ***Shifu***, you need to know how to execute commands in Terminal.
 :::
 
-:::TIP
+:::tip
 If you want to install ***Shifu*** in production, check [Production Installation](guides/install-shifu-prod.md)
 :::
 
-:::TIP
+:::tip
 If you find any problem when using ***Shifu***, feel free to [contact us](community/join.md) to get support.
 :::

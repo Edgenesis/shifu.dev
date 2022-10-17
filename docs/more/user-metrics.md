@@ -28,7 +28,7 @@ User Metrics collection only allows read-only access to most objects, such as Po
 
 You can set the telemetry interval by setting `-pkg/k8s/crd/install/shifu_install.yaml` with `--user-metrics-interval=60`.
 
-Or you can edit the deployment after installation with ``kubectl edit -n shifu-crd-system shifu-crd-controller-manager``.
+Or you can edit the deployment after installation with `kubectl edit -n shifu-crd-system shifu-crd-controller-manager`.
 
 ```yaml
 apiVersion: apps/v1
@@ -51,7 +51,7 @@ spec:
 
 To turn off telemetry, manually remove `--enable-user-metrics` from `pkg/k8s/crd/install/shifu_install.yaml`.
 
-Or you can edit the deployment after installation with ``kubectl edit -n shifu-crd-system shifu-crd-controller-manager``.
+Or you can edit the deployment after installation with `kubectl edit -n shifu-crd-system shifu-crd-controller-manager`.
 
 ```yaml
 apiVersion: apps/v1

@@ -143,7 +143,7 @@ sudo kind load docker-image edgehub/shifu-controller:latest
 ```
 
 :::note
-这种方法会占用本机存储。使用完毕后可以用命令`sudo docker rmi <image_id>`来删除本机镜像。
+这种方法会占用本机存储。使用完毕后可以用命令 `sudo docker rmi <image_id>` 来删除本机镜像。
 :::
 
 ## 下一步

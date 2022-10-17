@@ -32,7 +32,7 @@ $ sudo docker ps
 CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
 ```
 
-If the output is ``Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?``, then ``Docker Desktop`` is not started; if the output is ``command not found`, then `Docker Desktop` is not installed.
+If the output is `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`, then `Docker Desktop` is not started; if the output is `command not found`, then `Docker Desktop` is not installed.
 
 ## Install kubectl
 
@@ -42,7 +42,7 @@ If the output is ``Cannot connect to the Docker daemon at unix:///var/run/docker
 
 Please [check the K8s website for the content to install kubectl](https://kubernetes.io/docs/tasks/tools/).
 
-Confirm that ``kubectl`` is installed.
+Confirm that `kubectl` is installed.
 
 ```bash
 $ kubectl version --client --output=yaml
@@ -52,7 +52,7 @@ clientVersion:
   ......
 ```
 
-## Install `kind`
+## Install kind
 
 :::info
 `kind` allows us to create a `Kubernetes cluster` locally for testing.
@@ -60,7 +60,7 @@ clientVersion:
 
 If `Go` is already installed, you can install it with the following command.
 
-``bash
+```bash
 $ go install sigs.k8s.io/kind@v0.14.0
 ```
 
@@ -68,16 +68,16 @@ If `Go` is not installed, you can [check the official documentation of `kind` to
 
 Confirm that `kind` is installed.
 
-``bash
+```bash
 $ kind --version
 kind version 0.14.0
 ```
 
 ## Create a Cluster
 
-We use ``kind`` to create the cluster.
+We use `kind` to create the cluster.
 
-``bash
+```bash
 $ sudo docker pull kindest/node:v1.24.0
 $ sudo kind create cluster --image="kindest/node:v1.24.0"
 Creating cluster "kind" ...
@@ -116,7 +116,7 @@ $ sudo kind create cluster --image="kindest/node:v1.24.0"
 
 ## Install ***Shifu***
 
-The installation of ***Shifu*** is very easy, ``pkg/k8s/crd/install/shifu_install.yml`` is the installation script, and can be installed with one click: ```bash
+The installation of ***Shifu*** is very easy, `pkg/k8s/crd/install/shifu_install.yml` is the installation script, and can be installed with one click:
 
 ```bash
 # clone Shifu repository
@@ -148,4 +148,4 @@ This method will take up local storage. You can use the command `sudo docker rmi
 
 ## Next Step
 
-Congratulations! You have opened a cluster on your machine and installed ***Shifu*** in that cluster. Next you can try [access devices] in the cluster (. /cases/README.md) now!
+Congratulations! You have opened a cluster on your machine and installed ***Shifu*** in that cluster. Next you can try [access devices](./cases/) in the cluster now!
