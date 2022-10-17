@@ -1,9 +1,9 @@
 ---
-title: Access to Siemens S7 PLC using PLC4x
-sidebar_position: 4
+title: Use PLC4x to connect to a Siemens S7 PLC
+sidebar_position: 1
 ---
 
-# Use PLC4x to connect to Siemens S7 PLC
+# Use PLC4x to connect to a Siemens S7 PLC
 
 ***Shifu*** is also compatible with `Siemens S7 series` PLCs in the form of PLC4X. This article will show you how to use `deviceshifu-plc4x-http` to integrate and interact with a `Siemens S7-1200 1214C PLC`.
 

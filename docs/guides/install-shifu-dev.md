@@ -132,11 +132,11 @@ To learn more about user metrics we collect and how to disable it, please check 
 
 ### Note: Download the Image in Advance
 
-The mirrors used in `k8s/crd/install/shifu_install.yml` are `quay.io/brancz/kube-rbac-proxy:v0.12.0` and `edgehub/shifu-controller:latest`, so if you have problems downloading them, you can go ahead and Download the image to the local machine and import it into the cluster: ``bash
+The mirrors used in `k8s/crd/install/shifu_install.yml` are `bitnami/kube-rbac-proxy:0.13.1` and `edgehub/shifu-controller:latest`, so if you have problems downloading them, you can go ahead and Download the image to the local machine and import it into the cluster: ``bash
 
 ```bash
-sudo docker pull quay.io/brancz/kube-rbac-proxy:v0.12.0
-sudo kind load docker-image quay.io/brancz/kube-rbac-proxy:v0.12.0
+sudo docker pull bitnami/kube-rbac-proxy:0.13.1
+sudo kind load docker-image bitnami/kube-rbac-proxy:0.13.1
 
 sudo docker pull edgehub/shifu-controller:latest
 sudo kind load docker-image edgehub/shifu-controller:latest
