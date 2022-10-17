@@ -39,6 +39,15 @@ spec:
         ...
 ```
 
+:::tip
+查看摄像头的ip地址可以使用海康威视提供的官方工具：
+
+**SADP**
+
+- [macOS 下载](https://www.hikvision.com/en/support/tools/hitools/cl3620e9fb51dfac31/)
+- [Windows 下载](https://www.hikvision.com/en/support/tools/hitools/clea8b3e4ea7da90a9/)
+:::
+
 ## 部署deviceShifu
 
 执行下面的命令：

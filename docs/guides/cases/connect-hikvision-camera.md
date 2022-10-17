@@ -39,6 +39,15 @@ spec:
         ...
 ```
 
+:::tip
+To check the ip address of your camera, use the official tool provided by Hikvision:
+
+**SADP**
+
+- [macOS download](https://www.hikvision.com/en/support/tools/hitools/cl3620e9fb51dfac31/)
+- [Windows download](https://www.hikvision.com/en/support/tools/hitools/clea8b3e4ea7da90a9/)
+:::
+
 ## Deploy deviceShifu
 
 Run the following command:
