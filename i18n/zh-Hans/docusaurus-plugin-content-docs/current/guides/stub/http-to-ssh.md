@@ -50,9 +50,9 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 
 ### 使用
 
-我们写了一个 Dockerfile 的示例在 [`driver_util/examples/simple-alpine/Dockerfile.sample`](/examples/driver_util/simple-alpine/Dockerfile.sample)，其中演示了如何将这个 stub 加入到一个 alpine 的 Docker 镜像中
+我们写了一个 Dockerfile 的示例在 [`examples/driver_utils/simple-alpine/Dockerfile.sample`](https://github.com/Edgenesis/shifu/blob/main/examples/driver_utils/simple-alpine/Dockerfile.sample)，其中演示了如何将这个 stub 加入到一个 alpine 的 Docker 镜像中
 
-打包的 Docker 镜像会使用以下变量，因此我们需要在[yaml文件](/examples/driver_utilutil/simple-alpine/driver.yaml)中进行配置：
+打包的 Docker 镜像会使用以下变量，因此我们需要在[yaml文件](https://github.com/Edgenesis/shifu/blob/main/examples/driver_utils/simple-alpine/driver.yaml)中进行配置：
 
 - `EDGEDEVICE_DRIVER_SSH_KEY_PATH`(必填)
   - 用来建立 SSH 连接到自身的 SSH 密钥路径

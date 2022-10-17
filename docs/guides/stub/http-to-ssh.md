@@ -51,9 +51,9 @@ For errors, it will return both the `stdout` and `stderr` back inside the HTTP r
 
 ### Usage
 
-We have written a sample Dockerfile [`driver_util/examples/simple-alpine/Dockerfile.sample`](/examples/driver_util/simple-alpine/Dockerfile.sample) which demonstrates how you can add the stub into an existing Alpine Docker image
+We have written a sample Dockerfile [`examples/driver_utils/simple-alpine/Dockerfile.sample`](https://github.com/Edgenesis/shifu/blob/main/examples/driver_utils/simple-alpine/Dockerfile.sample) which demonstrates how you can add the stub into an existing Alpine Docker image.
 
-The packaged Docker image takes the following environmental variables, so we need to configure them in the [yaml file](/examples/driver_util/simple-alpine/driver.yaml):
+The packaged Docker image takes the following environmental variables, so we need to configure them in the [yaml file](https://github.com/Edgenesis/shifu/blob/main/examples/driver_utils/simple-alpine/driver.yaml):
 
 - `EDGEDEVICE_DRIVER_SSH_KEY_PATH`
   - The key path of SSH key on driver container which we used to connect to the driver container itself
