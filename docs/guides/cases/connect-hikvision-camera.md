@@ -1,10 +1,69 @@
 ---
 title: Connect a Hikvision Camera
-sidebar_position: 1
+sidebar_position: 4
 ---
 
 # Connect a Hikvision Camera
 
-:::caution Work in Progress
+## Get the template
 
-:::
+Check template files at [examples/rtspDeviceShifu](https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu).
+
+## Modify configuration
+
+In `examples/rtspDeviceShifu/camera-deployment/deviceshifu-camera-deployment.yaml`:
+
+```yaml
+spec:
+  ...
+  template:
+    ...
+    spec:
+      containers:
+      ...
+      - image: edgehub/camera-python:v0.0.1
+        ...
+        env:
+        - name: EDGEDEVICE_NAME
+          value: "edgedevice-camera"
+        - name: EDGEDEVICE_NAMESPACE
+          value: "devices"
+        - name: IP_CAMERA_ADDRESS
+          value: "192.168.14.254" # change this value
+        - name: IP_CAMERA_USERNAME
+          value: "admin" # change this value
+        - name: IP_CAMERA_PASSWORD
+          value: "password" # change this value
+        - name: IP_CAMERA_CONTAINER_PORT
+          value: "11112" # change this value
+        ...
+```
+
+## Deploy deviceShifu
+
+Run the following command:
+
+```
+kubectl apply -f examples/rtspDeviceShifu/camera-deployment
+```
+
+## Interact with deviceShifu
+
+In `examples/rtspDeviceShifu/camera-deployment/deviceshifu-camera-configmap.yaml`:
+
+```yaml
+data:
+  ...
+  instructions: |
+    ...
+    instructions:
+      capture:
+      info:
+      stream:
+      move/up:
+      move/down:
+      move/left:
+      move/right:
+```
+
+You can use these instructions to interact with the ***deviceShifu***, which is equal to operate on the actual Hikvision camera.

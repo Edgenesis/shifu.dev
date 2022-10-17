@@ -1,11 +1,11 @@
 ---
-title: Integrate an OPCUA Device
+title: Connect an OPCUA Device
 sidebar_position: 3
 ---
 
-# Integrate an OPCUA Device
+# Connect an OPCUA Device
 
- As a `Kubernetes` native open source IoT development framework, ***Shifu*** integrates with the `OPC UA` protocol. Developers do not need to think about the actual connecting process of the protocol, but only need to set the key parameters of the protocol to establish a connection and monitor or control the operation of the device.
+As a `Kubernetes` native open source IoT development framework, ***Shifu*** integrates with the `OPC UA` protocol. Developers do not need to think about the actual connecting process of the protocol, but only need to set the key parameters of the protocol to establish a connection and monitor or control the operation of the device.
 
 :::note OPC UA Introduction
 `OPC UA` ([OPC Unified Architecture](https://en.wikipedia.org/wiki/OPC_Unified_Architecture)) is the OPC Foundation's machine-to-machine network transport protocol for automation technology. The `OPC UA` protocol supports two communication protocols: a binary communication protocol (`opc.tcp://Server`) and a web service communication protocol (`http://Server`), where the binary communication protocol is the most efficient and provides strong interoperability. firewall is opened.
@@ -105,7 +105,3 @@ Issue an HTTP request to ***deviceShifu*** to get the data:
 $ curl http://deviceshifu-opcua/get_value
 25
 ```
-
-
-
-

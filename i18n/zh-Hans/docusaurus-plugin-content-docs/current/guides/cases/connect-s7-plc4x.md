@@ -1,9 +1,9 @@
 ---
-title: 使用 PLC4x 接入 西门子S7 PLC
-sidebar_position: 4
+title: 使用 PLC4x 连接 西门子S7 PLC
+sidebar_position: 1
 ---
 
-# 使用 PLC4x 接入 西门子S7 PLC
+# 使用 PLC4x 连接 西门子S7 PLC
 
 ***Shifu*** 还可以使用 PLC4X的形式 实现对 `西门子S7系列` PLC兼容。本文将介绍如何使用 `deviceshifu-plc4x-http` 接入一台 `西门子S7-1200 1214C PLC` 并且与之交互。
 
