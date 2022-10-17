@@ -495,3 +495,7 @@ Used images:
 :::
 
 Delete the downloaded ***Shifu*** installer `shifu_demo_aio_xxx_xxx.tar` and the folder `testdir`.
+
+:::tip
+You can also check more detailed instruction in [Update, Uninstall and Restore Demo](../guides/demo-update-delete-recover.md).
+:::

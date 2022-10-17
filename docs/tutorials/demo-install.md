@@ -121,6 +121,9 @@ You don't need to know the details of how ***Shifu*** works, you can easily expe
 If you wish to manually create clusters, import images, and install ***Shifu***, please see the [native test installation](guides/install-shifu-dev.md).
 :::
 
+:::tip About User Metrics in Shifu
+To learn more about user metrics we collect and how to disable it, please check [User Metrics in ***Shifu***](../more/user-metrics.md).
+:::
 
 ### Confirm ***Shifu*** is running
 

@@ -126,6 +126,10 @@ cd shifu
 sudo kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 ```
 
+:::tip 关于用户指标
+要了解更多信息，包括如何禁用内置用户指标收集，请查看[***Shifu*** 中的用户指标](../more/user-metrics.md)。
+:::
+
 ### 注：提前下载镜像
 
 `k8s/crd/install/shifu_install.yml` 中使用到的镜像有 `quay.io/brancz/kube-rbac-proxy:v0.12.0` 和 `edgehub/shifu-controller:latest`，如果下载出问题，可以提前下载镜像到本机并导入集群：
@@ -139,7 +143,7 @@ sudo kind load docker-image edgehub/shifu-controller:latest
 ```
 
 :::note
-这种方法会占用本机存储。使用完毕后可以用命令`sudo docker rmi <image_id>`来删除本机镜像。
+这种方法会占用本机存储。使用完毕后可以用命令 `sudo docker rmi <image_id>` 来删除本机镜像。
 :::
 
 ## 下一步
