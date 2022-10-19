@@ -6,7 +6,7 @@ As EquipTalk's data base, ***Shifu*** spares EquipTalk developers the need to de
 
 ## Client Profile
 
-The core team of [EquipTalk](http://www.equiptalk.cn) comes from universities at home and abroad, with many famous professors and experts in the field of national defense, and has been deeply engaged in the field of launch vehicle testing for more than 20 years, and has developed launch vehicle testing systems deployed in China's four major launch sites and industrial sectors, as four series of China (Long March 5, Long March 3, As the core equipment of four series of launch vehicles (Long March 5, Long March 3, Long March 2 and upper stage series), it has guaranteed hundreds of major space engineering tasks such as China's Beidou system network, space station, lunar exploration and fire exploration. 
+The core team of [EquipTalk](http://www.equiptalk.cn) comes from universities both at home and abroad, with many famous professors and experts in the field of national defense, and has been deeply engaged in the field of rocket testing for more than 20 years, and has developed rocket testing systems deployed in China's four major launch sites and industrial sectors, as four series of China (Long March 5, Long March 3, As the core equipment of four series of rockets (Long March 5, Long March 3, Long March 2 and upper stage series), it has guaranteed hundreds of major space engineering tasks such as China's Beidou system network, space station, lunar exploration and fire exploration. 
 
 EquipTalk mainly serves the manufacturers and users of high-end complex equipment in the field of aerospace, rail transportation, ships and marine engineering, energy, etc. to ensure the reliable and safe production and use of high-end equipment. 
 
