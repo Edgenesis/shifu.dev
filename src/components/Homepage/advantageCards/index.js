@@ -6,7 +6,7 @@ import Translate, { translate } from '@docusaurus/Translate';
 let cardsList = [
   {
     img: require('@site/static/img/index/card-1.svg').default,
-    title: translate({message: 'Data Acquisition'}),
+    title: translate({message: 'Data Collection'}),
     descript: <span><Translate>Automated collection of protocol and driver's value</Translate></span>,
     iconBg: '#E1E1FA',
   },
@@ -30,7 +30,7 @@ let cardsList = [
   },
   {
     img: require('@site/static/img/index/card-5.svg').default,
-    title: translate({ message: 'Cloud-Side Collaboration' }),
+    title: translate({ message: 'Cloud-Edge Collaboration' }),
     descript: <span><Translate>Compatible with all K8s-based cloud/edge frameworks (OpenYurt, KubeEdge, etc.)</Translate></span>,
     iconBg: '#D8FFFD',
   },

@@ -41,7 +41,7 @@ function IntroBar(props) {
 let developerlist = [
   {
     img: require('@site/static/img/index/guide-access.svg').default,
-    title: translate({ message: 'Extremely Fast Access' }),
+    title: translate({ message: 'Extremely Fast Integration' }),
     descript:
       <span>
         <Translate>From machinery to thermometers</Translate><br />
@@ -54,7 +54,7 @@ let developerlist = [
   },
   {
     img: require('@site/static/img/index/guide-modularization.svg').default,
-    title: translate({ message: 'Modulized Deployment Experience' }),
+    title: translate({ message: 'Modularized Deployment Experience' }),
     descript:
       <span>
         <Translate>Devices and applications connected with Shifu will be packaged into puzzle-like modules</Translate><br />
