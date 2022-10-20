@@ -214,7 +214,7 @@ const config = {
       hotjar: {
         applicationId: 3065662
       },
-      metadata: [{name: 'keywords', content: 'cloud-native IoT platform, open-source IoT development framwork'}],
+      metadata: [{name: 'keywords', content: 'cloud-native IoT platform, open-source IoT development framework'}],
     }),
 };
 
