@@ -51,7 +51,7 @@ Since ***Shifu*** leverages the CRD feature of `Kubernetes`, it greatly improves
 Since each digital twin is a containerized microservice, resources are automatically called by default as `Pod` by `Kubernetes`. 
 
 ### Step 3: Automation 
- 
+
 In the ***Shifu*** framework, developers will enjoy two types of automation: deployment automation and device automation. 
 
 In terms of deployment, ***Shifu*** automates the discovery, registration and management of devices, and automatically generates digital twins for production. 
@@ -60,4 +60,4 @@ In terms of usage, the request format and interaction of the digital twin are un
 
 ***Shifu*** allows developers to define the automation logic of hardware as a declarative API in the Yaml configuration file. 
  
-From then on, IoT development becomes so easy and efficient. 
+From then on, IoT development becomes so easy and efficient.

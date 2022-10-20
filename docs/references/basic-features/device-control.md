@@ -58,7 +58,7 @@ Similar to data collection, after setting up the commands for the device in `dev
       defer res.Body.Close()  
    }
    ```
-3. For the above program, we can package it as a `docker image` and load it into the cluster so that it can better communicate with ***deviceshifu***. Create the following ``Dockerfile`` file.
+3. For the above program, we can package it as a `docker image` and load it into the cluster so that it can better communicate with ***deviceshifu***. Create the following `Dockerfile` file.
    ```dockerfile
    # syntax=docker/dockerfile:1  
    FROM golang:1.17-alpine  
@@ -73,8 +73,8 @@ Similar to data collection, after setting up the commands for the device in `dev
 4. Generate a `docker image` using the `Dockerfile` file.
    ```bash
    docker build --tag high-temperature-control-plc:v0.0.1
-   ``` 5.
-5. After that we load the ``docker image`` into the cluster.
+   ```
+5. After that we load the `docker image` into the cluster.
    ```bash
    kind load docker-image high-temperature-control-plc:v0.0.1
    ```
@@ -84,7 +84,7 @@ Similar to data collection, after setting up the commands for the device in `dev
    ```
 7. Also, in order for us to see the values of the `PLC` device, we load another `nginx` image.
    ```bash
-   kubectl run nginx --image=nginx:1.21 -n deviceshifu
+  kubectl run nginx --image=nginx:1.21 -n deviceshifu
    ```
 8. At this point we have the following `pods`, all in the `Running` state.
    ```bash

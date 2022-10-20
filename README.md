@@ -67,16 +67,15 @@ Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
              cn content
           )`
     -  A Link jump   
-       - Add the class name "special" to the parent node of link a
-         ```
+        - Add the class name "special" to the parent node of link a
+          ```html
           <div className={`${Original class name} special`}>
-             <ButtonSquare
-                 href={localStorage.getItem('manuallySelectLanguage') === 'en'  ? 'English jump address' : 'Chinese Jump Address'}
-                 colorLevel="two" content={translate({message: "Decline"})}></ButtonSquare>
+                <ButtonSquare
+                    href={localStorage.getItem('manuallySelectLanguage') === 'en'  ? 'English jump address' : 'Chinese Jump Address'}
+                    colorLevel="two" content={translate({message: "Decline"})}></ButtonSquare>
           </div>
-         ```
-         
-         These two tag should appear at the same position.
+          ```
+          These two tag should appear at the same position.
 - Translate docs
     - Copy and translate docs in `i18n/zh-Hans/docusaurus-plugin-content-docs/current`.
 - Translate blog
@@ -100,7 +99,9 @@ Use grammar below to add a admonition:
 :::note
 A common note.
 :::
+```
 
+```
 :::caution Don't use this in production
 A caution with title.
 :::
