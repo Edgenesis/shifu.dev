@@ -1,4 +1,4 @@
-# AMS Innovation Casebook
+# AWS Innovation Casebook
 
 Accelerating IoT application development by ten times, ***Shifu*** has been selected for 2022 Amazon IoT Innovation Case Study.
 
