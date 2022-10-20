@@ -112,7 +112,7 @@ function HeaderLogo() {
       </svg>
       <div className={styles.words}>
         <p className={styles.describe}>
-          <Translate>Orchestration for IoT Application Development</Translate>
+          <Translate>Kubernetes native IoT development framework</Translate>
         </p>
       </div>
     </div>

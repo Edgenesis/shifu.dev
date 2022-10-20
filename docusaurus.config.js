@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Shifu',
-  tagline: 'Orchestration for IoT Application Development',
+  title: 'Shifu | Kubernetes native, open-source IoT development framework',
+  tagline: 'Kubernetes native IoT development framework',
   url: 'https://shifu.run',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -144,8 +144,9 @@ const config = {
           },
           {
             href: 'https://github.com/edgenesis/shifu',
-            label: 'GitHub',
             position: 'right',
+            className: "header-github-link",
+            "aria-label": "GitHub repository",
           },
         ],
       },
@@ -213,6 +214,7 @@ const config = {
       hotjar: {
         applicationId: 3065662
       },
+      metadata: [{name: 'keywords', content: 'cloud-native IoT platform, open-source IoT development framwork'}],
     }),
 };
 

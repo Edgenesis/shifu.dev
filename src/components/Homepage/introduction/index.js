@@ -41,12 +41,12 @@ function IntroBar(props) {
 let developerlist = [
   {
     img: require('@site/static/img/index/guide-access.svg').default,
-    title: translate({ message: 'Extremely Fast Access' }),
+    title: translate({ message: 'Extremely Fast Integration' }),
     descript:
       <span>
-        <Translate>From machinery to thermometers</Translate><br />
-        <Translate>With private or public protocol</Translate><br />
-        <Translate>Shifu's high compatibility design makes it easy for you to handle universal devices</Translate>
+        <Translate>Robots to thermometers</Translate><br />
+        <Translate>Proprietary to standard protocols</Translate><br />
+        <Translate>Shifu's high compatibility design makes it easy for you to handle heterogeneous devices</Translate>
       </span>,
     isReverse: true,
     titleColor: "#2490FF",
@@ -54,11 +54,11 @@ let developerlist = [
   },
   {
     img: require('@site/static/img/index/guide-modularization.svg').default,
-    title: translate({ message: 'Modulized Deployment Experience' }),
+    title: translate({ message: 'Modularized Deployment Experience' }),
     descript:
       <span>
-        <Translate>Devices and applications connected with Shifu will be packaged into puzzle-like modules</Translate><br />
-        <Translate>Just call for service as you will</Translate>
+        <Translate>Devices and applications connected with Shifu will be packaged into lego-like modules</Translate><br />
+        <Translate>Combining those modules gives you a unique substrate 100% suitable for your scenario</Translate>
       </span>,
     isReverse: false,
     titleColor: "#C15CFF",
@@ -69,9 +69,9 @@ let developerlist = [
     title: translate({ message: 'Efficient Application Development' }),
     descript:
       <span>
-        <Translate>Connected devices will be abstracted as functional API</Translate><br />
-        <Translate>With the help of Shifu, applications will be decoupled from hardware</Translate><br />
-        <Translate>Thus, make the IoT application development as efficient as on the mobile platform</Translate>
+        <Translate>Connected devices will be abstracted as APIs</Translate><br />
+        <Translate>With the help of Shifu, applications will be decoupled from the hardware</Translate><br />
+        <Translate>Making the IoT application development as efficient as on the mobile app development</Translate>
       </span>,
     isReverse: true,
     titleColor: "#F33EE3",
@@ -86,7 +86,7 @@ let engineeringList = [
     descript:
       <span>
           <Translate>Shifu has been validated in aerospace scenarios</Translate><br />
-        <Translate>Protected from downtime crash with 99.9999% reliability</Translate>
+        <Translate>Ensuring 99.9999% availability with built-in redundancy</Translate>
       </span>,
     isReverse: true,
     titleColor: "#FF64EF",
@@ -97,7 +97,7 @@ let engineeringList = [
     title: translate({ message: 'Multi-Dimensional Security Policy' }),
     descript:
       <span>
-         <Translate>Backed by the cloud-native security team of the UN</Translate><br />
+         <Translate>Designed by the ex-UN cloud-native security team</Translate><br />
         <Translate>No matter data encryption or network security</Translate><br />
         <Translate>Shifu is on duty 24X7</Translate>
       </span>,
