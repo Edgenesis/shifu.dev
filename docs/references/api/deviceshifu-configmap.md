@@ -50,7 +50,7 @@ ConfigMap of ***Shifu*** is a Kubernetes-native [ConfigMap](https://kubernetes.i
 
 `DeviceShifuInstruction` is the command that ***deviceShifu*** can receive.
 
-- **instructionProperties** (DeviceShifuInstructionProperty)
+-  **protocolPropertyList** (`map[string]string`)
   parameters of the DeviceShifu command, which have various configurations according to different protocols . Please refer to the  examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
   - **DeviceShifuInstructionProperty** (interface)
 
@@ -73,6 +73,8 @@ ConfigMap of ***Shifu*** is a Kubernetes-native [ConfigMap](https://kubernetes.i
 
 `DeviceShifuTelemetrySettings` are the settings related to ***deviceShifu*** monitoring.
 
+- **defaultPushToServer** (bool) ***deviceShifu*** Defaults all telemetry to the push service.
+- **defaultTelemetryCollectionService** (string) ***deviceShifu*** Defaults telemetry to push addresses.
 - HTTP protocol:
     - **telemetryUpdateIntervalInMilliseconds** (int64)
       millisecond interval at which ***deviceShifu*** detects `Telemetry`. The default value is 3000.
@@ -86,13 +88,27 @@ ConfigMap of ***Shifu*** is a Kubernetes-native [ConfigMap](https://kubernetes.i
 - MQTT protocol:
     - **telemetryUpdateIntervalInMiliseconds** (int64)
       DeviceShifu detects the millisecond interval between the MQTT and the receipt of the last msg. Default value is 3000.
-
+- PLC4X:
+  - **telemetryUpdateIntervalInMiliseconds** (int64) ***deviceShifu*** The interval (in milliseconds) for detecting `Telemetry`. (Detection method, using PLC4X to send ping to the device.)
 ## DeviceShifuTelemetry
 
 `DeviceShifuTelemetry` describes which commands ***deviceShifu*** uses to monitor the status of IoT devices.
 
 - **properties** (DeviceShifuTelemetryProperties)
   - **instruction** (string)
-    command to be used for detection which must be a valid command as defined by [DeviceShifuInstruction](#deviceshifuinstruction) above.
+    Indicates the command used for telemetry, and must be a valid command as defined by [DeviceShifuInstruction](#deviceshifuinstruction) above.
   - **initialDelayMs** (int)
-    delay (in milliseconds) to start the detection.
+    Indicates the delay (in milliseconds) to start telemetry.
+  - **intervalMs** (int)
+    Indicates the interval of telemetry (milliseconds).
+  - **pushSettings** ([DeviceShifuTelemetryPushSettings](#deviceshifutelemetrypushsettings))
+    Used to set up this telemetry push service.
+
+## DeviceShifuTelemetryPushSettings
+
+`DeviceShifuTelemetryPushSettings` describes the settings for a telemetry push service for ***deviceshifu***.
+
+- **telemetryCollectionService** (string)
+  Indicates the name of the TelemetryService corresponding to the telemetry service.
+- **pushToServer** (bool)
+  Indicates whether this telemetry service is performed or not.

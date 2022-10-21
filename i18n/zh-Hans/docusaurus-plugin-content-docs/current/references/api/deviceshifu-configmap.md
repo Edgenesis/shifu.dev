@@ -50,9 +50,8 @@ sidebar_position: 3
 
 `DeviceShifuInstruction` 是指 ***deviceShifu*** 可以接收的命令。
 
-- **instructionProperties** (`DeviceShifuInstructionProperty`)
+- **protocolPropertyList** (`map[string]string`)
   表示 ***deviceShifu*** 命令的参数，根据不同协议具有不同的配置，更多示例请参考 [examples](https://github.com/Edgenesis/shifu/tree/main/examples)。
-  - **DeviceShifuInstructionProperty** (interface)
 
 ## DeviceShifuInstructionSettings
 
@@ -72,7 +71,8 @@ sidebar_position: 3
 ## DeviceShifuTelemetrySettings
 
 `DeviceShifuTelemetrySettings` 是指与 ***deviceShifu*** 监测相关的设置。
-
+- **defaultPushToServer** (bool) ***deviceShifu*** 默认将所有遥测进行推送服务。
+- **defaultTelemetryCollectionService** (string) ***deviceShifu***将遥测推送地址的默认值。
 - HTTP协议:
   - **telemetryUpdateIntervalInMilliseconds** (int64) ***deviceShifu*** 检测 `Telemetry` 的毫秒间隔。默认为3000。
   - **telemetryTimeoutInMilliseconds** (int64) ***deviceShifu*** 与设备连接的超时时间。默认为3000。
@@ -81,13 +81,27 @@ sidebar_position: 3
   - **telemetryUpdateIntervalInMilliseconds** (int64) ***deviceShifu*** 检测 `Telemetry` 的毫秒间隔。默认为1000。（检测方式：***deviceShifu*** 每间隔1000毫秒尝试与设备建立起一次socket连接，通过是否成功连接来判断设备是否开启。）
 - MQTT协议：
   - **telemetryUpdateIntervalInMiliseconds** (int64) ***deviceShifu*** 检测MQTT距离收到上一条msg到现在的毫秒间隔。默认为3000。
-
+- PLC4X:
+  - **telemetryUpdateIntervalInMiliseconds** (int64) ***deviceShifu*** 检测`Telemetry` 的间隔时间(毫秒)。（检测方式，使用PLC4X向设备发送Ping。）
 ## DeviceShifuTelemetry
 
 `DeviceShifuTelemetry` 描述了 ***deviceShifu*** 通过哪些指令来监测物联网设备的状态。
 
 - **properties** (DeviceShifuTelemetryProperties)
   - **instruction** (string)
-    表示用来检测的命令，且必须是上方 [DeviceShifuInstruction](#deviceshifuinstruction) 定义的有效命令。
+    表示用来遥测的命令，且必须是上方 [DeviceShifuInstruction](#deviceshifuinstruction) 定义的有效命令。
   - **initialDelayMs** (int)
-    表示开始检测时的延迟（毫秒）。
+    表示开始遥测时的延迟（毫秒）。
+  - **intervalMs** (int)
+    表示遥测的间隔时间 (毫秒)。
+  - **pushSettings** ([DeviceShifuTelemetryPushSettings](#deviceshifutelemetrypushsettings))
+    用来设置该遥测推送服务。
+
+## DeviceShifuTelemetryPushSettings
+
+`DeviceShifuTelemetryPushSettings` 描述了 ***deviceshifu*** 的一个遥测的推送服务的设置。
+
+- **telemetryCollectionService** (string)
+  表示遥测服务对应的TelemetryService的名称。
+- **pushToServer** (bool)
+  表示该遥测服务是否进行。

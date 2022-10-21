@@ -9,10 +9,6 @@ sidebar_position: 0
 
 :::
 
-`apiVersion: v0`
-
-`import "github.com/edgenesis/shifu/pkg/k8s/crd"`
-
 ## EdgeDevice
 EdgeDevice 是通过 Kubernetes [CRD](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) 创建的自定义资源，代表着一个物理IoT设备的虚拟化数字孪生。
 
@@ -55,7 +51,7 @@ EdgeDeviceSpec 是一个 EdgeDevice的描述。
 
 - **protocol** (Protocol) 必填
   - **Protocol** (string)
-    表示连接协议，现在必须是 `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA` 或 `Socket`。
+    表示连接协议，现在必须是 `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA`, `Socket`, `PLC4X`。
 
 ### ProtocolSettings
 
@@ -65,6 +61,8 @@ EdgeDeviceSpec 是一个 EdgeDevice的描述。
   - **MQTTSetting** (MQTTSetting) 
     - **MQTTTopic** (string)
       表示要订阅的MQTT主题， 如 `/test/test`。
+    - **MQTTServerAddress** (string)
+      在没有提供Address时则将其设置为Address
   - **OPCUASetting** (OPCUASetting)
     - **OPCUAEndpoint** (string)
       表示 OPC UA 的服务器地址，如 `opc.tcp://192.168.0.1:4840/test/server`。
@@ -83,7 +81,20 @@ EdgeDeviceSpec 是一个 EdgeDevice的描述。
       表示 Socket 链接时的协议，现在必须是 `tcp`。
     - **bufferLength** (int)
       表示 Socket 传输数据时的缓冲区大小，默认值为 1024。
+  - **PLC4XSetting** (PLC4XSetting)
+    - **protocol** ([Plc4xProtocol](#plc4xprotocolenum))
+      表示 PLC4X 连接PLC设备时的协议。
 
+#### Plc4xProtocol(enum)
+	Plc4xProtocolS7           = "s7"
+	Plc4xProtocolADS          = "ads"
+	Plc4xProtocolBACnet       = "bacnet"
+	Plc4xProtocolCBus         = "cbus"
+	Plc4xProtocolEip          = "eip"
+	Plc4xProtocolKnx          = "knx"
+	Plc4xProtocolModbusAscii  = "modbus-ascii"
+	Plc4xProtocolModbusRTU    = "modbus-rtu"
+	Plc4xProtocolModbusTcp    = "modbus-tcp"
 ### CustomMetadata
 
 表示 EdgeDevice 的附加信息。

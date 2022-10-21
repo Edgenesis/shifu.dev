@@ -51,7 +51,7 @@ Connection protocol of the EdgeDevice.
 
 - **protocol** (Protocol) is required to be filled in
   - **Protocol** (string)
-    indicates the connection protocol, which has to be `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA` or `Socket` (for now).
+    indicates the connection protocol, which has to be `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA`, `Socket` or `PLC4X` (for now).
 
 ### ProtocolSettings
 
@@ -79,6 +79,20 @@ Settings of EdgeDevice connection protocol.
       protocol of the socket link, which has to be `tcp` (for now).
     - **bufferLength** (int)
       buffer size of the socket when transferring data, the default value is 1024.
+  - **PLC4XSetting** (PLC4XSetting)
+    - **protocol** ([Plc4xProtocol](#plc4xprotocolenum))
+      protocol of `plc4x` connect to device.
+
+#### Plc4xProtocol(enum)
+	Plc4xProtocolS7           = "s7"
+	Plc4xProtocolADS          = "ads"
+	Plc4xProtocolBACnet       = "bacnet"
+	Plc4xProtocolCBus         = "cbus"
+	Plc4xProtocolEip          = "eip"
+	Plc4xProtocolKnx          = "knx"
+	Plc4xProtocolModbusAscii  = "modbus-ascii"
+	Plc4xProtocolModbusRTU    = "modbus-rtu"
+	Plc4xProtocolModbusTcp    = "modbus-tcp"
 ### CustomMetadata
 
 Additional information about the EdgeDevice.
