@@ -37,7 +37,9 @@ Hardware model of an EdgeDevice, e.g. `Siemens S7-1200`.
 Indicates how the EdgeDevice connects to Shifu.
 
 - **connection** (Connection) is required to be filled in
-  - **Connection** (string) Indicates the connection method, which has to be Ethernet (for now).
+  - **Connection** (string) 
+
+    Indicates the connection method, which has to be Ethernet (for now).
 
 ### Address
 
@@ -51,6 +53,7 @@ Connection protocol of the EdgeDevice.
 
 - **protocol** (Protocol) is required to be filled in
   - **Protocol** (string)
+
     indicates the connection protocol, which has to be `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA`, `Socket` or `PLC4X` (for now).
 
 ### ProtocolSettings
@@ -60,28 +63,47 @@ Settings of EdgeDevice connection protocol.
 - **protocolSettings** (ProtocolSettings)
   - **MQTTSetting** (MQTTSetting) 
     - **MQTTTopic** (string)
+
       subscription of MQTT topic, e.g. `/test/test`.
+
   - **OPCUASetting** (OPCUASetting)
     - **OPCUAEndpoint** (string)
+
       server address of OPC UA, e.g. `opc.tcp://192.168.0.1:4840/test/server`.
+  
     - **SecurityMode** (string)
+
       message encryption mode of OPC UA, which has to be `None` (for now).
+
     - **Username** (string)
+
       connection authentication username of OPC UA, e.g. `operator`.
+
     - **Password** (string)
+
       connection authentication password of OPC UA, e.g. `password`.
+
     - **ConnectionTimeoutInMilliseconds** (int64)
+
       requested connection milliseconds for OPC UA, e.g. `1000`.
+
   - **SocketSetting** (SocketSetting)
     - **encoding** (string)
+
       encoding of the socket connection, optionally `utf-8` or `hex`, the default value is `utf-8`.
+
     - **NetworkType** (string)
+
       protocol of the socket link, which has to be `tcp` (for now).
+
     - **bufferLength** (int)
+
       buffer size of the socket when transferring data, the default value is 1024.
+
   - **PLC4XSetting** (PLC4XSetting)
     - **protocol** ([Plc4xProtocol](#plc4xprotocolenum))
-      protocol of `plc4x` connect to device.
+
+      protocol used by plc4x to connect to the device.
 
 #### Plc4xProtocol(enum)
 	Plc4xProtocolS7           = "s7"
@@ -98,6 +120,7 @@ Settings of EdgeDevice connection protocol.
 Additional information about the EdgeDevice.
 
 - **customMetadata** (string: string)
+
   additional information, e.g. `ChargingTime: 9h`.
 
 ## EdgeDeviceStatus
@@ -110,4 +133,5 @@ Current state of EdgeDevice.
 
 - **edgedevicephase** (EdgeDevicePhase)
   - EdgeDevicePhase (string)
+
     State of EdgeDevice, has to be `Pending`, `Running`, `Failed` or `Unknown`.
