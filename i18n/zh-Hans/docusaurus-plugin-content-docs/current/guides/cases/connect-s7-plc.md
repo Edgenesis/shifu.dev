@@ -180,7 +180,7 @@ kubectl exec -it nginx -n deviceshifu -- bash
 
 `sendsinglebit` 表示修改一个bit，它需要下列参数:
 
-- rootaddress: 内存区域名称，比如`M`代表`Merker`，`Q`代表`Digital Output`。
+- `rootaddress`: 内存区域名称，比如`M`代表`Merker`，`Q`代表`Digital Output`。
 - `address`: 内存区域中的地址。
 - `start`: 开始位置。
 - `digit`: 从开始位置起第几个bit。
