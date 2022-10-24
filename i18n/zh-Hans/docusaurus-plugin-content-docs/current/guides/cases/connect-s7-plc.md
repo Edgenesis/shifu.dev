@@ -11,16 +11,15 @@ sidebar_position: 0
 
 ## 连接
 
-### *第1步*
+### 第1步
 
 在接入 ***Shifu*** 之前，PLC应当已经通过以太网与运行 ***Shifu*** 的上位机完成物理连接，并且拥有一个IP地址，这里我们使用`192.168.0.1`。
-
 
 :::tip
 如果您的PLC设备不为`192.168.0.1`可以将`deviceshifu-plc-deployment.yaml`文件中的`PLC_ADDRESS`改成您的设备的IP)
 :::
 
-### *第2步*
+### 第2步
 
 创建一个文件夹，在示例中我们将其命名为`plc_configuration_directory`。将下述的四个配置文件都保存在该文件夹下 。  
 
@@ -156,7 +155,7 @@ status:
 ```
 </details>
 
-### *第3步*
+### 第3步
 
 向 ***Shifu*** 添加PLC设备，创建和启动 ***deviceShifu***:
 
@@ -179,13 +178,13 @@ kubectl exec -it nginx -n deviceshifu -- bash
 
 ### sendsinglebit
 
-**sendsinglebit**表示修改一个bit，它需要下列参数:
+`sendsinglebit` 表示修改一个bit，它需要下列参数:
 
-- **rootaddress**: 内存区域名称，比如`M`代表`Merker`，`Q`代表`Digital Output`。
-- **address**: 内存区域中的地址。
-- **start**: 开始位置。
-- **digit**: 从开始位置起第几个bit。
-- **value**: 需要修改成为的数值。
+- `rootaddress`: 内存区域名称，比如`M`代表`Merker`，`Q`代表`Digital Output`。
+- `address`: 内存区域中的地址。
+- `start`: 开始位置。
+- `digit`: 从开始位置起第几个bit。
+- `value`: 需要修改成为的数值。
 
 比如，命令`curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&value=1"` 会将 `Q0.1` 的第二个 bit 修改为1。
 
@@ -199,13 +198,13 @@ curl "deviceshifu-plc/sendsinglebit?rootaddress=Q&address=0&start=0&digit=1&valu
 
 ### getcontent
 
-**getcontent**表示得到特定内存区域中地址的值，它需要下列参数:
+`getcontent` 表示得到特定内存区域中地址的值，它需要下列参数:
 
-- **rootaddress**: 内存区域名称，比如`M`代表`Merker`，`Q`代表`Digital Output`。
-- **address**: 内存区域中的地址。
-- **start**: 开始位置。
+- `rootaddress`: 内存区域名称，比如`M`代表`Merker`，`Q`代表`Digital Output`。
+- `address`: 内存区域中的地址。
+- `start`: 开始位置。
 
-比如，命令`curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"` 会返回内存区域`Q0.0`的地址内容。
+比如，命令 `curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"` 会返回内存区域 `Q0.0` 的地址内容。
 
 ```bash
 curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"
@@ -215,7 +214,7 @@ curl "deviceshifu-plc/getcontent?rootaddress=Q&address=0&start=0"
 
 ### getcpuordercode
 
-**getcpuordercode**表示得到PLC的静态信息。
+`getcpuordercode` 表示得到PLC的静态信息。
 
 ```bash
 curl "deviceshifu-plc/getcpuordercode"; echo

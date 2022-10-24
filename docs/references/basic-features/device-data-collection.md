@@ -43,7 +43,7 @@ When the device receives the command, the data will be transferred to ***deviceS
    }
    ```
 2. Use `go mod init high-temperature-detector` to generate the `go.mod` file.
-3. For the above program, we can package it as a `docker image` and load it into the cluster so that it can better communicate with ***deviceShifu***. Create the following ``Dockerfile`` file.
+3. For the above program, we can package it as a `docker image` and load it into the cluster so that it can better communicate with ***deviceShifu***. Create the following `Dockerfile` file.
    ```dockerfile
    # syntax=docker/dockerfile:1  
    
@@ -56,11 +56,11 @@ When the device receives the command, the data will be transferred to ***deviceS
    EXPOSE 11111  
    CMD [ "/high-temperature-detector" ]
    ```
-4. To generate a ``docker image`` using the ``Dockerfile`` file, execute the following command.
+4. To generate a `docker image` using the `Dockerfile` file, execute the following command.
    ```bash
    docker build --tag high-temperature-detector:v0.0.1
-   ``` 5.
-After that we load the `docker image` into the cluster with the following command.
+   ```
+5. After that we load the `docker image` into the cluster with the following command.
    ```bash
    kind load docker-image high-temperature-detector:v0.0.1
    ```

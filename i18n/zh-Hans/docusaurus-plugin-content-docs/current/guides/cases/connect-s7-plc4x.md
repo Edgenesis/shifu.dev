@@ -9,16 +9,15 @@ sidebar_position: 1
 
 ## 连接
 
-### *第1步*
+### 第1步
 
 在接入 ***Shifu*** 之前，PLC应当已经通过以太网与运行 ***Shifu*** 的上位机完成物理连接，并且拥有一个IP地址，这里我们使用`192.168.0.1`。
-
 
 :::tip
 如果您的PLC设备不为`192.168.0.1`可以将`edgedevice-plc4x.yaml`文件中的`address`改成您的设备的IP)
 :::
 
-### *第2步*
+### 第2步
 
 创建一个文件夹，在示例中我们将其命名为`plc4x_configuration_directory`。将下述的四个配置文件都保存在该文件夹下 。  
 
@@ -131,7 +130,7 @@ spec:
 ```
 </details>
 
-### *第3步*
+### 第3步
 
 向 ***Shifu*** 添加PLC设备，创建和启动 ***deviceShifu***:
 
@@ -160,7 +159,7 @@ kubectl exec -it nginx -n deviceshifu -- bash
 
 ### read
 
-**read** 表示使用对应命令读取设备的值:
+`read` 表示使用对应命令读取设备的值:
 
 比如，命令`curl "deviceshifu-plc4x/read?%Q0.0:BOOL"` 会返回内存区域 `Q0` 的地址内容。
 
@@ -168,16 +167,17 @@ kubectl exec -it nginx -n deviceshifu -- bash
 curl "deviceshifu-plc4x/read?%Q0.0:BOOL"; echo
 {"field_%Q0.0:BOOL":"BOOL(1bit):false"}
 ```
-此时 *Shifu* 返回Q区的从左往右第一个指示灯的状态。如果该指示灯为亮的则返回true，否则返回false。由于当前为熄灭状态，返回值为false
+
+此时 ***Shifu*** 返回Q区的从左往右第一个指示灯的状态。如果该指示灯为亮的则返回true，否则返回false。由于当前为熄灭状态，返回值为false
 
 ### write
 
-**write** 表示通过命令修改对应位置的值:
+`write` 表示通过命令修改对应位置的值:
 
 比如，命令`curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true"` 会将 `Q0` 的第一个 bit 修改为true。
 
 ```bash
-curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true";echo
+curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true"; echo
 ```
 
 ### 更多
