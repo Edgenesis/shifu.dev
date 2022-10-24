@@ -132,14 +132,14 @@ sudo kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 
 ### 注：提前下载镜像
 
-`k8s/crd/install/shifu_install.yml` 中使用到的镜像有 `bitnami/kube-rbac-proxy:0.13.1` 和 `edgehub/shifu-controller:latest`，如果下载出问题，可以提前下载镜像到本机并导入集群：
+`k8s/crd/install/shifu_install.yml` 中使用到的镜像有 `quay.io/brancz/kube-rbac-proxy:v0.13.1` 和 `edgehub/shifu-controller:nightly`，如果下载出问题，可以提前下载镜像到本机并导入集群：
 
 ```bash
-sudo docker pull bitnami/kube-rbac-proxy:0.13.1
-sudo kind load docker-image bitnami/kube-rbac-proxy:0.13.1
+sudo docker pull quay.io/brancz/kube-rbac-proxy:v0.13.1
+sudo kind load docker-image quay.io/brancz/kube-rbac-proxy:v0.13.1
 
-sudo docker pull edgehub/shifu-controller:latest
-sudo kind load docker-image edgehub/shifu-controller:latest
+sudo docker pull edgehub/shifu-controller:nightly
+sudo kind load docker-image edgehub/shifu-controller:nightly
 ```
 
 :::note
