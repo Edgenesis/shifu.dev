@@ -5,10 +5,6 @@ sidebar_position: 0
 
 # EdgeDevice
 
-:::caution正在施工
-
-:::
-
 ## EdgeDevice
 EdgeDevice 是通过 Kubernetes [CRD](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) 创建的自定义资源，代表着一个物理IoT设备的虚拟化数字孪生。
 

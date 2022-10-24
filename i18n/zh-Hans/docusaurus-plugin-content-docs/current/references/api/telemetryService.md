@@ -3,10 +3,6 @@ title: TelemetryService
 sidebar_position: 4
 ---
 
-:::caution正在施工
-
-:::
-
 # TelemetryService
 TelemetryService 定义遥测推送服务的配置，与`configmap`中[DeviceShifuTelemetryPushSettings](deviceshifu-configmap.md#DeviceShifuTelemetryPushSettings)相关联。
 

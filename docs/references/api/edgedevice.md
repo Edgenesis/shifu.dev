@@ -5,10 +5,6 @@ sidebar_position: 1
 
 # EdgeDevice
 
-:::caution Work in Progress
-
-:::
-
 `apiVersion: v0`
 
 `import "github.com/edgenesis/shifu/pkg/k8s/crd"`

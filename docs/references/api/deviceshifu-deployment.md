@@ -5,10 +5,6 @@ sidebar_position: 2
 
 # DeviceShifu Deployment
 
-:::caution Work in Progress
-
-:::
-
 `apiVersion: apps/v1`
 
 `import "k8s.io/api/apps/v1"`

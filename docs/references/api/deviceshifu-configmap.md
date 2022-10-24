@@ -5,10 +5,6 @@ sidebar_position: 3
 
 # ***deviceShifu*** ConfigMap
 
-:::caution Work in Progress
-
-:::
-
 `apiVersion: apps/v1`
 
 `import "k8s.io/api/core/v1"`

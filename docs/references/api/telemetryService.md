@@ -3,10 +3,6 @@ title: TelemetryService
 sidebar_position: 4
 ---
 
-:::caution Work in Progress
-
-:::
-
 # TelemetryService
 TelemetryService defines the configuration of the telemetry push service, associated with [DeviceShifuTelemetryPushSettings](deviceshifu-configmap.md#DeviceShifuTelemetryPushSettings).
 
