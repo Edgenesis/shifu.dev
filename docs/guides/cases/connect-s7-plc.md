@@ -176,7 +176,7 @@ Three instructions are `sendsinglebit`, `getcontent` and `getcpuordercode`. We c
 
 `sendsinglebit`  modifies a single bit. It needs the following parameters:
 
-- `rootaddress: the name of the memory area. e.g. `M` for `Merker` and `Q` for `Digital Output`
+- `rootaddress`: the name of the memory area. e.g. `M` for `Merker` and `Q` for `Digital Output`
 - `address`: the address of the memory area
 - `start`: the start position
 - `digit`: the offset from the start position
