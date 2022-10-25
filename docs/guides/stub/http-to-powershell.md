@@ -64,7 +64,7 @@ kubectl apply -f driver_util/http-to-powershell-stub/examples/simple-powershell-
 
 ### Proxy the command:
 
-Use cURL to post request the `Windows` host:
+Use Curl to post request the `Windows` host:
 
 ```bash
 root@nginx:/# curl "edgedevice-powershell/issue_cmd?flags_no_parameter=ls,C:"
@@ -104,7 +104,7 @@ The request will then passes from the HTTP stub into the `PowerShell` of the `Wi
 
 Note that the default timeout `EDGEDEVICE_DRIVER_EXEC_TIMEOUT_SECOND` can be overwritten by the `timeout` flag in URL, for example:
 
-Without flag(command timeout, incomplete output):
+- Without flag(command timeout, incomplete output):
 
 ```bash
 root@nginx:/# curl "example.com/issue_cmd?flags_no_parameter=ping,-n,6,8.8.8.8"   
@@ -117,7 +117,7 @@ Reply from 8.8.8.8: bytes=32 time=45ms TTL=114
 Reply from 8.8.8.8: bytes=32 time=59ms TTL=114
 ```
 
-With flag(complete output):
+- With flag(complete output):
 
 ```bash
 root@nginx:/# curl "example.com/issue_cmd?timeout=10&flags_no_parameter=ping,-n,6,8.8.8.8" 

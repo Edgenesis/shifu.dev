@@ -1,8 +1,8 @@
 ---
-title: HTTP to SSH Drvier Stub
+title: HTTP 到 SSH 的 Stub
 sidebar_position: 0
 ---
-# HTTP to SSH Drvier Stub
+# HTTP 到 SSH 的 Stub
 
 ## 介绍
 
