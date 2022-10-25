@@ -1,8 +1,8 @@
 # Shifu Cloud Debut
 
-On 2022.10.18, [Shifu Cloud](https://shifu.cloud) was officially released to the public, and users can quickly integrate their devices into ***Shifu*** by visually configure the devices they need to access.
+On 2022.10.18, [Shifu Cloud](https://shifu.cloud) was officially announced to the public, and users can quickly integrate their devices into ***Shifu*** by visually configure the devices they need to access.
 
-In this day's live online demonstration, Yang Xijie from Edgenesis demonstrated how to use [Shifu Cloud](https://shifu.cloud) to access three actual devices and develop applications based on them. Let's review the process together!
+In this day's live online demonstration, Yang Xijie from Edgenesis demonstrated how to use [Shifu Cloud](https://shifu.cloud) to access three physical devices and develop applications based on them. Let's review the process together!
 
 ## Creating the cluster & Installing shifu
 
@@ -22,7 +22,7 @@ $ sudo kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 
 <img src="/blog-221018/01.png" width="100%" />
 
-If you have no idea how to install ***Shifu*** and test it locally, you may want to check out [download and install](https://shifu.run/zh-Hans/docs/tutorials/demo-install) and [local installing testing](https://shifu.run/zh-Hans/docs/guides/install-shifu-dev).
+If you would like to know how to install ***Shifu*** and test it locally, you may want to check out [download and install](https://shifu.run/zh-Hans/docs/tutorials/demo-install) and [local installing testing](https://shifu.run/zh-Hans/docs/guides/install-shifu-dev).
 
 ## Connecting to thermometer and LED
 
@@ -42,7 +42,7 @@ curl localhost:23331/setfloat\?value=123.4
 
 <img src="/blog-221018/03.png" width="100%" />
 
-Next we're going to integrate the two devices into ***Shifu***, which means that the two actual devices (***edgeDevice***s) are converted to digital twins (***deviceShifu***s) in the k8s cluster.
+Next we're going to integrate the two devices into ***Shifu***, which means that the two pjysical devices (***edgeDevice***s) are converted to digital twins (***deviceShifu***s) in the k8s cluster.
 
 ## Generating configuration file with one click
 
@@ -86,7 +86,7 @@ You can see that the thermometer reading and the LED display settings are workin
 
 ## Packaging the application as an image
 
-We are going develop the application based on the thermometer and LED, here's the Python program we wrote:
+We are going to develop the application based on the thermometer and LED, here's the Python program we wrote:
 
 `main.py`
 
@@ -103,10 +103,10 @@ while True:
 
     # [get data]
     if flag % 2 == 0:
-        # Get temperature
+        # Gettemperature
         url = f "http://{localIp}:23330/temperature" if isLocal else "http://deviceshifu-mythermometer-service.deviceshifu.svc.cluster.local/ temperature"
     else:
-        # Get humidity
+        # Gethumidity
         url = f "http://{localIp}:23330/humidity" if isLocal else "http://deviceshifu-mythermometer-service.deviceshifu.svc.cluster.local/ humidity"
     res = requests.get(url)
 
@@ -115,7 +115,7 @@ while True:
         value = json.loads(res.text)['value']
         print("DEBUG", value)
         # [display data]
-        led_url = f "http://{localIp}:23331/setfloat?value={value}" if isLocal else f "http://deviceshifu-myled-service.deviceshifu.svc.cluster. local/setfloat?value={value}"
+        led_url = f "http://{localIp}:23331/setfloat?value={value}" if isLocal else f "http://deviceshifu-myled-service.deviceshifu.svc.cluster.local/setfloat?value={value}"
         requests.get(led_url)
     except:
         print("DEBUG", res.text)
@@ -133,7 +133,7 @@ Next we want to package this program as an image, so that we can load the image 
 requests
 ```
 
-``Dockerfile``
+`Dockerfile`
 
 ```dockerfile
 FROM python:3.9-slim-bullseye
@@ -184,7 +184,7 @@ Immediately after that, we want to adjust the camera's position, and the camera'
 $ curl http://deviceshifu-mycamera-service.deviceshifu.svc.cluster.local/move/up
 ```
 
-To check the outcome, we turn on the video player on our computer and open that streaming address: ``rtsp://<user_name>:<password>@<ip_address>`. In `macOS`, we can open `IINA.app`, go to menu bar > Open Url... > paste and enter, and we can see the live surveillance video stream.
+To check the outcome, we turn on the video player on our computer and open that streaming address: `rtsp://<user_name>:<password>@<ip_address>`. In `macOS`, we can open `IINA.app`, go to menu bar > Open Url... > paste and enter, and we can see the live surveillance video stream.
 
 As you can see, the camera position has changed, and we managed to reorient the camera to the angle we need(the angle of the camera moved from the ceiling to the back the computer screenon the desk).
 
