@@ -4,7 +4,7 @@ sidebar_position: 0
 ---
 # HTTP 到 SSH 的 Stub
 
-## 介绍
+## 介绍 
 
 为了使 ***Shifu*** 可以整合开发者的驱动，我们编写了一个简单的 HTTP 到 SSH 的 stub 来供开发者使用
 
@@ -21,7 +21,7 @@ sidebar_position: 0
 
 #### 代理 HTTP body 的内容到 SSH shell 并执行
 
-stub 的主要功能就是将任意HTTP 请求中 body 的内容附加一个超时并执行
+Stub 的主要功能就是将任意HTTP 请求中 body 的内容附加一个超时并执行
 
 举例:
 
@@ -33,7 +33,7 @@ stub 的主要功能就是将任意HTTP 请求中 body 的内容附加一个超�
 
 `~ # ping 8.8.8.8`
 
-HTTP 的返回结果会是如下样式 （注意这个输出不全，是因为我们设定了一个命令超时的环境变量）：
+HTTP 的返回结果如下 （注意这个输出不全，是因为我们设定了一个命令超时的环境变量）：
 
 ```
 PING 8.8.8.8 (8.8.8.8): 56 data bytes

@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ## 简介
 
-为了让你的设备接入 ***Shifu***。我们用Go编写了一个简单的HTTP 到 PowerShell 的 Stub，供开发者使用。
+为了让你的设备接入 ***Shifu***。我们用Go编写了一个简单的HTTP到 PowerShell 的 Stub，供开发者使用。
 
 ### 设计
 
@@ -138,6 +138,6 @@ Approximate round trip times in milli-seconds:
 
 我们还添加了一个参数`stub_toleration`来处理 ***deviceShifu***和stub之间的延迟问题。默认情况下，它被设置为`1`秒,你可以用以下方法覆盖这个时间:
 
-```bash
+```bash 
 root@nginx:/# curl "example.com/issue_cmd?timeout=10&flags_no_parameter=ping,-n,6,8.8.8.8&stub_toleration=0" 
 ```
