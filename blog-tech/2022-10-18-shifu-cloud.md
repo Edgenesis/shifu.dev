@@ -1,6 +1,6 @@
 # Shifu Cloud Debut
 
-On 2022.10.18, [Shifu Cloud](https://shifu.cloud) was officially announced to the public, and users can quickly integrate their devices into ***Shifu*** by visually configure the devices they need to access.
+On 2022.10.18, [Shifu Cloud](https://shifu.cloud) was officially announced to the public, and users can quickly integrate their devices into ***Shifu*** by simply filling in fields in the UI.
 
 In this day's live online demonstration, Yang Xijie from Edgenesis demonstrated how to use [Shifu Cloud](https://shifu.cloud) to access three physical devices and develop applications based on them. Let's review the process together!
 
@@ -82,7 +82,7 @@ $ curl http://deviceshifu-myled-service.deviceshifu.svc.cluster.local/setfloat?v
 
 ```
 
-You can see that the thermometer reading and the LED display settings are working properly, which means that devices have been successfully converteed to digital twins.
+You can see that the thermometer reading and the LED display settings are working properly, which means that devices have been successfully converted to digital twins.
 
 ## Packaging the application as an image
 
@@ -103,11 +103,11 @@ while True:
 
     # [get data]
     if flag % 2 == 0:
-        # Gettemperature
-        url = f "http://{localIp}:23330/temperature" if isLocal else "http://deviceshifu-mythermometer-service.deviceshifu.svc.cluster.local/ temperature"
+        # Get temperature
+        url = f "http://{localIp}:23330/temperature" if isLocal else "http://deviceshifu-mythermometer-service.deviceshifu.svc.cluster.local/temperature"
     else:
-        # Gethumidity
-        url = f "http://{localIp}:23330/humidity" if isLocal else "http://deviceshifu-mythermometer-service.deviceshifu.svc.cluster.local/ humidity"
+        # Get humidity
+        url = f "http://{localIp}:23330/humidity" if isLocal else "http://deviceshifu-mythermometer-service.deviceshifu.svc.cluster.local/humidity"
     res = requests.get(url)
 
     # [convert data]
