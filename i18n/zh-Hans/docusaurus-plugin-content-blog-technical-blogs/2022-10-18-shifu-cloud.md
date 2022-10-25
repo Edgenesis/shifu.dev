@@ -1,12 +1,12 @@
-# shifu.cloud 初面演示
+# Shifu Cloud 初面演示
 
-在 2022.10.18，[shifu.cloud](https://shifu.cloud) 正式公测，***Shifu*** 的用户可以方便的通过可视化的方式选择需要接入的设备，即可快速完成设备接入 ***Shifu*** 的流程。
+在 2022.10.18，[Shifu Cloud](https://shifu.cloud) 正式公测，***Shifu*** 的用户可以方便的通过可视化的方式选择需要接入的设备，即可快速完成设备接入 ***Shifu*** 的流程。
 
-在这一天的线上直播展示中，来自边无际的杨希杰演示使用 [shifu.cloud](https://shifu.cloud) 接入三个实际的设备，并在其基础上进行应用开发。下面让我们一起来回顾这一过程吧——
+在这一天的线上直播展示中，来自边无际的杨希杰演示使用 [Shifu Cloud](https://shifu.cloud) 接入三个实际的设备，并在其基础上进行应用开发。下面让我们一起来回顾这一过程吧——
 
 ## 创建集群 安装shifu
 
-在使用 [shifu.cloud](https://shifu.cloud) 前，我们需要先确保已有一台安装了 ***Shifu*** 的电脑。
+在使用 [Shifu Cloud](https://shifu.cloud) 前，我们需要先确保已有一台安装了 ***Shifu*** 的电脑。
 
 ```
 # 在本地使用kind启动k8s集群
@@ -46,7 +46,7 @@ curl localhost:23331/setfloat\?value=123.4
 
 ## 一键生成配置文件
 
-[shifu.cloud](https://shifu.cloud/)可以轻松生成 ***deviceShifu*** 的配置文件。
+[Shifu Cloud](https://shifu.cloud/)可以轻松生成 ***deviceShifu*** 的配置文件。
 
 登录之后点击所有项目，即可添加设备。对于上面的两个设备，采用的都是HTTP协议，所以选择「公有协议 > HTTP」。「基础信息 > 设备名称」中分别填入`my_thermometer`和`my_led`。设备的IP地址不能填写`localhost`，而是需要在电脑的网络设置中找到本机IP：如演示时使用的是`192.168.0.123:23330`和`192.168.0.123:23331`。
 
@@ -162,7 +162,7 @@ $ sudo kubectl run --image=xxx/connection:v0.0.1 connection-name
 
 接下来我们希望接入海康威视摄像头进行监控的操控。该摄像头并没有在笔者的手边，而是通过Wi-Fi的方式无线连接。
 
-可以看到 [shifu.cloud](https://shifu.cloud) 支持了海康威视这个模块，点击后配置摄像头ip地址、用户名和密码即可一键接入。演示中的设备名称为 `mycamera`。
+可以看到 [Shifu Cloud](https://shifu.cloud) 支持了海康威视这个模块，点击后配置摄像头ip地址、用户名和密码即可一键接入。演示中的设备名称为 `mycamera`。
 
 ```
 # 进入nginx容器
@@ -192,17 +192,17 @@ $ curl http://deviceshifu-mycamera-service.deviceshifu.svc.cluster.local/move/up
 
 ## 总结
 
-在此次展示中，我们使用 [shifu.cloud](https://shifu.cloud) 接入了三个设备，如果您与Meetup线下接入做对比，您会发现接入速度和门槛明显降低。
+在此次展示中，我们使用 [Shifu Cloud](https://shifu.cloud) 接入了三个设备，如果您与Meetup线下接入做对比，您会发现接入速度和门槛明显降低。
 
-[shifu.cloud](https://shifu.cloud) 还加入了啊哈时刻，在您初步熟悉整个网站的过程中提供帮助。
+[Shifu Cloud](https://shifu.cloud) 还加入了啊哈时刻，在您初步熟悉整个网站的过程中提供帮助。
 
 <img src="/blog-221018/07-1.png" width="100%" />
 <img src="/blog-221018/07-2.png" width="100%" />
 
-此外，[shifu.cloud](https://shifu.cloud) 还在不断发展，后续将逐渐支持：
+此外，[Shifu Cloud](https://shifu.cloud) 还在不断发展，后续将逐渐支持：
 
 - 更多的协议支持（边无际与开源社区都会不断增加支持的协议，提高快速接入的覆盖率）
 - 应用开发的支持（此次我们开发应用还是在本地进行应用打包，但是之后我们也可以直接在 [shifu.cloud](https://shifu.cloud) 进行便捷的应用开发）
 - 应用商店支持（其中包含开发者上传的自己开发的应用或者第三方插件，使用者可以一键安装）
 
-感谢您看到这里，让我们一起期待 [shifu.cloud](https://shifu.cloud) 的未来吧！
+感谢您看到这里，让我们一起期待 [Shifu Cloud](https://shifu.cloud) 的未来吧！
