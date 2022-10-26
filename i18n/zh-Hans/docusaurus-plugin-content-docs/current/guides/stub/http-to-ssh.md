@@ -1,27 +1,27 @@
 ---
-title: HTTP 到 SSH 的 Stub
+title: HTTP 到 SSH 的中间件
 sidebar_position: 0
 ---
-# HTTP 到 SSH 的 Stub
+# HTTP 到 SSH 的中间件
 
 ## 介绍 
 
-为了使 ***Shifu*** 可以整合开发者的驱动，我们编写了一个简单的 HTTP 到 SSH 的 stub 来供开发者使用
+为了使 ***Shifu*** 可以整合开发者的驱动，我们编写了一个简单的 HTTP 到 SSH 的中间件来供开发者使用
 
 ### 设计
 
-这个 HTTP 到 SSH 的 stub 设计如下：
+这个 HTTP 到 SSH 的中间件设计如下：
 
-- 从 stub 利用容器提供的公钥建立一个到容器的 SSH 连接
+- 从中间件利用容器提供的公钥建立一个到容器的 SSH 连接
 - 这个 SSH 连接会被用作反向 HTTP 代理，代理到 localhost 的制定 HTTP 端口
-- 这个 stub 会直接在 SSH 的会话中执行 HTTP 请求的 body 的内容
-- stub 会将执行内容的结果以及状态代理回复给请求者
+- 这个中间件会直接在 SSH 的会话中执行 HTTP 请求的 body 的内容
+- 中间件会将执行内容的结果以及状态代理回复给请求者
 
 ### 功能
 
 #### 代理 HTTP body 的内容到 SSH shell 并执行
 
-Stub 的主要功能就是将任意HTTP 请求中 body 的内容附加一个超时并执行
+中间件的主要功能就是将任意HTTP 请求中 body 的内容附加一个超时并执行
 
 举例:
 
@@ -29,7 +29,7 @@ Stub 的主要功能就是将任意HTTP 请求中 body 的内容附加一个超�
 
 `curl -X POST -d "ping 8.8.8.8" http://example.com`
 
-这个请求会被 stub 传递到驱动容器中的 `shell` 中执行：
+这个请求会被中间件传递到驱动容器中的 `shell` 中执行：
 
 `~ # ping 8.8.8.8`
 
@@ -44,13 +44,13 @@ PING 8.8.8.8 (8.8.8.8): 56 data bytes
 
 #### 检查 `session.Run(cmd)` 错误并设定 HTTP 的返回状态码
 
-当前 stub 会在成功时返回 `200`， 错误或超时时返回 `400`
+当前中间件会在成功时返回 `200`， 错误或超时时返回 `400`
 
-对于出错的命令，stub 会将 `stdout` 和 `stderr` 合并到一起通过 HTTP 的 body 返回
+对于出错的命令，中间件会将 `stdout` 和 `stderr` 合并到一起通过 HTTP 的 body 返回
 
 ### 使用
 
-我们写了一个 Dockerfile 的示例在 [`examples/driver_utils/simple-alpine/Dockerfile.sample`](https://github.com/Edgenesis/shifu/blob/main/examples/driver_utils/simple-alpine/Dockerfile.sample)，其中演示了如何将这个 stub 加入到一个 alpine 的 Docker 镜像中
+我们写了一个 Dockerfile 的示例在 [`examples/driver_utils/simple-alpine/Dockerfile.sample`](https://github.com/Edgenesis/shifu/blob/main/examples/driver_utils/simple-alpine/Dockerfile.sample)，其中演示了如何将这个中间件加入到一个 alpine 的 Docker 镜像中
 
 打包的 Docker 镜像会使用以下变量，因此我们需要在[yaml文件](https://github.com/Edgenesis/shifu/blob/main/examples/driver_utils/simple-alpine/driver.yaml)中进行配置：
 
