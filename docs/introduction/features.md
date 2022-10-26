@@ -51,7 +51,6 @@ The aim of ***Shifu*** is to **help developers to create a complex IoT applicati
 Due to integration with `Kubernetes`' capabilities, ***Shifu*** was born with two advantages in operation and maintenance:
 
 1. ***Shifu***, based on Kubernetes, enables developers to unify the management of applications and IoT devices by operating and maintaining only one set of k8s clusters, sparing the need to operate and maintain an additional set of IoT platforms.
-
 2. Never having single-point failures. Unlike other IoT platforms, ***Shifu***'s architecture is formed with several copies of ***deviceShifu***, so there will never be a single point failure. In fact, ***Shifu*** has been running for 500,000 hours without one failure in core scenarios (factories, labs, supply chain, etc.) in many Fortune 500 companies.
 
 ## By ***Shifu***'s Module

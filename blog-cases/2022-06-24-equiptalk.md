@@ -1,12 +1,12 @@
-# How EquipTalk Empowers Launch Vehicles with Shifu
+# How EquipTalk Empowers Rockets with Shifu
 
-EquipTalk Ltd. is dedicated to develope software-defined high-end equipments, use aerospace measurement technology to build the next-generation digital base for high-end equipments, build the mapping engine of the virtual and real world of high-end equipment, and empower equipment in all aspects. 
+EquipTalk Ltd. is dedicated to develop software-defined high-end equipments. Leveraging the aerospace measurement technology as the next-generation digital foundation for high-end equipments, EquipTalk strives to empower high-end equipment in all aspects.
 
 As EquipTalk's data base, ***Shifu*** spares EquipTalk developers the need to develop the underlying infrastructure and device abstraction layer, transforming traditional IoT application development into simple web development, greatly improving the efficiency, quality and reusability of IoT application development. 
 
-## Shifu User Profile
+## User Profile
 
-The core team of [EquipTalk](http://www.equiptalk.cn) comes from universities at home and abroad, with many famous professors and experts in the field of national defense, and has been deeply engaged in the field of launch vehicle testing for more than 20 years, and has developed launch vehicle testing systems deployed in China's four major launch sites and industrial sectors, as four series of China (Long March 5, Long March 3, As the core equipment of four series of launch vehicles (Long March 5, Long March 3, Long March 2 and upper stage series), it has guaranteed hundreds of major space engineering tasks such as China's Beidou system network, space station, lunar exploration and fire exploration. 
+The core team of [EquipTalk](http://www.equiptalk.cn) comes from universities both at home and abroad, with many famous professors and experts in the field of national defense, and has been deeply engaged in the field of rocket testing for more than 20 years, and has developed rocket testing systems deployed in China's four major launch sites and industrial sectors, as four series of China (Long March 5, Long March 3, As the core equipment of four series of rockets (Long March 5, Long March 3, Long March 2 and upper stage series), it has guaranteed hundreds of major space engineering tasks such as China's Beidou system network, space station, lunar exploration and fire exploration. 
 
 EquipTalk mainly serves the manufacturers and users of high-end complex equipment in the field of aerospace, rail transportation, ships and marine engineering, energy, etc. to ensure the reliable and safe production and use of high-end equipment. 
 
@@ -35,13 +35,13 @@ Generalized and modularized rocket rapid test equipment (four models)
 
 ![](/blog-cases-equiptalk/4.png)
 
-## What Shifu Provides
+## What is ***Shifu***
 
 ***Shifu*** is the next generation of open source industrial IoT development framework, making developing an industrial scenario as simple as developing a Web app. Shifu's high scalability allows it to access almost any device and protocol. Once integrating a device, ***Shifu*** generates a digital twin of the connected device in the form of a microservice in the system and opens up the device data and capabilities in the form of APIs. In this way, traditional IoT application development is reduced to simple web development, which greatly improves the efficiency, quality and reusability of IoT application development.
 
 ***Shifu*** acts as EquipTalk's data base, sparing EquipTalk developers the need to develop the underlying infrastructure and device abstraction layer. As a result, EquipTalk is able to focus on developing business logic, abstracting the expertise of several well-known professors and experts in the defense field into the EquipTalk software platform, and creating a one-stop solution for high-end equipment testing.
 
-## The new architecture of EquipTalk after integrating Shifu
+## The new architecture of EquipTalk after integrating ***Shifu***
 
 **Overall architecture diagram**
 
@@ -55,7 +55,7 @@ The following diagram shows the interaction between **EquipTalk and Shifu**
 
 ![](/blog-cases-equiptalk/7.png)
 
-## Final result
+## Outcome
 
 1. 85% reduction in device integration cost with ***Shifu***'s device access module 
 2. 200% increase in application development efficiency with ***Shifu***'s application development module 
