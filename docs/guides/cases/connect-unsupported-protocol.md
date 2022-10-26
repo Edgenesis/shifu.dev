@@ -1,32 +1,32 @@
 ---
-title: Access devices with unsupported protocols
+title: Integrate devices with unsupported protocols
 sidebar_position: 5
 ---
 
 :::note
-Although ***Shifu*** has been unremittingly trying to support more protocols, there are so many protocols for IoT device communication that it is inevitable to meet with protocols not yet supported when using ***Shifu***. This article will show you how to access devices in ***Shifu*** using third-party drivers.
+Although ***Shifu*** has been unremittingly trying to support more protocols, there are so many protocols for IoT device communication that it is inevitable to meet with protocols not yet supported when using ***Shifu***. This article will show you how to integrate devices into ***Shifu*** using third-party drivers.
 :::
 
 :::tip
-If you'd like to contribute codes and add a new driver to ***Shifu*** project, please check [***deviceShifu*** Development Guide](https://github.com/Edgenesis/shifu/blob/main/docs/development/develop-deviceshifu.md).
+If you'd like to contribute and add a new driver to ***Shifu*** project, please check [***deviceShifu*** Development Guide](https://github.com/Edgenesis/shifu/blob/main/docs/development/develop-deviceshifu.md).
 :::
 
 ## Technical Principle
 
 You can check the folder [pkg/deviceshifu](https://github.com/Edgenesis/shifu/tree/main/pkg/) in [***Shifu*** repository](https://github.com/Edgenesis/shifu.deviceshifu) to see the ***deviceShifu***s supported by ***Shifu***. You can see that [pkg/deviceshifu/deviceshifuhttp](https://github.com/Edgenesis/shifu/tree/main/pkg/deviceshifu/deviceshifuhttp) will convert an IoT device using HTTP protocol to ***debiveShifu***.
-In other words, we only need to convert unsupported protocols to HTTP interfaces.
+In other words, we only need to convert unsupported protocols to HTTP APIs.
 
 ## Use Case
 
 Take a device with RS485-Modbus protocol as an example.
 
 :::note
-[RS485](https://baike.baidu.com/item/RS-485/9695794) is a hardware connection protocol, and [Modbus](https://baike.baidu.com/item/Modbus通讯协议/5972462) is a software layer connection protocol.
+[RS485]( https://en.wikipedia.org/wiki/RS-485) is a hardware connection protocol, and [Modbus]( https://en.wikipedia.org/wiki/Modbus) is a software layer connection protocol.
 :::
 
 ### Reading data
 
-We need to first find a third-party library that can read data from RS485-Modbus devices. Here we use Python as programming language, and [pymodbus](https://pymodbus.readthedocs.io/en/latest/) as the third-party library. In this case, the physical device RS485 is connected to the computer via an RS485-to-USB chip, so the Python class used is [ModbusSerialClient](https://pymodbus.readthedocs.io/en/latest/source/library/pymodbus.client.html#pymodbus.client.serial.ModbusSerialClient).
+We need to first find a third-party library that can read data from RS485-Modbus devices. Here we use Python as programming language, and [pymodbus](https://pymodbus.readthedocs.io/en/latest/) as the third-party library. In this case, the physical device RS485 is connected to the computer via an RS485-to-USB module, so the Python class used is [ModbusSerialClient](https://pymodbus.readthedocs.io/en/latest/source/library/pymodbus.client.html#pymodbus.client.serial.ModbusSerialClient).
 
 ```py
 from pymodbus.client.sync import ModbusSerialClient
