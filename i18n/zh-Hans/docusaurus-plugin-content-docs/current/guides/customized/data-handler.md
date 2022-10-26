@@ -72,7 +72,7 @@ make buildx-build-imag-deviceshifu-http-http
 
 ### 4. 启动Shifu
 
-这部分与[快速启动演示](.../.../tutorials/demo-install.md)中的内容完全一样。
+这部分与[快速启动演示](i18n\zh-Hans\docusaurus-plugin-content-docs\current\tutorials\demo-install.md)中的内容完全一样。
 
 在 ***Shifu***运行后，我们需要将新建立的湿度检测器虚拟设备导入到`kind`集群中。
 
