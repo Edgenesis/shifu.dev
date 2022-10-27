@@ -31,10 +31,6 @@
     "message": "使用指南",
     "description": "The label of footer link with label=How-to guides linking to /docs/guides"
   },
-  "link.item.label.References": {
-    "message": "开发者文档",
-    "description": "The label of footer link with label=References linking to /docs/references"
-  },
   "link.item.label.Twitter": {
     "message": "Twitter",
     "description": "The label of footer link with label=Twitter linking to https://twitter.com/ShifuFramework"

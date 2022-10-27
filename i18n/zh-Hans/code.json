@@ -14,9 +14,6 @@
   "Agree": {
     "message": "同意"
   },
-  "Data Acquisition": {
-    "message": "数据采集"
-  },
   "Automated collection of protocol and driver's value": {
     "message": "无论是协议规定的数据，还是驱动返回值，Shifu都能自动采集"
   },
@@ -37,9 +34,6 @@
   },
   "As light as a Raspberry Pi! (2G RAM)": {
     "message": "只需一个2G内存的树莓派就可以在生产环境跑起Shifu"
-  },
-  "Cloud-Side Collaboration": {
-    "message": "云边协同"
   },
   "Compatible with all K8s-based cloud/edge frameworks (OpenYurt, KubeEdge, etc.)": {
     "message": "Shifu兼容所有基于k8s的云边协同框架（OpenYurt, KubeEdge等）"
@@ -152,9 +146,6 @@
   "Install Shifu": {
     "message": "安装Shifu"
   },
-  "Try Out Shifu": {
-    "message": "试玩Shifu"
-  },
   "Welcome to try Shifu Demo": {
     "message": "欢迎体验Shifu Demo"
   },
@@ -238,9 +229,6 @@
   },
   "Start trying out": {
     "message": "进入试玩"
-  },
-  "Try Shifu Cloud for free": {
-    "message": "免费试用Shifu Cloud"
   },
   "1.2 Downlaod Shifu Installer": {
     "message": "1.2 下载 Shifu 安装包"
@@ -549,5 +537,11 @@
   },
   "Shifu Demo": {
     "message": "Shifu Demo"
+  },
+  "Data Collection": {
+    "message": "数据采集"
+  },
+  "Cloud-Edge Collaboration": {
+    "message": "云边协同"
   }
 }

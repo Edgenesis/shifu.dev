@@ -46,5 +46,13 @@
   "sidebar.tutorialSidebar.category.More Information": {
     "message": "更多信息",
     "description": "The label for category More Information in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Command Line Stub": {
+    "message": "命令行中间件",
+    "description": "The label for category Command Line Stub in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Application Development": {
+    "message": "应用开发",
+    "description": "The label for category Application Development in sidebar tutorialSidebar"
   }
 }
