@@ -2,6 +2,7 @@
 title: HTTP 到 SSH 的中间件
 sidebar_position: 0
 ---
+
 # HTTP 到 SSH 的中间件
 
 ## 介绍 
@@ -25,7 +26,7 @@ sidebar_position: 0
 
 举例:
 
-当使用 CURL 去 Post 一个请求到制定 URL， 会是如下命令：
+当使用 `curl` 去 Post 一个请求到制定 URL， 会是如下命令：
 
 `curl -X POST -d "ping 8.8.8.8" http://example.com`
 

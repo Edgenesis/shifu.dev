@@ -14,7 +14,7 @@ sidebar_position: 1
 这个HTTP到PowerShell的中间件是这样设计的：
 
 - 中间件在主机上暴露了一个HTTP接口
-- 该HTTP接口用于转发来自外部的请求到 `Windows`主机
+- 该HTTP接口用于转发来自外部的请求到 `Windows` 主机
 - 中间件将代理结果和执行状态返回给请求者
 
 ### 功能
@@ -64,7 +64,7 @@ kubectl apply -f driver_util/http-to-powershell-stub/examples/Simple-powershell-
 
 ### 代理命令
 
-使用Curl向`Windows`主机发布请求：
+使用 `curl` 向`Windows`主机发布请求：
 
 ```bash
 root@nginx:/# curl "edgedevice-powershell/issue_cmd?flags_no_parameter=ls,C:"
@@ -94,7 +94,7 @@ Approximate round trip times in milli-seconds:
 
 ### 示例
 
-当使用Curl向一个给定的URL发布请求时，命令如下：
+当使用 `curl` 向一个给定的URL发布请求时，命令如下：
 
 `curl "example.com/issue_cmd?flags_no_parameter=ping,8.8.8.8`。
 
@@ -105,36 +105,33 @@ Approximate round trip times in milli-seconds:
 请注意，默认的定时`EDGEDEVICE_DRIVER_EXEC_TIMEOUT_SECOND`可以被URL中的`timeout`标志所覆盖，例如：
 
 - 如果没有`timeout`标志（命令超时，输出不完整）：
+    ```bash
+    root@nginx:/# curl "example.com/issue_cmd?flags_no_parameter=ping,-n,6,8.8.8.8"   
 
-```bash
-root@nginx:/# curl "example.com/issue_cmd?flags_no_parameter=ping,-n,6,8.8.8.8"   
-
-Pinging 8.8.8.8 with 32 bytes of data:
-Reply from 8.8.8.8: bytes=32 time=58ms TTL=114
-Reply from 8.8.8.8: bytes=32 time=51ms TTL=114
-Reply from 8.8.8.8: bytes=32 time=59ms TTL=114
-Reply from 8.8.8.8: bytes=32 time=45ms TTL=114
-Reply from 8.8.8.8: bytes=32 time=59ms TTL=114
-```
-
+    Pinging 8.8.8.8 with 32 bytes of data:
+    Reply from 8.8.8.8: bytes=32 time=58ms TTL=114
+    Reply from 8.8.8.8: bytes=32 time=51ms TTL=114
+    Reply from 8.8.8.8: bytes=32 time=59ms TTL=114
+    Reply from 8.8.8.8: bytes=32 time=45ms TTL=114
+    Reply from 8.8.8.8: bytes=32 time=59ms TTL=114
+    ```
 - 使用`timeout`标志（输出完整）：
+    ```bash
+    root@nginx:/# curl "example.com/issue_cmd?timeout=10&flags_no_parameter=ping,-n,6,8.8.8.8" 
 
-```bash
-root@nginx:/# curl "example.com/issue_cmd?timeout=10&flags_no_parameter=ping,-n,6,8.8.8.8" 
+    Pinging 8.8.8.8 with 32 bytes of data:
+    Reply from 8.8.8.8: bytes=32 time=60ms TTL=114
+    Reply from 8.8.8.8: bytes=32 time=60ms TTL=114
+    Reply from 8.8.8.8: bytes=32 time=59ms TTL=114
+    Reply from 8.8.8.8: bytes=32 time=59ms TTL=114
+    Reply from 8.8.8.8: bytes=32 time=59ms TTL=114
+    Reply from 8.8.8.8: bytes=32 time=60ms TTL=114
 
-Pinging 8.8.8.8 with 32 bytes of data:
-Reply from 8.8.8.8: bytes=32 time=60ms TTL=114
-Reply from 8.8.8.8: bytes=32 time=60ms TTL=114
-Reply from 8.8.8.8: bytes=32 time=59ms TTL=114
-Reply from 8.8.8.8: bytes=32 time=59ms TTL=114
-Reply from 8.8.8.8: bytes=32 time=59ms TTL=114
-Reply from 8.8.8.8: bytes=32 time=60ms TTL=114
-
-Ping statistics for 8.8.8.8:
-    Packets: Sent = 6, Received = 6, Lost = 0 (0% loss),
-Approximate round trip times in milli-seconds:
-    Minimum = 59ms, Maximum = 60ms, Average = 59ms
-```
+    Ping statistics for 8.8.8.8:
+        Packets: Sent = 6, Received = 6, Lost = 0 (0% loss),
+    Approximate round trip times in milli-seconds:
+        Minimum = 59ms, Maximum = 60ms, Average = 59ms
+    ```
 
 我们还添加了一个参数`stub_toleration`来处理 ***deviceShifu***和中间件之间的延迟问题。默认情况下，它被设置为`1`秒,你可以用以下方法覆盖这个时间:
 
