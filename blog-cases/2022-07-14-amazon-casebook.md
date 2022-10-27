@@ -14,7 +14,7 @@ Edgenesis has developed ***Shifu***, an IoT open source development framework ba
 
 ## Shifu Nails Kubernetes with the Help of Amazon EKS
 
-Since Kubernetes is the underlying structure of ***Shifu***, it needs to be deployed in the cloud for efficient cloud-side collaboration. While working for a Industry 4.0 factory, ***Shifu*** has used AWS's EKS service. The architecture diagram is as follows.
+Since Kubernetes is the underlying structure of ***Shifu***, it needs to be deployed in the cloud for efficient cloud-edge collaboration. While working for a Industry 4.0 factory, ***Shifu*** has used AWS's EKS service. The architecture diagram is as follows.
 
 <img src="/blog-cases-amazon-casebook/architecture.png" width="100%" />
 
