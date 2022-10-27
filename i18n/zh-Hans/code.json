@@ -47,7 +47,7 @@
   "Infinite Scalability": {
     "message": "无限扩容"
   },
-  "The kubernetes-based architecture allows Shifu to expand infinitely, easily handle billions of devices integration, even for smart city projects": {
+  "The Kubernetes-based architecture allows Shifu to expand infinitely, easily handle billions of devices integration, even for smart city projects": {
     "message": "基于k8s的架构让Shifu可以无限扩容，轻松处理亿级设备接入，连智慧城市项目都不在话下"
   },
   "Kubernetes native reliability for IoT application development as easy as developing web apps": {

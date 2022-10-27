@@ -44,7 +44,7 @@ let developerlist = [
     title: translate({ message: 'Extremely Fast Integration' }),
     descript:
       <span>
-        <Translate>Robots to thermometers</Translate><br />
+        <Translate>From robots to thermometers</Translate><br />
         <Translate>Proprietary to standard protocols</Translate><br />
         <Translate>Shifu's high compatibility design makes it easy for you to handle heterogeneous devices</Translate>
       </span>,
