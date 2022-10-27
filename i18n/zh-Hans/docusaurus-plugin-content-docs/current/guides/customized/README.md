@@ -1,5 +1,3 @@
-# Customized deviceShifu data handler
+# 自定义Shifu
 
-:::caution 正在施工
-目前此篇文章仅支持英文，中文正在翻译中...
-:::
+你可以了解到一些 ***Shifu*** 的自定义功能。

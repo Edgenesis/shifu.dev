@@ -26,7 +26,7 @@ The main function for this stub is to take whatever passed to it in the HTTP bod
 
 For example:
 
-When using CURL to post a request to a given URL, the command looks like the following:
+When using `curl` to post a request to a given URL, the command looks like the following:
 
 `curl -X POST -d "ping 8.8.8.8" http://example.com`
 
