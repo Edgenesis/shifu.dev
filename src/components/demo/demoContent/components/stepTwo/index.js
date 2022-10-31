@@ -20,7 +20,7 @@ const codeListOne = [
   {
     id: 3,
     description: translate({ message: "1.4 Run Demo" }),
-    code: `chmod +x scripts/deviceshifu-demo-aio.sh && sudo ./scripts/deviceshifu-demo-aio.sh run_demo`,
+    code: `chmod +x ./test/scripts/deviceshifu-demo-aio.sh && sudo ./test/scripts/deviceshifu-demo-aio.sh run_demo`,
     isCopy: true,
   },
 ]

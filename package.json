@@ -1,18 +1,16 @@
 {
   "name": "shifu.run",
-  "version": "0.0.0",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "start-zh": "docusaurus start --locale zh-Hans",
     "build": "docusaurus build --no-minify",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "dev": "docusaurus build --no-minify && docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-translations-zh": "docusaurus write-translations --locale zh-Hans",
+    "clear": "docusaurus clear"
   },
   "dependencies": {
     "@docusaurus/core": "^2.1.0",

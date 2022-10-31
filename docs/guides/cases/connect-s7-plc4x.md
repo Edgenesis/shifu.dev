@@ -9,7 +9,7 @@ sidebar_position: 1
 
 ## Connection
 
-### *Step 1*
+### Step 1
 
 Before connecting to ***Shifu***, the PLC should already be physically connected to the host computer running ***Shifu*** via Ethernet and have an IP address, here we use `192.168.0.1`.
 
@@ -18,7 +18,7 @@ Before connecting to ***Shifu***, the PLC should already be physically connected
 If the IP address of your PLC device is not `192.168.0.1`, you can change `address` in the `edgedevice-plc4x.yaml` file to the IP of your device)
 :::
 
-### *Step 2*
+### Step 2
 
 Create a folder, which in the example we named `plc4x_configuration_directory`. Save all four configuration files described below in this folder.
 
@@ -131,7 +131,7 @@ spec:
 ```
 </details>
 
-### *Step 3*
+### Step 3
 
 Add PLC devices in ***Shifu***，build and start ***deviceShifu***:
 
@@ -168,16 +168,17 @@ For example, the command `curl "deviceshifu-plc4x/read?%Q0.0:BOOL"` returns the 
 curl "deviceshifu-plc4x/read?%Q0.0:BOOL"; echo
 {"field_%Q0.0:BOOL": "BOOL(1bit):false"}
 ```
-At this point *Shifu* returns the status of the first indicator from left to right in the Q area. If the light is on, then it returns true, otherwise it returns false. Since the light is off, the return value is false.
+
+At this point ***Shifu*** returns the status of the first indicator from left to right in the Q area. If the light is on, then it returns true, otherwise it returns false. Since the light is off, the return value is false.
 
 ### write
 
-**write** means to modify the value of the corresponding location through commands:
+`write` means to modify the value of the corresponding location through commands:
 
 For example, the command `curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true"` will change the first bit of `Q0` to true.
 
 ```bash
-curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true";echo
+curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true"; echo
 ```
 
 ### More

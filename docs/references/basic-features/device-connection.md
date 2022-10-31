@@ -9,7 +9,7 @@ sidebar_position: 1
 
 ### 1. Edit the `edgedevice.yaml` file
 
-Before integrating the device, you need to edit the `edgedevice.yaml` file. ``protocolSettings`` can be further configured according to different protocols, please go to [Shifu API Reference](references/api/edgedevice.md#protocolsettings) for detailed configuration.
+Before integrating the device, you need to edit the `edgedevice.yaml` file. `protocolSettings` can be further configured according to different protocols, please go to [Shifu API Reference](references/api/edgedevice.md#protocolsettings) for detailed configuration.
 
 ```yaml  
 ...

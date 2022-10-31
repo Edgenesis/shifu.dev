@@ -19,6 +19,18 @@
     "message": "接入设备",
     "description": "The label for category Connect Devices in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Customized Shifu": {
+    "message": "自定义Shifu",
+    "description": "The label for category Connect Devices in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Command Line Stub": {
+    "message": "命令行中间件",
+    "description": "The label for category Connect Devices in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Application Development": {
+    "message": "应用开发",
+    "description": "The label for category Connect Devices in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Developer Documentation": {
     "message": "开发者文档",
     "description": "The label for category Developer Documentation in sidebar tutorialSidebar"
@@ -46,5 +58,13 @@
   "sidebar.tutorialSidebar.category.More Information": {
     "message": "更多信息",
     "description": "The label for category More Information in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Command Line Stub": {
+    "message": "命令行中间件",
+    "description": "The label for category Command Line Stub in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Application Development": {
+    "message": "应用开发",
+    "description": "The label for category Application Development in sidebar tutorialSidebar"
   }
 }

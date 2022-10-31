@@ -27,7 +27,7 @@ Following commands start a local development server and opens up a browser windo
 
 ```sh
 $ yarn start # en SPA
-$ yarn start --locale zh-Hans # zh-Hans SPA
+$ yarn start-zh # zh-Hans SPA
 ```
 
 ## Deployment
@@ -57,7 +57,7 @@ Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
         - Add `import Translate, {translate} from '@docusaurus/Translate';` at the top of the file.
         - Use `<Translate>string-to-translate</Translate>` to wrap a string as a JSX element;
         - Use `translate({ message: "string-to-translate" }` to take a message and return a string.
-        - Save files and run `yarn write-translations --locale zh-Hans`.
+        - Save files and run `yarn write-translations-zh`.
         - Add translation in `i18n/zh-Hans/code.json`.
     - Or Use jsx syntax:
         - `{
@@ -67,28 +67,27 @@ Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
              cn content
           )`
     -  A Link jump   
-       - Add the class name "special" to the parent node of link a
-         ```
+        - Add the class name `special` to the parent node of link a
+          ```html
           <div className={`${Original class name} special`}>
-             <ButtonSquare
-                 href={localStorage.getItem('manuallySelectLanguage') === 'en'  ? 'English jump address' : 'Chinese Jump Address'}
-                 colorLevel="two" content={translate({message: "Decline"})}></ButtonSquare>
+                <ButtonSquare
+                    href={localStorage.getItem('manuallySelectLanguage') === 'en'  ? 'English jump address' : 'Chinese Jump Address'}
+                    colorLevel="two" content={translate({message: "Decline"})}></ButtonSquare>
           </div>
-         ```
-         
-         These two tag should appear at the same position.
+          ```
+          These two tag should appear at the same position.
 - Translate docs
     - Copy and translate docs in `i18n/zh-Hans/docusaurus-plugin-content-docs/current`.
 - Translate blog
     - `blog`: Put the translated markdowns in `i18n/zh-Hans/docusaurus-plugin-content-blog`.
     - `blog-tech`: Put the translated markdowns in `i18n/zh-Hans/docusaurus-plugin-content-blog-blog-tech`.
 - Translate plugin data
-    - Run `yarn write-translations --locale zh-Hans` to generate json files for translating.
+    - Run `yarn write-translations-zh` to generate json files for translating.
     - Translate
         - sidebar items: `i18n/zh-Hans/docusaurus-plugin-content-docs/current/current.json`
         - navbar and footer items: `i18n/zh-Hans/docusaurus-theme-classic/*.json`
 - Check translation
-    - Run `yarn start --locale zh-Hans` to start website in `zh-Hans` for local development. (Each locale is a distinct standalone single-page application: it is not possible to start the Docusaurus sites in all locales at the same time.)
+    - Run `yarn start-zh` to start website in `zh-Hans` for local development. (Each locale is a distinct standalone single-page application: it is not possible to start the Docusaurus sites in all locales at the same time.)
 
 ### Admonition
 
@@ -100,7 +99,9 @@ Use grammar below to add a admonition:
 :::note
 A common note.
 :::
+```
 
+```
 :::caution Don't use this in production
 A caution with title.
 :::
