@@ -1,6 +1,6 @@
 # 部署遥测服务
 :::caution
-首先确保你已经安装了***shifu***。如果你没有安装***shifu***，请看一下[本地安装测试](.../install-shifu-dev.md)
+首先确保你已经安装了***shifu***。如果你没有安装***shifu***，请看一下[本地安装测试](../install-shifu-dev.md)
 :::
 
 ## 什么是遥测服务
