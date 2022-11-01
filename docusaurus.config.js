@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
@@ -151,51 +151,6 @@ const config = {
       },
       footer: {
         style: 'light',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Get Started',
-                to: '/docs/tutorials',
-              },
-              {
-                label: 'How-to guides',
-                to: '/docs/guides',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/ShifuFramework',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/7yXmbQm8ns',
-              },
-              {
-                label: 'Reddit',
-                href: 'https://www.reddit.com/user/ShifuFramework/',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/edgenesis/shifu',
-              },
-              {
-                label: 'Download Demo',
-                href: '/disclaimer',
-              },
-            ],
-          },
-        ],
         copyright: `© ${new Date().getFullYear()} Edgenesis. | <a href="https://beian.miit.gov.cn/">京ICP备2021037926号</a>  | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039843">京公网安备11010802039843号</a>`,
       },
       prism: {

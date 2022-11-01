@@ -1,6 +1,6 @@
 ---
 title: 支持情况
-sidebar_position: 3
+sidebar_position: 0
 ---
 
 # 支持情况

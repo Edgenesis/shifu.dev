@@ -1,9 +1,9 @@
 ---
-title: 本机安装测试
+title: 本机安装
 sidebar_position: 1
 ---
 
-# 本机安装测试
+# 本机安装
 
 生产环境中 ***Shifu*** 可以直接部署在K8s集群中。
 

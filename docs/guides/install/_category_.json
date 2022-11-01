@@ -1,6 +1,6 @@
 {
-  "label": "More Information",
-  "position": 6000,
+  "label": "Install",
+  "position": 10,
   "link": {
     "type": "doc",
     "id": "README"

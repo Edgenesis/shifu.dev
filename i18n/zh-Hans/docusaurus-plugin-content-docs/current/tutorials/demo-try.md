@@ -476,8 +476,8 @@ sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.clus
 恭喜！！！:rocket: :rocket: :rocket: 您已经完成了 ***Shifu*** 的体验，接下来：
 
 - 您可以查看左侧边栏中的
-    - **使用指南**：更详细的 ***Shifu*** 使用教程。
-    - **开发者文档**
+    - **用户手册**：更详细的 ***Shifu*** 使用教程。
+    - **开发者手册**
         - ***Shifu*** 架构、功能解释。
         - ***Shifu*** API参考。
     - **开源社区**：查看常见问题、获取支持、获取加入开源社区等内容。

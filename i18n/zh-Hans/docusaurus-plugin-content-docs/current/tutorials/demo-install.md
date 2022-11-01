@@ -8,6 +8,9 @@ import TabItem from '@theme/TabItem';
 
 # 下载安装
 
+:::tip
+您在下载安装 ***Shifu*** 的过程中有任何问题，都可以 [联系我们获得支持](community/join.md)。
+:::
 ## 安装 Docker Desktop
 
 在本地安装和体验 ***Shifu***，需要先安装 `Docker Desktop`。

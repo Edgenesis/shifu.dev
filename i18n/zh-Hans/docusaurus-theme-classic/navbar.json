@@ -20,11 +20,11 @@
     "description": "Navbar item with label News"
   },
   "item.label.Technical Blog": {
-    "message": "技术博客",
+    "message": "博客",
     "description": "Navbar item with label Technical Blog"
   },
   "item.label.Case Studies": {
-    "message": "用户案例",
+    "message": "最佳实践",
     "description": "Navbar item with label Case Studies"
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: Demo 更新 卸载与恢复
-sidebar_position: 2
+sidebar_position: 0
 ---
 
 # Demo 更新 卸载与恢复

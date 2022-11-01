@@ -1,9 +1,9 @@
 ---
-title: 生产安装部署
-sidebar_position: 0
+title: 生产安装
+sidebar_position: 2
 ---
 
-# 生产安装部署
+# 生产安装
 
 在生产环境部署 ***Shifu*** 前您需要先[安装 Kubernetes](https://kubernetes.io/releases/download/)。
 

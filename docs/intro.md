@@ -20,4 +20,4 @@ You can select the content of which you wish to view in the left sidebar.
 - [**User's Guide**](./guides/): Get more detailed guides on how to use ***Shifu***, which will cover majority of cases.
 - [**Developer Documentation**](./references/): Check ***Shifu***'s API reference.
 - [**Open Source Community**](./community/): Learn how to contribute to ***Shifu*** and get to join the open source community.
-- [**More Information**](./more/): View frequently asked questions and more.
+- [**FAQs**](./FAQs/): View frequently asked questions and more.
