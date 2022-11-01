@@ -1,6 +1,6 @@
 ---
-title: Update, Uninstall and Restore Demo
-sidebar_position: 2
+title: Update, Uninstall and Restore
+sidebar_position: 3
 ---
 
 # Update, Uninstall and Restore Demo
@@ -49,7 +49,7 @@ You can check the running status of the kind container with the following comman
 sudo docker ps -a 
 ```
 
-If you do not see any output, you are not running the kind container, go to [download-install](../tutorials/demo-install.md) to install it.
+If you do not see any output, you are not running the kind container, go to [download-install](docs\tutorials\demo-install.md) to install it.
 
 If you see `Status` as `Up`, it means your current `kind` container is running.
 
@@ -69,8 +69,8 @@ Next, use the following command to see ***Shifu*** in action.
 sudo kubectl get pod -n shifu-crd-system
 ```
 
-If you get the following output, i.e. `Status` is `Running`, then ***Shifu*** is running and you can go to [Try it Out](../tutorials/demo-try.md) to continue the experience.
+If you get the following output, i.e. `Status` is `Running`, then ***Shifu*** is running and you can go to [Try it Out](docs\tutorials\demo-try.md) to continue the experience.
 
 ![](images-demo/shifu-run.png)
 
-If there is no output or your output contains error, i.e. `Status` is `Failed`, then ***Shifu*** is not running or failed to run, you can go to [Download and Install](../tutorials/demo-install.md) to install it.
+If there is no output or your output contains error, i.e. `Status` is `Failed`, then ***Shifu*** is not running or failed to run, you can go to [Download and Install](docs\tutorials\demo-install.md) to install it.

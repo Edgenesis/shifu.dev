@@ -1,3 +1,3 @@
 # FAQs
 
-常见问题包括了您在使用Shifu时可能遇到的问题以及解决方案。
+FAQs covers problems you may encounter while using ***Shifu*** as well as solutions.

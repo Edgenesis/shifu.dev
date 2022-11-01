@@ -1,9 +1,9 @@
 ---
-title: Try it Out
+title: Try out
 sidebar_position: 1
 ---
 
-# Try it Out
+# Try out
 
 We have prepared five devices (AGV, thermometer, microplate reader, PLC and robotic arm) in ***Shifu*** installer for you to explore the abilities of ***Shifu***.
 
@@ -497,5 +497,5 @@ Used images:
 Delete the downloaded ***Shifu*** installer `shifu_demo_aio_xxx_xxx.tar` and the folder `testdir`.
 
 :::tip
-You can also check more detailed instruction in [Update, Uninstall and Restore Demo](../guides/demo-update-delete-recover.md).
+You can also check more detailed instruction in [Update, Uninstall and Restore Demo](docs\guides\install\demo-update-delete-recover.md).
 :::

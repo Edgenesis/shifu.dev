@@ -1,6 +1,6 @@
 ---
-title: Production Environment Deployment
-sidebar_position: 0
+title: Production environment install
+sidebar_position: 2
 ---
 
 # Production Environment Deployment
@@ -14,5 +14,5 @@ kubectl apply -f https://raw.githubusercontent.com/Edgenesis/shifu/v0.4.0/pkg/k8
 ```
 
 :::tip About User Metrics in Shifu
-To learn more about user metrics we collect and how to disable it, please check [User Metrics in ***Shifu***](../more/user-metrics.md).
+To learn more about user metrics we collect and how to disable it, please check [User Metrics in ***Shifu***](docs\guides\relative-information\user-metrics.md).
 :::

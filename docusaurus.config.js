@@ -130,7 +130,7 @@ const config = {
           {
             to: '/technical-blogs',
             position: 'left',
-            label: 'Technical Blog',
+            label: 'Blog',
           },
           {
             href: '/disclaimer',

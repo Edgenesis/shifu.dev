@@ -1,5 +1,5 @@
 ---
-title: Local Installation Test
+title: Local install
 sidebar_position: 1
 ---
 
@@ -127,7 +127,7 @@ sudo kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 ```
 
 :::tip About User Metrics in Shifu
-To learn more about user metrics we collect and how to disable it, please check [User Metrics in ***Shifu***](../more/user-metrics.md).
+To learn more about user metrics we collect and how to disable it, please check [User Metrics in ***Shifu***](docs\guides\relative-information\user-metrics.md).
 :::
 
 ### Note: Download the Image in Advance

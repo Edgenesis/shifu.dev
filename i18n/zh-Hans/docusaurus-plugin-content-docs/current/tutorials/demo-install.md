@@ -1,5 +1,5 @@
 ---
-title: 下载安装
+title: 快速安装
 sidebar_position: 0
 ---
 
