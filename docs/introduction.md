@@ -1,3 +1,10 @@
+---
+id: Introduction
+slug: /
+sidebar_position: 1
+title: Platform Introduction
+---
+
 # Platform Introduction
 
 ***Shifu*** is derived from the Chinese word "师父". **Teachers, therefore preach, teach and dispel doubts.**. As a next-generation open source IoT development framework, ***Shifu*** has gain control over IoT devices and successfully endow such capabilities to developers in the form of APIs. In this way, traditional IoT application development is reduced to simple web development, which greatly improves the efficiency, quality and reusability of IoT application development.
