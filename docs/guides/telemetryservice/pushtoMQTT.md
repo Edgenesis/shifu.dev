@@ -17,7 +17,7 @@ spec:
       MQTTServerAddress: 192.168.14.163:1883 # Edit it to your IP
       MQTTTopic: /test/test # Edit it to your topic which you want to publish
 ```
-
+`telemetrySeriveEndpoint` is telemetryService endpoint Address and  `/mqtt` mean using mqtt client to pusblish this rawData
 `MQTTServerAddress` is your MQTT Broker's address.
 `MQTTTopic` is the topic which you want to publish the rawdata to.
 :::note
