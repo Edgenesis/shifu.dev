@@ -1,9 +1,9 @@
 ---
-id: Introduction
-slug: /
+
 sidebar_position: 1
-title: 平台简介
+
 ---
+
 
 # 平台简介
 

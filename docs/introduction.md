@@ -1,8 +1,7 @@
 ---
-id: Introduction
-slug: /
+
 sidebar_position: 1
-title: Platform Introduction
+
 ---
 
 # Platform Introduction

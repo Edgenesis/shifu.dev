@@ -19,4 +19,4 @@ sidebar_position: 3
 
 ### HTTP to SSH driver stub
 
-`HTTP to SSH driver stub`使得 ***Shifu*** 可以允许用户任意添加新的命令行驱动。参见[远程调用命令行驱动](references/advanced-features/remote-driver-execution.md)。
+`HTTP to SSH driver stub`使得 ***Shifu*** 可以允许用户任意添加新的命令行驱动。参见[远程调用命令行驱动](../advanced-features/stub/README.md)。
