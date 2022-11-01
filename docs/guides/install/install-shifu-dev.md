@@ -10,7 +10,7 @@ In a production environment ***Shifu*** can be deployed directly in a K8s cluste
 Production deployment of ***Shifu*** is very easy, but for testing, we need to do some debugging work locally on the access device. This is where we need to test install ***Shifu*** locally and you need to create clusters locally, some tools like `kind` can help us to create such clusters on our own computers.
 
 :::note
-This article serves the same purpose as [Quick Start](/docs/tutorials/), except that it breaks down the contents of the ***Shifu*** installer and creates a cluster locally using the command line step by step. This approach helps you understand the components used in the operation of ***Shifu***.
+This article serves the same purpose as [Quick Start](docs\tutorials\demo-install.md), except that it breaks down the contents of the ***Shifu*** installer and creates a cluster locally using the command line step by step. This approach helps you understand the components used in the operation of ***Shifu***.
 :::
 
 ## Installing Docker Desktop
@@ -148,4 +148,4 @@ This method will take up local storage. You can use the command `sudo docker rmi
 
 ## Next Step
 
-Congratulations! You have opened a cluster on your machine and installed ***Shifu*** in that cluster. Next you can try [access devices](./cases/) in the cluster now!
+Congratulations! You have opened a cluster on your machine and installed ***Shifu*** in that cluster. Next you can try [access devices](docs\guides\cases\README.md) in the cluster now!

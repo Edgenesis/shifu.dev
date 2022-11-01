@@ -508,5 +508,5 @@ Docker 中的镜像也可以进行删除。使用命令 `sudo docker images` 查
 删除下载的 ***Shifu*** 安装包 `shifu_demo_aio_xxx_xxx.tar` 和文件夹 `testdir`。
 
 :::tip
-您也可以查看更详细的 [***Shifu*** Demo 更新 卸载与恢复](../guides/demo-update-delete-recover.md)。
+您也可以查看更详细的 [***Shifu*** Demo 更新 卸载与恢复](i18n\zh-Hans\docusaurus-plugin-content-docs\current\guides\install\demo-update-delete-recover.md)。
 :::

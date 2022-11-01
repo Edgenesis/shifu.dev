@@ -16,8 +16,8 @@ title: Contents
 You can select the content of which you wish to view in the left sidebar.
 
 - [**Introduction**](./introduction/): Learn about ***Shifu***'s architecture, features and application scenarios.
-- [**Getting Started**](./tutorials/): Try it out by installing ***Shifu*** on your computer.
-- [**User's Guide**](./guides/): Get more detailed guides on how to use ***Shifu***, which will cover majority of cases.
+- [**Get Started**](./tutorials/): Try out by installing ***Shifu*** on your computer.
+- [**How-to Guides**](./guides/): Get more detailed guides on how to use ***Shifu***, which will cover majority of cases.
 - [**Developer Documentation**](./references/): Check ***Shifu***'s API reference.
 - [**Open Source Community**](./community/): Learn how to contribute to ***Shifu*** and get to join the open source community.
 - [**FAQs**](./FAQs/): View frequently asked questions and more.

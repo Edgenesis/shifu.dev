@@ -127,7 +127,7 @@ sudo kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 ```
 
 :::tip 关于用户指标
-要了解更多信息，包括如何禁用内置用户指标收集，请查看[***Shifu*** 中的用户指标](../more/user-metrics.md)。
+要了解更多信息，包括如何禁用内置用户指标收集，请查看[***Shifu*** 中的用户指标](i18n\zh-Hans\docusaurus-plugin-content-docs\current\guides\relative-information\user-metrics.md)。
 :::
 
 ### 注：提前下载镜像
@@ -148,4 +148,4 @@ sudo kind load docker-image edgehub/shifu-controller:nightly
 
 ## 下一步
 
-恭喜！您已经在本机开启了一个集群，而且在该集群中安装了 ***Shifu***。接下来您可以尝试在集群中[接入设备](./cases/README.md)了！
+恭喜！您已经在本机开启了一个集群，而且在该集群中安装了 ***Shifu***。接下来您可以尝试在集群中[接入设备](i18n\zh-Hans\docusaurus-plugin-content-docs\current\guides\cases\README.md)了！

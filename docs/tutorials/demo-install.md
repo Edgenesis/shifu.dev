@@ -147,4 +147,4 @@ You can see that under NAMESPACE `shifu-crd-system`, the controller ***shifuCont
 
 ## Next Step
 
-Congratulations you have installed ***Shifu*** on your computer! Next you can go to [Try it Out](./demo-try.md).
+Congratulations you have installed ***Shifu*** on your computer! Next you can go to [Try out](./demo-try.md).

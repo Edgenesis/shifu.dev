@@ -21,4 +21,4 @@ The `RTSP Client` guarantees the transmission of streaming information.
 
 ### HTTP to SSH driver stub
 
-The `HTTP to SSH driver stub` enables ***Shifu*** to allow users to add new command line drivers at will. See [remote invocation command line driver](references/advanced-features/remote-driver-execution.md).
+The `HTTP to SSH driver stub` enables ***Shifu*** to allow users to add new command line drivers at will. See [remote invocation command line driver](docs\references\advanced-features\customized\README.md).

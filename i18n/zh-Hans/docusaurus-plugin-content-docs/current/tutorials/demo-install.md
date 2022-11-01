@@ -121,11 +121,11 @@ sudo docker ps
 
 您不需要了解 ***Shifu*** 的运作细节，通过 ***Shifu*** 安装包 即可很方便的体验 ***Shifu***。
 
-如果您希望手动创建集群、导入镜像、安装 ***Shifu***，请查看 [本机测试安装](guides/install-shifu-dev.md)。
+如果您希望手动创建集群、导入镜像、安装 ***Shifu***，请查看 [本机测试安装](i18n\zh-Hans\docusaurus-plugin-content-docs\current\guides\install\install-shifu-dev.md)。
 :::
 
 :::tip 关于用户指标
-要了解更多信息，包括如何禁用内置用户指标收集，请查看[***Shifu*** 中的用户指标](../more/user-metrics.md)。
+要了解更多信息，包括如何禁用内置用户指标收集，请查看[***Shifu*** 中的用户指标](i18n\zh-Hans\docusaurus-plugin-content-docs\current\guides\relative-information\user-metrics.md)。
 :::
 
 ### 确认 ***Shifu*** 已启动

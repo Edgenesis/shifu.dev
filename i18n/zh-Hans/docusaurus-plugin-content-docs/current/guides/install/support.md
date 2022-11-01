@@ -50,7 +50,7 @@ sidebar_position: 0
 
 ***Shifu*** 允许用户向平台添加以下形式的驱动:
 
-- [命令行驱动](references/advanced-features/remote-driver-execution.md)
+- [命令行驱动](i18n\zh-Hans\docusaurus-plugin-content-docs\current\references\advanced-features\customized\data-handler.md)
 
 ### 未兼容的驱动
 
