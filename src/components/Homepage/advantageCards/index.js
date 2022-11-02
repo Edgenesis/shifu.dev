@@ -7,19 +7,19 @@ let cardsList = [
   {
     img: require('@site/static/img/index/card-1.svg').default,
     title: translate({message: 'Data Collection'}),
-    descript: <span><Translate>Automated collection of protocol and driver's value</Translate></span>,
+    descript: <span><Translate>Automated collection of protocol and driver data</Translate></span>,
     iconBg: '#E1E1FA',
   },
   {
     img: require('@site/static/img/index/card-2.svg').default,
     title: translate({ message: 'Open Source Community' }),
-    descript: <span><Translate>Open source with limitless cloud carrier choice Versatile deployment on enterprise, edge, private or public cloud service</Translate></span>,
+    descript: <span><Translate>Open source with limitless cloud carrier choice to avoid vendor lock-in.Versatile deployment on enterprise, edge, private or public cloud service</Translate></span>,
     iconBg: '#DDE3FA',
   },
   {
     img: require('@site/static/img/index/card-3.svg').default,
     title: translate({ message: 'K8s Native' }),
-    descript: <span><Translate>Rooted in K8s, hassle-free migration in the future</Translate></span>,
+    descript: <span><Translate>Built on Kubernetes, Shifu spares you the hassle of migration in the future</Translate></span>,
     iconBg: '#E0EFFF',
   },
   {
