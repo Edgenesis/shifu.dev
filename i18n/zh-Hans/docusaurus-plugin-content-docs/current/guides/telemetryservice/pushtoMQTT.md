@@ -28,7 +28,7 @@ spec:
 ```yaml
 # configmap.yaml
 data:
-  telemetries: 
+  telemetries: |
     telemetries:
       device_health1:
         properties:

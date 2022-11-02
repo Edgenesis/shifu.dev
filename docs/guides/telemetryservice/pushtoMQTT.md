@@ -28,7 +28,7 @@ If you have multiple telemetry services, you can write them in one file and spli
 ```yaml
 # configmap.yaml
 data:
-  telemetries: 
+  telemetries: |
     telemetries:
       device_health1:
         properties:
@@ -38,9 +38,9 @@ data:
 ```
 Then edit the Configmap yaml file and make sure that the telemetryCollectionService value is the same as the name of the telemetry service you created in the previous step.
 
-## deploy deviceshifu again
+## deploy deviceShifu again
 
-Then you need to deploy deviceshifu again so that the telemetry will push rawData to the telemetry service and publish it to your mqtt broker.
+Then you need to deploy deviceShifu again so that the telemetry will push raw data to the telemetry service and publish it to your MQTT broker.
 
 ## examples
 

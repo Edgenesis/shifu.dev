@@ -1,6 +1,6 @@
 # Deploy Telemetry Services
 :::caution
-Make sure you have ***shifu*** installed first. If you have not installed ***shifu***, please have a look [Local Installation Test](../install-shifu-dev.md)
+Make sure you have ***Shifu*** installed first. If you have not installed ***Shifu***, please have a look [Local Installation Test](../install-shifu-dev.md)
 :::
 
 ## What is Telemetry Services
@@ -10,13 +10,8 @@ Make sure you have ***shifu*** installed first. If you have not installed ***shi
 
 ## Install Telemetry Service
 
-First of all, you need to clone ***shifu** repo.
-```bash
-git clone https://github.com/Edgenesis/shifu.git
-```
-
 ***Shifu*** provides a one-click installation where you can use the following command to install ***telemetryService*** into your cluster.
 
 ```bash
-kubectl apply -f examples/telemetryservice
+kubectl apply -f https://raw.githubusercontent.com/Edgenesis/shifu/main/pkg/telemetryservice/telemetryservice_install.yaml
 ```
