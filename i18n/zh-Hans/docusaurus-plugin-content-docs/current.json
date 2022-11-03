@@ -19,6 +19,10 @@
     "message": "接入设备",
     "description": "The label for category Connect Devices in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.TelemetryService": {
+    "message": "遥测服务",
+    "description": "The label for category TelemetryService in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Customized Shifu": {
     "message": "自定义Shifu",
     "description": "The label for category Connect Devices in sidebar tutorialSidebar"
