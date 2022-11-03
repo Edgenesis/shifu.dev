@@ -1,6 +1,6 @@
 # Deploy Telemetry Services
 :::caution
-Make sure you have ***Shifu*** installed first. If you have not installed ***Shifu***, please have a look [Local Installation Test](../install-shifu-dev.md)
+Make sure you have ***Shifu*** installed first. If you have not installed ***Shifu***, please have a look [Local Install](../install/install-shifu-dev.md)
 :::
 
 ## What is Telemetry Services
