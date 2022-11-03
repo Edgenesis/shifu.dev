@@ -13,7 +13,7 @@ sidebar_position: 1
 
 ## 创新优势
 
-### 🌨️云原生
+### ☁️云原生
 作为云原生框架，***Shifu*** 通过 [Kubernetes](https://kubernetes.io/) 的 [CRD功能](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) 延伸了 Kubernetes 的资源，来实现高可用、静态域名、服务管理等功能，***Shifu*** 可以支持对任何设备进行任何形式的配置。当连接物理设备时，***Shifu*** 会识别并以一个 [Kubernetes Pod](https://kubernetes.io/docs/concepts/workloads/pods/) 的方式启动该设备的数字孪生 deviceShifu。开发者通过接入 deviceShifu 的接口，可以获取物联网设备的所有功能，同时编程定义设备原本不具备的功能。云原生的 ***Shifu*** 将系统运维的难度大大降低，应用开发者可以通过一套 Kubernetes 基础架构进行运维管理。Shifu 将推动 Kubernetes 成为物联网开发的底层架构标准，将容器编排技术带入物联网软件开发生态中。
 ### 👥数字孪生
 通过透明框架内的数字孪生技术，***Shifu***成功为设备赋予有思考能力的 “数字大脑”。数字孪生将反映设备的实时状态，对其进行开发操作等同于操作设备本身。物联网设备接入到 ***Shifu*** 中便会生成标准化接口，实现互联网互动，通过平台层对场景内所有设备、机器进行北向数据收集和南向指令管控。

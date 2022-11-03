@@ -10,7 +10,7 @@ sidebar_position: 1
 
 ## Innovation Advantages
 
-### 🌨️ Cloud-native
+### ☁️ Cloud-native
 As a cloud-native framework, ***Shifu*** extends the resources of [Kubernetes](https://kubernetes.io/) through its [CRD feature](https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/) to achieve high availability, static domain names, service management, etc. ***Shifu*** can support any form of configuration for any device. When a physical device is connected, ***Shifu*** recognizes and starts the device's digital twin deviceShifu as a [Kubernetes Pod](https://kubernetes.io/docs/concepts/workloads/pods/). Developers can access all the features of an IoT device by accessing the deviceShifu API, you can also define features that the device doesn't originally have. The cloud-native ***Shifu*** makes system O&M much easier, and application developers can manage O&M through a set of Kubernetes infrastructure. ***Shifu*** will extend Kubernetes' capabilities in order to become the underlying architecture standard for IoT development, bringing container orchestration technology to the IoT software development ecosystem.
 ### 👥 Digital Twins
 Leveraging on digital twin technology, ***Shifu*** successfully empowers devices with a thinking "digital brain". The digital twin will reflect the real-time state of the device, and developing operations on it is equivalent to operating the device itself. IoT devices plugged into ***Shifu*** will generate standardized APIs for interaction, achieve northbound data collection and southbound command control for all devices within the scene through the platform layer.
