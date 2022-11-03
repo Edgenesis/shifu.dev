@@ -1,39 +1,45 @@
 {
-  "Get one-on-one support": {
+  "Get one-on-one guidance": {
     "message": "获取一对一操作指导"
   },
-  "Please open this site on PC": {
-    "message": "请使用PC端打开此页面"
+  "Please open this page from PC": {
+    "message": "请从PC端打开此页面"
   },
-  "Please be sure to read the following carefully": {
+  "Please read the following carefully": {
     "message": "请务必认真阅读以下内容"
   },
   "Decline": {
     "message": "拒绝"
   },
-  "Agree": {
-    "message": "同意"
+  "Accept": {
+    "message": "接受"
   },
-  "Automated collection of protocol and driver's value": {
+  "Data Acquisition": {
+    "message": "数据采集"
+  },
+  "Automated collection of protocol and driver data": {
     "message": "无论是协议规定的数据，还是驱动返回值，Shifu都能自动采集"
   },
   "Open Source Community": {
     "message": "开源社区"
   },
-  "Open source with limitless cloud carrier choice Versatile deployment on enterprise, edge, private or public cloud service": {
+  "Open source with limitless cloud carrier choice to avoid vendor lock-in.Versatile deployment on enterprise, edge, private or public cloud service": {
     "message": "Shifu的核心代码全部开源，让您避免供应商锁定。您更可以自由地选择让Shifu部署在企业内部，边缘云、私有云、混合云或公有云上"
   },
   "K8s Native": {
-    "message": "K8s原生"
+    "message": "Kubernetes原生"
   },
-  "Rooted in K8s, hassle-free migration in the future": {
-    "message": "k8s已经一统天下，Shifu基于k8s的架构可以让你免去未来迁移到k8s上的烦恼"
+  "Built on Kubernetes, Shifu spares you the hassle of migration in the future": {
+    "message": "Shifu基于Kubernetes的架构让你免去未来再次迁移的烦恼"
   },
   "Lightweight Hardware Requirement": {
     "message": "轻量化"
   },
   "As light as a Raspberry Pi! (2G RAM)": {
-    "message": "只需一个2G内存的树莓派就可以在生产环境跑起Shifu"
+    "message": "只需一个2G内存的树莓派就可以在生产环境跑起Shifu！"
+  },
+  "Cloud-Edge Collaboration": {
+    "message": "云边协同"
   },
   "Compatible with all K8s-based cloud/edge frameworks (OpenYurt, KubeEdge, etc.)": {
     "message": "Shifu兼容所有基于k8s的云边协同框架（OpenYurt, KubeEdge等）"
@@ -44,83 +50,83 @@
   "Billions level of device service scalability Big enough to run the city": {
     "message": "基于k8s的架构让Shifu可以无限扩容，轻松处理亿级设备接入，连智慧城市项目都不在话下"
   },
-  "Orchestration for IoT Application Development": {
+  "Kubernetes native IoT development framework": {
     "message": "让开发产业场景像开发APP一样简单！"
   },
   "Extremely Fast Integration": {
     "message": "极速设备接入"
   },
-  "From machinery to thermometers": {
+  "From robots to thermometers": {
     "message": "大到使用私有驱动的工程机械"
   },
-  "With private or public protocol": {
-    "message": "小到使用公有协议的温湿度计"
+  "From proprietary to standard protocols": {
+    "message": "小到使用标准协议的温湿度计"
   },
-  "Shifu's high compatibility design makes it easy for you to handle universal devices": {
-    "message": " Shifu超高兼容性让你轻松应对各种异构设备"
+  "Shifu's high compatibility design makes it easy to cope with all heterogeneous devices": {
+    "message": "Shifu超高兼容性让你轻松应对各种异构设备"
   },
   "Modularized Deployment Experience": {
     "message": "模块化部署体验"
   },
-  "Devices and applications connected with Shifu will be packaged into puzzle-like modules": {
-    "message": "所有接入Shifu的设备及应用都会被封装成一个拼图式模块"
+  "Devices and applications integrated into Shifu will be packaged into lego-like modules": {
+    "message": "接入到Shifu 的设备和应用都会被封装成乐高式的模块"
   },
-  "Just call for service as you will": {
-    "message": "根据场景内的设备不同, 按需加载即可"
+  "You can conjure up a unique substrate 100% suitable for your scenario out of these modules": {
+    "message": "你可以用这些模块搭出一个与场景完美适配的开发框架"
   },
   "Efficient Application Development": {
     "message": "高效应用开发"
   },
-  "Connected devices will be abstracted as functional API": {
+  "Capabilities of the device integrated into Shifu will be abstracted as APIs": {
     "message": "接入设备后，Shifu会自动把设备的能力抽象成API"
   },
-  "With the help of Shifu, applications will be decoupled from hardware": {
+  "Completely decoupling your application from the hardware": {
     "message": "让你的应用和硬件设备彻底解耦"
   },
-  "Thus, make the IoT application development as efficient as on the mobile platform": {
-    "message": "把低效的物联网应用开发变得像面向对象编程一样高效"
+  "Making IoT application development as efficient as mobile app development": {
+    "message": "让低效的物联网应用开发变得像手机应用开发一样高效"
   },
   "Aero-Grade Stability": {
     "message": "航天级稳定性"
   },
-  "Shifu has been validated in aerospace scenarios": {
-    "message": "Shifu已通过在航天场景验证"
+  "Shifu has been validated under aerospace scenarios": {
+    "message": "Shifu已经通过航天场景验证"
   },
-  "Protected from downtime crash with 99.9999% reliability": {
-    "message": "提供99.9999%的可靠性, 让你远离宕机烦恼"
+  "Ensuring 99.9999% availability with built-in redundancy": {
+    "message": "使用内置备份技术，保证99.99999%高可用性"
   },
   "Multi-Dimensional Security Policy": {
     "message": "多维度安全策略"
   },
-  "Backed by the cloud-native security team of the UN": {
-    "message": "联合国的云原生安全团队操刀"
+  "Designed by ex-security team of United Nations": {
+    "message": "联合国前云原生安全团队操刀"
   },
-  "No matter data encryption or network security": {
-    "message": "无论是数据加密还是网络安全 "
+  "From data encryption to network security": {
+    "message": "从数据加密到网络安全 "
   },
-  "Shifu is on duty 24X7": {
-    "message": "Shifu不一而足"
+  "Shifu is on duty 24x7": {
+    "message": "Shifu时刻为您的安全保驾护航"
   },
   "Globalized Community Ecology": {
     "message": "全球化社区生态"
   },
-  "Benefit from cloud-native software ecosystem and native Kubernetes architecture": {
-    "message": "Shifu得益于Kubernetes原生架构, 可以无缝接入强大的云原生软件生态"
+  "Benefiting from cloud-native software ecosystem and native Kubernetes architecture": {
+    "message": "得益于Kubernetes原生架构, Shifu得以无缝接入强大的云原生软件生态"
   },
-  "Issues will be helped across a worldwide range": {
-    "message": "让全球的开发者帮你解决后顾之忧"
+  "You can draw on the wisdom of global developers to solve your issues.": {
+    "message": "让全球开发者的智慧结晶都为你所用"
   },
-  "Shifu's Value to Developers": {
+  "Shifu‘s Value to Developers": {
     "message": "Shifu对开发者的价值"
   },
   "Shifu's Value to Engineering": {
     "message": "Shifu对工程团体的价值"
   },
   "Shifu's Unique Advantages": {
-    "message": "Shifu的独有优势"
+    "message": "Shifu的独特优势"
   },
-  "Trusted by Industry Leaders": {
-    "message": "Shifu受行业领导者信任"
+  "Well trusted by Industry Leaders": {
+    "message": "Shifu深受行业领导者信任"
   },
   "Copied successfully": {
     "message": "复制成功"

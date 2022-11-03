@@ -14,7 +14,7 @@ export default function Sponsor() {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <p className={styles.title}>
-          <Translate>Trusted by Industry Leaders</Translate>
+          <Translate>Well trusted by Industry Leaders</Translate>
         </p>
         <div className={styles.rotation}>
           <div className={styles.content}>
