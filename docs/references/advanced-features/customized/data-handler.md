@@ -68,7 +68,7 @@ make buildx-build-image-deviceshifu-http-http
 
 ### 4. Start Shifu
 
-This will be exactly the same as in [quick start demo](../../tutorials/demo-install.md).
+This will be exactly the same as in [quick install](docs\tutorials\demo-install.md).
 
 After ***Shifu*** is running, we need to import the newly built humidity detector virtual device into the `kind` cluster, like this:
 

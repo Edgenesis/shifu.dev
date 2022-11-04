@@ -476,8 +476,8 @@ sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.clus
 恭喜！！！:rocket: :rocket: :rocket: 您已经完成了 ***Shifu*** 的体验，接下来：
 
 - 您可以查看左侧边栏中的
-    - **使用指南**：更详细的 ***Shifu*** 使用教程。
-    - **开发者文档**
+    - **用户手册**：更详细的 ***Shifu*** 使用教程。
+    - **开发者手册**
         - ***Shifu*** 架构、功能解释。
         - ***Shifu*** API参考。
     - **开源社区**：查看常见问题、获取支持、获取加入开源社区等内容。
@@ -508,5 +508,5 @@ Docker 中的镜像也可以进行删除。使用命令 `sudo docker images` 查
 删除下载的 ***Shifu*** 安装包 `shifu_demo_aio_xxx_xxx.tar` 和文件夹 `testdir`。
 
 :::tip
-您也可以查看更详细的 [***Shifu*** Demo 更新 卸载与恢复](../guides/demo-update-delete-recover.md)。
+您也可以查看更详细的 [***Shifu*** Demo 更新 卸载与恢复](i18n\zh-Hans\docusaurus-plugin-content-docs\current\guides\install\demo-update-delete-recover.md)。
 :::

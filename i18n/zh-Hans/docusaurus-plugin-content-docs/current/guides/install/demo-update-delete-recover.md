@@ -1,6 +1,6 @@
 ---
 title: Demo 更新 卸载与恢复
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Demo 更新 卸载与恢复
@@ -11,10 +11,10 @@ sidebar_position: 2
 在安装新版 ***Shifu*** Demo 之前请先卸载老版本的 ***Shifu***。
 :::
 
-前往 [**Shifu** Demo 下载](https://shifu.run/disclaimer) 页面 下载最新的 ***Shifu*** 安装包。
+前往 [**Shifu** Demo 下载](https://shifu.run/zh-Hans/disclaimer) 页面 下载最新的 ***Shifu*** 安装包。
 
 :::note
-***Shifu*** Demo 安装包会在 ***Shifu*** 更新时更新。
+***Shifu*** Demo 安装包会随着 ***Shifu***自动更新。
 :::
 
 ## 卸载 ***Shifu*** Demo
@@ -49,7 +49,7 @@ sudo docker ps -a
 sudo docker ps -a 
 ```
 
-如果您未看到任何输出时，表示您没有运行 `kind` 容器，请前往 [下载安装](../tutorials/demo-install.md) 进行安装。
+如果您未看到任何输出时，表示您没有运行 `kind` 容器，请前往 [下载安装](i18n\zh-Hans\docusaurus-plugin-content-docs\current\tutorials\demo-install.md) 进行安装。
 
 如果您看到的 `Status` 为 `Up` 时，表示您当前的 `kind` 容器正在运行中。
 ![](images-demo/docker-kind-up.png)
@@ -68,8 +68,8 @@ sudo docker start kind-control-plane
 sudo kubectl get pod -n shifu-crd-system
 ```
 
-如果您的输出为以下，即 `Status` 为 `Running` 则表示 ***Shifu*** 已运行，您可以前往[体验试用](../tutorials/demo-try.md) 继续体验。
+如果您的输出为以下，即 `Status` 为 `Running` 则表示 ***Shifu*** 已运行，您可以前往[体验试用](i18n\zh-Hans\docusaurus-plugin-content-docs\current\tutorials\demo-try.md) 继续体验。
 
 ![](images-demo/shifu-run.png)
 
-如果没有输出或者输出错误，即 `Status` 为 `Failed` 时则表示 ***Shifu*** 未运行或者运行失败，您可以前往[下载安装](../tutorials/demo-install.md)进行安装。
+如果没有输出或者输出错误，即 `Status` 为 `Failed` 时则表示 ***Shifu*** 未运行或者运行失败，您可以前往[下载安装](i18n\zh-Hans\docusaurus-plugin-content-docs\current\tutorials\demo-install.md)进行安装。

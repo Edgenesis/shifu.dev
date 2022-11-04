@@ -1,12 +1,12 @@
 ---
-title: Download and Install
+title: Quick install
 sidebar_position: 0
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Download and Install
+# Quick install
 
 ## Install Docker Desktop
 
@@ -118,11 +118,11 @@ The ***Shifu*** installation package contains the following.
 
 You don't need to know the details of how ***Shifu*** works, you can easily experience ***Shifu*** with the ***Shifu*** installer.
 
-If you wish to manually create clusters, import images, and install ***Shifu***, please see the [native test installation](guides/install-shifu-dev.md).
+If you wish to manually create clusters, import images, and install ***Shifu***, please see the [native test installation](docs\guides\install\install-shifu-dev.md).
 :::
 
 :::tip About User Metrics in Shifu
-To learn more about user metrics we collect and how to disable it, please check [User Metrics in ***Shifu***](../more/user-metrics.md).
+To learn more about user metrics we collect and how to disable it, please check [User Metrics in ***Shifu***](docs\guides\relative-information\user-metrics.md).
 :::
 
 ### Confirm ***Shifu*** is running
@@ -147,4 +147,4 @@ You can see that under NAMESPACE `shifu-crd-system`, the controller ***shifuCont
 
 ## Next Step
 
-Congratulations you have installed ***Shifu*** on your computer! Next you can go to [Try it Out](./demo-try.md).
+Congratulations you have installed ***Shifu*** on your computer! Next you can go to [Try out](./demo-try.md).

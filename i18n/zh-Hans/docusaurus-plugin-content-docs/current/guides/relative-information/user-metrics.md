@@ -1,6 +1,6 @@
 ---
 title: Shifu中的用户指标
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 # 用户指标

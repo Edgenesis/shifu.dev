@@ -1,9 +1,9 @@
 ---
-title: 生产安装部署
-sidebar_position: 0
+title: 生产安装
+sidebar_position: 2
 ---
 
-# 生产安装部署
+# 生产安装
 
 在生产环境部署 ***Shifu*** 前您需要先[安装 Kubernetes](https://kubernetes.io/releases/download/)。
 
@@ -14,5 +14,5 @@ kubectl apply -f https://raw.githubusercontent.com/Edgenesis/shifu/v0.4.1/pkg/k8
 ```
 
 :::tip 关于用户指标
-要了解更多信息，包括如何禁用内置用户指标收集，请查看[***Shifu*** 中的用户指标](../more/user-metrics.md)。
+要了解更多信息，包括如何禁用内置用户指标收集，请查看[***Shifu*** 中的用户指标](i18n\zh-Hans\docusaurus-plugin-content-docs\current\guides\relative-information\user-metrics.md)。
 :::
