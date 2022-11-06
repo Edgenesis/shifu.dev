@@ -27,7 +27,7 @@ steps:
     sshEndpoint: 'shifurunssh'
     sourceFolder: 'build'
     contents: 'build.zip'
-    targetFolder: '/home/ubuntu/shifurun-dist'
+    targetFolder: '/opt/shifurun-dist/'
     readyTimeout: '20000'
     cleanTargetFolder: true
     failOnEmptySource: true
