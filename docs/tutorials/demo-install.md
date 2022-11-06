@@ -107,6 +107,11 @@ Go to [**Shifu Demo Download**](https://shifu.run/disclaimer) to download the **
 
 Go directly to the second step in the page and return to this page when you are done.
 
+Or you can install Shifu Demo in the terminal with the following command.
+```bash
+curl -sfL https://raw.githubusercontent.com/Edgenesis/shifu/main/test/scripts/shifu-demo-install.sh | sudo sh -
+```
+
 After the installation is complete ***Shifu*** will be started along with `Docker` when it is run.
 
 :::info
