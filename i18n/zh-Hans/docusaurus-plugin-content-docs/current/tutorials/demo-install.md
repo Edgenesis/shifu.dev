@@ -110,6 +110,12 @@ sudo docker ps
 
 直接进入页面中的第二步，完成后即可回到本页面
 
+或者在终端使用以下命令来安装Shifu Demo。
+
+```bash
+curl -sfL https://raw.githubusercontent.com/Edgenesis/shifu/main/test/scripts/shifu-demo-install.sh | sudo sh -
+```
+
 安装完成后 ***Shifu*** 会在 `Docker` 运行时伴随启动。
 
 :::info
