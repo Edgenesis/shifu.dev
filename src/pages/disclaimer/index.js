@@ -278,7 +278,7 @@ if (isMobile()) {
               colorLevel="two" content={translate({message: "Decline"})}></ButtonSquare>
           <ButtonSquare
               href={localStorage.getItem('manuallySelectLanguage') === 'en' ? '/demo' : '/zh-Hans/demo'}
-              colorLevel="two" content={translate({message: "Agree"})}></ButtonSquare>
+              colorLevel="two" content={translate({message: "Accept"})}></ButtonSquare>
         </div>
       </div>
 }
