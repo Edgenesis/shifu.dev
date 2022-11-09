@@ -236,26 +236,14 @@
   "Start trying out": {
     "message": "进入试玩"
   },
-  "1.2 Downlaod Shifu Installer": {
-    "message": "1.2 下载 Shifu 安装包"
-  },
-  "1.3 Unzip the downloaded installer into the folder testdir": {
-    "message": "1.3 将所下载的安装包解压到testdir文件夹中"
-  },
-  "1.4 Run Demo": {
-    "message": "1.4 运行Demo"
-  },
   "2.1 Use the following command to check the running results.": {
     "message": "2.1 使用以下命令来查看运行效果"
   },
   "2.2 That all \"STATUS\" are Running means success.": {
     "message": "2.2 如果所有 “STATUS“ 都是 Running 即表示成功"
   },
-  "1. Install Shifu": {
-    "message": "1. 安装Shifu"
-  },
-  "1.1 Select your OS": {
-    "message": "1.1 请选择你的系统"
+  "1. Run the following command to install Shifu Demo": {
+    "message": "1. 使用以下命令安装Shifu Demo"
   },
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",

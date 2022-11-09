@@ -1,40 +1,28 @@
-import Translate, { translate } from '@docusaurus/Translate';
-import React from 'react';
-import styles from "./styles.module.scss";
-import Select from "../../../select"
-import CodeView from '../../../codeVIew';
+import Translate, { translate } from '@docusaurus/Translate'
+import React from 'react'
+import styles from './styles.module.scss'
+import Select from '../../../select'
+import CodeView from '../../../codeVIew'
 
 const codeListOne = [
   {
     id: 1,
-    description: translate({ message: "1.2 Downlaod Shifu Installer" }),
-    code: "",
+    description: translate({ message: '' }),
+    code: '',
     isCopy: true
-  },
-  {
-    id: 2,
-    description: translate({ message: "1.3 Unzip the downloaded installer into the folder testdir" }),
-    code: "",
-    isCopy: true,
-  },
-  {
-    id: 3,
-    description: translate({ message: "1.4 Run Demo" }),
-    code: `chmod +x ./test/scripts/deviceshifu-demo-aio.sh && sudo ./test/scripts/deviceshifu-demo-aio.sh run_demo`,
-    isCopy: true,
-  },
+  }
 ]
 
 const codeListTwo = [
   {
     id: 4,
-    description: translate({ message: "2.1 Use the following command to check the running results." }),
-    code: "sudo kubectl get pods -A ",
+    description: translate({ message: '2.1 Use the following command to check the running results.' }),
+    code: 'sudo kubectl get pods -A ',
     isCopy: true
   },
   {
     id: 5,
-    description: translate({ message: "2.2 That all \"STATUS\" are Running means success." }),
+    description: translate({ message: '2.2 That all "STATUS" are Running means success.' }),
     code: `$ sudo kubectl get pods -A
 NAMESPACE                    NAME                                 READY       STATUS      RESTARTS       AGE
 devices             agv-5bd7c4f885-w6xpx                           1/1        Running        0           17s
@@ -49,58 +37,58 @@ kube-system         kube-proxy-7dfvm                               1/1        Ru
 kube-system         kube-scheduler-kind-control-plane              1/1        Running        0           48s
 local-path-storage  local-path-provisioner-9cd9bd544-6zgpv         1/1        Running        0           34s
 shifu-crd-system    shifu-crd-controller-manager-94c8c779d-czvkx   2/2        Running        0           17s`,
-    isCopy: false,
-  },
+    isCopy: false
+  }
 ]
 
 const optionsOne = [
   {
-    value: "Linux",
-    id: 1,
+    value: 'Linux',
+    id: 1
   },
   {
-    value: "WSL",
-    id: 2,
+    value: 'WSL',
+    id: 2
   },
   {
-    value: "MacOS",
-    id: 3,
-  },
+    value: 'MacOS',
+    id: 3
+  }
 ]
 
 const optionsTwo = [
   {
-    value: "AMD64",
-    id: 1,
+    value: 'AMD64',
+    id: 1
   },
   {
-    value: "ARM64",
-    id: 2,
-  },
+    value: 'ARM64',
+    id: 2
+  }
 ]
 
 const shifuUrlList = {
   Linux: {
-    AMD64: "shifu_demo_aio_linux_amd64.tar", //Linux and x86/64
-    ARM64: "shifu_demo_aio_linux_arm64.tar", //Linux and ARM
+    AMD64: 'shifu_demo_aio_linux_amd64.tar', //Linux and x86/64
+    ARM64: 'shifu_demo_aio_linux_arm64.tar' //Linux and ARM
   },
   WSL: {
-    AMD64: "shifu_demo_aio_linux_amd64.tar", //WSL and x86/64
-    ARM64: "shifu_demo_aio_linux_arm64.tar", //WSL and ARM
+    AMD64: 'shifu_demo_aio_linux_amd64.tar', //WSL and x86/64
+    ARM64: 'shifu_demo_aio_linux_arm64.tar' //WSL and ARM
   },
   MacOS: {
-    AMD64: "shifu_demo_aio_darwin_amd64.tar", //MacOS and x86/64
-    ARM64: "shifu_demo_aio_darwin_arm64.tar", //MacOS and ARM
+    AMD64: 'shifu_demo_aio_darwin_amd64.tar', //MacOS and x86/64
+    ARM64: 'shifu_demo_aio_darwin_arm64.tar' //MacOS and ARM
   }
 }
 
 class StepTwo extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      shifuUrl: "",
-      OSModel: "Linux",
-      CPUModel: "AMD64"
+      shifuUrl: '',
+      OSModel: 'Linux',
+      CPUModel: 'AMD64'
     }
     this.getCPUModel = this.getCPUModel.bind(this)
     this.getOSModel = this.getOSModel.bind(this)
@@ -117,32 +105,28 @@ class StepTwo extends React.Component {
     this.setState({ shifuUrl: shifuUrlList[this.state.OSModel][data] })
   }
   render() {
-    const codeViewOne = codeListOne.map((item) => {
+    const codeViewOne = codeListOne.map(item => {
       switch (item.id) {
         case 1:
-          item.code = `curl -LO https://demo.shifu.run/demo-content/${this.state.shifuUrl}`
-          break;
-        case 2:
-          item.code = `mkdir testdir && tar -xvf ${this.state.shifuUrl} -C testdir && cd testdir`
-          break;
+          item.code = `curl -sfL https://raw.githubusercontent.com/Edgenesis/shifu/main/test/scripts/shifu-demo-install.sh | sudo sh -curl -sfL https://raw.githubusercontent.com/Edgenesis/shifu/main/test/scripts/shifu-demo-install.sh | sudo sh -`
+          break
       }
       return <CodeView key={item.id} {...item}></CodeView>
     })
-    const codeViewTwo = codeListTwo.map((item) => {
+    const codeViewTwo = codeListTwo.map(item => {
       return <CodeView key={item.id} {...item}></CodeView>
     })
     return (
-      <div className={styles.stepTwo} >
-        <h1 className={styles.titleOne}><Translate>1. Install Shifu</Translate></h1>
-        <h2 className={styles.titleTwo}><Translate>1.1 Select your OS</Translate></h2>
-        <div className={styles.selectContainer}>
-          <Select title={this.state.OSModel} options={optionsOne} reciveData={this.getOSModel}></Select>
-          <Select title={this.state.CPUModel} options={optionsTwo} reciveData={this.getCPUModel}></Select>
-        </div>
+      <div className={styles.stepTwo}>
+        <h1 className={styles.titleOne}>
+          <Translate>1. Run the following command to install Shifu Demo</Translate>
+        </h1>
         {codeViewOne}
-        <h1 className={styles.titleOne}><Translate>2. Confirm Docker runs successfully</Translate></h1>
+        <h1 className={styles.titleOne}>
+          <Translate>2. Confirm Docker runs successfully</Translate>
+        </h1>
         {codeViewTwo}
-      </div >
+      </div>
     )
   }
 }
