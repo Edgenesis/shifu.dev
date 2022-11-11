@@ -5,7 +5,7 @@ import styles from "./styles.module.scss"
 const ServiceQR = require('@site/static/img/service-qr.svg').default
 
 export default function ServiceModel({ showServiceModel }) {
-  let rightNum = showServiceModel ? 0 : -200
+  let rightNum = showServiceModel ? 0 : -300
   return (
     <div className={styles.serviceContainer} style={{ right: `${rightNum}px` }}>
       <h1 className={styles.title}><Translate>Our Email</Translate></h1>
