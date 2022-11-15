@@ -108,7 +108,7 @@ class StepTwo extends React.Component {
     const codeViewOne = codeListOne.map(item => {
       switch (item.id) {
         case 1:
-          item.code = `curl -sfL https://raw.githubusercontent.com/Edgenesis/shifu/main/test/scripts/shifu-demo-install.sh | sudo sh -`
+          item.code = `curl -sfL https://raw.githubusercontent.com/Edgenesis/shifu/main/test/scripts/shifu-demo-install.sh | sudo sh -`
           break
       }
       return <CodeView key={item.id} {...item}></CodeView>
