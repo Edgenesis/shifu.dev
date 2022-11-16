@@ -21,8 +21,8 @@ spec:
 
 - `telemetrySeriveEndpoint` 是telemetryService的端点地址
 - `serverAddress` 表示数据库地址
-- `username` 表示用户名
-- `secret` 表示密码
+- `username` 表示你的数据库用户名
+- `secret` 表示你的数据库密码
 - `dbName` 表示数据库名 
 - `dbTable` 表示数据库表（table）名
 - `dbtype` 表示数据库类型
@@ -40,8 +40,8 @@ data:
       device_health1:
         properties:
           instruction: status
-           pushSettings:
-           telemetryCollectionService: push-endpoint-1 # 将其修改为你刚创建TelemetryService的名字(# tag)
+          pushSettings:
+            telemetryCollectionService: push-endpoint-1 # Edit it to the name same with TelemetryService's name(# tag)
 ```
 然后编辑 Configmap.yaml 文件，确保 telemetryCollectionService 的值与你在上一步创建的遥测服务的名称相同。
 

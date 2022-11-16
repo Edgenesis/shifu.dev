@@ -1,6 +1,6 @@
 # To TDengine
 
-***Shifu*** can push your data device to your TDengine database
+***Shifu*** can push data from your device to a TDengine database.
 
 ## Create TelemetryService Yaml file
 ```yaml
@@ -22,8 +22,8 @@ spec:
 ```
 - `telemetrySeriveEndpoint` is telemetry service endpoint address
 - `serverAddress` is the database address
-- `username` is your username
-- `secret` is your code
+- `username` is your database username
+- `secret` is your database password
 - `dbName` is the name of the database
 - `dbTable` is the table of the database
 - `dbType` is the type of the database
@@ -41,8 +41,8 @@ data:
       device_health1:
         properties:
           instruction: status
-           pushSettings:
-           telemetryCollectionService: push-endpoint-1 # Edit it to the name same with TelemetryService's name(# tag)
+          pushSettings:
+            telemetryCollectionService: push-endpoint-1 # Edit it to the name same with TelemetryService's name(# tag)
 ```
 Then edit the Configmap yaml file and make sure that the telemetryCollectionService value is the same as the name of the telemetry service you created in the previous step.
 
