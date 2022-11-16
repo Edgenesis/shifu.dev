@@ -1,6 +1,6 @@
-# To TDEngine
+# To TDengine
 
-***Shifu*** can push your data from telemetry to your MQTT Broker
+***Shifu*** can push your data device to your TDengine database
 
 ## Create TelemetryService Yaml file
 ```yaml
@@ -18,7 +18,7 @@ spec:
       secret: taosdata
       dbName: shifu
       dbTable: testTable2
-      dbtype: TDEngine
+      dbtype: TDengine
 ```
 - `telemetrySeriveEndpoint` is telemetry service endpoint address
 - `serverAddress` is the database address
@@ -27,6 +27,7 @@ spec:
 - `dbName` is the name of the database
 - `dbTable` is the table of the database
 - `dbType` is the type of the database
+  
 :::note
 If you have multiple telemetry services, you can write them in one file and split them in one file using `---`.
 :::
@@ -40,14 +41,14 @@ data:
       device_health1:
         properties:
           instruction: status
-          pushSettings:
+           pushSettings:
            telemetryCollectionService: push-endpoint-1 # Edit it to the name same with TelemetryService's name(# tag)
 ```
 Then edit the Configmap yaml file and make sure that the telemetryCollectionService value is the same as the name of the telemetry service you created in the previous step.
 
 ## deploy deviceShifu again
 
-Then you need to deploy deviceShifu again so that the telemetry will push raw data to the telemetry service and publish it to your MQTT broker.
+Then you need to deploy deviceShifu again so that the telemetry will push raw data to the telemetry service and publish it to your TDengine database.
 
 ## examples
 

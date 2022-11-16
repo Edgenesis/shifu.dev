@@ -1,4 +1,4 @@
-# 推送至 TDEngine
+# 推送至 TDengine
 
 ## 创建TelemetryService Yaml 文件
 ```yaml
@@ -16,7 +16,7 @@ spec:
       secret: taosdata
       dbName: shifu
       dbTable: testTable2
-      dbtype: TDEngine
+      dbtype: TDengine
 ```
 
 - `telemetrySeriveEndpoint` 是telemetryService的端点地址
@@ -28,7 +28,7 @@ spec:
 - `dbtype` 表示数据库类型
 
 :::note
-如果你有多个遥测服务，你可以把它们写在一个文件里，用`------`把它们分割该文件文件。
+如果你有多个遥测服务，你可以把它们写在一个文件里，用`---`把它们分割该文件文件。
 :::
 
 ## 编辑Configmap Yaml文件
@@ -40,14 +40,14 @@ data:
       device_health1:
         properties:
           instruction: status
-          pushSettings:
+           pushSettings:
            telemetryCollectionService: push-endpoint-1 # 将其修改为你刚创建TelemetryService的名字(# tag)
 ```
 然后编辑 Configmap.yaml 文件，确保 telemetryCollectionService 的值与你在上一步创建的遥测服务的名称相同。
 
 ## 再次部署deviceshifu
 
-然后你需要再次部署 deviceshifu ，这样遥测就会将采集到的数据推送到遥测服务，并将其发布到你的 TDEngine Server 中。
+然后你需要再次部署 deviceshifu ，这样遥测就会将采集到的数据推送到遥测服务，并将其发布到你的 TDEngine数据库 中。
 
 ##例子
 
