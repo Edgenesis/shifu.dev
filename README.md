@@ -61,7 +61,7 @@ Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
         - Add translation in `i18n/zh-Hans/code.json`.
     - Or Use jsx syntax:
         - `{
-          localStorage.getItem('manuallySelectLanguage') === 'en' ? (
+          localStorage.getItem('manuallySelectLanguage') !== 'zh-Hans' ? (
              en content
           ):(
              cn content
@@ -71,7 +71,7 @@ Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
           ```html
           <div className={`${Original class name} special`}>
                 <ButtonSquare
-                    href={localStorage.getItem('manuallySelectLanguage') === 'en'  ? 'English jump address' : 'Chinese Jump Address'}
+                    href={localStorage.getItem('manuallySelectLanguage') !== 'zh-Hans'  ? 'English jump address' : 'Chinese Jump Address'}
                     colorLevel="two" content={translate({message: "Decline"})}></ButtonSquare>
           </div>
           ```

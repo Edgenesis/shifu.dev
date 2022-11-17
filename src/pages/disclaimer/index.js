@@ -31,7 +31,7 @@ if (isMobile()) {
         <h1 className={styles.title}><Translate>Please be sure to read the following carefully</Translate></h1>
         <div className={styles.container} id='nowTextCon'>
           {
-            localStorage.getItem('manuallySelectLanguage') === 'en' ? (
+            localStorage.getItem('manuallySelectLanguage') !== 'zh-Hans' ? (
                 <span>
           <h1>Privacy Policy</h1>
           <p>
@@ -274,10 +274,10 @@ if (isMobile()) {
 
         <div className={`${styles.disclaimerConfirm} special`}>
           <ButtonSquare
-              href={localStorage.getItem('manuallySelectLanguage') === 'en'  ? '/' : '/zh-Hans/'}
+              href={localStorage.getItem('manuallySelectLanguage') !== 'zh-Hans'  ? '/' : '/zh-Hans/'}
               colorLevel="two" content={translate({message: "Decline"})}></ButtonSquare>
           <ButtonSquare
-              href={localStorage.getItem('manuallySelectLanguage') === 'en' ? '/demo' : '/zh-Hans/demo'}
+              href={localStorage.getItem('manuallySelectLanguage') !== 'zh-Hans' ? '/demo' : '/zh-Hans/demo'}
               colorLevel="two" content={translate({message: "Accept"})}></ButtonSquare>
         </div>
       </div>
