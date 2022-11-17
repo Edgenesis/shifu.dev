@@ -69,18 +69,9 @@ module.exports = function (context, options) {
               let elements = document.querySelectorAll('.langDropdown~ul .dropdown__link')
               console.log('wide', elements)
               for (let elem of elements) {
-                elem.setAttribute('href','javascript:void(0)')
                 elem.onclick = function () {
                   let lang=elem.getAttribute('lang')
                   localStorage.setItem('manuallySelectLanguage',lang)
-                  window.setTimeout(async () => {
-                    if (lang==='en') {
-                       document.location.href = href.split('/zh-Hans').join('')
-                    }else{
-                       document.location.href =
-                        href.replace(\`\${host}\`, \`\${host}/zh-Hans\`) + ''
-                    }
-                 }, 100)
                 }
                 console.log(elem.getAttribute('href'))
               }
@@ -107,19 +98,9 @@ module.exports = function (context, options) {
                       )
                       console.log('narrow', elesEles)
                       for (let elem of elesEles) {
-                        elem.setAttribute('href','javascript:void(0)')
                         elem.onclick = function () {
                           let lang=elem.getAttribute('lang')
                           localStorage.setItem('manuallySelectLanguage',lang)
-                           window.setTimeout(async () => {
-                            if (lang==='en') {
-                               document.location.href = href.split('/zh-Hans').join('')
-                            }else{
-                               document.location.href =
-                                href.replace(\`\${host}\`, \`\${host}/zh-Hans\`) + ''
-                            }
-                           }, 100)
-                     
                         }
                         console.log(elem)
                       }
