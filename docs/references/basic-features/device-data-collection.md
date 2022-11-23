@@ -70,7 +70,7 @@ When the device receives the command, the data will be transferred to ***deviceS
    ```
 7. Finally, to view the logs of the program and get the data, we need to execute the following command:
    ```bash
-   kubectl run high-temperature-detector --image=high-temperature-detector:v0.0.1
+   kubectl logs -n default high-temperature-detector -f
    ```
    The result of the data obtained is as follows.
    ```bash
