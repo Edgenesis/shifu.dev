@@ -47,7 +47,7 @@ data:
 
 ## 再次部署deviceShifu
 
-然后你需要再次部署 deviceshifu ，这样遥测就会将采集到的数据推送到遥测服务，并将其发布到你的 TDEngine数据库中。
+然后你需要再次部署 deviceShifu ，这样遥测就会将采集到的数据推送到遥测服务，并将其发布到你的 TDengine数据库中。
 
 ##例子
 
