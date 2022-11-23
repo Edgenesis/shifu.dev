@@ -41,16 +41,16 @@ data:
         properties:
           instruction: status
           pushSettings:
-            telemetryCollectionService: push-endpoint-1 # Edit it to the name same with TelemetryService's name(# tag)
+            telemetryCollectionService: push-endpoint-1 # Edit it to the name same with TelemetryService's name
 ```
 然后编辑 Configmap.yaml 文件，确保 telemetryCollectionService 的值与你在上一步创建的遥测服务的名称相同。
 
-## 再次部署deviceshifu
+## 再次部署deviceShifu
 
-然后你需要再次部署 deviceshifu ，这样遥测就会将采集到的数据推送到遥测服务，并将其发布到你的 TDEngine数据库 中。
+然后你需要再次部署 deviceshifu ，这样遥测就会将采集到的数据推送到遥测服务，并将其发布到你的 TDEngine数据库中。
 
 ##例子
 
 下面是一个例子，帮助你更好地了解如何使用它。
 
-[https://github.com/Edgenesis/shifu/tree/main/examples/httpDeviceShifu/deployment](https://github.com/Edgenesis/shifu/tree/main/examples/httpDeviceShifu/deployment)
+[https://github.com/Edgenesis/shifu/tree/main/examples/tdengineTelemetryService/deployment](https://github.com/Edgenesis/shifu/tree/main/examples/tdengineTelemetryService/deployment)
