@@ -70,7 +70,7 @@ sidebar_position: 3
    ```
 7. 最后我们查看该程序的日志信息获取数据，需执行以下命令:
    ```bash
-   kubectl logs -n default high-temperature-detector -f
+   kubectl logs high-temperature-detector -f
    ```
    得到的数据结果如下：
    ```bash
