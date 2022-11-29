@@ -13,7 +13,7 @@ If you'd like to contribute and add a new driver to ***Shifu*** project, please 
 
 ## Technical Principle
 
-You can check the folder [pkg/deviceshifu](https://github.com/Edgenesis/shifu/tree/main/pkg/) in [***Shifu*** repository](https://github.com/Edgenesis/shifu.deviceshifu) to see the ***deviceShifu***s supported by ***Shifu***. You can see that [pkg/deviceshifu/deviceshifuhttp](https://github.com/Edgenesis/shifu/tree/main/pkg/deviceshifu/deviceshifuhttp) will convert an IoT device using HTTP protocol to ***debiveShifu***.
+You can check the folder [pkg/deviceshifu](https://github.com/Edgenesis/shifu/tree/main/pkg/) in [***Shifu*** repository](https://github.com/Edgenesis/shifu.deviceshifu) to see the ***deviceShifu***s supported by ***Shifu***. You can see that [pkg/deviceshifu/deviceshifuhttp](https://github.com/Edgenesis/shifu/tree/main/pkg/deviceshifu/deviceshifuhttp) will convert an IoT device using HTTP protocol to ***deviceShifu***.
 In other words, we only need to convert unsupported protocols to HTTP APIs.
 
 ## Use Case

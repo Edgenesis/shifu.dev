@@ -7,7 +7,7 @@ sidebar_position: 0
 
 ***Shifu*** 会对每一个连接的设备创建一个 ***deviceShifu***。 ***deviceShifu*** 是物理设备的数字孪生并负责控制，收集设备指标。
 
-这个教程会创建一个简单的温度检测程序，通过和一个温度计的 ***deviceShifu*** 交互来演示如何和用应用来和 ***deviceShifu*** 交互。
+这个教程会创建一个简单的温度检测程序，通过和一个温度计的 ***deviceShifu*** 交互来演示如何使用应用来和 ***deviceShifu*** 交互。
 
 ## 前提
 

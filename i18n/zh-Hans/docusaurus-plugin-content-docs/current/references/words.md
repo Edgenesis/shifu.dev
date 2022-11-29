@@ -22,7 +22,7 @@ sidebar_position: 4
     - 供用户试玩的虚拟设备
 - edgeDevice：由 Shifu 管理的物联网设备
 - edgeNode：可以连接到多个edgeDevices的Kubernetes节点，通常是一台计算机或服务器
-- edgeMap：表示edgeNode和edgeDebive之间关系的数据结构
+- edgeMap：表示edgeNode和edgeDevice之间关系的数据结构
 - deviceShifu
   - IoT设备在 Shifu 中的结构性数字孪生，以微服务的形式存在。
   - 底层是Kubernetes的Pod
