@@ -27,10 +27,12 @@ export default function CodeView(props) {
     <div className={styles.CodeViewContainer} style={props.style}>
       <h1 className={styles.CodeDescription} style={props.codeDescriptionStyle}>{props.description}</h1>
       <div id={props.id} className={styles.copied}><Translate>Copied successfully</Translate> ✔</div>
+      <div className={styles.CodeBox}>
       <pre className={props.code ? `${styles.codeContent}` : `${styles.hidden} `}>
-        {props.code}
-        <span onClick={() => copy(props.code, Copied)} className={props.isCopy ? `${styles.copy}` : `${styles.hidden} `}><Translate>Copy</Translate></span>
+        {props.code +'     '}  {/* The extra space is for the content not to be blocked by the button */}
       </pre>
+      <span onClick={() => copy(props.code, Copied)} className={props.isCopy ? `${styles.copy}` : `${styles.hidden} `}><Translate>Copy</Translate></span>
+      </div>
       {props.insetCode}
     </div>
   );

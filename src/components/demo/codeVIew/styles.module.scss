@@ -9,6 +9,7 @@
     line-height: 26px;
     color: var(--font-color-one);
     margin-bottom: 12px;
+    min-height: 20px;
   }
 
   .copied {
@@ -45,40 +46,44 @@
   }
 
 
-  .codeContent {
+  .CodeBox{
     position: relative;
-    background: #111111;
-    box-shadow: inset 1px 1px 4px #000000;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 160.69%;
-    color: #FFFFFF;
-    padding: 4px 30px 4px 12px;
-    margin-bottom: 0px;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .copy {
-    width: 30px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    background: #666666;
-    border-radius: 5px;
-    position: absolute;
-    right: 4px;
-    top: 4px;
-    font-weight: 400;
-    font-size: 10px;
-    color: #FFFFFF;
-    cursor: pointer;
-
-    &:active {
-      background: #484848;
+    .codeContent {
+      position: relative;
+      background: #111111;
+      box-shadow: inset 1px 1px 4px #000000;
+      border-radius: 5px;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 160.69%;
+      color: #FFFFFF;
+      padding: 4px 30px 4px 12px;
+      margin-bottom: 0px;
+    }
+  
+    .hidden {
+      display: none;
+    }
+  
+    .copy {
+      width: 30px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      background: #666666;
+      border-radius: 5px;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      font-weight: 400;
+      font-size: 10px;
+      color: #FFFFFF;
+      cursor: pointer;
+  
+      &:active {
+        background: #484848;
+      }
     }
   }
+  
 }
