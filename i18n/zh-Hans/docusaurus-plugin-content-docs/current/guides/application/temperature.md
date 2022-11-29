@@ -3,21 +3,21 @@ title: 与deviceShifu交互的应用
 sidebar_position: 0
 ---
 
-# 与 ***deviceShifu*** 交互的应用
+# 与 **_deviceShifu_** 交互的应用
 
-***Shifu*** 会对每一个连接的设备创建一个 ***deviceShifu***。 ***deviceShifu*** 是物理设备的数字孪生并负责控制，收集设备指标。
+**_Shifu_** 会对每一个连接的设备创建一个 **_deviceShifu_**。 **_deviceShifu_** 是物理设备的数字孪生并负责控制，收集设备指标。
 
-这个教程会创建一个简单的温度检测程序，通过和一个温度计的 ***deviceShifu*** 交互来演示如何和用应用来和 ***deviceShifu*** 交互。
+这个教程会创建一个简单的温度检测程序，通过和一个温度计的 **_deviceShifu_** 交互来演示如何使用应用来和 **_deviceShifu_** 交互。
 
 ## 前提
 
 本示例需要安装 [Go](https://golang.org/dl/), [Docker](https://docs.docker.com/get-docker/), [kind](https://kubernetes.io/docs/tasks/tools/), [kubectl](https://kubernetes.io/docs/tasks/tools/) 和 [kubebuilder](https://github.com/kubernetes-sigs/kubebuilder)。
 
-## 1. 运行 ***Shifu*** 并连接一个简单的温度计
+## 1. 运行 **_Shifu_** 并连接一个简单的温度计
 
 在 `shifu/examples/deviceshifu/demo_device` 路径中已经有一个演示温度计的 deployment 配置。该温度计会上报一个整数代表当前温度，它拥有一个 `read_value` API 来汇报这个数值。
 
-在 `shifu` 根目录下，运行下面两条命令来运行 ***Shifu*** 和演示温度计的 ***deviceShifu***：
+在 `shifu` 根目录下，运行下面两条命令来运行 **_Shifu_** 和演示温度计的 **_deviceShifu_**：
 
 ```bash
 ./test/scripts/deviceshifu-setup.sh apply # setup and start shifu services for this demo
@@ -26,7 +26,7 @@ kubectl apply -f examples/deviceshifu/demo_device/edgedevice-thermometer # conne
 
 ## 2. 温度检测程序
 
-本应用会通过 HTTP 请求来和 ***deviceShifu*** 交互，每两秒检测 `read_value` 节点来获取温度计 ***deviceShifu*** 的读数。
+本应用会通过 HTTP 请求来和 **_deviceShifu_** 交互，每两秒检测 `read_value` 节点来获取温度计 **_deviceShifu_** 的读数。
 
 应用示例如下：
 
@@ -85,7 +85,7 @@ RUN go mod download
 COPY *.go ./
 RUN go build -o /high-temperature-detector
 EXPOSE 11111
-CMD [ "/high-temperature-detector" ] 
+CMD [ "/high-temperature-detector" ]
 ```
 
 之后，创建应用：
@@ -112,7 +112,7 @@ kubectl run high-temperature-detector --image=high-temperature-detector:v0.0.1 -
 
 ## 5. 检查应用输出
 
-温度检测应用会每两秒钟通过温度计的 ***deviceShifu*** 获取当前数值。
+温度检测应用会每两秒钟通过温度计的 **_deviceShifu_** 获取当前数值。
 
 一切准备就绪，通过 log 来查看程序输出：
 
