@@ -71,7 +71,7 @@ sidebar_position: 0
 
 如下所示：
 
-```json
+```yaml
 data:
   customInstructionsPython: |
     123: humidity 
