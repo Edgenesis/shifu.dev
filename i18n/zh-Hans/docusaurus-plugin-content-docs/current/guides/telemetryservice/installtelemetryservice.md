@@ -13,5 +13,5 @@
 ***Shifu***提供了一个一键式安装，你可以使用以下命令将 ***telemetryService*** 安装到你的集群。
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/Edgenesis/shifu/main/pkg/telemetryservice/telemetryservice_install.yaml
+kubectl apply -f https://gitee.com/edgenesis/shifu/raw/v0.7.0/pkg/telemetryservice/install/telemetryservice_install.yaml
 ```
