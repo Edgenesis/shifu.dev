@@ -43,6 +43,16 @@ Username: user1
 Password: pwd1
 ```
 
+:::note use secret to store password
+
+Create a  `Secret` with `opcua_password` field filled by your password, and it will overwrite the `opcua_edgedevice.yaml`.
+
+```bash
+kubectl create secret generic deviceshifu-secret --from-literal=opcua_password=your_password -n deviceshifu
+```
+
+:::
+
 #### Certification Mode
 
 First you need to create `Configmap` for the certificate and private key.

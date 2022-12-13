@@ -43,6 +43,16 @@ Username: user1
 Password: pwd1
 ```
 
+:::note 使用`Secret`存储密码
+
+创建 `Secret`，在 `opcua_password` 字段填写密码，它会覆盖`opcua_edgedevice.yaml` 文件中的密码
+
+```bash
+kubectl create secret generic deviceshifu-secret --from-literal=opcua_password=your_password -n deviceshifu
+```
+
+:::
+
 #### 证书模式
 
 首先需要为证书以及私钥创建 `Configmap`：

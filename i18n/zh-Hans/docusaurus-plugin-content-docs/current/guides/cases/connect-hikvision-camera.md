@@ -39,6 +39,27 @@ spec:
         ...
 ```
 
+:::note 使用`Secret`存储密码
+
+1. 创建 `Secret`，在 `rtsp_password` 字段填写密码
+
+```bash
+kubectl create secret generic deviceshifu-secret --from-literal=rtsp_password=your_password -n deviceshifu
+```
+
+2. 将环境变量`IP_CAMERA_PASSWORD`的值修改为从`Secret`中获取
+
+```yaml
+- name: IP_CAMERA_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: deviceshifu-secret
+      key: rtsp_password
+      optional: false
+```
+
+:::
+
 :::tip
 查看摄像头的ip地址可以使用海康威视提供的官方工具：
 
