@@ -39,6 +39,27 @@ spec:
         ...
 ```
 
+:::note use `Secret` to store password
+
+1. Create a `Secret` with `rtsp_password` field filled by your password.
+
+```bash
+kubectl create secret generic deviceshifu-secret --from-literal=rtsp_password=your_password -n deviceshifu
+```
+
+2. Modify the yaml file above, change the value of enviroment varible `IP_CAMERA_PASSWORD` from string to `Secret` we just created.
+
+```yaml
+- name: IP_CAMERA_PASSWORD
+  valueFrom:
+    secretKeyRef:
+      name: deviceshifu-secret
+      key: rtsp_password
+      optional: false
+```
+
+:::
+
 :::tip
 To check the ip address of your camera, use the official tool provided by Hikvision:
 
