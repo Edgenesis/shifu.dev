@@ -413,7 +413,7 @@ http://deviceshifu-socket.deviceshifu.svc.cluster.local/cmd; echo
   Q: What is a MQTT? <br/>
   A: MQTT is a messaging protocol based on the publish/subscribe paradigm under the ISO standard, please click <a href="https://en.wikipedia.org/wiki/MQTT">here</a> for details. <br/>
   Q: How to interact with the MQTT in this demo? <br/>
-  A: When MQTT's digital twin receives the mqtt_data command, it returns the last message in the subscribed channel.
+  A: We support multi-channel subscription, so multiple commands can be sent to MQTT's digital twin (eg: get_topicmsg1, get_topicmsg2), When MQTT's digital twin receives the mqtt_data command, it returns the last message in the subscribed channel.
 </details>
 
 ### Create the digital twin
@@ -439,26 +439,32 @@ sudo kubectl get pods -A
 By communicating with the digital twin of the Socket through `http://deviceshifu-mqtt.deviceshifu.svc.cluster.local`, Shifu can get the command we sent:
 
 ```bash
-sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/mqtt_data
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg1
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg2
 ```
 
 ![deviceshifu-mqtt_output1.png](images/deviceshifu-mqtt_output1.png)
 
-We can use mosquitto to publish a data to the MQTT server. (The data after -m is the information we posted)
+We can use mosquitto to publish data to multiple channels to MQTT server. (The data after -m is the information we posted)
 
 ```bash
-sudo kubectl exec -it deploy/mosquitto -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test -m "test2333"
+sudo kubectl exec -it deploy/mosquitto -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test1 -m "test_topicmsg1"
+sudo kubectl exec -it deploy/mosquitto -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test2 -m "test_topicmsg2"
 ```
 
 ![deviceshifu-mqtt_output2.png](images/deviceshifu-mqtt_output2.png)
 
+![deviceshifu-mqtt_output3.png](images/deviceshifu-mqtt_output3.png)
+
 At this point we can send commands to the digital twin of MQTT to get the published data.
 
 ```bash
-sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/mqtt_data
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg1
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg2
 ```
 
-![deviceshifu-mqtt_outpu3.png](images/deviceshifu-mqtt_output3.png)
+![deviceshifu-mqtt_output4.png](images/deviceshifu-mqtt_output4.png)
+![deviceshifu-mqtt_output5.png](images/deviceshifu-mqtt_output5.png)
 
 ## Next Step
 

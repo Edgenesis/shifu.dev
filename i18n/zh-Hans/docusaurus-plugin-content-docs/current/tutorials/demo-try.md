@@ -418,14 +418,14 @@ http://deviceshifu-socket.deviceshifu.svc.cluster.local/cmd; echo
 交互结束后按下 `ctrl D` 即可退出 `nginx`。
 :::
 
-## 8. 与 MQTT 设备交互
+## 8. 与 MQTT 设备交互（支持多频道订阅）
 
 <details>
   <summary> 点此查看 MQTT 细节 </summary>
   Q：什么是 MQTT ? <br/>
   A：MQTT 是ISO标准下基于发布/订阅范式的消息协议，具体介绍可以<a href="https://baike.baidu.com/item/MQTT/3618851">查看百度百科</a>。<br/>
   Q：在这个试玩中如何与 MQTT 交互? <br/>
-  A：当 MQTT 的数字孪生接收到mqtt_data命令时，会返回订阅频道中最后一条消息。
+  A：我们支持多频道订阅，所以可以向MQTT的数字孪生发送多个命令(例：get_topicmsg1、get_topicmsg2)，当 MQTT 的数字孪生接收到命令时，会返回订阅频道中最后一条消息。
 </details>
 
 ### 创建数字孪生
@@ -451,25 +451,34 @@ sudo kubectl get pods -A
 我们可以与 MQTT 的数字孪生通过`http://deviceshifu-mqtt.deviceshifu.svc.cluster.local`进行交互，获取我们所发送的命令：
 
 ```bash
-sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/mqtt_data
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg1
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg2
 ```
 
 ![deviceshifu-mqtt_output1.png](images/deviceshifu-mqtt_output1.png)
 
-我们可以使用 mosquitto 向MQTT服务器发布一个数据。(-m 后面的数据为我们发布的的信息)
+![deviceshifu-mqtt_output1.png](images/deviceshifu-mqtt_output1.png)
+
+我们可以使用 mosquitto 向MQTT服务器向多个频道发布数据。(-m 后面的数据为我们发布的的信息)
 
 ```bash
-sudo kubectl exec -it deploy/mosquitto -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test -m "test2333"
+sudo kubectl exec -it deploy/mosquitto -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test1 -m "test_topicmsg1"
+sudo kubectl exec -it deploy/mosquitto -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test2 -m "test_topicmsg2"
 ```
 ![deviceshifu-mqtt_output2.png](images/deviceshifu-mqtt_output2.png)
+
+![deviceshifu-mqtt_output3.png](images/deviceshifu-mqtt_output3.png)
 
 此时我们可以在向MQTT的数字孪生发送命令，即可得到发布的数据。
 
 ```bash
-sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/mqtt_data
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg1
+sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg2
 ```
 
-![deviceshifu-mqtt_outpu3.png](images/deviceshifu-mqtt_output3.png)
+![deviceshifu-mqtt_output4.png](images/deviceshifu-mqtt_output4.png)
+
+![deviceshifu-mqtt_output5.png](images/deviceshifu-mqtt_output5.png)
 
 ## 下一步
 

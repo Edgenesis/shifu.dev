@@ -25,6 +25,24 @@ spec:
       MQTTTopic: /test/test # change this value
 ```
 
+In `examples/mqttDeviceShifu/mqtt_deploy/mqtt_deviceshifu_configmap.yaml`:
+
+```yml
+...
+data:
+  driverProperties: |
+    driverSku: testMQTT
+    driverImage: 
+  instructions: | # A command can subscribe to a topic, if you need to subscribe to multiple topics, just add a command
+    instructions:
+      get_topicmsg1: # change this value
+        protocolPropertyList:
+          MQTTTopic: "/test/test1" # change this value
+      get_topicmsg2: # change this value when subscribing to multiple topics
+        protocolPropertyList:
+          MQTTTopic: "/test/test2" # change this value when subscribing to multiple topics
+```
+
 ## Deploy deviceShifu
 
 Run this command:
@@ -38,15 +56,15 @@ kubectl apply -f examples/mqttDeviceShifu/mqtt_deploy
 In your cluster:
 
 ```
-curl deviceshifu-mqtt/mqtt_data
+curl deviceshifu-mqtt/get_topicmsg1
 ```
 
-Where `mqtt_data` is the embedded query string.
+Where `get_topicmsg1` is the embedded query string.
 
 Return from MQTT ***deviceShifu***:
 
 ```json
-{"mqtt_message":"test2333","mqtt_receive_timestamp":"2022-04-29 08:57:49.9492744 +0000 UTC m=+75.407609501"}
+{"mqtt_message":"test_topicmsg1","mqtt_receive_timestamp":"2022-04-29 08:57:49.9492744 +0000 UTC m=+75.407609501"}
 ```
 
 Where `mqtt_message` is the latest data string from device, `mqtt_receive_timestamp` is the timestamp when the message was received.

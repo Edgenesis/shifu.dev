@@ -22,7 +22,24 @@ spec:
   protocol: MQTT
   protocolSettings:
     MQTTSetting:
-      MQTTTopic: /test/test # 修改此值
+```
+
+在 `examples/mqttDeviceShifu/mqtt_deploy/mqtt_deviceshifu_configmap.yaml` 中:
+
+```yml
+...
+data:
+  driverProperties: |
+    driverSku: testMQTT
+    driverImage: 
+  instructions: | # 一条命令可以订阅一个topic，如需订阅多个topic，增加命令即可
+    instructions:
+      get_topicmsg1: # 修改此值
+        protocolPropertyList:
+          MQTTTopic: "/test/test1" # 修改此值
+      get_topicmsg2: # 订阅多个topic时修改此值
+        protocolPropertyList:
+          MQTTTopic: "/test/test2" # 订阅多个topic时修改此值
 ```
 
 ## 部署deviceShifu
@@ -38,15 +55,15 @@ kubectl apply -f examples/mqttDeviceShifu/mqtt_deploy
 在您的集群中运行下面的命令:
 
 ```
-curl deviceshifu-mqtt/mqtt_data
+curl deviceshifu-mqtt/get_topicmsg1
 ```
 
-这里 `mqtt_data` 是需要查询的字段。
+这里 `get_topicmsg1` 是需要查询的字段。
 
 MQTT ***deviceShifu*** 返回的内容如下：
 
 ```json
-{"mqtt_message":"test2333","mqtt_receive_timestamp":"2022-04-29 08:57:49.9492744 +0000 UTC m=+75.407609501"}
+{"mqtt_message":"test_topicmsg1","mqtt_receive_timestamp":"2022-04-29 08:57:49.9492744 +0000 UTC m=+75.407609501"}
 ```
 
 其中 `mqtt_message` 是设备接受到的最新字符串。`mqtt_receive_timestamp` 是接收到该消息的时间戳。
