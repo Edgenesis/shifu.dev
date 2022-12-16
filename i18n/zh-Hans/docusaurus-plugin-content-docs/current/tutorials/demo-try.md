@@ -425,7 +425,7 @@ http://deviceshifu-socket.deviceshifu.svc.cluster.local/cmd; echo
   Q：什么是 MQTT ? <br/>
   A：MQTT 是ISO标准下基于发布/订阅范式的消息协议，具体介绍可以<a href="https://baike.baidu.com/item/MQTT/3618851">查看百度百科</a>。<br/>
   Q：在这个试玩中如何与 MQTT 交互? <br/>
-  A：我们支持多频道订阅，所以可以向MQTT的数字孪生发送多个命令(例：get_topicmsg1、get_topicmsg2)，当 MQTT 的数字孪生接收到命令时，会返回订阅频道中最后一条消息。
+  A：我们支持多主题订阅，所以MQTT的数字孪生可以拥有多个API(例：get_topicmsg1、get_topicmsg2)，当 MQTT 的数字孪生接收到命令时，会返回订阅频道中最后一条消息。
 </details>
 
 ### 创建数字孪生

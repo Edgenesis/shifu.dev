@@ -52,7 +52,7 @@ DeviceShifuInstruction is the command that ***deviceShifu*** can receive.
 
 ## DeviceShifuprotocolPropertyList
 
-DeviceShifuprotocolPropertyList   parameters of the ***deviceShifu*** command, which have various configurations according to different protocols.The following shows the use of MQTT protocol and OPC UA protocol. Please refer to the  examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
+DeviceShifuprotocolPropertyList parameters of the ***deviceShifu*** command, which have various configurations according to different protocols. The following shows the use of MQTT protocol and OPC UA protocol. Please refer to the examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
 
 - **MQTT**
 ```yml
@@ -64,7 +64,7 @@ instructions: |
       get_topicmsg2:   
         protocolPropertyList:
           MQTTTopic: "/test/test2"
-      ...  # The command and the name and number of topics you want to associate can be configured by yourself, just continue to add according to this format
+      ...  # You can continue to configure commands and corresponding topics according to your own needs, just continue to add according to this format
 ```
 - **OPC UA**
 ```yml
@@ -76,7 +76,7 @@ instructions: |
       get_time:
         protocolPropertyList:
           OPCUANodeID: "i=2258"
-      ... # The command and the name and number of nodeids you want to associate can be configured by yourself, just continue to add according to this format
+      ... # You can continue to configure commands and corresponding NodeID according to your own needs, just continue to add according to this format
 ```
 
 

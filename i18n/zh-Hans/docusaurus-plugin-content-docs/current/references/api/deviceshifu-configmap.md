@@ -64,7 +64,7 @@ instructions: |
       get_topicmsg2:   
         protocolPropertyList:
           MQTTTopic: "/test/test2"
-      ...  # 命令以及想要关联的Topic的名称和数量可以自行配置，只需按照此格式继续添加即可
+      ...  # 根据自己的需要可继续配置命令及对应的Topic，只需按照此格式继续添加即可
 ```
 - **OPC UA**
 ```yml
@@ -76,7 +76,7 @@ instructions: |
       get_time:
         protocolPropertyList:
           OPCUANodeID: "i=2258"
-      ... # # 命令以及想要关联的NodeID的名称和数量可以自行配置，只需按照此格式继续添加即可
+      ... # 根据自己的需要可继续配置命令及对应的NodeID，只需按照此格式继续添加即可
 ```
 
 

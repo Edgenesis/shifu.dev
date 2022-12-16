@@ -33,14 +33,15 @@ data:
   driverProperties: |
     driverSku: testMQTT
     driverImage: 
-  instructions: | # A command can subscribe to a topic, if you need to subscribe to multiple topics, just add a command
-    instructions:
+  instructions: | 
+    instructions: # A command can subscribe to a topic, if you need to subscribe to multiple topics, just add a command
       get_topicmsg1: # change this value
         protocolPropertyList:
           MQTTTopic: "/test/test1" # change this value
-      get_topicmsg2: # change this value when subscribing to multiple topics
+      get_topicmsg2: 
         protocolPropertyList:
-          MQTTTopic: "/test/test2" # change this value when subscribing to multiple topics
+          MQTTTopic: "/test/test2" 
+      ... # You can continue to configure commands and corresponding topics according to your own needs, just continue to add according to this format
 ```
 
 ## Deploy deviceShifu
@@ -64,7 +65,7 @@ Where `get_topicmsg1` is the embedded query string.
 Return from MQTT ***deviceShifu***:
 
 ```json
-{"mqtt_message":"test_topicmsg1","mqtt_receive_timestamp":"2022-04-29 08:57:49.9492744 +0000 UTC m=+75.407609501"}
+{"mqtt_message":"test_2333","mqtt_receive_timestamp":"2022-04-29 08:57:49.9492744 +0000 UTC m=+75.407609501"}
 ```
 
 Where `mqtt_message` is the latest data string from device, `mqtt_receive_timestamp` is the timestamp when the message was received.
