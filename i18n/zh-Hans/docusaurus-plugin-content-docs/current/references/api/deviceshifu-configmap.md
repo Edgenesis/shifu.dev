@@ -35,13 +35,50 @@ DeviceShifuInstructions 是指 ***deviceShifu*** 的可以接收并发出的所�
 
 - **instructionSettings** ([DeviceShifuInstructionSettings](#deviceshifuinstructionsettings))
 - **instructions** (map[string]DeviceShifuInstruction)
+**示例：**
+    ```yml
+    instructions: |
+      instructions:
+        get_value: # 想要设置的命令的名称
+          protocolPropertyList:      # 命令的参数，根据不同的协议有不同的配置
+    ```
     - **[DeviceShifuInstruction](#deviceshifuinstruction)**
 
 ## DeviceShifuInstruction
 
 DeviceShifuInstruction 是指 ***deviceShifu*** 可以接收的命令。
 
-- **protocolPropertyList** (map[string]string)<br/>表示 ***deviceShifu*** 命令的参数，根据不同协议具有不同的配置，更多示例请参考 [examples](https://github.com/Edgenesis/shifu/tree/main/examples)。
+- **protocolPropertyList** (map[string]string)([DeviceShifuprotocolPropertyList](#deviceshifuprotocolpropertylist))<br/>表示 ***deviceShifu*** 命令的参数，根据不同协议具有不同的配置.
+
+## DeviceShifuprotocolPropertyList
+
+DeviceShifuprotocolPropertyList 表示 ***deviceShifu*** 命令的参数，根据不同协议具有不同的配置，下面展示MQTT协议和OPC UA协议下的使用,更多示例请参考 [examples](https://github.com/Edgenesis/shifu/tree/main/examples)。
+
+- **MQTT**
+```yml
+instructions: |
+    instructions:
+      get_topicmsg1:   # 想要设置的命令的名称
+        protocolPropertyList:
+          MQTTTopic: "/test/test1"  # MQTTTopic 是这条命令关联的Topic
+      get_topicmsg2:   
+        protocolPropertyList:
+          MQTTTopic: "/test/test2"
+      ...  # 命令以及想要关联的Topic的名称和数量可以自行配置，只需按照此格式继续添加即可
+```
+- **OPC UA**
+```yml
+instructions: |
+    instructions:
+      get_value:      # 想要设置的命令的名称 
+        protocolPropertyList:
+          OPCUANodeID: "ns=2;i=2"  # OPCUANodeID 是这条命令关联的NodeID
+      get_time:
+        protocolPropertyList:
+          OPCUANodeID: "i=2258"
+      ... # # 命令以及想要关联的NodeID的名称和数量可以自行配置，只需按照此格式继续添加即可
+```
+
 
 ## DeviceShifuInstructionSettings
 
