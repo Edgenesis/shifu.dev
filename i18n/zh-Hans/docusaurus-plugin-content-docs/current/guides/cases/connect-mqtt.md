@@ -64,7 +64,7 @@ curl deviceshifu-mqtt/get_topicmsg1
 MQTT ***deviceShifu*** 返回的内容如下：
 
 ```json
-{"mqtt_message":"test_2333","mqtt_receive_timestamp":"2022-04-29 08:57:49.9492744 +0000 UTC m=+75.407609501"}
+{"mqtt_message":"test2333","mqtt_receive_timestamp":"2022-04-29 08:57:49.9492744 +0000 UTC m=+75.407609501"}
 ```
 
 其中 `mqtt_message` 是设备接受到的最新字符串。`mqtt_receive_timestamp` 是接收到该消息的时间戳。

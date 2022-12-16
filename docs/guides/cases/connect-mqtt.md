@@ -65,7 +65,7 @@ Where `get_topicmsg1` is the embedded query string.
 Return from MQTT ***deviceShifu***:
 
 ```json
-{"mqtt_message":"test_2333","mqtt_receive_timestamp":"2022-04-29 08:57:49.9492744 +0000 UTC m=+75.407609501"}
+{"mqtt_message":"test2333","mqtt_receive_timestamp":"2022-04-29 08:57:49.9492744 +0000 UTC m=+75.407609501"}
 ```
 
 Where `mqtt_message` is the latest data string from device, `mqtt_receive_timestamp` is the timestamp when the message was received.

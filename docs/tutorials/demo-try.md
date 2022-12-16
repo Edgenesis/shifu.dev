@@ -406,14 +406,14 @@ http://deviceshifu-socket.deviceshifu.svc.cluster.local/cmd; echo
 
 ![deviceshifu-socket_output1.png](images/deviceshifu-socket_output1.png)
 
-## 8. Interact with the MQTT Device
+## 8. Interact with the MQTT Device (Support multi-topic subscription)
 
 <details>
   <summary> Click here to view the details of the MQTT </summary>
   Q: What is a MQTT? <br/>
   A: MQTT is a messaging protocol based on the publish/subscribe paradigm under the ISO standard, please click <a href="https://en.wikipedia.org/wiki/MQTT">here</a> for details. <br/>
   Q: How to interact with the MQTT in this demo? <br/>
-  A: We support multi-topic subscription, so we can have multiple APIs for MQTT's digital twin (eg: get_topicmsg1, get_topicmsg2), When MQTT's digital twin receives the mqtt_data command, it returns the last message in the subscribed channel.
+  A: We support multi-topic subscription, so we can have multiple APIs for MQTT's digital twin (eg: get_topicmsg1, get_topicmsg2), When MQTT's digital twin receives the mqtt_data command, it returns the last message in the subscribed topic.
 </details>
 
 ### Create the digital twin
