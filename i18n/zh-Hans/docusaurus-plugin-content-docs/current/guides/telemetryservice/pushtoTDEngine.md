@@ -48,10 +48,17 @@ kubectl get secret -n deviceshifu
 在`deviceshifu-deployment.yaml`中关联该`Secret`：
 
 ```yaml
-- name: deviceshifu-secret
-  secret:
-		secretName: deviceshifu-secret
-		optional: true
+...
+  volumeMounts:
+    - name: deviceshifu-secret
+      mountPath: /etc/edgedevice/secret
+      readOnly: true
+volumes:
+  - name: deviceshifu-secret
+    secret:
+      secretName: deviceshifu-secret
+      optional: true
+...
 ```
 
 :::

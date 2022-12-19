@@ -50,10 +50,17 @@ kubectl get secret -n deviceshifu
 Associate the `Secret` in `deviceshifu-deployment.yaml`:
 
 ```yaml
+...
+  volumeMounts:
+    - name: deviceshifu-secret
+      mountPath: /etc/edgedevice/secret
+      readOnly: true
+volumes:
 - name: deviceshifu-secret
   secret:
-		secretName: deviceshifu-secret
-		optional: true
+    secretName: deviceshifu-secret
+    optional: true
+...
 ```
 
 :::
