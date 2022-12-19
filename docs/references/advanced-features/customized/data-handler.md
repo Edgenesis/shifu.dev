@@ -56,7 +56,33 @@ In `examples/deviceshifu/customized/humidity_detector/pythoncustomizedhandlers`,
 
 Copy `examples/deviceshifu/customized/humidity_detector/sample_deviceshifu_dockerfiles/Dockerfile.deviceshifuHTTP` to `dockerfiles`.
 
-### 3. Build deviceShifu docker image
+### 3. Add mapping of data handlers
+
+In `examples/deviceshifu/customized/humidity_detector/configuration`,there is a `deviceshifu-humidity-detector-configmap.yaml`,Map your device commands to the funcName of your data processing program.
+
+(e.g.: instructions is '/123' and funcName is 'humidity')
+
+Then you need to set `123: humidity` under `customInstructionsPython` and set device commands under `instructions.instructions` and `telemetries.telemetries.device_health.properties.instruction`Instructions
+
+As follows:
+
+```yaml
+data:
+  customInstructionsPython: |
+    123: humidity 
+    #123是instructions，humidity是处理程序funcName
+  instructions: |
+    instructions:
+      123:
+  telemetries: |
+    telemetries:
+      device_health:
+        properties:
+          instruction: 
+            123
+```
+
+### 4. Build deviceShifu docker image
 
 A new ***deviceShifu*** image needs to be built to include the customized data handler.
 
@@ -66,7 +92,7 @@ In the root directory of `shifu`, run the following command to build the ***devi
 make buildx-build-image-deviceshifu-http-http
 ```
 
-### 4. Start Shifu
+### 5. Start Shifu
 
 This will be exactly the same as in [quick install](docs\tutorials\demo-install.md).
 
@@ -76,7 +102,7 @@ After ***Shifu*** is running, we need to import the newly built humidity detecto
 kind load docker-image humidity-detector:v0.0.1
 ```
 
-### 5. Check processed data
+### 6. Check processed data
 
 The raw data from this virtual device should be processed by the customized handler defined in `customized_hanlders.py`.
 
