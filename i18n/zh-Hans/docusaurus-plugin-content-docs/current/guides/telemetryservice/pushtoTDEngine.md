@@ -39,6 +39,21 @@ spec:
 kubectl create secret generic deviceshifu-secret --from-literal=telemetry_service_sql_pwd=your_password -n deviceshifu
 ```
 
+可以通过`kubectl`查看集群中的`Secret`：
+
+```bash
+kubectl get secret -n deviceshifu
+```
+
+在`deviceshifu-deployment.yaml`中关联该`Secret`：
+
+```yaml
+- name: deviceshifu-secret
+  secret:
+		secretName: deviceshifu-secret
+		optional: true
+```
+
 :::
 
 ## 编辑Configmap Yaml文件

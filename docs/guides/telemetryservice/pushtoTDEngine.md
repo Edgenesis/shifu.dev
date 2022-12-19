@@ -35,10 +35,25 @@ If you have multiple telemetry services, you can write them in one file and spli
 
 :::note use secret to store password
 
-Create a  `Secret` with `telemetry_service_sql_pwd` field filled by your password, and it will overwrite the `SQLSetting.secret` in `TelemetryService`.
+Create a `Secret` with `telemetry_service_sql_pwd` field filled by your password, and it will overwrite the `SQLSetting.secret` in `TelemetryService`.
 
 ```bash
 kubectl create secret generic deviceshifu-secret --from-literal=telemetry_service_sql_pwd=your_password -n deviceshifu
+```
+
+List `secret` using `kubectl`:
+
+```bash
+kubectl get secret -n deviceshifu
+```
+
+Associate the `Secret` in `deviceshifu-deployment.yaml`:
+
+```yaml
+- name: deviceshifu-secret
+  secret:
+		secretName: deviceshifu-secret
+		optional: true
 ```
 
 :::
