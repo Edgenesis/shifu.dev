@@ -28,8 +28,19 @@ spec:
 - `dbTable` is the table name of the database
 - `dbType` is the type of the database
   
+
 :::note
 If you have multiple telemetry services, you can write them in one file and split them in one file using `---`.
+:::
+
+:::note use secret to store password
+
+Create a  `Secret` with `telemetry_service_sql_pwd` field filled by your password, and it will overwrite the `SQLSetting.secret` in `TelemetryService`.
+
+```bash
+kubectl create secret generic deviceshifu-secret --from-literal=telemetry_service_sql_pwd=your_password -n deviceshifu
+```
+
 :::
 
 ## Edit Configmap Yaml file

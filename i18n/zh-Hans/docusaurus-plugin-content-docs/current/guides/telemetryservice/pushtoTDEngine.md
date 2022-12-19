@@ -31,6 +31,16 @@ spec:
 如果你有多个遥测服务，你可以把它们写在一个文件里，用`---`把它们分割该文件文件。
 :::
 
+:::note 使用`Secret`存储密码
+
+创建 `Secret`，在 `telemetry_service_sql_pwd` 字段填写密码，它会覆盖`TelemetryService` 中的`SQLSetting.secret`字段
+
+```bash
+kubectl create secret generic deviceshifu-secret --from-literal=telemetry_service_sql_pwd=your_password -n deviceshifu
+```
+
+:::
+
 ## 编辑Configmap Yaml文件
 ```yaml
 # configmap.yaml
