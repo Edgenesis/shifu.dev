@@ -34,7 +34,8 @@ DeviceShifuDriverProperties 是指 ***deviceShifu*** 的驱动参数。
 DeviceShifuInstructions 是指 ***deviceShifu*** 的可以接收并发出的所有指令及设置。
 
 - **instructionSettings** ([DeviceShifuInstructionSettings](#deviceshifuinstructionsettings))
-- **instructions** (map[string]DeviceShifuInstruction)<br>**示例：**
+- **instructions** (map[string]DeviceShifuInstruction)
+ **示例：**
 ```yml
 instructions: |
   instructions:

@@ -34,7 +34,8 @@ DeviceShifuDriverProperties refer to driver parameters of ***deviceShifu***.
 DeviceShifuInstructions are all the commands and settings that ***deviceShifu*** can receive and issue.
 
 - **instructionSettings** ([DeviceShifuInstructionSettings](#deviceshifuinstructionsettings))
-- **instructions** (map[string]DeviceShifuInstruction)<br>**example**
+- **instructions** (map[string]DeviceShifuInstruction)
+ **Example:**
 ```yml
 instructions: |
   instructions:
