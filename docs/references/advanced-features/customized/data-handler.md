@@ -70,7 +70,7 @@ As follows:
 data:
   customInstructionsPython: |
     123: humidity 
-    #123是instructions，humidity是处理程序funcName
+    #123 is instructions，humidity is the handler funcName
   instructions: |
     instructions:
       123:
