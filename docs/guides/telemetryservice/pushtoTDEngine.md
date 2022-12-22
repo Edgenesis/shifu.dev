@@ -27,7 +27,7 @@ spec:
 - `dbName` is the name of the database
 - `dbTable` is the table name of the database
 - `dbType` is the type of the database
-
+  
 :::note
 If you have multiple telemetry services, you can write them in one file and split them in one file using `---`.
 :::
