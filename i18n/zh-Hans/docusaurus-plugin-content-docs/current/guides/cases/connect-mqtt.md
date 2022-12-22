@@ -22,7 +22,25 @@ spec:
   protocol: MQTT
   protocolSettings:
     MQTTSetting:
-      MQTTTopic: /test/test # 修改此值
+```
+
+在 `examples/mqttDeviceShifu/mqtt_deploy/mqtt_deviceshifu_configmap.yaml` 中:
+
+```yml
+...
+data:
+  driverProperties: |
+    driverSku: testMQTT
+    driverImage: 
+  instructions: | 
+    instructions: # 一条命令可以订阅一个topic，如需订阅多个topic，增加命令即可
+      get_topicmsg1: # 修改此值
+        protocolPropertyList:
+          MQTTTopic: "/test/test1" # 修改此值
+      get_topicmsg2: 
+        protocolPropertyList:
+          MQTTTopic: "/test/test2"
+      ... # 根据自己的需要可继续配置命令及对应的Topic，只需按照此格式继续添加即可
 ```
 
 ## 部署deviceShifu
@@ -38,10 +56,10 @@ kubectl apply -f examples/mqttDeviceShifu/mqtt_deploy
 在您的集群中运行下面的命令:
 
 ```
-curl deviceshifu-mqtt/mqtt_data
+curl deviceshifu-mqtt/get_topicmsg1
 ```
 
-这里 `mqtt_data` 是需要查询的字段。
+这里 `get_topicmsg1` 是需要查询的字段。
 
 MQTT ***deviceShifu*** 返回的内容如下：
 

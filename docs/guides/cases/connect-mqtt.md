@@ -25,6 +25,25 @@ spec:
       MQTTTopic: /test/test # change this value
 ```
 
+In `examples/mqttDeviceShifu/mqtt_deploy/mqtt_deviceshifu_configmap.yaml`:
+
+```yml
+...
+data:
+  driverProperties: |
+    driverSku: testMQTT
+    driverImage: 
+  instructions: | 
+    instructions: # A command can subscribe to a topic, if you need to subscribe to multiple topics, just add a command
+      get_topicmsg1: # change this value
+        protocolPropertyList:
+          MQTTTopic: "/test/test1" # change this value
+      get_topicmsg2: 
+        protocolPropertyList:
+          MQTTTopic: "/test/test2" 
+      ... # You can continue to configure commands and corresponding topics according to your own needs, just continue to add according to this format
+```
+
 ## Deploy deviceShifu
 
 Run this command:
@@ -38,10 +57,10 @@ kubectl apply -f examples/mqttDeviceShifu/mqtt_deploy
 In your cluster:
 
 ```
-curl deviceshifu-mqtt/mqtt_data
+curl deviceshifu-mqtt/get_topicmsg1
 ```
 
-Where `mqtt_data` is the embedded query string.
+Where `get_topicmsg1` is the embedded query string.
 
 Return from MQTT ***deviceShifu***:
 
