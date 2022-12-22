@@ -33,32 +33,10 @@ spec:
 
 :::note 使用`Secret`存储密码
 
-创建 `Secret`，在 `telemetry_service_sql_pwd` 字段填写密码，它会覆盖`TelemetryService` 中的`SQLSetting.secret`字段
+创建一个与telemetry名字相同，并带有 `telemetry-` 前缀的 `Secret`，例如 `telemetry-push-endpoint-1` ，在 `password` 字段填写密码，它会覆盖 `TelemetryService` 中的 `SQLSetting.secret` 字段
 
 ```bash
-kubectl create secret generic deviceshifu-secret --from-literal=telemetry_service_sql_pwd=your_password -n deviceshifu
-```
-
-可以通过`kubectl`查看集群中的`Secret`：
-
-```bash
-kubectl get secret -n deviceshifu
-```
-
-在`deviceshifu-deployment.yaml`中关联该`Secret`：
-
-```yaml
-...
-  volumeMounts:
-    - name: deviceshifu-secret
-      mountPath: /etc/edgedevice/secret
-      readOnly: true
-volumes:
-  - name: deviceshifu-secret
-    secret:
-      secretName: deviceshifu-secret
-      optional: true
-...
+kubectl create secret generic telemetry-push-endpoint-1 --from-literal=password=your_password -n deviceshifu
 ```
 
 :::
