@@ -36,7 +36,7 @@ spec:
 创建一个与telemetry名字相同，并带有 `telemetry-` 前缀的 `Secret`，例如 `telemetry-push-endpoint-1` ，在 `password` 字段填写密码，它会覆盖 `TelemetryService` 中的 `SQLSetting.secret` 字段
 
 ```bash
-kubectl create secret generic telemetry-push-endpoint-1 --from-literal=password=your_password -n deviceshifu
+kubectl create secret generic telemetry-push-endpoint-1 --from-literal=password=your_password -n devices
 ```
 
 :::

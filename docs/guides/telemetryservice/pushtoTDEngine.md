@@ -37,7 +37,7 @@ If you have multiple telemetry services, you can write them in one file and spli
 Create a `Secret` using your telemetry name with `telemetry-` prefix like `telemetry-push-endpoint-1`, with `password` field filled by your password, and it will overwrite the `SQLSetting.secret` in `TelemetryService`.
 
 ```bash
-kubectl create secret generic telemetry-push-endpoint-1 --from-literal=password=your_password -n deviceshifu
+kubectl create secret generic telemetry-push-endpoint-1 --from-literal=password=your_password -n devices
 ```
 
 :::
