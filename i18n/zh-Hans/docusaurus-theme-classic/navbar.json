@@ -7,6 +7,10 @@
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
   },
+  "item.label.Product": {
+    "message": "产品",
+    "description": "Navbar item with label Product"
+  },
   "item.label.Docs": {
     "message": "文档",
     "description": "Navbar item with label Docs"
@@ -26,5 +30,9 @@
   "item.label.Case Studies": {
     "message": "用户案例",
     "description": "Navbar item with label Case Studies"
+  },
+  "item.label.Company": {
+    "message": "公司",
+    "description": "Navbar item with label Company"
   }
 }

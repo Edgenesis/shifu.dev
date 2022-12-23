@@ -105,37 +105,49 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Shifu',
+        // title: 'Shifu',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
+            to: '/product',
+            position: 'left',
+            label: 'Product',
+          },
+          {
             type: 'doc',
             docId: 'intro',
             position: 'left',
             label: 'Docs',
           },
+
           {
             to: '/case-studies',
             position: 'left',
             label: 'Case Studies',
           },
+
+          // {
+          //   to: '/news',
+          //   position: 'left',
+          //   label: 'News',
+          // },
+          // {
+          //   to: '/technical-blogs',
+          //   position: 'left',
+          //   label: 'Blog',
+          // },
+          // {
+          //   href: '/disclaimer',
+          //   label: 'Download Demo',
+          //   position: 'left',
+          // },
           {
-            to: '/news',
+            to: '/company',
             position: 'left',
-            label: 'News',
-          },
-          {
-            to: '/technical-blogs',
-            position: 'left',
-            label: 'Blog',
-          },
-          {
-            href: '/disclaimer',
-            label: 'Download Demo',
-            position: 'left',
+            label: 'Company',
           },
           {
             type: 'localeDropdown',
