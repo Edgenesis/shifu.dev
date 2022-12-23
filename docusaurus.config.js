@@ -104,8 +104,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
+      image: 'img/logo.svg',
       navbar: {
-        // title: 'Shifu',
+        title: 'Shifu',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -150,21 +156,44 @@ const config = {
             label: 'Company',
           },
           {
+            type: 'search',
+            position: 'right',
+            className: 'header-search'
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
             className: 'langDropdown'
           },
           {
+            to: '/contact',
+            position: 'right',
+            label: 'Contact',
+            className: 'header-btn'
+          },
+          {
             href: 'https://github.com/edgenesis/shifu',
             position: 'right',
-            className: "header-github-link",
+            className: "header-link header-github-link",
             "aria-label": "GitHub repository",
+          },
+          {
+            href: 'https://discord.com/channels/1024601454306136074/1024601454759133214',
+            position: 'right',
+            className: "header-link header-discord-link",
+            "aria-label": "Discord repository",
+          },
+          {
+            href: 'https://twitter.com/ShifuFramework',
+            position: 'right',
+            className: "header-link header-twitter-link",
+            "aria-label": "Twitter repository",
           },
         ],
       },
       footer: {
         style: 'light',
-        copyright: `© ${new Date().getFullYear()} Edgenesis. | <a href="https://beian.miit.gov.cn/">京ICP备2021037926号</a>  | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039843">京公网安备11010802039843号</a>`,
+        copyright: `© ${new Date().getFullYear()} Edgenesis. | <a href="https://beian.miit.gov.cn/" style="color: #000000">京ICP备2021037926号</a>  | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039843" style="color: #000000">京公网安备11010802039843号</a>`,
       },
       prism: {
         theme: lightCodeTheme,
