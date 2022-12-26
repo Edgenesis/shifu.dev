@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./styles.module.scss"
-import common from "../../css/common.module.scss"
-import logo from '../../../static/img/footer/logo.png'
-import Vector from '../../../static/img/footer/Vector.png'
-import mail from '../../../static/img/footer/mail.png'
-import device from '../../../static/img/footer/device-mobile.png'
-import map from '../../../static/img/footer/map-pin.png'
+import common from "@site/src/css/common.module.scss"
+import logo from '@site/static/img/footer/logo.png'
+import Vector from '@site/static/img/footer/Vector.png'
+import mail from '@site/static/img/footer/mail.png'
+import device from '@site/static/img/footer/device-mobile.png'
+import map from '@site/static/img/footer/map-pin.png'
 import Translate ,{ translate }  from '@docusaurus/Translate';
 import { Divider,Input,Tooltip } from 'antd';
 export function Foot(props) {
