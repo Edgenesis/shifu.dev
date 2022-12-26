@@ -561,5 +561,9 @@
   },
   "Haidian, Beijing": {
     "message": " 北京市 海淀区 中关村 创业大街 12号楼"
+  },
+  "Product.first.title":{
+    "message":"选择适合您的部署方式，立即开始试用",
+    "description":"Select the deployment mode that suits you, and start the trial immediately"
   }
 }
