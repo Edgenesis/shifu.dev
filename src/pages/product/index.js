@@ -27,17 +27,17 @@ const list2 = [
   {
     title: '多类型协议支持',
     instruction: '开源社区正在不断增加支持的协议，提高快速接入的覆盖率',
-    jpg: 'github.png'
+    jpg: 'icon1.png'
   },
   {
     title: '应用开发支持',
     instruction: '你能在Shifu Cloud平台体验便捷的应用开发',
-    jpg: 'cloud.png'
+    jpg: 'icon2.png'
   },
   {
     title: '应用商店支持',
     instruction: '包括开发者上传的自己开发的应用或第三方插件，支持使用者一键安装',
-    jpg: 'cloud.png'
+    jpg: 'icon3.png'
   }
 ]
 
@@ -102,11 +102,25 @@ const Second = () => (
   </>
 )
 
+const Third = () => (
+  <>
+    <div className={styles.instructionbox}>
+      <p>嗨！我们是边无际Edgenesis</p>
+      <p>
+        边无际（北京）科技有限公司致力于下一代国际标准的物联网开源开发框架研发。
+        边无际Edgenesis基于K8S首创分布式物联网框架Shifu，为客户全场景设备托管，一体化软件开发提供了透明框架。通过透明框架内的数字孪生技术，为设备赋予有思考能力的”数字大脑“，通过平台层对场景内所有设备、机器进行北向数据收集和南向指令管控。
+        边无际Edgenesis已为多行业细分头部企业提供框架托管服务，公司现已和包括中国船舶、厦门国贸、微软、亚马逊在内的多家国内国外的世界500强深度合作，并荣膺中国信通院工业互联网产业联盟工业互联网平台测试验证与创新推广实验室14家成员企业之一。未来，边无际将坚持推动智能设备的底层数字化结构转型，为行业内解决方案集成商、企业物联网项目组，政府基础新基建部门提供100%可复用，100%模块化的积木拼搭式框架部署体验。
+      </p>
+    </div>
+  </>
+)
+
 export default function Disclaimer() {
   return (
     <Layout>
-      <First></First>
+      {/* <First></First> */}
       {/* <Second></Second> */}
+      <Third></Third>
       <Foot></Foot>
     </Layout>
   )
