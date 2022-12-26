@@ -537,5 +537,29 @@
   },
   "Cloud-Edge Collaboration": {
     "message": "云边协同"
+  },
+  "Shifu Brings mobile-app-development-experience to the IoT world!": {
+    "message": "让开发产业场景像开发APP一样简单！"
+  },
+  "Product": {
+    "message": "产品"
+  },
+  "Documentation": {
+    "message": "文档"
+  },
+  "Case Studies": {
+    "message": "用户案例"
+  },
+  "Company": {
+    "message": "公司"
+  },
+  "Subscribe": {
+    "message": " 订阅 Shifu 最新资讯"
+  },
+  "Please leave your Email": {
+    "message": " 填写您的邮箱"
+  },
+  "Haidian, Beijing": {
+    "message": " 北京市 海淀区 中关村 创业大街 12号楼"
   }
 }
