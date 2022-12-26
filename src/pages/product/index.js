@@ -5,6 +5,7 @@ import { Button, Col, Row } from 'antd'
 import styles from './styles.module.scss'
 import PlanCard from './plancard/index'
 import Feature from './feature'
+import Recruitment from './recruitment/index'
 import { Foot } from '../../components/footer/index'
 const list = [
   {
@@ -41,6 +42,17 @@ const list2 = [
   }
 ]
 
+const list3 = [
+  {
+    name: 'UI/UX 交互设计实习生',
+    require: '实习 | 不限 | 本科 | 产品'
+  },
+  {
+    name: 'Go后端开发实习生',
+    require: '实习 | 不限 | 本科 | 技术'
+  }
+]
+
 const First = () => (
   <>
     <div className={styles.bck}></div>
@@ -67,7 +79,6 @@ const First = () => (
 const Second = () => (
   <>
     <div className={styles.bck2}></div>
-
     <div className={styles.instruction2}>
       <Row className={styles.planbody}>
         <Col span={8} className={styles.planbody2}>
@@ -104,13 +115,52 @@ const Second = () => (
 
 const Third = () => (
   <>
-    <div className={styles.instructionbox}>
-      <p>嗨！我们是边无际Edgenesis</p>
-      <p>
-        边无际（北京）科技有限公司致力于下一代国际标准的物联网开源开发框架研发。
-        边无际Edgenesis基于K8S首创分布式物联网框架Shifu，为客户全场景设备托管，一体化软件开发提供了透明框架。通过透明框架内的数字孪生技术，为设备赋予有思考能力的”数字大脑“，通过平台层对场景内所有设备、机器进行北向数据收集和南向指令管控。
-        边无际Edgenesis已为多行业细分头部企业提供框架托管服务，公司现已和包括中国船舶、厦门国贸、微软、亚马逊在内的多家国内国外的世界500强深度合作，并荣膺中国信通院工业互联网产业联盟工业互联网平台测试验证与创新推广实验室14家成员企业之一。未来，边无际将坚持推动智能设备的底层数字化结构转型，为行业内解决方案集成商、企业物联网项目组，政府基础新基建部门提供100%可复用，100%模块化的积木拼搭式框架部署体验。
-      </p>
+    <div className={styles.bck3}></div>
+    <div className={styles.third}>
+      <div className={styles.instructionbox}>
+        <p>
+          嗨！我们是<a>边无际Edgenesis</a>
+        </p>
+        <p>边无际（北京）科技有限公司致力于下一代国际标准的物联网开源开发框架研发。</p>
+        <p>边无际Edgenesis基于K8S首创分布式物联网框架Shifu，为客户全场景设备托管，一体化软件开发提供了透明框架。通过透明框架内的数字孪生技术，为设备赋予有思考能力的”数字大脑“，通过平台层对场景内所有设备、机器进行北向数据收集和南向指令管控。</p>
+        <p>
+          边无际Edgenesis已为多行业细分头部企业提供框架托管服务，公司现已和包括中国船舶、厦门国贸、微软、亚马逊在内的多家国内国外的世界500强深度合作，并荣膺中国信通院工业互联网产业联盟工业互联网平台测试验证与创新推广实验室14家成员企业之一。未来，边无际将坚持推动智能设备的底层数字化结构转型，为行业内解决方案集成商、企业物联网项目组，政府基础新基建部门提供100%可复用，100%模块化的积木拼搭式框架部署体验。
+        </p>
+      </div>
+      <p>Edgenesis深受行业领导者信任</p>
+      <img src={require('./logo5.png').default}></img>
+      <div className={styles.welcome}>
+        <div className={styles.welcomesquare}></div>
+        <p className={styles.welcometitle}>欢迎加入我们</p>
+        <div className={styles.welcomelist}>
+          <Recruitment data={list3[0]}></Recruitment>
+          <Recruitment data={list3[1]}></Recruitment>
+        </div>
+      </div>
+    </div>
+  </>
+)
+
+const Fourth = () => (
+  <>
+    <div className={styles.bck3}></div>
+    <div className={styles.third}>
+      <div className={styles.instructionbox}>
+        <p>
+          嗨！我们是<a>边无际Edgenesis</a>
+        </p>
+        <p>边无际（北京）科技有限公司致力于下一代国际标准的物联网开源开发框架研发。</p>
+        <p>边无际Edgenesis基于K8S首创分布式物联网框架Shifu，为客户全场景设备托管，一体化软件开发提供了透明框架。通过透明框架内的数字孪生技术，为设备赋予有思考能力的”数字大脑“，通过平台层对场景内所有设备、机器进行北向数据收集和南向指令管控。</p>
+        <p>
+          边无际Edgenesis已为多行业细分头部企业提供框架托管服务，公司现已和包括中国船舶、厦门国贸、微软、亚马逊在内的多家国内国外的世界500强深度合作，并荣膺中国信通院工业互联网产业联盟工业互联网平台测试验证与创新推广实验室14家成员企业之一。未来，边无际将坚持推动智能设备的底层数字化结构转型，为行业内解决方案集成商、企业物联网项目组，政府基础新基建部门提供100%可复用，100%模块化的积木拼搭式框架部署体验。
+        </p>
+      </div>
+      <p>Edgenesis深受行业领导者信任</p>
+      <img src={require('./logo5.png').default}></img>
+      <div className={styles.contact}>
+        <p>欢迎加入边无际！</p>
+        <Button className={styles.contactbutton}>联系我们</Button>
+      </div>
     </div>
   </>
 )
@@ -121,6 +171,7 @@ export default function Disclaimer() {
       {/* <First></First> */}
       {/* <Second></Second> */}
       <Third></Third>
+      {/* <Fourth></Fourth> */}
       <Foot></Foot>
     </Layout>
   )

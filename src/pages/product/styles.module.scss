@@ -176,7 +176,135 @@ margin-bottom: 48px;
 font-size: 24px;
 }
 }
+.third{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  >p{
+    font-family: Inter;
+font-size: 48px;
+font-weight: 300;
+line-height: 60px;
+letter-spacing: -0.025em;
+text-align: center;
+
+    margin:0;
+  }
+  >img{
+    margin: 21px 0 47px 0;
+  }
 .instructionbox{
   width: 100%;
   height: 854px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  p:nth-child(1) {
+    margin: 128px 0 48px 0 ;
+    font-family: Inter;
+font-size: 64px;
+font-weight: 300;
+line-height: 72px;
+letter-spacing: -0.025em;
+text-align: center;
+a{
+font-family: Inter;
+font-size: 64px;
+font-weight: 400;
+line-height: 72px;
+letter-spacing: -0.025em;
+text-align: center;
+color:  linear-gradient(207.95deg, #399BFF -12.8%, #62E7D0 112.78%, #B1EC44 112.8%)
+}
+  }
+  p:nth-child(2),p:nth-child(3),p:nth-child(4){
+    width: 1010px;
+    font-family: Inter;
+font-size: 24px;
+font-weight: 300;
+line-height: 28px;
+letter-spacing: 0.15em;
+text-align: left;
+  }
+  p:nth-child(4){
+    margin: 0;
+  }
+}
+.welcome{
+
+width: 100%;
+height: 640px;
+background: #399BFF0D;
+display: flex;
+flex-direction: column;
+align-items: center;
+.welcometitle{
+  margin: 90px 0 100px 0 ;
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: -0.025em;
+  text-align: center;  
+}
+.welcomesquare{
+  position: relative;
+  top: 168px;
+  left: 40px;
+  width: 310px;
+  height: 48px;
+  background-image: url("./square.png") ;
+}
+.welcomelist{
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+}
+}
+.bck3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  background-image: url("./bck3.png") ;
+}
+.contact{
+  width: 80%;
+  height: 320px;
+  background: linear-gradient(207.95deg, #399BFF -12.8%, #62E7D0 112.78%, #B1EC44 112.8%);
+  border: 1px solid #C4B5FD;
+border-radius: 16px;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 50px 0 80px 0;
+  P{
+    font-family: Inter;
+font-size: 64px;
+font-weight: 700;
+line-height: 60px;
+height: 96px;
+letter-spacing: -0.025em;
+text-align: center;
+color: #FFFFFF;
+margin:64px 0 32px 0 ;
+  }
+  .contactbutton{
+    height: 64px;
+width: 216px;
+border-radius: 8px;
+padding: 16px 24px 16px 24px;
+font-family: Inter;
+font-size: 32px;
+font-weight: 500;
+line-height: 24px;
+text-align: center;
+color: #399BFF;
+
+  }
 }
