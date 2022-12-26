@@ -80,6 +80,12 @@ code {
   vertical-align:baseline
 }
 /*Navigation bar*/
+.dropdown__link{
+  height:30px;
+  line-height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .header-link:hover {
   opacity: 0.6;
 }
