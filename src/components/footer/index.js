@@ -52,7 +52,7 @@ export function Link(props) {
           <img src={logo} alt=""/>
           <Translate>Shifu Brings mobile-app-development-experience to the IoT world!</Translate>
         </div>
-        <div className={styles.footerTitle}>
+        <div className={`${styles.footerTitle}  ${styles.footerTitleS}`}>
           <a href="product"><Translate>Product</Translate></a>
           <Divider type="vertical" />
           <a href="docs"><Translate>Documentation</Translate></a>

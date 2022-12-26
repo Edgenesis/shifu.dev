@@ -118,4 +118,12 @@ html[data-theme='dark'] .header-github-link:before {
   color: #fff;
 }
 
+@media screen and (max-width: 996px) {
+  .footer{
+    padding-top: 10px;
+  }
+  .footer__copyright{
+    line-height: 30px;
+  }
+}
 

@@ -1,20 +1,22 @@
 .footerBox{
   width:100%;
-  padding: 80px 0 48px;
+  padding: 80px 0 30px;
   background-color: var(--ifm-footer-background-color);
 }
 .footerCon{
   display: flex;
   justify-content: space-between;
   >div{
-    width: 50%;
-    flex-shrink: 0;
+    margin-bottom: 20px;
   }
 }
 .footerTitle{
   display: flex;
   align-items: center;
+
   margin-bottom: 30px;
+  line-height: 30px;
+  margin-right: 20px;
   img{
     height: 62px;
     margin-right: 20px;
@@ -22,6 +24,9 @@
   a{
     color: #000;
   }
+}
+.footerTitleS{
+  flex-wrap: wrap;
 }
 .footerLinks{
   margin-bottom: 0;
@@ -36,13 +41,14 @@
 .footerEmail{
   h2{
     height: 62px;
-    line-height: 62px;
+    line-height: 50px;
+    margin-bottom: 0;
   }
 }
 .footerLists{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 26px;
+  margin-top: 20px;
   >div{
     display: flex;
     align-items: center;
@@ -58,5 +64,13 @@
   }
 }
 @media screen and (max-width: 996px) {
-
+  .footerBox{
+    padding-bottom: 0;
+  }
+  .footerCon {
+    flex-wrap: wrap;
+    > div {
+      width: 100%;
+    }
+  }
 }
