@@ -1,14 +1,14 @@
-import { Button, Space } from 'antd'
+import Translate, { translate } from '@docusaurus/Translate'
 import styles from './styles.module.scss'
 import React, { forwardRef } from 'react'
 const Feature = forwardRef((props, ref) => {
   return (
     <div className={styles.welcome}>
-      <a className={styles.address}>北京</a>
-      <p className={styles.name}>{props.data.name}</p>
-      <p className={styles.require}>{props.data.require}</p>
+      <a className={styles.address}>{translate({ message: 'Beijing' })}</a>
+      <p className={styles.name}>{translate({ message: props.data.name })}</p>
+      <p className={styles.require}>{translate({ message: props.data.require })}</p>
       <a className={styles.detail} href="http://www.baidu.com">
-        查看详情>>
+        {translate({ message: 'Check Details>> ' })}
       </a>
     </div>
   )

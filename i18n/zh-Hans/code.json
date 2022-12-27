@@ -535,9 +535,6 @@
   "Data Collection": {
     "message": "数据采集"
   },
-  "Cloud-Edge Collaboration": {
-    "message": "云边协同"
-  },
   "Shifu Brings mobile-app-development-experience to the IoT world!": {
     "message": "让开发产业场景像开发APP一样简单！"
   },
@@ -562,8 +559,197 @@
   "Haidian, Beijing": {
     "message": " 北京市 海淀区 中关村 创业大街 12号楼"
   },
-  "Product.first.title":{
-    "message":"选择适合您的部署方式，立即开始试用",
-    "description":"Select the deployment mode that suits you, and start the trial immediately"
+  "Choose the deployment method that suits you and start your free trial now.":{
+    "message":"选择适合您的部署方式，立即开始试用"
+  },
+  "Fast Device Integration":{
+    "message":"极速设备接入"
+  },
+  "Modularize Deployment Experience":{
+    "message":"模块化部署体验"
+  },
+  "Effective Application Development":{
+    "message":"高效应用开发"
+  },
+  "Multiple protocol support":{
+    "message":"多类型协议支持"
+  },
+  "Application Development Support":{
+    "message":"便捷应用开发"
+  },
+  "App Store Support":{
+    "message":"应用商店支持"
+  },
+  "As a next-generation cloud-native IoT development framework, Shifu provides users with full-scene device hosting and integrated software development capabilities. Through the use of the Shifu framework, developers can more easily connect, monitor and control any IoT device.":{
+    "message":"作为下一代云原生物联网开发框架，Shifu为用户提供了全场景设备托管与一体化软件开发能力。开发者通过使用 Shifu框架，可以更简单地连接、监视和控制任何物联网设备。"
+  },
+  "Try it out":{
+    "message":"点击试用"
+  },
+  "Free Access for Individuals":{
+    "message":"点击试用(个人限时免费)"
+  },
+  "Try open source Shifu framework":{
+    "message":"开源版Shifu 框架"
+  },  
+  "Try Shifu Cloud":{
+    "message":"Shifu Cloud 平台"
+  },
+  "As ":{
+    "message":"作为"
+  },
+  "a next-generation cloud-native IoT development framework":{
+    "message":"下一代云原生物联网开发框架"
+  },
+  ", Shifu provides users with full-scene device hosting and integrated software development capabilities. Through the use of the Shifu framework, developers can more easily connect, monitor and control any IoT device.":{
+    "message":"，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
+  },
+  "a device configuration platform based on the open source IoT development framework Shifu":{
+    "message":"基于开源物联网开发框架Shifu的设备配置平台"
+  },
+  ", Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.":{
+    "message":"，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
+  },
+  "As a device configuration platform based on the open source IoT development framework Shifu, Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.":{
+    "message":"作为基于开源物联网开发框架Shifu的设备配置平台，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
+  },  
+  "Get Started":{
+    "message":"现在体验"
+  },
+  "Features":{
+    "message":"产品特点"
+  },
+  "Multi-protocol support":{
+    "message":"多类型协议支持"
+  },
+  "The open-source community has been dedicated to adding support for various protocol types, increasing the coverage of protocols for quick access":{
+    "message":"开源社区正在不断增加支持的协议，提高快速接入的覆盖率"
+  },
+  "Application development support":{
+    "message":"应用开发支持"
+  },
+  "Shifu has provided with a platform for convenient application development":{
+    "message":"Shifu提供了支持便捷应用开发的平台"
+  },
+  "App store support":{
+    "message":"应用商店支持"
+  },
+  "Developers can upload their own developed applications or third-party plugins, users can install these applications or plugins with one click.":{
+    "message":"包括开发者上传的自己开发的应用或第三方插件，支持使用者一键安装"
+  },
+  "Enterprise-level services":{
+    "message":"企业级服务"
+  },
+  "Our core operational team provides private deployment technical support, architecture design, industrial scene development consulting, remote training, and O&M support, etc., to make IoT development fast and easy.":{
+    "message":"Shifu Cloud核心运营团队提供私有化部署技术支持、架构设计、场景开发咨询、远程培训、运维支持等企业级服务，解决物联网场景落地开发难题。"
+  },
+  "Contact Us":{
+    "message":"联系我们"
+  },
+  "Hi！We Are ":{
+    "message":"嗨！我们是"
+  },
+  "Edgenesis":{
+    "message":"边无际Edgenesis"
+  },
+  "Edgenesis (Beijing) Technology Co., Ltd., is committed to the R&D of the next generation open source IoT development frameworks.":{
+    "message":"边无际（北京）科技有限公司致力于下一代国际标准的物联网开源开发框架研发。"
+  }, 
+  "Edgenesis has created the ingenious distributed IoT framework Shifu based on k8s, providing full-scene device hosting for customers and an integrated software development experience. By using digital twin technology within a transparent framework, Shifu endows devices with thinking digital brain. The platform layer collects north-bound data from all devices and machines on the scene and sends south-bound instructions.":{
+    "message":"边无际Edgenesis基于K8S首创分布式物联网框架Shifu，为客户全场景设备托管，一体化软件开发提供了透明框架。通过透明框架内的数字孪生技术，为设备赋予有思考能力的”数字大脑“，通过平台层对场景内所有设备、机器进行北向数据收集和南向指令管控。"
+  }, 
+  "Edgenesis has provided framework hosting services to many top companies in respective industries. The company has cooperated with many domestic and foreign Fortune 500 companies, including China State Shipbuilding Cooperation, Xiamen Itg Group Corp.,Ltd. Microsoft, and Amazon. In the future, Edgenesis will continue to promote the digitalization of the underlying structure of intelligent devices, providing 100% reusable and modular-like framework deployment experience for solution integrators, industrial IoT projects, and government infrastructure departments.":{
+    "message":"边无际Edgenesis已为多行业细分头部企业提供框架托管服务，公司现已和包括中国船舶、厦门国贸、微软、亚马逊在内的多家国内国外的世界500强深度合作，并荣膺中国信通院工业互联网产业联盟工业互联网平台测试验证与创新推广实验室14家成员企业之一。未来，边无际将坚持推动智能设备的底层数字化结构转型，为行业内解决方案集成商、企业物联网项目组，政府基础新基建部门提供100%可复用，100%模块化的积木拼搭式框架部署体验。"
+  },
+  "Well trusted by industry leaders":{
+    "message":"Edgenesis深受行业领导者信任"
+  },
+  "Join Us":{
+    "message":"欢迎加入我们"
+  },
+  "Beijing":{
+    "message":"北京"
+  },
+  "UI/UX intern":{
+    "message":"UI/UX 交互设计实习生"
+  },
+  "Inter | Product":{
+    "message":"实习 | 不限 | 本科 | 产品"
+  },
+  "Intern backend engineer (Golang)":{
+    "message":"Go后端开发实习生"
+  },
+  "Intern | Engineering":{
+    "message":"实习 | 不限 | 本科 | 技术"
+  },
+  "Check Details>> ":{
+    "message":"查看详情>> "
+  },
+  "Welcome to join us!":{
+    "message":"欢迎加入边无际！"
+  },
+  "We have received the questionnaire!":{
+    "message":"问卷已经收到啦！"
+  },
+  "Thank you so much for your support":{
+    "message":"感谢您的支持"
+  },  
+  "Shifu is dedicated to serving you better!":{
+    "message":"Shifu 会努力为您提供更好的服务"
+  },
+  "Redirecting to the homepage in 5 seconds.":{
+    "message":"5s后跳转到首页"
+  },
+  "How would you prefer to be addressed?":{
+    "message":"怎么称呼您？"
+  },
+  "Phone number":{
+    "message":"您的电话？"
+  },
+  "Email Address":{
+    "message":"您的邮箱？"
+  },
+  "Company/organization":{
+    "message":"您所在的公司/组织？"
+  },
+  "What kind of problem do you wish to use Shifu to deal with?":{
+    "message":"您希望通过Shifu解决什么样的问题？"
+  },
+  "Device connection":{
+    "message":"设备连接"
+  },
+  "Application development":{
+    "message":"应用开发"
+  },
+  "Device management":{
+    "message":"设备管理"
+  },
+  "Are you familiar with Docker/Kubernetes?":{
+    "message":"您是否熟悉Docker/Kubernetes相关知识？"
+  },
+  "Never heard of it":{
+    "message":"从来没听说过"
+  },
+  "I have some knowledge of it":{
+    "message":"有一定了解"
+  },
+  "Master in this area":{
+    "message":"熟练掌握"
+  },
+  "How did you get to know Shifu?":{
+    "message":"您通过什么渠道了解到Shifu？"
+  },
+  "Social media(Hacker News, Twitter, Reddit, etc.)":{
+    "message":"社交媒体平台，如知乎、CSDN、简书"
+  },
+  "Introduced by others":{
+    "message":"经由他人介绍"
+  },
+  "Done":{
+    "message":"我已经填写完毕"
+  },
+  "C":{
+    "message":"C"
   }
+  
 }
