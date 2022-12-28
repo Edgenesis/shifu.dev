@@ -106,6 +106,7 @@ align-items: center;
 }
 .instruction2{
   width: 100%;
+  max-width: 1920px;
   height: 1016px;
   display: flex;
   flex-direction: column;
@@ -158,7 +159,6 @@ text-align: left;
   }
 .featurelist{
   width: 100%;
-  height: 287px;
   display: flex;
   flex-direction:row;
   justify-content: space-around;
@@ -332,6 +332,7 @@ color: #399BFF;
 }
 .message{
   width: 100%;
+  max-width: 2560px;
   background: linear-gradient(207.95deg, #399BFF -12.8%, #62E7D0 112.78%, #B1EC44 112.8%);
   padding: 100px;
   .messagebck{
@@ -341,7 +342,7 @@ color: #399BFF;
     width: 32%;
     max-width: 618px;
     z-index: 0;
-
+    
   }
   .messagedetail{
     display: flex;

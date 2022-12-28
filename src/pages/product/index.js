@@ -212,7 +212,14 @@ const Fourth = () => (
       <img src={require('./logo5.png').default}></img>
       <div className={styles.contact}>
         <p>{translate({ message: 'Welcome to join us!' })}</p>
-        <Button className={styles.contactbutton}>{translate({ message: 'Contact Us' })}</Button>
+        <Button
+          className={styles.contactbutton}
+          onClick={() => {
+            location.href = 'https://4g1tj81q9o.jobs.fbmms.cn/page/PSVAGacDW6xEEcT5qbbfRL0FR3'
+          }}
+        >
+          {translate({ message: 'Contact Us' })}
+        </Button>
       </div>
     </div>
   </>
@@ -220,10 +227,12 @@ const Fourth = () => (
 
 const Fifth = () => (
   <>
-    <div className={styles.message}>
-      <img src={require('./message.png').default} className={styles.messagebck}></img>
-      <div className={styles.messagedetail}>
-        <LoginForm></LoginForm>
+    <div className={styles.box}>
+      <div className={styles.message}>
+        <div className={styles.messagedetail}>
+          <img src={require('./message.png').default} className={styles.messagebck}></img>
+          <LoginForm></LoginForm>
+        </div>
       </div>
     </div>
   </>
@@ -245,11 +254,11 @@ const Sixth = () => (
 export default function Disclaimer() {
   return (
     <Layout>
-      {/* <First></First> */}
+      <First></First>
       {/* <Second></Second> */}
       {/* <Third></Third> */}
       {/* <Fourth></Fourth> */}
-      <Fifth></Fifth>
+      {/* <Fifth></Fifth> */}
       {/* <Sixth></Sixth> */}
       <Foot></Foot>
     </Layout>
