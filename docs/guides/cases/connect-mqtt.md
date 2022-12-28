@@ -42,6 +42,11 @@ data:
         protocolPropertyList:
           MQTTTopic: "/test/test2" 
       ... # You can continue to configure commands and corresponding topics according to your own needs, just continue to add according to this format
+  mutexInstructions: | 
+  # Configure mutexInstructions as required. The format is, mutexInstruction:"description"
+      testMutexInstruction1: "Mutex_test1" # change this value
+      testMutexInstruction2: "Mutex_test2" 
+      ... # You can continue to configure mutexInstructions according to your own needs. Just continue to add them in this format
 ```
 
 ## Deploy deviceShifu
@@ -69,3 +74,25 @@ Return from MQTT ***deviceShifu***:
 ```
 
 Where `mqtt_message` is the latest data string from device, `mqtt_receive_timestamp` is the timestamp when the message was received.
+
+## Publish MQTT messages through deviceShifu
+
+In your cluster:
+
+```
+curl -X POST -d 'test_publish' deviceshifu-mqtt/get_topicmsg1
+```
+
+Where `get_topicmsg1` is the embedded query or publish string.
+
+After publishing, query MQTT ***deviceShifu*** again, The returned contents are as follows:
+
+```json
+{"mqtt_message":"test_publish","mqtt_receive_timestamp":"2022-04-29 08:57:59.7397692 +0000 UTC m=+75.407609501"}
+```
+
+Support the publishing of some special messages/instructions(mutexInstruction), mutexInstruction is configured in the yaml file. The corresponding topic in MQTT ***deviceShifu*** will enter the busy state after mutexInstruction is published, and will prevent other messages from being published by ***deviceShifu*** in the busy state. After the mutexInstruction is normally received by the MQTT broker, the corresponding topic returns to the idle state.
+
+```
+curl -X POST -d 'testMutexInstruction1' deviceshifu-mqtt/get_topicmsg1
+```

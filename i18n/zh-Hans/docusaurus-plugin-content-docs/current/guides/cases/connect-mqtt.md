@@ -41,6 +41,11 @@ data:
         protocolPropertyList:
           MQTTTopic: "/test/test2"
       ... # 根据自己的需要可继续配置命令及对应的Topic，只需按照此格式继续添加即可
+  mutexInstructions: | 
+  # 根据需要配置mutexInstructions，每行第一个字段是具体的mutexInstruction，第二个字段是对应说明
+      testMutexInstruction1: "Mutex_test1" # 修改此值
+      testMutexInstruction2: "Mutex_test2" 
+      ... # 根据自己的需要可继续配置mutexInstruction及对应说明，只需按照此格式继续添加即可
 ```
 
 ## 部署deviceShifu
@@ -68,3 +73,25 @@ MQTT ***deviceShifu*** 返回的内容如下：
 ```
 
 其中 `mqtt_message` 是设备接受到的最新字符串。`mqtt_receive_timestamp` 是接收到该消息的时间戳。
+
+## 通过deviceShifu发布MQTT消息
+
+在您的集群中运行下面的命令:
+
+```
+curl -X POST -d 'test_publish' deviceshifu-mqtt/get_topicmsg1
+```
+
+这里 `get_topicmsg1` 是需要查询或发布的字段。
+
+发布之后，再次查询MQTT ***deviceShifu*** 返回的内容如下：
+
+```json
+{"mqtt_message":"test_publish","mqtt_receive_timestamp":"2022-04-29 08:57:59.7397692 +0000 UTC m=+75.407609501"}
+```
+
+支持发布一些特殊的消息/指令（mutexInstruction），mutexInstruction在yaml文件中配置，MQTT ***deviceShifu*** 中对应的topic会在mutexInstruction发布后，进入忙碌状态，忙碌状态时会阻止其它消息通过***deviceShifu***发布。在mutexInstruction被MQTT broker正常接收后，对应topic恢复空闲状态。
+
+```
+curl -X POST -d 'testMutexInstruction1' deviceshifu-mqtt/get_topicmsg1
+```
