@@ -4,12 +4,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
-.first{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+
 .disclaimerContainer {
   padding: 48px 0 96px 0;
   display: flex;
@@ -62,18 +57,7 @@ align-items: center;
   }
 
 }
-.title{
-  font-family: Inter;
-  font-size: 64px;
-  max-width: 1500px;
-  // font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.025em;
-  color: #2580DE;
-  margin: 120px auto;
-  text-align: center;
-  
-}
+
 
 .planbody{
   text-align: center;
@@ -86,15 +70,7 @@ align-items: center;
   justify-content: center;
   align-items: center;
 }
-.bck{
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  height: 700px;
-  background: url("@site/static/img/product/back.png") no-repeat center;
-  z-index: -1;
-}
+
 .bck2{
   position: absolute;
   top: 60px;
