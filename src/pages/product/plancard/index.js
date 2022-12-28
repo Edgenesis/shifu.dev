@@ -2,14 +2,14 @@ import { Button, Space, Col, Row } from 'antd'
 import Translate, { translate } from '@docusaurus/Translate'
 import styles from './styles.module.scss'
 import React, { forwardRef } from 'react'
-import gouxuan from '../gouxuan.png'
+import gouxuan from '@site/static/img/product/gouxuan.png'
 const PlanCard = forwardRef((props, ref) => {
   return (
     <Row className={styles.head}>
       <Col>
         <div className={styles.PlanCard}>
           <div className={styles.title}>
-            <img src={require('../' + props.data.jpg).default}></img>
+            <img src={require('@site/static/img/product/' + props.data.jpg).default}></img>
             <p>{translate({ message: props.data.title })}</p>
           </div>
 

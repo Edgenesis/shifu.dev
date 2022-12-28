@@ -102,7 +102,7 @@ const Second = () => (
             </Button>
           </div>
 
-          <img src={require('./bck2.png').default}></img>
+          <img src={require('@site/static/img/product/bck2.png').default}></img>
         </Row>
       </div>
       <div className={styles.cptd}>
@@ -172,7 +172,7 @@ const Third = () => (
         </p>
       </div>
       <p>{translate({ message: 'Well trusted by industry leaders' })}</p>
-      <img src={require('./logo5.png').default}></img>
+      <img src={require('@site/static/img/product/logo5.png').default}></img>
       <div className={styles.welcome}>
         <div className={styles.welcomesquare}></div>
         <p className={styles.welcometitle}>{translate({ message: 'Join Us' })}</p>
@@ -209,7 +209,7 @@ const Fourth = () => (
         </p>
       </div>
       <p>{translate({ message: 'Well trusted by industry leaders' })}</p>
-      <img src={require('./logo5.png').default}></img>
+      <img src={require('@site/static/img/product/logo5.png').default}></img>
       <div className={styles.contact}>
         <p>{translate({ message: 'Welcome to join us!' })}</p>
         <Button
@@ -230,7 +230,7 @@ const Fifth = () => (
     <div className={styles.box}>
       <div className={styles.message}>
         <div className={styles.messagedetail}>
-          <img src={require('./message.png').default} className={styles.messagebck}></img>
+          <img src={require('@site/static/img/product/message.png').default} className={styles.messagebck}></img>
           <LoginForm></LoginForm>
         </div>
       </div>
@@ -242,7 +242,7 @@ const Sixth = () => (
   <>
     <div className={styles.thanks}>
       <div className={styles.thanksmain}>
-        <img src={require('./thanks.png').default}></img>
+        <img src={require('@site/static/img/product/thanks.png').default}></img>
         <p className={styles.thankstitle}> {translate({ message: 'We have received the questionnaire!' })}</p>
         <p className={styles.thanksinstruction}> {translate({ message: 'Thank you so much for your support' })}</p>
         <p className={styles.thanksinstruction}> {translate({ message: 'Shifu is dedicated to serving you better!' })}</p>

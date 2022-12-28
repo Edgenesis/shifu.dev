@@ -42,35 +42,35 @@ const LoginForm = () => {
     >
       <Form.Item name={['name']} rules={[{ required: true, message: 'Please input your username!' }]}>
         <label>
-          <img src={require('../msg1.png').default}></img>
+          <img src={require('@site/static/img/product/msg1.png').default}></img>
           {translate({ message: 'How would you prefer to be addressed?' })}
         </label>
         <Input />
       </Form.Item>
       <Form.Item name={['age']} rules={[{ required: true, message: 'Please input your Phone number!' }]}>
         <label>
-          <img src={require('../msg2.png').default}></img> {translate({ message: 'Phone number' })}
+          <img src={require('@site/static/img/product/msg2.png').default}></img> {translate({ message: 'Phone number' })}
         </label>
         <Input />
       </Form.Item>
       <Form.Item name={['email']} rules={[{ required: true, message: 'Please input your Email Address!' }]}>
         {' '}
         <label>
-          <img src={require('../msg3.png').default}></img> {translate({ message: 'Email Address' })}
+          <img src={require('@site/static/img/product/msg3.png').default}></img> {translate({ message: 'Email Address' })}
         </label>
         <Input />
       </Form.Item>
 
       <Form.Item name={['company']}>
         <label>
-          <img src={require('../msg4.png').default}></img> {translate({ message: 'Company/organization' })}
+          <img src={require('@site/static/img/product/msg4.png').default}></img> {translate({ message: 'Company/organization' })}
         </label>
         <Input />
       </Form.Item>
 
       <Form.Item name={['question']}>
         <label>
-          <img src={require('../msg5.png').default}></img> {translate({ message: 'What kind of problem do you wish to use Shifu to deal with?' })}
+          <img src={require('@site/static/img/product/msg5.png').default}></img> {translate({ message: 'What kind of problem do you wish to use Shifu to deal with?' })}
         </label>
         <br />
         <Radio.Group>
@@ -82,7 +82,7 @@ const LoginForm = () => {
 
       <Form.Item name={['konwledge']}>
         <label>
-          <img src={require('../msg6.png').default}></img> {translate({ message: 'Are you familiar with Docker/Kubernetes?' })}
+          <img src={require('@site/static/img/product/msg6.png').default}></img> {translate({ message: 'Are you familiar with Docker/Kubernetes?' })}
         </label>
         <br />
         <Radio.Group>
@@ -94,13 +94,13 @@ const LoginForm = () => {
 
       <Form.Item name={['shifu']}>
         <label>
-          <img src={require('../msg7.png').default}></img> {translate({ message: 'How did you get to know Shifu?' })}
+          <img src={require('@site/static/img/product/msg7.png').default}></img> {translate({ message: 'How did you get to know Shifu?' })}
         </label>
         <br />
         <Radio.Group>
           <Space direction="vertical">
             <Radio value={1}>
-              Github<img className={styles.github} src={require('../msggithub.png').default}></img>
+              Github<img className={styles.github} src={require('@site/static/img/product/msggithub.png').default}></img>
             </Radio>
             <Radio value={2}> {translate({ message: 'Social media(Hacker News, Twitter, Reddit, etc.)' })}</Radio>
             <Radio value={3}> {translate({ message: 'Introduced by others' })}</Radio>
