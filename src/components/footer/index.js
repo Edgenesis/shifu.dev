@@ -11,9 +11,11 @@ import { Divider,Input,Tooltip } from 'antd';
 export function Foot(props) {
   return (
       <div className={styles.footerBox}>
+        <div className={common.block80}></div>
         <div className={common.content}>
           <div className={styles.footerCon}>
             <Link></Link>
+            <Divider className={`${common.divider} ${styles.footerDivider}`}/>
             <Contact></Contact>
           </div>
         </div>
@@ -41,7 +43,7 @@ let linkList=[
 export function Link(props) {
   const list=linkList.map(item=>{
     return (
-        <a href={item.link} className={styles.footerLink}>
+        <a href={item.link} className={styles.footerLink} key={item.link}>
           <img src={item.img} alt=""/>
         </a>
     )

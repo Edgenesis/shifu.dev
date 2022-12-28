@@ -1,0 +1,52 @@
+.devBox{
+  background: rgba(57, 155, 255, 0.05);
+}
+.lists{
+  display: flex;
+  flex-wrap: wrap;
+  .listBox{
+    width: 25%;
+    padding: 0 12px;
+    margin-bottom: 30px;
+  }
+  .list{
+    width: 100%;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 20px;
+    h2{
+      background: linear-gradient(207.95deg, #399BFF -12.8%, #62E7D0 112.78%, #B1EC44 112.8%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size:30px ;
+    }
+    p{
+      margin-bottom: 0;
+      line-height: 1.5;
+      height: 60px;
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .listBox{
+    width:50% !important;
+    p{
+      height: auto!important;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .listBox{
+    width:100% !important;
+    p{
+      height: auto!important;
+    }
+  }
+}

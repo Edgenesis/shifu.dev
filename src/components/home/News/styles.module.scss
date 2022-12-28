@@ -1,0 +1,45 @@
+.newsBox{
+  margin-top: 80px;
+}
+.news{
+  display: flex;
+  flex-wrap: wrap;
+  .new{
+    width: 33.3%;
+    padding: 0 10px 30px;
+    text-align: center;
+    img{
+      width: 60px;
+      height: 60px;
+      display: block;
+      margin: 0 auto 16px;
+    }
+    p{
+      margin: 20px 0;
+      line-height: 30px;
+      height: 60px;
+    }
+    .message{
+      color:#000;
+    }
+    >a{
+      span{
+        margin-left: 6px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 996px) {
+  .newsBox{
+    margin-top: 40px;
+  }
+  .news{
+    .new {
+      width: 50%;
+      p{
+        height: auto!important;
+      }
+    }
+  }
+}

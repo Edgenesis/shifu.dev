@@ -1,6 +1,5 @@
 .footerBox{
   width:100%;
-  padding: 80px 0 30px;
   background-color: var(--ifm-footer-background-color);
 }
 .footerCon{
@@ -63,14 +62,28 @@
     }
   }
 }
+.footerDivider{
+  display: none;
+}
 @media screen and (max-width: 996px) {
   .footerBox{
     padding-bottom: 0;
   }
+  .footerDivider{
+    display: block;
+  }
+
   .footerCon {
     flex-wrap: wrap;
     > div {
       width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .footerTitle{
+    a{
+      min-width: 30%;
     }
   }
 }
