@@ -15,7 +15,7 @@ spec:
     SQLSetting:
       serverAddress: 192.168.14.163:6041
       username: root
-      secret: taosdata
+      secret: my-secret
       dbName: shifu
       dbTable: testTable2
       dbtype: TDengine
@@ -23,23 +23,21 @@ spec:
 - `telemetrySeriveEndpoint` is telemetry service endpoint address
 - `serverAddress` is the database address
 - `username` is your database username
-- `secret` is your database password
+- `secret` is the name of the `Secret` stored your database password
 - `dbName` is the name of the database
 - `dbTable` is the table name of the database
 - `dbType` is the type of the database
   
-:::note
-If you have multiple telemetry services, you can write them in one file and split them in one file using `---`.
-:::
+## Create the Secret stored your database password
 
-:::note use secret to store password
-
-Create a `Secret` using your telemetry name with `telemetry-` prefix like `telemetry-push-endpoint-1`, with `password` field filled by your password, and it will overwrite the `SQLSetting.secret` in `TelemetryService`.
+Create a `Secret` named the `secret` field above with the `password` field filled by your password.
 
 ```bash
-kubectl create secret generic telemetry-push-endpoint-1 --from-literal=password=your_password -n devices
+kubectl create secret generic my-secret --from-literal=password=your_password -n devices
 ```
 
+:::note
+If you have multiple telemetry services, you can write them in one file and split them in one file using `---`.
 :::
 
 ## Edit Configmap Yaml file
