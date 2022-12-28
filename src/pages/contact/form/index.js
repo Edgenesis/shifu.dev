@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { Button, Form, Input, InputNumber, Radio, Space } from 'antd'
+import React from 'react'
+import { Button, Form, Input, Radio, Space } from 'antd'
 import styles from './styles.module.scss'
-import Translate, { translate } from '@docusaurus/Translate'
+import { translate } from '@docusaurus/Translate'
 const layout = {
   labelCol: {
     span: 24
