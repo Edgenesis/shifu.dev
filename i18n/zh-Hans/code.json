@@ -554,7 +554,7 @@
     "message": " 订阅 Shifu 最新资讯"
   },
   "Please leave your Email": {
-    "message": " 填写您的邮箱"
+    "message": "填写您的邮箱"
   },
   "Haidian, Beijing": {
     "message": " 北京市 海淀区 中关村 创业大街 12号楼"
@@ -748,8 +748,116 @@
   "Done":{
     "message":"我已经填写完毕"
   },
-  "C":{
-    "message":"C"
+  "Next Generation": {
+    "message": "下一代云原生"
+  },
+  "Cloud Native IoT": {
+    "message": "物联网开发框架"
+  },
+  "Development Framework": {
+    "message": ""
+  },
+  "An industrial IoT development framework that boosts IoT developer efficiency by ten times.": {
+    "message": "面向产业的物联网开发框架，十倍提高物联网开发者效率"
+  },
+  "Free trial": {
+    "message": "免费试用"
+  },
+  "Tech Blogs": {
+    "message": "技术博客"
+  },
+  "How to deploy Shifu on K3s to complete the cloud-edge-device cycle": {
+    "message": "如何在K3s上部署Shifu并实现云-边-端完整闭环"
+  },
+  "Latest News": {
+    "message": "最新消息"
+  },
+  "Shifu is officially open source!": {
+    "message": "Shifu 正式开源！"
+  },
+  "Releases": {
+    "message": "发布"
+  },
+  "v0.7.0": {
+    "message": "更新了v0.7.0版本"
+  },
+  "More": {
+    "message": "更多"
+  },
+  "Why Shifu": {
+    "message": "Shifu 对开发者的价值"
+  },
+  "increase in efficiency": {
+    "message": "开发效率提升"
+  },
+  "0 burden": {
+    "message": "0负担"
+  },
+  "to merge into existing platforms": {
+    "message": "接入现有平台"
+  },
+  "over 1M hours": {
+    "message": "超100万小时"
+  },
+  "of uninterrupted client run time": {
+    "message": "客户端“零报错”运行"
+  },
+  "time reduction in R&D time": {
+    "message": "平均缩短研发周期"
+  },
+  "Empowering IoT development": {
+    "message": "Shifu实现极速设备接入，助力应用开发"
+  },
+  "Camera": {
+    "message": "摄像头"
+  },
+  "Shifu helps us integrate all of our devices in a smart and efficient way. With Shifu, we can treat all of our devices as software objects and abstract away the physical devices. This makes it easier for us to manage and control our devices.": {
+    "message": "Shifu帮助我们用智慧、有效的方式整合了所有这些设备，有了Shifu我们可以以软件对象的形式对待所有的设备，并且抽象出物理设备。"
+  },
+  "Chief Robot Engineer Kanyon Edvall": {
+    "message": "首席机器人工程师"
+  },
+  "CKanyon Edvall": {
+    "message": "Kanyon Edvall"
+  },
+  "Shifu provides a new development model that helps engineering developers quickly transform their business cognition based on user needs, quickly propose software requirements specifications, and complete scenario development.": {
+    "message": "Shifu提供了新的开发模式，帮助工程开发人员根据用户的需求，快速转换业务上的认知，快速提出软件需求规格说明，完成场景开发。"
+  },
+  "CEO of Omni-Native": {
+    "message": "万象原生CEO  蔡凌风"
+  },
+  "Linfeng Cai": {
+    "message": "万象原生CEO  蔡凌风"
+  },
+  "The fusion-type intelligent IoT platform developed based on the Shifu framework greatly enhances the compatibility and reliability of the system in production environments, providing a rock-solid foundation for intelligent operation and maintenance of the production line, intelligent prevention of human factors, and integration of production data.": {
+    "message": "基于Shifu框架所开发的融合式智能物联中台，大幅提升了系统在生产环境中的兼容性和可靠性，为产线智能运维、操作智能防人因以及生产数据整合搭建了如磐石般坚韧的基座。"
+  },
+  "Head of the AI R&D Center at CNNC Equipment Institute": {
+    "message": "中核装备院人工智能研发中心负责人"
+  },
+  "Yuan Huang": {
+    "message": "黄远"
+  },
+  "As a IoT middleware, Shifu helps us achieve a integrated cloud-edge IoT architecture in a concise, efficient, secure and stable way. Shifu has been running in the scenario of Chinese ships for a long time and has always maintained a stable performance. In the future, we also expect Shifu to help more businesses of CSSC to undergo digital transformation.": {
+    "message": "Shifu作为物联网中间件，用简洁、高效、安全、稳定的方式帮我们实现了云边端一体化的物联网架构。Shifu在中国船舶的场景里运行了较长时间，一直保持着稳定的表现。未来也期待Shifu能够帮助中国船舶更多的业务进行数字化转型。"
+  },
+  "Head of CSSC Environment IoT Department": {
+    "message": "中船环境物联网负责人"
+  },
+  "Zhen Zhang": {
+    "message": "张桢"
+  },
+  "Shifu is an important new infrastructure in the industrial internet industry, with potential to help many new energy companies take flight with the internet of things. Our company has a wide range of industrial scenarios and we look forward to seeing Shifu shine in our scenarios.": {
+    "message": "Shifu是一个工业互联网业内的重要新基建，有潜力帮助众多新能源企业插上物联网的翅膀。我们公司拥有众多产业场景，也期待Shifu在我们的场景中有亮眼的表现。"
+  },
+  "CEO of OCSmarter": {
+    "message": "零碳数科CEO、厦门国贸启润物联总经理"
+  },
+  "Baolei Yan": {
+    "message": "闫保磊"
+  },
+  "Get started": {
+    "message": "现在开始"
   }
   
 }

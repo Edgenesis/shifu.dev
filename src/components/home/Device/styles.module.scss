@@ -1,0 +1,23 @@
+.tab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  label{
+    width: 100px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+
+  }
+  label:first-child{
+    border-radius: 40px 0px 0px 40px;
+  }
+  label:last-child{
+    border-radius: 0px 40px 40px 0px;
+  }
+}
+@media screen and (max-width: 996px) {
+
+}

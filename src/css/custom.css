@@ -123,7 +123,12 @@ html[data-theme='dark'] .header-github-link:before {
 .header-btn:hover{
   color: #fff;
 }
-
+.markdown>p{
+  line-height: 30px;
+}
+.sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module{
+  line-height: 26px;
+}
 @media screen and (max-width: 996px) {
   .footer{
     padding-top: 10px;
