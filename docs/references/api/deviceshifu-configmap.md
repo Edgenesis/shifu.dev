@@ -66,7 +66,7 @@ instructions: |
           MQTTTopic: "/test/test2"
       ...  # You can continue to configure commands and corresponding topics according to your own needs, just continue to add according to this format
 mutexInstructions: | 
-    # Configure mutexInstructions as required. The format is, mutexInstruction:"description"
+    # Optional, configure mutexInstructions. the format as key, value. The key can make corresponding topic in mqttDeviceShifu enter blocking state before published to received, the value is description about key.
     testMutexInstruction1: "Mutex_test1" # change this value
     testMutexInstruction2: "Mutex_test2" 
     ... # You can continue to configure mutexInstructions according to your own needs. Just continue to add them in this format

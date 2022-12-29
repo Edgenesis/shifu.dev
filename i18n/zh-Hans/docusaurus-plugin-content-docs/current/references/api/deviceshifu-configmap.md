@@ -66,7 +66,7 @@ instructions: |
           MQTTTopic: "/test/test2"
       ...  # 根据自己的需要可继续配置命令及对应的Topic，只需按照此格式继续添加即可
 mutexInstructions: | 
-    # 根据需要配置mutexInstructions，每行第一个字段是具体的mutexInstruction，第二个字段是对应说明
+    # 可选，配置mutexInstructions，格式为"key: value", key能在发布到接收前，使mqttDeviceShifu中对应topic进入阻塞状态, value是key的描述
     testMutexInstruction1: "Mutex_test1" # 修改此值
     testMutexInstruction2: "Mutex_test2" 
     ... # 根据自己的需要可继续配置mutexInstruction及对应说明，只需按照此格式继续添加即可
