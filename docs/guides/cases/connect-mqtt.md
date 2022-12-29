@@ -43,7 +43,7 @@ data:
           MQTTTopic: "/test/test2" 
       ... # You can continue to configure commands and corresponding topics according to your own needs, just continue to add according to this format
   mutexInstructions: | 
-  # Configure mutexInstructions as required. The format is, mutexInstruction:"description"
+  # Optional, configure mutexInstructions. the format as key, value. The key can make corresponding topic in mqttDeviceShifu enter blocking state before published to received, the value is description about key.
       testMutexInstruction1: "Mutex_test1" # change this value
       testMutexInstruction2: "Mutex_test2" 
       ... # You can continue to configure mutexInstructions according to your own needs. Just continue to add them in this format
@@ -91,7 +91,9 @@ After publishing, query MQTT ***deviceShifu*** again, The returned contents are 
 {"mqtt_message":"test_publish","mqtt_receive_timestamp":"2022-04-29 08:57:59.7397692 +0000 UTC m=+75.407609501"}
 ```
 
-Support the publishing of some special messages/instructions(mutexInstruction), mutexInstruction is configured in the yaml file. The corresponding topic in MQTT ***deviceShifu*** will enter the busy state after mutexInstruction is published, and will prevent other messages from being published by ***deviceShifu*** in the busy state. After the mutexInstruction is normally received by the MQTT broker, the corresponding topic returns to the idle state.
+Support the publishing of some special messages/instructions(mutexInstruction), mutexInstruction is configured in the configmap.yaml file. The corresponding topic in MQTT ***deviceShifu*** will enter the busy state after mutexInstruction is published, and will prevent other messages from being published by ***deviceShifu*** in the busy state. After the mutexInstruction is normally received by the MQTT broker, the corresponding topic returns to the idle state.
+
+MutexInstruction add global Lock to the device with unavailable states, return according replies and block all controlling commands sent to device. It is used to meet the general needs of operating devices like robots/agvs.
 
 ```
 curl -X POST -d 'testMutexInstruction1' deviceshifu-mqtt/get_topicmsg1
