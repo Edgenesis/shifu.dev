@@ -42,7 +42,7 @@ const First = () => (
     </div>
   </>
 )
-export default function Disclaimer() {
+export default function Deployment() {
   return (
     <Layout>
       <>

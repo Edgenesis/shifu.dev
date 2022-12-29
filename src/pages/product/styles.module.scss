@@ -5,60 +5,6 @@ justify-content: center;
 align-items: center;
 }
 
-.disclaimerContainer {
-  padding: 48px 0 96px 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: var(--background-color);
-
-  .container {
-    position: relative;
-    border-radius: 20px;
-    margin: 48px 200px;
-    padding: 48px 24px;
-    height: 60vh;
-    overflow: auto;
-    backdrop-filter: blur(10px);
-    box-shadow: var(--box-shadow-one);
-  }
-
-  .disclaimerConfirm {
-    z-index: 1;
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.isMobile {
-  background-color: var(--background-color);
-  z-index: 1;
-  height: 95vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  .isMobileContent {
-    padding: 2vh 8vw;
-    text-align: center;
-    font-size: 24px;
-    border-radius: 20px;
-    box-shadow: var(--box-shadow-one);
-  }
-
-  .logo {
-    width: 40vmin;
-    height: 40vmin;
-    margin-bottom: 20vh;
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
-  }
-
-}
-
-
 .planbody{
   text-align: center;
   max-width: 1920px;
@@ -71,28 +17,6 @@ align-items: center;
   align-items: center;
 }
 
-.bck2{
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  height: 1016px;
-  background: url("@site/static/img/product/bck.png") no-repeat center;
-  z-index: -1;
-}
-.instruction2{
-  width: 100%;
-  max-width: 1920px;
-  height: 1016px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  .instruction2left{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-}
 .title2{
   font-family: Inter;
   font-size: 64px;
@@ -118,56 +42,5 @@ margin-bottom:48px ;
   height: 56px;
   font-size: 24px;
 }
-.cptd{
-  width: 100%;
-  max-width: 2560px;
-  height: 630px;
-  padding: 96px 174px;
-  background: linear-gradient(207.95deg, #399BFF -12.8%, #62E7D0 112.78%, #B1EC44 112.8%);
-
-  .cptdtitle{
-   font-family: Inter;
-font-size: 48px;
-font-weight: 300;
-line-height: 60px;
-letter-spacing: -0.025em;
-text-align: left;
-  }
-.featurelist{
-  width: 100%;
-  display: flex;
-  flex-direction:row;
-  justify-content: space-around;
-}
-}
-.service{
-  width: 100%;
-  max-width: 2560px;
-  padding: 96px 174px;
-  .servicetitle{
-    font-family: Inter;
-    font-size: 48px;
-    font-weight: 300;
-    line-height: 60px;
-    letter-spacing: -0.025em;
-    text-align: left; 
-    margin-bottom: 48px;   
-  }
-.serviceinstruction{
-  font-family: Inter;
-font-size: 32px;
-font-weight: 300;
-line-height: 72px;
-letter-spacing: -0.025em;
-text-align: left;
-margin-bottom: 48px;
-}
-.button3{
-  width: 200px;
-  height: 56px;
-font-size: 24px;
-}
-}
-
 
 
