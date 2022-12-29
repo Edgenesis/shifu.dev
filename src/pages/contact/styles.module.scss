@@ -1,51 +1,32 @@
-.disclaimerContainer {
-  padding: 48px 0 96px 0;
+.box{
   display: flex;
-  align-items: center;
   flex-direction: column;
-  background-color: var(--background-color);
-
-  .container {
-    position: relative;
-    border-radius: 20px;
-    margin: 48px 200px;
-    padding: 48px 24px;
-    height: 60vh;
-    overflow: auto;
-    backdrop-filter: blur(10px);
-    box-shadow: var(--box-shadow-one);
-  }
-
-  .disclaimerConfirm {
-    z-index: 1;
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.isMobile {
-  background-color: var(--background-color);
-  z-index: 1;
-  height: 95vh;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-
-  .isMobileContent {
-    padding: 2vh 8vw;
-    text-align: center;
-    font-size: 24px;
-    border-radius: 20px;
-    box-shadow: var(--box-shadow-one);
+  align-items: center;
   }
 
-  .logo {
-    width: 40vmin;
-    height: 40vmin;
-    margin-bottom: 20vh;
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+  .message{
+    width: 100%;
+    max-width: 2560px;
+    background: linear-gradient(207.95deg, #399BFF -12.8%, #62E7D0 112.78%, #B1EC44 112.8%);
+    padding: 100px;
+    .messagebck{
+      position: absolute;
+      top:113px;
+      left:24px;
+      width: 32%;
+      max-width: 618px;
+      z-index: 0;
+      
+    }
+    .messagedetail{
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      width: 100%;
+      height: 1576px;
+      background-color: #FFFFFF;
+      padding-right: 50px;
+     
+    }
   }
-}
