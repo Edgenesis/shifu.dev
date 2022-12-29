@@ -7,19 +7,21 @@ const Service = () => {
   return (
     <div className={common.content}>
       <div className={styles.box}>
-        <div className={common.block50}></div>
+        <div className={common.block80}></div>
         <h1>{translate({ message: 'Enterprise-level services' })} </h1>
+        <div className={common.block30}></div>
         <p>{translate({ message: 'Our core operational team provides private deployment technical support, architecture design, industrial scene development consulting, remote training, and O&M support, etc., to make IoT development fast and easy.' })}</p>
+        <div className={common.block30}></div>
         <Button
           type="primary"
           onClick={() => {
-            location.href = '/zh-Hans/product'
+            location.href = 'contact'
           }}
           className={styles.button}
         >
           {translate({ message: 'Contact Us' })}
         </Button>
-        <div className={common.block30}></div>
+        <div className={common.block50}></div>
       </div>
     </div>
   )

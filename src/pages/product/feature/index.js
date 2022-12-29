@@ -33,7 +33,7 @@ const FeatureList = () => {
   return (
     <div className={styles.cptd}>
       <div className={common.content}>
-        <div className={common.block50}></div>
+        <div className={common.block80}></div>
         <h1> {translate({ message: 'Features' })}</h1>
 
         <div className={styles.featurelist}>
@@ -42,7 +42,7 @@ const FeatureList = () => {
           <Feature data={list[2]}></Feature>
         </div>
       </div>
-      <div className={common.block50}></div>
+      <div className={common.block80}></div>
     </div>
   )
 }

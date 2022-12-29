@@ -12,10 +12,10 @@
       background-clip: content-box;
       width: 33%;
       padding: 10px 10px;
-
+      text-align: left;
     }
     *{
-      padding-left: 20px;
+      padding:0 20px;
     }
     img{
       margin: 20px 0;
@@ -29,6 +29,7 @@
     font-size: 50px;
     line-height: 60px;
     text-align: left;
+    color: #ffffff;
   }
 }
 
@@ -42,8 +43,13 @@
     width: 50% !important;
     padding: 0 10px;
   }
+  h1{
+    line-height: 48px!important;
+  }
+  p{
+    line-height: 28px!important;
+  }
 }
-
 @media screen and (max-width: 450px) {
   .feature{
     border-radius: 25px;
@@ -51,5 +57,11 @@
     background-clip: content-box;
     width: 100% !important;
     padding: 0 10px;
+  }
+  h1{
+    line-height: 40px!important;
+  }
+  p{
+    line-height: 20px!important;
   }
 }
