@@ -35,14 +35,14 @@ DeviceShifuInstructions 是指 ***deviceShifu*** 的可以接收并发出的所�
 
 - **instructionSettings** ([DeviceShifuInstructionSettings](#deviceshifuinstructionsettings))
 - **instructions** (map[string]DeviceShifuInstruction)
-**示例：**
-    ```yml
-    instructions: |
-      instructions:
-        get_value: # 想要设置的命令的名称
-          protocolPropertyList:      # 命令的参数，根据不同的协议有不同的配置
-    ```
-    - **[DeviceShifuInstruction](#deviceshifuinstruction)**
+ **示例：**
+```yml
+instructions: |
+  instructions:
+    get_value: # 想要设置的命令的名称
+      protocolPropertyList:      # 命令的参数，根据不同的协议有不同的配置
+```
+  - **[DeviceShifuInstruction](#deviceshifuinstruction)**
 
 ## DeviceShifuInstruction
 
