@@ -45,34 +45,33 @@ const LoginForm = () => {
           <img src={require('@site/static/img/product/msg1.png').default}></img>
           {translate({ message: 'How would you prefer to be addressed?' })}
         </label>
-        <Input />
+        <Input size="large" />
       </Form.Item>
       <Form.Item name={['age']} rules={[{ required: true, message: 'Please input your Phone number!' }]}>
         <label>
           <img src={require('@site/static/img/product/msg2.png').default}></img> {translate({ message: 'Phone number' })}
         </label>
-        <Input />
+        <Input size="large" />
       </Form.Item>
       <Form.Item name={['email']} rules={[{ required: true, message: 'Please input your Email Address!' }]}>
         {' '}
         <label>
           <img src={require('@site/static/img/product/msg3.png').default}></img> {translate({ message: 'Email Address' })}
         </label>
-        <Input />
+        <Input size="large" />
       </Form.Item>
 
       <Form.Item name={['company']}>
         <label>
           <img src={require('@site/static/img/product/msg4.png').default}></img> {translate({ message: 'Company/organization' })}
         </label>
-        <Input />
+        <Input size="large" />
       </Form.Item>
 
       <Form.Item name={['question']}>
         <label>
           <img src={require('@site/static/img/product/msg5.png').default}></img> {translate({ message: 'What kind of problem do you wish to use Shifu to deal with?' })}
         </label>
-        <br />
         <Radio.Group>
           <Radio value={1}> {translate({ message: 'Device connection' })}</Radio>
           <Radio value={2}> {translate({ message: 'Application development' })}</Radio>
@@ -84,7 +83,6 @@ const LoginForm = () => {
         <label>
           <img src={require('@site/static/img/product/msg6.png').default}></img> {translate({ message: 'Are you familiar with Docker/Kubernetes?' })}
         </label>
-        <br />
         <Radio.Group>
           <Radio value={1}> {translate({ message: 'Never heard of it' })}</Radio>
           <Radio value={2}> {translate({ message: 'I have some knowledge of it' })}</Radio>
@@ -96,7 +94,6 @@ const LoginForm = () => {
         <label>
           <img src={require('@site/static/img/product/msg7.png').default}></img> {translate({ message: 'How did you get to know Shifu?' })}
         </label>
-        <br />
         <Radio.Group>
           <Space direction="vertical">
             <Radio value={1}>

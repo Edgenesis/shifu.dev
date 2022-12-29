@@ -50,9 +50,12 @@ a{
 
 @media screen and (max-width: 1200px) {
   .content{
-    width:100%;
-    padding-left: 6vw;
-    padding-right: 6vw;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    width: auto!important;
+    //width:100%;
+    //padding-left: 6vw;
+    //padding-right: 6vw;
   }
 }
 @media screen and (max-width: 996px) {
