@@ -111,7 +111,7 @@ const config = {
       },
       image: 'img/logo.svg',
       navbar: {
-        title: 'Shifu',
+        title: '',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
