@@ -25,10 +25,11 @@
     }
   }
 }
+
 @media screen and (max-width: 996px) {
   .banner{
     img{
-      opacity: 0.5!important;
+      opacity: 0.3!important;
     }
   }
   .bannerCon {
@@ -40,6 +41,7 @@
   .bannerCon {
     width: 80% !important;
   }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -65,4 +67,5 @@
       //padding: 0 10px;
     }
   }
+
 }

@@ -13,7 +13,7 @@ export default function Deployment() {
         <div className={common.content}>
           <div className={common.block80}></div>
           <h1 className={styles.title}>{translate({ message: 'Choose the deployment method that suits you and start your free trial now.' })}</h1>
-          <div className={common.block80}></div>
+          <div className={common.block60}></div>
           <PlanCardList></PlanCardList>
         </div>
       </div>

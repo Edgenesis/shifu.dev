@@ -25,10 +25,17 @@
     }
   }
 }
+.bannerBtn{
+  max-width: 120px;
+  height: 40px;
+  padding: 0;
+  line-height: 40px;
+  font-size: 16px;
+}
 @media screen and (max-width: 996px) {
   .banner{
     img{
-      opacity: 0.5!important;
+      opacity: 0.3!important;
     }
   }
   .bannerCon {
@@ -39,6 +46,13 @@
   }
   .bannerCon {
     width: 80% !important;
+  }
+  .bannerBtn{
+    max-width: 100px;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
   }
 }
 
