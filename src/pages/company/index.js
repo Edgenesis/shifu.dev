@@ -4,6 +4,7 @@ import Layout from '@theme/Layout'
 import styles from './styles.module.scss'
 import { Button } from 'antd'
 import common from '@site/src/css/common.module.scss'
+import { Foot } from '../../components/footer/index'
 export default function Company() {
   return (
     <Layout>
@@ -40,7 +41,6 @@ export default function Company() {
         <div className={common.comTitle}>
           <h2 className={styles.trust}>{translate({ message: 'Well trusted by industry leaders' })}</h2>
         </div>
-
         <div className={common.block80}></div>
         <img className={styles.icons} src={require('@site/static/img/product/logo5.png').default}></img>
         <div className={common.block50}></div>
@@ -56,8 +56,9 @@ export default function Company() {
           </Button>
           <div className={common.block50}></div>
         </div>
+        <div className={common.block80}></div>
       </div>
-      <div className={common.block80}></div>
+      <Foot></Foot>
     </Layout>
   )
 }

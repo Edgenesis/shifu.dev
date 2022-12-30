@@ -1,58 +1,96 @@
-import { Button, Space, Col, Row } from 'antd'
-import Translate, { translate } from '@docusaurus/Translate'
+import { Button, Space } from 'antd'
+import { translate } from '@docusaurus/Translate'
 import styles from './styles.module.scss'
 import React, { forwardRef } from 'react'
 import gouxuan from '@site/static/img/product/gouxuan.png'
-const PlanCard = forwardRef((props, ref) => {
+import common from '@site/src/css/common.module.scss'
+
+const list = [
+  {
+    title: 'Try open source Shifu framework',
+    instruction: [
+      'As ',
+      'a next-generation cloud-native IoT development framework',
+      ', Shifu provides users with full-scene device hosting and integrated software development capabilities. Through the use of the Shifu framework, developers can more easily connect, monitor and control any IoT device.'
+    ],
+    function: ['Fast Device Integration', 'Modularize Deployment Experience', 'Effective Application Development'],
+    button: 'Try it out',
+    jpg: 'github.png',
+    url: '/demo',
+    css: 'blue'
+  },
+  {
+    title: 'Try Shifu Cloud',
+    instruction: [
+      'As ',
+      'a device configuration platform based on the open source IoT development framework Shifu',
+      ', Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.'
+    ],
+    function: ['Multiple protocol support', 'Application Development Support', 'App Store Support'],
+    button: 'Free Access for Individuals',
+    jpg: 'cloud.png',
+    url: 'https://shifu.cloud/',
+    css: 'none'
+  }
+]
+const PlanCard = forwardRef(props => {
   return (
-    <Row className={styles.head}>
-      <Col>
-        <div className={styles.PlanCard}>
-          <div className={styles.title}>
-            <img src={require('@site/static/img/product/' + props.data.jpg).default}></img>
-            <p>{translate({ message: props.data.title })}</p>
+    <div className={[styles.PlanCard, styles[props.data.css]].join(' ')}>
+      <div className={styles.title}>
+        <img src={require('@site/static/img/product/' + props.data.jpg).default}></img>
+        <p>{translate({ message: props.data.title })}</p>
+      </div>
+      <div className={styles.instruction}>
+        <div className={common.block80}></div>
+        <p className={styles.instructionmain}>
+          {translate({ message: props.data.instruction[0] })}
+          <a>{translate({ message: props.data.instruction[1] })}</a>
+          {translate({ message: props.data.instruction[2] })}
+        </p>
+        <Space
+          direction="vertical"
+          style={{
+            width: '100%'
+          }}
+        >
+          <div className={styles.functionlist}>
+            <ul>
+              {props.data.function.map((item, index) => {
+                return (
+                  <li key={item}>
+                    <img src={gouxuan} alt=""></img>
+                    {translate({ message: item })}
+                  </li>
+                )
+              })}
+            </ul>
           </div>
-
-          <div className={styles.instruction}>
-            <p className={styles.instructionmain}>
-              {translate({ message: props.data.instruction[0] })}
-              <a>{translate({ message: props.data.instruction[1] })}</a>
-              {translate({ message: props.data.instruction[2] })}
-            </p>
-            <Space
-              direction="vertical"
-              style={{
-                width: '100%'
-              }}
-            >
-              <div className={styles.functionlist}>
-                <ul>
-                  {props.data.function.map((item, index) => {
-                    return (
-                      <li key={item}>
-                        <img src={gouxuan} alt=""></img>
-                        {translate({ message: item })}
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-
-              <Button
-                type="primary"
-                className={styles.button}
-                onClick={() => {
-                  location.href = props.data.url
-                }}
-              >
-                {translate({ message: props.data.button })}
-              </Button>
-            </Space>
-          </div>
-        </div>
-      </Col>
-    </Row>
+          <div className={common.block50}></div>
+          <Button
+            type="primary"
+            className={styles.button}
+            onClick={() => {
+              location.href = props.data.url
+            }}
+          >
+            {translate({ message: props.data.button })}
+          </Button>
+          <div className={common.block80}></div>
+        </Space>
+      </div>
+    </div>
   )
 })
 
-export default PlanCard
+const PlanCardList = () => {
+  return (
+    <>
+      <div className={styles.list}>
+        <PlanCard data={list[0]}></PlanCard>
+        <PlanCard data={list[1]}></PlanCard>
+      </div>
+      <div className={common.block80}></div>
+    </>
+  )
+}
+export default PlanCardList
