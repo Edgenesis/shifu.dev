@@ -11,67 +11,77 @@ const layout = {
   }
 }
 
-/* eslint-disable no-template-curly-in-string */
-const validateMessages = {
-  required: '${label} is required!',
-  types: {
-    email: '${label} is not a valid email!',
-    number: '${label} is not a valid number!'
-  },
-  number: {
-    range: '${label} must be between ${min} and ${max}'
-  }
-}
-/* eslint-enable no-template-curly-in-string */
 const LoginForm = () => {
   const onFinish = values => {
+    window.location.href = 'thanks'
     console.log(values)
+  }
+  const onFinishFailed = errorInfo => {
+    console.log('Failed:', errorInfo)
   }
   return (
     <Form
       {...layout}
-      name="nest-messages"
+      name="nest_messages"
       onFinish={onFinish}
-      validateMessages={validateMessages}
-      autoComplete="off"
+      onFinishFailed={onFinishFailed}
       layout="vertical"
       className={styles.form}
       initialValues={{
         remember: true
       }}
     >
-      <Form.Item name={['name']} rules={[{ required: true, message: 'Please input your username!' }]}>
-        <label>
-          <img src={require('@site/static/img/product/msg1.png').default}></img>
-          {translate({ message: 'How would you prefer to be addressed?' })}
-        </label>
-        <Input size="large" />
-      </Form.Item>
-      <Form.Item name={['age']} rules={[{ required: true, message: 'Please input your Phone number!' }]}>
-        <label>
-          <img src={require('@site/static/img/product/msg2.png').default}></img> {translate({ message: 'Phone number' })}
-        </label>
-        <Input size="large" />
-      </Form.Item>
-      <Form.Item name={['email']} rules={[{ required: true, message: 'Please input your Email Address!' }]}>
-        {' '}
-        <label>
-          <img src={require('@site/static/img/product/msg3.png').default}></img> {translate({ message: 'Email Address' })}
-        </label>
+      <label>
+        <img src={require('@site/static/img/product/msg1.png').default}></img>
+        {translate({ message: 'How would you prefer to be addressed?' })}
+      </label>
+      <Form.Item name="name" rules={[{ required: true, message: translate({ message: 'Name is required' }) }]}>
         <Input size="large" />
       </Form.Item>
 
-      <Form.Item name={['company']}>
-        <label>
-          <img src={require('@site/static/img/product/msg4.png').default}></img> {translate({ message: 'Company/organization' })}
-        </label>
+      <label>
+        <img src={require('@site/static/img/product/msg2.png').default}></img> {translate({ message: 'Phone number' })}
+      </label>
+      <Form.Item
+        name="phonenuber"
+        rules={[
+          { required: true, message: translate({ message: 'Phone number is required' }) },
+          {
+            pattern: '^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|166|198|199|(147))\\d{8}$',
+            message: translate({ message: 'Please enter the correct phone number' })
+          }
+        ]}
+      >
         <Input size="large" />
       </Form.Item>
 
-      <Form.Item name={['question']}>
-        <label>
-          <img src={require('@site/static/img/product/msg5.png').default}></img> {translate({ message: 'What kind of problem do you wish to use Shifu to deal with?' })}
-        </label>
+      <label>
+        <img src={require('@site/static/img/product/msg3.png').default}></img> {translate({ message: 'Email Address' })}
+      </label>
+      <Form.Item
+        name="email"
+        rules={[
+          { required: true, message: translate({ message: 'Email Address is required' }) },
+          {
+            pattern: '^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(.[a-zA-Z0-9_-]+)+$',
+            message: translate({ message: 'Please enter the correct Email address' })
+          }
+        ]}
+      >
+        <Input size="large" />
+      </Form.Item>
+
+      <label>
+        <img src={require('@site/static/img/product/msg4.png').default}></img> {translate({ message: 'Company/organization' })}
+      </label>
+      <Form.Item name="company" rules={[{ required: true, message: translate({ message: 'Company/organization is required' }) }]}>
+        <Input size="large" />
+      </Form.Item>
+
+      <label>
+        <img src={require('@site/static/img/product/msg5.png').default}></img> {translate({ message: 'What kind of problem do you wish to use Shifu to deal with?' })}
+      </label>
+      <Form.Item name={'question'} rules={[{ required: true, message: translate({ message: 'Please select the best option for you' }) }]}>
         <Radio.Group>
           <Radio value={1}> {translate({ message: 'Device connection' })}</Radio>
           <Radio value={2}> {translate({ message: 'Application development' })}</Radio>
@@ -79,10 +89,10 @@ const LoginForm = () => {
         </Radio.Group>
       </Form.Item>
 
-      <Form.Item name={['konwledge']}>
-        <label>
-          <img src={require('@site/static/img/product/msg6.png').default}></img> {translate({ message: 'Are you familiar with Docker/Kubernetes?' })}
-        </label>
+      <label>
+        <img src={require('@site/static/img/product/msg6.png').default}></img> {translate({ message: 'Are you familiar with Docker/Kubernetes?' })}
+      </label>
+      <Form.Item name={'konwledge'} rules={[{ required: true, message: translate({ message: 'Please select the best option for you' }) }]}>
         <Radio.Group>
           <Radio value={1}> {translate({ message: 'Never heard of it' })}</Radio>
           <Radio value={2}> {translate({ message: 'I have some knowledge of it' })}</Radio>
@@ -90,10 +100,10 @@ const LoginForm = () => {
         </Radio.Group>
       </Form.Item>
 
-      <Form.Item name={['shifu']}>
-        <label>
-          <img src={require('@site/static/img/product/msg7.png').default}></img> {translate({ message: 'How did you get to know Shifu?' })}
-        </label>
+      <label>
+        <img src={require('@site/static/img/product/msg7.png').default}></img> {translate({ message: 'How did you get to know Shifu?' })}
+      </label>
+      <Form.Item name={['shifu']} rules={[{ required: true, message: translate({ message: 'Please select the best option for you' }) }]}>
         <Radio.Group>
           <Space direction="vertical">
             <Radio value={1}>

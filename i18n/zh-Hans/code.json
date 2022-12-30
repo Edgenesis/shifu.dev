@@ -700,6 +700,18 @@
   "Redirecting to the homepage in 5 seconds.":{
     "message":"5s后跳转到首页"
   },
+  "Redirecting to the homepage in 4 seconds.":{
+    "message":"4s后跳转到首页"
+  },  
+  "Redirecting to the homepage in 3 seconds.":{
+    "message":"3s后跳转到首页"
+  },
+  "Redirecting to the homepage in 2 seconds.":{
+    "message":"2s后跳转到首页"
+  },
+  "Redirecting to the homepage in 1 seconds.":{
+    "message":"1s后跳转到首页"
+  },
   "How would you prefer to be addressed?":{
     "message":"怎么称呼您？"
   },
@@ -858,6 +870,27 @@
   },
   "Get started": {
     "message": "现在开始"
+  },
+  "Name is required":{
+    "message":"请输入名称"
+  },
+  "Phone number is required":{
+    "message":"请输入电话号码"
+  },
+  "Email Address is required":{
+    "message":"请输入邮箱"
+  },
+  "Company/organization is required":{
+    "message":"请输入公司/组织名称"
+  },
+  "Please select the best option for you":{
+    "message":"请选择最适合您的选项"
+  },
+  "Please enter the correct phone number":{
+    "message":"请输入正确的手机号码"
+  },
+  "Please enter the correct Email address":{
+    "message":"请输入正确的邮箱地址"
   }
   
 }
