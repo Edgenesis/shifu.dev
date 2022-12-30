@@ -1,95 +1,86 @@
-.PlanCard{
-  display: flex;
-  align-items: center;
-  width: 48%;
-  flex-direction: column;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  border:  4px transparent solid;
+.PlanCard {
+  width: 50%;
+  padding: 12px 20px;
   margin-bottom: 50px;
-  .title{
+
+  .planCardCon {
     width: 100%;
-  text-align: center; 
-    height: 110px;
-    display: flex;
-    align-items: center;
-  font-size: 30px;
-  line-height: 40px;
-  overflow: hidden;
-  img{
-    display: block;
-    width: 40%;
-    max-width: 120px;
-    margin:0 0 0 22px ;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 1px solid #B1EC44 ;
+    overflow: hidden;
+
   }
-  p{
-    display: block;
+
+  .title {
     width: 100%;
-    text-align: center;
-    margin: 0;
-  }
-  }
-  .instruction{
-    flex-direction: column;
     display: flex;
-    text-align: center; 
-    justify-content: center;
+    height: 126px;
     align-items: center;
-    .instructionmain{
-      font-family: Inter;
-      font-size: 24px;
-      font-weight: 300;
-      line-height: 30px;
-      text-align: left;
-      margin-bottom: 33px;
-      font-size: 24px;
-      width: 70%;
-  
+    padding: 24px 24px 0;
+
+    img {
+      display: block;
+      max-width: 120px;
+      margin-right: 60px;
     }
-    .button{
-      width: 80%;
-      height: 64px;
-      font-size: 24px;
-      background: #2580DE;
-      border-radius: 8px;
+    h1{
+      margin-bottom: 0;
     }
-    .functionlist{
+  }
+
+  .instruction {
+    padding: 0 40px;
+    .instructionmain {
+      font-size: 18px;
+      line-height: 36px;
+      height: 220px;
+      margin-bottom: 0;
+    }
+
+
+    .functionlist {
       display: flex;
       justify-content: center;
-      ul{
+
+      ul {
         padding: 0;
         margin: 0;
       }
-      li{
-        margin-bottom: 29px;
+
+      li {
+        margin-bottom: 24px;
         list-style: none;
         font-size: 20px;
-        font-weight: 400;
-        line-height: 24px;
         text-align: left;
-        img{
+
+        img {
           margin-right: 8px;
         }
       }
-    
+      li:last-child{
+        margin-bottom: 0;
+      }
+
     }
-    
+
   }
 }
-.blue{
+
+.blue {
   border-image: linear-gradient(207.95deg, #88C3FF -12.8%, #A2EADD 49.13%, #C5EA81 112.8%) 20;
   clip-path: inset(0 round 10px);
-  .title{
-  background: linear-gradient(207.95deg, #399BFF -12.8%, #62E7D0 112.78%, #B1EC44 112.8%);
-  color: #FFFFFF;
+  //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  .title {
+    background: linear-gradient(207.95deg, #399BFF -12.8%, #62E7D0 112.78%, #B1EC44 112.8%);
+    color: #FFFFFF;
   }
 }
 
 
-
-
-.list{
+.list {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -97,39 +88,42 @@
 }
 
 
+@media screen and (max-width: 1200px) {
+  .PlanCard {
+    width: 100% !important;
 
-
-@media screen and (max-width: 996px) {
-  .PlanCard{
-    width: 100%!important;
   }
-  .title{
-    p{
-      font-size: 30px!important;
-    }
-  }
-  .instruction{
-    p{
-      font-size: 24px!important;
-      line-height: 32px!important;
+  .instruction {
+    p {
+      height: auto!important;
     }
   }
 }
 
-@media screen and (max-width: 450px) {
-  .title{
-    p{
-      font-size: 20px!important;
+@media screen and (max-width: 996px) {
+  .PlanCard{
+    padding:12px 0 ;
+    .title {
+      height: auto!important;
+      img{
+        max-width: 80px;
+        margin-right: 20px;
+      }
     }
   }
-  .instruction{
-    p{
-      font-size: 20px!important;
-      line-height: 28px!important;
+
+  .instruction {
+    li{
+      font-size: 18px!important;
     }
-    span{
-      font-size: 20px!important;
-    }
+    //p {
+    //  font-size: 20px !important;
+    //  line-height: 28px !important;
+    //}
+    //
+    //span {
+    //  font-size: 20px !important;
+    //}
   }
-  
+
 }

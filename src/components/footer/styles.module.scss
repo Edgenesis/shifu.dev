@@ -82,8 +82,11 @@
 }
 @media screen and (max-width: 450px) {
   .footerTitle{
-    a{
-      min-width: 30%;
+    >div{
+      width: 100%;
     }
+    //a{
+    //  min-width: 30%;
+    //}
   }
 }

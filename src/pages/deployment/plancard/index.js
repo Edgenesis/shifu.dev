@@ -1,13 +1,14 @@
-import { Button, Space } from 'antd'
-import { translate } from '@docusaurus/Translate'
+import {Button, Space} from 'antd'
+import Translate,{translate} from '@docusaurus/Translate'
 import styles from './styles.module.scss'
-import React, { forwardRef } from 'react'
+import React, {forwardRef} from 'react'
 import gouxuan from '@site/static/img/product/gouxuan.png'
 import common from '@site/src/css/common.module.scss'
 
 const list = [
   {
-    title: 'Try open source Shifu framework',
+    title: 'Try open source',
+    title2: 'Shifu framework',
     instruction: [
       'As ',
       'a next-generation cloud-native IoT development framework',
@@ -16,11 +17,12 @@ const list = [
     function: ['Fast Device Integration', 'Modularize Deployment Experience', 'Effective Application Development'],
     button: 'Try it out',
     jpg: 'github.png',
-    url: '/demo',
+    url: 'demo',
     css: 'blue'
   },
   {
-    title: 'Try Shifu Cloud',
+    title: '',
+    title2: 'Try Shifu Cloud',
     instruction: [
       'As ',
       'a device configuration platform based on the open source IoT development framework Shifu',
@@ -30,67 +32,61 @@ const list = [
     button: 'Free Access for Individuals',
     jpg: 'cloud.png',
     url: 'https://shifu.cloud/',
-    css: 'none'
+    css: 'blue'
   }
 ]
 const PlanCard = forwardRef(props => {
   return (
-    <div className={[styles.PlanCard, styles[props.data.css]].join(' ')}>
-      <div className={styles.title}>
-        <img src={require('@site/static/img/product/' + props.data.jpg).default}></img>
-        <p>{translate({ message: props.data.title })}</p>
-      </div>
-      <div className={styles.instruction}>
-        <div className={common.block80}></div>
-        <p className={styles.instructionmain}>
-          {translate({ message: props.data.instruction[0] })}
-          <a>{translate({ message: props.data.instruction[1] })}</a>
-          {translate({ message: props.data.instruction[2] })}
-        </p>
-        <Space
-          direction="vertical"
-          style={{
-            width: '100%'
-          }}
-        >
-          <div className={styles.functionlist}>
-            <ul>
-              {props.data.function.map((item, index) => {
-                return (
-                  <li key={item}>
-                    <img src={gouxuan} alt=""></img>
-                    {translate({ message: item })}
-                  </li>
-                )
-              })}
-            </ul>
+      <div className={[styles.PlanCard, styles[props.data.css]].join(' ')}>
+        <div className={styles.planCardCon}>
+          <div className={styles.title}>
+            <img src={require('@site/static/img/product/' + props.data.jpg).default}></img>
+            <div>
+              <h2>{translate({message: props.data.title})}</h2>
+              <h1>{translate({message: props.data.title2})}</h1>
+            </div>
           </div>
-          <div className={common.block50}></div>
-          <Button
-            type="primary"
-            className={styles.button}
-            onClick={() => {
-              location.href = props.data.url
-            }}
-          >
-            {translate({ message: props.data.button })}
-          </Button>
-          <div className={common.block80}></div>
-        </Space>
+          <div className={styles.instruction}>
+            <div className={common.block50}></div>
+            <p className={styles.instructionmain}>
+              {translate({message: props.data.instruction[0]})}
+              <a>{translate({message: props.data.instruction[1]})}</a>
+              {translate({message: props.data.instruction[2]})}
+            </p>
+            <div className={common.block50}></div>
+            <div className={styles.functionlist}>
+              <ul>
+                {props.data.function.map((item, index) => {
+                  return (
+                      <li key={item}>
+                        <img src={gouxuan} alt=""></img>
+                        {translate({message: item})}
+                      </li>
+                  )
+                })}
+              </ul>
+            </div>
+            <div className={common.block50}></div>
+            <Button type="primary" block size="large" href={props.data.url} className={styles.button}>
+              <Translate>{props.data.button}</Translate>
+            </Button>
+            <div className={common.block60}></div>
+          </div>
+        </div>
+
       </div>
-    </div>
   )
 })
 
 const PlanCardList = () => {
   return (
-    <>
-      <div className={styles.list}>
-        <PlanCard data={list[0]}></PlanCard>
-        <PlanCard data={list[1]}></PlanCard>
-      </div>
-      <div className={common.block80}></div>
-    </>
+      <>
+        <div className={styles.list}>
+          <PlanCard data={list[0]}></PlanCard>
+          <PlanCard data={list[1]}></PlanCard>
+        </div>
+        <div className={common.block80}></div>
+      </>
   )
 }
 export default PlanCardList

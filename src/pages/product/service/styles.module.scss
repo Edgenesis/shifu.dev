@@ -1,15 +1,13 @@
 .box{
    margin-left: 10px;
   h1{
-    text-align: left;
-    font-size: 50px;
-    line-height: 60px;
+   margin-bottom: 0;
   }
-  .button{
-    margin: 20px 0;
-  }
+
   p{
+    margin-bottom: 0;
     line-height: 36px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 996px) {

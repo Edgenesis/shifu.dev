@@ -55,21 +55,27 @@ export function Link(props) {
         <Translate>Shifu Brings mobile-app-development-experience to the IoT world!</Translate>
       </div>
       <div className={`${styles.footerTitle}  ${styles.footerTitleS}`}>
-        <a href="product">
-          <Translate>Product</Translate>
-        </a>
-        <Divider type="vertical" />
-        <a href="docs">
-          <Translate>Documentation</Translate>
-        </a>
-        <Divider type="vertical" />
-        <a href="case-studies">
-          <Translate>Case Studies</Translate>
-        </a>
-        <Divider type="vertical" />
-        <a href="company">
-          <Translate>Company</Translate>
-        </a>
+        <div>
+          <a href="product">
+            <Translate>Product</Translate>
+          </a>
+          <Divider type="vertical" />
+          <a href="docs">
+            <Translate>Documentation</Translate>
+          </a>
+          <Divider type="vertical" />
+        </div>
+
+       <div>
+         <a href="case-studies">
+           <Translate>Case Studies</Translate>
+         </a>
+         <Divider type="vertical" />
+         <a href="company">
+           <Translate>Company</Translate>
+         </a>
+       </div>
+
       </div>
       <div className={`${styles.footerTitle},${styles.footerLinks}`}>{list}</div>
     </div>

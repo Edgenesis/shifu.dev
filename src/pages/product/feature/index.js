@@ -5,9 +5,12 @@ import common from '@site/src/css/common.module.scss'
 const Feature = forwardRef((props, ref) => {
   return (
     <div className={styles.feature}>
-      <img src={require('@site/static/img/product/' + props.data.jpg).default}></img>
-      <h2>{translate({ message: props.data.title })}</h2>
-      <p> {translate({ message: props.data.instruction })}</p>
+      <div className={styles.featureCon}>
+        <img src={require('@site/static/img/product/' + props.data.jpg).default}></img>
+        <h2>{translate({ message: props.data.title })}</h2>
+        <p> {translate({ message: props.data.instruction })}</p>
+      </div>
+
     </div>
   )
 })
@@ -35,7 +38,7 @@ const FeatureList = () => {
       <div className={common.content}>
         <div className={common.block80}></div>
         <h1> {translate({ message: 'Features' })}</h1>
-
+        <div className={common.block30}></div>
         <div className={styles.featurelist}>
           <Feature data={list[0]}></Feature>
           <Feature data={list[1]}></Feature>

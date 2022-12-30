@@ -17,14 +17,12 @@ export default function Introduce() {
               IoT scene development.
             </Translate>
           </p>
-          <a href="https://shifu.cloud/">
-            <Button type="primary">
-              <Translate>Get Started</Translate>
-            </Button>
-          </a>
+          <Button type="primary"   href="https://shifu.cloud/" className={common.bannerBtn}>
+            <Translate>Get Started</Translate>
+          </Button>
         </div>
       </div>
-      <div className={common.block50}></div>
+      <div className={common.block80}></div>
     </>
   )
 }

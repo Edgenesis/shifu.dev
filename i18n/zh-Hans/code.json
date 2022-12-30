@@ -589,9 +589,12 @@
   "Free Access for Individuals":{
     "message":"点击试用(个人限时免费)"
   },
-  "Try open source Shifu framework":{
+  "Try open source":{
+    "message":""
+  },
+  "Shifu framework":{
     "message":"开源版Shifu 框架"
-  },  
+  },
   "Try Shifu Cloud":{
     "message":"Shifu Cloud 平台"
   },

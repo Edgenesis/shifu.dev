@@ -45,7 +45,7 @@ export function News() {
         </div>
         <div className={common.block30}></div>
         <Divider className={common.divider}/>
-        <div className={common.block80}></div>
+        <div className={common.block50}></div>
       </div>
 
   )
