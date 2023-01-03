@@ -39,7 +39,7 @@ spec:
         ...
 ```
 
-:::note 使用`Secret`存储密码
+:::note 推荐使用`Secret`存储密码,对于接入设备这是不必要的,但是这样会大大加强安全性
 
 1. 创建 `Secret`，在 `rtsp_password` 字段填写密码
 
@@ -97,3 +97,29 @@ data:
 ```
 
 您可以通过这些指令与数字孪生交互，这等同于操作实际的海康威视摄像头。
+
+## 通过浏览器访问摄像头
+
+我们可以通过service 来实现对 pod 的访问 , 在默认的yaml 文件中我们已经设置了对应的 service , 现在只需要用它启用端口映射
+
+通过下面的命令获得当前的 service列表 
+
+```
+kubectl get svc -A 
+```
+其中存在时间最短的应该就是我们刚刚添加的service , 通过下面命令我们开启端口映射
+
+```
+kubectl port-forward -n deviceshifu svc/<填入刚刚添加的service名> 3000:
+```
+运行顺利的话我们可以看到如下输出
+
+```
+Forwarding from 127.0.0.1:3000 -> 8080
+Forwarding from [::1]:3000 -> 8080
+```
+
+
+然后就可以实现从浏览器访问摄像头了
+比如访问 `localhost:3000/info` 应该就会显示摄像头相关的信息
+将info 替换为其他的 instruction 就可以实现对应的功能
