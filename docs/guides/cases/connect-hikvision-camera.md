@@ -39,7 +39,7 @@ spec:
         ...
 ```
 
-:::note use `Secret` to store password
+::: Recommend using `Secret` to store passwords, which is not necessary for access devices, but this will greatly enhance security
 
 1. Create a `Secret` with `rtsp_password` field filled by your password.
 
