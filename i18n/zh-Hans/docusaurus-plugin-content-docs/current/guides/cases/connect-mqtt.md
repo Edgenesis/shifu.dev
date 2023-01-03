@@ -42,10 +42,10 @@ data:
           MQTTTopic: "/test/test2"
       ... # 根据自己的需要可继续配置命令及对应的Topic，只需按照此格式继续添加即可
   mutexInstructions: | 
-  # 可选，配置mutexInstructions，格式为"key: value", key能在发布到接收前使mqttDeviceShifu中对应topic进入阻塞状态, value是key的描述
-      testMutexInstruction1: "Mutex_test1" # 修改此值
-      testMutexInstruction2: "Mutex_test2" 
-      ... # 根据自己的需要可继续配置mutexInstruction及对应说明，只需按照此格式继续添加即可
+  # 可选，配置mutexInstructions，格式为"key: value", key是向设备发送的mutex指令，设备执行mutex指令时进入忙碌状态，拒绝接收其它指令，value是设备返回给MQTT broker的响应，表示设备已完成对应mutex指令，恢复空闲状态 
+    Moving_the_device: "Device_finished_moving" # 修改此值
+    Rotating_the_device: "Device_finished_Rotating" 
+    ... # 根据自己的需要可继续配置mutexInstruction及对应说明，只需按照此格式继续添加即可
 ```
 
 ## 部署deviceShifu
@@ -88,12 +88,4 @@ curl -X POST -d 'test_publish' deviceshifu-mqtt/get_topicmsg1
 
 ```json
 {"mqtt_message":"test_publish","mqtt_receive_timestamp":"2022-04-29 08:57:59.7397692 +0000 UTC m=+75.407609501"}
-```
-
-支持发布一些特殊的消息/指令（mutexInstruction），mutexInstruction在configmap.yaml文件中配置，MQTT ***deviceShifu*** 中对应的topic会在mutexInstruction发布后，进入忙碌状态，忙碌状态时会阻止其它消息通过***deviceShifu***发布。在mutexInstruction被MQTT broker正常接收后，对应topic恢复空闲状态。
-
-MutexInstruction为处于不可用状态的设备添加全局锁，返回相应的回复并阻止发送到设备的所有控制命令。它用于满足机器人/AGV等操作设备的一般需求。
-
-```
-curl -X POST -d 'testMutexInstruction1' deviceshifu-mqtt/get_topicmsg1
 ```

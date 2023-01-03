@@ -480,7 +480,7 @@ sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.clus
 
 ![deviceshifu-mqtt_output5.png](images/deviceshifu-mqtt_output5.png)
 
-同时可以使用以下命令，通过MQTT的数字孪生向多个主题发布数据。
+同时可以使用以下命令，通过MQTT的数字孪生向多个主题发布数据。(-d 后面的数据为我们发布的的信息)
 
 ```bash
 sudo kubectl exec -it nginx -- curl -X POST -d 'test_pulish_topic1' http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg1

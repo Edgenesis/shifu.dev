@@ -466,7 +466,7 @@ sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.clus
 ![deviceshifu-mqtt_output4.png](images/deviceshifu-mqtt_output4.png)
 ![deviceshifu-mqtt_output5.png](images/deviceshifu-mqtt_output5.png)
 
-example of using multiple topics in deviceshifu-mqtt:
+At the same time, we can use the following commands to publish data to multiple topics through the digital twin of MQTT. (The data after -d is the information we posted)
 
 ```bash
 sudo kubectl exec -it nginx -- curl -X POST -d 'test_pulish_topic1' http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg1
