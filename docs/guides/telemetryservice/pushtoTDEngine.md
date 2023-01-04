@@ -23,17 +23,17 @@ spec:
 - `telemetrySeriveEndpoint` is telemetry service endpoint address
 - `serverAddress` is the database address
 - `username` is your database username
-- `secret` is the name of the `Secret` stored your database password
+- `secret` is the name of the `Secret` stored your database username and password
 - `dbName` is the name of the database
 - `dbTable` is the table name of the database
 - `dbType` is the type of the database
   
-## Create the Secret stored your database password
+## Create the Secret
 
-Create a `Secret` named the `secret` field above with the `password` field filled by your password.
+Create a `Secret` named the `secret` field above with the `username` field filled by your username and the `password` field filled by your password.
 
 ```bash
-kubectl create secret generic my-secret --from-literal=password=your_password -n devices
+kubectl create secret generic my-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
 ```
 
 :::note

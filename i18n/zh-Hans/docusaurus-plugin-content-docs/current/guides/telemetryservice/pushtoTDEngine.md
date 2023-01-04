@@ -22,17 +22,17 @@ spec:
 - `telemetrySeriveEndpoint` 是telemetryService的端点地址
 - `serverAddress` 表示数据库地址
 - `username` 表示你的数据库用户名
-- `secret` 表示存储你的数据库密码的`Secret`名字
+- `secret` 表示存储你的数据库用户名与密码的`Secret`名字
 - `dbName` 表示数据库名 
 - `dbTable` 表示数据库表（table）名
 - `dbtype` 表示数据库类型
 
-## 创建存储数据库密码的Secret
+## 创建Secret
 
-以上面的`secret`中内容为名创建`Secret`，在`password`域中填写数据库密码。
+以上面的`secret`中内容为名创建`Secret`，在`username`和`password`域中分别填写数据库用户名与密码。
 
 ```bash
-kubectl create secret generic my-secret --from-literal=password=your_password -n devices
+kubectl create secret generic my-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
 ```
 
 :::note
