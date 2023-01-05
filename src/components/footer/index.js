@@ -84,14 +84,14 @@ export function Contact(props) {
       <h2>
         <Translate>Subscribe</Translate>
       </h2>
-      <Input
-        placeholder={translate({ message: 'Please leave your Email' })}
-        suffix={
-          <Tooltip title="Submit">
-            <img src={Vector} alt="" />
-          </Tooltip>
-        }
-      />
+      {/*<Input*/}
+      {/*  placeholder={translate({ message: 'Please leave your Email' })}*/}
+      {/*  suffix={*/}
+      {/*    <Tooltip title="Submit">*/}
+      {/*      <img src={Vector} alt="" />*/}
+      {/*    </Tooltip>*/}
+      {/*  }*/}
+      {/*/>*/}
       <div className={styles.footerLists}>
         <div>
           <img src={mail} alt="" />

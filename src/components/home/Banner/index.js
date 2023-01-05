@@ -12,6 +12,10 @@ export function Banner() {
         <img src={banner} alt="" className={styles.bannerImg}/>
         <img src={bannerMove} alt="" className={styles.bannerMove}/>
         <div className={styles.bannerCon}>
+          <a href="https://github.com/edgenesis/shifu">
+            <img src="https://img.shields.io/github/stars/edgenesis/shifu?style=social" alt="" className={styles.starImg}/>
+          </a>
+
           <h1>
             <Translate>Next Generation</Translate>
             <br/>

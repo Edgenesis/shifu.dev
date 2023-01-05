@@ -1,9 +1,14 @@
 .banner{
   width: 100%;
   position: relative;
-  img{
+  >img{
     display: block;
     width: 100%;
+  }
+  .starImg{
+    height: 30px;
+    margin-bottom: 16px;
+
   }
   .bannerMove{
     display: none;
@@ -31,7 +36,7 @@
 
 @media screen and (max-width: 996px) {
   .banner{
-    img{
+    >img{
       opacity: 0.3!important;
     }
   }
