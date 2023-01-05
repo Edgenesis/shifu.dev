@@ -15,7 +15,8 @@ export default function Disclaimer() {
             <img src={require('@site/static/img/product/message.png').default} className={styles.imgBackground}></img>
             <div className={styles.form}>
               <div className={common.block60}></div>
-              <LoginForm></LoginForm>
+              <iframe height="800px" width="100%" src="https://wenjuan.feishu.cn/m?t=sVOK1dytzVIi-xlnr" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-modals allow-downloads allow-forms allow-popups"></iframe>
+              {/* <LoginForm></LoginForm> */}
               <div className={common.block60}></div>
             </div>
           </div>
