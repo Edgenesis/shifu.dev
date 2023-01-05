@@ -40,7 +40,10 @@ const PlanCard = forwardRef(props => {
       <div className={[styles.PlanCard, styles[props.data.css]].join(' ')}>
         <div className={styles.planCardCon}>
           <div className={styles.title}>
-            <img src={require('@site/static/img/product/' + props.data.jpg).default}></img>
+            <div className={styles.imgBox}>
+              <img src={require('@site/static/img/product/' + props.data.jpg).default}></img>
+            </div>
+
             <div>
               <h2>{translate({message: props.data.title})}</h2>
               <h1>{translate({message: props.data.title2})}</h1>
