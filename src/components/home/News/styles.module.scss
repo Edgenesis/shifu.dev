@@ -1,5 +1,7 @@
 .newsBox{
   //margin-top: 80px;
+  width: 100%;
+  background:rgba(57, 155, 255, 0.05);
 }
 .news{
   display: flex;
@@ -17,7 +19,7 @@
     p{
       margin: 20px 0;
       line-height: 30px;
-      height: 60px;
+      //height: 60px;
     }
     .message{
       color:#000;
@@ -36,7 +38,7 @@
   }
   .news{
     .new {
-      width: 50%;
+      width: 100%;
       p{
         height: auto!important;
       }

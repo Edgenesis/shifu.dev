@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss"
 import Use from "@site/static/img/home/use.png";
+import UseMove from "@site/static/img/home/UseMove.png";
 import common from "@site/src/css/common.module.scss"
 import Translate   from '@docusaurus/Translate';
 import { Button } from 'antd';
@@ -9,7 +10,8 @@ export function UseCon() {
       <>
         <div className={common.block80}></div>
         <div className={`${styles.banner} ${common.content}`}>
-          <img src={Use} alt=""/>
+          <img src={Use} alt="" className={styles.bannerPc}/>
+          <img src={UseMove} alt="" className={styles.bannerMove}/>
           <div className={styles.bannerCon}>
             <h1>
               <Translate>Get started</Translate>

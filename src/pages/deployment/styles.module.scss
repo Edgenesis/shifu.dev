@@ -12,3 +12,10 @@
 .title{
   text-align: center;
 }
+
+@media screen and (max-width: 450px) {
+  .title{
+    margin-bottom: 0!important;
+    font-size: 18px!important;
+  }
+}

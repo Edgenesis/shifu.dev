@@ -5,6 +5,9 @@
     display: block;
     width: 100%;
   }
+  .backgroundMove{
+    display: none;
+  }
   .bannerCon{
     position: absolute;
     top: 30px;
@@ -12,6 +15,7 @@
     margin: auto;
     left: 10%;
     width:30%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,13 +62,21 @@
 
 @media screen and (max-width: 450px) {
   .banner{
-    img{
-      opacity: 0.5!important;
+    .backgroundPc{
+      display: none;
+    }
+    .backgroundMove{
+      display: block;
+      opacity: 1!important;
+
     }
   }
 
   .bannerCon{
     width:80% !important;
+    justify-content: start!important;
+    padding-top: 60px;
+    top: 0!important;
     h1{
       font-size: 1.5em !important;
       line-height: 30px !important;

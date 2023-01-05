@@ -16,7 +16,7 @@ let Lists=[
   {
     id:1,
     img: require('@site/static/img/home/news.png').default,
-    title:translate({message: 'Latest News'}),
+    title:translate({message: 'Insights'}),
     message:translate({message: 'Shifu is officially open source!'}),
     messageLink:"news/2022/08/20/open-source",
     link:'news'
@@ -36,17 +36,24 @@ export function News() {
     return <New {...item} key={item.id}/>
   })
   return (
-      <div className={`${styles.newsBox} ${common.content}`}>
-        <div className={common.block50}></div>
-        <Divider className={common.divider}/>
-        <div className={common.block50}></div>
-        <div className={`${styles.news}`}>
-          {newLists}
+      <>
+        <div className={common.block80}></div>
+        <div className={styles.newsBox}>
+          <div className={` ${common.content}`}>
+            <div className={common.block50}></div>
+            {/*<Divider className={common.divider}/>*/}
+            <div className={common.block50}></div>
+            <div className={`${styles.news}`}>
+              {newLists}
+            </div>
+            <div className={common.block30}></div>
+            {/*<Divider className={common.divider}/>*/}
+            <div className={common.block50}></div>
+          </div>
         </div>
-        <div className={common.block30}></div>
-        <Divider className={common.divider}/>
-        <div className={common.block50}></div>
-      </div>
+      </>
+
+
 
   )
 }

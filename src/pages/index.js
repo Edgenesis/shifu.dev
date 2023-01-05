@@ -17,7 +17,7 @@ export default function Hello() {
       <Banner></Banner>
       <News></News>
       <Developers></Developers>
-      <Device></Device>
+      {/*<Device></Device>*/}
       <Trusted></Trusted>
       <UseCon></UseCon>
       {/*<FirstPart></FirstPart>*/}

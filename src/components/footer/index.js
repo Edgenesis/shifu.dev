@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './styles.module.scss'
 import common from '@site/src/css/common.module.scss'
 import logo from '@site/static/img/footer/logo.png'
-import Vector from '@site/static/img/footer/Vector.png'
+import Vector from '@site/static/img/footer/submit.png'
 import mail from '@site/static/img/footer/mail.png'
 import device from '@site/static/img/footer/device-mobile.png'
 import map from '@site/static/img/footer/map-pin.png'
@@ -55,7 +55,6 @@ export function Link(props) {
         <Translate>Shifu Brings mobile-app-development-experience to the IoT world!</Translate>
       </div>
       <div className={`${styles.footerTitle}  ${styles.footerTitleS}`}>
-        <div>
           <a href="product">
             <Translate>Product</Translate>
           </a>
@@ -64,9 +63,7 @@ export function Link(props) {
             <Translate>Documentation</Translate>
           </a>
           <Divider type="vertical" />
-        </div>
 
-       <div>
          <a href="case-studies">
            <Translate>Case Studies</Translate>
          </a>
@@ -74,7 +71,6 @@ export function Link(props) {
          <a href="company">
            <Translate>Company</Translate>
          </a>
-       </div>
 
       </div>
       <div className={`${styles.footerTitle},${styles.footerLinks}`}>{list}</div>

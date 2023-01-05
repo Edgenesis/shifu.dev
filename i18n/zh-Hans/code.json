@@ -559,8 +559,11 @@
   "Haidian, Beijing": {
     "message": " 北京市 海淀区 中关村 创业大街 12号楼"
   },
-  "Choose the deployment method that suits you and start your free trial now.":{
+  "Choose the deployment method":{
     "message":"选择适合您的部署方式，立即开始试用"
+  },
+  " that suits you and start your free trial now":{
+    "message":""
   },
   "Fast Device Integration":{
     "message":"极速设备接入"
@@ -628,7 +631,7 @@
   "The open-source community has been dedicated to adding support for various protocol types, increasing the coverage of protocols for quick access":{
     "message":"开源社区正在不断增加支持的协议，提高快速接入的覆盖率"
   },
-  "Application development support":{
+  "App development support":{
     "message":"应用开发支持"
   },
   "Shifu has provided with a platform for convenient application development":{
@@ -780,6 +783,9 @@
   },
   "Tech Blogs": {
     "message": "技术博客"
+  },
+  "Insights": {
+    "message": "洞见"
   },
   "How to deploy Shifu on K3s to complete the cloud-edge-device cycle": {
     "message": "如何在K3s上部署Shifu并实现云-边-端完整闭环"

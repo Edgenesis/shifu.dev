@@ -21,7 +21,7 @@ const list = [
     jpg: 'icon1.png'
   },
   {
-    title: 'Application development support',
+    title: 'App development support',
     instruction: 'Shifu has provided with a platform for convenient application development',
     jpg: 'icon2.png'
   },

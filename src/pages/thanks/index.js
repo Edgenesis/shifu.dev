@@ -15,13 +15,13 @@ export default class Hello extends Component {
     }
   }
   componentDidMount() {
-    this.timer = setInterval(() => {
-      if (this.state.time > 1) this.setState({ time: this.state.time - 1 })
-      else {
-        setInterval(this.timer)
-        window.location.href = '/'
-      }
-    }, 1000)
+    // this.timer = setInterval(() => {
+    //   if (this.state.time > 1) this.setState({ time: this.state.time - 1 })
+    //   else {
+    //     setInterval(this.timer)
+    //     window.location.href = '/'
+    //   }
+    // }, 1000)
   }
 
   render() {

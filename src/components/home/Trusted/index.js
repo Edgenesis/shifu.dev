@@ -23,6 +23,9 @@ let Lists=[
   {
     url:require('@site/static/img/home/tr5.png').default,
   },
+  {
+    url:require('@site/static/img/home/tr6.png').default,
+  },
 ]
 let carList=[
 
@@ -90,9 +93,9 @@ export function Trusted() {
         </div>
         <div className={common.block60}></div>
         <div className={`${styles.lists} ${common.content}`}>
-          <div className={`${styles.listBox}`}>
+          {/*<div className={`${styles.listBox}`}>*/}
             {lists}
-          </div>
+          {/*</div>*/}
         </div>
         <div className={common.block60}></div>
         <div className={`${styles.trusts} ${common.content}`}>
@@ -110,8 +113,7 @@ export function Trusted() {
                  carouselEL.current.next();
                }}
                alt=""/>
-          {/*autoplay*/}
-          <Carousel   dots={false}  style={{ margin: "0 30px"}}
+          <Carousel autoplay  dots={false}  style={{ margin: "0 30px"}}
                     ref={carouselEL}>
             {carousel}
           </Carousel>

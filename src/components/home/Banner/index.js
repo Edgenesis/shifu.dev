@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './styles.module.scss'
 import banner from '@site/static/img/home/Banner.png'
+import bannerMove from '@site/static/img/home/bannerMove.png'
 import common from "@site/src/css/common.module.scss"
 import Translate from '@docusaurus/Translate'
 import {Button} from 'antd'
@@ -8,7 +9,8 @@ import {Button} from 'antd'
 export function Banner() {
   return (
       <div className={styles.banner}>
-        <img src={banner} alt=""/>
+        <img src={banner} alt="" className={styles.bannerImg}/>
+        <img src={bannerMove} alt="" className={styles.bannerMove}/>
         <div className={styles.bannerCon}>
           <h1>
             <Translate>Next Generation</Translate>

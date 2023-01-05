@@ -75,8 +75,16 @@
 
   .footerCon {
     flex-wrap: wrap;
-    > div {
-      width: 100%;
+
+
+    .footerTitle{
+      >div{
+        display: none;
+      }
+      > a {
+        width: 100%;
+        margin-bottom: 10px;
+      }
     }
   }
 }

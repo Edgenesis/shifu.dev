@@ -94,13 +94,15 @@ a{
   .comTitle{
     h1{
       width: 90%;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      font-size: 36px;
+      //overflow: hidden;
+      //white-space: nowrap;
+      //text-overflow: ellipsis;
     }
 
     h1:after{
-      background: transparent;
+      //background: transparent;
+      display: none;
     }
   }
   .divider{
