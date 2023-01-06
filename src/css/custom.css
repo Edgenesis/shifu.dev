@@ -129,6 +129,9 @@ html[data-theme='dark'] .header-github-link:before {
 .sidebarItemLink_node_modules-\@docusaurus-theme-classic-lib-theme-BlogSidebar-Desktop-styles-module{
   line-height: 26px;
 }
+p{
+  line-height: 30px;
+}
 @media screen and (max-width: 996px) {
   .footer{
     padding-top: 10px;

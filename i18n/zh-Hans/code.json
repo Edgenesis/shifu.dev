@@ -562,7 +562,7 @@
   "Choose the deployment method":{
     "message":"选择适合您的部署方式，立即开始试用"
   },
-  " that suits you and start your free trial now":{
+  "that suits you and start your free trial now":{
     "message":""
   },
   "Fast Device Integration":{
@@ -835,10 +835,10 @@
   "Shifu helps us integrate all of our devices in a smart and efficient way. With Shifu, we can treat all of our devices as software objects and abstract away the physical devices. This makes it easier for us to manage and control our devices.": {
     "message": "Shifu帮助我们用智慧、有效的方式整合了所有这些设备，有了Shifu我们可以以软件对象的形式对待所有的设备，并且抽象出物理设备。"
   },
-  "Chief Robot Engineer Kanyon Edvall": {
+  "Chief Robot Engineer": {
     "message": "首席机器人工程师"
   },
-  "CKanyon Edvall": {
+  "Kanyon Edvall": {
     "message": "Kanyon Edvall"
   },
   "Shifu provides a new development model that helps engineering developers quickly transform their business cognition based on user needs, quickly propose software requirements specifications, and complete scenario development.": {
