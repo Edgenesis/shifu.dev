@@ -100,14 +100,14 @@ data:
 
 ## 通过浏览器访问摄像头
 
-我们可以通过service 来实现对 pod 的访问 , 在默认的yaml 文件中我们已经设置了对应的 service , 现在只需要用它启用端口映射
+我们可以通过service 来实现对 pod 的访问 , 在默认的yaml 文件中我们已经设置了对应的 service , 现在只需要用它启用端转发
 
 通过下面的命令获得当前的 service列表 
 
 ```
 kubectl get svc -A 
 ```
-其中存在时间最短的应该就是我们刚刚添加的service , 通过下面命令我们开启端口映射
+其中存在时间最短的应该就是我们刚刚添加的service , 通过下面命令我们开启端口转发
 
 ```
 kubectl port-forward -n deviceshifu svc/<填入刚刚添加的service名> 3000:

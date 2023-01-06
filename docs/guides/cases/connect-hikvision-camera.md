@@ -100,14 +100,14 @@ You can use these instructions to interact with the ***deviceShifu***, which is 
 
 ## Accessing the camera via browser
 
-We can access the pod through service, we have set the corresponding service in the default yaml file, now we just need to use it to enable port mapping
+We can access the pod through service, we have set the corresponding service in the default yaml file, now we just need to use it to enable port forwarding
 
 Get the current list of services with the following command 
 
 ```
 kubectl get svc -A 
 ```
-The service that has been around for the shortest time is the one we just added, and we can enable port mapping with the following command
+The service that has been around for the shortest time is the one we just added, and we can enable port forwarding with the following command
 
 ```
 kubectl port-forward -n deviceshifu svc/<fill in the name of the service we just added> 3000:
@@ -124,4 +124,3 @@ Then you can access the camera from the browser
 For example, accessing `localhost:3000/info` should display information about the camera
 Replace info with another instruction to achieve the corresponding function
 
-Translated with www.DeepL.com/Translator (free version)
