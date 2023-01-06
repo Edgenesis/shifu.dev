@@ -14,8 +14,7 @@ spec:
   serviceSettings:
     SQLSetting:
       serverAddress: 192.168.14.163:6041
-      username: root
-      secret: taosdata
+      secret: my-secret
       dbName: shifu
       dbTable: testTable2
       dbtype: TDengine
@@ -23,11 +22,19 @@ spec:
 - `telemetrySeriveEndpoint` is telemetry service endpoint address
 - `serverAddress` is the database address
 - `username` is your database username
-- `secret` is your database password
+- `secret` is the name of the `Secret` stored your database username and password
 - `dbName` is the name of the database
 - `dbTable` is the table name of the database
 - `dbType` is the type of the database
   
+## Create the Secret
+
+Create a `Secret` named the `secret` field above with the `username` field filled by your username and the `password` field filled by your password.
+
+```bash
+kubectl create secret generic my-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
+```
+
 :::note
 If you have multiple telemetry services, you can write them in one file and split them in one file using `---`.
 :::
