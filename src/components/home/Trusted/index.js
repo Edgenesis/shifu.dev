@@ -34,7 +34,7 @@ let carList=[
     backUrl:require('@site/static/img/home/trus1.png').default,
     text:translate({message: 'Shifu helps us integrate all of our devices in a smart and efficient way. With Shifu, we can treat all of our devices as software objects and abstract away the physical devices. This makes it easier for us to manage and control our devices.'}),
     author:translate({message: 'Chief Robot Engineer'}),
-    writer:translate({message: 'CKanyon Edvall'}),
+    writer:translate({message: 'Kanyon Edvall'}),
   },
   {
     url:require('@site/static/img/home/tru2.png').default,
@@ -54,7 +54,7 @@ let carList=[
     url:require('@site/static/img/home/tru4.png').default,
     backUrl:require('@site/static/img/home/trus4.png').default,
     text:translate({message: 'As a IoT middleware, Shifu helps us achieve a integrated cloud-edge IoT architecture in a concise, efficient, secure and stable way. Shifu has been running in the scenario of Chinese ships for a long time and has always maintained a stable performance. In the future, we also expect Shifu to help more businesses of CSSC to undergo digital transformation.'}),
-    author:translate({message: 'Head of CSSC Environment IoT Department   '}),
+    author:translate({message: 'Head of CSSC Environment IoT Department'}),
     writer:translate({message: 'Zhen Zhang'}),
   },
   {
