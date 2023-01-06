@@ -900,6 +900,9 @@
   },
   "Please enter the correct Email address":{
     "message":"请输入正确的邮箱地址"
+  },
+  "Contact us": {
+    "message":"联系我们"
   }
   
 }

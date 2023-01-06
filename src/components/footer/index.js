@@ -7,7 +7,8 @@ import mail from '@site/static/img/footer/mail.png'
 import device from '@site/static/img/footer/device-mobile.png'
 import map from '@site/static/img/footer/map-pin.png'
 import Translate, { translate } from '@docusaurus/Translate'
-import { Divider, Input, Tooltip } from 'antd'
+import { Divider,Button, Input, Tooltip } from 'antd'
+
 export function Foot(props) {
   return (
     <div className={styles.footerBox}>
@@ -92,6 +93,9 @@ export function Contact(props) {
       {/*    </Tooltip>*/}
       {/*  }*/}
       {/*/>*/}
+      <Button type="primary" block href="contact">
+        <Translate>Contact us</Translate>
+      </Button>
       <div className={styles.footerLists}>
         <div>
           <img src={mail} alt="" />
