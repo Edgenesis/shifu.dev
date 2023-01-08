@@ -42,11 +42,6 @@ data:
         protocolPropertyList:
           MQTTTopic: "/test/test2" 
       ... # You can continue to configure commands and corresponding topics according to your own needs, just continue to add according to this format
-  mutexInstructions: | 
-  # Optional, configure mutexInstructions. the format as key, value. The key is the mutex instruction sent to the device. When the device executes the mutex instruction, it enters the busy state and refuses to receive other instructions. The value is the response returned by the device to the MQTT broker, indicating that the device has completed the corresponding mutex instruction and recovered to the idle state
-    Moving_the_device: "Device_finished_moving" # change this row
-    Rotating_the_device: "Device_finished_Rotating" 
-    ... # You can continue to configure mutexInstructions according to your own needs. Just continue to add them in this format
 ```
 
 ## Deploy deviceShifu
