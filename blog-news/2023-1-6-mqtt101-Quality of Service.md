@@ -1,38 +1,42 @@
-# Shifu IoT Knowledge Classroom: MQTT 101- 主题
+# Shifu IoT Knowledge Classroom: MQTT 101- Quality of Service
 
 :::info
 Shifu can easily connect to devices using the MQTT protocol, making IoT development more efficient. Shifu is a Kubernetes-native IoT development framework that allows developers to easily connect, monitor, and control any IoT device. Shifu brings Kubernetes to the edge computing scenarios of the Internet of Things, helping to achieve scalability and high availability of IoT applications. 
 :::
 
-In today's article we will go directly into what the topic is structured and how we can define a good topic.
+You already have a vague impression about the QoS of MQTT - it instructs how is the message delivered; and we have 3 QoS levels and 2 types of messages.
 
-# Definition of Topic
-A topic is defined as a string and formatted in a linux file system way. In common practice, from left to right, we describe multiple levels of one topic, from highest to lowest, like this:
+# Quick Review
+3 levels of QoS:
+0 - at most once
+1 - at least once
+2 - exactly once
 
-"earth/antarctica/elderthings/shoggoth"
+# 2 types of delivery: 
+1. publisher to broker
+2. broker to subscriber.
 
-and "earth", "antarctica", "elderthings", "shoggoth" are four levels of this topic.
+Also, in the last article we have discussed the SUBSCRIBE message sent from subscriber to broker; and it defines the maximum QoS level that the subscriber can accept, and any message with higher level will be reduced to the maximum level of the subscriber subscribing to that.
 
-# Subscription
-The subscriber needs to tell the broker what topic it is subscribing to. MQTT gives us freedom to use wildcard characters to match multiple topics at once:
+### 0 - At Most Once
+You can always know what it behaves by its name. So if you have QoS level 0, the message will either be delivered once, or not delivered - just try once and no retry. Send and forget about it. Wow, much async.
 
-**+**: matches any single level
-**#**: matches one or more levels (can only be placed at the end)
+### 1 - At Least Once
+I want deliver this message! And I will retry like crazy. Whoever sends the message will keep retry sending the message until it receives PUBACK (consisting of packetId and that is it) from recipients. 
 
-Let's say we have the following topics:
-- "earth/antarctica/elderthing/shoggoth"
-- "earth/antarctica/worker/shoggoth"
-- "earth/antarctica/migo"
-- "earth/antarctica/cthulhu/starspawn"
-- "yith/greatrace"
+Remember we have the dupFlag field in PUBLISH message? Here is how we use it - in every retry following the initial try, this dupFlag is set to true, informing the recipients that this could be a duplicate message.
 
-If subscriber A subscribes to **"earth/antarctica/+/shoggoth"**, then it can receive messages from "earth/antarctica/elderthing/shoggoth" and "earth/antarctica/worker/shoggoth".
+### 2 - Exactly Once
+The message is ensured to be delivered, and ensured to be delivered only once. This is the slowest and most complicated QoS level. Here is the entire lifecycle of a QoS 2 message:
 
-If subscriber B subscribes to **"earth/antarctica/#"**, then it can receive messages from all four topics under "earth/antarctica".
+First, the sender (publisher or broker) sends the PUBLISH message to receiver (broker or subscriber). "Knock knock!"
 
-If subscriber C subscribes to **"#"**, then it can receive messages from all five topics above.
+Second, once the receiver gets the PUBLISH message, it sends the PUBREC message to the sender, indicating that "I recognize this message, oh it is QoS 2, so take my word as a delivery proof, stop harassing!". Before receiving PUBREC, the sender will keep retrying to send PUBLISH message with dupFlag == true to the receiver.
 
-# $SYS
-"SYS" after a dollar sign is a special "keyword" used by the broker to track and maintain system statistic data. Broker publishes to this topic and no one else can publish to it.
+Third, upon the receipt of PUBREC, the sender learns that it has been delivered, and because it knows the message QoS is Exactly Once, it will throw away the message and stop retrying like crazy. The sender sends PUBREL to the receiver saying "I promise I won't knock again with this message."
 
-Remember that it is your or whoever implementing the protocol's job to make your MQTT service compatible with the standards above, and by default, MQTT allows you to use almost anything in the topic string, including non-ascii characters.
+Fourth, when the PUBREL arrives, the receiver will send PUBCOMP back to the sender to complete the life cycle.
+
+It is very similar to how we handshake in TCP - using some additional steps to ensure all stakeholders are aware of current status.
+
+If the receiver is not reachable, the sender will keep the message locally in a queue so it can send it when the receiver is online.
