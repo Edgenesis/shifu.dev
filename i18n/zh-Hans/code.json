@@ -615,10 +615,10 @@
   },
   ", Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.":{
     "message":"，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
-  },
+  },  
   "As a device configuration platform based on the open source IoT development framework Shifu, Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.":{
     "message":"作为基于开源物联网开发框架Shifu的设备配置平台，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
-  },  
+  },
   "Get Started":{
     "message":"现在体验"
   },
@@ -896,8 +896,13 @@
   "Contact us": {
     "message":"联系我们"
   },  
-  "Edgenesis is dedicated to developing the next generation of open-source AIoT (artificial intelligence of things) operating system, with a craftsman spirit to build the infrastructure of the digital society. Follow our WeChat subscription account to stay updated on the latest information about Shifu.": {
-    "message":"边无际Edgenesis致力于开发下一代的开源AIoT OS，以匠人精神做好数字社会的基础设施。欢迎关注我们的微信订阅号，随时了解Shifu的最新资讯。"
+  "Edgenesis is dedicated to developing the next generation of open-source AIoT (artificial intelligence of things) operating system, with a craftsman spirit to build the infrastructure of the digital society.": {
+    "message":"边无际Edgenesis致力于开发下一代的开源AIoT OS，以匠人精神做好数字社会的基础设施。"
+  },
+  "Follow our WeChat subscription account to stay updated on the latest information about Shifu.":{
+    "message":"欢迎关注我们的微信订阅号，随时了解Shifu的最新资讯。"
+  },
+  "Redirecting to the homepage":{
+    "message":"返回首页"
   }
-  
 }
