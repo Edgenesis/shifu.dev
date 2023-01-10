@@ -13,13 +13,9 @@ export function Form2(props) {
   setTimeout(() => {
     setIframestate(true)
   }, 1000)
-  // setInterval(() => {
-  //   console.log(parent.document.getElementById('frame').contentWindow.location.href)
-  // }, 5000)
   return (
       <div>
-        {/*className={`${iframestate ? '' : styles.none}`}*/}
-        <iframe id="frame"  height="800px" width="100%"
+        <iframe id="frame" className={`${iframestate ? '' : styles.none}`} height="800px" width="100%"
                 src={props.url} frameBorder="0" allowFullScreen
                 sandbox="allow-same-origin allow-scripts allow-modals allow-downloads allow-forms allow-popups"></iframe>
         <div className={`${styles.spin} ${iframestate ? styles.none : ''} `}>
