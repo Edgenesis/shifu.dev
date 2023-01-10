@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react'
+import React, { useEffect, Component } from 'react'
 import Layout from '@theme/Layout'
 import LoginForm from '../contact/form'
 import styles from './styles.module.scss'

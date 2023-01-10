@@ -615,7 +615,7 @@
   },
   ", Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.":{
     "message":"，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
-  },  
+  },
   "As a device configuration platform based on the open source IoT development framework Shifu, Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.":{
     "message":"作为基于开源物联网开发框架Shifu的设备配置平台，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
   },
@@ -859,12 +859,39 @@
   "Tina Tsou":{
     "message":"Tina Tsou"
   },
+  "Shifu's cloud-native architecture supports containerized deployment more perfectly. He hopes that Shifu could explore more possibilities in IoT scenarios with TDengine 3.0 in the future.":{
+    "message":"Shifu的云原生架构，更加完美地支持容器化部署，期待未来与TDengine3.0一起在物联网场景中探索出更多的可能。"
+  },
+  "Founder of TDengine":{
+    "message":"开源时序数据库TDengine创始人"
+  },
+  "Jianhui Tao":{
+    "message":"陶建辉"
+  },
+  "Shifu's cloud-native architecture is based on Kubernetes, which is very innovative, further unleashing the control and management capabilities of edge devices and providing application development engineers with a unified base for cloud edge collaborative management.":{
+    "message":"Shifu 基于Kubernetes的云原生架构，非常具有创新性，将边缘设备的控制管理能力进一步释放，并为应用开发工程师提供了云边协同管理的统一底座"
+  },
+  "Chairman of LF Edge Board":{
+    "message":"LF Edge 董事会主席"
+  },
   "The advent of the cloud-native era has reconfigured the infrastructure of all enterprises, and the open source of Shifu will further help enterprises with their IoT management. He sincerely hopes that Shifu project will excel itself in the future.":{
     "message":"云原生时代的到来，重构了所有企业的基础设施，Shifu 项目的开源帮助企业在IoT物联网管理上更进一步，希望 Shifu 项目越做做好。"
   },
   "Founder of ClickHouse China Community":{
     "message":"ClickHouse中国社区创始人"
   },
+  "Wei Guo":{
+    "message":"郭炜"
+  "Tina Tsou":{
+    "message":"Tina Tsou"
+  },
+  "The advent of the cloud-native era has reconfigured the infrastructure of all enterprises, and the open source of Shifu will further help enterprises with their IoT management. He sincerely hopes that Shifu project will excel itself in the future.":{
+    "message":"云原生时代的到来，重构了所有企业的基础设施，Shifu 项目的开源帮助企业在IoT物联网管理上更进一步，希望 Shifu 项目越做做好。"
+  },
+  "Founder of ClickHouse China Community":{
+    "message":"ClickHouse中国社区创始人"
+  },
+
   "Wei Guo":{
     "message":"郭炜"
   },
@@ -895,7 +922,7 @@
   },
   "Contact us": {
     "message":"联系我们"
-  },  
+  },
   "Edgenesis is dedicated to developing the next generation of open-source AIoT (artificial intelligence of things) operating system, with a craftsman spirit to build the infrastructure of the digital society.": {
     "message":"边无际Edgenesis致力于开发下一代的开源AIoT OS，以匠人精神做好数字社会的基础设施。"
   },
