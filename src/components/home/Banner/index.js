@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styles from './styles.module.scss'
-import BanPC from '@site/static/img/home/Banner.png'
+import BanPC from '@site/static/img/home/ban.png'
 import banMove from '@site/static/img/home/bannerMove.png'
 import common from "@site/src/css/common.module.scss"
 import Translate from '@docusaurus/Translate'

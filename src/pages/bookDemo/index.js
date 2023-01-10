@@ -18,7 +18,7 @@ export default function Company() {
   return (
     <Layout>
       <div className={styles.pageoutbox}>
-        <img className={styles.bookingimg} src={require('@site/static/img/home/banner.png').default} alt="" />
+        <img className={styles.bookingimg} src={require('@site/static/img/home/ban.png').default} alt="" />
 
         <div className={styles.pagebox}>
           <div className={styles.pagecontent}>

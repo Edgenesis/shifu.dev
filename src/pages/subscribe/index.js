@@ -6,7 +6,7 @@ import { Foot } from '../../components/footer'
 import 'antd/dist/reset.css'
 import { translate } from '@docusaurus/Translate'
 import common from '@site/src/css/common.module.scss'
-
+import SfLogo from '@site/static/img/product/SfLogo.png'
 export default class Hello extends Component {
   constructor(props) {
     super(props)
@@ -34,7 +34,7 @@ export default class Hello extends Component {
             <div className={common.block80}></div>
             <div className={`${styles.thanksmain} ${common.content}`}>
               <div className={common.block80}></div>
-              <img src={require('@site/static/img/product/shifuLogo.png').default}></img>
+              <img src={SfLogo}></img>
               <div className={common.block30}></div>
               <p className={styles.thanksinstruction}>
                 {translate({
