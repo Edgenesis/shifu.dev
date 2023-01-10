@@ -11,11 +11,23 @@
   }
   .list{
     width: 100%;
-    padding: 24px;
-    background: #FFFFFF;
+    padding: 16px;
+    background: #399BFF0D;
     border: 1px solid #D9D9D9;
     border-radius: 20px;
     height: 290px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .img{
+      width: 20%;
+      min-width: 90px;
+      padding: 0 15px;
+    }
+    .msglist{
+      width: 80%;
+    }
     h2{
       background: linear-gradient(207.95deg, #399BFF -12.8%, #62E7D0 112.78%, #B1EC44 112.8%);
       -webkit-background-clip: text;
@@ -25,24 +37,16 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      font-size:30px ;
+      font-size:18px ;
     }
     p{
       margin-bottom: 0;
       line-height: 1.5;
-      font-size: 20px;
+      font-size: 14px;
     }
   }
 }
 @media screen and (max-width: 1100px) {
-  .listBox{
-    width:50% !important;
-    p{
-      height: auto!important;
-    }
-  }
-}
-@media screen and (max-width: 450px) {
   .listBox{
     width:100% !important;
     p{
