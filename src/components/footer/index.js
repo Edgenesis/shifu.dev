@@ -73,48 +73,41 @@ let linkList = [
 export function Link(props) {
   const list = linkList.map(item => {
     return (
-        <>
-          {
-            item.link.includes('http') ? <a href={item.link} className={styles.footerLink} key={item.link}>
-                  <img src={item.img} alt=""/>
-                </a>
-                : <a href={`${props.url}${item.link}`} className={styles.footerLink} key={item.link}>
-                  <img src={item.img} alt=""/>
-                </a>
-          }
-        </>
+        <a href={item.link.includes('http') ? `${item.link}` : `${props.url}${item.link}`} className={styles.footerLink}
+           key={item.link}>
+          <img src={item.img} alt=""/>
+        </a>
 
     )
-  }
-)
-return (
-  <div>
-    <div className={styles.footerTitle}>
-      <img src={logo} alt=""/>
-      <Translate>Shifu Brings mobile-app-development-experience to the IoT world!</Translate>
-    </div>
-    <div className={`${styles.footerTitle}  ${styles.footerTitleS}`}>
-      <a href={`${props.url}product`}>
-        <Translate>Product</Translate>
-      </a>
-      <Divider type="vertical"/>
-      <a href={`${props.url}docs`}>
-        <Translate>Documentation</Translate>
-      </a>
-      <Divider type="vertical"/>
+  })
+  return (
+    <div>
+      <div className={styles.footerTitle}>
+        <img src={logo} alt=""/>
+        <Translate>Shifu Brings mobile-app-development-experience to the IoT world!</Translate>
+      </div>
+      <div className={`${styles.footerTitle}  ${styles.footerTitleS}`}>
+        <a href={`${props.url}product`}>
+          <Translate>Product</Translate>
+        </a>
+        <Divider type="vertical"/>
+        <a href={`${props.url}docs`}>
+          <Translate>Documentation</Translate>
+        </a>
+        <Divider type="vertical"/>
 
-      <a href={`${props.url}case-studies`}>
-        <Translate>Case Studies</Translate>
-      </a>
-      <Divider type="vertical"/>
-      <a href={`${props.url}company`}>
-        <Translate>Company</Translate>
-      </a>
+        <a href={`${props.url}case-studies`}>
+          <Translate>Case Studies</Translate>
+        </a>
+        <Divider type="vertical"/>
+        <a href={`${props.url}company`}>
+          <Translate>Company</Translate>
+        </a>
 
+      </div>
+      <div className={`${styles.footerTitle},${styles.footerLinks}`}>{list}</div>
     </div>
-    <div className={`${styles.footerTitle},${styles.footerLinks}`}>{list}</div>
-  </div>
-)
+  )
 }
 
 export function Contact(props)

@@ -1,4 +1,4 @@
-import React, { useEffect, Component } from 'react'
+import React, { useEffect, Component,useState } from 'react'
 import Layout from '@theme/Layout'
 import LoginForm from '../contact/form'
 import styles from './styles.module.scss'
@@ -18,7 +18,8 @@ export function Form2(props) {
   // }, 5000)
   return (
       <div>
-        <iframe id="frame" className={`${iframestate ? '' : styles.none}`} height="800px" width="100%"
+        {/*className={`${iframestate ? '' : styles.none}`}*/}
+        <iframe id="frame"  height="800px" width="100%"
                 src={props.url} frameBorder="0" allowFullScreen
                 sandbox="allow-same-origin allow-scripts allow-modals allow-downloads allow-forms allow-popups"></iframe>
         <div className={`${styles.spin} ${iframestate ? styles.none : ''} `}>
