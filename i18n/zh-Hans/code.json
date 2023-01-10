@@ -550,7 +550,7 @@
   "Company": {
     "message": "公司"
   },
-  "Subscribe": {
+  "Subscribe the latest news of Shifu": {
     "message": " 订阅 Shifu 最新资讯"
   },
   "Please leave your Email": {
@@ -608,14 +608,14 @@
     "message":"下一代云原生物联网开发框架"
   },
   ", Shifu provides users with full-scene device hosting and integrated software development capabilities. Through the use of the Shifu framework, developers can more easily connect, monitor and control any IoT device.":{
-    "message":"，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
+    "message":"，Shifu为用户提供了全场景设备托管与一体化软件开发能力。开发者通过使用 Shifu框架，可以更简单地连接、监视和控制任何物联网设备。"
   },
   "a device configuration platform based on the open source IoT development framework Shifu":{
     "message":"基于开源物联网开发框架Shifu的设备配置平台"
   },
   ", Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.":{
     "message":"，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
-  },  
+  },
   "As a device configuration platform based on the open source IoT development framework Shifu, Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.":{
     "message":"作为基于开源物联网开发框架Shifu的设备配置平台，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
   },
@@ -625,23 +625,23 @@
   "Features":{
     "message":"产品特点"
   },
-  "Multi-protocol support":{
-    "message":"多类型协议支持"
+  "Multi-protocol":{
+    "message":"多协议接入"
   },
-  "The open-source community has been dedicated to adding support for various protocol types, increasing the coverage of protocols for quick access":{
-    "message":"开源社区正在不断增加支持的协议，提高快速接入的覆盖率"
+  "Shifu Cloud supports HTTP, OPCUA, Socket, MQTT, ADS, BACnet, CBus, Eip, Knx, ModbusAscii, ModbusRTU, ModbusTCP and more!":{
+    "message":"Shifu Cloud支持HTTP, OPCUA, Socket, MQTT, ADS, BACnet, CBus, Eip, Knx, ModbusAscii, ModbusRTU, ModbusTCP等协议。"
   },
-  "App development support":{
-    "message":"应用开发支持"
+  "Device template":{
+    "message":"协议模板"
   },
-  "Shifu has provided with a platform for convenient application development":{
-    "message":"Shifu提供了支持便捷应用开发的平台"
+  "connect devices with pre-built templates, saving you from configuration hell.":{
+    "message":"您可以用事先定义好的模板直接进行设备连接，免去您的设备配置之苦。"
   },
-  "App store support":{
-    "message":"应用商店支持"
+  "App store":{
+    "message":"应用商店"
   },
-  "Developers can upload their own developed applications or third-party plugins, users can install these applications or plugins with one click.":{
-    "message":"包括开发者上传的自己开发的应用或第三方插件，支持使用者一键安装"
+  "install 3rd party Apps with one-click. Let's build an end-to-end IoT solution in no time!":{
+    "message":"一键安装第三方应用，让端到端物联网解决方案唾手可得。"
   },
   "Enterprise-level services":{
     "message":"企业级服务"
@@ -661,7 +661,7 @@
   "Edgenesis (Beijing) Technology Co., Ltd., is committed to the R&D of the next generation open source IoT development frameworks.":{
     "message":"边无际（北京）科技有限公司致力于下一代国际标准的物联网开源开发框架研发。"
   }, 
-  "Edgenesis has created the ingenious distributed IoT framework Shifu based on k8s, providing full-scene device hosting for customers and an integrated software development experience. By using digital twin technology within a transparent framework, Shifu endows devices with thinking digital brain. The platform layer collects north-bound data from all devices and machines on the scene and sends south-bound instructions.":{
+  "Edgenesis has provided IoT development services to many industry leaders. The company has cooperated with many Fortune 500 companies,  including Microsoft and Amazon. In the future, Edgenesis will continue to push the frontier of digital transformation of the IoT industry with Shifu.":{
     "message":"边无际Edgenesis基于K8S首创分布式物联网框架Shifu，为客户全场景设备托管，一体化软件开发提供了透明框架。通过透明框架内的数字孪生技术，为设备赋予有思考能力的”数字大脑“，通过平台层对场景内所有设备、机器进行北向数据收集和南向指令管控。"
   }, 
   "Edgenesis has provided framework hosting services to many top companies in respective industries. The company has cooperated with many domestic and foreign Fortune 500 companies, including China State Shipbuilding Cooperation, Xiamen Itg Group Corp.,Ltd. Microsoft, and Amazon. In the future, Edgenesis will continue to promote the digitalization of the underlying structure of intelligent devices, providing 100% reusable and modular-like framework deployment experience for solution integrators, industrial IoT projects, and government infrastructure departments.":{
@@ -775,7 +775,7 @@
   "Development Framework": {
     "message": ""
   },
-  "An industrial IoT development framework that boosts IoT developer efficiency by ten times.": {
+  "10X your IoT software development": {
     "message": "面向产业的物联网开发框架，十倍提高物联网开发者效率"
   },
   "Free trial": {
@@ -843,28 +843,55 @@
   },
   "Shifu's cloud-native architecture supports containerized deployment more perfectly. He hopes that Shifu could explore more possibilities in IoT scenarios with TDengine 3.0 in the future.":{
     "message":"Shifu的云原生架构，更加完美地支持容器化部署，期待未来与TDengine3.0一起在物联网场景中探索出更多的可能。"
-  },  
+  },
   "Founder of TDengine":{
     "message":"开源时序数据库TDengine创始人"
-  },  
+  },
   "Jianhui Tao":{
     "message":"陶建辉"
-  }, 
+  },
   "Shifu's cloud-native architecture is based on Kubernetes, which is very innovative, further unleashing the control and management capabilities of edge devices and providing application development engineers with a unified base for cloud edge collaborative management.":{
     "message":"Shifu 基于Kubernetes的云原生架构，非常具有创新性，将边缘设备的控制管理能力进一步释放，并为应用开发工程师提供了云边协同管理的统一底座"
-  },  
+  },
   "Chairman of LF Edge Board":{
     "message":"LF Edge 董事会主席"
-  },  
+  },
+  "Tina Tsou":{
+    "message":"Tina Tsou"
+  },
+  "Shifu's cloud-native architecture supports containerized deployment more perfectly. He hopes that Shifu could explore more possibilities in IoT scenarios with TDengine 3.0 in the future.":{
+    "message":"Shifu的云原生架构，更加完美地支持容器化部署，期待未来与TDengine3.0一起在物联网场景中探索出更多的可能。"
+  },
+  "Founder of TDengine":{
+    "message":"开源时序数据库TDengine创始人"
+  },
+  "Jianhui Tao":{
+    "message":"陶建辉"
+  },
+  "Shifu's cloud-native architecture is based on Kubernetes, which is very innovative, further unleashing the control and management capabilities of edge devices and providing application development engineers with a unified base for cloud edge collaborative management.":{
+    "message":"Shifu 基于Kubernetes的云原生架构，非常具有创新性，将边缘设备的控制管理能力进一步释放，并为应用开发工程师提供了云边协同管理的统一底座"
+  },
+  "Chairman of LF Edge Board":{
+    "message":"LF Edge 董事会主席"
+  },
+  "The advent of the cloud-native era has reconfigured the infrastructure of all enterprises, and the open source of Shifu will further help enterprises with their IoT management. He sincerely hopes that Shifu project will excel itself in the future.":{
+    "message":"云原生时代的到来，重构了所有企业的基础设施，Shifu 项目的开源帮助企业在IoT物联网管理上更进一步，希望 Shifu 项目越做做好。"
+  },
+  "Founder of ClickHouse China Community":{
+    "message":"ClickHouse中国社区创始人"
+  },
+  "Wei Guo":{
+    "message":"郭炜"
   "Tina Tsou":{
     "message":"Tina Tsou"
   },
   "The advent of the cloud-native era has reconfigured the infrastructure of all enterprises, and the open source of Shifu will further help enterprises with their IoT management. He sincerely hopes that Shifu project will excel itself in the future.":{
     "message":"云原生时代的到来，重构了所有企业的基础设施，Shifu 项目的开源帮助企业在IoT物联网管理上更进一步，希望 Shifu 项目越做做好。"
-  },  
+  },
   "Founder of ClickHouse China Community":{
     "message":"ClickHouse中国社区创始人"
-  },  
+  },
+
   "Wei Guo":{
     "message":"郭炜"
   },
@@ -895,7 +922,7 @@
   },
   "Contact us": {
     "message":"联系我们"
-  },  
+  },
   "Edgenesis is dedicated to developing the next generation of open-source AIoT (artificial intelligence of things) operating system, with a craftsman spirit to build the infrastructure of the digital society.": {
     "message":"边无际Edgenesis致力于开发下一代的开源AIoT OS，以匠人精神做好数字社会的基础设施。"
   },

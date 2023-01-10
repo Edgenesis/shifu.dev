@@ -1,7 +1,7 @@
 import {Button, Space} from 'antd'
 import Translate,{translate} from '@docusaurus/Translate'
 import styles from './styles.module.scss'
-import React, {forwardRef} from 'react'
+import React, {Component, forwardRef} from 'react'
 import gouxuan from '@site/static/img/product/gouxuan.png'
 import common from '@site/src/css/common.module.scss'
 
@@ -70,7 +70,7 @@ const PlanCard = forwardRef(props => {
               </ul>
             </div>
             <div className={common.block50}></div>
-            <Button type="primary" block size="large" href={props.data.url} className={styles.button}>
+            <Button type="primary" block size="large" href={`${props.url}${props.data.url}`} className={styles.button}>
               <Translate>{props.data.button}</Translate>
             </Button>
             <div className={common.block60}></div>
@@ -81,15 +81,37 @@ const PlanCard = forwardRef(props => {
   )
 })
 
-const PlanCardList = () => {
-  return (
-      <>
-        <div className={styles.list}>
-          <PlanCard data={list[0]}></PlanCard>
-          <PlanCard data={list[1]}></PlanCard>
-        </div>
-        <div className={common.block80}></div>
-      </>
-  )
+export default class PlanCardList extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      url: '/',
+    }
+  }
+
+  componentDidMount() {
+    if (window.location.href.includes('zh-Hans')) {
+      this.setState({
+        url: '/zh-Hans/'
+      })
+    } else {
+      this.setState({
+        url: '/'
+      })
+    }
+
+  }
+
+  render() {
+    return (
+        <>
+          <div className={styles.list}>
+            <PlanCard data={list[0]} url={this.state.url}></PlanCard>
+            <PlanCard data={list[1]} ></PlanCard>
+          </div>
+          <div className={common.block80}></div>
+        </>
+    )
+  }
+
 }
-export default PlanCardList
