@@ -841,42 +841,34 @@
   "Kanyon Edvall": {
     "message": "Kanyon Edvall"
   },
-  "Shifu provides a new development model that helps engineering developers quickly transform their business cognition based on user needs, quickly propose software requirements specifications, and complete scenario development.": {
-    "message": "Shifu提供了新的开发模式，帮助工程开发人员根据用户的需求，快速转换业务上的认知，快速提出软件需求规格说明，完成场景开发。"
+  "Shifu's cloud-native architecture supports containerized deployment more perfectly. He hopes that Shifu could explore more possibilities in IoT scenarios with TDengine 3.0 in the future.":{
+    "message":"Shifu的云原生架构，更加完美地支持容器化部署，期待未来与TDengine3.0一起在物联网场景中探索出更多的可能。"
+  },  
+  "Founder of TDengine":{
+    "message":"开源时序数据库TDengine创始人"
+  },  
+  "Jianhui Tao":{
+    "message":"陶建辉"
+  }, 
+  "Shifu's cloud-native architecture is based on Kubernetes, which is very innovative, further unleashing the control and management capabilities of edge devices and providing application development engineers with a unified base for cloud edge collaborative management.":{
+    "message":"Shifu 基于Kubernetes的云原生架构，非常具有创新性，将边缘设备的控制管理能力进一步释放，并为应用开发工程师提供了云边协同管理的统一底座"
+  },  
+  "Chairman of LF Edge Board":{
+    "message":"LF Edge 董事会主席"
+  },  
+  "Tina Tsou":{
+    "message":"Tina Tsou"
   },
-  "CEO of Omni-Native": {
-    "message": "万象原生CEO"
+  "The advent of the cloud-native era has reconfigured the infrastructure of all enterprises, and the open source of Shifu will further help enterprises with their IoT management. He sincerely hopes that Shifu project will excel itself in the future.":{
+    "message":"云原生时代的到来，重构了所有企业的基础设施，Shifu 项目的开源帮助企业在IoT物联网管理上更进一步，希望 Shifu 项目越做做好。"
+  },  
+  "Founder of ClickHouse China Community":{
+    "message":"ClickHouse中国社区创始人"
+  },  
+  "Wei Guo":{
+    "message":"郭炜"
   },
-  "Linfeng Cai": {
-    "message": "蔡凌风"
-  },
-  "The fusion-type intelligent IoT platform developed based on the Shifu framework greatly enhances the compatibility and reliability of the system in production environments, providing a rock-solid foundation for intelligent operation and maintenance of the production line, intelligent prevention of human factors, and integration of production data.": {
-    "message": "基于Shifu框架所开发的融合式智能物联中台，大幅提升了系统在生产环境中的兼容性和可靠性，为产线智能运维、操作智能防人因以及生产数据整合搭建了如磐石般坚韧的基座。"
-  },
-  "Head of the AI R&D Center at CNNC Equipment Institute": {
-    "message": "中核装备院人工智能研发中心负责人"
-  },
-  "Yuan Huang": {
-    "message": "黄远"
-  },
-  "As a IoT middleware, Shifu helps us achieve a integrated cloud-edge IoT architecture in a concise, efficient, secure and stable way. Shifu has been running in the scenario of Chinese ships for a long time and has always maintained a stable performance. In the future, we also expect Shifu to help more businesses of CSSC to undergo digital transformation.": {
-    "message": "Shifu作为物联网中间件，用简洁、高效、安全、稳定的方式帮我们实现了云边端一体化的物联网架构。Shifu在中国船舶的场景里运行了较长时间，一直保持着稳定的表现。未来也期待Shifu能够帮助中国船舶更多的业务进行数字化转型。"
-  },
-  "Head of CSSC Environment IoT Department": {
-    "message": "中船环境物联网负责人"
-  },
-  "Zhen Zhang": {
-    "message": "张桢"
-  },
-  "Shifu is an important new infrastructure in the industrial internet industry, with potential to help many new energy companies take flight with the internet of things. Our company has a wide range of industrial scenarios and we look forward to seeing Shifu shine in our scenarios.": {
-    "message": "Shifu是一个工业互联网业内的重要新基建，有潜力帮助众多新能源企业插上物联网的翅膀。我们公司拥有众多产业场景，也期待Shifu在我们的场景中有亮眼的表现。"
-  },
-  "CEO of OCSmarter": {
-    "message": "零碳数科CEO、厦门国贸启润物联总经理"
-  },
-  "Baolei Yan": {
-    "message": "闫保磊"
-  },
+
   "Get started": {
     "message": "现在开始"
   },
@@ -903,6 +895,9 @@
   },
   "Contact us": {
     "message":"联系我们"
+  },  
+  "Edgenesis is dedicated to developing the next generation of open-source AIoT (artificial intelligence of things) operating system, with a craftsman spirit to build the infrastructure of the digital society. Follow our WeChat subscription account to stay updated on the latest information about Shifu.": {
+    "message":"边无际Edgenesis致力于开发下一代的开源AIoT OS，以匠人精神做好数字社会的基础设施。欢迎关注我们的微信订阅号，随时了解Shifu的最新资讯。"
   }
   
 }
