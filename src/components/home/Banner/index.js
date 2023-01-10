@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styles from './styles.module.scss'
-import banner from '@site/static/img/home/Banner.png'
+import BannerPC from '@site/static/img/home/Banner.png'
 import bannerMove from '@site/static/img/home/bannerMove.png'
 import common from "@site/src/css/common.module.scss"
 import Translate from '@docusaurus/Translate'
@@ -29,7 +29,7 @@ export class Banner extends Component {
   render() {
     return (
         <div className={styles.banner}>
-          <img src={banner} alt="" className={styles.bannerImg}/>
+          <img src={BannerPC} alt="" className={styles.bannerImg}/>
           <img src={bannerMove} alt="" className={styles.bannerMove}/>
           <div className={styles.bannerCon}>
             <a href="https://github.com/edgenesis/shifu">

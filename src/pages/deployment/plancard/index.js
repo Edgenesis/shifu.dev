@@ -31,7 +31,7 @@ const list = [
     function: ['Multiple protocol support', 'Application Development Support', 'App Store Support'],
     button: 'Free Access for Individuals',
     jpg: 'cloud.png',
-    url: 'https://shifu.cloud/',
+    url: 'bookDemo',
     css: 'blue'
   }
 ]
@@ -107,7 +107,7 @@ export default class PlanCardList extends Component {
         <>
           <div className={styles.list}>
             <PlanCard data={list[0]} url={this.state.url}></PlanCard>
-            <PlanCard data={list[1]} ></PlanCard>
+            <PlanCard data={list[1]} url={this.state.url}></PlanCard>
           </div>
           <div className={common.block80}></div>
         </>
