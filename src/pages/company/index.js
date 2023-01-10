@@ -58,7 +58,7 @@ export default function Company() {
                 <p>
                   {translate({
                     message:
-                        'Edgenesis has provided framework hosting services to many top companies in respective industries. The company has cooperated with many domestic and foreign Fortune 500 companies, including China State Shipbuilding Cooperation, Xiamen Itg Group Corp.,Ltd. Microsoft, and Amazon. In the future, Edgenesis will continue to promote the digitalization of the underlying structure of intelligent devices, providing 100% reusable and modular-like framework deployment experience for solution integrators, industrial IoT projects, and government infrastructure departments.'
+                        'Edgenesis has provided IoT development services to many industry leaders. The company has cooperated with many Fortune 500 companies,  including Microsoft and Amazon. In the future, Edgenesis will continue to push the frontier of digital transformation of the IoT industry with Shifu.'
                   })}
                 </p>
               </div>

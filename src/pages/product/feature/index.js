@@ -16,18 +16,18 @@ const Feature = forwardRef((props, ref) => {
 })
 const list = [
   {
-    title: 'Multi-protocol support',
-    instruction: 'The open-source community has been dedicated to adding support for various protocol types, increasing the coverage of protocols for quick access',
+    title: 'Multi-protocol',
+    instruction: 'Shifu Cloud supports HTTP, OPCUA, Socket, MQTT, ADS, BACnet, CBus, Eip, Knx, ModbusAscii, ModbusRTU, ModbusTCP and more!',
     jpg: 'icon1.png'
   },
   {
-    title: 'App development support',
-    instruction: 'Shifu has provided with a platform for convenient application development',
+    title: 'Device template',
+    instruction: 'Device template: connect devices with pre-built templates, saving you from configuration hell.',
     jpg: 'icon2.png'
   },
   {
-    title: 'App store support',
-    instruction: 'Developers can upload their own developed applications or third-party plugins, users can install these applications or plugins with one click.',
+    title: 'App store',
+    instruction: 'install 3rd party Apps with one-click. Let\'s build an end-to-end IoT solution in no time!',
     jpg: 'icon3.png'
   }
 ]

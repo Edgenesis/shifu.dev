@@ -15,8 +15,7 @@ export default function Introduce() {
           <h1>Shifu Cloud</h1>
           <p>
             <Translate>
-              As a device configuration platform based on the open source IoT development framework Shifu, Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for
-              IoT scene development.
+              IoT development platform designed for production use cases. By developers, for developers.
             </Translate>
           </p>
           <Button type="primary"   href="https://shifu.cloud/" className={common.bannerBtn}>
