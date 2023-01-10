@@ -18,11 +18,16 @@ export default class Hello extends Component {
               <div className={common.block80}></div>
               <img src={require('@site/static/img/product/shifuLogo.png').default}></img>
               <div className={common.block30}></div>
-              <p className={styles.thanksinstruction}>{translate({ message: 'Edgenesis is dedicated to developing the next generation of open-source AIoT (artificial intelligence of things) operating system, with a craftsman spirit to build the infrastructure of the digital society.' })}</p>
-              <p className={styles.thanksinstruction}>{translate({ message: 'Follow our WeChat subscription account to stay updated on the latest information about Shifu.' })}</p>
+              <p className={styles.thanksinstruction}>
+                {translate({
+                  message:
+                    'Edgenesis is dedicated to developing efficient developer tools and providing full-scenario IoT solutions. Using our self-developed Shifu Framework as an open-source IoT development framework for industrial IoT, we help AIoT developers focus on business logic and develop applications agilely and efficiently.'
+                })}
+              </p>
+              <p className={styles.thanksinstruction}>{translate({ message: 'Welcome to follow our WeChat subscription account to stay updated on the latest information about Shifu.' })}</p>
               <div className={common.block30}></div>
               <img className={styles.qrcode} src={require('@site/static/img/product/qrcode.png').default}></img>
-              <a href="/">{translate({ message: 'Redirecting to the homepage' })}</a>
+              <a href={window.location.href.includes('zh-Hans') ? '/zh-Hans' : ''}>{translate({ message: 'Redirecting to the homepage' })}</a>
               <div className={common.block80}></div>
             </div>
             <div className={common.block80}></div>

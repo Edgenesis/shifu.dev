@@ -793,8 +793,8 @@
   "Latest News": {
     "message": "最新消息"
   },
-  "Shifu is officially open source!": {
-    "message": "Shifu 正式开源！"
+  "Cleansing the Cloudy IoT Planet": {
+    "message": "拨开物联网星球的重重云雾"
   },
   "Releases": {
     "message": "发布"
@@ -896,26 +896,36 @@
   "Contact us": {
     "message":"联系我们"
   },
-  "Edgenesis is dedicated to developing the next generation of open-source AIoT (artificial intelligence of things) operating system, with a craftsman spirit to build the infrastructure of the digital society.": {
-    "message":"边无际Edgenesis致力于开发下一代的开源AIoT OS，以匠人精神做好数字社会的基础设施。"
+  "Edgenesis is dedicated to developing efficient developer tools and providing full-scenario IoT solutions. Using our self-developed Shifu Framework as an open-source IoT development framework for industrial IoT, we help AIoT developers focus on business logic and develop applications agilely and efficiently.": {
+    "message":"边无际Edgenesis致力于提供高效的开发者工具和全场景物联网解决方案，使用自主研发的Shifu Framework作为产业IoT的开源物联网开发框架，帮助AIoT开发者专注业务逻辑，敏捷高效开发应用。"
   },
-  "Follow our WeChat subscription account to stay updated on the latest information about Shifu.":{
+  "Welcome to follow our WeChat subscription account to stay updated on the latest information about Shifu.":{
     "message":"欢迎关注我们的微信订阅号，随时了解Shifu的最新资讯。"
   },
   "Redirecting to the homepage":{
     "message":"返回首页"
   },
-  "Book An Appointment": {
-    "message":"登记预约"
+  "Kindly register for a Shifu Cloud Demo": {
+    "message":"登记预约Shifu Cloud演示"
   },
-  "Welcome! We're glad to have you here.": {
-    "message":"欢迎！我们很高兴你能来这里。"
+  "Hello! Thank you for your interest and support in Shifu Cloud.": {
+    "message":"您好！感谢您对于Shifu Cloud的喜爱与支持。"
   },
-  "Please book a service and time with us below.": {
-    "message":"请在下面与我们预约服务和时间。"
-  },  "We will notify you about your appointment by email.": {
-  "message":"我们将通过电子邮件通知你的预约,"
-},  "We look forward to working with you!": {
-  "message":"我们期待着与您合作!"
-}
+  "In order to help you quickly get started with Shifu Cloud, we have arranged a 30-minute online demonstration for each user. Our team will walk you through the specific operations of Shifu Cloud and answer any questions you may have. Please schedule your service and time through the following methods.": {
+    "message":"为了让您更快地上手Shifu Cloud，我们为每位用户安排了30分钟的线上演示环节，Shifu Cloud的团队将手把手为您演示具体的操作方式并答疑。请通过下面的方式与我们预约服务和时间。"
+  },   
+  "We will confirm your appointment via email and look forward to further communication with you!": {
+  "message":"我们将通过电子邮件确认你的预约，期待与您进一步沟通!"},
+  "IoT development platform designed for production use cases. By developers, for developers.":{
+    "message":"为生产环境而生的物联网开发平台。从开发者中来，到开发者中去。"
+  },
+  "K8s cloud-native":{
+    "message":"K8s云原生"
+  },
+  "A unified cloud-native framework for agile development and operations":{
+    "message":"统一的云原生框架实现敏捷开发与运维"
+  },
+  "Endowing IoT platforms with ultra-high stability and security through K8s":{
+    "message":"物联网平台获得K8s的超高稳定性与安全性"
+  }
 }

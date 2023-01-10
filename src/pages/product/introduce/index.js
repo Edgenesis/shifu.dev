@@ -9,16 +9,14 @@ export default function Introduce() {
   return (
     <>
       <div className={styles.banner}>
-        <img src={background} alt=""  className={styles.backgroundPc}/>
-        <img src={backgroundMove} alt="" className={styles.backgroundMove}/>
+        <img src={background} alt="" className={styles.backgroundPc} />
+        <img src={backgroundMove} alt="" className={styles.backgroundMove} />
         <div className={styles.bannerCon}>
           <h1>Shifu Cloud</h1>
           <p>
-            <Translate>
-              IoT development platform designed for production use cases. By developers, for developers.
-            </Translate>
+            <Translate>IoT development platform designed for production use cases. By developers, for developers.</Translate>
           </p>
-          <Button type="primary"   href="https://shifu.cloud/" className={common.bannerBtn}>
+          <Button type="primary" href={`${window.location.href.includes('zh-Hans') ? '/zh-Hans/' : ''}${'bookDemo'}`} className={common.bannerBtn}>
             <Translate>Get Started</Translate>
           </Button>
         </div>

@@ -23,7 +23,7 @@ let Lists = [
     title: translate({ message: 'Efficient Application Development' }),
     message: translate({ message: 'Capabilities of the device integrated into Shifu will be abstracted as APIs' }),
     message1: translate({ message: 'Completely decoupling your application from the hardware' }),
-    message2: translate({ message: 'Making IoT application development as efficient as mobile app development' }),
+    // message2: translate({ message: 'Making IoT application development as efficient as mobile app development' }),
     img: require('@site/static/img/home/list3.png').default
   },
   {

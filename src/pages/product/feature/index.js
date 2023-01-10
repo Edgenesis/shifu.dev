@@ -10,7 +10,6 @@ const Feature = forwardRef((props, ref) => {
         <h2>{translate({ message: props.data.title })}</h2>
         <p> {translate({ message: props.data.instruction })}</p>
       </div>
-
     </div>
   )
 })
@@ -22,12 +21,12 @@ const list = [
   },
   {
     title: 'Device template',
-    instruction: 'Device template: connect devices with pre-built templates, saving you from configuration hell.',
+    instruction: 'connect devices with pre-built templates, saving you from configuration hell.',
     jpg: 'icon2.png'
   },
   {
     title: 'App store',
-    instruction: 'install 3rd party Apps with one-click. Let\'s build an end-to-end IoT solution in no time!',
+    instruction: "install 3rd party Apps with one-click. Let's build an end-to-end IoT solution in no time!",
     jpg: 'icon3.png'
   }
 ]
