@@ -1,0 +1,85 @@
+.pagebox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .pagecontent {
+    padding: 30px;
+    margin: auto;
+    width: 100%;
+    max-width: 1320px;
+    a{
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      svg{
+        margin-right: 15px;
+        height: 20px;
+        width: 10px;
+      }
+    }
+
+  }
+}
+.pageoutbox{
+width: 100%;
+height: 100%;
+overflow: hidden;
+position: relative;
+
+}
+.bookingimg{
+  position: absolute;
+  width: 100%;
+  z-index: -10;
+}
+.bookingFream{
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 12px 12px 48px rgba(2, 40, 78, 0.09);
+  height: 850px;
+  // transform: scale(1.3);
+}
+.title {
+  margin-top: 32px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 72px;
+  margin-bottom: 20px;
+}
+.textbox{
+  font-size: 20px;
+  p{
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .title {
+  }
+  
+}
+
+
+@media screen and (max-width: 1100px) {
+  .pagecontent{
+    padding:0px;
+  }
+  .bookingFream{
+    height: 950px;
+  }
+ 
+}
+@media screen and (max-width: 450px) {
+  .pagecontent{
+    padding:0px;
+  }
+  .company {
+    background: #f3f9ff;
+  }
+  .backgroundPc {
+    display: none;
+  }
+  .backgroundMove {
+    display: block !important;
+  }
+}

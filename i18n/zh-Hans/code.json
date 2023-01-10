@@ -903,6 +903,21 @@
   },
   "Contact us": {
     "message":"联系我们"
+  },
+
+  "Book An Appointment": {
+    "message":"登记预约"
+  },
+  "Welcome! We're glad to have you here.": {
+    "message":"欢迎！我们很高兴你能来这里。"
+  },
+  "Please book a service and time with us below.": {
+    "message":"请在下面与我们预约服务和时间。"
+  },  "We will notify you about your appointment by email.": {
+    "message":"我们将通过电子邮件通知你的预约,"
+  },  "We look forward to working with you!": {
+    "message":"我们期待着与您合作!"
   }
+
   
 }
