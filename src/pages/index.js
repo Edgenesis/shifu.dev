@@ -13,7 +13,7 @@ import 'antd/dist/reset.css'
 
 export default function Hello() {
   return (
-    <Layout title="Hello" description="Hello React Page">
+    <Layout title="Hello" description="">
       <Banner></Banner>
       <News></News>
       <Developers></Developers>
