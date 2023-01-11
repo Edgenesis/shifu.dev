@@ -23,11 +23,7 @@ const list = [
   {
     title: 'Try Production-Grade',
     title2: 'Shifu Cloud',
-    instruction: [
-      'As ',
-      'a device configuration platform based on the open source IoT development framework Shifu',
-      ', Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.'
-    ],
+    instruction: ['As ', 'a device configuration platform based on the open source IoT development framework Shifu', ', Shifu Cloud helps developers easily access devices, data collection and reverse control, allowing developers to quickly enter the development of Internet of Things scenarios.'],
     function: ['Multiple protocol support', 'Application Development Support', 'App Store Support'],
     button: 'Shifu Cloud is coming soon! Stay tuned...',
     // button: 'Free Access for Individuals',
