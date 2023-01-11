@@ -276,7 +276,12 @@ export default function Company() {
               </p>
               <p>
                 {translate({
-                  message: `In order to help you quickly get started with Shifu Cloud, we have arranged a 30-minute online demonstration for each user. Our team will walk you through the specific operations of Shifu Cloud and answer any questions you may have. Please schedule your service and time through the following methods.`,
+                  message: `In order to help you quickly get started with Shifu Cloud, we have arranged a 30-minute online demonstration for each user.`,
+                })}
+              </p>
+              <p>
+                {translate({
+                  message: `Our team will walk you through the specific operations of Shifu Cloud and answer any questions you may have. Please schedule your service and time through the following methods.`,
                 })}
               </p>
               {/*<p>*/}
