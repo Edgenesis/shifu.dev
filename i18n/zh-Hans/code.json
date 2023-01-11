@@ -911,8 +911,11 @@
   "Hello! Thank you for your interest and support in Shifu Cloud.": {
     "message":"您好！感谢您对于Shifu Cloud的喜爱与支持。"
   },
-  "In order to help you quickly get started with Shifu Cloud, we have arranged a 30-minute online demonstration for each user. Our team will walk you through the specific operations of Shifu Cloud and answer any questions you may have. Please schedule your service and time through the following methods.": {
-    "message":"为了让您更快地上手Shifu Cloud，我们为每位用户安排了30分钟的线上演示环节，Shifu Cloud的团队将手把手为您演示具体的操作方式并答疑。请通过下面的方式与我们预约服务和时间。"
+  "In order to help you quickly get started with Shifu Cloud, we have arranged a 30-minute online demonstration for each user.": {
+    "message":"为了让您更快地上手Shifu Cloud，我们为每位用户安排了30分钟的线上演示环节。"
+  },   
+  "Our team will walk you through the specific operations of Shifu Cloud and answer any questions you may have. Please schedule your service and time through the following methods.": {
+    "message":"Shifu Cloud的团队将手把手为您演示具体的操作方式并答疑。请通过下面的方式与我们预约服务和时间。"
   },   
   "We will confirm your appointment via email and look forward to further communication with you!": {
   "message":"我们将通过电子邮件确认你的预约，期待与您进一步沟通!"},
