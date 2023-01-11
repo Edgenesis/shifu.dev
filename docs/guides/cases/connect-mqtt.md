@@ -69,3 +69,19 @@ Return from MQTT ***deviceShifu***:
 ```
 
 Where `mqtt_message` is the latest data string from device, `mqtt_receive_timestamp` is the timestamp when the message was received.
+
+## Publish MQTT messages through deviceShifu
+
+In your cluster:
+
+```
+curl -X POST -d 'test_publish' deviceshifu-mqtt/get_topicmsg1
+```
+
+Where `get_topicmsg1` is the embedded query or publish string.
+
+After publishing, query MQTT ***deviceShifu*** again, The returned contents are as follows:
+
+```json
+{"mqtt_message":"test_publish","mqtt_receive_timestamp":"2022-04-29 08:57:59.7397692 +0000 UTC m=+75.407609501"}
+```

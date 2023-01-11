@@ -23,15 +23,12 @@ const list = [
   {
     title: 'Try Production-Grade',
     title2: 'Shifu Cloud',
-    instruction: [
-      'As ',
-      'a device configuration platform based on the open source IoT development framework Shifu',
-      ', Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.'
-    ],
-    function: ['Multiple protocol support', 'Application Development Support', 'App Store Support'],
-    button: 'Free Access for Individuals',
+    instruction: ['As ', 'a device configuration platform based on the open source IoT development framework Shifu', ', Shifu Cloud helps developers easily access devices, data collection and reverse control, allowing developers to quickly enter the development of Internet of Things scenarios.'],
+    function: ['Multiple Protocol Support', 'Application Development Support', 'App Store Support'],
+    button: 'Shifu Cloud is coming soon! Stay tuned...',
+    // button: 'Free Access for Individuals',
     jpg: 'cloud.svg',
-    url: 'bookDemo',
+    url: '',
     css: 'blue'
   }
 ]
@@ -70,9 +67,17 @@ const PlanCard = forwardRef(props => {
             </ul>
           </div>
           <div className={common.block50}></div>
-          <Button type="primary" block size="large" href={`${props.url}${props.data.url}`} className={styles.button}>
-            <Translate>{props.data.button}</Translate>
-          </Button>
+          {
+            props.data.url!==''?
+                <Button type="primary" block size="large" href={`${props.url}${props.data.url}`} className={styles.button}>
+                  <Translate>{props.data.button}</Translate>
+                </Button>
+                :
+                <p className={` ${styles.btn}`}>
+                  <Translate>{props.data.button}</Translate>
+                </p>
+          }
+
           <div className={common.block60}></div>
         </div>
       </div>

@@ -88,7 +88,7 @@
 
 .blue {
   border-image: linear-gradient(207.95deg, #88C3FF -12.8%, #A2EADD 49.13%, #C5EA81 112.8%) 20;
-  clip-path: inset(0 round 10px);
+  clipPath: inset(0 round 10px);
   //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   .title {
@@ -97,7 +97,14 @@
 
   }
 }
-
+.btn{
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  height: 40px;
+  margin-bottom: 0;
+}
 
 .list {
   display: flex;

@@ -68,3 +68,19 @@ MQTT ***deviceShifu*** 返回的内容如下：
 ```
 
 其中 `mqtt_message` 是设备接受到的最新字符串。`mqtt_receive_timestamp` 是接收到该消息的时间戳。
+
+## 通过deviceShifu发布MQTT消息
+
+在您的集群中运行下面的命令:
+
+```
+curl -X POST -d 'test_publish' deviceshifu-mqtt/get_topicmsg1
+```
+
+这里 `get_topicmsg1` 是需要查询或发布的字段。
+
+发布之后，再次查询MQTT ***deviceShifu*** 返回的内容如下：
+
+```json
+{"mqtt_message":"test_publish","mqtt_receive_timestamp":"2022-04-29 08:57:59.7397692 +0000 UTC m=+75.407609501"}
+```
