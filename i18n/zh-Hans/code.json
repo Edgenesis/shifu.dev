@@ -930,5 +930,8 @@
   },
   "Endowing IoT platforms with ultra-high stability and security through K8s":{
     "message":"物联网平台获得K8s的超高稳定性与安全性"
+  },
+  "Shifu Cloud is coming soon! Stay tuned...": {
+    "message": "Shifu Cloud即将上线，敬请期待"
   }
 }
