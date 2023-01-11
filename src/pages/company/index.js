@@ -72,7 +72,7 @@ export default function Company() {
         <div className={common.block80}></div>
         <div className={common.content}>
           <div className={common.comTitle}>
-            <h1>{translate({message: 'Well trusted by industry leaders'})}</h1>
+            <h1>{translate({message: 'Well Trusted by industry leaders'})}</h1>
           </div>
           <div className={common.block80}></div>
           {/*<img className={styles.icons} src={require('@site/static/img/product/logo5.png').default}></img>*/}

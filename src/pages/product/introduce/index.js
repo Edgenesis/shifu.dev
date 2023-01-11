@@ -28,10 +28,9 @@ export default class Introduce extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
-        <>
-          <div className={styles.banner}>
-            <svg width="100%"   className={styles.backgroundPc} viewBox="0 0 1920 1072" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <>
+        <div className={styles.banner}>
+        <svg width="100%"   className={styles.backgroundPc} viewBox="0 0 1920 1072" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path opacity="0.302" d="M-45.2979 407.492C161.989 480.36 599.651 699.711 475.515 900.312C351.378 1100.91 5.04729 1070.64 -101.385 1016.51C-207.818 962.372 -107.388 592.136 -114.74 562.416C-122.091 532.696 -252.585 334.617 -45.2979 407.492Z" fill="url(#paint0_linear_8190_118116)"/>
               <path opacity="0.302" d="M2031.27 763.448C2031.27 763.448 2031.08 764.466 2030.63 766.387C2024.35 792.68 1967.26 988.379 1645.33 1059.94C1272.19 1142.89 1204.86 773.493 1177.94 611.195C1151.02 448.897 1422.91 88.5399 1753.5 -52.5762C2066.44 -186.152 1928.44 -56.5829 1928.44 -56.5829L2011.24 692.664" fill="url(#paint1_linear_8190_118116)"/>
               <path d="M1929.78 119.012C1767.5 95.9416 1417.77 160.25 1199.31 391.465C980.845 622.681 948.164 765.656 998.993 876.272C1049.82 986.888 1260.72 1056.26 1527.82 999.143C1794.92 942.029 1958.07 928.21 2008.57 917.674C2059.06 907.138 2028.22 313.602 2039.28 255.239C2050.34 196.875 2047.63 135.76 1929.78 119.012Z" fill="url(#paint2_linear_8190_118116)"/>
@@ -155,24 +154,6 @@ export default class Introduce extends Component {
                 </clipPath>
               </defs>
             </svg>
-
-            <img src={backgroundMove} alt="" className={styles.backgroundMove}/>
-            <div className={styles.bannerCon}>
-              <h1>Shifu Cloud</h1>
-              <p>
-                <Translate>IoT development platform designed for production use cases. By developers, for
-                  developers.</Translate>
-              </p>
-              <Button type="primary"
-                      href={this.state.url}
-                      className={common.bannerBtn}>
-                <Translate>Get Started</Translate>
-              </Button>
-            </div>
-=======
-      <>
-        <div className={styles.banner}>
-          <img src={background} alt="" className={styles.backgroundPc} />
           <img src={backgroundMove} alt="" className={styles.backgroundMove} />
           <div className={styles.bannerCon}>
             <h1>Shifu Cloud</h1>
@@ -185,7 +166,6 @@ export default class Introduce extends Component {
             <Button type="primary" href={this.state.url} className={common.bannerBtn}>
               <Translate>Get Started</Translate>
             </Button>
->>>>>>> c1675f0390a454726a8d0755af0f950292b3c077
           </div>
         </div>
         <div className={common.block80}></div>

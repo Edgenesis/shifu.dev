@@ -82,7 +82,7 @@ export function Trusted() {
       <div className={common.block80}></div>
       <div className={common.comTitle}>
         <h1>
-          <Translate>Well trusted by Industry Leaders</Translate>
+          <Translate>Well Trusted by Industry Leaders</Translate>
         </h1>
       </div>
       <div className={common.block60}></div>
