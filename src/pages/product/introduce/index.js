@@ -399,12 +399,14 @@ export default class Introduce extends Component {
               </clipPath>
             </defs>
           </svg>
-
           <img src={backgroundMove} alt="" className={styles.backgroundMove} />
           <div className={styles.bannerCon}>
             <h1>Shifu Cloud</h1>
             <p>
-              <Translate>IoT development platform designed for production use cases. By developers, for developers.</Translate>
+              <Translate>IoT development platform designed for production use cases.</Translate>
+            </p>
+            <p>
+              <Translate>By developers, for developers.</Translate>
             </p>
             <Button type="primary" href={this.state.url} className={common.bannerBtn}>
               <Translate>Get Started</Translate>

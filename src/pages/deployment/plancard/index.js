@@ -15,7 +15,7 @@ const list = [
       ', Shifu provides users with full-scene device hosting and integrated software development capabilities. Through the use of the Shifu framework, developers can more easily connect, monitor and control any IoT device.'
     ],
     function: ['Fast Device Integration', 'Modularize Deployment Experience', 'Effective Application Development'],
-    button: 'Try it out',
+    button: 'Try It Out',
     jpg: 'GitHub.svg',
     url: 'demo',
     css: 'blue'

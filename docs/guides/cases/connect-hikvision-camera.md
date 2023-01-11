@@ -39,7 +39,7 @@ spec:
         ...
 ```
 
-:::note use `Secret` to store password
+::: Recommend using `Secret` to store passwords, which is not necessary for access devices, but this will greatly enhance security
 
 1. Create a `Secret` with `rtsp_password` field filled by your password.
 
@@ -97,3 +97,30 @@ data:
 ```
 
 You can use these instructions to interact with the ***deviceShifu***, which is equal to operate on the actual Hikvision camera.
+
+## Accessing the camera via browser
+
+We can access the pod through service, we have set the corresponding service in the default yaml file, now we just need to use it to enable port forwarding
+
+Get the current list of services with the following command 
+
+```
+kubectl get svc -A 
+```
+The service that has been around for the shortest time is the one we just added, and we can enable port forwarding with the following command
+
+```
+kubectl port-forward -n deviceshifu svc/<fill in the name of the service we just added> 3000:
+```
+If it runs smoothly we can see the following output
+
+```
+Forwarding from 127.0.0.1:3000 -> 8080
+Forwarding from [::1]:3000 -> 8080
+```
+
+
+Then you can access the camera from the browser
+For example, accessing `localhost:3000/info` should display information about the camera
+Replace info with another instruction to achieve the corresponding function
+

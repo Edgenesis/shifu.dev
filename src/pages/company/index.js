@@ -70,27 +70,29 @@ export default function Company() {
 
       <div className={common.block80}></div>
       <div className={common.content}>
-        <div className={common.comTitle}>
-          <h1>{translate({ message: 'Well Trusted by industry leaders' })}</h1>
-        </div>
-        <div className={common.block80}></div>
-        {/*<img className={styles.icons} src={require('@site/static/img/product/logo5.png').default}></img>*/}
+        <div className={common.content}>
+          <div className={common.comTitle}>
+            <h1>{translate({ message: 'Well Trusted by Industry Leaders ' })}</h1>
+          </div>
+          <div className={common.block80}></div>
+          {/*<img className={styles.icons} src={require('@site/static/img/product/logo5.png').default}></img>*/}
 
-        <div className={`${styles.lists} `}>{lists}</div>
-        <div className={common.block50}></div>
-        <div className={styles.contact}>
+          <div className={`${styles.lists} `}>{lists}</div>
           <div className={common.block50}></div>
-          <h1>{translate({ message: 'Welcome to join us!' })}</h1>
-          <Button
-            onClick={() => {
-              location.href = 'https://4g1tj81q9o.jobs.fbmms.cn/page/PSVAGacDW6xEEcT5qbbfRL0FR3'
-            }}
-          >
-            {translate({ message: 'Contact Us' })}
-          </Button>
-          <div className={common.block50}></div>
+          <div className={styles.contact}>
+            <div className={common.block50}></div>
+            <h1>{translate({ message: 'Welcome to join us!' })}</h1>
+            <Button
+              onClick={() => {
+                location.href = 'https://4g1tj81q9o.jobs.fbmms.cn/page/PSVAGacDW6xEEcT5qbbfRL0FR3'
+              }}
+            >
+              {translate({ message: 'Contact Us' })}
+            </Button>
+            <div className={common.block50}></div>
+          </div>
+          <div className={common.block80}></div>
         </div>
-        <div className={common.block80}></div>
       </div>
       <Foot></Foot>
     </Layout>

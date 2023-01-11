@@ -12,8 +12,7 @@ spec:
   serviceSettings:
     SQLSetting:
       serverAddress: 192.168.14.163:6041
-      username: root
-      secret: taosdata
+      secret: my-secret
       dbName: shifu
       dbTable: testTable2
       dbtype: TDengine
@@ -22,10 +21,18 @@ spec:
 - `telemetrySeriveEndpoint` 是telemetryService的端点地址
 - `serverAddress` 表示数据库地址
 - `username` 表示你的数据库用户名
-- `secret` 表示你的数据库密码
+- `secret` 表示存储你的数据库用户名与密码的`Secret`名字
 - `dbName` 表示数据库名 
 - `dbTable` 表示数据库表（table）名
 - `dbtype` 表示数据库类型
+
+## 创建Secret
+
+以上面的`secret`中内容为名创建`Secret`，在`username`和`password`域中分别填写数据库用户名与密码。
+
+```bash
+kubectl create secret generic my-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
+```
 
 :::note
 如果你有多个遥测服务，你可以把它们写在一个文件里，用`---`把它们分割该文件文件。

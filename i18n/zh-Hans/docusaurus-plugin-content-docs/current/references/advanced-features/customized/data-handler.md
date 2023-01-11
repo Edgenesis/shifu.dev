@@ -61,7 +61,33 @@ sidebar_position: 0
 
 将 `examples/deviceshifu/customized/humidity_detector/sample_deviceshifu_dockerfiles/Dockerfile.deviceshifuHTTP` 复制到 `dockerfiles`。
 
-### 3. 建立deviceShifu的docker镜像
+### 3. 添加数据处理程序的映射
+
+在`examples/deviceshifu/customized/humidity_detector/configuration`中的`deviceshifu-humidity-detector-configmap.yaml`文件，将您的设备指令,与数据处理程序的funcName，进行映射。
+
+（例如：instructions为 '/123' ， funcName为 'humidity'）
+
+则需要在`customInstructionsPython`下设置`123: humidity`并在`instructions.instructions`和`telemetries.telemetries.device_health.properties.instruction`下设置设备指令Instructions
+
+如下所示：
+
+```yaml
+data:
+  customInstructionsPython: |
+    123: humidity 
+    #123是instructions，humidity是处理程序funcName
+  instructions: |
+    instructions:
+      123:
+  telemetries: |
+    telemetries:
+      device_health:
+        properties:
+          instruction: 
+            123
+```
+
+### 4. 建立deviceShifu的docker镜像
 
 构建一个新的 ***deviceShifu***镜像用来添加定制的数据处理程序。
 
@@ -71,7 +97,7 @@ sidebar_position: 0
 make buildx-build-imag-deviceshifu-http-http
 ```
 
-### 4. 启动Shifu
+### 5. 启动Shifu
 
 这部分与[快速启动演示](i18n\zh-Hans\docusaurus-plugin-content-docs\current\tutorials\demo-install.md)中的内容完全一样。
 
@@ -81,7 +107,7 @@ make buildx-build-imag-deviceshifu-http-http
 kind load docker-image humidity-detector:v0.0.1
 ```
 
-### 5. 检查处理后的数据
+### 6. 检查处理后的数据
 
 来自这个虚拟设备的原始数据应该由 `customized_hanlders.py` 中定义的自定义处理程序来处理。
 
