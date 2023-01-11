@@ -49,10 +49,16 @@
 }
 .textbox{
   font-size: 20px;
+  width: 80%;
   p{
     max-width: 60%;
     margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.5;
   }
+}
+.bannerMove{
+  display: none;
 }
 @media screen and (min-width: 1920px) {
   .title {
@@ -62,6 +68,9 @@
 
 
 @media screen and (max-width: 1100px) {
+  .bannerImg{
+    opacity: 0.3!important;
+  }
   .pagecontent{
     padding:0px;
   }
@@ -71,6 +80,24 @@
 
 }
 @media screen and (max-width: 450px) {
+  .bannerImg{
+    display: none;
+  }
+  .bannerMove{
+    display: block!important;
+    opacity: 0.3;
+  }
+
+  .title{
+    margin-top: 0;
+  }
+  .textbox{
+    width: 100%;
+    p{
+      max-width: 100%;
+      width: 100%;
+    }
+  }
   .pagecontent{
     padding:0px;
   }

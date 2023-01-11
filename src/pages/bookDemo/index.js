@@ -3,7 +3,9 @@ import React from 'react'
 import Layout from '@theme/Layout'
 import styles from './styles.module.scss'
 import common from '@site/src/css/common.module.scss'
-
+import BanPC from '@site/static/img/home/ban.png'
+import banMove from '@site/static/img/home/bannerMove.png'
+import {Foot} from '../../components/footer/index'
 export function Backbtn() {
   return (
     <a href="/deployment">
@@ -18,12 +20,12 @@ export default function Company() {
   return (
     <Layout>
       <div className={styles.pageoutbox}>
-        <img className={styles.bookingimg} src={require('@site/static/img/home/ban.png').default} alt="" />
-
+        <img src={BanPC} alt="" className={`${styles.bookingimg} ${styles.bannerImg}`}/>
+        <img src={banMove} alt="" className={`${styles.bookingimg} ${styles.bannerMove}`}/>
         <div className={styles.pagebox}>
           <div className={styles.pagecontent}>
             {/* <Backbtn></Backbtn> */}
-            <div className={styles.title}>{translate({ message: 'Kindly register for a Shifu Cloud Demo' })}</div>
+            <h1 className={styles.title}>{translate({ message: 'Kindly register for a Shifu Cloud Demo' })}</h1>
             <div className={styles.textbox}>
               <p>
                 {translate({
@@ -35,19 +37,20 @@ export default function Company() {
                   message: `In order to help you quickly get started with Shifu Cloud, we have arranged a 30-minute online demonstration for each user. Our team will walk you through the specific operations of Shifu Cloud and answer any questions you may have. Please schedule your service and time through the following methods.`
                 })}
               </p>
-              <p>
-                {translate({
-                  message: `We will confirm your appointment via email and look forward to further communication with you!`
-                })}
-              </p>
+              {/*<p>*/}
+              {/*  {translate({*/}
+              {/*    message: `We will confirm your appointment via email and look forward to further communication with you!`*/}
+              {/*  })}*/}
+              {/*</p>*/}
             </div>
-
+            <div className={common.block60}></div>
             <iframe className={styles.bookingFream} src="https://calendly.com/shifu-demo/30min" frameBorder="0">
               loading...
             </iframe>
           </div>
         </div>
       </div>
+      <Foot></Foot>
     </Layout>
   )
 }
