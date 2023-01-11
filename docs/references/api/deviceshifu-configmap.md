@@ -35,14 +35,14 @@ DeviceShifuInstructions are all the commands and settings that ***deviceShifu***
 
 - **instructionSettings** ([DeviceShifuInstructionSettings](#deviceshifuinstructionsettings))
 - **instructions** (map[string]DeviceShifuInstruction)
-**example**
+ **Example:**
 ```yml
 instructions: |
   instructions:
     get_value: # The name of the command you want to set
       protocolPropertyList:      # The parameters of the command have different configurations according to different protocols
 ```
-    - **[DeviceShifuInstruction](#deviceshifuinstruction)**
+  - **[DeviceShifuInstruction](#deviceshifuinstruction)**
 
 ## DeviceShifuInstruction
 

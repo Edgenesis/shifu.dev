@@ -456,7 +456,6 @@ sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.clus
 ```
 
 ![deviceshifu-mqtt_output1.png](images/deviceshifu-mqtt_output1.png)
-
 ![deviceshifu-mqtt_output1.png](images/deviceshifu-mqtt_output1.png)
 
 我们可以使用 mosquitto 向MQTT服务器向多个主题发布数据。(-m 后面的数据为我们发布的的信息)
@@ -466,7 +465,6 @@ sudo kubectl exec -it deploy/mosquitto -n devices -- mosquitto_pub -h localhost 
 sudo kubectl exec -it deploy/mosquitto -n devices -- mosquitto_pub -h localhost -d -p 1883 -t /test/test2 -m "test_topicmsg2"
 ```
 ![deviceshifu-mqtt_output2.png](images/deviceshifu-mqtt_output2.png)
-
 ![deviceshifu-mqtt_output3.png](images/deviceshifu-mqtt_output3.png)
 
 此时我们可以在向MQTT的数字孪生发送命令，即可得到发布的数据。
@@ -477,8 +475,14 @@ sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.clus
 ```
 
 ![deviceshifu-mqtt_output4.png](images/deviceshifu-mqtt_output4.png)
-
 ![deviceshifu-mqtt_output5.png](images/deviceshifu-mqtt_output5.png)
+
+同时可以使用以下命令，通过MQTT的数字孪生向多个主题发布数据。(-d 后面的数据为我们发布的的信息)
+
+```bash
+sudo kubectl exec -it nginx -- curl -X POST -d 'test_pulish_topic1' http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg1
+sudo kubectl exec -it nginx -- curl -X POST -d 'test_pulish_topic2' http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg2
+```
 
 ## 下一步
 

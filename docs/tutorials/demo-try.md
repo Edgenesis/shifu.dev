@@ -444,6 +444,7 @@ sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.clus
 ```
 
 ![deviceshifu-mqtt_output1.png](images/deviceshifu-mqtt_output1.png)
+![deviceshifu-mqtt_output1.png](images/deviceshifu-mqtt_output1.png)
 
 We can use mosquitto to publish data to multiple topics to MQTT server. (The data after -m is the information we posted)
 
@@ -453,7 +454,6 @@ sudo kubectl exec -it deploy/mosquitto -n devices -- mosquitto_pub -h localhost 
 ```
 
 ![deviceshifu-mqtt_output2.png](images/deviceshifu-mqtt_output2.png)
-
 ![deviceshifu-mqtt_output3.png](images/deviceshifu-mqtt_output3.png)
 
 At this point we can send commands to the digital twin of MQTT to get the published data.
@@ -465,6 +465,13 @@ sudo kubectl exec -it nginx -- curl http://deviceshifu-mqtt.deviceshifu.svc.clus
 
 ![deviceshifu-mqtt_output4.png](images/deviceshifu-mqtt_output4.png)
 ![deviceshifu-mqtt_output5.png](images/deviceshifu-mqtt_output5.png)
+
+At the same time, we can use the following commands to publish data to multiple topics through the digital twin of MQTT. (The data after -d is the information we posted)
+
+```bash
+sudo kubectl exec -it nginx -- curl -X POST -d 'test_pulish_topic1' http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg1
+sudo kubectl exec -it nginx -- curl -X POST -d 'test_pulish_topic2' http://deviceshifu-mqtt.deviceshifu.svc.cluster.local/get_topicmsg2
+```
 
 ## Next Step
 
