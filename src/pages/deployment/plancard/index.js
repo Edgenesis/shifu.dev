@@ -7,8 +7,8 @@ import common from '@site/src/css/common.module.scss'
 
 const list = [
   {
-    title: 'Try open source',
-    title2: 'Shifu framework',
+    title: 'Try Open Source',
+    title2: 'Shifu Framework',
     instruction: [
       'As ',
       'a next-generation cloud-native IoT development framework',
