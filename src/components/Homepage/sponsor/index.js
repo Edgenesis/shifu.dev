@@ -1,20 +1,20 @@
-import React from "react";
-import styles from "./styles.module.scss";
-import Microsoft from "@site/static/img/sponsor/Microsoft.png";
-import JINMAO from "@site/static/img/sponsor/JINMAO.png";
-import HAIER from "@site/static/img/sponsor/HAIER.png";
-import amazon from "@site/static/img/sponsor/amazon.png";
-import CSSC from "@site/static/img/sponsor/CSSC.png";
-import guomao from "@site/static/img/sponsor/guomao.png";
+import React from 'react'
+import styles from './styles.module.scss'
+import Microsoft from '@site/static/img/sponsor/Microsoft.png'
+import JINMAO from '@site/static/img/sponsor/JINMAO.png'
+import HAIER from '@site/static/img/sponsor/HAIER.png'
+import amazon from '@site/static/img/sponsor/amazon.png'
+import CSSC from '@site/static/img/sponsor/CSSC.png'
+import guomao from '@site/static/img/sponsor/guomao.png'
 
-import Translate, { translate } from '@docusaurus/Translate';
+import Translate, { translate } from '@docusaurus/Translate'
 
 export default function Sponsor() {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <p className={styles.title}>
-          <Translate>Well trusted by Industry Leaders</Translate>
+          <Translate>Well Trusted by Industry Leaders</Translate>
         </p>
         <div className={styles.rotation}>
           <div className={styles.content}>
@@ -40,5 +40,5 @@ export default function Sponsor() {
         </div>
       </div>
     </div>
-  );
+  )
 }

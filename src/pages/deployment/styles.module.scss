@@ -1,0 +1,21 @@
+.background{
+  width: 100%;
+  background: url("@site/static/img/product/back.png") no-repeat top;
+  background-size: 100% 50%;
+}
+.first{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+  .title{
+    margin-bottom: 0!important;
+    font-size: 18px!important;
+  }
+}

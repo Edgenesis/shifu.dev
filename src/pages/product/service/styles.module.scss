@@ -1,0 +1,29 @@
+.box{
+   margin-left: 10px;
+  h1{
+   margin-bottom: 0;
+  }
+
+  p{
+    margin-bottom: 0;
+    line-height: 36px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 996px) {
+  h1{
+    line-height: 48px!important;
+  }
+  p{
+    line-height: 28px!important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1{
+    line-height: 40px!important;
+  }
+  p{
+    line-height: 20px!important;
+  }
+}

@@ -12,7 +12,7 @@ Accelerating IoT application development by ten times, ***Shifu*** has been sele
 
 Edgenesis has developed ***Shifu***, an IoT open source development framework based on K8s, which provides a transparent framework for customers' full-scene device hosting and integrated software development. By using ***Shifu***, developers can connect, monitor and control any IoT devices more simply.
 
-## Shifu Nails Kubernetes with the Help of Amazon EKS
+## Shifu Nails Kubernetes With The Help Of Amazon EKS
 
 Since Kubernetes is the underlying structure of ***Shifu***, it needs to be deployed in the cloud for efficient cloud-edge collaboration. While working for a Industry 4.0 factory, ***Shifu*** has used AWS's EKS service. The architecture diagram is as follows.
 

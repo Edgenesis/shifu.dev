@@ -23,4 +23,5 @@ package-lock.json
 yarn.lock
 
 .idea/
+build.zip
 /.history

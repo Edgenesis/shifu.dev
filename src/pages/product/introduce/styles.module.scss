@@ -1,0 +1,94 @@
+.banner{
+  width: 100%;
+  position: relative;
+  img{
+    display: block;
+    width: 100%;
+  }
+  .backgroundMove{
+    display: none;
+  }
+  .bannerCon{
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    margin: auto;
+    left: 10%;
+    width:30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+      font-size: 50px;
+      line-height: 60px;
+    }
+    p{
+      font-size: 20px;
+      line-height: 40px;
+    }
+  }
+}
+.bannerBtn{
+  max-width: 120px;
+  height: 40px;
+  padding: 0;
+  line-height: 40px;
+  font-size: 16px;
+}
+@media screen and (max-width: 996px) {
+  .banner{
+    img{
+      opacity: 0.3!important;
+    }
+  }
+  .bannerCon {
+
+    h1 {
+      line-height: 40px !important;
+    }
+  }
+  .bannerCon {
+    width: 80% !important;
+  }
+  .bannerBtn{
+    max-width: 100px;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .banner{
+    .backgroundPc{
+      display: none;
+    }
+    .backgroundMove{
+      display: block;
+      opacity: 1!important;
+
+    }
+  }
+
+  .bannerCon{
+    width:80% !important;
+    justify-content: start!important;
+    padding-top: 60px;
+    top: 0!important;
+    h1{
+      font-size: 1.5em !important;
+      line-height: 30px !important;
+    }
+    p{
+      font-size:  0.5em !important;
+      line-height: normal!important;
+    }
+    button{
+      font-size: 12px;
+      //height: 26px;
+      //padding: 0 10px;
+    }
+  }
+}

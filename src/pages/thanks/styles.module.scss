@@ -1,0 +1,54 @@
+.thanks{
+  width: 100%;
+  background: linear-gradient(207.95deg, #399BFF -12.8%, #62E7D0 112.78%, #B1EC44 112.8%);
+.thanksmain{
+  background:#FFFFFF;
+  text-align: center;
+  .thankstitle{
+    margin: 50px 0 10px;
+
+   //font-size: 64px;
+   line-height: 40px;
+   //height: 126px;
+   //margin: 0;
+  }
+  .thanksinstruction{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    //height: 63px;
+    //font-weight: 300;
+    //font-size: 32px;
+    //line-height: 48px;
+    //color: #000000;
+    //margin: 0;
+  }
+  .thanksbutton{
+    font-size: 20px;
+    margin-top: 30px;
+    display: block;
+    line-height: 30px;
+//    height: 64px;
+//font-size: 24px;
+//line-height: 64px;
+  }
+}
+}
+@media screen and (max-width: 996px) {
+.thanksmain{
+  img{
+    width: 100px;
+  }
+  .thankstitle{
+    margin: 30px 0 10px!important;
+    font-size: 18px!important;
+  }
+  .thanksinstruction{
+    line-height: 20px!important;
+    margin-top: 0!important;
+  }
+  .thanksbutton{
+    font-size: 12px!important;
+  }
+}
+}

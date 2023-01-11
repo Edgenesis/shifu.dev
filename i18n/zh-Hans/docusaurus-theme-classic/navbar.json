@@ -1,11 +1,15 @@
 {
   "title": {
-    "message": "Shifu",
+    "message": "",
     "description": "The title in the navbar"
   },
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
+  },
+  "item.label.Product": {
+    "message": "产品",
+    "description": "Navbar item with label Product"
   },
   "item.label.Docs": {
     "message": "文档",
@@ -26,5 +30,13 @@
   "item.label.Case Studies": {
     "message": "用户案例",
     "description": "Navbar item with label Case Studies"
+  },
+  "item.label.Company": {
+    "message": "公司",
+    "description": "Navbar item with label Company"
+  },
+  "item.label.Contact Us": {
+    "message": "联系我们",
+    "description": "Navbar item with label Contact"
   }
 }

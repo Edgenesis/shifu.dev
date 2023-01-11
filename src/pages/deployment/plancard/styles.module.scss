@@ -1,0 +1,169 @@
+.PlanCard {
+  width: 50%;
+  padding: 12px 20px;
+  margin-bottom: 50px;
+
+  .planCardCon {
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    //border: 1px solid #B1EC44 ;
+    overflow: hidden;
+
+  }
+
+  .title {
+    width: 100%;
+    display: flex;
+    height: 126px;
+    align-items: center;
+    padding: 24px 24px 0;
+
+    img {
+      display: block;
+      max-width: 120px;
+      margin-right: 60px;
+    }
+    h1{
+      margin-bottom: 0;
+      font-size: var(--ifm-h1-font-size);
+      font-weight: bold;
+    }
+    h2{
+      font-size: var(--ifm-h2-font-size);
+      //margin: 0;
+    }
+  }
+  .imgBox{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    img{
+      max-height: 100%;
+    }
+  }
+
+  .instruction {
+    padding: 0 40px;
+
+
+    .instructionmain {
+      font-size: 18px;
+      line-height: 36px;
+      height: 220px;
+      margin-bottom: 0;
+    }
+    .hans{
+      height: 120px;
+    }
+
+    .functionlist {
+      display: flex;
+      justify-content: center;
+
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin-bottom: 24px;
+        list-style: none;
+        font-size: 20px;
+        text-align: left;
+
+        img {
+          margin-right: 8px;
+        }
+      }
+      li:last-child{
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+}
+
+.blue {
+  border-image: linear-gradient(207.95deg, #88C3FF -12.8%, #A2EADD 49.13%, #C5EA81 112.8%) 20;
+  clipPath: inset(0 round 10px);
+  //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  .title {
+    background: linear-gradient(207.95deg, #399BFF -12.8%, #62E7D0 112.78%, #B1EC44 112.8%);
+    color: #FFFFFF;
+
+  }
+}
+.btn{
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  height: 40px;
+  margin-bottom: 0;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .PlanCard {
+    width: 100% !important;
+
+  }
+  .instruction {
+    p {
+      height: auto!important;
+    }
+  }
+}
+
+@media screen and (max-width: 996px) {
+
+  .PlanCard{
+    padding:12px 6px ;
+    margin-bottom: 24px;
+    .title {
+      padding: 18px 18px 0;
+      height: auto!important;
+      h2{
+        margin-bottom: 0;
+      }
+      h1{
+        margin-bottom: 10px;
+      }
+      img{
+        max-width: 80px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .instruction {
+    padding: 0 24px!important;
+    li{
+      font-size: 14px!important;
+      margin-bottom: 14px!important;
+    }
+    //p {
+    //  font-size: 20px !important;
+    //  line-height: 28px !important;
+    //}
+    //
+    //span {
+    //  font-size: 20px !important;
+    //}
+    .instructionmain {
+      height: auto !important;
+    }
+  }
+
+}
