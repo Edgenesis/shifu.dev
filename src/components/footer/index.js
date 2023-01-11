@@ -120,7 +120,7 @@ export function Contact(props) {
       {/*  }*/}
       {/*/>*/}
       <Button type="primary" block href={`${props.url}contact`}>
-        <Translate>Contact us</Translate>
+        <Translate>Contact Us</Translate>
       </Button>
       <div className={styles.footerLists}>
         <div>

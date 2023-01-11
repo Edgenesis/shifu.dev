@@ -4,11 +4,10 @@ import common from '@site/src/css/common.module.scss'
 import Translate, { translate } from '@docusaurus/Translate'
 import { Divider } from 'antd'
 import { ArrowRightOutlined } from '@ant-design/icons'
-
 let Lists = [
   {
     id: 0,
-    img: require('@site/static/img/home/blog.png').default,
+    img: 'blog.svg',
     title: translate({ message: 'Tech Blogs' }),
     message: translate({ message: 'How to deploy Shifu on K3s to complete the cloud-edge-device cycle' }),
     messageLink: 'technical-blogs/2022/10/20/k3s',
@@ -16,7 +15,7 @@ let Lists = [
   },
   {
     id: 1,
-    img: require('@site/static/img/home/news.png').default,
+    img: 'news.svg',
     title: translate({ message: 'Insights' }),
     message: translate({ message: 'Cleansing the Cloudy IoT Planet' }),
     messageLink: '',
@@ -24,7 +23,8 @@ let Lists = [
   },
   {
     id: 2,
-    img: require('@site/static/img/home/releases.png').default,
+    img: 'releases.svg',
+    // img: require('@site/static/img/home/releases.png').default,
     title: translate({ message: 'Releases' }),
     message: translate({ message: 'v0.9.0' }),
     messageLink: 'https://github.com/Edgenesis/shifu/releases/tag/v0.7.0',
@@ -78,7 +78,8 @@ export class News extends Component {
 export function New(props) {
   return (
     <div className={styles.new}>
-      <img src={props.img} alt="" />
+      {/*<img src={props.img} alt="" />*/}
+      <img src={require('@site/static/img/home/' + props.img).default}></img>
       <h2>{props.title}</h2>
       <a className={styles.message} href={props.messageLink}>
         <p>{props.message} </p>

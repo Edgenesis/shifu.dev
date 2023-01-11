@@ -35,7 +35,7 @@
     "message": "公司",
     "description": "Navbar item with label Company"
   },
-  "item.label.Contact": {
+  "item.label.Contact Us": {
     "message": "联系我们",
     "description": "Navbar item with label Contact"
   }

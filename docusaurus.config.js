@@ -168,7 +168,7 @@ const config = {
           {
             to: '/contact',
             position: 'right',
-            label: 'Contact',
+            label: 'Contact Us',
             className: 'header-btn'
           },
           {
