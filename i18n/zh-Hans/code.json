@@ -598,8 +598,11 @@
   "Shifu framework":{
     "message":"开源版Shifu 框架"
   },
-  "Try Shifu Cloud":{
+  "Shifu Cloud":{
     "message":"Shifu Cloud 平台"
+  },
+  "Try Production-Grade":{
+    "message":""
   },
   "As ":{
     "message":"作为"
