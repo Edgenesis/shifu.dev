@@ -135,6 +135,9 @@ html[data-theme='dark'] .header-github-link:before {
 p{
   line-height: 30px;
 }
+ul,li{
+  line-height: 30px;
+}
 @media screen and (max-width: 996px) {
   .footer{
     padding-top: 10px;
