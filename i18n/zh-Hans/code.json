@@ -616,11 +616,8 @@
   "a device configuration platform based on the open source IoT development framework Shifu":{
     "message":"基于开源物联网开发框架Shifu的设备配置平台"
   },
-  ", Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.":{
-    "message":"，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
-  },
-  "As a device configuration platform based on the open source IoT development framework Shifu, Shifu Cloud can automatically generate YAML files for the digital twin of the device, allowing developers to quickly obtain API interfaces for device capabilities and free up their hands for IoT scene development.":{
-    "message":"作为基于开源物联网开发框架Shifu的设备配置平台，Shifu Cloud能够自动生成设备孪生的YAML文件，让开发者快速获得设备能力的API接口，更快进入物联网场景的开发。"
+  ", Shifu Cloud helps developers easily access devices, data collection and reverse control, allowing developers to quickly enter the development of Internet of Things scenarios.":{
+    "message":"，Shifu Cloud可以帮助开发者轻松接入设备，数据采集和反向控制。让开发者更快进入物联网场景的开发。"
   },
   "Get Started":{
     "message":"现在体验"
@@ -802,8 +799,8 @@
   "Releases": {
     "message": "发布"
   },
-  "v0.7.0": {
-    "message": "更新了v0.7.0版本"
+  "v0.9.0": {
+    "message": "更新了v0.9.0版本"
   },
   "More": {
     "message": "更多"
@@ -919,8 +916,11 @@
   },   
   "We will confirm your appointment via email and look forward to further communication with you!": {
   "message":"我们将通过电子邮件确认你的预约，期待与您进一步沟通!"},
-  "IoT development platform designed for production use cases. By developers, for developers.":{
-    "message":"为生产环境而生的物联网开发平台。从开发者中来，到开发者中去。"
+  "IoT development platform designed for production use cases.":{
+    "message":"为生产环境而生的物联网开发平台。"
+  },
+  "By developers, for developers.":{
+    "message":"从开发者中来，到开发者中去。"
   },
   "K8s cloud-native":{
     "message":"K8s云原生"
