@@ -28,7 +28,7 @@ let Lists = [
   },
   {
     id: 3,
-    title: translate({ message: 'K8s cloud-native' }),
+    title: translate({ message: 'K8s Cloud-Native' }),
     message: translate({ message: 'A unified cloud-native framework for agile development and operations' }),
     message1: translate({ message: 'Endowing IoT platforms with ultra-high stability and security through K8s' }),
     img: require('@site/static/img/home/list4.png').default

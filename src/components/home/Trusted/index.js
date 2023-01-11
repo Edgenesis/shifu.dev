@@ -38,7 +38,7 @@ let carList = [
   {
     url: require('@site/static/img/home/tru2.png').default,
     backUrl: require('@site/static/img/home/trus2.png').default,
-    text: translate({ message: "Shifu's cloud-native architecture supports containerized deployment more perfectly. He hopes that Shifu could explore more possibilities in IoT scenarios with TDengine 3.0 in the future." }),
+    text: translate({ message: "Shifu's cloud-native architecture supports containerized deployment more perfectly. I hopes that Shifu could explore more possibilities in IoT scenarios with TDengine 3.0 in the future." }),
     author: translate({ message: 'Founder of TDengine' }),
     writer: translate({ message: 'Jianhui Tao' })
   },
@@ -54,7 +54,7 @@ let carList = [
   {
     url: require('@site/static/img/home/tru4.png').default,
     backUrl: require('@site/static/img/home/trus2.png').default,
-    text: translate({ message: 'The advent of the cloud-native era has reconfigured the infrastructure of all enterprises, and the open source of Shifu will further help enterprises with their IoT management. He sincerely hopes that Shifu project will excel itself in the future.' }),
+    text: translate({ message: 'The advent of the cloud-native era has reconfigured the infrastructure of all enterprises, and the open source of Shifu will further help enterprises with their IoT management. I sincerely hopes that Shifu project will excel itself in the future.' }),
     author: translate({ message: 'Founder of ClickHouse China Community' }),
     writer: translate({ message: 'Wei Guo' })
   }
@@ -82,7 +82,7 @@ export function Trusted() {
       <div className={common.block80}></div>
       <div className={common.comTitle}>
         <h1>
-          <Translate>Well trusted by Industry Leaders</Translate>
+          <Translate>Well Trusted by Industry Leaders</Translate>
         </h1>
       </div>
       <div className={common.block60}></div>
