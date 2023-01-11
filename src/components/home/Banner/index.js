@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import styles from './styles.module.scss'
-import BannerPC from '@site/static/img/home/Banner.png'
-import bannerMove from '@site/static/img/home/bannerMove.png'
+import BanPC from '@site/static/img/home/ban.png'
+import banMove from '@site/static/img/home/bannerMove.png'
 import common from "@site/src/css/common.module.scss"
 import Translate from '@docusaurus/Translate'
 import {Button} from 'antd'
@@ -29,8 +29,8 @@ export class Banner extends Component {
   render() {
     return (
         <div className={styles.banner}>
-          <img src={BannerPC} alt="" className={styles.bannerImg}/>
-          <img src={bannerMove} alt="" className={styles.bannerMove}/>
+          <img src={BanPC} alt="" className={styles.bannerImg}/>
+          <img src={banMove} alt="" className={styles.bannerMove}/>
           <div className={styles.bannerCon}>
             <a href="https://github.com/edgenesis/shifu">
               <img src="https://img.shields.io/github/stars/edgenesis/shifu?style=social" alt=""
