@@ -3,10 +3,13 @@
   height: 100%;
   display: flex;
   justify-content: center;
+  position: absolute;
+  top: 60px;
   .pagecontent {
     padding: 30px;
     width: 100%;
     max-width: 1320px;
+    min-height: 700px;
     a{
       font-size: 24px;
       font-weight: 600;
@@ -19,16 +22,8 @@
     }
   }
 }
-.pageoutbox{
-  width: 100%;
-  height: calc(100% - 70px);
-  overflow: hidden;
-  position: absolute;
-}
-.bookingimg{
-  position: absolute;
-  width: 100%;
-  z-index: -10;
+.imagebox{
+  min-height: 800px;
 }
 .bookingFream{
   width: 100%;
@@ -57,6 +52,11 @@
 }
 .bannerMove{
   display: none;
+}
+.footer{
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
 }
 @media screen and (min-width: 1920px) {
   .title {
