@@ -40,7 +40,7 @@ let carList = [
     backUrl: require('@site/static/img/home/trus2.png').default,
     text: translate({ message: "Shifu's cloud-native architecture supports containerized deployment more perfectly. I hope that Shifu could explore more possibilities in IoT scenarios with TDengine 3.0 in the future." }),
     author: translate({ message: 'Founder of TDengine' }),
-    writer: translate({ message: 'Jianhui Tao' })
+    writer: translate({ message: 'Jeff Tao' })
   },
   {
     url: require('@site/static/img/home/tru3.png').default,
