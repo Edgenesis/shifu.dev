@@ -3,7 +3,8 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  position: absolute;
+  // position: absolute;
+  overflow: hidden;
   top: 60px;
   .pagecontent {
     padding: 30px;
@@ -22,8 +23,13 @@
     }
   }
 }
+.backgroundbox{
+background-color: white;
+}
 .imagebox{
-  min-height: 800px;
+  width: 100%;
+  // z-index: -10;
+  position: absolute;
 }
 .bookingFream{
   width: 100%;
@@ -57,6 +63,16 @@
   position: absolute;
   width: 100%;
   bottom: 0px;
+}
+.detailTitle{
+  font-weight: bold;
+}
+.protocoldetail{
+  font-size: 13px;
+  li{
+    max-width: 60%;
+    font-size: 14px;
+  }
 }
 @media screen and (min-width: 1920px) {
   .title {
