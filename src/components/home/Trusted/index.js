@@ -32,7 +32,7 @@ let carList = [
     url: require('@site/static/img/home/tru1.png').default,
     backUrl: require('@site/static/img/home/trus1.png').default,
     text: translate({ message: 'Shifu helps us integrate all of our devices in a smart and efficient way. With Shifu, we can treat all of our devices as software objects and abstract away the physical devices. This makes it easier for us to manage and control our devices.' }),
-    author: translate({ message: 'Chief Robot Engineer' }),
+    author: translate({ message: 'Life Foundry Chief Robot Engineer' }),
     writer: translate({ message: 'Kanyon Edvall' })
   },
   {
