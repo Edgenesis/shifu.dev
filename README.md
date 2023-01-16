@@ -59,6 +59,28 @@ Reference: <https://docusaurus.io/docs/next/i18n/tutorial#translate-plugin-data>
         - Use `translate({ message: "string-to-translate" }` to take a message and return a string.
         - Save files and run `yarn write-translations-zh`.
         - Add translation in `i18n/zh-Hans/code.json`.
+    - Or use window to judge
+        - Judge in the life cycle componentDidMount
+            - `
+            componentDidMount() {
+                if (window.location.href.includes('zh-Hans')) {
+                    this.setState({
+                        url: '/zh-Hans'
+                    })
+                    } else {
+                    this.setState({
+                        url: '/'
+                    })
+                }
+            }
+            
+            `
+        - Add a jump address to the href attribute
+          ` <Button type="primary" href={this.state.url} className={common.bannerBtn}>
+              <Translate>xxx</Translate>
+            </Button>   
+          `
+
     - Or Use jsx syntax:
         - `{
           localStorage.getItem('manuallySelectLanguage') !== 'zh-Hans' ? (
