@@ -5,7 +5,7 @@ sidebar_position: 0
 
 # Support
 
-## Platform Support
+## Platform Compatibility
 
 ***Shifu*** supports common hardware platforms and operating systems.
 
