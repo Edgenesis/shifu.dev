@@ -35,7 +35,7 @@ kubectl create secret generic my-secret --from-literal=username=your_username --
 ```
 
 :::note
-如果你有多个遥测服务，你可以把它们写在一个文件里，用`---`把它们分割该文件文件。
+如果你有多个遥测服务，你可以把它们写在一个文件里，用`---`把它们分割该文件。
 :::
 
 ## 编辑Configmap Yaml文件
