@@ -65,6 +65,6 @@ The file's name will build like `device_name/time.FileExtension`.
 
 ## examples
 
-Here is an example to help you better know how to use it.
+Here is an example of how to use.
 
 [https://github.com/Edgenesis/shifu/tree/main/examples/minioTelemetryService/deployment](https://github.com/Edgenesis/shifu/tree/main/examples/minioTelemetryService/deployment)

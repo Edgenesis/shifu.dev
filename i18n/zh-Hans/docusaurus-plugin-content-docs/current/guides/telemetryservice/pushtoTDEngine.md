@@ -20,8 +20,8 @@ spec:
 
 - `telemetrySeriveEndpoint` 是telemetryService的端点地址
 - `serverAddress` 表示数据库地址
-- `username` 表示你的数据库用户名
-- `secret` 表示存储你的数据库用户名与密码的`Secret`名字
+- `username` 表示您的数据库用户名
+- `secret` 表示存储您的数据库用户名与密码的`Secret`名字
 - `dbName` 表示数据库名 
 - `dbTable` 表示数据库表（table）名
 - `dbtype` 表示数据库类型
@@ -35,7 +35,7 @@ kubectl create secret generic my-secret --from-literal=username=your_username --
 ```
 
 :::note
-如果你有多个遥测服务，你可以把它们写在一个文件里，用`---`把它们分割该文件。
+如果您有多个遥测服务，您可以把它们写在一个文件里，用`---`进行分割。
 :::
 
 ## 编辑Configmap Yaml文件
@@ -50,14 +50,14 @@ data:
           pushSettings:
             telemetryCollectionService: push-endpoint-1 # Edit it to the name same with TelemetryService's name
 ```
-然后编辑 Configmap.yaml 文件，确保 telemetryCollectionService 的值与你在上一步创建的遥测服务的名称相同。
+然后编辑 Configmap.yaml 文件，确保 telemetryCollectionService 的值与您在上一步创建的遥测服务的名称相同。
 
 ## 再次部署deviceShifu
 
-然后你需要再次部署 deviceShifu ，这样遥测就会将采集到的数据推送到遥测服务，并将其发布到你的 TDengine数据库中。
+然后您需要再次部署 deviceShifu ，这样遥测就会将采集到的数据推送到遥测服务，并将数据推送到TDengine数据库中。
 
 ## 例子
 
-下面是一个例子，帮助你更好地了解如何使用它。
+下面是一个例子，帮助您更好地了解如何使用它。
 
 [https://github.com/Edgenesis/shifu/tree/main/examples/tdengineTelemetryService/deployment](https://github.com/Edgenesis/shifu/tree/main/examples/tdengineTelemetryService/deployment)
