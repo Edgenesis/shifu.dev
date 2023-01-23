@@ -19,7 +19,7 @@ spec:
       # your file's extension
       FileExtension: mp4
       # minio service's address
-      EndPoint: minio-1673579889.data.svc.cluster.local:9000
+      EndPoint: minio.data.svc.cluster.local:9000
       # you can specify a secret or APIId and APIKey
       Secret: minio-secret
 ```

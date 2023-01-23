@@ -19,7 +19,7 @@ spec:
       # 上传的文件的后缀名
       FileExtension: mp4
       # MinIO服务的地址
-      EndPoint: minio-1673579889.data.svc.cluster.local:9000
+      EndPoint: minio.data.svc.cluster.local:9000
       # 您可以指定一个Secret或者是直接指定APIId和APIKey
       Secret: minio-secret
 ```
