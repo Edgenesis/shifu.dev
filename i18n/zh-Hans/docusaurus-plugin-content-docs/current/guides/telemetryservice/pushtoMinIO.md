@@ -20,20 +20,20 @@ spec:
       FileExtension: mp4
       # MinIO服务的地址
       EndPoint: minio.data.svc.cluster.local:9000
-      # 您可以指定一个Secret或者是直接指定APIId和APIKey
+      # 你可以指定一个Secret或者是直接指定APIId和APIKey
       Secret: minio-secret
 ```
 
 ## 创建Secret
 
-您需要在`username`和`password`域中填写您的AccessId和AccessKey(在GUI中创建),或您可以直接填写安装MinIO时指定的用户名和密码
+你需要在`username`和`password`域中填写你的AccessId和AccessKey(在GUI中创建),或你可以直接填写安装MinIO时指定的用户名和密码
 
 ```bash
 kubectl create secret generic minio-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
 ```
 
 :::note
-如果您有多个遥测服务，您可以把它们写在一个文件里，用`---`进行分割。
+如果你有多个遥测服务，你可以把它们写在一个文件里，用`---`进行分割。
 :::
 
 ## 编辑Configmap Yaml文件
@@ -49,19 +49,19 @@ data:
     telemetries:
       push-file:
         properties:
-          # 访问您的edgeDevice的这个方法,获得要发送给telemetryService的数据
+          # 访问你的edgeDevice的这个方法,获得要发送给telemetryService的数据
           instruction: get_file
           pushSettings:
-            # 将其修改为您刚创建TelemetryService的名字
+            # 将其修改为你刚创建TelemetryService的名字
             telemetryCollectionService: push-file-mp4
 ```
 
 ## 再次部署deviceShifu
 
-然后您需要再次部署 deviceShifu ，这样遥测就会将采集到的文件内容发送给TelemetryService然后存到MinIO中.文件名会按`device_name/time.FileExtension`的格式存入对应的Bucket内.
+然后你需要再次部署 deviceShifu ，这样遥测就会将采集到的文件内容发送给TelemetryService然后存到MinIO中.文件名会按`device_name/time.FileExtension`的格式存入对应的Bucket内.
 
 ## 例子
 
-下面是一个例子，帮助您更好地了解如何使用它。如果您想测试可以在本地运行mockdevice.go然后修改edgedevice.yaml中的address,改为自己本地的IP即可.
+下面是一个例子，帮助你更好地了解如何使用它。如果你想测试可以在本地运行mockdevice.go然后修改edgedevice.yaml中的address,改为自己本地的IP即可.
 
 [https://github.com/Edgenesis/shifu/tree/main/examples/minioTelemetryService/deployment](https://github.com/Edgenesis/shifu/tree/main/examples/minioTelemetryService/deployment)

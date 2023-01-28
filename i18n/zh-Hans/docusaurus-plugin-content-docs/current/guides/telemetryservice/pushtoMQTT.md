@@ -13,15 +13,15 @@ spec:
   serviceSettings:
     MQTTSetting:
       MQTTServerAddress: 192.168.14.163:1883 # 将其修改为 MQTT Broker 的地址
-      MQTTTopic: /test/test # 将其修改为您发布数据的主题
+      MQTTTopic: /test/test # 将其修改为你发布数据的主题
 ```
 
 `telemetrySeriveEndpoint` 是telemetryService的端点地址。
-`MQTTServerAddress` 表示您的MQTT Broker的地址。
-`MQTTTopic` 表示您发布原始数据的主题。
+`MQTTServerAddress` 表示你的MQTT Broker的地址。
+`MQTTTopic` 表示你发布原始数据的主题。
 
 :::note
-如果您有多个遥测服务，您可以把它们写在一个文件里，用`---`进行分割。
+如果你有多个遥测服务，你可以把它们写在一个文件里，用`---`进行分割。
 :::
 
 ## 编辑Configmap Yaml文件
@@ -34,16 +34,16 @@ data:
         properties:
           instruction: status
           pushSettings:
-           telemetryCollectionService: push-endpoint-1 # 将其修改为您刚创建TelemetryService的名字(# tag)
+           telemetryCollectionService: push-endpoint-1 # 将其修改为你刚创建TelemetryService的名字(# tag)
 ```
-然后编辑 Configmap.yaml 文件，确保 telemetryCollectionService 的值与您在上一步创建的遥测服务的名称相同。
+然后编辑 Configmap.yaml 文件，确保 telemetryCollectionService 的值与你在上一步创建的遥测服务的名称相同。
 
 ## 再次部署deviceShifu
 
-然后您需要再次部署deviceShifu，这样遥测就会将采集到的数据推送到遥测服务，并将其发布到您的 MQTT Broker 中。
+然后你需要再次部署deviceShifu，这样遥测就会将采集到的数据推送到遥测服务，并将其发布到你的 MQTT Broker 中。
 
 ## 例子
 
-下面是一个例子，帮助您更好地了解如何使用它。
+下面是一个例子，帮助你更好地了解如何使用它。
 
 [https://github.com/Edgenesis/shifu/tree/main/examples/httpDeviceShifu/deployment](https://github.com/Edgenesis/shifu/tree/main/examples/httpDeviceShifu/deployment)
