@@ -25,9 +25,7 @@ spec:
 ```
 
 ## Create Secret
-
-you need fill the `username` and `password` field, if you don't have a AccessId and AccessKey,
-so you should create one in GUI,or you can fill your MinIO user's username and password.
+you can use either MinIO's `username` and `password` or the AccessId and AccessKey created in the MinIO GUI.
 
 ```bash
 kubectl create secret generic minio-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
@@ -58,13 +56,11 @@ data:
 ```
 
 ## deploy deviceShifu again
-
 Then you need to deploy deviceShifu again so that deviceShifu will send the request to TelemetryService which include file's content
 , then telemetryService will save the file to the bucket which you choose.
 The file's name will build like `device_name/time.FileExtension`.
 
 ## examples
-
 Here is an example of how to use.
 
 [https://github.com/Edgenesis/shifu/tree/main/examples/minioTelemetryService/deployment](https://github.com/Edgenesis/shifu/tree/main/examples/minioTelemetryService/deployment)
