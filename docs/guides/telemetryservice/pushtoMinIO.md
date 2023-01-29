@@ -56,8 +56,7 @@ data:
 ```
 
 ## deploy deviceShifu again
-Then you need to deploy deviceShifu again so that deviceShifu will send the request to TelemetryService which include file's content
-, then telemetryService will save the file to the bucket which you choose.
+Then you need to deploy deviceShifu again so that TelemetryService will store the file in the configured bucket.
 The file's name will build like `device_name/time.FileExtension`.
 
 ## examples

@@ -40,7 +40,7 @@ data:
 
 ## 再次部署deviceShifu
 
-然后你需要再次部署deviceShifu，这样遥测就会将采集到的数据推送到遥测服务，并将其发布到你的 MQTT Broker 中。
+然后你需要再次部署deviceShifu，这样TelemetryService就会将采集到的数据发布到你的 MQTT Broker 中。
 
 ## 例子
 

@@ -54,7 +54,7 @@ data:
 
 ## 再次部署deviceShifu
 
-然后你需要再次部署 deviceShifu ，这样遥测就会将采集到的数据推送到遥测服务，并将数据推送到TDengine数据库中。
+然后你需要再次部署 deviceShifu ，这样TelemetryService就会将采集到的数据推送到TDengine中。
 
 ## 例子
 

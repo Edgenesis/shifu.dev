@@ -55,9 +55,10 @@ data:
 ```
 
 ## 再次部署deviceShifu
-然后你需要再次部署 deviceShifu ，这样遥测就会将采集到的文件内容发送给TelemetryService然后存到MinIO中.文件名会按`device_name/time.FileExtension`的格式存入对应的Bucket内.
+然后你需要再次部署 deviceShifu ，这样TelemetryService就会将采集到的文件内容存到MinIO中。
+文件名会按`device_name/time.FileExtension`的格式存入对应的Bucket内。
 
 ## 例子
-下面是一个例子，帮助你更好地了解如何使用它。如果你想测试可以在本地运行mockdevice.go然后修改edgedevice.yaml中的address,改为自己本地的IP即可.
+下面是一个例子，帮助你更好地了解如何使用它。如果你想测试可以在本地运行mockdevice.go然后修改edgedevice.yaml中的address，改为自己本地的IP即可。
 
 [https://github.com/Edgenesis/shifu/tree/main/examples/minioTelemetryService/deployment](https://github.com/Edgenesis/shifu/tree/main/examples/minioTelemetryService/deployment)
