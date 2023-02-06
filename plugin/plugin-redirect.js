@@ -3,6 +3,19 @@ module.exports = function (context, options) {
     name: 'docusaurus-plugin',
     injectHtmlTags({ content }) {
       return {
+        postBodyTags: [
+          {
+            tagName: 'script',
+            innerHTML: `  window.intercomSettings = {
+              api_base: "https://api-iam.intercom.io",
+              app_id: "vzhpxwsk"
+            };`,
+          },
+          {
+            tagName: 'script',
+            innerHTML: `(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/vzhpxwsk';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();`,
+          },
+        ],
         preBodyTags: [
           {
             tagName: 'style',
@@ -28,8 +41,7 @@ module.exports = function (context, options) {
              * 解决方案是分别监听媒体查询和多语言按钮的点击
              * 然后保证具体的语言选择按钮出现时就带有点击事件
              ***/
-            innerHTML:
-                `
+            innerHTML: `
                 let href = window.location.href
                 let host = window.location.port
                 ? document.domain + ':' + window.location.port
@@ -147,9 +159,8 @@ module.exports = function (context, options) {
             })
       `,
           },
-        ]
+        ],
       }
     },
   }
 }
-
