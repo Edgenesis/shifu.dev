@@ -11,17 +11,17 @@ metadata:
 spec:
   telemetrySeriveEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
   serviceSettings:
-    # deviceShifu发送给TelemetryService请求的超时时间(ms)
-    RequestTimeout: 20000
     MinIOSetting:
-      # 上传到的Bucket
+      # MinIO服务使用的Secret，或者你可以指定AccessKey和SecretKey
+      Secret: minio-secret
+      # deviceShifu发送给TelemetryService的请求的超时时间
+      RequestTimeoutMS: 2500
+      # 你要上传到的Bucket
       Bucket: test-bucket
-      # 上传的文件的后缀名
+      # 上传的文件后缀名
       FileExtension: mp4
       # MinIO服务的地址
-      EndPoint: minio.data.svc.cluster.local:9000
-      # 你可以指定一个Secret或者是直接指定APIId和APIKey
-      Secret: minio-secret
+      ServerAddress: minio.data.svc.cluster.local:9000
 ```
 
 ## 创建Secret
@@ -43,12 +43,12 @@ data:
       # 每次遥测服务的间隔时间
       telemetryUpdateIntervalInMilliseconds: 10000
       # shifuDevice从edgeDevice获得文件内容的请求的超时时间
-      telemetryTimeoutInMilliseconds: 20000
+      telemetryTimeoutInMilliseconds: 2500
     telemetries:
       push-file:
         properties:
-          # 访问你的edgeDevice的这个方法,获得要发送给telemetryService的数据
-          instruction: get_file
+          # 访问你的edgeDevice的这个方法,获得要发送给TelemetryService的数据
+          instruction: get_file_mp4
           pushSettings:
             # 将其修改为你刚创建TelemetryService的名字
             telemetryCollectionService: push-file-mp4
@@ -56,7 +56,7 @@ data:
 
 ## 再次部署deviceShifu
 然后你需要再次部署 deviceShifu ，这样TelemetryService就会将采集到的文件内容存到MinIO中。
-文件名会按`device_name/time.FileExtension`的格式存入对应的Bucket内。
+文件名会按`{device-name}/{time(RFC3339)}.{file-extension}`的格式存入对应的Bucket内。
 
 ## 例子
 下面是一个例子，帮助你更好地了解如何使用它。如果你想测试可以在本地运行mockdevice.go然后修改edgedevice.yaml中的address，改为自己本地的IP即可。

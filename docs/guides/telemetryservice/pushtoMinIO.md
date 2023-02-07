@@ -11,17 +11,17 @@ metadata:
 spec:
   telemetrySeriveEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
   serviceSettings:
-    # the timeout(ms) when deviceShifu send to TelemetryService
-    RequestTimeout: 20000
     MinIOSetting:
+      # or you can specify AccessKey and SecretKey
+      Secret: minio-secret
+      # the timeout when deviceShifu send request to TelemetryService
+      RequestTimeoutMS: 2500
       # the bucket which you want to upload to
       Bucket: test-bucket
-      # your file's extension
+      # your file's extension name
       FileExtension: mp4
-      # minio service's address
-      EndPoint: minio.data.svc.cluster.local:9000
-      # you can specify a secret or APIId and APIKey
-      Secret: minio-secret
+      # MinIO service's address
+      ServerAddress: minio.data.svc.cluster.local:9000
 ```
 
 ## Create Secret
@@ -44,12 +44,12 @@ data:
       # the interval of each telemetryService request
       telemetryUpdateIntervalInMilliseconds: 10000
       # The timeout of deviceShifu sent to telemetryService
-      telemetryTimeoutInMilliseconds: 20000
+      telemetryTimeoutInMilliseconds: 2500
     telemetries:
       push-file:
         properties:
           # deviceShifu will visit this uri for get the file's content
-          instruction: get_file
+          instruction: get_file_mp4
           pushSettings:
             # your telemetryService's name
             telemetryCollectionService: push-file-mp4
@@ -57,7 +57,7 @@ data:
 
 ## deploy deviceShifu again
 Then you need to deploy deviceShifu again so that TelemetryService will store the file in the configured bucket.
-The file's name will build like `device_name/time.FileExtension`.
+The file's name will build like `{device-name}/{time(RFC3339)}.{file-extension}`.
 
 ## examples
 Here is an example of how to use.
