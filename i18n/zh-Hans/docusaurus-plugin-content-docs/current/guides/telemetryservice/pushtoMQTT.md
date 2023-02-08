@@ -21,7 +21,7 @@ spec:
 `MQTTTopic` 表示你发布原始数据的主题。
 
 :::note
-如果你有多个遥测服务，你可以把它们写在一个文件里，用`---`把它们分割该文件文件。
+如果你有多个遥测服务，你可以把它们写在一个文件里，用`---`进行分割。
 :::
 
 ## 编辑Configmap Yaml文件
@@ -38,11 +38,11 @@ data:
 ```
 然后编辑 Configmap.yaml 文件，确保 telemetryCollectionService 的值与你在上一步创建的遥测服务的名称相同。
 
-## 再次部署deviceshifu
+## 再次部署deviceShifu
 
-然后你需要再次部署 deviceshifu ，这样遥测就会将采集到的数据推送到遥测服务，并将其发布到你的 MQTT Broker 中。
+然后你需要再次部署deviceShifu，这样TelemetryService就会将采集到的数据发布到你的 MQTT Broker 中。
 
-##例子
+## 例子
 
 下面是一个例子，帮助你更好地了解如何使用它。
 

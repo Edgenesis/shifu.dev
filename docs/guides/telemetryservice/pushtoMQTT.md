@@ -44,6 +44,6 @@ Then you need to deploy deviceShifu again so that the telemetry will push raw da
 
 ## examples
 
-Here is an example to help you better know how to use it.
+Here is an example of how to use.
 
 [https://github.com/Edgenesis/shifu/tree/main/examples/httpDeviceShifu/deployment](https://github.com/Edgenesis/shifu/tree/main/examples/httpDeviceShifu/deployment)
