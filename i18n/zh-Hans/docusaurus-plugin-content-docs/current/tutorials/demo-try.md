@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # 体验 ***Shifu***
 
-***Shifu*** 安装包 中准备了五个设备(`AGV`，`温度计`，`酶标仪`，`PLC`，`机械臂`）供您进行试玩，体验 ***Shifu*** 的能力。
+***Shifu*** 安装包中准备了八个虚拟设备(`AGV`，`温度计`，`酶标仪`，`PLC`，`机械臂`，`OPC UA设备`, `Socket设备`,`MQTT设备`）供您进行试玩，体验 ***Shifu*** 的能力。
 
 :::note
 物联网设备是指可以与其他设备、系统、服务进行本地或在线地连接和交流的设备，例如：
@@ -14,12 +14,12 @@ sidebar_position: 1
 - 一辆自动导引车，操纵者可对其进行远程控制。
 - 一辆汽车上的温度计，它向车载空调发出命令使其升温或降温，并上传实时温度数据到云端。
 
-在安装 ***Shifu*** 安装包 时，我们创建了五个虚拟设备，并连接到您的电脑上。这五个设备与实际的物联网设备是等价的。
+在安装 ***Shifu*** 安装包时，我们创建了八个虚拟设备，并连接到您的电脑上。**这八个虚拟设备与实际的物联网设备是等价的。**
 :::
 
 ## 准备
 
-我们需要启动一个 `nginx` 来和数字孪生设备 ***deviceShifu*** 交互，请运行下面的命令：
+我们需要启动一个 `nginx` 来和虚拟设备的数字孪生 ***deviceShifu*** 交互，请运行下面的命令：
 
 ```bash
 sudo kubectl run --image=nginx:1.21 nginx
@@ -31,7 +31,7 @@ sudo kubectl get pods -A | grep nginx
 ![nginx pod running](images/nginxPodStatus.png)
 
 :::note
-在实际的情况中，物联网设备的用户使用应用程序或者监控平台与数字孪生 ***deviceShifu*** 交互。这里 `nginx` 相当于一个应用程序或者一个监控平台。
+在实际的情况中，物联网设备的用户使用应用程序或者监控平台与虚拟设备的数字孪生 ***deviceShifu*** 交互。这里 `nginx` 相当于一个应用程序或者一个监控平台。
 :::
 
 ## 1. 与AGV交互
@@ -44,10 +44,10 @@ sudo kubectl get pods -A | grep nginx
   A：当AGV的数字孪生接收到get_position命令时会生成并返回设备当前位置的x、y轴坐标。
 </details>
 
-### 创建数字孪生
+### 创建虚拟AGC的数字孪生
 
 :::note
-您刚才通过 ***Shifu*** 安装包 安装了 ***Shifu***，AGV的数字孪生 ***deviceShifu*** 已自动创建，所以您无需进行手动的创建过程，可以直接和AGV的数字孪生进行交互。
+您刚才通过 ***Shifu*** 安装包安装了 ***Shifu***，AGV的数字孪生 ***deviceShifu*** 已自动创建，所以您无需进行手动的创建过程，可以直接和AGV的数字孪生进行交互。
 
 数字孪生的状态会和实际设备的状态一致，与数字孪生交互相当于与实际物联网设备交互。
 :::
@@ -152,7 +152,7 @@ curl http://deviceshifu-thermometer.deviceshifu.svc.cluster.local/get_status; ec
   A：当酶标仪的数字孪生接收到命令get_measurement会返回8*12的矩阵，其中的每一个数字代表一个样本中光谱分析扫描的结果数值。
 </details>
 
-### 创建数字孪生
+### 创建虚拟酶标仪的数字孪生
 
 首先，我们启动酶标仪的数字孪生：
 
@@ -199,7 +199,7 @@ curl "deviceshifu-plate-reader.deviceshifu.svc.cluster.local/get_measurement"
   A：当PLC的数字孪生接收到 sendsinglebit 命令可以修改内存区域中一个bit，接收到 getcontent 命令可以得到内存区域中一个byte的值。
 </details>
 
-### 创建数字孪生
+### 创建虚拟PLC的数字孪生
 
 首先，我们启动PLC的数字孪生：
 
@@ -255,7 +255,7 @@ curl "deviceshifu-plc.deviceshifu.svc.cluster.local/sendsinglebit?rootaddress=Q&
   A：当机械臂的数字孪生接收到 get_coordinate 命令后会返回其当前的 x, y, z轴坐标。
 </details>
 
-### 创建数字孪生
+### 创建虚拟机械臂的数字孪生
 
 首先，我们创建一个机械臂的数字孪生：
 
@@ -323,7 +323,7 @@ curl http://deviceshifu-robotarm.deviceshifu.svc.cluster.local/get_status; echo
   A：当OPC UA的数字孪生接收到 get_server 命令时会返回会获取 OPC UA Server信息，接收到 get_value 命令可以得到设备的一个 NodeId 的值。
 </details>
 
-### 创建数字孪生
+### 创建虚拟OPC UA的数字孪生
 
 首先，我们启动 OPC UA 的数字孪生：
 
@@ -379,7 +379,7 @@ curl http://deviceshifu-opcua.deviceshifu.svc.cluster.local/get_value; echo
   A：当Socket的数字孪生接收到 cmd 命令时，会解析请求的负载的信息，并返回其中的 Command加 '\n'。
 </details>
 
-### 创建数字孪生
+### 创建虚拟Socket设备的数字孪生
 
 首先，我们启动 Socket 的数字孪生：
 
@@ -428,7 +428,7 @@ http://deviceshifu-socket.deviceshifu.svc.cluster.local/cmd; echo
   A：我们支持多主题订阅，所以MQTT的数字孪生可以拥有多个API(例：get_topicmsg1、get_topicmsg2)，当 MQTT 的数字孪生接收到命令时，会返回订阅主题中最后一条消息。
 </details>
 
-### 创建数字孪生
+### 创建虚拟MQTT设备的数字孪生
 
 首先，我们启动 MQTT 的数字孪生：
 

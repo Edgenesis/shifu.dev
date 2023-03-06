@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Try out
 
-We have prepared five devices (AGV, thermometer, microplate reader, PLC and robotic arm) in ***Shifu*** installer for you to explore the abilities of ***Shifu***.
+We have prepared eight devices (AGV, thermometer, microplate reader, PLC, robotic arm, OPC UA device, Socket device and MQTT device) in ***Shifu*** installer for you to explore the abilities of ***Shifu***.
 
 :::note
 An IoT device is a device that can connect and interact with other devices, systems, and applications offline or online, for instance:
@@ -31,7 +31,7 @@ Now, `nginx` is running:
 ![nginx pod running](images/nginxPodStatus.png)
 
 :::note
-In the actual situation, users of IoT devices use an application or a monitoring platform to interact with the digital twin ***deviceShifu***. Here `nginx` is an application or a monitoring platform.
+In the actual situation, users of IoT devices use an application or a monitoring platform to interact with the digital twin of virtual devices ***deviceShifu***. Here `nginx` is an application or a monitoring platform.
 :::
 
 ## 1. Interact with the AGV
@@ -44,7 +44,7 @@ In the actual situation, users of IoT devices use an application or a monitoring
   A:  When the digital twin of the AGV receives the get_position command, it will generate and return the x and y axis coordinates of the current position of the device.
 </details>
 
-### Create the digital twin
+### Create the digital twin of the virtual device
 
 :::note
 You have just installed ***Shifu*** through the ***Shifu*** installer, so the digital twin of the AGV, ***deviceShifu***, has been created automatically.  You can interact with the digital twin of the AGV directly without having to manually create it.
