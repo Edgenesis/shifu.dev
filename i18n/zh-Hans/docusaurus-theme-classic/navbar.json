@@ -23,9 +23,9 @@
     "message": "新闻",
     "description": "Navbar item with label News"
   },
-  "item.label.Blog": {
-    "message": "博客",
-    "description": "Navbar item with label Blog"
+  "item.label.Tech Blog": {
+    "message": "技术博客",
+    "description": "Navbar item with label Tech Blog"
   },
   "item.label.Case Studies": {
     "message": "用户案例",
