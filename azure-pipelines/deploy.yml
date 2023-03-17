@@ -1,5 +1,5 @@
 trigger:
-- main
+  - main
 
 pr: none
 
@@ -7,36 +7,55 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '16.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "16.x"
+    displayName: "Install Node.js"
 
-- script: |
-    set -e
-    npm install
-    npm run build
-    echo [DEBUG] && pwd && ls
-    cd build
-    echo [DEBUG] && pwd && ls
-    zip -r build.zip .
-  displayName: 'npm build and zip'
+  - script: |
+      set -e
+      npm install
+      npm run build
+      echo [DEBUG] && pwd && ls
+      cd build
+      echo [DEBUG] && pwd && ls
+      zip -r build.zip .
+    displayName: "npm build and zip"
 
-- task: CopyFilesOverSSH@0
-  inputs:
-    sshEndpoint: 'shifurunssh'
-    sourceFolder: 'build'
-    contents: 'build.zip'
-    targetFolder: '/opt/shifurun-dist/'
-    readyTimeout: '20000'
-    cleanTargetFolder: true
-    failOnEmptySource: true
+  - task: CopyFilesOverSSH@0
+    inputs:
+      sshEndpoint: "shifurunssh"
+      sourceFolder: "build"
+      contents: "build.zip"
+      targetFolder: "/opt/shifurun-dist/"
+      readyTimeout: "20000"
+      cleanTargetFolder: true
+      failOnEmptySource: true
 
-- task: SSH@0
-  inputs:
-    sshEndpoint: 'shifurunssh'
-    runOptions: 'inline'
-    inline: |
-      sudo rm -rf /var/www/shifu.run && sudo mkdir -p /var/www/shifu.run
-      sudo unzip /opt/shifurun-dist/build.zip -d /var/www/shifu.run
-    readyTimeout: '20000'
+  - task: SSH@0
+    inputs:
+      sshEndpoint: "shifurunssh"
+      runOptions: "inline"
+      inline: |
+        sudo rm -rf /var/www/shifu.run && sudo mkdir -p /var/www/shifu.run
+        sudo unzip /opt/shifurun-dist/build.zip -d /var/www/shifu.run
+      readyTimeout: "20000"
+
+  - task: CopyFilesOverSSH@0
+    inputs:
+      sshEndpoint: "shifu.dev"
+      sourceFolder: "build"
+      contents: "build.zip"
+      targetFolder: "/opt/shifudev-dist/"
+      readyTimeout: "20000"
+      cleanTargetFolder: true
+      failOnEmptySource: true
+
+  - task: SSH@0
+    inputs:
+      sshEndpoint: "shifu.dev"
+      runOptions: "inline"
+      readyTimeout: "20000"
+      inline: |
+        sudo rm -rf /var/www/shifu.dev && sudo mkdir -p /var/www/shifu.dev
+        sudo unzip /opt/shifudev-dist/build.zip -d /var/www/shifu.dev
