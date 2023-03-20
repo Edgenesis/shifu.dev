@@ -140,11 +140,11 @@ const config = {
           //   position: 'left',
           //   label: 'News',
           // },
-          // {
-          //   to: '/technical-blogs',
-          //   position: 'left',
-          //   label: 'Blog',
-          // },
+          {
+            to: '/technical-blogs',
+            position: 'left',
+            label: 'Tech Blog',
+          },
           // {
           //   href: '/disclaimer',
           //   label: 'Download Demo',
