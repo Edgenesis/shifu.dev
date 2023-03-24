@@ -566,11 +566,7 @@ export class Banner extends Component {
           </a>
 
           <h1>
-            <Translate>Next Generation</Translate>
-            <br />
-            <Translate>Cloud Native IoT</Translate>
-            <br />
-            <Translate>Development Framework</Translate>
+            <Translate>Kubernetes Native Industrial Edge</Translate>
           </h1>
           <p>
             <Translate>10X your IoT software development</Translate>

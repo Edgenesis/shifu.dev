@@ -128,12 +128,8 @@ export function Contact(props) {
           info@edgenesis.com
         </div>
         <div>
-          <img src={device} alt="" />
-          (+86) 18515145818
-        </div>
-        <div>
           <img src={map} alt="" />
-          <Translate>Haidian, Beijing</Translate>
+          <Translate>Sunnyvale, CA</Translate>
         </div>
       </div>
     </div>

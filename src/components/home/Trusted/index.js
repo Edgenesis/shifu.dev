@@ -55,7 +55,7 @@ let carList = [
     url: require('@site/static/img/home/tru4.png').default,
     backUrl: require('@site/static/img/home/trus2.png').default,
     text: translate({ message: 'The advent of the cloud-native era has reconfigured the infrastructure of all enterprises, and the open source of Shifu will further help enterprises with their IoT management. I sincerely hope that Shifu project will excel itself in the future.' }),
-    author: translate({ message: 'Founder of ClickHouse China Community' }),
+    author: translate({ message: 'Apache Dolphin Scheduler PMC' }),
     writer: translate({ message: 'William Guo' })
   }
 ]
