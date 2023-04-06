@@ -175,10 +175,10 @@ At this point ***Shifu*** returns the status of the first indicator from left to
 
 `write` means to modify the value of the corresponding location through commands:
 
-For example, the command `curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true"` will change the first bit of `Q0` to true.
+For example, the command `curl "deviceshifu-plc4x/write?%Q0.0:BOOL=true"` will change the first bit of `Q0` to true.
 
 ```bash
-curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true"; echo
+curl "deviceshifu-plc4x/write?%Q0.0:BOOL=true"; echo
 ```
 
 ### More

@@ -174,10 +174,10 @@ curl "deviceshifu-plc4x/read?%Q0.0:BOOL"; echo
 
 `write` 表示通过命令修改对应位置的值:
 
-比如，命令`curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true"` 会将 `Q0` 的第一个 bit 修改为true。
+比如，命令`curl "deviceshifu-plc4x/write?%Q0.0:BOOL=true"` 会将 `Q0` 的第一个 bit 修改为true。
 
 ```bash
-curl "deviceshifu-plc4x/read?%Q0.0:BOOL=true"; echo
+curl "deviceshifu-plc4x/write?%Q0.0:BOOL=true"; echo
 ```
 
 ### 更多
