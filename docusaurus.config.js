@@ -197,10 +197,6 @@ const config = {
           },
         ],
       },
-      footer: {
-        style: 'light',
-        copyright: `© ${new Date().getFullYear()} Edgenesis. <span id=foot>| <a href="https://beian.miit.gov.cn/" style="color: #000000">京ICP备2021037926号</a>  | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039843" style="color: #000000">京公网安备11010802039843号</a></span>`,
-      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

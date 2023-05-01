@@ -53,7 +53,7 @@
   "Kubernetes native IoT development framework": {
     "message": "让开发产业场景像开发APP一样简单！"
   },
-  "Extremely Fast Integration": {
+  "Fast Device Integration": {
     "message": "极速设备接入"
   },
   "From robots to thermometers": {
@@ -65,8 +65,8 @@
   "Shifu's high compatibility design makes it easy to cope with all heterogeneous devices": {
     "message": "Shifu超高兼容性让你轻松应对各种异构设备"
   },
-  "Modularized Deployment Experience": {
-    "message": "模块化部署体验"
+  "Modularized Deployment": {
+    "message": "模块化部署"
   },
   "Devices and applications integrated into Shifu will be packaged into lego-like modules": {
     "message": "接入到Shifu 的设备和应用都会被封装成乐高式的模块"
@@ -556,8 +556,8 @@
   "Please leave your Email": {
     "message": "填写您的邮箱"
   },
-  "Haidian, Beijing": {
-    "message": " 北京市 海淀区 中关村 创业大街 12号楼"
+  "Sunnyvale, CA": {
+    "message": " 加利福尼亚 森尼韦尔"
   },
   "Choose the deployment method":{
     "message":"选择适合您的部署方式，立即开始试用"
@@ -766,14 +766,8 @@
   "Done":{
     "message":"我已经填写完毕"
   },
-  "Next Generation": {
-    "message": "下一代云原生"
-  },
-  "Cloud Native IoT": {
-    "message": "物联网开发框架"
-  },
-  "Development Framework": {
-    "message": ""
+  "Kubernetes Native Industrial Edge": {
+    "message": "Kubernetes原生工业边缘"
   },
   "10X your IoT software development": {
     "message": "面向产业的物联网开发框架，十倍提高物联网开发者效率"
@@ -863,8 +857,8 @@
   "The advent of the cloud-native era has reconfigured the infrastructure of all enterprises, and the open source of Shifu will further help enterprises with their IoT management. I sincerely hope that Shifu project will excel itself in the future.":{
     "message":"云原生时代的到来，重构了所有企业的基础设施，Shifu 项目的开源帮助企业在IoT物联网管理上更进一步，希望 Shifu 项目越做做好。"
   },
-  "Founder of ClickHouse China Community":{
-    "message":"ClickHouse中国社区创始人"
+  "Apache Dolphin Scheduler PMC":{
+    "message":"Apache Dolphin Scheduler PMC"
   },
   "William Guo": {
     "message": "郭炜"
@@ -925,8 +919,8 @@
   "By developers, for developers.":{
     "message":"从开发者中来，到开发者中去。"
   },
-  "K8s Cloud-Native":{
-    "message":"K8s云原生"
+  "Cloud-Native Eco-system":{
+    "message":"云原生生态系统"
   },
   "A unified cloud-native framework for agile development and operations":{
     "message":"统一的云原生框架实现敏捷开发与运维"
