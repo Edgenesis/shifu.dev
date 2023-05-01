@@ -68,7 +68,12 @@ const config = {
     ]
   ],
 
+  markdown: {
+    mermaid: true,
+  },
   themes: [
+    // mermaid
+    '@docusaurus/theme-mermaid',
     // search
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -87,7 +92,6 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          remarkPlugins: [require('mdx-mermaid')],
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarCollapsible: true, // make sidebar expandable
           routeBasePath: '/docs',
