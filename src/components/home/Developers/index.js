@@ -13,7 +13,7 @@ let Lists = [
   },
   {
     id: 1,
-    title: translate({ message: 'Modularized Deployment Experience' }),
+    title: translate({ message: 'Modularized Deployment' }),
     message: translate({ message: 'Devices and applications integrated into Shifu will be packaged into lego-like modules' }),
     message1: translate({ message: 'You can conjure up a unique substrate 100% suitable for your scenario out of these modules' }),
     img: require('@site/static/img/home/list2.png').default
@@ -28,7 +28,7 @@ let Lists = [
   },
   {
     id: 3,
-    title: translate({ message: 'K8s Cloud-Native' }),
+    title: translate({ message: 'Cloud-Native Eco-system' }),
     message: translate({ message: 'A unified cloud-native framework for agile development and operations' }),
     message1: translate({ message: 'Endowing IoT platforms with ultra-high stability and security through K8s' }),
     img: require('@site/static/img/home/list4.png').default

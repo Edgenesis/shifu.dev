@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Shifu | Kubernetes native, open-source IoT development framework',
   tagline: 'Kubernetes native IoT development framework',
-  url: 'https://shifu.run',
+  url: 'https://shifu.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -100,6 +100,10 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-42F5S9P9CP',
+          anonymizeIP: true,
         },
       }),
     ],
@@ -200,10 +204,6 @@ const config = {
             "aria-label": "Twitter repository",
           },
         ],
-      },
-      footer: {
-        style: 'light',
-        copyright: `© ${new Date().getFullYear()} Edgenesis. <span id=foot>| <a href="https://beian.miit.gov.cn/" style="color: #000000">京ICP备2021037926号</a>  | <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039843" style="color: #000000">京公网安备11010802039843号</a></span>`,
       },
       prism: {
         theme: lightCodeTheme,

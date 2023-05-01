@@ -18,6 +18,8 @@
     "@docusaurus/preset-classic": "^2.4.0",
     "@docusaurus/theme-mermaid": "^2.4.0",
     "@easyops-cn/docusaurus-search-local": "^0.33.2",
+    "@docusaurus/plugin-google-gtag": "^2.4.0",
+    "@easyops-cn/docusaurus-search-local": "^0.35.0",
     "antd": "^5.1.0",
     "clsx": "^1.2.0",
     "dayjs": "^1.11.7",
