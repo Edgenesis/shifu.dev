@@ -25,7 +25,7 @@ function DemoFooter(props) {
   return (
     <div className={styles.demoFooterContainer}>
       <ButtonSquare style={{ display: `${one}` }} colorLevel="two" content={translate({ message: 'Docker Installed' })} onClick={props.onClick}></ButtonSquare>
-      <ButtonSquare style={{ display: `${two}` }} colorLevel="two" content={translate({ message: 'Shifu Installed' })} target="_blank" href={translate({ message: 'https://shifu.run/docs/tutorials/demo-try' })}></ButtonSquare>
+      <ButtonSquare style={{ display: `${two}` }} colorLevel="two" content={translate({ message: 'Shifu Installed' })} target="_blank" href={translate({ message: 'https://shifu.dev/docs/tutorials/demo-try' })}></ButtonSquare>
       <div onClick={() => props.isReturn()} className={styles.returnBack} style={{ display: `${three}` }}>
         <ReturnIcon></ReturnIcon>
         <p className={styles.returnContent}>
