@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Shifu | Kubernetes native, open-source IoT development framework',
   tagline: 'Kubernetes native IoT development framework',
-  url: 'https://shifu.run',
+  url: 'https://shifu.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -96,6 +96,10 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: 'G-42F5S9P9CP',
+          anonymizeIP: true,
         },
       }),
     ],
