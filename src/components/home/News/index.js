@@ -26,8 +26,8 @@ let Lists = [
     img: 'releases.svg',
     // img: require('@site/static/img/home/releases.png').default,
     title: translate({ message: 'Releases' }),
-    message: translate({ message: 'v0.17.0' }),
-    messageLink: 'https://github.com/Edgenesis/shifu/releases/tag/v0.17.0',
+    message: translate({ message: 'v0.18.0' }),
+    messageLink: 'https://github.com/Edgenesis/shifu/releases/tag/v0.18.0',
     link: 'https://github.com/Edgenesis/shifu/releases'
   }
 ]
