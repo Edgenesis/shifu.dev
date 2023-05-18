@@ -125,7 +125,9 @@ export function Contact(props) {
       <div className={styles.footerLists}>
         <div>
           <img src={mail} alt="" />
-          info@edgenesis.com
+            <a href="mailto:info@edgenesis.com">
+                 info@edgenesis.com
+            </a>
         </div>
         <div>
           <img src={map} alt="" />
