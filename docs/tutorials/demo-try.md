@@ -19,7 +19,7 @@ When installing ***Shifu*** installer, five virtual devices are created and conn
 
 ## Preparation
 
-To try out the devices mentioned below make sure to install shifu in your local system from [Quick Install](https://shifu.dev/docs/tutorials/demo-install) before proceeding forward.
+To try out the devices mentioned below make sure to install Shifu in your local system from [Quick Install](https://shifu.dev/docs/tutorials/demo-install) before proceeding forward.
 
 After the completion of Quick Install guide  change the directory to `shifudemos` using:
 
