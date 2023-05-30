@@ -18,7 +18,12 @@ sidebar_position: 1
 :::
 
 ## 准备
+在继续之前，请确保按照快速安装将 Shifu 安装在您的本地系统上。
 
+完成快速安装指南后，使用以下命令将目录切换到 shifudemos：
+```bash
+cd shifudemos
+```
 我们需要启动一个 `nginx` 来和数字孪生设备 ***deviceShifu*** 交互，请运行下面的命令：
 
 ```bash
