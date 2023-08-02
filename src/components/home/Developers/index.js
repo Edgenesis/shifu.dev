@@ -5,7 +5,7 @@ import Translate, { translate } from '@docusaurus/Translate'
 let Lists = [
   {
     id: 0,
-    title: translate({ message: 'Extremely Fast Integration' }),
+    title: translate({ message: 'Fast Device Integration' }),
     message: translate({ message: 'From robots to thermometers' }),
     message1: translate({ message: 'From proprietary to standard protocols' }),
     message2: translate({ message: "Shifu's high compatibility design makes it easy to cope with all heterogeneous devices" }),
