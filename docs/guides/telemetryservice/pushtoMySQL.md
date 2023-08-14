@@ -1,24 +1,25 @@
-# To TDengine
+# To MySQL
 
-***Shifu*** can push data from your device to a TDengine database.
+***Shifu*** can push your data from telemetry to your MySQL Broker
 
 ## Create TelemetryService Yaml file
 ```yaml
+#telemetry_service.yaml
 apiVersion: shifu.edgenesis.io/v1alpha1
 kind: TelemetryService
 metadata:
-  name: push-endpoint-1
+  name: push-endpoint-1 # tag
   namespace: devices
 spec:
   telemetrySeriveEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
   serviceSettings:
     SQLSetting:
-      serverAddress: 192.168.14.163:6041
+      serverAddress: 192.168.14.163:3306
       username: root
       secret: my-secret
       dbName: shifu
       dbTable: testTable2
-      dbtype: TDengine
+      dbtype: MySQL
 ```
 - `telemetrySeriveEndpoint` is telemetry service endpoint address
 - `serverAddress` is the database address
@@ -27,13 +28,13 @@ spec:
 - `dbName` is the name of the database
 - `dbTable` is the table name of the database
 - `dbType` is the type of the database
-  
+
 ## Create the Secret
 
 Create a `Secret` named the `secret` field above with the `username` field filled by your username and the `password` field filled by your password.
 
 ```bash
-kubectl create secret generic my-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
+kubectl create secret generic MySQL-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
 ```
 
 :::note
@@ -56,10 +57,4 @@ Then edit the Configmap yaml file and make sure that the telemetryCollectionServ
 
 ## deploy deviceShifu again
 
-Then you need to deploy deviceShifu again so that the telemetry will push raw data to the telemetry service and publish it to your TDengine database.
-
-## examples
-
-Here is an example of how to use.
-
-[https://github.com/Edgenesis/shifu/tree/main/examples/tdengineTelemetryService/deployment](https://github.com/Edgenesis/shifu/tree/main/examples/tdengineTelemetryService/deployment)
+Then you need to deploy deviceShifu again so that the telemetry will push raw data to the telemetry service and publish it to your MySQL database.
