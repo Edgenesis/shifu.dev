@@ -5,7 +5,7 @@ import banMove from '@site/static/img/home/bannerMove.png'
 import common from '@site/src/css/common.module.scss'
 import Translate from '@docusaurus/Translate'
 import { Button } from 'antd'
-
+import videoShifu from '@site/static/img/videos/edgenesisShifu.mp4'
 export class Banner extends Component {
   constructor(props) {
     super(props)
@@ -28,6 +28,7 @@ export class Banner extends Component {
 
   render() {
     return (
+    <div>
       <div className={styles.banner}>
         <svg className={styles.bannerImg} width="100%" height="1072" viewBox="0 0 1920 1072" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path opacity="0.302" d="M-45.2979 407.492C161.989 480.36 599.651 699.711 475.515 900.312C351.378 1100.91 5.04729 1070.64 -101.385 1016.51C-207.818 962.372 -107.388 592.136 -114.74 562.416C-122.091 532.696 -252.585 334.617 -45.2979 407.492Z" fill="url(#paint0_linear_8190_118115)" />
@@ -576,6 +577,22 @@ export class Banner extends Component {
           </Button>
         </div>
       </div>
+      <div className={common.content}>
+        <video
+        autoplay
+        muted
+        loop
+        controls
+        className={styles.video}
+        src={videoShifu}
+        onCanPlay={(e) => {
+          e.currentTarget.play(); // 确保视频加载后开始播放
+        }}
+      ></video>
+      </div>
+    </div>
+
+
     )
   }
 }
