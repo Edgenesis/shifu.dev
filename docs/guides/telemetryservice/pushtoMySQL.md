@@ -1,6 +1,6 @@
 # To MySQL
 
-***Shifu*** can push your data from telemetry to your MySQL Broker
+***Shifu*** can push your data from telemetry to your MySQL
 
 ## Create TelemetryService Yaml file
 ```yaml
@@ -15,7 +15,6 @@ spec:
   serviceSettings:
     SQLSetting:
       serverAddress: 192.168.14.163:3306
-      username: root
       secret: my-secret
       dbName: shifu
       dbTable: testTable2
@@ -23,7 +22,6 @@ spec:
 ```
 - `telemetrySeriveEndpoint` is telemetry service endpoint address
 - `serverAddress` is the database address
-- `username` is your database username
 - `secret` is the name of the `Secret` stored your database username and password
 - `dbName` is the name of the database
 - `dbTable` is the table name of the database

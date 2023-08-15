@@ -14,7 +14,6 @@ spec:
   serviceSettings:
     SQLSetting:
       serverAddress: 192.168.14.163:6041
-      username: root
       secret: my-secret
       dbName: shifu
       dbTable: testTable2

@@ -1,6 +1,6 @@
 # 推送至 MySQL
 
-***Shifu*** 可以将您的遥测数据推送到 MySQL Broker 中。
+***Shifu*** 可以将您的遥测数据推送到 MySQL 中。
 
 ## 创建 TelemetryService Yaml 文件
 
@@ -16,7 +16,6 @@ spec:
   serviceSettings:
     SQLSetting:
       serverAddress: 192.168.14.163:3306
-      username: root
       secret: my-secret
       dbName: shifu
       dbTable: testTable2
@@ -25,7 +24,6 @@ spec:
 
 - `telemetrySeriveEndpoint` 是遥测服务的终端地址
 - `serverAddress` 是数据库地址
-- `username` 是您的数据库用户名
 - `secret` 是存储数据库用户名和密码的 `Secret` 的名称
 - `dbName` 是数据库的名称
 - `dbTable` 是数据库中的表名称
