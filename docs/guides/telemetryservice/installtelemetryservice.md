@@ -13,5 +13,5 @@ Make sure you have ***Shifu*** installed first. If you have not installed ***Shi
 ***Shifu*** provides a one-click installation where you can use the following command to install ***telemetryService*** into your cluster.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/Edgenesis/shifu/v0.26.0/pkg/telemetryservice/install/telemetryservice_install.yaml
+kubectl apply -f https://raw.githubusercontent.com/Edgenesis/shifu/v0.27.0/pkg/telemetryservice/install/telemetryservice_install.yaml
 ```
