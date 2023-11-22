@@ -24,7 +24,7 @@ spec:
 
 - `telemetrySeriveEndpoint` 是遥测服务的终端地址
 - `serverAddress` 是数据库地址
-- `secret` 是存储数据库用户名密码的 `Secret` 的名称
+- `secret` 是存储数据库用户名和密码的 `Secret` 的名称
 - `dbName` 是数据库的名称
 - `dbTable` 是数据库中的表名称
 - `dbType` 是数据库的类型
@@ -34,7 +34,7 @@ spec:
 创建一个名为上面 `secret` 字段的 `Secret`，其中 `username` 字段填写您的用户名，`password` 字段填写您的密码。
 
 ```bash
-kubectl create secret generic mysql-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
+kubectl create secret generic MySQL-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
 ```
 
 :::注意
