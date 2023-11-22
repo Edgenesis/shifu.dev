@@ -32,7 +32,7 @@ spec:
 Create a `Secret` named the `secret` field above with the `username` field filled by your username and the `password` field filled by your password.
 
 ```bash
-kubectl create secret generic SQLServer-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
+kubectl create secret generic sqlserver-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
 ```
 
 :::note

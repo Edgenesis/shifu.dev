@@ -34,7 +34,7 @@ spec:
 创建一个名为上面 `secret` 字段的 `Secret`，其中 `username` 字段填写您的用户名，`password` 字段填写您的密码。
 
 ```bash
-kubectl create secret generic SQLServer-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
+kubectl create secret generic sqlserver-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
 ```
 
 :::注意
