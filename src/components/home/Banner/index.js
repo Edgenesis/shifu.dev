@@ -11,6 +11,7 @@ export class Banner extends Component {
     super(props);
     this.state = {
       url: "/deployment",
+      demoUrl:"https://killercoda.com/shifu/scenario/shifu-demo ",
       videoTitle1: "Shifu Introduction",
       videoTitle2: "CNCF livestream with hands-on demo",
     };
@@ -1093,6 +1094,7 @@ export class Banner extends Component {
             <p>
               <Translate>10X your IoT software development</Translate>
             </p>
+            <div className={common.buttonBox}>
             <Button
               type="primary"
               href={this.state.url}
@@ -1100,6 +1102,14 @@ export class Banner extends Component {
             >
               <Translate>Free Trial</Translate>
             </Button>
+            <Button
+              type="primary"
+              href={this.state.demoUrl}
+              className={common.bannerBtn}
+            >
+              <Translate>Free Demo</Translate>
+            </Button>
+            </div>
           </div>
         </div>
         <div className={common.content}>
