@@ -775,6 +775,9 @@
   "Free Trial": {
     "message": "免费试用"
   },
+  "Free Demo":{
+    "message":"免费试玩"
+  },
   "Tech Blogs": {
     "message": "技术博客"
   },
