@@ -20,8 +20,9 @@ spec:
 `telemetrySeriveEndpoint` is telemetry service endpoint address.
 `MQTTServerAddress` is your MQTT Broker's address.
 `MQTTTopic` is the topic which you want to publish the rawdata to.
-`MQTTServerSecret`(optional) is the secret name which you want to use to connect to your MQTT Broker. Or you can set your password in this field directly.
+`MQTTServerSecret`(optional) is the secret name which you want to use to connect to your MQTT Broker.
 `MQTTServerUserName`(optional) is the username which you want to use to connect to your MQTT Broker. `username` in secret will overwrite this field.
+`MQTTServerPassword`(optional) is the password which you want to use to connect to your MQTT Broker. `password` in secret will overwrite this field.
 
 ## Create Secret
 
