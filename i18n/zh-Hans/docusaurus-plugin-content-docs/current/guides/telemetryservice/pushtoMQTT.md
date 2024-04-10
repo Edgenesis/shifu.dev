@@ -16,12 +16,12 @@ spec:
       MQTTTopic: /test/test # 将其修改为你发布数据的主题
 ```
 
-`telemetrySeriveEndpoint` 是telemetryService的端点地址。
-`MQTTServerAddress` 表示你的MQTT Broker的地址。
-`MQTTTopic` 表示你发布原始数据的主题。
-`MQTTServerSecret`(可选) 表示你想要用来连接到MQTT Broker的secret名称。
-`MQTTServerUserName`(可选) 表示你要用来连接到MQTT Broker的用户名。secret中的`username` 将覆盖此字段。
-`MQTTServerPassword`(可选) 表示你想要用来连接到MQTT Broker的密码。secret中的`password` 将覆盖此字段。
+- `telemetrySeriveEndpoint` 是telemetryService的端点地址。
+- `MQTTServerAddress` 表示你的MQTT Broker的地址。
+- `MQTTTopic` 表示你发布原始数据的主题。
+- `MQTTServerSecret`(可选) 表示你想要用来连接到MQTT Broker的secret名称。
+- `MQTTServerUserName`(可选) 表示你要用来连接到MQTT Broker的用户名。secret中的`username` 将覆盖此字段。
+- `MQTTServerPassword`(可选) 表示你想要用来连接到MQTT Broker的密码。secret中的`password` 将覆盖此字段。
 
 ## 创建Secret
 

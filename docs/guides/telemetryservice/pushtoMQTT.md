@@ -17,12 +17,12 @@ spec:
       MQTTServerAddress: 192.168.14.163:1883 # Edit it to your IP
       MQTTTopic: /test/test # Edit it to your topic which you want to publish
 ```
-`telemetrySeriveEndpoint` is telemetry service endpoint address.
-`MQTTServerAddress` is your MQTT Broker's address.
-`MQTTTopic` is the topic which you want to publish the rawdata to.
-`MQTTServerSecret`(optional) is the secret name which you want to use to connect to your MQTT Broker.
-`MQTTServerUserName`(optional) is the username which you want to use to connect to your MQTT Broker. `username` in secret will overwrite this field.
-`MQTTServerPassword`(optional) is the password which you want to use to connect to your MQTT Broker. `password` in secret will overwrite this field.
+- `telemetrySeriveEndpoint` is telemetry service endpoint address.
+- `MQTTServerAddress` is your MQTT Broker's address.
+- `MQTTTopic` is the topic which you want to publish the rawdata to.
+- `MQTTServerSecret`(optional) is the secret name which you want to use to connect to your MQTT Broker.
+- `MQTTServerUserName`(optional) is the username which you want to use to connect to your MQTT Broker. `username` in secret will overwrite this field.
+- `MQTTServerPassword`(optional) is the password which you want to use to connect to your MQTT Broker. `password` in secret will overwrite this field.
 
 ## Create Secret
 
