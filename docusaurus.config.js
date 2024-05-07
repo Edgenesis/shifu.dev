@@ -158,11 +158,11 @@ const config = {
           //   label: 'Download Demo',
           //   position: 'left',
           // },
-          {
-            to: '/company',
-            position: 'left',
-            label: 'Company',
-          },
+          // {
+          //   to: '/company',
+          //   position: 'left',
+          //   label: 'Company',
+          // },
           {
             type: 'search',
             position: 'right',
@@ -173,12 +173,12 @@ const config = {
             position: 'right',
             className: 'langDropdown'
           },
-          {
-            to: '/contact',
-            position: 'right',
-            label: 'Contact Us',
-            className: 'header-btn'
-          },
+          // {
+          //   to: '/contact',
+          //   position: 'right',
+          //   label: 'Contact Us',
+          //   className: 'header-btn'
+          // },
           {
             href: 'https://github.com/edgenesis/shifu',
             position: 'right',
