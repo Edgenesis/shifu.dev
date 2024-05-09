@@ -5,14 +5,14 @@ import Translate, { translate } from '@docusaurus/Translate'
 import { Divider } from 'antd'
 import { ArrowRightOutlined } from '@ant-design/icons'
 let Lists = [
-  {
-    id: 0,
-    img: 'blog.svg',
-    title: translate({ message: 'Tech Blogs' }),
-    message: translate({ message: 'How to deploy Shifu on K3s to complete the cloud-edge-device cycle' }),
-    messageLink: 'technical-blogs/2022/10/20/k3s',
-    link: 'technical-blogs'
-  },
+  // {
+  //   id: 0,
+  //   img: 'blog.svg',
+  //   title: translate({ message: 'Tech Blogs' }),
+  //   message: translate({ message: 'How to deploy Shifu on K3s to complete the cloud-edge-device cycle' }),
+  //   messageLink: 'technical-blogs/2022/10/20/k3s',
+  //   link: 'technical-blogs'
+  // },
   {
     id: 1,
     img: 'news.svg',

@@ -137,11 +137,11 @@ const config = {
             label: 'Docs',
           },
 
-          {
-            to: '/case-studies',
-            position: 'left',
-            label: 'Case Studies',
-          },
+          // {
+          //   to: '/case-studies',
+          //   position: 'left',
+          //   label: 'Case Studies',
+          // },
 
           // {
           //   to: '/news',
