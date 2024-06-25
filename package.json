@@ -20,7 +20,7 @@
     "@docusaurus/theme-mermaid": "^2.4.0",
     "@easyops-cn/docusaurus-search-local": "^0.35.0",
     "antd": "^5.1.0",
-    "clsx": "^1.2.0",
+    "clsx": "^2.0.0",
     "dayjs": "^1.11.7",
     "detect-node": "^2.1.0",
     "docusaurus-plugin-baidu-analytics": "^0.0.1",
