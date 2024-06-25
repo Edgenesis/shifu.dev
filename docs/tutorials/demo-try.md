@@ -186,7 +186,7 @@ Next, enter nginx: (if you have not started Nginx, please [start the Nginx servi
 sudo kubectl exec -it nginx -- bash
 ```
 
-By interacting with the digital twin of the microplate readerr via `http://deviceshifu-thermometer.deviceshifu.svc.cluster.local`, Shifu can get the results of the microplate reader:
+By interacting with the digital twin of the microplate reader via `http://deviceshifu-thermometer.deviceshifu.svc.cluster.local`, Shifu can get the results of the microplate reader:
 
 ```bash
 curl "deviceshifu-plate-reader.deviceshifu.svc.cluster.local/get_measurement"
