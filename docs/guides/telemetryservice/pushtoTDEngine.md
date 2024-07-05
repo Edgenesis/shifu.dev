@@ -10,7 +10,7 @@ metadata:
   name: push-endpoint-1
   namespace: devices
 spec:
-  telemetrySeriveEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
+  telemetryServiceEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
   serviceSettings:
     SQLSetting:
       serverAddress: 192.168.14.163:6041
@@ -19,7 +19,7 @@ spec:
       dbTable: testTable2
       dbtype: TDengine
 ```
-- `telemetrySeriveEndpoint` is telemetry service endpoint address
+- `telemetryServiceEndpoint` is telemetry service endpoint address
 - `serverAddress` is the database address
 - `username` is your database username
 - `secret` is the name of the `Secret` stored your database username and password

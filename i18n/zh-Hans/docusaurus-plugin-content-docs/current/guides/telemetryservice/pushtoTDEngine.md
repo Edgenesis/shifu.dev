@@ -8,7 +8,7 @@ metadata:
   name: push-endpoint-1
   namespace: devices
 spec:
-  telemetrySeriveEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
+  telemetryServiceEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
   serviceSettings:
     SQLSetting:
       serverAddress: 192.168.14.163:6041
@@ -18,7 +18,7 @@ spec:
       dbtype: TDengine
 ```
 
-- `telemetrySeriveEndpoint` 是telemetryService的端点地址
+- `telemetryServiceEndpoint` 是telemetryService的端点地址
 - `serverAddress` 表示数据库地址
 - `username` 表示你的数据库用户名
 - `secret` 表示存储你的数据库用户名与密码的`Secret`名字
