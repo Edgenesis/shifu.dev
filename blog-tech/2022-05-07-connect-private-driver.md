@@ -66,7 +66,7 @@ Select `SSH`:
 
 <img src="/blog-220507/7.png" width="100%" />
 
-Press enter, then press left to select `Yes` to enable the SSH service: <img src="/blog-220507/7.png
+Press enter, then press left to select `Yes` to enable the SSH service: <img src="/blog-220507/7.png" />
 
 <img src="/blog-220507/8.png" width="100%" />
 
@@ -233,11 +233,11 @@ You can deploy ***Shifu*** to the `k3s` cluster with one click by using `kubectl
 
 <img src="/blog-220507/connect-3.png" width="100%" />
 
-Execute `kubectl get pods -A` again to see the `Shifu Framework` controller deployed to the cluster: <img src="/blog-220507/connect-3.png
+Execute `kubectl get pods -A` again to see the `Shifu Framework` controller deployed to the cluster: <img src="/blog-220507/connect-3.png" />
 
 <img src="/blog-220507/connect-4.png" width="100%" />
 
-We can also manage device resources (currently there are no devices) via `edgedevices` the `CRD`: <img src="/blog-220507/connect-4.png
+We can also manage device resources (currently there are no devices) via `edgedevices` the `CRD`: <img src="/blog-220507/connect-4.png" />
 
 <img src="/blog-220507/connect-5.png" width="100%" />
 
@@ -335,7 +335,7 @@ RUN chmod +x docker-entrypoint.sh
 # Command to run the executable
 ENTRYPOINT ["./docker-entrypoint.sh"]
 ```
-Next we will package the Docker image, because the CPU of the Raspberry Pi is `ARM64` processor, the computer used for compiling in this article is `x86-64`, so we need to use the `buildx` function of `Docker` to build the image, the tutorial about buildx will not be described in this article, you can move to <https://docs.docker.com/buildx/working-with-buildx/>.
+Next we will package the Docker image, because the CPU of the Raspberry Pi is `ARM64` processor, the computer used for compiling in this article is `x86-64`, so we need to use the `buildx` function of `Docker` to build the image, the tutorial about buildx will not be described in this article, you can move to [https://docs.docker.com/buildx/working-with-buildx/](https://docs.docker.com/buildx/working-with-buildx/).
 
 Use `docker buildx build --platform=linux/arm64 -f dev/Dockerfile.sample . -t edgehub/rpi-gpio-driver:v0.0.1 --push` to build the image and push it to `Docker Hub`.
 

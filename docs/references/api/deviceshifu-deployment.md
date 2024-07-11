@@ -36,7 +36,7 @@ Deployment under the ***Shifu*** architecture is a Kubernetes-native [Deployment
 
 ## OPC UA DeviceShifu Deployment
 
-For a detailed example, please refer to <https://github.com/Edgenesis/shifu/tree/main/examples/opcuaDeviceShifu>.
+For a detailed example, please refer to [https://github.com/Edgenesis/shifu/tree/main/examples/opcuaDeviceShifu](https://github.com/Edgenesis/shifu/tree/main/examples/opcuaDeviceShifu).
 
 - **spec.template.spec.volumes[].configMap**
     - **volume**
@@ -50,7 +50,7 @@ For a detailed example, please refer to <https://github.com/Edgenesis/shifu/tree
 
 ## Siemens PLC DeviceShifu Deployment
 
-For a detailed example, please refer to <https://github.com/Edgenesis/shifu/tree/main/examples/siemensPLCDeviceShifu>
+For a detailed example, please refer to [https://github.com/Edgenesis/shifu/tree/main/examples/siemensPLCDeviceShifu](https://github.com/Edgenesis/shifu/tree/main/examples/siemensPLCDeviceShifu).
 
 - **spec.template.spec.containers[1].image**
     - **name** (string)<br/>driver image of the Siemens PLC, which has to be `edgehub/plc-device:v0.0.1` (for now).
