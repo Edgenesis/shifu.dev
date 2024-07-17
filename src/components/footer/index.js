@@ -60,11 +60,7 @@ let linkList = [
   },
   {
     img: require('@site/static/img/footer/linkDin.png').default,
-    link: 'https://www.linkedin.com/company/76257633/admin/'
-  },
-  {
-    img: require('@site/static/img/header/weixin.png').default,
-    link: 'subscribe'
+    link: 'https://www.linkedin.com/company/edgenesis/'
   }
 ]
 
