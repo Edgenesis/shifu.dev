@@ -16,9 +16,20 @@ spec:
       MQTTTopic: /test/test # 将其修改为你发布数据的主题
 ```
 
-`telemetryServiceEndpoint` 是telemetryService的端点地址。
-`MQTTServerAddress` 表示你的MQTT Broker的地址。
-`MQTTTopic` 表示你发布原始数据的主题。
+- `telemetrySeriveEndpoint` 是telemetryService的端点地址。
+- `MQTTServerAddress` 表示你的MQTT Broker的地址。
+- `MQTTTopic` 表示你发布原始数据的主题。
+- `MQTTServerSecret`(可选) 表示你想要用来连接到MQTT Broker的secret名称。
+- `MQTTServerUserName`(可选) 表示你要用来连接到MQTT Broker的用户名。secret中的`username` 将覆盖此字段。
+- `MQTTServerPassword`(可选) 表示你想要用来连接到MQTT Broker的密码。secret中的`password` 将覆盖此字段。
+
+## 创建Secret
+
+`username` 和 `password` 是你想要用来连接到MQTT Broker的用户名和密码。如果你的MQTT Broker只需要其中一个，那么这两个是可选的。
+
+```bash
+kubectl create secret generic mqtt-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
+```
 
 :::note
 如果你有多个遥测服务，你可以把它们写在一个文件里，用`---`进行分割。
