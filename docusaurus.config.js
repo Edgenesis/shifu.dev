@@ -195,12 +195,6 @@ const config = {
             className: "header-link header-twitter-link",
             "aria-label": "Twitter repository",
           },
-          {
-            to: "/subscribe",
-            position: "right",
-            className: "header-link header-weixin-link",
-            "aria-label": "Twitter repository",
-          },
         ],
       },
       prism: {
