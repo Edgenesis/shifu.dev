@@ -33,7 +33,7 @@ export default class Service extends Component {
             <div className={common.block30}></div>
             <p>{translate({ message: 'Our core operational team provides private deployment technical support, architecture design, industrial scene development consulting, remote training, and O&M support, etc., to make IoT development fast and easy.' })}</p>
             <div className={common.block30}></div>
-            <Button type="primary"   href={`${this.state.url}contact`} className={common.bannerBtn}>
+            <Button type="primary"   href="https://edgenesis.ai/contact" className={common.bannerBtn}>
               <Translate>Contact Us</Translate>
             </Button>
             <div className={common.block80}></div>
