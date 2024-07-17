@@ -10,7 +10,7 @@ To deploy ***Shifu*** in production environment, you need to [Install Kubernetes
 ***Shifu*** provides a one-click installation where you can use the following command to install ***Shifu*** into your cluster.
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/Edgenesis/shifu/v0.41.0/pkg/k8s/crd/install/shifu_install.yml
+kubectl apply -f https://raw.githubusercontent.com/Edgenesis/shifu/v0.48.0/pkg/k8s/crd/install/shifu_install.yml
 ```
 
 :::tip About User Metrics in Shifu

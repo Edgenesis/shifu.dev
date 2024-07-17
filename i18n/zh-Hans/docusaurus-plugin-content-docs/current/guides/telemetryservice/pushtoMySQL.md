@@ -12,7 +12,7 @@ metadata:
   name: push-endpoint-1 # 标识
   namespace: devices
 spec:
-  telemetrySeriveEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
+  telemetryServiceEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
   serviceSettings:
     SQLSetting:
       serverAddress: 192.168.14.163:3306
@@ -22,7 +22,7 @@ spec:
       dbtype: MySQL
 ```
 
-- `telemetrySeriveEndpoint` 是遥测服务的终端地址
+- `telemetryServiceEndpoint` 是遥测服务的终端地址
 - `serverAddress` 是数据库地址
 - `secret` 是存储数据库用户名和密码的 `Secret` 的名称
 - `dbName` 是数据库的名称

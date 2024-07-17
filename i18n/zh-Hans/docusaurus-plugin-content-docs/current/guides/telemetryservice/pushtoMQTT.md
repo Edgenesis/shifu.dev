@@ -9,7 +9,7 @@ metadata:
   name: push-endpoint-1 # tag
   namespace: devices
 spec:
-  telemetrySeriveEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
+  telemetryServiceEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
   serviceSettings:
     MQTTSetting:
       MQTTServerAddress: 192.168.14.163:1883 # 将其修改为 MQTT Broker 的地址

@@ -11,12 +11,13 @@ metadata:
   name: push-endpoint-1 # tag
   namespace: devices
 spec:
-  telemetrySeriveEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
+  telemetryServiceEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
   serviceSettings:
     MQTTSetting:
       MQTTServerAddress: 192.168.14.163:1883 # Edit it to your IP
       MQTTTopic: /test/test # Edit it to your topic which you want to publish
 ```
+
 - `telemetrySeriveEndpoint` is telemetry service endpoint address.
 - `MQTTServerAddress` is your MQTT Broker's address.
 - `MQTTTopic` is the topic which you want to publish the rawdata to.
