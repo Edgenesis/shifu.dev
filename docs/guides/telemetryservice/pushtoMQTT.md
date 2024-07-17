@@ -11,15 +11,28 @@ metadata:
   name: push-endpoint-1 # tag
   namespace: devices
 spec:
-  telemetrySeriveEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
+  telemetryServiceEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
   serviceSettings:
     MQTTSetting:
       MQTTServerAddress: 192.168.14.163:1883 # Edit it to your IP
       MQTTTopic: /test/test # Edit it to your topic which you want to publish
 ```
-`telemetrySeriveEndpoint` is telemetry service endpoint address.
-`MQTTServerAddress` is your MQTT Broker's address.
-`MQTTTopic` is the topic which you want to publish the rawdata to.
+
+- `telemetrySeriveEndpoint` is telemetry service endpoint address.
+- `MQTTServerAddress` is your MQTT Broker's address.
+- `MQTTTopic` is the topic which you want to publish the rawdata to.
+- `MQTTServerSecret`(optional) is the secret name which you want to use to connect to your MQTT Broker.
+- `MQTTServerUserName`(optional) is the username which you want to use to connect to your MQTT Broker. `username` in secret will overwrite this field.
+- `MQTTServerPassword`(optional) is the password which you want to use to connect to your MQTT Broker. `password` in secret will overwrite this field.
+
+## Create Secret
+
+`username` and `password` is the username and password which you want to use to connect to your MQTT Broker. Those are optional if your MQTT Broker doesn't need one of them.
+
+```bash
+kubectl create secret generic mqtt-secret --from-literal=username=your_username --from-literal=password=your_password -n devices
+```
+
 :::note
 If you have multiple telemetry services, you can write them in one file and split them in one file using `---`.
 :::

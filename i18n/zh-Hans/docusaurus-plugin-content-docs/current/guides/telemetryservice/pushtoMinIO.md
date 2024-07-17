@@ -9,7 +9,7 @@ metadata:
   name: push-file-mp4
   namespace: devices
 spec:
-  telemetrySeriveEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
+  telemetryServiceEndpoint: http://telemetryservice.shifu-service.svc.cluster.local
   serviceSettings:
     MinIOSetting:
       # MinIO服务使用的Secret，或者你可以指定AccessKey和SecretKey

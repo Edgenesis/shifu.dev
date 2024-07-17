@@ -92,13 +92,13 @@ export function Link(props) {
         </a>
         <Divider type="vertical" />
 
-        <a href={`${props.url}case-studies`}>
+        {/* <a href={`${props.url}case-studies`}>
           <Translate>Case Studies</Translate>
-        </a>
-        <Divider type="vertical" />
+        </a> */}
+        {/* <Divider type="vertical" />
         <a href={`${props.url}company`}>
           <Translate>Company</Translate>
-        </a>
+        </a> */}
       </div>
       <div className={`${styles.footerTitle},${styles.footerLinks}`}>{list}</div>
     </div>
