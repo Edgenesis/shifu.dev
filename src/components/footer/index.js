@@ -115,7 +115,7 @@ export function Contact(props) {
       {/*    </Tooltip>*/}
       {/*  }*/}
       {/*/>*/}
-      <Button type="primary" block href={`${props.url}contact`}>
+      <Button type="primary" block href="https://edgenesis.ai/contact">
         <Translate>Contact Us</Translate>
       </Button>
       <div className={styles.footerLists}>
