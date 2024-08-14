@@ -65,26 +65,25 @@ sidebar_position: 0
 
 在`examples/deviceshifu/customized/humidity_detector/configuration`中的`deviceshifu-humidity-detector-configmap.yaml`文件，将您的设备指令,与数据处理程序的funcName，进行映射。
 
-（例如：instructions为 '/123' ， funcName为 'humidity'）
+（例如：instructions为 '/humidity_custom' ， funcName为 'humidity'）
 
-则需要在`customInstructionsPython`下设置`123: humidity`并在`instructions.instructions`和`telemetries.telemetries.device_health.properties.instruction`下设置设备指令Instructions
+则需要在`customInstructionsPython`下设置`humidity_custom: humidity`并在`instructions.instructions`和`telemetries.telemetries.device_health.properties.instruction`下设置设备指令Instructions
 
 如下所示：
 
 ```yaml
 data:
   customInstructionsPython: |
-    123: humidity 
-    #123是instructions，humidity是处理程序funcName
+    humidity_custom: humidity 
+    #humidity_custom 是instructions，humidity是处理程序funcName
   instructions: |
     instructions:
-      123:
+      humidity_custom:
   telemetries: |
     telemetries:
       device_health:
         properties:
-          instruction: 
-            123
+          instruction: humidity_custom
 ```
 
 ### 4. 建立deviceShifu的docker镜像

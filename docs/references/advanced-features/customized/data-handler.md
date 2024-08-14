@@ -60,26 +60,25 @@ Copy `examples/deviceshifu/customized/humidity_detector/sample_deviceshifu_docke
 
 In `examples/deviceshifu/customized/humidity_detector/configuration`,there is a `deviceshifu-humidity-detector-configmap.yaml`,Map your device commands to the funcName of your data processing program.
 
-(e.g.: instructions is '/123' and funcName is 'humidity')
+(e.g.: instructions is '/humidity_custom' and funcName is 'humidity')
 
-Then you need to set `123: humidity` under `customInstructionsPython` and set device commands under `instructions.instructions` and `telemetries.telemetries.device_health.properties.instruction`Instructions
+Then you need to set `humidity_custom: humidity` under `customInstructionsPython` and set device commands under `instructions.instructions` and `telemetries.telemetries.device_health.properties.instruction`Instructions
 
 As follows:
 
 ```yaml
 data:
   customInstructionsPython: |
-    123: humidity 
-    #123 is instructions，humidity is the handler funcName
+    humidity_custom: humidity 
+    #humidity_custom is instructions，humidity is the handler funcName
   instructions: |
     instructions:
-      123:
+      humidity_custom:
   telemetries: |
     telemetries:
       device_health:
         properties:
-          instruction: 
-            123
+          instruction: humidity_custom
 ```
 
 ### 4. Build deviceShifu docker image
