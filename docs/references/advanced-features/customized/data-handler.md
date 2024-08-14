@@ -73,7 +73,6 @@ data:
     #humidity_custom is instructions，humidity is the handler funcName
   instructions: |
     instructions:
-      humidity:
       humidity_custom:
   telemetries: |
     telemetries:

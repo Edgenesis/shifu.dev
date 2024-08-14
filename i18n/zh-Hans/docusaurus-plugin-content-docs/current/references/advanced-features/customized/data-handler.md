@@ -78,7 +78,6 @@ data:
     #humidity_custom 是instructions，humidity是处理程序funcName
   instructions: |
     instructions:
-      humidity:
       humidity_custom:
   telemetries: |
     telemetries:
