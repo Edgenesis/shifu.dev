@@ -25,10 +25,12 @@ The ConfigMap for LwM2M Gateway stores configurations such as driver properties 
 
 ### read_temperature
 
-- **ObjectId**: `/3303/0/5700`
-- **DataType**: `float`
+- **gatewayPropertyList**:
+  - **ObjectId**: `/3303/0/5700` - Links instruction to the corresponding Object in the gateway.
+  - **DataType**: `float` - Specifies the data type (options: string, float, int, bool).
 
 ### reset_device
 
-- **ObjectId**: `/3303/0/5605`
-- **DataType**: `command`
+- **gatewayPropertyList**:
+  - **ObjectId**: `/3303/0/5605` - Links instruction to the Object in the gateway.
+  - **DataType**: `command` - Specifies the action type.
