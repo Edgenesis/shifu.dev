@@ -67,6 +67,7 @@ instructions: |
       ...  # You can continue to configure commands and corresponding topics according to your own needs, just continue to add according to this format
 ```
 - **OPC UA**
+
 ```yml
 instructions: |
     instructions:
@@ -79,6 +80,19 @@ instructions: |
       ... # You can continue to configure commands and corresponding NodeID according to your own needs, just continue to add according to this format
 ```
 
+- **Gateway**
+
+```yml
+instructions: |
+    instructionSettings:
+      defaultTimeoutSeconds: 8
+    instructions:
+      read_value:
+        gatewayPropertyList:
+          ObjectId: /3442/0/130
+          DataType: float
+      ... # You can continue to configure commands and corresponding NodeID according to your own needs, just continue to add according to this format
+```
 
 ## DeviceShifuInstructionSettings
 
@@ -110,6 +124,9 @@ DeviceShifuTelemetrySettings are the settings related to ***deviceShifu*** monit
     - **telemetryUpdateIntervalInMiliseconds** (int64)<br/>***deviceShifu*** detects the millisecond interval between the MQTT and the receipt of the last msg. Default value is 3000.
 - PLC4X
     - **telemetryUpdateIntervalInMiliseconds** (int64)<br/>***deviceShifu*** The interval (in milliseconds) for detecting Telemetry. (Detection method: using PLC4X to send ping to the device.)
+- Gateway
+    - **telemetryUpdateIntervalInMiliseconds** (int64)<br/>***deviceShifu*** The interval (in milliseconds) for detecting device health. Default value is 1000.
+
 
 ## DeviceShifuTelemetry
 

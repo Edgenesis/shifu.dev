@@ -72,3 +72,26 @@ For a detailed example, please refer to https://github.com/Edgenesis/shifu/tree/
     - **IP_CAMERA_PASSWORD** (string)<br/>password for the camera RTSP stream.
     - **IP_CAMERA_CONTAINER_PORT**
         port of the RTSP camera driver container, which has to be `11111` (for now).
+
+## Gateway Deployment for LwM2M DeviceShifu 
+
+For a detailed example, please refer to  [https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http](https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http).
+
+- **spec.template.spec.containers[0].image**
+  - **name** (string)<br/>the image for the thermometer gateway driver, `edgehub/deviceshifu-http-http:nightly`.
+
+- **spec.template.spec.containers[0].imagePullPolicy** (string)<br/>policy for pulling the image, set to `IfNotPresent`.
+
+- **spec.template.spec.containers[0].name** (string)<br/>name of the gateway container, defined as `deviceshifu-http`.
+
+- **metadata.namespace** (string)<br/>namespace in which the deployment resides, set to `deviceshifu`.
+
+- **spec.template.metadata.labels.app** (string)<br/>label for identifying the thermometer gateway application, specified as `deviceshifu-thermometer-deployment`.
+
+  
+
+  
+
+
+
+​	
