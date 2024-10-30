@@ -67,6 +67,7 @@ instructions: |
       ...  # You can continue to configure commands and corresponding topics according to your own needs, just continue to add according to this format
 ```
 - **OPC UA**
+
 ```yml
 instructions: |
     instructions:
@@ -78,6 +79,18 @@ instructions: |
           OPCUANodeID: "i=2258"
       ... # You can continue to configure commands and corresponding NodeID according to your own needs, just continue to add according to this format
 ```
+
+- **LwM2M**
+
+```yml
+instructions: |
+    instructions:
+      float_value:
+        protocolPropertyList:
+          ObjectId: /3442/0/130
+          EnableObserve: false
+```
+
 
 
 ## DeviceShifuInstructionSettings
