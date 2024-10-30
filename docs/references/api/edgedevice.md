@@ -57,6 +57,7 @@ Settings of EdgeDevice connection protocol.
     - **MQTTSetting** (MQTTSetting) 
         - **MQTTTopic** (string)<br/>subscription of MQTT topic, e.g. `/test/test`.
     - **OPCUASetting** (OPCUASetting)
+        
         - **OPCUAEndpoint** (string)<br/>server address of OPC UA, e.g. `opc.tcp://192.168.0.1:4840/test/server`.
         - **SecurityMode** (string)<br/>message encryption mode of OPC UA, which has to be `None` (for now).
         - **Username** (string)<br/>connection authentication username of OPC UA, e.g. `operator`.
@@ -68,6 +69,30 @@ Settings of EdgeDevice connection protocol.
         - **bufferLength** (int)<br/>buffer size of the socket when transferring data, the default value is 1024.
     - **PLC4XSetting** (PLC4XSetting)
         - **protocol** ([Plc4xProtocol](#plc4xprotocolenum))<br/>protocol used by plc4x to connect to the device.
+        
+    - **GatewaySetting**(GatewaySetting)
+    
+        - **protocol** (string)<br/>protocol used by the gateway, specified as `lwm2m`.
+    
+        - **address** (string)<br/>address of the gateway service, defined as `deviceshifu-lwm2m-service.deviceshifu.svc.cluster.local:5683`.
+    
+        - **LwM2MSetting**
+    
+            - **endpointName** (string)<br/>name of the LwM2M endpoint, defined as `deviceshifu-lwm2m-service`.
+    
+            - **securityMode** (string)<br/>security mode for LwM2M communication, set to `None` or `DTLS` such as the following:
+    
+            - **securityMode**: DTLS
+    
+                   **dtlsMode**: PSK
+    
+                   **cipherSuites**: 
+    
+                ​    \- TLS_PSK_WITH_AES_128_CCM_8
+    
+                   **pskIdentity**: hint
+    
+                   **pskKey**: ABC123
 
 #### Plc4xProtocol(enum)
 
