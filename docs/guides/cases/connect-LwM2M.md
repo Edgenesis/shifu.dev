@@ -1,21 +1,21 @@
 ---
-title: Connect a lwM2M Device
+title: Connect a LwM2M Device
 sidebar_position: 6
 ---
 
-# Connect a lwM2M Device
+# Connect a LwM2M Device
 
-:::note OPC UA Introduction
-`lwM2M` (Lightweight M2M)is a lightweight IoT device management protocol developed by OMA SpecWorks (Open Mobile Alliance). It is specifically designed for resource-constrained devices, such as low-power sensors and embedded devices, providing remote management capabilities for device management and services. LwM2M operates on the CoAP (Constrained Application Protocol) protocol stack and uses UDP or DTLS as the transport layer protocol, making it suitable for low-bandwidth and unstable network environments.
+:::note LwM2M Introduction
+`LwM2M` (Lightweight M2M)is a lightweight IoT device management protocol developed by OMA SpecWorks (Open Mobile Alliance). It is specifically designed for resource-constrained devices, such as low-power sensors and embedded devices, providing remote management capabilities for device management and services. LwM2M operates on the CoAP (Constrained Application Protocol) protocol stack and uses UDP or DTLS as the transport layer protocol, making it suitable for low-bandwidth and unstable network environments.
 :::
 
-The following section describes how to use ***Shifu*** to connect devices via the `lwM2M` protocol.
+The following section describes how to use ***Shifu*** to connect devices via the `LwM2M` protocol.
 
 ## Use/Not Use Security Mode
 
 There are two examples in` example`, `lwM2MDeviceshifuWithoutSecurity` and `lwM2MDeviceShifuWithSecurity`, which correspond to using security mode and not using security mode. The following will use the not using security mode as a reference.
 
-## Start Shifu's lwM2M Components
+## Start Shifu's LwM2M Components
 
 start `deviceshifu-lwM2M`
 
