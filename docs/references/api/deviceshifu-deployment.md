@@ -16,7 +16,7 @@ Deployment under the ***Shifu*** architecture is a Kubernetes-native [Deployment
 - **apiVersion**: apps/v1
 - **kind**: Deployment
 - **metadata**<br/>Kubernetes [ObjectMeta](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/object-meta/#ObjectMeta) under metadata standards.
-- **spec**<br/>spec describes the expected behavior of a Deployment.
+- **spec**<br/>spec describes the expected behavior of a Deployment.-
 
 ## General Configuration for Deviceshifu Deployment
 
@@ -72,3 +72,18 @@ For a detailed example, please refer to https://github.com/Edgenesis/shifu/tree/
     - **IP_CAMERA_PASSWORD** (string)<br/>password for the camera RTSP stream.
     - **IP_CAMERA_CONTAINER_PORT**
         port of the RTSP camera driver container, which has to be `11111` (for now).
+
+## LwM2M DeviceShifu Deployment
+
+For a detailed example, please refer to [https://github.com/Edgenesis/shifu/tree/main/examples/lwM2MDeviceShifuWithSecurity](https://github.com/Edgenesis/shifu/tree/main/examples/lwM2MDeviceShifuWithSecurity).
+
+- **spec.template.spec.containers[0].image**
+  - **name** (string)<br/>driver image for the LwM2M device, which is `edgehub/deviceshifu-http-lwm2m:nightly`.
+- **spec.template.spec.containers[0].ports[0].containerPort**
+  - **containerPort** (integer)<br/>port for the DeviceShifu HTTP server, set to `8080`.
+- **spec.template.spec.containers[0].env**
+  - **EDGEDEVICE_NAME** (string)<br/>name of the EdgeDevice associated with the DeviceShifu, defined as `lwm2m-device`.
+  - **EDGEDEVICE_NAMESPACE** (string)<br/>namespace for the EdgeDevice corresponding to DeviceShifu, set to `deviceshifu`.
+  - **LWM2M_ENDPOINT** (string)<br/>endpoint of the LwM2M client, such as `coap://127.0.0.1:5683`.
+
+This configuration enables DeviceShifu to interact with LwM2M devices via the specified HTTP-LwM2M driver, providing an interface for communication and control under the Shifu architecture.
