@@ -85,7 +85,7 @@ For a detailed example, please refer to [https://github.com/Edgenesis/shifu/tree
   - **containerPort** (integer)<br/>port for the DeviceShifu HTTP server, set to `8080`.
   
 - **spec.template.spec.containers[0].env**
-  - **EDGEDEVICE_NAME** (string)<br/>name of the EdgeDevice associated with the DeviceShifu, defined as `lwm2m-device`.
+  - **EDGEDEVICE_NAME** (string)<br/>name of the EdgeDevice associated with the DeviceShifu, such as `lwm2m-device`.
   - **EDGEDEVICE_NAMESPACE** (string)<br/>namespace for the EdgeDevice corresponding to DeviceShifu, set to `deviceshifu`.
   - **LOG_LEVEL** (string)<br/>
   
