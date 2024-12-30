@@ -87,8 +87,5 @@ For a detailed example, please refer to [https://github.com/Edgenesis/shifu/tree
 - **spec.template.spec.containers[0].env**
   - **EDGEDEVICE_NAME** (string)<br/>name of the EdgeDevice associated with the DeviceShifu, such as `lwm2m-device`.
   - **EDGEDEVICE_NAMESPACE** (string)<br/>namespace for the EdgeDevice corresponding to DeviceShifu, set to `deviceshifu`.
-  - **LOG_LEVEL** (string)<br/>
-  
-  ​        log level for the EdgeDevice corresponding to DeviceShifu, such as  `debug`.
-  
+  - **LOG_LEVEL** (string)<br/>log level for the EdgeDevice corresponding to DeviceShifu, such as  `debug`.
   - **LWM2M_ENDPOINT** (string)<br/>endpoint of the LwM2M client, such as `coap://127.0.0.1:5683`.
