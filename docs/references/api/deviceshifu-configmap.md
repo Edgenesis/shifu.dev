@@ -79,6 +79,21 @@ instructions: |
       ... # You can continue to configure commands and corresponding NodeID according to your own needs, just continue to add according to this format
 ```
 
+- **LwM2M**
+
+```yaml
+instructions: |
+  instructions:
+    float_value:      # The name of the command you want to set 
+      protocolPropertyList:
+        ObjectId: /3442/0/130
+        EnableObserve: false
+    reset:
+      protocolPropertyList:
+        ObjectId: /3303/0/5605
+        EnableObserve: false
+      ... # You can continue to configure commands and corresponding ObjectId according to your own needs, just continue to add according to this format
+```
 
 ## DeviceShifuInstructionSettings
 
