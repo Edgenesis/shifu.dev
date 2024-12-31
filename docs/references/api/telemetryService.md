@@ -22,3 +22,4 @@ TelemetryService defines the configuration of the telemetry push service, associ
 
 - HTTPSetting([HTTPSetting](edgedevice.md#protocolsettings))<br/>Push service HTTP protocol settings.
 - MQTTSetting([MQTTSetting](edgedevice.md#protocolsettings))<br/>Push service MQTT protocol settings
+- GatewaySetting([GatewaySetting](edgedevice.md#protocolsettings))<br/>Push service Gateway protocol settings

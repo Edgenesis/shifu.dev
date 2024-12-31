@@ -79,6 +79,27 @@ instructions: |
       ... # You can continue to configure commands and corresponding NodeID according to your own needs, just continue to add according to this format
 ```
 
+## DeviceShifugatewayPropertyList
+
+Shifu communicates with the LeShan server through the LwM2M protocol, demonstrating seamless device management and interaction, which is particularly important in edge computing environments with multi-protocol and multi-type IoT devices. The following shows how to achieve other protocol device access through a gateway. For more examples, please refer to the [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
+
+- **deviceShifu-HTTP**
+
+```yaml
+instructions: |
+  instructionSettings:
+    defaultTimeoutSeconds: 8
+  instructions:
+    read_value:
+      gatewayPropertyList:
+        ObjectId: /3442/0/130
+        DataType: float
+     ... # You can continue to configure commands and corresponding ObjectId according to your own needs, just continue to add according to this format
+```
+
+The gatewayPropertyList instruction specifies how to forward data to LwM2M protocol resources. 
+1. **ObjectId**: The LwM2M Object Id.
+2. **DataType**: The LwM2M Resource Type.
 
 ## DeviceShifuInstructionSettings
 
