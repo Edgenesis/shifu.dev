@@ -19,24 +19,14 @@ The following section describes how to use ***Shifu*** to connect devices via th
 
 ## Pull and Deploy the Shifu Project
 
-Before pulling the project from GitHub, you need to download the relevant Git environment, which can be quickly installed using `yum`.
-
+Before pulling the project from GitHub, you need to download the relevant Git environment, which can be quickly installed using yum. After setting up Git, clone Shifu to your local machine. 
 ```shell
-sudo yum -y install git
+sudo yum -y install git && git clone https://github.com/Edgenesis/shifu.git
 ```
-
-Clone Shifu to your local machine:
-
-```shell
-git clone https://github.com/Edgenesis/shifu.git
-```
-
-Please use the latest configuration file to ensure support for the latest protocols:
-
+Finally, please use the latest configuration file to ensure support for the latest protocols.
 ```shell
 kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 ```
-
 
 
 ## Get the Example
@@ -79,10 +69,7 @@ kubectl apply -f examples/lwM2MDeviceShifuWithSecurity/lwM2M
 After a short wait, you can see that the external LwM2M deviceShifu component is running normally with the following command:
 
 ```shell
-kubectl get pods -n deviceshifu
-```
-Terminal displays:
-```shell
+$ kubectl get pods -n deviceshifu
 NAME                                            READY   STATUS    RESTARTS      AGE
 deviceshifu-lwm2m-deployment-794ddd9978-cn6hb   1/1     Running   4 (67m ago)   47h
 leshan-client-65b78c78cb-gktbq                  1/1     Running   1 (67m ago)   2d
@@ -90,10 +77,7 @@ leshan-client-65b78c78cb-gktbq                  1/1     Running   1 (67m ago)   
 
 We can check the service status in the cluster:
 ```shell
-kubectl get svc -n deviceshifu
-```
-Terminal displays:
-```shell
+$ kubectl get svc -n deviceshifu
 NAME                         TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)                       AGE
 deviceshifu-lwm2m-security   NodePort   10.43.50.246   <none>        80:30080/TCP,5684:30001/UDP   2d
 ```
@@ -101,25 +85,18 @@ deviceshifu-lwm2m-security   NodePort   10.43.50.246   <none>        80:30080/TC
 We can access the corresponding service through the externally exposed TCP port: 30080, using NodePort. Here, we use `curl` for a simple test, but you can also use tools like Postman or Apifox for testing.
 
 ```shell
-curl http://<Your Server IP>:30080/float_value
-
+$ curl http://<Your Server IP>:30080/float_value
 3.14159
 ```
 
 Write data:
 ```shell
-curl -X PUT http://<Your Server IP>:30080/float_value -d 88.88
-```
-The terminal displays the following content:
-```shell
+$ curl -X PUT http://<Your Server IP>:30080/float_value -d 88.88
 Success
 ```
 Read the `float_value` data again.
 ```shell
-curl http://<Your Server IP>:30080/float_value
-```
-The terminal displays the following content:
-```shell
+$ curl http://<Your Server IP>:30080/float_value
 88.88
 ```
 Fill in your server IP address in `Your Server IP` to perform a simple test.
