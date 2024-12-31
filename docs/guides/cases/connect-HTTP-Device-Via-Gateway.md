@@ -24,21 +24,24 @@ kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 We'll take connecting a HTTP-based thermometer as an example. Below is the general data flow of our access:
 
 ```mermaid
-sequenceDiagram
-    participant C as Client
-    participant DS as deviceshifu-thermometer
-    participant GW as gateway-lwm2m
-    participant LWM as LwM2M Gateway
-    participant T as Thermometer Device
+flowchart BT
 
-    C->>DS: GET /read_value
-    DS->>GW: Forward Request
-    GW->>LWM: LwM2M Read /3442/0/130
-    LWM->>T: Read Temperature Data
-    T->>LWM: Return Data
-    LWM->>GW: LwM2M Response
-    GW->>DS: Convert to HTTP Response
-    DS->>C: Return Temperature Data
+ls[LwM2M-server]
+
+subgraph EdgeNode
+    subgraph Shifu
+      subgraph ds1[deviceShifu-HTTP]
+          dsh[deviceShifu-HTTP]
+          gl1[LwM2M-gateway]
+          dsh <-->|HTTP| gl1
+      end
+    end
+end
+
+dh[device-HTTP]
+
+dh -->|HTTP| dsh
+gl1 -->|LwM2M| ls
 ```
 
 1. First, we deploy the corresponding LwM2M gateway. The code is located in `examples/lwm2m_gw_http/deviceshifu-lwm2m`. Let's deploy them in the cluster.
@@ -47,7 +50,7 @@ sequenceDiagram
 kubectl apply -f examples/lwm2m_gw_http/deviceshifu-lwm2m
 ```
 
-2. Configure the exposed client service and the gateway component for HTTP and LwM2M conversion
+2. Deploy and run the Device Adapter: deviceShifu-HTTP
 
 ```bash
 kubectl apply -f examples/lwm2m_gw_http/deviceshifu-thermometer
@@ -90,7 +93,6 @@ curl http://<Your Server IP>:31703/read_value
 Test result reference:
 
 ```shell
-curl http://<Your Server IP>:31703/read_value
 19
 ```
 Fill in your server IP address in `Your Server IP` to perform a simple test.
