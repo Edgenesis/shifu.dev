@@ -11,11 +11,12 @@ The LwM2M (Lightweight Machine to Machine) Gateway consists of two main componen
 
 ## Pull and Deploy the Shifu Project
 
-Before pulling the project from GitHub, you need to download the relevant Git environment, which can be quickly installed using yum. After setting up Git, clone Shifu to your local machine. Finally, please use the latest configuration file to ensure support for the latest protocols.
-
+Before pulling the project from GitHub, you need to download the relevant Git environment, which can be quickly installed using yum. After setting up Git, clone Shifu to your local machine. 
 ```shell
-sudo yum -y install git
-git clone https://github.com/Edgenesis/shifu.git
+sudo yum -y install git && git clone https://github.com/Edgenesis/shifu.git
+```
+Finally, please use the latest configuration file to ensure support for the latest protocols.
+```shell
 kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 ```
 
