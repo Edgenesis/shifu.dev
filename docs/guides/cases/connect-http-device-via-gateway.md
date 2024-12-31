@@ -61,10 +61,7 @@ kubectl apply -f examples/lwm2m_gw_http/deviceshifu-thermometer
 The `kubectl` command allows you to view the status of ***deviceShifu***:
 
 ```bash
-kubectl get pods -n deviceshifu
-```
-We can see that `deviceshifu-lwm2m-deployment` and `deviceshifu-thermometer-deployment` are running normally.
-```shell
+$ kubectl get pods -n deviceshifu
 NAME                                                 READY   STATUS    RESTARTS      AGE
 deviceshifu-lwm2m-deployment-794ddd9978-z7lcq        1/1     Running   2 (44m ago)   44m
 deviceshifu-thermometer-deployment-b98fbbcf8-6g69b   2/2     Running   3 (42m ago)   43m
@@ -75,10 +72,7 @@ deviceshifu-thermometer-deployment-b98fbbcf8-6g69b   2/2     Running   3 (42m ag
 We can check our exposed ports using the following command:
 
 ```shell
-kubectl get svc -n deviceshifu
-```
-
-```shell
+$ kubectl get svc -n deviceshifu
 NAME                        TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)                       AGE
 deviceshifu-lwm2m-service   NodePort       10.43.47.30    <none>        80:30080/TCP,5683:30000/UDP   47m
 deviceshifu-thermometer     LoadBalancer   10.43.64.126   <pending>     80:31703/TCP                  46m
@@ -87,12 +81,7 @@ deviceshifu-thermometer     LoadBalancer   10.43.64.126   <pending>     80:31703
 As we can see, the external client service port is 31703. Let's test it using curl, apifox, or postman.
 
 ```shell
-curl http://<Your Server IP>:31703/read_value
-```
-
-Test result reference:
-
-```shell
+$ curl http://<Your Server IP>:31703/read_value
 19
 ```
 Fill in your server IP address in `Your Server IP` to perform a simple test.
