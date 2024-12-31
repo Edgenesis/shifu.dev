@@ -16,19 +16,6 @@ This document demonstrates the integration of LwM2M protocol devices with Shifu.
 The following section describes how to use ***Shifu*** to connect devices via the `LwM2M` protocol.
 
 
-
-## Pull and Deploy the Shifu Project
-
-Before pulling the project from GitHub, you need to download the relevant Git environment, which can be quickly installed using yum. After setting up Git, clone Shifu to your local machine. 
-```shell
-sudo yum -y install git && git clone https://github.com/Edgenesis/shifu.git
-```
-Finally, please use the latest configuration file to ensure support for the latest protocols.
-```shell
-kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
-```
-
-
 ## Get the Example
 
 The example provides two methods of integration: [LwM2MDeviceShifuWithSecurity](https://github.com/Edgenesis/shifu/tree/main/examples/lwM2MDeviceShifuWithSecurity) and [LwM2MDeviceshifuWithoutSecurity](https://github.com/Edgenesis/shifu/tree/main/examples/lwM2MDeviceshifuWithoutSecurity). The choice depends on the security configuration (Security Mode) of the device. If the device does not have the corresponding security configuration set, use [LwM2MDeviceshifuWithoutSecurity](https://github.com/Edgenesis/shifu/tree/main/examples/lwM2MDeviceshifuWithoutSecurity).
@@ -58,15 +45,15 @@ apiVersion: shifu.edgenesis.io/v1alpha1
 
 
 
-## Deploy LwM2M deviceShifu
+## Deploy deviceShifu LwM2M
 
-Execute the following command to deploy our **deviceShifu**:
+Execute the following command to deploy our **deviceShifu LwM2M**:
 
 ```shell
 kubectl apply -f examples/lwM2MDeviceShifuWithSecurity/lwM2M
 ```
 
-After a short wait, you can see that the external LwM2M deviceShifu component is running normally with the following command:
+After a short wait, you can see that the external deviceShifu LwM2M component is running normally with the following command:
 
 ```shell
 $ kubectl get pods -n deviceshifu
@@ -82,21 +69,34 @@ NAME                         TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)    
 deviceshifu-lwm2m-security   NodePort   10.43.50.246   <none>        80:30080/TCP,5684:30001/UDP   2d
 ```
 
-We can access the corresponding service through the externally exposed TCP port: 30080, using NodePort. Here, we use `curl` for a simple test, but you can also use tools like Postman or Apifox for testing.
+## Test Execution
+
+We can deploy an nginx instance in our Kubernetes cluster for testing:
 
 ```shell
-$ curl http://<Your Server IP>:30080/float_value
+$ kubectl run nginx --image=nginx -n deviceshifu
+pod/nginx created
+```
+Verify the nginx pod's running status:
+```shell
+$ kubectl get pods -n deviceshifu | grep nginx
+nginx                                           1/1     Running   0   3m21s
+```
+Access the nginx container and test our deviceShifu LwM2M using curl:
+```shell
+kubectl exec -it nginx -n deviceshifu -- bash
+```
+```shell
+$ curl deviceshifu-lwm2m-nosecurity.deviceshifu.svc.cluster.local/float_value
 3.14159
 ```
-
 Write data:
 ```shell
-$ curl -X PUT http://<Your Server IP>:30080/float_value -d 88.88
+$ curl -X PUT deviceshifu-lwm2m-nosecurity.deviceshifu.svc.cluster.local/float_value -d 88.88
 Success
 ```
 Read the `float_value` data again.
 ```shell
-$ curl http://<Your Server IP>:30080/float_value
+$ curl deviceshifu-lwm2m-nosecurity.deviceshifu.svc.cluster.local/float_value
 88.88
 ```
-Fill in your server IP address in `Your Server IP` to perform a simple test.
