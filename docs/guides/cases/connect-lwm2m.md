@@ -9,7 +9,7 @@ This document demonstrates the integration of LwM2M protocol devices with Shifu.
 
 ## Introduction to LwM2M protocol
 
-`LwM2M` (Lightweight M2M)is a lightweight IoT device management protocol developed by OMA SpecWorks (Open Mobile Alliance). It is specifically designed for resource-constrained devices, such as low-power sensors and embedded devices, providing remote management capabilities for device management and services. LwM2M operates on the CoAP (Constrained Application Protocol) protocol stack and uses UDP or DTLS as the transport layer protocol, making it suitable for low-bandwidth and unstable network environments.
+`LwM2M` (Lightweight M2M) is a lightweight IoT device management protocol developed by OMA SpecWorks (Open Mobile Alliance). It is specifically designed for resource-constrained devices, such as low-power sensors and embedded devices, providing remote management capabilities for device management and services. LwM2M operates on the CoAP (Constrained Application Protocol) protocol stack and uses UDP or DTLS as the transport layer protocol, making it suitable for low-bandwidth and unstable network environments.
 
 The following section describes how to use ***Shifu*** to connect devices via the `LwM2M` protocol.
 
@@ -17,7 +17,7 @@ The following section describes how to use ***Shifu*** to connect devices via th
 
 The example provides two methods of integration: [LwM2MDeviceShifuWithSecurity](https://github.com/Edgenesis/shifu/tree/main/examples/lwM2MDeviceShifuWithSecurity) and [LwM2MDeviceshifuWithoutSecurity](https://github.com/Edgenesis/shifu/tree/main/examples/lwM2MDeviceshifuWithoutSecurity). The choice depends on the security configuration (Security Mode) of the device. If the device does not have the corresponding security configuration set, use [LwM2MDeviceshifuWithoutSecurity](https://github.com/Edgenesis/shifu/tree/main/examples/lwM2MDeviceshifuWithoutSecurity).
 
-For demonstration purposes, this guide illustrates a LwM2M device with `Security Mode` set to `DTLS`. You can also simulate a LwM2M device using the `leshan-client` from the example files, which can be found in `examples\lwM2MDeviceShifuWithSecurity\mockdevice`.
+For demonstration purposes, this guide illustrates a LwM2M device with `Security Mode` set to `DTLS`. You can also simulate a LwM2M device using the `leshan-client` from the example files, which can be found in [mockdevice](https://github.com/Edgenesis/shifu/tree/main/examples/lwM2MDeviceshifuWithoutSecurity/mockdevice).
 
 ## Modify Configuration
 
@@ -66,7 +66,7 @@ Execute the following command to deploy our **deviceShifu LwM2M**:
 kubectl apply -f examples/lwM2MDeviceShifuWithSecurity/lwM2M
 ```
 
-After a short wait, you can see that the external deviceShifu LwM2M component is running normally with the following command:
+You can check the status of deviceShifu by running the following command:
 
 ```shell
 $ kubectl get pods -n deviceshifu
@@ -85,21 +85,21 @@ deviceshifu-lwm2m-security   NodePort   10.43.50.246   <none>        80:30080/TC
 
 ## Test Execution
 
-We can deploy an nginx instance in our Kubernetes cluster for testing:
+We can deploy an Nginx instance in our Kubernetes cluster for testing:
 
 ```shell
 $ kubectl run nginx --image=nginx -n deviceshifu
 pod/nginx created
 ```
 
-Verify the nginx pod's running status:
+Verify the Nginx pod's running status:
 
 ```shell
 $ kubectl get pods -n deviceshifu | grep nginx
 nginx                                           1/1     Running   0   3m21s
 ```
 
-Access the nginx container and test our deviceShifu LwM2M using curl:
+Access the Nginx container and test our deviceShifu LwM2M using curl:
 
 ```shell
 kubectl exec -it nginx -n deviceshifu -- bash
