@@ -79,11 +79,8 @@ For a detailed example, please refer to [https://github.com/Edgenesis/shifu/tree
 
 - **spec.template.spec.containers[0].image**
   - **name** (string)<br/>driver image for the LwM2M device, the test version of the driver image for the LwM2M device is `edgehub/deviceshifu-http-lwm2m:nightly`. Please use the stable version in the production environment.
-  
 - **spec.template.spec.containers[0].ports[0].containerPort**
-  
   - **containerPort** (integer)<br/>port for the DeviceShifu HTTP server, set to `8080`.
-  
 - **spec.template.spec.containers[0].env**
-  - **EDGEDEVICE_NAME** (string)<br/>name of the EdgeDevice associated with the DeviceShifu, defined as `lwm2m-device`.
+  - **EDGEDEVICE_NAME** (string)<br/>name of the EdgeDevice associated with the DeviceShifu, such as `edgedevice-lwm2m`.
   - **EDGEDEVICE_NAMESPACE** (string)<br/>namespace for the EdgeDevice corresponding to DeviceShifu, set to `deviceshifu`.
