@@ -40,7 +40,7 @@ apiVersion: shifu.edgenesis.io/v1alpha1
 
 The `examples\lwM2MDeviceShifuWithSecurity\lwM2M\lwm2m-deviceshifu-configmap.yaml` file allows for the configuration of custom commands. In this example, we have configured two commands: `float_value` and `reset`. Each command definition includes two essential parameters: the LwM2M object identifier (`ObjectId`) that specifies the target resource path, and the observation mode flag (`EnableObserve`) that determines whether the server should monitor the resource for changes.
 
-```shell
+```yaml
 apiVersion: v1
 ...
 ...
@@ -62,13 +62,13 @@ The `ObjectId` follows the format `/ObjectID/ObjectInstance/ResourceID`. For exa
 
 Execute the following command to deploy our **deviceShifu LwM2M**:
 
-```shell
+```bash
 kubectl apply -f examples/lwM2MDeviceShifuWithSecurity/lwM2M
 ```
 
 You can check the status of deviceShifu by running the following command:
 
-```shell
+```bash
 $ kubectl get pods -n deviceshifu
 NAME                                            READY   STATUS    RESTARTS      AGE
 deviceshifu-lwm2m-deployment-794ddd9978-cn6hb   1/1     Running   4 (67m ago)   47h
@@ -77,7 +77,7 @@ leshan-client-65b78c78cb-gktbq                  1/1     Running   1 (67m ago)   
 
 We can check the service status in the cluster:
 
-```shell
+```bash
 $ kubectl get svc -n deviceshifu
 NAME                         TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)                       AGE
 deviceshifu-lwm2m-security   NodePort   10.43.50.246   <none>        80:30080/TCP,5684:30001/UDP   2d
@@ -87,39 +87,39 @@ deviceshifu-lwm2m-security   NodePort   10.43.50.246   <none>        80:30080/TC
 
 We can deploy an Nginx instance in our Kubernetes cluster for testing:
 
-```shell
+```bash
 $ kubectl run nginx --image=nginx -n deviceshifu
 pod/nginx created
 ```
 
 Verify the Nginx pod's running status:
 
-```shell
+```bash
 $ kubectl get pods -n deviceshifu | grep nginx
 nginx                                           1/1     Running   0   3m21s
 ```
 
 Access the Nginx container and test our deviceShifu LwM2M using curl:
 
-```shell
+```bash
 kubectl exec -it nginx -n deviceshifu -- bash
 ```
 
-```shell
+```bash
 $ curl deviceshifu-lwm2m-nosecurity.deviceshifu.svc.cluster.local/float_value
 3.14159
 ```
 
 Write data:
 
-```shell
+```bash
 $ curl -X PUT deviceshifu-lwm2m-nosecurity.deviceshifu.svc.cluster.local/float_value -d 88.88
 Success
 ```
 
 Read the `float_value` data again.
 
-```shell
+```bash
 $ curl deviceshifu-lwm2m-nosecurity.deviceshifu.svc.cluster.local/float_value
 88.88
 ```
