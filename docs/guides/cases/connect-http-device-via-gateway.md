@@ -11,12 +11,15 @@ The LwM2M (Lightweight Machine to Machine) Gateway consists of two main componen
 
 ## Pull and Deploy the Shifu Project
 
-Before pulling the project from GitHub, you need to download the relevant Git environment, which can be quickly installed using yum. After setting up Git, clone Shifu to your local machine. 
-```shell
+Before pulling the project from GitHub, you need to download the relevant Git environment, which can be quickly installed using yum. After setting up Git, clone Shifu to your local machine.
+
+```bash
 sudo yum -y install git && git clone https://github.com/Edgenesis/shifu.git
 ```
+
 Finally, please use the latest configuration file to ensure support for the latest protocols.
-```shell
+
+```bash
 kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 ```
 
@@ -72,7 +75,7 @@ deviceshifu-thermometer-deployment-b98fbbcf8-6g69b   2/2     Running   3 (42m ag
 
 We can check our exposed ports using the following command:
 
-```shell
+```bash
 $ kubectl get svc -n deviceshifu
 NAME                        TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)                       AGE
 deviceshifu-lwm2m-service   NodePort       10.43.47.30    <none>        80:30080/TCP,5683:30000/UDP   47m
@@ -81,8 +84,9 @@ deviceshifu-thermometer     LoadBalancer   10.43.64.126   <pending>     80:31703
 
 As we can see, the external client service port is 31703. Let's test it using curl, apifox, or postman.
 
-```shell
+```bash
 $ curl http://<Your Server IP>:31703/read_value
 19
 ```
+
 Fill in your server IP address in `Your Server IP` to perform a simple test.
