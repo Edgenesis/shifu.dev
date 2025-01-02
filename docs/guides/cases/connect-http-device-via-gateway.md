@@ -1,17 +1,17 @@
 ---
-title: Connect a HTTP Device via Gateway
+title: Connect a HTTP Device via LwM2M Gateway
 sidebar_position: 7
 ---
 
-# Connect a HTTP Device via Gateway
+# Connect a HTTP Device via LwM2M Gateway
 
-## Introduction to LwM2M Gateway
+## LwM2M Gateway Introduction
 
-The LwM2M (Lightweight Machine to Machine) Gateway consists of two main components: an LwM2M client that connects to the LwM2M server and an HTTP client that connects to deviceShifu.  The LwM2M Gateway enables deviceShifu to adapt to the LwM2M protocol, handle requests from the LwM2M server, and push data to the cloud, fulfilling the two major functions required by the LwM2M protocol: the capability to pull data from the device and post data from the cloud to the device.
+The LwM2M (Lightweight Machine to Machine) Gateway consists of two main components: an LwM2M client that connects to the LwM2M server and an HTTP client that connects to deviceShifu.The LwM2M Gateway enables deviceShifu to adapt to the LwM2M protocol,handle requests from the LwM2M server, and push data to the cloud, fulfilling the two major functions required by the LwM2M protocol: the capability to pull data from the device and post data from the cloud to the device.
 
-## Get the Example and Deploy LwM2M deviceShifu
+## Deploy deviceShifu-HTTP and LwM2M-gateway
 
-We'll demonstrate the integration using an HTTP-based thermometer as an example. You can find the corresponding templates in [lwm2m_gw_http](https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http). These templates can be modified to integrate other HTTP protocol devices. To ensure our Gateway operates correctly, we need to modify several configuration files.
+Using [lwm2m_gw_http](https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http) as an example, to implement connecting a HTTP Device via LwM2M Gateway, you need to configure and deploy the corresponding edgedevice, deviceShifu, and LwM2M-gateway. Below are the reference configurations:
 
 ### **Configure the edgedevice.yaml**
 
@@ -36,7 +36,6 @@ Before gateway integration, we need to configure the commands that the gateway c
 
 ````yaml
 ...
-...
   instructions: |
     instructionSettings:
       defaultTimeoutSeconds: 8
@@ -45,13 +44,7 @@ Before gateway integration, we need to configure the commands that the gateway c
         gatewayPropertyList:
           ObjectId: /3442/0/130    # Device instance object ID
           DataType: float          # Data type
-  telemetries: |
-    telemetries:
-      device_health:               # Specify deviceShifu device health monitoring configuration
-        properties:
-          instruction: get_status
-          initialDelayMs: 1000
-          intervalMs: 1000
+...
 ````
 
 ### **Configure LwM2M-gateway Settings**
