@@ -34,7 +34,7 @@ Hardware model of an EdgeDevice, e.g. `Siemens S7-1200`.
 Indicates how the EdgeDevice connects to Shifu.
 
 - **connection** (Connection) required
-    - **Connection** (string)<br/>Indicates the connection method, which has to be Ethernet (for now).
+  - **Connection** (string)<br/>Indicates the connection method, which has to be Ethernet (for now).
 
 ### Address
 
@@ -47,32 +47,33 @@ Connection address of the EdgeDevice, the format varies depending on the [protoc
 Connection protocol of the EdgeDevice.
 
 - **protocol** (Protocol) required
-    - **Protocol** (string)<br/>indicates the connection protocol, which has to be `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA`, `Socket` or `PLC4X` (for now).
+  - **Protocol** (string)<br/>indicates the connection protocol, which has to be `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA`, `Socket` or `PLC4X` (for now).
 
 ### ProtocolSettings
 
 Settings of EdgeDevice connection protocol.
 
 - **protocolSettings** (ProtocolSettings)
-    - **MQTTSetting** (MQTTSetting) 
-        - **MQTTTopic** (string)<br/>subscription of MQTT topic, e.g. `/test/test`.
-    - **OPCUASetting** (OPCUASetting)
-        - **OPCUAEndpoint** (string)<br/>server address of OPC UA, e.g. `opc.tcp://192.168.0.1:4840/test/server`.
-        - **SecurityMode** (string)<br/>message encryption mode of OPC UA, which has to be `None` (for now).
-        - **Username** (string)<br/>connection authentication username of OPC UA, e.g. `operator`.
-        - **Password** (string)<br/>connection authentication password of OPC UA, e.g. `password`.
-        - **ConnectionTimeoutInMilliseconds** (int64)<br/>requested connection milliseconds for OPC UA, e.g. `1000`.
-    - **SocketSetting** (SocketSetting)
-        - **encoding** (string)<br/>encoding of the socket connection, optionally `utf-8` or `hex`, the default value is `utf-8`.
-        - **NetworkType** (string)<br/>protocol of the socket link, which has to be `tcp` (for now).
-        - **bufferLength** (int)<br/>buffer size of the socket when transferring data, the default value is 1024.
-    - **PLC4XSetting** (PLC4XSetting)
-        - **protocol** ([Plc4xProtocol](#plc4xprotocolenum))<br/>protocol used by plc4x to connect to the device.
-    - **GatewaySetting**(GatewaySetting)
-        - **protocol** (string)<br/>protocol used by the gateway, specified as `LwM2M`.
-        - **LwM2MSetting** (LwM2MSetting)
-            - **endpointName** (string)<br/>the unique identifier for the LwM2M client, e.g., `deviceshifu-lwm2m-service`.
-            - **securityMode** (string)<br/>the security mode setting for the LwM2M protocol, such as `None` or `DTLS`.The `DTLS` section is covered in detail in the `LwM2MSetting` section of this document.
+  - **MQTTSetting** (MQTTSetting)
+    - **MQTTTopic** (string)<br/>subscription of MQTT topic, e.g. `/test/test`.
+  - **OPCUASetting** (OPCUASetting)
+    - **OPCUAEndpoint** (string)<br/>server address of OPC UA, e.g. `opc.tcp://192.168.0.1:4840/test/server`.
+    - **SecurityMode** (string)<br/>message encryption mode of OPC UA, which has to be `None` (for now).
+    - **Username** (string)<br/>connection authentication username of OPC UA, e.g. `operator`.
+    - **Password** (string)<br/>connection authentication password of OPC UA, e.g. `password`.
+    - **ConnectionTimeoutInMilliseconds** (int64)<br/>requested connection milliseconds for OPC UA, e.g. `1000`.
+  - **SocketSetting** (SocketSetting)
+    - **encoding** (string)<br/>encoding of the socket connection, optionally `utf-8` or `hex`, the default value is `utf-8`.
+    - **NetworkType** (string)<br/>protocol of the socket link, which has to be `tcp` (for now).
+    - **bufferLength** (int)<br/>buffer size of the socket when transferring data, the default value is 1024.
+  - **PLC4XSetting** (PLC4XSetting)
+    - **protocol** ([Plc4xProtocol](#plc4xprotocolenum))<br/>protocol used by plc4x to connect to the device.
+  - **GatewaySetting** (GatewaySetting)
+    - **protocol** (string)<br/>protocol used by the gateway, specified as `LwM2M`.
+    - **address** (string)<br/>The LwM2M-server address, typically represented as a Fully Qualified Domain Name (FQDN) within the Kubernetes cluster, for example: `deviceshifu-lwm2m-service.deviceshifu.svc.cluster.local:5683`.
+    - **LwM2MSetting** (LwM2MSetting)
+      - **endpointName** (string)<br/>the unique identifier for the LwM2M client, e.g., `deviceshifu-lwm2m-service`.
+      - **securityMode** (string)<br/>the security mode setting for the LwM2M protocol, such as `None` or `DTLS`.The `DTLS` section is covered in detail in the `LwM2MSetting` section of this document.
 
 #### Plc4xProtocol(enum)
 
@@ -103,4 +104,4 @@ Current status information
 Current state of EdgeDevice.
 
 - **edgedevicephase** (EdgeDevicePhase)
-    - EdgeDevicePhase (string)<br/>State of EdgeDevice, has to be `Pending`, `Running`, `Failed` or `Unknown`.
+  - EdgeDevicePhase (string)<br/>State of EdgeDevice, has to be `Pending`, `Running`, `Failed` or `Unknown`.
