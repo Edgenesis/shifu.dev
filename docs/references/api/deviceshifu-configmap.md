@@ -17,9 +17,9 @@ ConfigMap of ***Shifu*** is a Kubernetes-native [Kubernetes ConfigMap](https://k
 - **kind**: ConfigMap
 - **metadata** (ObjectMeta)<br/>the standard [Kubernetes ObjectMeta](https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/object-meta/#ObjectMeta)
 - **data** (map[string]string)<br/>Data for ConfigMap.
-    - **driverProperties** ([DeviceShifuDriverProperties](#deviceshifudriverproperties))
-    - **instructions** ([DeviceShifuInstructions](#deviceshifuinstructions))
-    - **telemetries** ([DeviceShifuTelemetries](#deviceshifutelemetries))
+  - **driverProperties** ([DeviceShifuDriverProperties](#deviceshifudriverproperties))
+  - **instructions** ([DeviceShifuInstructions](#deviceshifuinstructions))
+  - **telemetries** ([DeviceShifuTelemetries](#deviceshifutelemetries))
 
 ## DeviceShifuDriverProperties
 
@@ -36,25 +36,28 @@ DeviceShifuInstructions are all the commands and settings that ***deviceShifu***
 - **instructionSettings** ([DeviceShifuInstructionSettings](#deviceshifuinstructionsettings))
 - **instructions** (map[string]DeviceShifuInstruction)
  **Example:**
+
 ```yml
 instructions: |
   instructions:
     get_value: # The name of the command you want to set
       protocolPropertyList:      # The parameters of the command have different configurations according to different protocols
 ```
-  - **[DeviceShifuInstruction](#deviceshifuinstruction)**
+
+- **[DeviceShifuInstruction](#deviceshifuinstruction)**
 
 ## DeviceShifuInstruction
 
 DeviceShifuInstruction is the command that ***deviceShifu*** can receive.
 
--  **protocolPropertyList** (map[string]string)([DeviceShifuprotocolPropertyList](#deviceshifuprotocolpropertylist))<br/>parameters of the ***deviceShifu*** command, which have various configurations according to different protocols. Please refer to the  examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
+- **protocolPropertyList** (map[string]string)([DeviceShifuprotocolPropertyList](#deviceshifuprotocolpropertylist))<br/>parameters of the ***deviceShifu*** command, which have various configurations according to different protocols. Please refer to the  examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
 
 ## DeviceShifuprotocolPropertyList
 
 DeviceShifuprotocolPropertyList parameters of the ***deviceShifu*** command, which have various configurations according to different protocols. The following shows the use of MQTT protocol and OPC UA protocol. Please refer to the examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
 
 - **MQTT**
+
 ```yml
 instructions: |
     instructions:
@@ -66,7 +69,9 @@ instructions: |
           MQTTTopic: "/test/test2"
       ...  # You can continue to configure commands and corresponding topics according to your own needs, just continue to add according to this format
 ```
+
 - **OPC UA**
+
 ```yml
 instructions: |
     instructions:
@@ -107,7 +112,7 @@ DeviceShifuTelemetries refer to one or more commands that ***deviceShifu*** uses
 
 - **telemetrySettings** ([DeviceShifuTelemetrySettings](#deviceshifutelemetrysettings))
 - **telemetries** (map[string]DeviceShifuTelemetry)
-    - **[DeviceShifuTelemetry](#deviceshifutelemetry)**
+  - **[DeviceShifuTelemetry](#deviceshifutelemetry)**
 
 ## DeviceShifuTelemetrySettings
 
@@ -116,25 +121,25 @@ DeviceShifuTelemetrySettings are the settings related to ***deviceShifu*** monit
 - **defaultPushToServer** (bool)<br/>***deviceShifu*** Defaults all telemetry to the push service. default false.
 - **defaultTelemetryCollectionService** (string)<br/>***deviceShifu*** Defaults telemetry to push addresses.
 - HTTP protocol
-    - **telemetryUpdateIntervalInMilliseconds** (int64)<br/>millisecond interval at which ***deviceShifu*** detects Telemetry. The default value is 3000.
-    - **telemetryTimeoutInMilliseconds** (int64)<br/>timeout for ***deviceShifu*** to connect to the device. The default value is 3000.
-    - **telemetryInitialDelayInMilliseconds** (int64)<br/>delay time for the initial detection of ***deviceShifu***. The default value is 3000.
+  - **telemetryUpdateIntervalInMilliseconds** (int64)<br/>millisecond interval at which ***deviceShifu*** detects Telemetry. The default value is 3000.
+  - **telemetryTimeoutInMilliseconds** (int64)<br/>timeout for ***deviceShifu*** to connect to the device. The default value is 3000.
+  - **telemetryInitialDelayInMilliseconds** (int64)<br/>delay time for the initial detection of ***deviceShifu***. The default value is 3000.
 - TCP socket protocol
-    - **telemetryUpdateIntervalInMilliseconds** (int64)<br/>millisecond interval at which ***deviceShifu*** detects Telemetry. Default is 1000. (Detection method: ***deviceShifu*** tries to establish a socket connection with the device once every 1000 milliseconds, and determines if the device is on by whether the connection is successful.)
+  - **telemetryUpdateIntervalInMilliseconds** (int64)<br/>millisecond interval at which ***deviceShifu*** detects Telemetry. Default is 1000. (Detection method: ***deviceShifu*** tries to establish a socket connection with the device once every 1000 milliseconds, and determines if the device is on by whether the connection is successful.)
 - MQTT protocol
-    - **telemetryUpdateIntervalInMiliseconds** (int64)<br/>***deviceShifu*** detects the millisecond interval between the MQTT and the receipt of the last msg. Default value is 3000.
+  - **telemetryUpdateIntervalInMiliseconds** (int64)<br/>***deviceShifu*** detects the millisecond interval between the MQTT and the receipt of the last msg. Default value is 3000.
 - PLC4X
-    - **telemetryUpdateIntervalInMiliseconds** (int64)<br/>***deviceShifu*** The interval (in milliseconds) for detecting Telemetry. (Detection method: using PLC4X to send ping to the device.)
+  - **telemetryUpdateIntervalInMiliseconds** (int64)<br/>***deviceShifu*** The interval (in milliseconds) for detecting Telemetry. (Detection method: using PLC4X to send ping to the device.)
 
 ## DeviceShifuTelemetry
 
 DeviceShifuTelemetry describes which commands ***deviceShifu*** uses to monitor the status of IoT devices.
 
 - **properties** (DeviceShifuTelemetryProperties)
-    - **instruction** (string)<br/>Indicates the command used for telemetry, and must be a valid command as defined by [DeviceShifuInstruction](#deviceshifuinstruction) above.
-    - **initialDelayMs** (int)<br/>Indicates the delay (in milliseconds) to start telemetry.
-    - **intervalMs** (int)<br/>Indicates the interval of telemetry (milliseconds).
-    - **pushSettings** ([DeviceShifuTelemetryPushSettings](#deviceshifutelemetrypushsettings))<br/>Used to set up this telemetry push service.
+  - **instruction** (string)<br/>Indicates the command used for telemetry, and must be a valid command as defined by [DeviceShifuInstruction](#deviceshifuinstruction) above.
+  - **initialDelayMs** (int)<br/>Indicates the delay (in milliseconds) to start telemetry.
+  - **intervalMs** (int)<br/>Indicates the interval of telemetry (milliseconds).
+  - **pushSettings** ([DeviceShifuTelemetryPushSettings](#deviceshifutelemetrypushsettings))<br/>Used to set up this telemetry push service.
 
 ## DeviceShifuTelemetryPushSettings
 
