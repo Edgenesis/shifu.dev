@@ -1,3 +1,7 @@
+---
+title: Gateway General Documentation
+sidebar_position: 0
+---
 
 # Gateway General Documentation
 
@@ -5,21 +9,24 @@ The Shifu project's gateway is a multi-protocol bridge that supports various pro
 
 ## Overview
 
-The LwM2M (Lightweight Machine to Machine) Gateway consists of two main components: an LwM2M client that connects to the LwM2M server and an HTTP client that connects to deviceShifu.   The LwM2M Gateway enables deviceShifu to adapt to the LwM2M protocol, handle requests from the LwM2M server, and push data to the cloud, fulfilling the two major functions required by the LwM2M protocol: the capability to pull data from the device and post data from the cloud to the device.
+The **Shifu** gateway supports multiple communication protocols, including HTTP, MQTT, and LwM2M. It offers a universal solution for IoT ecosystems, allowing devices using different protocols to be managed and controlled through a single gateway, reducing development complexity and promoting integration with cloud services and other applications.
+
+The gateway component enables devices to adapt to a unified protocol and handle requests from the same server. It facilitates telemetry services to extract data from devices and supports data publishing from the cloud to devices. Through the same server, data can also be uniformly pushed to the cloud.
 
 ## Key Features
 
 - **Protocol Conversion:** Supports converting HTTP, MQTT, and OPC UA requests into a unified internal message format, allowing developers to interact with different types of IoT devices without dealing directly with the underlying protocol details.
 - **Device Management:** Provides core functionalities such as device registration, reading attributes, executing commands, and monitoring device status, applicable to devices under multiple protocols.
-- **Modular Design:** Implemented in Go, the modular architecture ensures scalability and maintainability of the system.
 
 ## Typical Use Case
 
 A typical use case is an HTTP or MQTT client interacting with IoT devices:
 
-1. The client sends a request (e.g., containing device ID and operation instructions) to the gateway.
-2. The gateway converts the request into an internal operation request and processes it according to the device protocol.
-3. After the device responds, the gateway converts it back to the original protocol response (HTTP, MQTT, etc.) and returns it to the client.
+- The client sends a request (e.g. containing device ID and operation instructions) to the gateway.
+
+- The gateway converts the request into an internal operation request and processes it according to the device protocol.
+
+- After the device responds, the gateway converts it back to the original protocol response (HTTP, MQTT, etc.) and returns it to the client.
 
 ## Advantages
 
