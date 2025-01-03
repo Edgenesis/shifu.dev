@@ -36,6 +36,7 @@ DeviceShifuInstructions are all the commands and settings that ***deviceShifu***
 - **instructionSettings** ([DeviceShifuInstructionSettings](#deviceshifuinstructionsettings))
 - **instructions** (map[string]DeviceShifuInstruction)
  **Example:**
+
 ```yml
 instructions: |
   instructions:
@@ -67,7 +68,9 @@ instructions: |
           MQTTTopic: "/test/test2"
       ...  # You can continue to configure commands and corresponding topics according to your own needs, just continue to add according to this format
 ```
+
 - **OPC UA**
+
 ```yml
 instructions: |
     instructions:
@@ -80,6 +83,21 @@ instructions: |
       ... # You can continue to configure commands and corresponding NodeID according to your own needs, just continue to add according to this format
 ```
 
+- **LwM2M**
+
+```yaml
+instructions: |
+  instructions:
+    float_value:      # The name of the command you want to set 
+      protocolPropertyList:
+        ObjectId: /3442/0/130 # Device instance object ID, Format: /{Object ID}/{Object Instance}/{Resource ID}
+        EnableObserve: false  # Boolean flag to enable/disable observation mode
+    reset:
+      protocolPropertyList:
+        ObjectId: /3303/0/5605
+        EnableObserve: false
+      ... # You can continue to configure commands and corresponding ObjectId according to your own needs, just continue to add according to this format
+```
 ## DeviceShifuGatewayPropertyList
 
 The `gatewayPropertyList` instruction specifies how to adapt data to a unified protocol resource. The `instructions` defines how ***deviceShifu*** forwards requests through the gateway by configuring `gatewayPropertyList`, enabling multi-protocol devices to communicate with the gateway. The gateway then handles protocol conversion and communication. Please refer to the examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http).
