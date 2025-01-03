@@ -49,7 +49,7 @@ instructions: |
 DeviceShifuInstruction is the command that ***deviceShifu*** can receive.
 
 - **protocolPropertyList** (map[string]string)([DeviceShifuprotocolPropertyList](#deviceshifuprotocolpropertylist))<br/>parameters of the ***deviceShifu*** command, which have various configurations according to different protocols. Please refer to the  examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
-- **gatewayPropertyList**  (map[string]string)([DeviceShifugatewayPropertyList](#deviceshifugatewaypropertylist))<br/>parameters of the ***deviceShifu*** command define how ***deviceShifu*** forwards requests through the LwM2M-gateway, enabling devices with various protocols to adapt to the LwM2M protocol, process requests from the LwM2M server, and push data to the cloud. Please refer to the [examples](https://github.com/Edgenesis/shifu/tree/main/examples) for more implementation details.
+- **gatewayPropertyList**  (map[string]string)([DeviceShifugatewayPropertyList](#deviceshifugatewaypropertylist))<br/>Parameters of the ***deviceShifu*** command define how ***deviceShifu*** forwards requests through the gateway, enabling ***deviceShifu*** under different protocols to adapt to a unified protocol, process requests from the server, and push data to the cloud. Please refer to the [examples](https://github.com/Edgenesis/shifu/tree/main/examples) for more implementation details.
 
 ## DeviceShifuprotocolPropertyList
 
@@ -82,7 +82,7 @@ instructions: |
 
 ## DeviceShifugatewayPropertyList
 
-The `gatewayPropertyList` instruction specifies how to forward data to LwM2M protocol resources. The `instructions` defines how ***deviceShifu*** forwards requests through the gateway by configuring `gatewayPropertyList`, enabling multi-protocol devices to communicate with the **LwM2M-gateway**. The **LwM2M-gateway** then handles protocol conversion and communication. Please refer to the examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http).
+The `gatewayPropertyList` instruction specifies how to adapt data to a unified protocol resource. The `instructions` defines how ***deviceShifu*** forwards requests through the gateway by configuring `gatewayPropertyList`, enabling multi-protocol devices to communicate with the gateway. The gateway then handles protocol conversion and communication. Please refer to the examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http).
 
 - **gateway LwM2M**
 

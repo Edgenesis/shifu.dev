@@ -68,12 +68,6 @@ Settings of EdgeDevice connection protocol.
     - **bufferLength** (int)<br/>buffer size of the socket when transferring data, the default value is 1024.
   - **PLC4XSetting** (PLC4XSetting)
     - **protocol** ([Plc4xProtocol](#plc4xprotocolenum))<br/>protocol used by plc4x to connect to the device.
-  - **GatewaySetting** (GatewaySetting)
-    - **protocol** (string)<br/>protocol used by the gateway, specified as `LwM2M`.
-    - **address** (string)<br/>The LwM2M-server address, typically represented as a Fully Qualified Domain Name (FQDN) within the Kubernetes cluster, for example: `deviceshifu-lwm2m-service.deviceshifu.svc.cluster.local:5683`.
-    - **LwM2MSetting** (LwM2MSetting)
-      - **endpointName** (string)<br/>the unique identifier for the LwM2M client, e.g., `deviceshifu-lwm2m-service`.
-      - **securityMode** (string)<br/>the security mode setting for the LwM2M protocol, such as `None` or `DTLS`.The `DTLS` section is covered in detail in the `LwM2MSetting` section of this document.
 
 #### Plc4xProtocol(enum)
 
@@ -88,6 +82,18 @@ Plc4xProtocolModbusAscii  = "modbus-ascii"
 Plc4xProtocolModbusRTU    = "modbus-rtu"
 Plc4xProtocolModbusTcp    = "modbus-tcp"
 ```
+
+### GatewaySettings
+
+Settings of EdgeDevice Gateway.
+
+- **gatewaySetting** (GatewaySetting)
+
+  - **protocol** (string)<br/>protocol used by the gateway, specified as `LwM2M`.
+
+  - **address** (string)<br/>The LwM2M-server address, typically represented as a Fully Qualified Domain Name (FQDN) within the Kubernetes cluster, for example: `deviceshifu-lwm2m-service.deviceshifu.svc.cluster.local:5683`.
+
+  - **protocolSettings** (ProtocolSettings)<br/>`LwM2MSetting` is supported currently. For detailed protocol configuration parameters, please refer to [protocolSettings](#protocolsettings)
 
 ### CustomMetadata
 

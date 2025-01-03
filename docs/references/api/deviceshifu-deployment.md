@@ -78,7 +78,7 @@ For a detailed example, please refer to <https://github.com/Edgenesis/shifu/tree
 For a detailed example, please refer to  [https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http](https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http).
 
 - **spec.template.spec.containers[1].image**
-  - **name** (string)<br/>the image for the LwM2M-gateway. The test version of the driver image for the gateway driver is `edgehub/gateway-lwm2m:nightly`. Please use the stable version in the production environment.
+  - **name** (string)<br/>the image for the gateway.For example, the test version image for the lwm2m protocol gateway is `edgehub/gateway-lwm2m:nightly`.
 - **spec.template.spec.containers[1].env**
   - **EDGEDEVICE_NAME** (string)<br/>name of the EdgeDevice associated with the DeviceShifu, such as `edgedevice-thermometer`.
   - **EDGEDEVICE_NAMESPACE** (string)<br/>namespace for the EdgeDevice corresponding to DeviceShifu, set to `deviceshifu`.
