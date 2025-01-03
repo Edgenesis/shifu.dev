@@ -62,7 +62,7 @@ For a detailed example, please refer to [https://github.com/Edgenesis/shifu/tree
 
 ## RTSP DeviceShifu Deployment
 
-For a detailed example, please refer to <https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu>
+For a detailed example, please refer to [https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu](https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu).
 
 - **spec.template.spec.containers[1].image**
   - **name** (string)<br/>driver image for the RTSP camera, which has to be `edgehub/camera-python:v0.0.1` (for now).
