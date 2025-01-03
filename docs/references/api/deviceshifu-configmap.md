@@ -43,7 +43,6 @@ instructions: |
     get_value: # The name of the command you want to set
       protocolPropertyList:      # The parameters of the command have different configurations according to different protocols
 ```
-
 - **[DeviceShifuInstruction](#deviceshifuinstruction)**
 
 ## DeviceShifuInstruction
@@ -57,7 +56,6 @@ DeviceShifuInstruction is the command that ***deviceShifu*** can receive.
 DeviceShifuprotocolPropertyList parameters of the ***deviceShifu*** command, which have various configurations according to different protocols. The following shows the use of MQTT protocol and OPC UA protocol. Please refer to the examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
 
 - **MQTT**
-
 ```yml
 instructions: |
     instructions:
