@@ -82,9 +82,9 @@ instructions: |
 
 ## DeviceShifugatewayPropertyList
 
-The `gatewayPropertyList` instruction specifies how to forward data to LwM2M protocol resources. The `instructions` defines how ***deviceShifu*** forwards requests through the gateway by configuring `gatewayPropertyList`, enabling multi-protocol devices to communicate with the **LwM2M-gateway**. The **LwM2M-gateway** then handles protocol conversion and communication.
+The `gatewayPropertyList` instruction specifies how to forward data to LwM2M protocol resources. The `instructions` defines how ***deviceShifu*** forwards requests through the gateway by configuring `gatewayPropertyList`, enabling multi-protocol devices to communicate with the **LwM2M-gateway**. The **LwM2M-gateway** then handles protocol conversion and communication. Please refer to the examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http).
 
-- **LwM2M Gateway**
+- **gateway LwM2M**
 
 ```yaml
 instructions: |
