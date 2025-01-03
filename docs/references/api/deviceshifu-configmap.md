@@ -91,8 +91,8 @@ instructions: |
   instructions:
     float_value:      # The name of the command you want to set 
       protocolPropertyList:
-        ObjectId: /3442/0/130
-        EnableObserve: false
+        ObjectId: /3442/0/130 # Device instance object ID, Format: /{Object ID}/{Object Instance}/{Resource ID}
+        EnableObserve: false  # Boolean flag to enable/disable observation mode
     reset:
       protocolPropertyList:
         ObjectId: /3303/0/5605

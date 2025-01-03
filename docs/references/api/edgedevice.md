@@ -47,7 +47,7 @@ Connection address of the EdgeDevice, the format varies depending on the [protoc
 Connection protocol of the EdgeDevice.
 
 - **protocol** (Protocol) required
-  - **Protocol** (string)<br/>indicates the connection protocol, which has to be `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA`, `Socket` or `PLC4X` (for now).
+  - **Protocol** (string)<br/>indicates the connection protocol, which has to be `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA`, `Socket`, `PLC4X` or `LwM2M`(for now).
 
 ### ProtocolSettings
 
@@ -79,34 +79,28 @@ Settings of EdgeDevice connection protocol.
       - `DTLS` (for Datagram Transport Layer Security)
     - **dtlsMode** (string)<br/>the DTLS mode, applicable if `securityMode` is set to `DTLS`. Options include:
       - `PSK` (Pre-Shared Key)
-    - **cipherSuites** (array of strings)<br/>the list of DTLS cipher suites, applicable when `securityMode` is `DTLS`. The following ciphersuites are currently supported:
+    - **cipherSuites** (array of strings)<br/>the list of DTLS cipher suites, applicable when `securityMode` is `DTLS`. The following ciphersuites are currently supported:[CipherSuites](#ciphersuitesenum)
+    - **pskIdentity** (string)<br/>the identity for the pre-shared, applicable when `dtlsMode` is set to `PSK`. Example: `hint`.
+    - **pskKey** (string)<br/>the key for the pre-shared key, applicable when `dtlsMode` is `PSK`. Example: `ABC123`.
 
-      ```
-      // AES-128-CCM
-      TLS_ECDHE_ECDSA_WITH_AES_128_CCM
-      TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8
-      
-      // AES-128-GCM-SHA256
-      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
-      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-      
-      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
-      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
-      
-      // AES-256-CBC-SHA
-      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
-      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
-      
-      TLS_PSK_WITH_AES_128_CCM
-      TLS_PSK_WITH_AES_128_CCM_8
-      TLS_PSK_WITH_AES_256_CCM_8
-      TLS_PSK_WITH_AES_128_GCM_SHA256
-      TLS_PSK_WITH_AES_128_CBC_SHA256
-      TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256
-      ```
+#### CipherSuites(enum)
 
-    - **pskIdentity** (string)<br/>the pre-shared key identity, applicable when `dtlsMode` is set to `PSK`. Example: `hint`.
-    - **pskKey** (string)<br/>the pre-shared key for authentication, applicable when `dtlsMode` is `PSK`. Example: `ABC123`.
+```go
+TLS_ECDHE_ECDSA_WITH_AES_128_CCM     = "TLS_ECDHE_ECDSA_WITH_AES_128_CCM"
+TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8   = "TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8"
+TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 = "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
+TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256   = "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 = "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384   = "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA  = "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA"
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA    = "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA"
+TLS_PSK_WITH_AES_128_CCM               = "TLS_PSK_WITH_AES_128_CCM"
+TLS_PSK_WITH_AES_128_CCM_8             = "TLS_PSK_WITH_AES_128_CCM_8"
+TLS_PSK_WITH_AES_256_CCM_8             = "TLS_PSK_WITH_AES_256_CCM_8"
+TLS_PSK_WITH_AES_128_GCM_SHA256       = "TLS_PSK_WITH_AES_128_GCM_SHA256"
+TLS_PSK_WITH_AES_128_CBC_SHA256        = "TLS_PSK_WITH_AES_128_CBC_SHA256"
+TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256  = "TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256"
+```
 
 #### Plc4xProtocol(enum)
 
