@@ -50,6 +50,7 @@ instructions: |
 DeviceShifuInstruction is the command that ***deviceShifu*** can receive.
 
 - **protocolPropertyList** (map[string]string)([DeviceShifuprotocolPropertyList](#deviceshifuprotocolpropertylist))<br/>parameters of the ***deviceShifu*** command, which have various configurations according to different protocols. Please refer to the  examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples).
+- **gatewayPropertyList**  (map[string]string)([DeviceShifugatewayPropertyList](#deviceshifugatewaypropertylist))<br/>Parameters of the ***deviceShifu*** command define how ***deviceShifu*** forwards requests through the gateway, enabling ***deviceShifu*** under different protocols to adapt to a unified protocol, process requests from the server, and push data to the cloud. Please refer to the [examples](https://github.com/Edgenesis/shifu/tree/main/examples) for more implementation details.
 
 ## DeviceShifuprotocolPropertyList
 
@@ -96,6 +97,23 @@ instructions: |
         ObjectId: /3303/0/5605
         EnableObserve: false
       ... # You can continue to configure commands and corresponding ObjectId according to your own needs, just continue to add according to this format
+```
+## DeviceShifuGatewayPropertyList
+
+The `gatewayPropertyList` instruction specifies how to adapt data to a unified protocol resource. The `instructions` defines how ***deviceShifu*** forwards requests through the gateway by configuring `gatewayPropertyList`, enabling multi-protocol devices to communicate with the gateway. The gateway then handles protocol conversion and communication. Please refer to the examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http).
+
+- **gateway LwM2M**
+
+```yaml
+instructions: |
+  instructionSettings:
+    defaultTimeoutSeconds: 8
+  instructions:
+    read_value:
+      gatewayPropertyList:
+        ObjectId: /3442/0/130 # The LwM2M Object Id
+        DataType: float   # The LwM2M Resource Type
+     ... # You can continue to configure commands and corresponding ObjectId according to your own needs, just continue to add according to this format
 ```
 
 ## DeviceShifuInstructionSettings

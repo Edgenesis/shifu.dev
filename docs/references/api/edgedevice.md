@@ -116,6 +116,25 @@ Plc4xProtocolModbusRTU    = "modbus-rtu"
 Plc4xProtocolModbusTcp    = "modbus-tcp"
 ```
 
+### GatewaySettings
+
+Settings of EdgeDevice Gateway.
+
+- **gatewaySetting** (GatewaySetting)
+  - **protocol** (string)<br/>protocol used by the gateway, specified as `LwM2M`.
+  - **address** (string)<br/>the server address, typically represented as a Fully Qualified Domain Name (FQDN) within the Kubernetes cluster, for example: `deviceshifu-lwm2m-service.deviceshifu.svc.cluster.local:5683`.
+  - **protocolSettings** (ProtocolSettings)<br/>`LwM2MSetting` is supported currently. For detailed protocol configuration parameters, please refer to [protocolSettings](#protocolsettings)
+    - **LwM2MSetting** (LwM2MSetting)
+      - **endpointName** (string)<br/>the unique identifier for the LwM2M client, e.g. `leshan-client`.
+      - **securityMode** (string)<br/>the security mode setting for the LwM2M protocol, which can be one of the following:
+        - `None` (for no security)
+        - `DTLS` (for Datagram Transport Layer Security)
+      - **dtlsMode** (string)<br/>the DTLS mode, applicable if `securityMode` is set to `DTLS`. Options include:
+        - `PSK` (Pre-Shared Key)
+      - **cipherSuites** (array of strings)<br/>the list of DTLS cipher suites, applicable when `securityMode` is `DTLS`. The following ciphersuites are currently supported:[CipherSuites](#ciphersuitesenum)
+      - **pskIdentity** (string)<br/>the identity for the pre-shared, applicable when `dtlsMode` is set to `PSK`. Example: `hint`.
+      - **pskKey** (string)<br/>the key for the pre-shared key, applicable when `dtlsMode` is `PSK`. Example: `ABC123`.
+
 ### CustomMetadata
 
 Additional information about the EdgeDevice.
