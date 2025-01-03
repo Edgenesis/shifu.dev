@@ -70,8 +70,7 @@ For a detailed example, please refer to [rtspDeviceShifu](https://github.com/Edg
   - **IP_CAMERA_ADDRESS** (string)<br/>IP address of the camera, `192.168.0.1`
   - **IP_CAMERA_USERNAME** (string)<br/>user name of the camera RTSP stream.
   - **IP_CAMERA_PASSWORD** (string)<br/>password for the camera RTSP stream.
-  - **IP_CAMERA_CONTAINER_PORT**
-        port of the RTSP camera driver container, which has to be `11111` (for now).
+  - **IP_CAMERA_CONTAINER_PORT**<br/>port of the RTSP camera driver container, which has to be `11111` (for now).
 
 ## Gateway DeviceShifu Deployment
 
