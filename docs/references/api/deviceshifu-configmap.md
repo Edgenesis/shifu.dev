@@ -80,7 +80,7 @@ instructions: |
       ... # You can continue to configure commands and corresponding NodeID according to your own needs, just continue to add according to this format
 ```
 
-## DeviceShifugatewayPropertyList
+## DeviceShifuGatewayPropertyList
 
 The `gatewayPropertyList` instruction specifies how to adapt data to a unified protocol resource. The `instructions` defines how ***deviceShifu*** forwards requests through the gateway by configuring `gatewayPropertyList`, enabling multi-protocol devices to communicate with the gateway. The gateway then handles protocol conversion and communication. Please refer to the examples for more [examples](https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http).
 
