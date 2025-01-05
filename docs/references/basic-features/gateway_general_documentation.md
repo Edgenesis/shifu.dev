@@ -5,31 +5,38 @@ sidebar_position: 0
 
 # Gateway General Documentation
 
-The Shifu project's gateway is a multi-protocol bridge that supports various protocols such as HTTP, MQTT and LwM2M. It provides a unified interaction interface for different IoT devices and systems, simplifying protocol conversion and integration.
+The **Shifu** project's gateway is a multi-protocol bridge that supports various protocols such as LwM2M. It provides a unified interaction interface for different IoT devices and systems, simplifying protocol conversion and integration.
 
 ## Overview
 
-The **Shifu** gateway supports multiple communication protocols, including HTTP, MQTT, and LwM2M. It offers a universal solution for IoT ecosystems, allowing devices using different protocols to be managed and controlled through a single gateway, reducing development complexity and promoting integration with cloud services and other applications.
+**Shifu Gateway** obtains all device information from **deviceShifu**. It registers devices with the server and updates device information. **Shifu Gateway** interacts with the server to handle server requests, providing a universal solution for IoT ecosystems. This enables devices using different protocols to be managed and controlled through an integrated gateway, thereby reducing development complexity and facilitating integration with cloud services and other applications.
 
-The gateway component enables devices to adapt to a unified protocol and handle requests from the same server. It facilitates telemetry services to extract data from devices and supports data publishing from the cloud to devices. Through the same server, data can also be uniformly pushed to the cloud.
+The gateway component enables devices to adapt to a unified protocol and processes requests from the server. It facilitates data extraction from devices to the server and supports both data publishing and pushing from the cloud to devices.
 
 ## Key Features
 
-- **Protocol Conversion:** Supports converting HTTP, MQTT, and OPC UA requests into a unified internal message format, allowing developers to interact with different types of IoT devices without dealing directly with the underlying protocol details.
-- **Device Management:** Provides core functionalities such as device registration, reading attributes, executing commands, and monitoring device status, applicable to devices under multiple protocols.
+- **Device Information Transmission**: Obtains comprehensive device information from **deviceShifu** while managing device registration with the server, and continuously maintains and updates device status and configurations throughout the system lifecycle.
+- **Server Integration**: Implements bidirectional communication with the server, efficiently processes incoming server requests, and manages device responses and data transmission in coordination with **deviceShifu**. Support for `Read`, `Write` and `Execute` requests.
+
+- **Data Flow Control**: Orchestrates comprehensive data management by processing data extracted from various protocol devices, supporting cloud-to-device data publishing, enabling device-to-cloud data pushing, and managing cross-system data routing and transformation.
+
+- **IoT Ecosystem Integration**: Delivers a universal connectivity solution that reduces system integration complexity while enabling seamless cloud service integration and facilitating multi-device management across diverse IoT environments.
 
 ## Typical Use Case
 
-A typical use case is an HTTP or MQTT client interacting with IoT devices:
+To support telemetry services for pushing data from devices to data servers, extracting data from devices, or publishing data from the cloud to devices, we need a gateway that enables **deviceShifu** to adapt to the server's protocol, process requests from the server, and push data to the cloud. Below is a typical use case demonstrating how **Shifu Gateway** implements these requirements:
 
-- The client sends a request (e.g. containing device ID and operation instructions) to the gateway.
-
-- The gateway converts the request into an internal operation request and processes it according to the device protocol.
-
-- After the device responds, the gateway converts it back to the original protocol response (HTTP, MQTT, etc.) and returns it to the client.
+1. Start the client (**Shifu Gateway**) and obtain all device information from **deviceShifu**.
+2. Register the device with the server and update the device information.
+3. Handle requests from the server.
+4. If the server enables the Observe feature, notify the server when data changes or a timeout occurs.
+5. Handle read or write requests by calling **deviceShifu** to get or set the data.
+6. Before shutting down, deregister from the server and stop the client.
+7. If the server disconnects, the gateway will attempt to reconnect and re-register.
+8. If a **deviceShifu** instruction times out, the gateway will return an error message to the server.
 
 ## Advantages
 
-- **Developer-Friendly:** Developers can use familiar tools and frameworks (HTTP, MQTT, OPC UA) to interact with IoT devices, reducing development complexity.
-- **Flexible Integration:** The gateway can be easily integrated into existing IoT ecosystems, supporting interoperability with multiple systems and protocols.
-- **Unified Management:** By supporting multiple protocols, the gateway provides unified management for different devices and systems, enhancing system scalability.
+- **Developer-Friendly**: Developers can use familiar tools and frameworks (HTTP, MQTT, LwM2M) to interact with IoT devices, reducing development complexity.
+- **Flexible Integration**: The gateway can be easily integrated into existing IoT ecosystems, supporting interoperability with multiple systems and protocols.
+- **Unified Management**: By supporting multiple protocols, the gateway provides unified management for different devices and systems, enhancing system scalability.
