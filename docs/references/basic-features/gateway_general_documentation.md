@@ -35,6 +35,94 @@ To support telemetry services for pushing data from devices to data servers, ext
 7. If the server disconnects, the gateway will attempt to reconnect and re-register.
 8. If a **deviceShifu** instruction times out, the gateway will return an error message to the server.
 
+Let's take the LwM2M server as an example to briefly explain the configuration and the specific process:
+
+**Gateway Configuration**
+
+To connect to the server, the gateway requires configuration details such as the server address, endpoint name, security mode, and PSK key in the EdgeDevice YAML file. The LwM2MSettings are the same as those in the deviceShifu LwM2MSettings.
+
+```yaml
+...
+spec:
+  sku: "LwM2M Device"
+  connection: Ethernet
+  address: --
+  protocol: LwM2M
+  protocolSettings:
+    LwM2MSetting:
+      ...
+  gatewaySettings:
+    protocol: LwM2M
+    address: leshan.eclipseprojects.io:5684
+    LwM2MSetting:
+      endpointName: LwM2M-device
+      securityMode: DTLS
+      dtlsMode: PSK
+      cipherSuites:
+        - TLS_PSK_WITH_AES_128_CCM_8
+      pskIdentity: LwM2M-hint
+      pskKey: ABC123
+```
+
+To map the LwM2M Object and Resource to deviceShifu, we add a `gatewayPropertyList` field for instructions in the deviceShifu ConfigMap. This indicates that the instruction will forward to the LwM2M protocol resource. The ObjectId represents the LwM2M Object Id, and DataType represents the LwM2M Resource Type.
+
+Supported Data Types: `int`, `float`, `string`, `bool`. By default, the data type is `string`.
+
+```yaml
+...
+data:
+  instructions: |
+    instructions:
+      instruction1:
+        gatewayPropertyList:
+          ObjectId: 1/0/0
+          DataType: int
+```
+
+```mermaid
+sequenceDiagram
+  participant ds as DeviceShifu
+  participant gw as Gateway
+  participant s as Server
+
+  note over ds,s: Register
+  gw ->> s: Register
+  s ->> gw: Created
+
+  note over ds,s: Read Data
+  s ->> gw: [LwM2M GET /ObjectID] Read Data
+  gw ->> ds: [HTTP GET /Instruction] Get Data
+  ds ->> gw: [HTTP Response] Data
+  gw ->> s: [LwM2M Response] Data
+
+  note over ds,s: Write Data
+  s ->> gw: [LwM2M PUT /ObjectID] Write Data
+  gw ->> ds: [HTTP PUT /Instruction] Set Data
+  ds ->> gw: [HTTP Response] OK
+  gw ->> s: [LwM2M Response] Changed
+
+  note over ds,s: Execute
+  s ->> gw: [LwM2M POST /ObjectID] Execute
+  gw ->> ds: [HTTP POST /Instruction] Execute
+  ds ->> gw: [HTTP Response] OK
+  gw ->> s: [LwM2M Response] OK
+
+  note over ds,s: Observe data
+  s ->> gw: [LwM2M GET /ObjectID] Enable Observe Object
+  gw ->> s: [LwM2M] Created
+  loop Get Device Data in a interval
+     gw ->> ds: [HTTP GET /Instruction] Get Device Data
+     ds ->> gw: [HTTP Response] Get Device Data
+     alt data changed or timeout
+        gw ->> s: [LwM2M Response] New Data
+     end
+  end
+
+  note over ds,s: De-register
+    gw ->> s: [LwM2M /Delete]De-register
+    s ->> gw: [LwM2M Response] Deleted
+```
+
 ## Advantages
 
 - **Developer-Friendly**: Developers can use familiar tools and frameworks (HTTP, MQTT, LwM2M) to interact with IoT devices, reducing development complexity.
