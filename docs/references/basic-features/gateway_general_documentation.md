@@ -13,6 +13,12 @@ The **Shifu** project's gateway is a multi-protocol bridge that supports various
 
 The gateway component enables devices to adapt to a unified protocol and processes requests from the server. It facilitates data extraction from devices to the server and supports both data publishing and pushing from the cloud to devices.
 
+:::note
+
+Regarding `the server` mentioned above, the server can be understood as the server-side component for the Gateway and serves as a core architectural component responsible for managing and controlling clients. This can be better understood in the context of the LwM2M server discussed below.
+
+:::
+
 ## Key Features
 
 - **Device Information Transmission**: Obtains comprehensive device information from **deviceShifu** while managing device registration with the server, and continuously maintains and updates device status and configurations throughout the system lifecycle.
