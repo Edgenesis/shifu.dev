@@ -1,9 +1,9 @@
 ---
-title: Gateway General Documentation
-sidebar_position: 0
+title: Device Gateway
+sidebar_position: 5
 ---
 
-# Gateway General Documentation
+# Device Gateway
 
 The **Shifu** project's gateway is a multi-protocol bridge that supports various protocols such as LwM2M. It provides a unified interaction interface for different IoT devices and systems, simplifying protocol conversion and integration.
 
@@ -12,6 +12,47 @@ The **Shifu** project's gateway is a multi-protocol bridge that supports various
 **Shifu Gateway** obtains all device information from **deviceShifu**. It registers devices with the server and updates device information. **Shifu Gateway** interacts with the server to handle server requests, providing a universal solution for IoT ecosystems. This enables devices using different protocols to be managed and controlled through an integrated gateway, thereby reducing development complexity and facilitating integration with cloud services and other applications.
 
 The gateway component enables devices to adapt to a unified protocol and processes requests from the server. It facilitates data extraction from devices to the server and supports both data publishing and pushing from the cloud to devices.
+
+```mermaid
+flowchart BT
+
+ls[LwM2M-server]
+
+subgraph EdgeNode
+    subgraph Shifu
+      subgraph ds1[deviceShifu-HTTP]
+          dsh[deviceShifu-HTTP]
+          gl1[LwM2M-gateway]
+          dsh <-->|HTTP| gl1
+      end
+      subgraph ds2[deviceShifu-MQTT]
+          dsm[deviceShifu-MQTT]
+          gl2[LwM2M-gateway]
+          dsm <-->|HTTP| gl2
+      end
+        subgraph ds3[deviceShifu-LwM2M]
+          dsl[deviceShifu-LwM2M]
+          gl3[LwM2M-gateway]
+          dsl <-->|HTTP| gl3
+      end
+    end
+end
+
+
+dh[device-HTTP]
+dm[device-MQTT]
+dl[device-LwM2M]
+
+
+dh -->|HTTP| dsh
+gl1 -->|LwM2M| ls
+
+dm -->|MQTT| dsm
+gl2 -->|LwM2M| ls
+
+dl -->|LwM2M| dsl
+gl3 -->|LwM2M| ls 
+```
 
 :::note
 
