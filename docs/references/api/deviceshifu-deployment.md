@@ -62,7 +62,7 @@ For a detailed example, please refer to [https://github.com/Edgenesis/shifu/tree
 
 ## RTSP DeviceShifu Deployment
 
-For a detailed example, please refer to [rtspDeviceShifu](https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu)
+For a detailed example, please refer to [rtspDeviceShifu](https://github.com/Edgenesis/shifu/tree/main/examples/rtspDeviceShifu).
 
 - **spec.template.spec.containers[1].image**
   - **name** (string)<br/>driver image for the RTSP camera, which has to be `edgehub/camera-python:v0.0.1` (for now).
@@ -71,3 +71,13 @@ For a detailed example, please refer to [rtspDeviceShifu](https://github.com/Edg
   - **IP_CAMERA_USERNAME** (string)<br/>user name of the camera RTSP stream.
   - **IP_CAMERA_PASSWORD** (string)<br/>password for the camera RTSP stream.
   - **IP_CAMERA_CONTAINER_PORT**<br/>port of the RTSP camera driver container, which has to be `11111` (for now).
+
+## Gateway DeviceShifu Deployment
+
+For a detailed example, please refer to  [https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http](https://github.com/Edgenesis/shifu/tree/main/examples/lwm2m_gw_http).
+
+- **spec.template.spec.containers[1].image**
+  - **name** (string)<br/>the image for the gateway.For example, the test version image for the lwm2m protocol gateway is `edgehub/gateway-lwm2m:nightly`.
+- **spec.template.spec.containers[1].env**
+  - **EDGEDEVICE_NAME** (string)<br/>name of the EdgeDevice associated with the DeviceShifu, such as `edgedevice-thermometer`.
+  - **EDGEDEVICE_NAMESPACE** (string)<br/>namespace for the EdgeDevice corresponding to DeviceShifu, set to `deviceshifu`.
