@@ -31,13 +31,13 @@ const stepOnebtnList = [
 const stepOneCodeList = [
   {
     id: 1,
-    description: translate({ message: "2.1 Run following command in Linux/Windows/Mac." }),
+    description: translate({ message: "2.1 Run the following command." }),
     code: "sudo docker ps ",
     isCopy: true
   },
   {
     id: 2,
-    description: translate({ message: "2.2 If Docker starts successfully, the output will be as follows" }),
+    description: translate({ message: "2.2 If Docker is running correctly, you should see output similar to" }),
     code: `$ sudo docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES`,
     isCopy: false,
@@ -57,7 +57,7 @@ function StepOne() {
       <div className={styles.buttonsContainer}>
         {buttons}
       </div>
-      <h1 className={styles.titleOne}><Translate>2. Confirm Docker runs successfully</Translate></h1>
+      <h1 className={styles.titleOne}><Translate>2. Verify Docker installation</Translate></h1>
       {codeList}
     </div>
   )
