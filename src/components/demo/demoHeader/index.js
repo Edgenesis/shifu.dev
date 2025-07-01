@@ -100,7 +100,7 @@ export default function DemoHeader(props) {
   }
   return (
     <div className={styles.demoHeaderContainer}>
-      <h1 className={styles.header}><Translate>Welcome to try Shifu Demo</Translate></h1>
+      <h1 className={styles.header}><Translate>Welcome to the Shifu Demo</Translate></h1>
       <ProgressBar></ProgressBar>
     </div>
   )
