@@ -9,18 +9,19 @@ pool:
 steps:
   - task: NodeTool@0
     inputs:
-      versionSpec: "18.x"
+      versionSpec: "24.x"
     displayName: "Install Node.js"
 
   - script: |
       set -e
-      npm install
-      npm run build
+      npm install -g bun
+      bun install
+      bun run build
       echo [DEBUG] && pwd && ls
       cd build
       echo [DEBUG] && pwd && ls
       zip -r build.zip .
-    displayName: "npm build and zip"
+    displayName: "bun build and zip"
 
   - task: CopyFilesOverSSH@0
     inputs:
