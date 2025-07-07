@@ -6,7 +6,7 @@ This guide explains how to deploy a ROS/ROS2 DeviceShifu-based robot device, cov
 
 ## 1. Architecture Diagram
 
-![Choose HTTP](imgages/deviceshifu-ros.png)
+![Choose HTTP](images/deviceshifu-ros.png)
 
 ------
 
@@ -43,17 +43,19 @@ kubectl get pods -n shifu-crd-system
 
 ## 3. ROS-side Setup
 
+This example uses a ROS-based robot car.
+
 ### 3.1 Install ROS Bridge
 
 ```bash
 sudo apt-get update
 sudo apt-get install ros-noetic-rosbridge-server
-# Note: If you are using a different ROS distribution, replace “noetic” in the commands with the corresponding version name.
+# Note: If you are using a different ROS distribution, replace "noetic" in the commands with the corresponding version name.
 ```
 
 ### 3.2 Launch Required Robot Nodes (ROS/ROS 2)
 
-**ROS **
+**ROS**
 
 ```bash
 roscore
