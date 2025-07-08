@@ -8,7 +8,6 @@ This guide explains how to deploy a ROS/ROS2 DeviceShifu-based robot device, cov
 
 ```mermaid
 flowchart TB
-  %% 左侧 Server 容器
   subgraph Server["Server"]
     direction TB
     subgraph Kubernetes["Kubernetes"]
@@ -21,14 +20,12 @@ flowchart TB
     end
   end
 
-  %% 右侧 Robot 容器
   subgraph Robot["Robot running ROS/ROS 2"]
     direction TB
     rosbridge["rosbridge suite"]
     ROSnodes["ROS nodes"]
   end
 
-  %% 三条连线：HTTP、websocket，还有一条"无方向"连线，强制上下排列
   deviceshifu_HTTP <-- HTTP --> DeviceDriver
   DeviceDriver -- websocket --> rosbridge
 ```
