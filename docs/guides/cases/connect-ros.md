@@ -6,7 +6,32 @@ This guide explains how to deploy a ROS/ROS2 DeviceShifu-based robot device, cov
 
 ## 1. Architecture Diagram
 
-![Choose HTTP](images/deviceshifu-ros.png)
+```mermaid
+flowchart TB
+  %% 左侧 Server 容器
+  subgraph Server["Server"]
+    direction TB
+    subgraph Kubernetes["Kubernetes"]
+      direction TB
+      subgraph DSF["deviceShifu-ROS/ROS 2"]
+        direction TB
+        deviceshifu_HTTP["deviceshifu HTTP"]
+        DeviceDriver["Device Driver"]
+      end
+    end
+  end
+
+  %% 右侧 Robot 容器
+  subgraph Robot["Robot running ROS/ROS 2"]
+    direction TB
+    rosbridge["rosbridge suite"]
+    ROSnodes["ROS nodes"]
+  end
+
+  %% 三条连线：HTTP、websocket，还有一条"无方向"连线，强制上下排列
+  deviceshifu_HTTP <-- HTTP --> DeviceDriver
+  DeviceDriver -- websocket --> rosbridge
+```
 
 ------
 
@@ -76,15 +101,15 @@ ros2 launch <your_robot_package> <your_lidar_launch_file>.launch
 
 ### 3.3 Launch the rosbridge WebSocket
 
-**ROS**
+#### ROS
 
 ```bash
 roslaunch rosbridge_server rosbridge_websocket.launch
 ```
 
-**ROS 2**
+#### ROS 2
 
-```
+```bash
 ros2 launch rosbridge_server rosbridge_websocket.launch 
 ```
 
@@ -96,9 +121,7 @@ Note: Make sure each terminal stays open and reports that the node is running.
 
 ### 4.1 Sample ROS Driver
 
-`main.go`:
-
-```go
+```go main.go
 package main
 
 import (
@@ -182,9 +205,7 @@ func main() {
 
 ### 4.2 Sample ROS 2 Driver
 
-`main.go`:
-
-```go
+```go main.go
 package main
 
 import (
@@ -290,7 +311,7 @@ ENTRYPOINT ["./rosDeviceShifu"]
 
 **ROS/ROS 2**
 
-```bas
+```bash
 docker build -t <YOUR_REGSTRY>/ros-motion-driver:latest .
 docker push <YOUR_REGISTRY>/ros-motion-driver:late
 ```
@@ -301,9 +322,7 @@ docker push <YOUR_REGISTRY>/ros-motion-driver:late
 
 ### ROS/ROS 2
 
-`myrobot-shifu.yaml`:
-
-```yaml
+```yaml myrobot-shifu.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -392,7 +411,6 @@ data:
       move/forward:
   telemetries: |
     telemetrySettings:
-
 ```
 
 ## 4.5 Deploy the deviceShifu
