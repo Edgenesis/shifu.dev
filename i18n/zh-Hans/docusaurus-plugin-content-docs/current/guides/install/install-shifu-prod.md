@@ -10,7 +10,7 @@ sidebar_position: 2
 ***Shifu*** 提供了一键安装的方式，您可以使用如下命令将 ***Shifu*** 安装到您的集群中：
 
 ```bash
-kubectl apply -f https://gitee.com/edgenesis/shifu/raw/v0.75.0/pkg/k8s/crd/install/shifu_install.yml
+kubectl apply -f https://gitee.com/edgenesis/shifu/raw/v0.76.0/pkg/k8s/crd/install/shifu_install.yml
 ```
 
 :::tip 关于用户指标
