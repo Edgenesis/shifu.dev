@@ -164,16 +164,16 @@
   "Contact us via WeChat": {
     "message": "微信联系我们"
   },
-  "2.1 Run following command in Linux/Windows/Mac.": {
-    "message": "2.1 在Linux/Windows/Mac的命令行中执行以下命令"
+  "2.1 Run the following command.": {
+    "message": "2.1 运行以下命令"
   },
-  "2.2 If Docker starts successfully, the output will be as follows": {
-    "message": "2.2 如果 Docker 运行顺利，将会有以下输出"
+  "2.2 If Docker is running correctly, you should see output similar to": {
+    "message": "2.2 如果Docker运行正常，你应该看到类似的输出"
   },
   "1. Select your OS to download Docker": {
     "message": "1. 请选择你的系统以下载Docker"
   },
-  "2. Confirm Docker runs successfully": {
+  "2. Verify Docker installation": {
     "message": "2. 确认Docker运行成功"
   },
   "1. Start an nginx instance to simulate the interaction between applications and Shifu": {
