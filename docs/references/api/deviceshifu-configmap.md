@@ -144,7 +144,7 @@ DeviceShifuTelemetrySettings are the settings related to ***deviceShifu*** monit
   - **telemetryUpdateIntervalInMilliseconds** (int64)<br/>millisecond interval at which ***deviceShifu*** detects Telemetry. Default is 1000. (Detection method: ***deviceShifu*** tries to establish a socket connection with the device once every 1000 milliseconds, and determines if the device is on by whether the connection is successful.)
 - MQTT protocol
   - **telemetryUpdateIntervalInMiliseconds** (int64)<br/>***deviceShifu*** detects the millisecond interval between the MQTT and the receipt of the last msg. Default value is 3000.
-- PLC4X
+- PLC4X (deprecated, will be removed in v0.81.0)
   - **telemetryUpdateIntervalInMiliseconds** (int64)<br/>***deviceShifu*** The interval (in milliseconds) for detecting Telemetry. (Detection method: using PLC4X to send ping to the device.)
 
 ## DeviceShifuTelemetry

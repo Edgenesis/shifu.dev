@@ -108,7 +108,7 @@ DeviceShifuTelemetrySettings 是指与 ***deviceShifu*** 监测相关的设置�
     - **telemetryUpdateIntervalInMilliseconds** (int64)<br/>***deviceShifu*** 检测 Telemetry 的毫秒间隔。默认为1000。（检测方式：***deviceShifu*** 每间隔1000毫秒尝试与设备建立起一次socket连接，通过是否成功连接来判断设备是否开启。）
 - MQTT协议
     - **telemetryUpdateIntervalInMiliseconds** (int64)<br/>***deviceShifu*** 检测MQTT距离收到上一条msg到现在的毫秒间隔。默认为3000。
-- PLC4X
+- PLC4X (已弃用，将在 v0.81.0 中移除)
     - **telemetryUpdateIntervalInMiliseconds** (int64)<br/>***deviceShifu*** 检测 Telemetry 的间隔时间(毫秒)默认为3000。（检测方式，使用PLC4X向设备发送Ping。）
 
 ## DeviceShifuTelemetry
