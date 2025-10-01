@@ -2,7 +2,11 @@
 
 ## 介绍
 
-从 Kubebuilder v4 开始,Shifu 的控制器暴露了一个带有内置认证和授权功能的 `/metrics` 端点。此端点提供与 Prometheus 兼容的指标,用于监控控制器的健康状况和性能。
+Shifu 控制器会暴露一个 `/metrics` 端点,提供与 Prometheus 兼容的指标,用于监控控制器的健康状况和性能。从 Shifu v0.81.0 起,该端点强制执行内置的认证与授权。
+
+:::note 自 Shifu v0.81.0 起
+经过认证的 `/metrics` 端点随 Shifu v0.81.0 及更高版本提供。在此之前的版本不会启用本文介绍的认证与授权流程。
+:::
 
 **主要特性:**
 - **认证**: 所有请求都使用 Kubernetes TokenReview 进行认证

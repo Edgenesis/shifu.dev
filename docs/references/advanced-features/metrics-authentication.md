@@ -2,7 +2,11 @@
 
 ## Introduction
 
-Starting from Kubebuilder v4, Shifu's controller exposes a `/metrics` endpoint with built-in authentication and authorization. This endpoint provides Prometheus-compatible metrics for monitoring the controller's health and performance.
+Shifu's controller exposes a `/metrics` endpoint that provides Prometheus-compatible metrics for monitoring the controller's health and performance. Beginning with Shifu v0.81.0, this endpoint enforces built-in authentication and authorization.
+
+:::note Shifu v0.81.0+
+The authenticated metrics endpoint ships with Shifu v0.81.0 and later. Earlier releases expose metrics without the authentication and authorization flow described here.
+:::
 
 **Key Features:**
 - **Authentication**: All requests are authenticated using Kubernetes TokenReview
