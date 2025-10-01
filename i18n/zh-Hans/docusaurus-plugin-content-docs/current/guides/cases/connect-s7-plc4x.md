@@ -6,7 +6,7 @@ sidebar_position: 1
 # 使用 PLC4x 连接 西门子S7 PLC
 
 :::warning 已弃用
-PLC4X 支持已弃用，将在 v0.81.0 中移除。请计划迁移到其他协议。
+PLC4X 支持已弃用，将在 v0.81.0 中移除。
 :::
 
 ***Shifu*** 还可以使用 PLC4X的形式 实现对 `西门子S7系列` PLC兼容。本文将介绍如何使用 `deviceshifu-plc4x-http` 接入一台 `西门子S7-1200 1214C PLC` 并且与之交互。

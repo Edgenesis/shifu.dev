@@ -6,7 +6,7 @@ sidebar_position: 1
 # Use PLC4x to connect to a Siemens S7 PLC
 
 :::warning Deprecated
-PLC4X support is deprecated and will be removed in v0.81.0. Please plan to migrate to alternative protocols.
+PLC4X support is deprecated and will be removed in v0.81.0.
 :::
 
 ***Shifu*** is also compatible with `Siemens S7 series` PLCs in the form of PLC4X. This article will show you how to use `deviceshifu-plc4x-http` to integrate and interact with a `Siemens S7-1200 1214C PLC`.
