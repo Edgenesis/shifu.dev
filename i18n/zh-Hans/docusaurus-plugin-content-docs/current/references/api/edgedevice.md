@@ -43,7 +43,7 @@ EdgeDeviceSpec 是一个 EdgeDevice的描述。
 表示 EdgeDevice 通过连接方式的连接协议。
 
 - **protocol** (Protocol) 必填
-    - **Protocol** (string)<br/>表示连接协议，现在必须是 `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA`, `Socket`, `PLC4X`。
+    - **Protocol** (string)<br/>表示连接协议，现在必须是 `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA`, `Socket`, `PLC4X` (已弃用，将在 v0.81.0 中移除)。
 
 ### ProtocolSettings
 
@@ -63,10 +63,10 @@ EdgeDeviceSpec 是一个 EdgeDevice的描述。
         - **encoding** (string)<br/>表示 Socket 连接时的编码，可选值为 `utf-8` 或 `hex`，默认值为 `utf-8`。
         - **NetworkType** (string)<br/>表示 Socket 链接时的协议，现在必须是 `tcp`。
         - **bufferLength** (int)<br/>表示 Socket 传输数据时的缓冲区大小，默认值为 1024。
-    - **PLC4XSetting** (PLC4XSetting)
+    - **PLC4XSetting** (PLC4XSetting) (已弃用，将在 v0.81.0 中移除)
         - **protocol** ([Plc4xProtocol](#plc4xprotocolenum))<br/>表示 PLC4X 连接PLC设备时的协议。
 
-#### Plc4xProtocol(enum)
+#### Plc4xProtocol(enum) (已弃用，将在 v0.81.0 中移除)
 
 ```go
 Plc4xProtocolS7           = "s7"

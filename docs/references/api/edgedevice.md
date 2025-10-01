@@ -47,7 +47,7 @@ Connection address of the EdgeDevice, the format varies depending on the [protoc
 Connection protocol of the EdgeDevice.
 
 - **protocol** (Protocol) required
-  - **Protocol** (string)<br/>indicates the connection protocol, which has to be `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA`, `Socket`, `PLC4X` or `LwM2M`(for now).
+  - **Protocol** (string)<br/>indicates the connection protocol, which has to be `HTTP`, `HTTPCommandline`, `MQTT`, `OPCUA`, `Socket`, `PLC4X` (deprecated, will be removed in v0.81.0) or `LwM2M`(for now).
 
 ### ProtocolSettings
 
@@ -69,7 +69,7 @@ Settings of EdgeDevice connection protocol.
     - **NetworkType** (string)<br/>protocol of the socket link, which has to be `tcp` (for now).
     - **bufferLength** (int)<br/>buffer size of the socket when transferring data, the default value is 1024.
 
-  - **PLC4XSetting** (PLC4XSetting)
+  - **PLC4XSetting** (PLC4XSetting) (deprecated, will be removed in v0.81.0)
     - **protocol** ([Plc4xProtocol](#plc4xprotocolenum))<br/>protocol used by plc4x to connect to the device.
 
   - **LwM2MSetting** (LwM2MSetting)
@@ -102,7 +102,7 @@ TLS_PSK_WITH_AES_128_CBC_SHA256        = "TLS_PSK_WITH_AES_128_CBC_SHA256"
 TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256  = "TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256"
 ```
 
-#### Plc4xProtocol(enum)
+#### Plc4xProtocol(enum) (deprecated, will be removed in v0.81.0)
 
 ```go
 Plc4xProtocolS7           = "s7"
