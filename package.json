@@ -13,20 +13,21 @@
     "clear": "docusaurus clear"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.4.0",
-    "@docusaurus/plugin-google-gtag": "^3.4.0",
-    "@docusaurus/plugin-ideal-image": "^3.4.0",
-    "@docusaurus/preset-classic": "^3.4.0",
-    "@docusaurus/theme-mermaid": "^3.4.0",
-    "@easyops-cn/docusaurus-search-local": "^0.44.3",
+    "@docusaurus/core": "^3.9.1",
+    "@docusaurus/plugin-google-gtag": "^3.9.1",
+    "@docusaurus/plugin-ideal-image": "^3.9.1",
+    "@docusaurus/preset-classic": "^3.9.1",
+    "@docusaurus/theme-mermaid": "^3.9.1",
+    "@easyops-cn/docusaurus-search-local": "^0.52.1",
     "@mdx-js/react": "^3.0.0",
     "antd": "^5.1.0",
+    "caniuse-lite": "^1.0.30001746",
     "clsx": "^1.2.0",
     "dayjs": "^1.11.7",
     "detect-node": "^2.1.0",
     "docusaurus-plugin-baidu-analytics": "^0.0.1",
     "docusaurus-plugin-hotjar": "^0.0.2",
-    "docusaurus-plugin-sass": "^0.2.2",
+    "docusaurus-plugin-sass": "^0.2.6",
     "localStorage": "^1.0.4",
     "prism-react-renderer": "^2.1.0",
     "react": "^18.2.0",
@@ -34,7 +35,7 @@
     "sass": "^1.53.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.4.0"
+    "@docusaurus/module-type-aliases": "^3.9.1"
   },
   "browserslist": {
     "production": [

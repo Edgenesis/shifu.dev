@@ -27,6 +27,8 @@ After the completion of Quick Install guide  change the directory to `shifudemos
 cd shifudemos
 ```
 
+### Start the Nginx service {#start-the-nginx}
+
 Start `nginx` to interact with ***deviceShifu***:
 
 ```bash
