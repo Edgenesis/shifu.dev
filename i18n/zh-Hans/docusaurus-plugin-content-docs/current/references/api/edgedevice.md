@@ -66,7 +66,7 @@ EdgeDeviceSpec 是一个 EdgeDevice的描述。
     - **PLC4XSetting** (PLC4XSetting) (已弃用，将在 v0.81.0 中移除)
         - **protocol** ([Plc4xProtocol](#plc4xprotocolenum))<br/>表示 PLC4X 连接PLC设备时的协议。
 
-#### Plc4xProtocol(enum) (已弃用，将在 v0.81.0 中移除)
+#### Plc4xProtocol(enum) (已弃用，将在 v0.81.0 中移除) {#plc4xprotocolenum}
 
 ```go
 Plc4xProtocolS7           = "s7"

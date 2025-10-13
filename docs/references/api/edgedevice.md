@@ -83,7 +83,7 @@ Settings of EdgeDevice connection protocol.
     - **pskIdentity** (string)<br/>the identity for the pre-shared, applicable when `dtlsMode` is set to `PSK`. Example: `hint`.
     - **pskKey** (string)<br/>the key for the pre-shared key, applicable when `dtlsMode` is `PSK`. Example: `ABC123`.
 
-#### CipherSuites(enum)
+#### CipherSuites(enum) {#ciphersuitesenum}
 
 ```go
 TLS_ECDHE_ECDSA_WITH_AES_128_CCM     = "TLS_ECDHE_ECDSA_WITH_AES_128_CCM"
@@ -102,7 +102,7 @@ TLS_PSK_WITH_AES_128_CBC_SHA256        = "TLS_PSK_WITH_AES_128_CBC_SHA256"
 TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256  = "TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256"
 ```
 
-#### Plc4xProtocol(enum) (deprecated, will be removed in v0.81.0)
+#### Plc4xProtocol(enum) (deprecated, will be removed in v0.81.0) {#plc4xprotocolenum}
 
 ```go
 Plc4xProtocolS7           = "s7"

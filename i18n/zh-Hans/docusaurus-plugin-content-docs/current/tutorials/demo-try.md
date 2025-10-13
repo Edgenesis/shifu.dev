@@ -24,6 +24,8 @@ sidebar_position: 1
 ```bash
 cd shifudemos
 ```
+### 启动 Nginx 服务 {#start-the-nginx}
+
 我们需要启动一个 `nginx` 来和数字孪生设备 ***deviceShifu*** 交互，请运行下面的命令：
 
 ```bash

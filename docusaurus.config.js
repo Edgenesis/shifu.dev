@@ -10,7 +10,6 @@ const config = {
   url: "https://shifu.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
   favicon: "img/logo.svg",
 
   // GitHub pages deployment config.
@@ -43,6 +42,7 @@ const config = {
         path: "./blog-news",
         blogSidebarTitle: "All posts",
         blogSidebarCount: "ALL",
+        onUntruncatedBlogPosts: "ignore",
       },
     ],
     [
@@ -53,22 +53,16 @@ const config = {
         path: "./blog-tech",
         blogSidebarTitle: "All posts",
         blogSidebarCount: "ALL",
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-blog",
-      {
-        id: "case-studies",
-        routeBasePath: "case-studies",
-        path: "./blog-cases",
-        blogSidebarTitle: "All posts",
-        blogSidebarCount: "ALL",
+        onUntruncatedBlogPosts: "ignore",
       },
     ],
   ],
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
   },
   themes: [
     // mermaid
@@ -81,6 +75,7 @@ const config = {
         hashed: true,
         // For Docs using Chinese, The `language` is recommended to set to:
         language: ["en", "zh"],
+        blogDir: ["blog-news", "blog-tech"],
       },
     ],
   ],
@@ -96,6 +91,7 @@ const config = {
           routeBasePath: "/docs",
           editUrl: "https://github.com/edgenesis/shifu.run/tree/main/",
         },
+        blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
