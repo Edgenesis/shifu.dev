@@ -18,7 +18,7 @@
     "@docusaurus/plugin-ideal-image": "^3.9.1",
     "@docusaurus/preset-classic": "^3.9.1",
     "@docusaurus/theme-mermaid": "^3.9.1",
-    "@easyops-cn/docusaurus-search-local": "^0.52.2",
+    "@easyops-cn/docusaurus-search-local": "0.52.1",
     "@mdx-js/react": "^3.0.0",
     "antd": "^5.1.0",
     "caniuse-lite": "^1.0.30001746",
