@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Resolve Shifu tag
         id: resolve
@@ -57,7 +57,7 @@ jobs:
 
       - name: Create pull request
         if: steps.resolve.outputs.skip != 'true'
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "Bump Shifu references to ${{ steps.resolve.outputs.tag }}"
           title: "Bump Shifu references to ${{ steps.resolve.outputs.tag }}"
