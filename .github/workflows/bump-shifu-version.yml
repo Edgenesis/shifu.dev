@@ -32,7 +32,7 @@ jobs:
 
           # Auto-detect latest stable tag if not provided
           if [[ -z "${tag}" ]]; then
-            tag=$(gh api repos/edgenesis/shifu/tags --jq '.[].name | select(test("^v[0-9]+\\.[0-9]+\\.[0-9]+$"))' | head -1)
+            tag=$(gh api repos/edgenesis/shifu/tags --jq 'first(.[] | .name | select(test("^v[0-9]+\\.[0-9]+\\.[0-9]+$")))')
             [[ -z "${tag}" ]] && { echo "Unable to resolve latest Shifu tag." >&2; exit 1; }
           fi
 
