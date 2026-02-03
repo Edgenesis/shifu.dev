@@ -1,0 +1,66 @@
+name: Bump Shifu Version
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Optional Shifu tag to bump to (e.g., v0.88.0). Leave blank to auto-detect."
+        required: false
+        type: string
+  repository_dispatch:
+    types: [shifu-tag]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Resolve Shifu tag
+        id: resolve
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          tag="${{ inputs.tag || github.event.client_payload.tag }}"
+
+          # Auto-detect latest stable tag if not provided
+          if [[ -z "${tag}" ]]; then
+            tag=$(gh api repos/edgenesis/shifu/tags --jq '.[].name | select(test("^v[0-9]+\\.[0-9]+\\.[0-9]+$"))' | head -1)
+            [[ -z "${tag}" ]] && { echo "Unable to resolve latest Shifu tag." >&2; exit 1; }
+          fi
+
+          # Skip RC tags
+          if [[ "${tag}" == *-rc* || "${tag}" == *RC* ]]; then
+            echo "Skipping RC tag: ${tag}"
+            echo "skip=true" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          # Validate tag format
+          [[ "${tag}" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "Invalid tag format: ${tag}" >&2; exit 1; }
+
+          echo "tag=${tag}" >> "${GITHUB_OUTPUT}"
+
+      - name: Bump Shifu references
+        if: steps.resolve.outputs.skip != 'true'
+        env:
+          SHIFU_TAG: ${{ steps.resolve.outputs.tag }}
+        run: |
+          python3 scripts/bump_shifu_version.py --tag "${SHIFU_TAG}"
+
+      - name: Create pull request
+        if: steps.resolve.outputs.skip != 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: "Bump Shifu references to ${{ steps.resolve.outputs.tag }}"
+          title: "Bump Shifu references to ${{ steps.resolve.outputs.tag }}"
+          body: "Automated update to the latest Shifu tag."
+          branch: "automation/bump-shifu-${{ steps.resolve.outputs.tag }}"
+          delete-branch: true
