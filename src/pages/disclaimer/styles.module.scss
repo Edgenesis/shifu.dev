@@ -43,8 +43,9 @@
   }
 
   .logo {
-    width: 40vmin;
-    height: 40vmin;
+    width: min(40vmin, 520px);
+    max-width: 90vw;
+    height: auto;
     margin-bottom: 20vh;
     filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
   }

@@ -9,9 +9,6 @@ If you have any questions about using ***Shifu*** or want to know more about it,
 
 - Email
     - [info@edgenesis.com](mailto:info@edgenesis.com)
-- WeChat
-    - ID: `edgenesis_helper` (Chinese name: Shifu物联网开发助手)
-    - ID: `if7369` (Qi Guo at Edgenesis)
 - Twitter
     - https://twitter.com/ShifuFramework
 - Discord

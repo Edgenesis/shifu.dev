@@ -27,7 +27,7 @@ const EnglishContent = () => (
               <br/>
 
               <strong>Related definitions</strong><br/>
-              Individual users: Individual users refer to individuals who use their personal cell phone numbers and micro-signals to register to use services related to Edgenesis.<br/>
+              Individual users: Individual users refer to individuals who use their personal cell phone numbers and third-party accounts to register to use services related to Edgenesis.<br/>
 
               <br/>
 
@@ -35,7 +35,7 @@ const EnglishContent = () => (
               In the course of your use of Edgenesis' services, we strictly comply with laws and regulations and our agreements with users to collect and use the information you voluntarily provide when using the services or as a result of using the services in the manner described below in the Privacy Agreement to provide you with the services, to optimize our services, and to protect your account security. If we use your personal information beyond the purposes for which it was collected and to which it is directly or reasonably related, we will again inform you and obtain your express consent before using your personal information.<br/>
               1.1 When you register to use Edgenesis-related services, we require you to voluntarily provide certain information:<br/>
               1.1.1 If you choose to create a new account, you will need to enter your cell phone number and name, which will be used to create your account for the Service at your request.<br/>
-              1.1.2 If you choose to register using WeChat (WeChat ID), you will need to provide your WeChat account name, avatar, cell phone number, and region (location) for the purpose of creating an account for you for the Service upon your request.<br/>
+              1.1.2 If you choose to register using a third-party account, you will need to provide your account name, avatar, cell phone number, and region (location) for the purpose of creating an account for you for the Service upon your request.<br/>
               1.2 We collect your IP address when you use the Edgenesis related services, we use this data in order to allow you to connect to our servers and some of the features will not be available to provide you with a better service experience. To help you understand and diagnose the status of your connection to the Service, we collect the status of your wireless network, Internet connection, and whether you are authorized to connect to the Service and its network.<br/>
               1.3 In order to protect your normal use of our services, maintain the normal operation of our services, and improve and optimize your service experience, we collect your Shifu operation, device model, network type, unique device identifier, software crash records, and traffic statistics.<br/>
               1.4 To make your visiting experience easier, we may collect cookies from your use of the Software or the Website, or other local storage provided by the Software and your browser, which record your IP address, account number, password, browsing history, etc. These files are mainly used to identify users and record their actions. We collect and use the above information to provide you with better services.<br/>
@@ -148,7 +148,7 @@ const ChineseContent = () => (
               <br/>
 
               <strong>相关定义：</strong><br/>
-              个人用户：个人用户指使用个人手机号码、微信号注册使用边无际相关服务的个人；<br/>
+              个人用户：个人用户指使用个人手机号码、第三方账号注册使用边无际相关服务的个人；<br/>
 
               <br/>
 
@@ -156,7 +156,7 @@ const ChineseContent = () => (
               在您使用边无际相关服务的过程中，我们严格遵守法律、法规的规定以及与用户的约定，按照本隐私协议如下所述方式收集、使用您在使用服务时主动提供的或因为使用服务而产生的信息，用以向您提供服务、优化我们的服务以及保障您的账户安全。如我们使用您的个人信息，超出了与收集时所称的目的及与其具有直接或合理关联的范围，我们将在使用您的个人信息前，再次向您告知并征得您的明示同意。<br/>
               1.1 当您注册使用边无际相关服务时，我们需要您主动提供一些信息：<br/>
               1.1.1 如果您选择建立新账号，您需要输入您的手机号码和名称，用于根据您的要求为您建立本服务账号。<br/>
-              1.1.2 如果您选择使用微信(微信ID)注册，您需要提供您的微信账号名、头像、手机号码、地区（位置），用于根据您的要求为您建立本服务账号。<br/>
+              1.1.2 如果您选择使用第三方账号注册，您需要提供您的账号名、头像、手机号码、地区（位置），用于根据您的要求为您建立本服务账号。<br/>
               1.2 当您使用边无际相关服务时，我们会收集您的IP地址，我们使用此数据是为了让您连接我们的服务器，部分功能将无法实现，无法给您提供更好的服务体验。为了帮助您了解和诊断您与本服务的连接状态，我们会收集您的无线网络、互联网连接状态，以及您是否获得连接本服务及其网络的授权。<br/>
               1.3 为保障您正常使用我们的服务、维护我们服务的正常运行、改善及优化您的服务体验，我们会收集您的Shifu运行情况、设备型号、网络类型、唯一设备标识符、软件崩溃记录、流量统计。<br/>
               1.4 为使您获得更轻松的访问体验，我们会收集您使用本软件或网站的Cookie，或本软件和您的浏览器提供的其他本地存储，这些文件记录了您的IP地址、账号、密码、浏览记录等，主要用于辨别用户身份和记录用户操作。我们收集、使用以上信息将会为您提供更好的服务。<br/>
