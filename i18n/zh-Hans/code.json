@@ -161,9 +161,6 @@
   "Our Tel": {
     "message": "我们的电话"
   },
-  "Contact us via WeChat": {
-    "message": "微信联系我们"
-  },
   "2.1 Run following command in Linux/Windows/Mac.": {
     "message": "2.1 在Linux/Windows/Mac的命令行中执行以下命令"
   },
@@ -895,9 +892,6 @@
   },
   "Edgenesis is dedicated to developing efficient developer tools and providing full-scenario IoT solutions. Using our self-developed Shifu Framework as an open-source IoT development framework for industrial IoT, we help AIoT developers focus on business logic and develop applications agilely and efficiently.": {
     "message":"边无际Edgenesis致力于提供高效的开发者工具和全场景物联网解决方案，使用自主研发的Shifu Framework作为产业IoT的开源物联网开发框架，帮助AIoT开发者专注业务逻辑，敏捷高效开发应用。"
-  },
-  "Welcome to follow our WeChat subscription account to stay updated on the latest information about Shifu.":{
-    "message":"欢迎关注我们的微信订阅号，随时了解Shifu的最新资讯。"
   },
   "Redirecting to the homepage":{
     "message":"返回首页"

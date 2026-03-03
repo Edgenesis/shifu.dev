@@ -4,7 +4,8 @@
   position: fixed;
   right: 0px;
   bottom: 0px;
-  height: 383px;
+  min-height: 120px;
+  height: auto;
   background: #FFFFFF;
   border-radius: 10px;
   padding: 24px;
@@ -24,10 +25,5 @@
     line-height: 160.69%;
     color: #399BFF;
     margin-bottom: 12px;
-  }
-
-  .serviceImg {
-    text-align: center;
-    border: 12px solid #F2F2F2;
   }
 }

@@ -9,9 +9,6 @@ sidebar_position: 10
 
 - 邮箱
     - [info@edgenesis.com](mailto:info@edgenesis.com)
-- 微信
-    - ID: `edgenesis_helper`（Shifu物联网开发助手）
-    - ID: `if7369`（郭琦 边无际）
 - Twitter
     - https://twitter.com/ShifuFramework
 - Discord

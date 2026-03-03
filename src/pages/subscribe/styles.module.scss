@@ -8,9 +8,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .qrcode{
-    width: 148px;
-    margin-bottom: 20px;
+  .brandLogo{
+    width: 138px;
+    height: auto;
   }
   .thanksinstruction{
     width: 80%;
@@ -23,6 +23,9 @@
 @media screen and (max-width: 996px) {
 .thanksmain{
   img{
+    width: 80px;
+  }
+  .brandLogo{
     width: 80px;
   }
   .thanksinstruction{

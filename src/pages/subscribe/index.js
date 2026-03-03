@@ -34,7 +34,7 @@ export default class Hello extends Component {
             <div className={common.block80}></div>
             <div className={`${styles.thanksmain} ${common.content}`}>
               <div className={common.block80}></div>
-              <img src={SfLogo}></img>
+              <img className={styles.brandLogo} src={SfLogo} alt="Shifu logo"></img>
               <div className={common.block30}></div>
               <p className={styles.thanksinstruction}>
                 {translate({
@@ -42,9 +42,7 @@ export default class Hello extends Component {
                     'Edgenesis is dedicated to developing efficient developer tools and providing full-scenario IoT solutions. Using our self-developed Shifu Framework as an open-source IoT development framework for industrial IoT, we help AIoT developers focus on business logic and develop applications agilely and efficiently.'
                 })}
               </p>
-              <p className={styles.thanksinstruction}>{translate({ message: 'Welcome to follow our WeChat subscription account to stay updated on the latest information about Shifu.' })}</p>
               <div className={common.block30}></div>
-              <img className={styles.qrcode} src={require('@site/static/img/product/qrcode.png').default}></img>
               <a href={this.state.url}>{translate({ message: 'Redirecting to the homepage' })}</a>
               <div className={common.block80}></div>
             </div>
