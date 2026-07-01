@@ -11,7 +11,7 @@ sidebar_position: 3
 在安装新版 ***Shifu*** Demo 之前请先卸载老版本的 ***Shifu***。
 :::
 
-前往 [**Shifu** Demo 下载](https://shifu.run/zh-Hans/disclaimer) 页面 下载最新的 ***Shifu*** 安装包。
+前往 [**Shifu** Demo 下载](https://shifu.dev/zh-Hans/disclaimer) 页面 下载最新的 ***Shifu*** 安装包。
 
 :::note
 ***Shifu*** Demo 安装包会随着 ***Shifu***自动更新。

@@ -11,7 +11,7 @@ sidebar_position: 3
 Please uninstall the old version of ***Shifu*** before installing the new version of ***Shifu*** Demo.
 :::
 
-Go to [Download **Shifu** Demo](https://shifu.run/disclaimer) to download the latest ***Shifu*** installer.
+Go to [Download **Shifu** Demo](https://shifu.dev/disclaimer) to download the latest ***Shifu*** installer.
 
 :::note
 ***Shifu*** Demo installer will be updated when ***Shifu*** is updated.
