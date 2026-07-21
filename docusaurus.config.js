@@ -15,7 +15,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "edgenesis", // Usually your GitHub org/user name.
-  projectName: "shifu.run", // Usually your repo name.
+  projectName: "shifu.dev", // Usually your repo name.
 
   // https://docusaurus.io/docs/i18n/tutorial#start-your-site
   // https://docusaurus.io/docs/api/docusaurus-config#i18n
@@ -89,7 +89,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           sidebarCollapsible: true, // make sidebar expandable
           routeBasePath: "/docs",
-          editUrl: "https://github.com/edgenesis/shifu.run/tree/main/",
+          editUrl: "https://github.com/Edgenesis/shifu.dev/tree/main/",
         },
         blog: false,
         theme: {
