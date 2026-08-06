@@ -22,7 +22,7 @@ $ sudo kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 
 <img src="/blog-221018/01.png" width="100%" />
 
-If you would like to know how to install ***Shifu*** and test it locally, you may want to check out [download and install](https://shifu.run/zh-Hans/docs/tutorials/demo-install) and [local installing testing](https://shifu.run/zh-Hans/docs/guides/install-shifu-dev).
+If you would like to know how to install ***Shifu*** and test it locally, you may want to check out [download and install](https://shifu.dev/zh-Hans/docs/tutorials/demo-install) and [local installing testing](https://shifu.dev/zh-Hans/docs/guides/install-shifu-dev).
 
 ## Connecting to thermometer and LED
 

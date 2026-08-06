@@ -106,7 +106,7 @@ sudo docker ps
 
 ## 安装 ***Shifu***
 
-前往 [**Shifu Demo 下载**](https://shifu.run/disclaimer) 下载 ***Shifu*** 安装包并按照网站的指导安装。
+前往 [**Shifu Demo 下载**](https://shifu.dev/disclaimer) 下载 ***Shifu*** 安装包并按照网站的指导安装。
 
 直接进入页面中的第二步，完成后即可回到本页面
 

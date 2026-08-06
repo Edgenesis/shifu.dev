@@ -188,8 +188,8 @@
   "Interact with the AGV": {
     "message": "与AGV的数字孪生交互"
   },
-  "https://shifu.run/docs/tutorials/demo-try#1-interact-with-the-agv": {
-    "message": "https://shifu.run/zh-Hans/docs/tutorials/demo-try#1-与agv交互"
+  "https://shifu.dev/docs/tutorials/demo-try#1-interact-with-the-agv": {
+    "message": "https://shifu.dev/zh-Hans/docs/tutorials/demo-try#1-与agv交互"
   },
   "Case Two": {
     "message": "案例二"
@@ -197,8 +197,8 @@
   "Interact with the thermometer": {
     "message": "与温度计的数字孪生交互"
   },
-  "https://shifu.run/docs/tutorials/demo-try#2-interact-with-the-thermometer": {
-    "message": "https://shifu.run/zh-Hans/docs/tutorials/demo-try#2-与温度计交互"
+  "https://shifu.dev/docs/tutorials/demo-try#2-interact-with-the-thermometer": {
+    "message": "https://shifu.dev/zh-Hans/docs/tutorials/demo-try#2-与温度计交互"
   },
   "Case Three": {
     "message": "案例三"
@@ -206,8 +206,8 @@
   "Interact with the microplate reader": {
     "message": "与酶标仪的数字孪生交互"
   },
-  "https://shifu.run/docs/tutorials/demo-try#3-interact-with-the-microplate-reader": {
-    "message": "https://shifu.run/zh-Hans/docs/tutorials/demo-try#3-与酶标仪交互"
+  "https://shifu.dev/docs/tutorials/demo-try#3-interact-with-the-microplate-reader": {
+    "message": "https://shifu.dev/zh-Hans/docs/tutorials/demo-try#3-与酶标仪交互"
   },
   "Case Four": {
     "message": "案例四"
@@ -215,8 +215,8 @@
   "Interact with the PLC": {
     "message": "与PLC的数字孪生交互"
   },
-  "https://shifu.run/docs/tutorials/demo-try#4-interact-with-the-plc": {
-    "message": "https://shifu.run/zh-Hans/docs/tutorials/demo-try#4-与plc交互"
+  "https://shifu.dev/docs/tutorials/demo-try#4-interact-with-the-plc": {
+    "message": "https://shifu.dev/zh-Hans/docs/tutorials/demo-try#4-与plc交互"
   },
   "Case Five": {
     "message": "案例五"
@@ -224,8 +224,8 @@
   "Interact with the robotic arm": {
     "message": "与机械臂的数字孪生交互"
   },
-  "https://shifu.run/docs/tutorials/demo-try#5-interact-with-the-robotic-arm": {
-    "message": "https://shifu.run/zh-Hans/docs/tutorials/demo-try#5-与机械臂交互"
+  "https://shifu.dev/docs/tutorials/demo-try#5-interact-with-the-robotic-arm": {
+    "message": "https://shifu.dev/zh-Hans/docs/tutorials/demo-try#5-与机械臂交互"
   },
   "Confirm nginx starts": {
     "message": "确认是否启动Nginx"
@@ -519,8 +519,8 @@
     "message": "搜索",
     "description": "The ARIA label and placeholder for search button"
   },
-  "https://shifu.run/docs/tutorials/demo-try": {
-    "message": "https://shifu.run/zh-Hans/docs/tutorials/demo-try"
+  "https://shifu.dev/docs/tutorials/demo-try": {
+    "message": "https://shifu.dev/zh-Hans/docs/tutorials/demo-try"
   },
   "theme.tags.tagsPageTitle": {
     "message": "标签",

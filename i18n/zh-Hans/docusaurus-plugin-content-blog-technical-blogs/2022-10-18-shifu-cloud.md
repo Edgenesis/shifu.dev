@@ -22,7 +22,7 @@ $ sudo kubectl apply -f pkg/k8s/crd/install/shifu_install.yml
 
 <img src="/blog-221018/01.png" width="100%" />
 
-如果你还不了解 ***Shifu*** 的安装和本地测试的方式，你可能需要查阅 [下载安装](https://shifu.run/zh-Hans/docs/tutorials/demo-install) 和 [本机安装测试](https://shifu.run/zh-Hans/docs/guides/install-shifu-dev) 这两篇文档。
+如果你还不了解 ***Shifu*** 的安装和本地测试的方式，你可能需要查阅 [下载安装](https://shifu.dev/zh-Hans/docs/tutorials/demo-install) 和 [本机安装测试](https://shifu.dev/zh-Hans/docs/guides/install-shifu-dev) 这两篇文档。
 
 ## 本机连接温湿度计和LED
 
