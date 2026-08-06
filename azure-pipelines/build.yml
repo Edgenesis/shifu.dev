@@ -10,13 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeTool@0
+- task: UseNode@1
   inputs:
-    versionSpec: '24.x'
+    version: '24.x'
   displayName: 'Install Node.js'
 
 - script: |
-    npm install -g bun
-    bun install
+    npm install -g bun@1.3.14
+    bun install --frozen-lockfile
     bun run build
   displayName: 'bun install and build'

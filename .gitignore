@@ -21,7 +21,6 @@ yarn-error.log*
 
 package-lock.json
 yarn.lock
-bun.lockb
 
 .idea/
 build.zip
