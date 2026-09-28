@@ -29,6 +29,7 @@
     "docusaurus-plugin-hotjar": "^0.0.2",
     "docusaurus-plugin-sass": "^0.2.6",
     "localStorage": "^1.0.4",
+    "nanoid": "3.3.18",
     "prism-react-renderer": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
